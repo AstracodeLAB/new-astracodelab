@@ -1,22 +1,4 @@
-@use './variables.scss' as *;
-
-@use './AboutUsCard.scss';
-@use './AboutUsSection.scss';
-@use './Contact.scss';
-@use './Cta.scss';
-@use './Hero.scss';
-@use './ImageSection.scss';
-@use './layout.scss';
-@use './Logo.scss';
-@use './ProjectsCard.scss';
-@use './ProjectsSection.scss';
-@use './SeeMoreButton.scss';
-@use './ServicesSection.scss';
-@use './SocialBar.scss';
-@use './SubmitButton.scss';
-@use './WayOfWorkingCard.scss';
-@use './WayOfWorkingSection.scss';
-@use './WebDesignSection.scss';
+@use './Header.scss';
 
 @tailwind base;
 @tailwind components;
