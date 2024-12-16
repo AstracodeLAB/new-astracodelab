@@ -7,18 +7,34 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    padding: 60px 20px 0 20px;
+    gap: 20px;
+
     &__title {
+        
         &-h1 {
             font-family: map.get($h1, "font-family");
             font-size: map.get($h1, "font-size");
             color: map.get($h1, "color");
             letter-spacing: map.get($h1, "letter-spacing");
+            line-height: map.get($h1, "line-height");
+            
         }
         &-h1bold {
             font-family: map.get($h1bold, "font-family");
             font-size: map.get($h1bold, "font-size");
             color: map.get($h1bold, "color");
             letter-spacing: map.get($h1bold, "letter-spacing");
+        }
+    }
+
+    &__text {
+        &-p {
+            font-family: Ropa Sans;
+            font-size: 1.25rem;
+            color: $blueDark;
+            line-height: 1.5625rem ;
         }
     }
 }
