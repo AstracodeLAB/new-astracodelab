@@ -1,16 +1,15 @@
 ---
-import Logo from "../../assets/images/Whitelogolab.png";
+import Hamburger from '../components/Hamburger.astro';
+import Navigation from '../components/Navigation.astro';
+import Logo from '../../assets/images/Whitelogolab.png';
 ---
 
 <header class="header">
-    <div class="header__container">
-        <div class="header__logo">
-            <img src={Logo.src} alt="Logo de AstracodeLAB">
-        </div>
-        <button class="header__menu" aria-label="Abrir menú">
-            <span class="header__menu-icon"></span>
-            <span class="header__menu-icon"></span>
-            <span class="header__menu-icon"></span>
-          </button>
+    <div class="header__logo">
+        <img src={Logo.src} alt="">
     </div>
+    <nav>
+        <Hamburger />
+        <Navigation />
+    </nav>
 </header>

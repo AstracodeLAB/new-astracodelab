@@ -1,9 +1,8 @@
 @use './Header.scss';
+@use './Hamburger.scss';
 @use './Hero.scss';
-
-
-
-
+@use './Navigation.scss';
+@use './QuoteButton.scss';
 
 @tailwind base;
 @tailwind components;
