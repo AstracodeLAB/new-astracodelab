@@ -1,1 +1,6 @@
 @use './variables.scss' as *;
+
+.cta {
+    color: $green;
+    text-transform: uppercase;
+}
