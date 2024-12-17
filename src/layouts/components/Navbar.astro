@@ -1,0 +1,39 @@
+---
+import { Astronav, MenuItems, MenuIcon, Dropdown, DropdownItems, DropdownSubmenu } from "astro-navbar";
+---
+
+<div>
+  <Astronav>
+    <div class="flex justify-between">
+      <a>Your Logo</a>
+      <MenuIcon class="menu-icon" />
+    </div>
+    <MenuItems class="hidden lg:flex menu-items">
+      <ul class="menu-items__list">
+        <li class="menu-items__list-item">inicio</li>
+        <li class="menu-items__list-item">
+            <Dropdown class="group">
+                <button>
+                  <span class="menu-items__list"> servicios +</span>
+                  <!-- You can style when dropdown is `open` -->
+                  <!-- <svg class="red">...arrow..</svg> -->
+                </button>
+                <DropdownItems>
+                  <div class="">
+                    <ul>
+                      <li class="menu-items__list-item menu-items__list-item--top">diseño y desarrollo web</li>
+                      <li class="menu-items__list-item">rediseño webs obsoletas</li>
+                      <li class="menu-items__list-item">nuevas funcionalidades</li>
+                      <li class="menu-items__list-item">mantenimiento web</li>
+                    </ul>
+                  </div>
+                </DropdownItems>
+              </Dropdown>
+        </li>
+        <li class="menu-items__list-item">contacto</li>
+        <li class="menu-items__list-item">proyectos</li>
+        <li class="menu-items__list-item">sobre nosotras</li>
+      </ul>
+    </MenuItems>
+  </Astronav>
+</div>

@@ -6,6 +6,12 @@
             font-size: map.get($h1bold, "font-size");
             color: map.get($h1bold, "color");
         }*/
+
+// Breakpoints
+$bp-s: 520px;
+$bp-m: 768px;
+$bp-l: 1024px;
+
 // Colors
 $white: #FDFCFF;
 $black: #120C23;
