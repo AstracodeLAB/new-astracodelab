@@ -1,7 +1,13 @@
 @use './variables.scss' as *;
 
 .header {
-  background-color: transparent;
+  background-color: $white 5%;
   border: 1px solid $white;
   border-radius: 50px;
+  margin: 10px 6px;
+  box-shadow: $shadow;
+
+  @media (min-width: $bp-m) {
+    margin: 20px 10px;
+  }
 }

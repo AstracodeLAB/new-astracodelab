@@ -1,14 +1,18 @@
 ---
 import { Astronav, MenuItems, MenuIcon, Dropdown, DropdownItems, DropdownSubmenu } from "astro-navbar";
+import { Image } from 'astro:assets';
+import Logo from '../../images/Whitelogolab.png';
 ---
 
 <div>
   <Astronav>
     <div class="flex justify-between">
-      <a>Your Logo</a>
+        <a href="/">
+            <Image src={Logo} alt='Logo de AstracodeLAB' class="logo"  loading="lazy"/>
+        </a>
       <MenuIcon class="menu-icon" />
     </div>
-    <MenuItems class="hidden lg:flex menu-items">
+    <MenuItems class="hidden md:flex menu-items">
       <ul class="menu-items__list">
         <li class="menu-items__list-item">inicio</li>
         <li class="menu-items__list-item">
@@ -19,12 +23,12 @@ import { Astronav, MenuItems, MenuIcon, Dropdown, DropdownItems, DropdownSubmenu
                   <!-- <svg class="red">...arrow..</svg> -->
                 </button>
                 <DropdownItems>
-                  <div class="">
-                    <ul>
-                      <li class="menu-items__list-item menu-items__list-item--top">diseño y desarrollo web</li>
-                      <li class="menu-items__list-item">rediseño webs obsoletas</li>
-                      <li class="menu-items__list-item">nuevas funcionalidades</li>
-                      <li class="menu-items__list-item">mantenimiento web</li>
+                  <div class="menu-services">
+                    <ul class="menu-services__list">
+                      <li class="menu-services__list-item">diseño y desarrollo web</li>
+                      <li class="menu-services__list-item">rediseño webs obsoletas</li>
+                      <li class="menu-services__list-item">nuevas funcionalidades</li>
+                      <li class="menu-services__list-item menu-services__list-item--bottom">mantenimiento web</li>
                     </ul>
                   </div>
                 </DropdownItems>
