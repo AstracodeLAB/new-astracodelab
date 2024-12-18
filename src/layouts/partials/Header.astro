@@ -30,15 +30,13 @@ import Cta from '../components/Cta.astro';
         </li>
 
 
-        
+            <li class='navigation__container-menu-itemsMap'>
+                <a href="" class='navigation__container-menu-itemsMap-link'>inicio</a>
+            </li>
           
             <li class='navigation__container-menu-itemsMap'>
-              <a
-                href='/'
-                
-              >
-                
-                
+              <a href='' class='navigation__container-menu-itemsMap-link' >
+                servicios
                   <svg
                     class='navigation__container-menu-itemsMap-arrow'
                     viewBox='0 0 20 20'
@@ -46,23 +44,16 @@ import Cta from '../components/Cta.astro';
                   >
                     <path d='M5 7l5 5 5-5H5z' />
                   </svg>
-                
               </a>
-             
+             <!-- Submenú  -->
                 <ul class='navigation__container-submenu'>
-                  
                     <li class='navigation__container-submenu-item'>
-                      <a
-                        href='/'
-                       
-                      >
-                        
-                      </a>
+                      <a href='#' class='navigation__container-menu-itemsMap-linkSubmenu'>desarrollo web</a>
                     </li>
-                 
                 </ul>
-              
             </li>
+
+
           
         
         
@@ -76,7 +67,7 @@ import Cta from '../components/Cta.astro';
 </header>
 
 
-<script>
+<!-- <script>
   document.addEventListener('DOMContentLoaded', function () {
     const menuItemsWithSubmenus = document.querySelectorAll('.navigation__container-menu-itemsMap');
 
@@ -114,4 +105,56 @@ import Cta from '../components/Cta.astro';
       });
     });
   });
+</script> -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+  const menuItemsWithSubmenus = document.querySelectorAll('.navigation__container-menu-itemsMap');
+
+  menuItemsWithSubmenus.forEach((item) => {
+    const submenu = item.querySelector('.navigation__container-submenu') as HTMLElement | null;
+    const arrowIcon = item.querySelector('.navigation__container-menu-itemsMap-arrow') as SVGElement | null;
+
+    if (submenu && arrowIcon) {
+      // Al hacer clic en el elemento principal del menú
+      item.addEventListener('click', function (event) {
+        event.preventDefault(); // Evita que el enlace recargue la página.
+
+        // Cierra cualquier otro submenú abierto
+        document.querySelectorAll('.navigation__container-submenu.open').forEach((openSubmenu) => {
+          if (openSubmenu !== submenu) {
+            openSubmenu.classList.remove('open');
+
+            const openArrow = openSubmenu.parentElement?.querySelector('.navigation__container-menu-itemsMap-arrow') as SVGElement | null;
+            if (openArrow) {
+              openArrow.style.transform = 'rotate(0deg)';
+            }
+          }
+        });
+
+        // Alterna el submenú actual
+        submenu.classList.toggle('open');
+        arrowIcon.style.transform = submenu.classList.contains('open') ? 'rotate(180deg)' : 'rotate(0deg)';
+      });
+    }
+  });
+
+  // Cierra todos los submenús al hacer clic fuera del menú
+  document.addEventListener('click', function (event) {
+    const isClickInsideMenu = (event.target as HTMLElement).closest('.navigation__container-menu');
+
+    if (!isClickInsideMenu) {
+      document.querySelectorAll('.navigation__container-submenu.open').forEach((openSubmenu) => {
+        openSubmenu.classList.remove('open');
+
+        const openArrow = openSubmenu.parentElement?.querySelector('.navigation__container-menu-itemsMap-arrow') as SVGElement | null;
+        if (openArrow) {
+          openArrow.style.transform = 'rotate(0deg)';
+        }
+      });
+    }
+  });
+});
+
+
 </script>
