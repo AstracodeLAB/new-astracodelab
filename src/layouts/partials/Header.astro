@@ -1,69 +1,117 @@
 ---
-import Logo from '../../images/Whitelogolab.png';
+import Cta from '../components/Cta.astro';
 ---
 
-<header class="header">
-    <div class="header__container">
-        <div class="header__logo">
-            <img src={Logo.src} alt="Logo de AstracodeLAB">
-        </div>
-
-        <!-- Hamburguesa  -->
-        <input type="checkbox" id="nav-toggle" class="header__hamburger" />
-        <label for="nav-toggle" class="header__hamburger-button header__hamburger-button--open">
-            <svg class="header__hamburger-button-icon" viewBox="0 0 20 20">
-                <title>Menu Open</title>
-                <path d="M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0V0z"></path>
-            </svg>
-        </label>
-
-        <!-- Menú  -->
-         <nav class="header__navigation">
-            <ul id="nav-menu" class="header__navigation-menu">
-                <!-- X para cerrar menú  -->
-                 <li class="header__navigation-menu-item header__navigation-menu-item-close">
-                    <label for="nav-toggle" class="header__navigation-button header__navigation-button--close">
-                        <svg class="header__navigation-button-icon" viewBox="0 0 20 20">
-                            <title>Menu Close</title>
-                            <polygon points="11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2"
-                            transform="rotate(45 10 10)"></polygon>
-                        </svg>
-                    </label>
-                 </li>
-
-                 <!-- Elementos del menú  -->
-                  <li class="header__navigation-menu-items">
-                    <a href="/" class="header__navigation-menu-items-link">inicio</a>
-                  </li>
-                  <li class="header__navigation-menu-items">
-                    <a href="#" class="header__navigation-menu-items-link">servicios</a>
-                    <ul class="header__navigation-menu-items-submenu">
-                        <li class="header__navigation-menu-items">
-                            <a href="" class="header__navigation-menu-items-link">diseño y desarrollo web</a>
-                        </li>
-                        <li class="header__navigation-menu-items">
-                            <a href="" class="header__navigation-menu-items-link">rediseño de webs obsoletas</a>
-                        </li>
-                        <li class="header__navigation-menu-items">
-                            <a href="" class="header__navigation-menu-items-link">implementación de nuevas funcionalidades</a>
-                        </li>
-                        <li class="header__navigation-menu-items">
-                            <a href="" class="header__navigation-menu-items-link">mantenimiento web</a>
-                        </li>
-                    </ul>
-                    <li class="header__navigation-menu-items">
-                        <a href="/" class="header__navigation-menu-items-link">contacto</a>
-                    </li>
-                    <li class="header__navigation-menu-items">
-                        <a href="/" class="header__navigation-menu-items-link">proyectos</a>
-                    </li>
-                    <li class="header__navigation-menu-items">
-                        <a href="/" class="header__navigation-menu-items-link">sobre nosotras</a>
-                    </li>
-                  </li>
-
-            </ul>
-         </nav>
-        
+<header class='header'>
+  <nav class='navigation'>
+    <div class='navigation__container'>
+      <a href="/">
+        <img src="../../images/Whitelogolab.png" alt="Logo AstracodeLAB">
+      </a>
     </div>
+
+      <input id='nav-toggle' type='checkbox' class='navigation__container-toggle' />
+      <label for='nav-toggle' class='navigation__container-button navigation__container-button--open'>
+        <svg class='navigation__container-button-icon' viewBox='0 0 20 20'>
+          <title>Menu Open</title>
+          <path d='M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0V0z'></path>
+        </svg>
+      </label>
+      <ul id='nav-menu' class='navigation__container-menu'>
+        <li class='navigation__container-menu-item navigation__container-menu-item-close'>
+          <label for='nav-toggle' class='navigation__container-button navigation__container-button--close'>
+            <svg class='navigation__container-button-icon' viewBox='0 0 20 20'>
+              <title>Menu Close</title>
+              <polygon
+                points='11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2'
+                transform='rotate(45 10 10)'></polygon>
+            </svg>
+          </label>
+        </li>
+
+
+        
+          
+            <li class='navigation__container-menu-itemsMap'>
+              <a
+                href='/'
+                
+              >
+                
+                
+                  <svg
+                    class='navigation__container-menu-itemsMap-arrow'
+                    viewBox='0 0 20 20'
+                    xmlns='http://www.w3.org/2000/svg'
+                  >
+                    <path d='M5 7l5 5 5-5H5z' />
+                  </svg>
+                
+              </a>
+             
+                <ul class='navigation__container-submenu'>
+                  
+                    <li class='navigation__container-submenu-item'>
+                      <a
+                        href='/'
+                       
+                      >
+                        
+                      </a>
+                    </li>
+                 
+                </ul>
+              
+            </li>
+          
+        
+        
+      </ul>
+
+      <div class='button-header'>
+        <Cta />
+      </div>
+    </div>
+  </nav>
 </header>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const menuItemsWithSubmenus = document.querySelectorAll('.navigation__container-menu-itemsMap');
+
+    menuItemsWithSubmenus.forEach((item) => {
+      const submenu = item.querySelector('.navigation__container-submenu') as HTMLElement;
+      const arrowIcon = item.querySelector('.navigation__container-menu-itemsMap-arrow') as SVGElement;
+
+      if (submenu && arrowIcon) {
+        item.addEventListener('click', function (event) {
+          event.stopPropagation();
+
+          submenu.classList.toggle('open');
+
+          if (submenu.classList.contains('open')) {
+            arrowIcon.style.transform = 'rotate(180deg)';
+          } else {
+            arrowIcon.style.transform = 'rotate(0deg)';
+          }
+        });
+      }
+    });
+
+    document.addEventListener('click', function () {
+      const openSubmenus = document.querySelectorAll('.navigation__container-submenu.open');
+      openSubmenus.forEach((openSubmenu) => {
+        openSubmenu.classList.remove('open');
+
+
+        const arrowIcon = openSubmenu.parentElement?.querySelector(
+          '.navigation__container-menu-itemsMap-arrow'
+        ) as SVGElement;
+        if (arrowIcon) {
+          arrowIcon.style.transform = 'rotate(0deg)';
+        }
+      });
+    });
+  });
+</script>
