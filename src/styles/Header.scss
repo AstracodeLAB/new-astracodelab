@@ -41,12 +41,17 @@
 		padding-right: 10px;
 		@media (min-width: $bp-m) {
 			flex-wrap: nowrap;
+      padding: 0;
 		}
 
 		&-logo {
 			order: 0;
 			position: relative;
-			width: 169px;
+			width: 70px;
+
+      @media (min-width: $bp-m) {
+        width: 150px;
+      }
 		}
 		&-toggle {
 			display: none;
@@ -248,8 +253,9 @@
 	display: none;
 	@media (min-width: $bp-m) {
 		display: flex;
+    width: 300px;
 		justify-content: center;
-		align-items: center;
+		// align-items: center;
 		// gap: 15px;
 	}
 }
