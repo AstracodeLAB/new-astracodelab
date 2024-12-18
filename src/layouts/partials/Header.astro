@@ -1,14 +1,14 @@
 ---
+import Logo from '../components/Logo.astro';
 import Cta from '../components/Cta.astro';
 ---
 
 <header class='header'>
   <nav class='navigation'>
     <div class='navigation__container'>
-      <a href="/">
-        <img src="../../images/Whitelogolab.png" alt="Logo AstracodeLAB">
-      </a>
-    </div>
+        <div class='navigation__container-logo'>
+          <Logo />
+        </div>
 
       <input id='nav-toggle' type='checkbox' class='navigation__container-toggle' />
       <label for='nav-toggle' class='navigation__container-button navigation__container-button--open'>
