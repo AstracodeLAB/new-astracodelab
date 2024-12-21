@@ -105,7 +105,7 @@
 				position: relative;
 
 				&:hover {
-					color: $blueDark; /* Cambiar color al hover */
+					color: $purple; /* Cambiar color al hover */
 				}
 				&-close {
 					display: none; /* Ocultar la "X" inicialmente */
@@ -151,7 +151,7 @@
 						color: $white;
 
 						&:hover {
-							color: $blueDark;
+							color: $purple;
 						}
 					}
 
@@ -170,6 +170,7 @@
 					@media (min-width: $bp-m) {
 						&:hover {
 							color: $blueDark;
+							background-color: $purple;
 						}
 					}
 				}
@@ -213,7 +214,7 @@
 			transform: translateY(-20px); /* Lo colocamos un poco hacia arriba */
 
 			&.open {
-				padding-top: 20px;
+				padding-top: 30px;
 				display: flex;
 				flex-direction: column;
 				gap: 5px;
@@ -228,7 +229,7 @@
 
 				&.open {
 					background-color: $white;
-					padding: 0;
+					padding-top: 10px;
 					margin-top: 30px;
 					padding-bottom: 10px;
 				}
