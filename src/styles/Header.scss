@@ -68,6 +68,7 @@
 			&-icon {
 				width: 30px;
 				height: 30px;
+				fill: $white;
 
 				@media (min-width: $bp-m) {
 					display: none;
@@ -111,6 +112,11 @@
 					display: none; /* Ocultar la "X" inicialmente */
 					text-align: right;
 					margin: 20px;
+
+					& svg {
+						fill: $black;
+					}
+
 					@media (min-width: $bp-m) {
 						display: none;
 					}
@@ -179,8 +185,10 @@
 					height: 20px;
 					margin-left: 8px;
 					transition: transform 0.3s ease;
+
 					@media (min-width: $bp-m) {
 						margin: 3px 0 0 0;
+						fill: white;
 					}
 				}
 			}
