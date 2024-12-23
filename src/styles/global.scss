@@ -1,8 +1,9 @@
 @use './Cta.scss';
 @use './Header.scss';
 @use './Hero.scss';
+@use './ImageSlider.scss';
 @use './Logo.scss';
-
+@use './WebDesignSection.scss';
 
 
 
@@ -10,3 +11,5 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+

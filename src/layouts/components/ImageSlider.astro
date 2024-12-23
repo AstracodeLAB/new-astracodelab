@@ -1,0 +1,98 @@
+---
+import DesignImage from '../../images/diseño.png';
+import CompanyImage from '../../images/empresa.jpg';
+import LandingPageImage from '../../images/landingpage.jpg';
+import ServicesImage from '../../images/servicios.jpg';
+---
+
+<!-- Contenedor principal de Swiper -->
+<div class="swiper">
+    <!-- Wrapper adicional requerido -->
+    <div class="swiper-wrapper" id="my-slider">
+      <!-- Los slides -->
+      <a 
+        class="swiper-slide"
+        href={DesignImage}
+        data-pswp-width="800" data-pswp-height="800"
+        target="_blank"
+        data-cropped="true"
+      >
+        <img src={DesignImage.src} alt="" />
+      </a>
+      <a 
+        class="swiper-slide"
+        href={CompanyImage}
+        data-pswp-width="800" data-pswp-height="800"
+        target="_blank"
+        data-cropped="true"
+      >
+        <img src={CompanyImage.src} alt="" />
+      </a>
+      <a 
+        class="swiper-slide"
+        href={LandingPageImage}
+        data-pswp-width="800" data-pswp-height="800"
+        target="_blank"
+        data-cropped="true"
+      >
+        <img src={LandingPageImage.src} alt="" />
+      </a>
+      <a 
+        class="swiper-slide"
+        href={ServicesImage}
+        data-pswp-width="800" data-pswp-height="800"
+        target="_blank"
+        data-cropped="true"
+      >
+        <img src={ServicesImage.src} alt="" />
+      </a>
+    </div>
+    <!-- Botones de navegación -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+
+  <script>
+    // Core de Swiper y estilos
+    import Swiper from 'swiper';
+    import 'swiper/css';
+    // Módulo Navigation de Swiper y estilos
+    import { Navigation } from "swiper/modules";
+    import "swiper/css/navigation";
+
+    // Photoswipe y estilos
+import PhotoSwipeLightbox from 'photoswipe/lightbox';
+import 'photoswipe/style.css';
+
+// Configurar e inicializar Photoswipe
+const lightbox = new PhotoSwipeLightbox({
+  gallery: '#my-slider',
+  children: 'a',
+  pswpModule: () => import('photoswipe')
+});
+lightbox.init();
+  
+    // Configurar Swiper
+    const swiper = new Swiper(".swiper", {
+      modules: [Navigation], // definir los módulos a usar
+      loop: true,            // definir si los slides estarán en bucle
+      slidesPerView: "auto",
+  spaceBetween: 20,
+  breakpoints: {
+    // Cuando la pantalla es >= 768px
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 30
+    },
+    // Cuando la pantalla es >= 1024px
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 40
+    }
+  },
+      navigation: {          // definir botones next y prev para el módulo Navigation
+        prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-button-next",
+      }
+    });
+  </script>
