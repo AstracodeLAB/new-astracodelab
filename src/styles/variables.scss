@@ -10,6 +10,7 @@
 $bp-s: 520px;
 $bp-m: 768px;
 $bp-l: 1024px;
+$bp-xl: 1440px;
 
 // Colors
 $white: #fdfcff;
@@ -51,7 +52,7 @@ $h1: (
 
 $h1-desktop: (
 	font-family: 'Raleway Variable',
-	font-size: 6rem,
+	font-size: 4.6rem,
 	// 96px
 	color: $white,
 	letter-spacing: -0.1575rem,
@@ -68,7 +69,7 @@ $h1bold: (
 
 $h1bold-desktop: (
 	font-family: 'Konkhmer Sleokchher',
-	font-size: 6rem,
+	font-size: 4.6rem,
 	// 96px
 	color: $white,
 	letter-spacing: -0.1575rem,
