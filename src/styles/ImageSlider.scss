@@ -1,9 +1,19 @@
 @use './variables.scss' as *;
 
+.swiper {
+	width: 100%;
+	height: 100%;
+}
+
 .swiper-slide {
 	height: 600px;
 	border-radius: 10px;
 	overflow: hidden;
+	width: 100%;
+	/* Mantener las imágenes centradas */
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
 	@media (min-width: $bp-m) {
 		width: 70%;
@@ -12,12 +22,15 @@
 }
 .swiper-slide img {
 	width: 100%;
-	height: 100%;
-	object-fit: cover;
+	object-fit: cover; /* Asegura que la imagen cubra el contenedor */
+	max-height: 400px; /* Limita la altura máxima de las imágenes */
+	border-radius: 10px; /* Opcional, si deseas bordes redondeados */
 }
 
 .swiper-button-prev,
 .swiper-button-next {
+	color: $white;
+
 	@media (min-width: $bp-m) {
 		display: none;
 	}

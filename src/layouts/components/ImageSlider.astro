@@ -76,9 +76,10 @@ lightbox.init();
     const swiper = new Swiper(".swiper", {
       modules: [Navigation], // definir los módulos a usar
       loop: true,            // definir si los slides estarán en bucle
-      slidesPerView: "auto",
-  spaceBetween: 20,
-  breakpoints: {
+      slidesPerView: 1.5,
+      spaceBetween: 15,
+      centeredSlides: true, // Centra la imagen activa
+      breakpoints: {
     // Cuando la pantalla es >= 768px
     768: {
       slidesPerView: 2,
