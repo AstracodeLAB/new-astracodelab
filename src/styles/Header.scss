@@ -5,12 +5,11 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	
-	@media (min-width: $bp-l) {
-		margin-bottom: 50px;
-		padding-top: 0;
-		padding-bottom: 0;
-		
+
+	@media (min-width: $bp-m) {
+		padding-top: 20px;
+		padding-left: 10px;
+		padding-right: 10px;
 	}
 
 	&__text {
