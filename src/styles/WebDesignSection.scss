@@ -2,6 +2,8 @@
 @use './variables.scss' as *;
 
 .web-design {
+
+
 	&__container {
 		text-align: center;
 
@@ -21,6 +23,8 @@
 			font-size: map.get($paragraph, 'font-size');
 			color: map.get($paragraph, 'color');
 			line-height: map.get($paragraph, 'line-height');
+            background-color: $bg-purple;
+            border: 1px solid $purple;
 
 			@media (min-width: $bp-m) {
 				font-size: map.get($paragraph-desktop, 'font-size');
