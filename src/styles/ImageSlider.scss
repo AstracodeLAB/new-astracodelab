@@ -25,6 +25,19 @@
 	object-fit: cover; /* Asegura que la imagen cubra el contenedor */
 	max-height: 400px; /* Limita la altura máxima de las imágenes */
 	border-radius: 10px; /* Opcional, si deseas bordes redondeados */
+	transition: transform 0.3s ease, filter 0.3s ease; /* Animación de suavizado */
+}
+
+/* Imagen activa: tamaño normal */
+.swiper-slide.swiper-slide-active img {
+	transform: scale(1); /* Tamaño normal */
+	filter: brightness(1); /* Sin oscurecer */
+}
+
+/* Imágenes laterales */
+.swiper-slide:not(.swiper-slide-active) img {
+	transform: scale(0.8); /* Tamaño reducido */
+	filter: brightness(0.5); /* Oscurecer */
 }
 
 .swiper-button-prev,
