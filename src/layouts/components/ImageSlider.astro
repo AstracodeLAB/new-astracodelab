@@ -16,13 +16,13 @@ import ArrowIcon from './icons/arrow.svg';
         href='/creative-projects'
         target="_self"
       >
-      <div class="slide-content">
-        <img src={DesignImage.src} alt="Creative Projects" class="slide-image" />
-        <span class="slide-text">
-            Portfolios y proyectos creativos
-            <img src={ArrowIcon.src} alt="Flecha" class="arrow-icon" />
-        </span>
-      </div>
+        <div class="slide-content">
+          <img src={DesignImage.src} alt="Creative Projects" class="slide-image" />
+          <span class="slide-text">
+              Portfolios y proyectos creativos
+              <img src={ArrowIcon.src} alt="Flecha" class="arrow-icon" />
+          </span>
+        </div>
       </a>
       <a 
         class="swiper-slide"
@@ -30,11 +30,11 @@ import ArrowIcon from './icons/arrow.svg';
         target="_self"
       >
         <div class="slide-content">
-        <img src={CompanyImage.src} alt="Company Website" class="slide-image"/>
-        <span class="slide-text">
-            Sitios web corporativos
-            <img src={ArrowIcon.src} alt="Flecha" class="arrow-icon" />
-        </span>
+          <img src={CompanyImage.src} alt="Company Website" class="slide-image"/>
+          <span class="slide-text">
+              Sitios web corporativos
+              <img src={ArrowIcon.src} alt="Flecha" class="arrow-icon" />
+          </span>
         </div>
       </a>
       <a 
@@ -43,11 +43,11 @@ import ArrowIcon from './icons/arrow.svg';
         target="_self"
       >
         <div class="slide-content">
-        <img src={LandingPageImage.src} alt="Company Landing Page" class="slide-image"/>
-        <span class="slide-text">
-            Landing page para empresas
-            <img src={ArrowIcon.src} alt="Flecha" class="arrow-icon" />
-        </span>
+          <img src={LandingPageImage.src} alt="Company Landing Page" class="slide-image"/>
+          <span class="slide-text">
+              Landing page para empresas
+              <img src={ArrowIcon.src} alt="Flecha" class="arrow-icon" />
+          </span>
         </div>
       </a>
       <a 
@@ -56,17 +56,14 @@ import ArrowIcon from './icons/arrow.svg';
         target="_self"
       >
         <div class="slide-content">
-        <img src={ServicesImage.src} alt="Booking Feature" class="slide-image"/>
-        <span class="slide-text">
-            Páginas web con reservas y citas
-            <img src={ArrowIcon.src} alt="Flecha" class="arrow-icon" />
-        </span>
+          <img src={ServicesImage.src} alt="Booking Feature" class="slide-image"/>
+          <span class="slide-text">
+              Páginas web con reservas y citas
+              <img src={ArrowIcon.src} alt="Flecha" class="arrow-icon" />
+          </span>
         </div>
       </a>
     </div>
-    <!-- Botones de navegación -->
-    <!-- <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div> -->
 </div>
 
 <script>
@@ -77,29 +74,40 @@ import ArrowIcon from './icons/arrow.svg';
     import { Navigation } from "swiper/modules";
     import "swiper/css/navigation";
 
-  
-    // Configurar Swiper
-    const swiper = new Swiper(".swiper", {
-        modules: [Navigation], // definir los módulos a usar
-        loop: true,            // definir si los slides estarán en bucle
-        slidesPerView: 1.5,
-        spaceBetween: 10,
-        centeredSlides: true, // Centra la imagen activa
-        breakpoints: {
-            // Cuando la pantalla es >= 768px
+    let swiper;
+
+    function initializeSwiper() {
+      // Solo inicializa Swiper en pantallas más pequeñas
+      if (window.innerWidth < 768 && !swiper) {
+        swiper = new Swiper(".swiper", {
+          modules: [Navigation],
+          loop: true,
+          slidesPerView: 1.5,
+          spaceBetween: 10,
+          centeredSlides: true,
+          breakpoints: {
             768: {
-                slidesPerView: 2,
-                spaceBetween: 30
+              slidesPerView: 4,
+              spaceBetween: 10
             },
-            // Cuando la pantalla es >= 1024px
-            1024: {
-                slidesPerView: 3,
-                spaceBetween: 40
-            }
-        },
-        // navigation: {          // definir botones next y prev para el módulo Navigation
-        //     prevEl: ".swiper-button-prev",
-        //     nextEl: ".swiper-button-next",
-        // }
+          },
+        });
+      }
+    }
+
+    function destroySwiper() {
+      // Destruir el Swiper si el tamaño es mayor a 768px
+      if (swiper && window.innerWidth >= 768) {
+        swiper.destroy();
+        swiper = null;
+      }
+    }
+
+    window.addEventListener('resize', () => {
+      initializeSwiper();
+      destroySwiper();
     });
+
+    // Inicializar Swiper cuando se carga la página
+    initializeSwiper();
 </script>
