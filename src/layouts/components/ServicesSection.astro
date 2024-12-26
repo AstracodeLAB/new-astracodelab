@@ -1,0 +1,56 @@
+---
+import PencilIcon from '../components/icons/PencilrulerIcon.astro'
+import PenIcon from './icons/PenIcon.astro';
+import RocketIcon from './icons/RocketIcon.astro';
+import BriefcaseIcon from './icons/BriefcaseIcon.astro';
+
+const iconComponents = {
+  PencilIcon,
+  PenIcon,
+  RocketIcon,
+  BriefcaseIcon
+};
+
+const { icons } = Astro.props;
+---
+
+<div class="services">
+    
+    <h2 class="services__title">SERVICIOS PERSONALIZADOS</h2>   
+
+    <ul class="services__container">
+        <li class="services__container-item">
+            <PenIcon />
+            <div class="services__container-item-text">
+                <h3 class="services__container-item-text-title">Diseño y desarrollo de páginas web personalizada</h3>
+                <p class="services__container-item-text-paragraph">Desde landing pages hasta portfolios profesionales, creamos sitios que capturan la atención de tu audiencia y logran tus objetivos comerciales.</p>
+            </div>
+        </li>
+
+        <li class="services__container-item">
+            <PencilIcon />
+            <div class="services__container-item-text">
+                <h3 class="services__container-item-text-title">Rediseño de páginas web obsoletas</h3>
+                <p class="services__container-item-text-paragraph">¿Tu sitio web ya no representa tu marca? Le damos nueva vida a tu presencia digital con un diseño moderno, centrado en mejorar la experiencia del usuario, aumentar la retención y reflejar la esencia de tu negocio.</p>
+            </div>
+        </li>
+
+        <li class="services__container-item">
+            <RocketIcon />
+            <div class="services__container-item-text">
+                <h3 class="services__container-item-text-title">Implementación de nuevas funcionalidades</h3>
+                <p class="services__container-item-text-paragraph">¿Quieres que tu sitio haga más? Incorporamos herramientas y características personalizadas que mejoran la interacción con tus clientes, como formularios dinámicos o sistemas de reserva.</p>
+            </div>
+        </li>
+
+        <li class="services__container-item">
+            <BriefcaseIcon />
+            <div class="services__container-item-text">
+                <h3 class="services__container-item-text-title">Mantenimiento web</h3>
+                <p class="services__container-item-text-paragraph">Mantén tu página web segura, rápida y actualizada sin preocupaciones. Nos encargamos de garantizar que todo funcione sin interrupciones, para que puedas concentrarte en tu negocio.</p>
+            </div>
+        </li>
+
+    </ul>
+
+</div>

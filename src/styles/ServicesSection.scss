@@ -1,1 +1,147 @@
 @use './variables.scss' as *;
+@use "sass:map";
+
+.services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+   // height: 100vh;
+    margin: 0;
+    background: linear-gradient(
+        180deg,
+        #FFFFFF 0%, 
+        #CDB0F4 30%,
+        #9E63EA 40%, 
+        #5E30B2 45%, 
+        #301B5D 50%, 
+        #5E30B2 55%, 
+        #9E63EA 60%, 
+        #CDB0F4 70%,
+        #FFFFFF 100%
+    );
+    /* Fondo degradado */
+   /* background: linear-gradient(
+        180deg,
+        #FFFFFF 0%, 
+        #CDB0F4 10%,
+        #9E63EA 20%, 
+        #5E30B2 40%, 
+        #301B5D 50%, 
+        #5E30B2 60%, 
+        #9E63EA 80%, 
+        #CDB0F4 90%,
+        #FFFFFF 100%
+    );*/
+    background-size: 101% 101%; /* Expande ligeramente el degradado */
+    background-position: center; /* Centra el degradado */
+    
+    @media (min-width: $bp-l) {
+       // flex-direction: row;
+        
+    }
+    
+    
+
+    &__title{
+            font-family: map.get($h2, "font-family");
+            font-size: map.get($h2, "font-size");
+            color: map.get($h2, "color");
+            padding-bottom: 20px; 
+            padding-top: 50px; 
+            text-align: center;  
+            @media (min-width: $bp-l) {
+                font-family: map.get($h2-desktop, "font-family");
+                font-size: map.get($h2-desktop, "font-size");
+                color: map.get($h2-desktop, "color");
+                 
+             }
+    }
+    &__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: 0 16px 0 16px;
+        flex-wrap: wrap;
+        @media (min-width: $bp-l) {
+            flex-direction: row;
+            max-width: 2000px;
+            
+        }
+        
+
+        &-item{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: $white;
+            border-radius: 25px;
+            padding: 20px 16px 20px 16px;
+            gap: 5px;
+            width: 95vw;
+            flex-grow: 1; /* Hace que todos los items crezcan igual al mismo ritmo */
+            max-width: 100vw; /* Limita el ancho máximo de cada caja */
+            min-height: 100px; /* Altura mínima para que las cajas tengan un tamaño uniforme */
+            @media (min-width: $bp-l) {
+                width: 45%; /* 2 cajas por fila en pantallas grandes */
+                max-width: 800px; /* Limita el ancho máximo */
+                min-height: 300px; /* Ajusta la altura mínima en pantallas grandes */
+                
+            }
+            &-text{
+                &-title{
+                    font-family: map.get($h3, "font-family");
+                    font-size: map.get($h3, "font-size");
+                    color: map.get($h3, "color");
+                    font-weight: map.get($h3, "font-weight");
+                    text-align: center;
+                    @media (min-width: $bp-l) {
+                        font-family: map.get($h3-desktop, "font-family");
+                        font-size: map.get($h3-desktop, "font-size");
+                        color: map.get($h3-desktop, "color");
+                        font-weight: map.get($h3-desktop, "font-weight");
+                         
+                     }
+                }
+    
+                &-paragraph {
+                    font-family: map.get($paragraph, "font-family");
+                    font-size: map.get($paragraph, "font-size");
+                    color: map.get($paragraph, "color");
+                    line-height: map.get($paragraph, "line-height");
+                    text-align: center;
+                    padding: 0 16px 0 16px; 
+                    display: none;
+    
+                    @media (min-width: $bp-l) {
+                        display: flex;
+                        font-family: map.get($paragraph-desktop, "font-family");
+                        font-size: map.get($paragraph-desktop, "font-size");
+                        color: map.get($paragraph-desktop, "color");
+                        line-height: map.get($paragraph-desktop, "line-height");
+                    }
+                }
+            }
+            
+            
+        }
+    }
+}
+
+.services__container-item svg {
+    width: 40px;
+    height: 40px;
+    fill: currentColor;
+    @media (min-width: $bp-l) {
+        width: 60px;
+        height: 60px;
+    }  /* Esto usa el color del contenedor */
+  }
+  
+  .services__container-item {
+    color: $purple;  /* Establece el color que desees */
+  }
