@@ -1,0 +1,14 @@
+@use './variables.scss' as *;
+
+.section-container {
+	display: flex;
+	// gap: 10px;
+	justify-content: space-between;
+	padding: 0 16px;
+
+	&__image {
+		flex: 1 1 auto;
+		max-width: calc(100% / 4.2);
+		border-radius: 15px;
+	}
+}
