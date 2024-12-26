@@ -3,7 +3,21 @@
 
 .web-design {
 
-   
+   &--mobile {
+	display: block;
+
+	@media (min-width: $bp-m) {
+		display: none;
+	}
+   }
+
+   &--desktop {
+	display: none;
+
+	@media (min-width: $bp-m) {
+		display: block;
+	}
+   }
 
 	&__container {
 		text-align: center;

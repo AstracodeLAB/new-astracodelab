@@ -67,47 +67,14 @@ import ArrowIcon from './icons/arrow.svg';
 </div>
 
 <script>
-    // Core de Swiper y estilos
-    import Swiper from 'swiper';
-    import 'swiper/css';
-    // Módulo Navigation de Swiper y estilos
+    import Swiper from "swiper";
     import { Navigation } from "swiper/modules";
-    import "swiper/css/navigation";
 
-    let swiper;
-
-    function initializeSwiper() {
-      // Solo inicializa Swiper en pantallas más pequeñas
-      if (window.innerWidth < 768 && !swiper) {
-        swiper = new Swiper(".swiper", {
-          modules: [Navigation],
-          loop: true,
-          slidesPerView: 1.5,
-          spaceBetween: 10,
-          centeredSlides: true,
-          breakpoints: {
-            768: {
-              slidesPerView: 4,
-              spaceBetween: 10
-            },
-          },
-        });
-      }
-    }
-
-    function destroySwiper() {
-      // Destruir el Swiper si el tamaño es mayor a 768px
-      if (swiper && window.innerWidth >= 640) {
-        swiper.destroy();
-        swiper = null;
-      }
-    }
-
-    window.addEventListener('resize', () => {
-      initializeSwiper();
-      destroySwiper();
-    });
-
-    // Inicializar Swiper cuando se carga la página
-    initializeSwiper();
+    const swiper = new Swiper('.swiper', {
+      modules: [Navigation],
+      loop: true, 
+      slidesPerView: 1.5, 
+      centeredSlides: true,
+      spaceBetween: 10
+    })
 </script>
