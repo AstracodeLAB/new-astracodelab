@@ -1,0 +1,132 @@
+---
+import DesignImage from '../../images/diseño.png';
+import CompanyImage from '../../images/empresa.jpg';
+import LandingPageImage from '../../images/landingpage.jpg';
+import ServicesImage from '../../images/servicios.jpg';
+import ArrowIcon from './icons/arrow.svg';
+---
+
+<!-- Contenedor principal de Swiper -->
+<div class="swiper">
+    <!-- Wrapper adicional requerido -->
+    <div class="swiper-wrapper" id="my-slider">
+      <!-- Los slides -->
+      <a 
+        class="swiper-slide"
+        href='/creative-projects'
+        target="_self"
+      >
+        <div class="slide-content">
+          <img src={DesignImage.src} alt="Portfolios y proyectos creativos" class="slide-image" />
+          <span class="slide-text">
+              Portfolios y proyectos creativos
+              <img src={ArrowIcon.src} alt="Flecha" class="arrow-icon" />
+          </span>
+        </div>
+      </a>
+      <a 
+        class="swiper-slide"
+        href="/company-website"
+        target="_self"
+      >
+        <div class="slide-content">
+          <img src={CompanyImage.src} alt="Sitios web corporativos" class="slide-image"/>
+          <span class="slide-text">
+              Sitios web corporativos
+              <img src={ArrowIcon.src} alt="Flecha" class="arrow-icon" />
+          </span>
+        </div>
+      </a>
+      <a 
+        class="swiper-slide"
+        href="/company-landing-page"
+        target="_self"
+      >
+        <div class="slide-content">
+          <img src={LandingPageImage.src} alt="Company Landing Page" class="slide-image"/>
+          <span class="slide-text">
+              Landing page para empresas
+              <img src={ArrowIcon.src} alt="Flecha" class="arrow-icon" />
+          </span>
+        </div>
+      </a>
+      <a 
+        class="swiper-slide"
+        href="/booking-feature"
+        target="_self"
+      >
+        <div class="slide-content">
+          <img src={ServicesImage.src} alt="Booking Feature" class="slide-image"/>
+          <span class="slide-text">
+              Páginas web con reservas y citas
+              <img src={ArrowIcon.src} alt="Flecha" class="arrow-icon" />
+          </span>
+        </div>
+      </a>
+      <a 
+        class="swiper-slide"
+        href='/creative-projects'
+        target="_self"
+      >
+        <div class="slide-content">
+          <img src={DesignImage.src} alt="Portfolios y proyectos creativos" class="slide-image" />
+          <span class="slide-text">
+              Portfolios y proyectos creativos
+              <img src={ArrowIcon.src} alt="Flecha" class="arrow-icon" />
+          </span>
+        </div>
+      </a>
+      <a 
+        class="swiper-slide"
+        href="/company-website"
+        target="_self"
+      >
+        <div class="slide-content">
+          <img src={CompanyImage.src} alt="Sitios web corporativos" class="slide-image"/>
+          <span class="slide-text">
+              Sitios web corporativos
+              <img src={ArrowIcon.src} alt="Flecha" class="arrow-icon" />
+          </span>
+        </div>
+      </a>
+      <a 
+        class="swiper-slide"
+        href="/company-landing-page"
+        target="_self"
+      >
+        <div class="slide-content">
+          <img src={LandingPageImage.src} alt="Company Landing Page" class="slide-image"/>
+          <span class="slide-text">
+              Landing page para empresas
+              <img src={ArrowIcon.src} alt="Flecha" class="arrow-icon" />
+          </span>
+        </div>
+      </a>
+      <a 
+        class="swiper-slide"
+        href="/booking-feature"
+        target="_self"
+      >
+        <div class="slide-content">
+          <img src={ServicesImage.src} alt="Booking Feature" class="slide-image"/>
+          <span class="slide-text">
+              Páginas web con reservas y citas
+              <img src={ArrowIcon.src} alt="Flecha" class="arrow-icon" />
+          </span>
+        </div>
+      </a>
+    </div>
+</div>
+
+<script>
+    import Swiper from "swiper";
+    import { Navigation } from "swiper/modules";
+
+    const swiper = new Swiper('.swiper', {
+      modules: [Navigation],
+      loop: true, 
+      slidesPerView: 1.5, 
+      centeredSlides: true,
+      spaceBetween: 10
+    })
+</script>

@@ -1,1 +1,57 @@
+@use 'sass:map';
 @use './variables.scss' as *;
+
+.web-design {
+	&--mobile {
+		display: block;
+
+		@media (min-width: $bp-m) {
+			display: none;
+		}
+	}
+
+	&--desktop {
+		display: none;
+
+		@media (min-width: $bp-m) {
+			display: flex;
+		}
+	}
+
+	&__container {
+		text-align: center;
+		padding-top: 30px;
+
+		&-title {
+			font-family: map.get($h2, 'font-family');
+			font-size: map.get($h2, 'font-size');
+			color: map.get($h2, 'color');
+			text-transform: uppercase;
+			margin: 0 16px;
+
+			@media (min-width: $bp-m) {
+				font-size: map.get($h2-desktop, 'font-size');
+				text-align: start;
+				padding-left: 80px;
+			}
+		}
+
+		&-text {
+			font-family: map.get($paragraph, 'font-family');
+			font-size: map.get($paragraph, 'font-size');
+			color: map.get($paragraph, 'color');
+			line-height: map.get($paragraph, 'line-height');
+			background-color: $bg-purple;
+			border: 1px solid $purple;
+			padding: 0 16px;
+
+			@media (min-width: $bp-m) {
+				font-size: map.get($paragraph-desktop, 'font-size');
+				line-height: map.get($paragraph-desktop, 'line-height');
+				text-align: start;
+				padding-left: 96px;
+				padding-right: 96px;
+			}
+		}
+	}
+}
