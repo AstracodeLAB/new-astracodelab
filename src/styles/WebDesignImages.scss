@@ -37,17 +37,26 @@
     opacity: 0;
     transition: opacity 0.3s ease;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: end;
+    // justify-content: center;
     border-radius: 15px;
+	// display: flex;
+	// flex-direction: column;
+	// gap: 20px;
   }
 
   &__text {
     color: $white;
     font-size: 1rem;
-    text-align: center;
-    padding: 0 10px;
+    // text-align: center;
+    padding-left: 10px;
+	padding-bottom: 10px;
 	font-family: 'Konkhmer Sleokchher';
 	font-size: 20px;
+  }
+
+  &__arrow {
+	padding-right: 10px;
+	padding-bottom: 10px;
   }
 }
