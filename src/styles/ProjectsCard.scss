@@ -1,3 +1,4 @@
+@use 'sass:map';
 @use './variables.scss' as *;
 
 .projects-card {
@@ -7,6 +8,8 @@
 	&__image {
 		display: block;
 		width: 100%;
+		aspect-ratio: 1/1;
+		object-fit: cover;
 	}
 
 	&__corner {
@@ -54,35 +57,42 @@
 
 	&__pills {
 		display: flex;
+		flex-wrap: wrap;
 		gap: 10px;
 
-		&__pill {
-			background: white;
-			color: purple;
-			padding: 5px 10px;
+		&-pill {
+			padding: 0 5px;
+			background: transparent;
+			color: $white;
 			border-radius: 16px;
-			font-size: 0.85rem;
-			font-weight: bold;
+			border: 1px solid $purple;
+			font-family: map.get($h1, 'font-family');
+			font-size: 0.9rem;
+			box-shadow: $shadow;
 		}
 	}
 
 	&__text {
 		text-align: center;
-		font-size: 0.9rem;
-		line-height: 1.4;
+		font-family: map.get($paragraph, 'font-family');
+		font-size: map.get($paragraph, 'font-size');
+		line-height: map.get($paragraph, 'line-heigth');
 	}
 
 	&__button {
-		background: white;
-		color: purple;
-		padding: 8px 16px;
-		border-radius: 4px;
-		font-weight: bold;
+		background: $white;
+		color: $cta;
+		padding: 2px 20px;
+		border-radius: 25px;
+		font-family: map.get($h1bold, 'font-family');
 		text-transform: uppercase;
 		text-decoration: none;
+		box-shadow: $shadow;
+		transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
 
 		&:hover {
-			background: #f3f3f3;
+			background: $purple;
+			color: $white;
 		}
 	}
 }

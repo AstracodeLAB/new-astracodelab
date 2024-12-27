@@ -1,62 +1,62 @@
 @use './variables.scss' as *;
 
 .section-container {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 16px;
+	display: flex;
+	justify-content: space-between;
+	padding: 0 16px;
 
-  &__item {
-    position: relative;
-    flex: 1 1 auto;
-    max-width: calc(100% / 4.2);
-    margin: 0 8px;
-    border-radius: 15px;
-    overflow: hidden;
-    cursor: pointer;
-    text-decoration: none; // Elimina el subrayado de los enlaces
+	&__item {
+		position: relative;
+		flex: 1 1 auto;
+		max-width: calc(100% / 4.2);
+		margin: 0 8px;
+		border-radius: 15px;
+		overflow: hidden;
+		cursor: pointer;
+		text-decoration: none; // Elimina el subrayado de los enlaces
 
-    &:hover .section-container__overlay {
-      opacity: 1;
-    }
-  }
+		&:hover .section-container__overlay {
+			opacity: 1;
+		}
+	}
 
-  &__image {
-    width: 100%;
-    height: 100%;
-    display: block;
-    border-radius: 15px;
-  }
+	&__image {
+		width: 100%;
+		height: 100%;
+		display: block;
+		border-radius: 15px;
+	}
 
-  &__overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6); // Oscurecimiento
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    display: flex;
-    align-items: end;
-    // justify-content: center;
-    border-radius: 15px;
-	// display: flex;
-	// flex-direction: column;
-	// gap: 20px;
-  }
+	&__overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.6); // Oscurecimiento
+		opacity: 0;
+		transition: opacity 0.3s ease;
+		display: flex;
+		align-items: end;
+		// justify-content: center;
+		border-radius: 15px;
+		// display: flex;
+		// flex-direction: column;
+		// gap: 20px;
+	}
 
-  &__text {
-    color: $white;
-    font-size: 1rem;
-    // text-align: center;
-    padding-left: 10px;
-	padding-bottom: 10px;
-	font-family: 'Konkhmer Sleokchher';
-	font-size: 20px;
-  }
+	&__text {
+		color: $white;
+		font-size: 1rem;
+		// text-align: center;
+		padding-left: 10px;
+		padding-bottom: 10px;
+		font-family: 'Konkhmer Sleokchher';
+		font-size: 20px;
+	}
 
-  &__arrow {
-	padding-right: 10px;
-	padding-bottom: 10px;
-  }
+	&__arrow {
+		padding-right: 10px;
+		padding-bottom: 10px;
+	}
 }
