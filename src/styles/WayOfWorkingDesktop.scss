@@ -1,0 +1,89 @@
+@use './variables.scss' as *;
+@use "sass:map";
+
+
+.workingDesktop {
+  &__timeline {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-list {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width: 100%;
+      padding: 20px;
+
+      // Línea horizontal central
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background-color: $purple; // Línea de color morado
+        z-index: 1;
+      }
+
+      &-item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 150px; // Ancho de cada item
+        text-align: center;
+        margin: 0 20px;
+
+        // Círculo indicador (punto del timeline)
+        &-circle {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 20px;
+          height: 20px;
+          background-color: $purple;
+          border-radius: 50%;
+          z-index: 2; // Sobre la línea
+        }
+
+        // Alternar entre arriba y abajo
+        &:nth-child(odd) {
+          transform: translateY(-60px); // Elementos arriba
+        }
+
+        &:nth-child(even) {
+          transform: translateY(60px); // Elementos abajo
+        }
+
+        // Texto del timeline
+        &-text {
+          margin-top: 30px;
+
+          &-title {
+            font-family: map.get($h3, "font-family");
+            font-size: map.get($h3, "font-size");
+            color: map.get($h3, "color");
+          }
+
+          &-paragraph {
+            font-family: map.get($paragraph, "font-family");
+            font-size: map.get($paragraph, "font-size");
+            color: map.get($paragraph, "color");
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+    
+
+    

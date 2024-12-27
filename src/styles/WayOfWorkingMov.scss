@@ -1,0 +1,76 @@
+@use './variables.scss' as *;
+@use "sass:map";
+
+.workingMov {
+    &__timeline {
+        padding-left: 30px;
+    
+        &-list {
+          position: relative;
+          border-left: 6px solid $purple; 
+          transition: background-color 0.3s ease, border-color 0.3s ease;
+          &.active {
+            border-left: 6px solid $green;
+          }
+        
+            &-item{
+                //margin-bottom: 10px;
+                //margin-left: -0.5rem;
+                display: flex;
+    
+                &-circle{
+                    position: absolute;
+                    width: 1.5rem; 
+                    height: 1.5rem; 
+                    background-color: $purple; 
+                    border-radius: 50%;
+                    left: -0.95rem; 
+                    transition: background-color 0.3s ease, border-color 0.3s ease;
+                    
+        
+                }
+                &-circle.active {
+                    background-color: $green; // Change to any color you want
+                    border-color: $white;
+                  }
+                &-text{
+                    padding: 0 20px;
+                    &-title{
+                        font-family: map.get($h3, "font-family");
+                        font-size: map.get($h3, "font-size");
+                        color: map.get($h3, "color");
+                        font-weight: map.get($h3, "font-weight");
+    
+                        @media (min-width: $bp-l) {
+                            font-family: map.get($h3-desktop, "font-family");
+                            font-size: map.get($h3-desktop-services, "font-size");
+                            color: map.get($h3-desktop, "color");
+                            font-weight: map.get($h3-desktop, "font-weight");
+                            text-align: start;
+                            
+                         }
+                    }
+                    &-paragraph{
+                        margin-bottom: 1rem; 
+                        font-family: map.get($paragraph, "font-family");
+                        font-size: map.get($paragraph, "font-size");
+                        color: map.get($paragraph, "color");
+                        line-height: map.get($paragraph, "line-height");
+                        text-align: center;
+                        padding: 0 16px 0 16px; 
+                    
+                        @media (min-width: $bp-l) {
+                            display: flex;
+                            font-family: map.get($paragraph-desktop, "font-family");
+                            font-size: map.get($paragraph-desktop, "font-size");
+                            color: map.get($paragraph-desktop, "color");
+                            line-height: map.get($paragraph-desktop, "line-height");
+                            text-align: start;
+                            padding: 0 5px 0 0;
+                        }
+                    }
+                }
+                
+            }
+      }}
+}

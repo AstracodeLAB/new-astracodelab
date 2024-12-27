@@ -14,6 +14,7 @@
             color: map.get($h2, "color");
             padding-bottom: 20px;
             width: 100%;
+            text-align: center;
 
             @media (min-width: $bp-l) {
                 font-family: map.get($h2-desktop, "font-family");
