@@ -31,6 +31,8 @@
 
 			@media (min-width: $bp-m) {
 				font-size: map.get($h2-desktop, 'font-size');
+				text-align: start;
+				padding-left: 80px;
 			}
 		}
 
@@ -46,6 +48,9 @@
 			@media (min-width: $bp-m) {
 				font-size: map.get($paragraph-desktop, 'font-size');
 				line-height: map.get($paragraph-desktop, 'line-height');
+				text-align: start;
+				padding-left: 96px;
+				padding-right: 96px;
 			}
 		}
 	}
