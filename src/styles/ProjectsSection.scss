@@ -1,1 +1,12 @@
+@use 'sass:map';
 @use './variables.scss' as *;
+
+.projects-section {
+	&__title {
+		text-transform: uppercase;
+		font-family: map.get($h2, 'font-family');
+		font-size: map.get($h2, 'font-size');
+		color: map.get($h2, 'color');
+        text-align: center;
+	}
+}
