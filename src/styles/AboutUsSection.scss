@@ -1,1 +1,142 @@
 @use './variables.scss' as *;
+@use "sass:map";
+
+.aboutus{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    //padding-bottom: 30px;
+
+    &__title{
+            font-family: map.get($h2, "font-family");
+            font-size: map.get($h2, "font-size");
+            color: map.get($h2, "color");
+            padding-bottom: 20px;
+            
+
+            @media (min-width: $bp-l) {
+                font-family: map.get($h2-desktop, "font-family");
+                font-size: map.get($h2-desktop, "font-size");
+                color: map.get($h2-desktop, "color");
+            }
+    }
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+        @media (min-width: $bp-l) {
+            
+            flex-direction: row;
+            align-items: stretch;
+            
+         }
+
+        &-mision{
+            display: flex;
+            flex-direction: column;
+           // justify-content: center;
+            align-items: center;
+            background-color: $backgroundContainer;
+            border-top: 1px solid $purple;
+            border-bottom: 1px solid $purple;
+            border-right: 1px solid $purple;
+            gap: 20px;
+            padding: 20px 0 20px 0;
+            
+
+            @media (min-width: $bp-l) {
+                flex: 1; 
+                padding: 20px 0 20px 120px;
+                border-top-right-radius: 25px;
+            border-bottom-right-radius: 25px;
+            }
+            
+
+            &-title{
+                font-family: map.get($h3, "font-family");
+                font-size: map.get($h3, "font-size");
+                color: map.get($h3, "color");
+                font-weight: map.get($h3, "font-weight") ;
+
+                @media (min-width: $bp-l) {
+                    font-family: map.get($h3-desktop, "font-family");
+                    font-size: map.get($h3-desktop, "font-size");
+                    color: map.get($h3-desktop, "color");
+                    font-weight: map.get($h3-desktop, "font-weight") ;
+                }
+            }
+            &-paragraph{
+                font-family: map.get($paragraph, "font-family");
+                font-size: map.get($paragraph, "font-size");
+                color: map.get($paragraph, "color");
+                line-height: map.get($paragraph, "line-height");
+                text-align: center;
+                padding: 0 16px 0 16px;
+
+                @media (min-width: $bp-l) {
+                    font-family: map.get($paragraph-desktop, "font-family");
+                    font-size: map.get($paragraph-desktop, "font-size");
+                    color: map.get($paragraph-desktop, "color");
+                    line-height: map.get($paragraph-desktop, "line-height");
+                
+                }
+            }
+        }
+        &-compromise{
+            display: flex;
+            flex-direction: column;
+           // justify-content: center;
+            align-items: center;
+            background-color: $backgroundContainer;
+            border-top: 1px solid $purple;
+            border-bottom: 1px solid $purple;
+            border-left: 1px solid $purple;
+            gap: 20px;
+            padding: 20px 0 20px 0;
+            
+
+            @media (min-width: $bp-l) {
+                flex: 1; 
+                padding: 20px 120px 20px 0;
+                border-top-left-radius: 25px;
+                border-bottom-left-radius: 25px;
+            }
+            
+
+            &-title{
+                font-family: map.get($h3, "font-family");
+                font-size: map.get($h3, "font-size");
+                color: map.get($h3, "color");
+                font-weight: map.get($h3, "font-weight");
+
+                @media (min-width: $bp-l) {
+                    font-family: map.get($h3-desktop, "font-family");
+                    font-size: map.get($h3-desktop, "font-size");
+                    color: map.get($h3-desktop, "color");
+                    font-weight: map.get($h3-desktop, "font-weight") ;
+                }
+            }
+            &-paragraph{
+                font-family: map.get($paragraph, "font-family");
+                font-size: map.get($paragraph, "font-size");
+                color: map.get($paragraph, "color");
+                line-height: map.get($paragraph, "line-height");
+                text-align: center;
+                padding: 0 16px 0 16px;
+
+                @media (min-width: $bp-l) {
+                    font-family: map.get($paragraph-desktop, "font-family");
+                    font-size: map.get($paragraph-desktop, "font-size");
+                    color: map.get($paragraph-desktop, "color");
+                    line-height: map.get($paragraph-desktop, "line-height");
+                
+                }
+            }
+        }
+        
+    }
+}

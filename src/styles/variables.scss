@@ -10,6 +10,7 @@
 $bp-s: 520px;
 $bp-m: 768px;
 $bp-l: 1024px;
+$bp-xl: 1440px;
 
 // Colors
 $white: #fdfcff;
@@ -21,9 +22,10 @@ $purple: #b7aaff;
 $bg-purple: rgba($purple, 0.05);
 $gray: #f3f1ff;
 $green: #bbff00;
+$backgroundContainer: rgba(214, 208, 255, 0.093);
 
 // Shadows
-$shadow: 0px 4px 4px rgba(18, 12, 35, 0.25);
+$shadow: 0px 4px 4px rgba(18, 12, 35, 0.5);
 
 // Paragraph
 $paragraph: (
@@ -44,16 +46,16 @@ $paragraph-desktop: (
 
 // h1
 $h1: (
-	font-family: 'Raleway Variable',
-	font-size: 2.625rem,
-	// 42px
-	color: $white,
-	letter-spacing: -0.1575rem,
+    font-family: "Raleway Variable",
+  font-size: 2.625rem, // 42px
+  color: $white,
+  letter-spacing: -0.1575rem,
+  line-height: 1.5625rem // 25px
 );
 
 $h1-desktop: (
 	font-family: 'Raleway Variable',
-	font-size: 6rem,
+	font-size: 4.6rem,
 	// 96px
 	color: $white,
 	letter-spacing: -0.1575rem,
@@ -70,7 +72,7 @@ $h1bold: (
 
 $h1bold-desktop: (
 	font-family: 'Konkhmer Sleokchher',
-	font-size: 6rem,
+	font-size: 4.6rem,
 	// 96px
 	color: $white,
 	letter-spacing: -0.1575rem,
@@ -103,6 +105,13 @@ $h3: (
 $h3-desktop: (
 	font-family: 'Raleway Variable',
 	font-size: 2.0625rem,
+	// 33px
+	color: $black,
+	font-weight: 500,
+);
+$h3-desktop-services: (
+	font-family: 'Raleway Variable',
+	font-size: 2rem,
 	// 33px
 	color: $black,
 	font-weight: 500,
