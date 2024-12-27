@@ -22,11 +22,6 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	
-	@media (min-width: 640px) {
-		align-items: flex-start;
-		justify-content: flex-start;
-	}
 }
 
 .swiper-slide .slide-image {
@@ -42,7 +37,6 @@
 	transform: scale(1);
 	filter: brightness(0.4);
 }
-
 
 /* Imágenes laterales */
 .swiper-slide:not(.swiper-slide-active) .slide-image {
