@@ -33,7 +33,21 @@
 		& img {
 			width: 20px;
 			height: 20px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-10%, 25%) rotate(225deg); /* Rotación inicial */
+			transition: transform 0.3s ease-in-out;
 		}
+
+		// Cambios cuando el overlay está visible
+		// &--overlay-visible {
+		// 	background: transparent;
+
+		// 	img {
+		// 		transform: translate(-50%, -50%) rotate(180deg);
+		// 	}
+		// }
 	}
 
 	&__overlay {
