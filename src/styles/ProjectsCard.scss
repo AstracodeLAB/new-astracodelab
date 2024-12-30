@@ -45,7 +45,7 @@
 		align-items: center;
 		justify-content: center;
 		gap: 10px;
-		padding: 20px;
+		padding: 16px;
 		color: $white;
 		transform: translateY(100%);
 		transition: transform 0.3s ease-in-out;
@@ -59,6 +59,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		gap: 10px;
+		margin-bottom: 20px;
 
 		&-pill {
 			padding: 0 5px;
@@ -69,6 +70,8 @@
 			font-family: map.get($h1, 'font-family');
 			font-size: 0.9rem;
 			box-shadow: $shadow;
+			text-align: center;
+			width: 130px;
 		}
 	}
 
@@ -77,9 +80,12 @@
 		font-family: map.get($paragraph, 'font-family');
 		font-size: map.get($paragraph, 'font-size');
 		line-height: map.get($paragraph, 'line-heigth');
+		margin-bottom: 20px;
 	}
 
 	&__button {
+		width: 140px;
+		text-align: center;
 		background: $white;
 		color: $cta;
 		padding: 2px 20px;
