@@ -9,6 +9,20 @@
 	flex-direction: column;
 	align-items: center;
 
+	&__separate {
+		@media (min-width: $bp-m) {
+			display: flex;
+			flex-direction: row-reverse;
+			justify-content: space-between;
+			width: 100%;
+		}
+	}
+
+	&__three {
+		@media (min-width: $bp-m) {
+		}
+	}
+
 	&__logo {
 		margin-bottom: 0.5rem;
 	}
@@ -28,6 +42,10 @@
 			color: #000;
 			font-size: 0.875rem;
 		}
+
+		@media (min-width: $bp-m) {
+			font-family: map.get($h1, font-family);
+		}
 	}
 
 	&__copy {
@@ -35,5 +53,10 @@
 		font-size: map.get($paragraph, 'font-size');
 		color: map.get($paragraph, 'color');
 		margin-top: 1rem;
+
+		@media (min-width: $bp-m) {
+			align-self: flex-start;
+			font-family: map.get($h1, font-family);
+		}
 	}
 }
