@@ -1,5 +1,7 @@
 ---
 import MakeupImage from '../../images/peluBanner.png';
+import RestaurantImage from '../../images/restauranteBanner.png';
+import WriterImage from '../../images/blogBanner.png';
 import ArrowIcon from '../components/icons/arrow.svg';
 ---
 
@@ -28,6 +30,7 @@ import ArrowIcon from '../components/icons/arrow.svg';
 
 <!-- Tamaños tablet y desktop -->
 <div class='projects-card-desktop'>
+	<!-- Card 1 -->
 	<div class='projects-card-desktop__container'>
 		<img class='projects-card-desktop__container-image' src={MakeupImage.src} alt='Web de maquilladora' />
 		<div class='projects-card-desktop__container-content'>
@@ -39,6 +42,40 @@ import ArrowIcon from '../components/icons/arrow.svg';
 			<p class='projects-card-desktop__container-content-text'>
 				Página web diseñada para mostrar el portfolio de una maquilladora, ofrecer servicios y permitir a los clientes
 				reservar citas fácilmente a través de un calendario interactivo.
+			</p>
+			<a href='/' class='projects-card-desktop__container-content-button'>ver</a>
+		</div>
+	</div>
+
+	<!-- Card 2 -->
+	<div class='projects-card-desktop__container'>
+		<div class='projects-card-desktop__container-content-left'>
+			<div class='projects-card-desktop__container-content-pills'>
+				<p class='projects-card-desktop__container-content-pills-pill'>Web de servicios</p>
+				<p class='projects-card-desktop__container-content-pills-pill'>Diseño UI/UX</p>
+				<p class='projects-card-desktop__container-content-pills-pill'>Estética</p>
+			</div>
+			<p class='projects-card-desktop__container-content-text'>
+				Sitio web intuitivo para un restautante, que incluye menú digital, sistema de reservas y un formulario de
+				contacto para mejorar la experiencia del cliente y la gestión del restaurante.
+			</p>
+			<a href='/' class='projects-card-desktop__container-content-button'>ver</a>
+		</div>
+		<img class='projects-card-desktop__container-image-right' src={RestaurantImage.src} alt='Web de maquilladora' />
+	</div>
+
+	<!-- Card 3 -->
+	<div class='projects-card-desktop__container'>
+		<img class='projects-card-desktop__container-image' src={WriterImage.src} alt='Web de maquilladora' />
+		<div class='projects-card-desktop__container-content'>
+			<div class='projects-card-desktop__container-content-pills'>
+				<p class='projects-card-desktop__container-content-pills-pill'>Web de servicios</p>
+				<p class='projects-card-desktop__container-content-pills-pill'>Diseño UI/UX</p>
+				<p class='projects-card-desktop__container-content-pills-pill'>Estética</p>
+			</div>
+			<p class='projects-card-desktop__container-content-text'>
+				Web minimalista creada para una escritora y diseñada para destacar sus obras, con un enfoque en la claridad y la
+				elegancia para resaltar su estilo único.
 			</p>
 			<a href='/' class='projects-card-desktop__container-content-button'>ver</a>
 		</div>

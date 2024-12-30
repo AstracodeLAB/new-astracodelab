@@ -119,14 +119,14 @@
 	padding: 16px;
 
 	@media (min-width: $bp-s) {
-		display: block;
+		display: flex;
+		flex-direction: column;
 		background-color: $black;
+		gap: 25px;
 	}
 
 	&__container {
 		display: flex;
-		background-color: $corner-blueDark;
-		border-radius: 10px;
 
 		&-image {
 			width: 50%;
@@ -134,14 +134,36 @@
 			border-top-left-radius: 10px;
 			border-bottom-left-radius: 10px;
 			object-fit: cover;
+
+			&-right {
+				width: 50%;
+				height: auto;
+				border-top-right-radius: 10px;
+				border-bottom-right-radius: 10px;
+				object-fit: cover;
+			}
 		}
 
 		&-content {
 			display: flex;
+			background-color: $corner-blueDark;
 			flex-direction: column;
 			color: $white;
 			padding: 16px;
 			justify-content: center;
+			border-top-right-radius: 10px;
+			border-bottom-right-radius: 10px;
+
+			&-left {
+				display: flex;
+				flex-direction: column;
+				color: $white;
+				padding: 16px;
+				justify-content: center;
+				background-color: $cta;
+				border-top-left-radius: 10px;
+				border-bottom-left-radius: 10px;
+			}
 
 			&-pills {
 				display: flex;
@@ -190,6 +212,10 @@
 				box-shadow: $shadow;
 				align-self: center;
 				transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+				@media (min-width: $bp-m) {
+					align-self: flex-end;
+				}
 
 				&:hover {
 					background: $purple;
