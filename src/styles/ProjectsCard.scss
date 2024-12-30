@@ -1,11 +1,12 @@
 @use 'sass:map';
 @use './variables.scss' as *;
 
+// Mobile
 .projects-card {
 	position: relative;
 	overflow: hidden;
 
-	@media (min-width: $bp-xs) {
+	@media (min-width: $bp-s) {
 		display: none;
 	}
 
@@ -109,20 +110,92 @@
 		text-transform: uppercase;
 		text-decoration: none;
 		box-shadow: $shadow;
-		transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
-
-		&:hover {
-			background: $purple;
-			color: $white;
-		}
 	}
 }
 
+// Tablet y desktop
 .projects-card-desktop {
 	display: none;
+	padding: 16px;
 
-	@media (min-width: $bp-xs) {
-		display: flex;
+	@media (min-width: $bp-s) {
+		display: block;
 		background-color: $black;
+	}
+
+	&__container {
+		display: flex;
+		background-color: $corner-blueDark;
+		border-radius: 10px;
+
+		&-image {
+			width: 50%;
+			height: auto;
+			border-top-left-radius: 10px;
+			border-bottom-left-radius: 10px;
+			object-fit: cover;
+		}
+
+		&-content {
+			display: flex;
+			flex-direction: column;
+			color: $white;
+			padding: 16px;
+			justify-content: center;
+
+			&-pills {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 10px;
+				margin-bottom: 25px;
+				justify-content: center;
+
+				@media (min-width: $bp-m) {
+					justify-content: flex-start;
+					padding-left: 16px;
+				}
+
+				&-pill {
+					padding: 0 5px;
+					background: transparent;
+					color: $white;
+					border-radius: 16px;
+					border: 1px solid $purple;
+					font-family: map.get($h1, 'font-family');
+					font-size: 0.9rem;
+					box-shadow: $shadow;
+					text-align: center;
+					// width: 130px;
+				}
+			}
+
+			&-text {
+				text-align: center;
+				font-family: map.get($paragraph-desktop, 'font-family');
+				font-size: map.get($paragraph-desktop, 'font-size');
+				line-height: map.get($paragraph-desktop, 'line-heigth');
+				margin-bottom: 25px;
+			}
+
+			&-button {
+				width: 140px;
+				text-align: center;
+				background: $white;
+				color: $cta;
+				padding: 2px 20px;
+				border-radius: 25px;
+				font-family: map.get($h1bold, 'font-family');
+				text-transform: uppercase;
+				text-decoration: none;
+				box-shadow: $shadow;
+				align-self: center;
+				transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+				&:hover {
+					background: $purple;
+					color: $white;
+				}
+			}
+		}
 	}
 }
