@@ -6,9 +6,13 @@
 	background: linear-gradient(to bottom right, #d5caff, #a7a1fa);
 	text-align: center;
 	font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
 	&__logo {
 		margin-bottom: 0.5rem;
+        
 
 		&-img {
 			max-width: 80px;
