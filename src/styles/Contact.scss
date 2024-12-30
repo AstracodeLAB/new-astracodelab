@@ -1,1 +1,86 @@
+@use 'sass:map';
 @use './variables.scss' as *;
+
+.contact {
+	padding: 16px;
+	text-align: center;
+	background-color: #fff;
+
+	&__title {
+		font-family: map.get($h2, font-family);
+		font-size: map.get($h2, font-size);
+		color: map.get($h2, color);
+		margin-bottom: 1rem;
+	}
+
+	&__description {
+		font-family: map.get($paragraph, font-family);
+		font-size: map.get($paragraph, font-size);
+		color: map.get($paragraph, color);
+		line-height: map.get($paragraph, line-height);
+		margin-bottom: 1rem;
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	&__input,
+	&__textarea {
+		width: 100%;
+		padding: 0.75rem;
+		border: 1px solid #ddd;
+		border-radius: 10px;
+		font-size: 0.875rem;
+		background-color: $gray;
+		color: $blueDark;
+		font-family: map.get($h1, font-family);
+	}
+
+	&__textarea {
+		min-height: 100px;
+	}
+
+	&__checkbox-label {
+		font-family: map.get($small, font-family);
+		font-size: map.get($small, font-size);
+		color: map.get($small, color);
+		line-height: map.get($small, line-height);
+		text-align: left;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	&__checkbox {
+		margin: 0;
+	}
+
+	&__question {
+		font-family: map.get($paragraph, font-family);
+		font-size: map.get($paragraph, font-size);
+		color: map.get($paragraph, color);
+		margin-top: 1rem;
+	}
+
+	&__button {
+		align-self: center;
+		width: 100px;
+		padding: 0.75rem;
+		border: none;
+		border-radius: 50px;
+		background-color: $cta;
+		color: $white;
+		font-family: map.get($h2, font-family);
+		font-size: 1rem;
+		font-weight: bold;
+		cursor: pointer;
+		transition: background-color 0.3s;
+
+		&:hover {
+			background-color: $blueDark;
+		}
+	}
+}
