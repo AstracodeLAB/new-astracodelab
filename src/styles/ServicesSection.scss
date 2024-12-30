@@ -49,7 +49,7 @@
             font-size: map.get($h2, "font-size");
             color: map.get($h2, "color");
              
-            padding-top: 70px; 
+            padding-top: 30px; 
             text-align: center;  
             width: 100%;
             @media (min-width: $bp-l) {
@@ -84,6 +84,7 @@
         padding: 20px 0 20px 0;
         flex-wrap: wrap;
         background-size: 100vw;
+        align-content: center;
         @media (min-width: $bp-l) {
             
             flex-direction: row;
@@ -97,9 +98,9 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background-color: $white;
+            background-color: $white ;
             box-shadow: $shadow;
-            border-radius: 25px;
+            border-radius: 10px;
             margin: 0 16px 0 16px;
             padding: 20px 16px 20px 16px;
             gap: 5px;

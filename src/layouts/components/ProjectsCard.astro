@@ -1,0 +1,151 @@
+---
+import MakeupImage from '../../images/peluBanner.png';
+import RestaurantImage from '../../images/restauranteBanner.png';
+import WriterImage from '../../images/blogBanner.png';
+import ArrowIcon from '../components/icons/arrow.svg';
+---
+
+<!-- Tamaño movil --><!-- Card 1 -->
+<div class='projects-card'>
+	<img class='projects-card__image' src={MakeupImage.src} alt='Web de maquilladora' />
+	<!-- Triángulo morado con flecha -->
+	<div class='projects-card__corner' onclick='toggleOverlay(event)'>
+		<img src={ArrowIcon.src} alt='Flecha' class='projects-card__arrow' />
+	</div>
+	<!-- Overlay morado -->
+	<div class='projects-card__overlay'>
+		<div class='projects-card__pills'>
+			<p class='projects-card__pills-pill'>Web de servicios</p>
+			<p class='projects-card__pills-pill'>Diseño UI/UX</p>
+			<p class='projects-card__pills-pill'>Estética</p>
+		</div>
+		<p class='projects-card__text'>
+			Página web diseñada para mostrar el portfolio de una maquilladora, ofrecer servicios y permitir a los clientes
+			reservar citas fácilmente a través de un calendario interactivo.
+		</p>
+		<a href='/' class='projects-card__button' onclick='event.stopPropagation()'>ver</a>
+		<!-- Evitar que el clic cierre el overlay -->
+	</div>
+</div>
+
+<!-- Card 2 -->
+<div class='projects-card'>
+	<img class='projects-card__image' src={RestaurantImage.src} alt='Web de maquilladora' />
+	<!-- Triángulo morado con flecha -->
+	<div class='projects-card__corner' onclick='toggleOverlay(event)'>
+		<img src={ArrowIcon.src} alt='Flecha' class='projects-card__arrow' />
+	</div>
+	<!-- Overlay morado -->
+	<div class='projects-card__overlay'>
+		<div class='projects-card__pills'>
+			<p class='projects-card__pills-pill'>Web de servicios</p>
+			<p class='projects-card__pills-pill'>Diseño UI/UX</p>
+			<p class='projects-card__pills-pill'>Restaurante</p>
+		</div>
+		<p class='projects-card__text'>
+			Sitio web intuitivo para un restautante, que incluye menú digital, sistema de reservas y un formulario de contacto
+			para mejorar la experiencia del cliente y la gestión del restaurante.
+		</p>
+		<a href='/' class='projects-card__button' onclick='event.stopPropagation()'>ver</a>
+		<!-- Evitar que el clic cierre el overlay -->
+	</div>
+</div>
+
+<!-- Card 3 -->
+<div class='projects-card'>
+	<img class='projects-card__image' src={WriterImage.src} alt='Web de maquilladora' />
+	<!-- Triángulo morado con flecha -->
+	<div class='projects-card__corner' onclick='toggleOverlay(event)'>
+		<img src={ArrowIcon.src} alt='Flecha' class='projects-card__arrow' />
+	</div>
+	<!-- Overlay morado -->
+	<div class='projects-card__overlay'>
+		<div class='projects-card__pills'>
+			<p class='projects-card__pills-pill'>Portfolio</p>
+			<p class='projects-card__pills-pill'>Diseño UI/UX</p>
+			<p class='projects-card__pills-pill'>Blog</p>
+		</div>
+		<p class='projects-card__text'>
+			Web minimalista creada para una escritora y diseñada para destacar sus obras, con un enfoque en la claridad y la
+			elegancia para resaltar su estilo único.
+		</p>
+		<a href='/' class='projects-card__button' onclick='event.stopPropagation()'>ver</a>
+		<!-- Evitar que el clic cierre el overlay -->
+	</div>
+</div>
+
+<!-- Tamaños tablet y desktop -->
+<div class='projects-card-desktop'>
+	<!-- Card 1 -->
+	<div class='projects-card-desktop__container'>
+		<img class='projects-card-desktop__container-image' src={MakeupImage.src} alt='Web de maquilladora' />
+		<div class='projects-card-desktop__container-content'>
+			<div class='projects-card-desktop__container-content-pills'>
+				<p class='projects-card-desktop__container-content-pills-pill'>Web de servicios</p>
+				<p class='projects-card-desktop__container-content-pills-pill'>Diseño UI/UX</p>
+				<p class='projects-card-desktop__container-content-pills-pill'>Estética</p>
+			</div>
+			<p class='projects-card-desktop__container-content-text'>
+				Página web diseñada para mostrar el portfolio de una maquilladora, ofrecer servicios y permitir a los clientes
+				reservar citas fácilmente a través de un calendario interactivo.
+			</p>
+			<a href='/' class='projects-card-desktop__container-content-button'>ver</a>
+		</div>
+	</div>
+
+	<!-- Card 2 -->
+	<div class='projects-card-desktop__container'>
+		<div class='projects-card-desktop__container-content-left'>
+			<div class='projects-card-desktop__container-content-pills'>
+				<p class='projects-card-desktop__container-content-pills-pill'>Web de servicios</p>
+				<p class='projects-card-desktop__container-content-pills-pill'>Diseño UI/UX</p>
+				<p class='projects-card-desktop__container-content-pills-pill'>Restaurante</p>
+			</div>
+			<p class='projects-card-desktop__container-content-text'>
+				Sitio web intuitivo para un restautante, que incluye menú digital, sistema de reservas y un formulario de
+				contacto para mejorar la experiencia del cliente y la gestión del restaurante.
+			</p>
+			<a href='/' class='projects-card-desktop__container-content-button'>ver</a>
+		</div>
+		<img class='projects-card-desktop__container-image-right' src={RestaurantImage.src} alt='Web de maquilladora' />
+	</div>
+
+	<!-- Card 3 -->
+	<div class='projects-card-desktop__container'>
+		<img class='projects-card-desktop__container-image' src={WriterImage.src} alt='Web de maquilladora' />
+		<div class='projects-card-desktop__container-content'>
+			<div class='projects-card-desktop__container-content-pills'>
+				<p class='projects-card-desktop__container-content-pills-pill'>Portfolio</p>
+				<p class='projects-card-desktop__container-content-pills-pill'>Diseño UI/UX</p>
+				<p class='projects-card-desktop__container-content-pills-pill'>Blog</p>
+			</div>
+			<p class='projects-card-desktop__container-content-text'>
+				Web minimalista creada para una escritora y diseñada para destacar sus obras, con un enfoque en la claridad y la
+				elegancia para resaltar su estilo único.
+			</p>
+			<a href='/' class='projects-card-desktop__container-content-button'>ver</a>
+		</div>
+	</div>
+</div>
+
+<script>
+	// Toggle del overlay al hacer clic en el corner
+	document.querySelectorAll('.projects-card__corner').forEach((corner) => {
+		corner.addEventListener('click', (event) => {
+			const card = event.currentTarget.closest('.projects-card');
+			const overlay = card.querySelector('.projects-card__overlay');
+			overlay.classList.toggle('projects-card__overlay--visible');
+		});
+	});
+
+	// Cerrar el overlay si se hace clic fuera de él o dentro de él (excluyendo el botón "Ver")
+	document.addEventListener('click', (event) => {
+		const overlay = document.querySelector('.projects-card__overlay--visible');
+		if (overlay) {
+			// Si el clic es dentro del overlay pero fuera del botón "Ver", lo cerramos
+			if (overlay.contains(event.target) && !event.target.closest('.projects-card__button')) {
+				overlay.classList.remove('projects-card__overlay--visible');
+			}
+		}
+	});
+</script>

@@ -1,0 +1,57 @@
+@use 'sass:map';
+@use './variables.scss';
+
+.footer {
+	padding: 1.5rem 1rem;
+	background: linear-gradient(to bottom right, #d5caff, #a7a1fa);
+	text-align: center;
+	font-family: 'Arial', sans-serif;
+
+	&__logo {
+		margin-bottom: 0.5rem;
+
+		&-img {
+			max-width: 80px;
+			margin: 0 auto;
+		}
+	}
+
+	&__social {
+		font-size: 1rem;
+		font-weight: bold;
+		margin: 0.5rem 0;
+		color: #000;
+	}
+
+	&__icons {
+		display: flex;
+		justify-content: center;
+		gap: 1rem;
+		margin-bottom: 1.5rem;
+
+		& > .footer__icon img {
+			width: 24px;
+			height: 24px;
+		}
+	}
+
+	&__nav,
+	&__legal {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		margin-bottom: 1.5rem;
+
+		& > .footer__link {
+			text-decoration: none;
+			color: #000;
+			font-size: 0.875rem;
+		}
+	}
+
+	&__copy {
+		font-size: 0.75rem;
+		color: #333;
+		margin-top: 1rem;
+	}
+}
