@@ -7,6 +7,7 @@
         }*/
 
 // Breakpoints
+$bp-xs: 426px;
 $bp-s: 520px;
 $bp-m: 768px;
 $bp-l: 1024px;
@@ -34,7 +35,7 @@ $paragraph: (
 	font-size: 0.875rem,
 	// 14px
 	color: rgba(18, 12, 35, 0.8),
-	line-height: 1.25rem // 20px,,,
+	line-height: 1.25rem // 20px,,,,,
 );
 
 $paragraph-desktop: (
@@ -42,7 +43,7 @@ $paragraph-desktop: (
 	font-size: 1rem,
 	// 16px
 	color: rgba(18, 12, 35, 0.8),
-	line-height: 1.5625rem // 25px,,,
+	line-height: 1.5625rem // 25px,,,,,
 );
 
 // h1
@@ -52,7 +53,7 @@ $h1: (
 	// 42px
 	color: $white,
 	letter-spacing: -0.1575rem,
-	line-height: 1.5625rem // 25px,,
+	line-height: 1.5625rem // 25px,,,,
 );
 
 $h1-desktop: (
@@ -125,7 +126,7 @@ $small: (
 	font-size: 0.75rem,
 	// 12px
 	color: rgba(18, 12, 35, 0.8),
-	line-height: 1.25rem // 20px,,,
+	line-height: 1.25rem // 20px,,,,,
 );
 
 $small-desktop: (
@@ -133,5 +134,5 @@ $small-desktop: (
 	font-size: 0.875rem,
 	// 14px
 	color: rgba(18, 12, 35, 0.8),
-	line-height: 1.25rem // 20px,,,
+	line-height: 1.25rem // 20px,,,,,
 );

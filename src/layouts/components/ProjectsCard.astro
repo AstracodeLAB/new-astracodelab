@@ -3,8 +3,9 @@ import MakeupImage from '../../images/peluBanner.png';
 import ArrowIcon from '../components/icons/arrow.svg';
 ---
 
+<!-- Tamaño movil -->
 <div class='projects-card'>
-	<img class='projects-card__image' src={MakeupImage.src} alt='Portfolios y proyectos creativos' />
+	<img class='projects-card__image' src={MakeupImage.src} alt='Web de maquilladora' />
 	<!-- Triángulo morado con flecha -->
 	<div class='projects-card__corner' onclick='toggleOverlay(event)'>
 		<img src={ArrowIcon.src} alt='Flecha' class='projects-card__arrow' />
@@ -20,7 +21,27 @@ import ArrowIcon from '../components/icons/arrow.svg';
 			Página web diseñada para mostrar el portfolio de una maquilladora, ofrecer servicios y permitir a los clientes
 			reservar citas fácilmente a través de un calendario interactivo.
 		</p>
-		<a href='/' class='projects-card__button' onclick='event.stopPropagation()'>Ver</a> <!-- Evitar que el clic cierre el overlay -->
+		<a href='/' class='projects-card__button' onclick='event.stopPropagation()'>ver</a>
+		<!-- Evitar que el clic cierre el overlay -->
+	</div>
+</div>
+
+<!-- Tamaños tablet y desktop -->
+<div class='projects-card-desktop'>
+	<div class='projects-card-desktop__container'>
+		<img src={MakeupImage.src} alt='Web de maquilladora' />
+		<div class='projects-card-desktop__container-content'>
+			<div class='projects-card__pills'>
+				<p class='projects-card__pills-pill'>Web de servicios</p>
+				<p class='projects-card__pills-pill'>Diseño UI/UX</p>
+				<p class='projects-card__pills-pill'>Estética</p>
+			</div>
+			<p class='projects-card-desktop__container-content-text'>
+				Página web diseñada para mostrar el portfolio de una maquilladora, ofrecer servicios y permitir a los clientes
+				reservar citas fácilmente a través de un calendario interactivo.
+			</p>
+			<a href='/' class='projects-card-desktop__container-content-button'>ver</a>
+		</div>
 	</div>
 </div>
 
@@ -45,4 +66,3 @@ import ArrowIcon from '../components/icons/arrow.svg';
 		}
 	});
 </script>
-

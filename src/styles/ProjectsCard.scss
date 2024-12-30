@@ -5,6 +5,10 @@
 	position: relative;
 	overflow: hidden;
 
+	@media (min-width: $bp-xs) {
+		display: none;
+	}
+
 	&__image {
 		display: block;
 		width: 100%;
@@ -111,5 +115,14 @@
 			background: $purple;
 			color: $white;
 		}
+	}
+}
+
+.projects-card-desktop {
+	display: none;
+
+	@media (min-width: $bp-xs) {
+		display: flex;
+		background-color: $black;
 	}
 }
