@@ -5,6 +5,7 @@
 .projects-card {
 	position: relative;
 	overflow: hidden;
+	margin-bottom: 20px;
 
 	@media (min-width: $bp-s) {
 		display: none;

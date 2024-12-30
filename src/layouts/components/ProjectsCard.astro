@@ -5,7 +5,7 @@ import WriterImage from '../../images/blogBanner.png';
 import ArrowIcon from '../components/icons/arrow.svg';
 ---
 
-<!-- Tamaño movil -->
+<!-- Tamaño movil --><!-- Card 1 -->
 <div class='projects-card'>
 	<img class='projects-card__image' src={MakeupImage.src} alt='Web de maquilladora' />
 	<!-- Triángulo morado con flecha -->
@@ -22,6 +22,52 @@ import ArrowIcon from '../components/icons/arrow.svg';
 		<p class='projects-card__text'>
 			Página web diseñada para mostrar el portfolio de una maquilladora, ofrecer servicios y permitir a los clientes
 			reservar citas fácilmente a través de un calendario interactivo.
+		</p>
+		<a href='/' class='projects-card__button' onclick='event.stopPropagation()'>ver</a>
+		<!-- Evitar que el clic cierre el overlay -->
+	</div>
+</div>
+
+<!-- Card 2 -->
+<div class='projects-card'>
+	<img class='projects-card__image' src={RestaurantImage.src} alt='Web de maquilladora' />
+	<!-- Triángulo morado con flecha -->
+	<div class='projects-card__corner' onclick='toggleOverlay(event)'>
+		<img src={ArrowIcon.src} alt='Flecha' class='projects-card__arrow' />
+	</div>
+	<!-- Overlay morado -->
+	<div class='projects-card__overlay'>
+		<div class='projects-card__pills'>
+			<p class='projects-card__pills-pill'>Web de servicios</p>
+			<p class='projects-card__pills-pill'>Diseño UI/UX</p>
+			<p class='projects-card__pills-pill'>Restaurante</p>
+		</div>
+		<p class='projects-card__text'>
+			Sitio web intuitivo para un restautante, que incluye menú digital, sistema de reservas y un formulario de contacto
+			para mejorar la experiencia del cliente y la gestión del restaurante.
+		</p>
+		<a href='/' class='projects-card__button' onclick='event.stopPropagation()'>ver</a>
+		<!-- Evitar que el clic cierre el overlay -->
+	</div>
+</div>
+
+<!-- Card 3 -->
+<div class='projects-card'>
+	<img class='projects-card__image' src={WriterImage.src} alt='Web de maquilladora' />
+	<!-- Triángulo morado con flecha -->
+	<div class='projects-card__corner' onclick='toggleOverlay(event)'>
+		<img src={ArrowIcon.src} alt='Flecha' class='projects-card__arrow' />
+	</div>
+	<!-- Overlay morado -->
+	<div class='projects-card__overlay'>
+		<div class='projects-card__pills'>
+			<p class='projects-card__pills-pill'>Portfolio</p>
+			<p class='projects-card__pills-pill'>Diseño UI/UX</p>
+			<p class='projects-card__pills-pill'>Blog</p>
+		</div>
+		<p class='projects-card__text'>
+			Web minimalista creada para una escritora y diseñada para destacar sus obras, con un enfoque en la claridad y la
+			elegancia para resaltar su estilo único.
 		</p>
 		<a href='/' class='projects-card__button' onclick='event.stopPropagation()'>ver</a>
 		<!-- Evitar que el clic cierre el overlay -->
@@ -53,7 +99,7 @@ import ArrowIcon from '../components/icons/arrow.svg';
 			<div class='projects-card-desktop__container-content-pills'>
 				<p class='projects-card-desktop__container-content-pills-pill'>Web de servicios</p>
 				<p class='projects-card-desktop__container-content-pills-pill'>Diseño UI/UX</p>
-				<p class='projects-card-desktop__container-content-pills-pill'>Estética</p>
+				<p class='projects-card-desktop__container-content-pills-pill'>Restaurante</p>
 			</div>
 			<p class='projects-card-desktop__container-content-text'>
 				Sitio web intuitivo para un restautante, que incluye menú digital, sistema de reservas y un formulario de
@@ -69,9 +115,9 @@ import ArrowIcon from '../components/icons/arrow.svg';
 		<img class='projects-card-desktop__container-image' src={WriterImage.src} alt='Web de maquilladora' />
 		<div class='projects-card-desktop__container-content'>
 			<div class='projects-card-desktop__container-content-pills'>
-				<p class='projects-card-desktop__container-content-pills-pill'>Web de servicios</p>
+				<p class='projects-card-desktop__container-content-pills-pill'>Portfolio</p>
 				<p class='projects-card-desktop__container-content-pills-pill'>Diseño UI/UX</p>
-				<p class='projects-card-desktop__container-content-pills-pill'>Estética</p>
+				<p class='projects-card-desktop__container-content-pills-pill'>Blog</p>
 			</div>
 			<p class='projects-card-desktop__container-content-text'>
 				Web minimalista creada para una escritora y diseñada para destacar sus obras, con un enfoque en la claridad y la
