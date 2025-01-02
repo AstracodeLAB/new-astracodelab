@@ -4,12 +4,13 @@
 .web-dev {
 	display: flex;
 	flex-direction: column;
-	margin: 16px;
+	padding: 16px;
 
 	&__hero {
 		background: linear-gradient(to bottom, $blueDark, $purple, $bg-purple);
 		border-radius: 10px;
-        padding: 10px;
+		padding: 10px;
+		box-shadow: $shadow;
 
 		&-title {
 			text-transform: uppercase;
@@ -19,12 +20,65 @@
 			letter-spacing: map.get($h1bold, 'letter-spacing');
 			line-height: 2.5rem;
 			font-weight: bold;
-            margin-bottom: 100px;
+			margin-bottom: 100px;
 		}
 
-        &-subtitle {
-            font-family: map.get($paragraph, 'font-family');
-            margin-top: 40px;
-        }
+		&-subtitle {
+			font-family: map.get($paragraph, 'font-family');
+			margin-top: 40px;
+		}
+	}
+
+	&__content {
+		&-card {
+			margin-top: 30px;
+			padding: 10px;
+			text-align: center;
+			box-shadow: $shadow;
+			border-radius: 10px;
+
+			&-title {
+				text-transform: uppercase;
+				font-family: map.get($h2, 'font-family');
+				font-size: map.get($h2, 'font-size');
+				color: map.get($h2, 'color');
+				margin-bottom: 20px;
+			}
+
+			&-text {
+				font-family: map.get($paragraph, 'font-family');
+				font-size: map.get($paragraph, 'font-size');
+				color: map.get($paragraph, 'color');
+				line-height: map.get($paragraph, 'line-height');
+			}
+
+			&-list {
+				margin-top: 20px;
+				font-family: map.get($paragraph, 'font-family');
+				font-size: map.get($paragraph, 'font-size');
+				color: map.get($paragraph, 'color');
+				line-height: map.get($paragraph, 'line-height');
+
+				&-item {
+					margin-bottom: 10px;
+					display: flex;
+					gap: 5px;
+
+					&-icon {
+					
+						svg {
+							width: 20px;
+						}
+					}
+				}
+			}
+		}
+
+		&-cta {
+			display: flex;
+			justify-content: center;
+			margin-top: 40px;
+			margin-bottom: 40px;
+		}
 	}
 }
