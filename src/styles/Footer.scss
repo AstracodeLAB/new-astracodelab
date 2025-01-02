@@ -9,7 +9,7 @@
 	flex-direction: column;
 	align-items: center;
 
-	&__separate {
+	&__content {
 		@media (min-width: $bp-m) {
 			display: flex;
 			flex-direction: row-reverse;
@@ -18,17 +18,25 @@
 		}
 	}
 
-	&__three {
+	&__social {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
 		@media (min-width: $bp-m) {
+			align-items: end;
+		}
+
+		&-logo {
+			margin-bottom: 0.5rem;
+
+			@media (min-width: $bp-m) {
+				margin-bottom: 0;
+			}
 		}
 	}
 
-	&__logo {
-		margin-bottom: 0.5rem;
-	}
-
-	&__nav,
-	&__legal {
+	&__nav {
 		display: flex;
 		flex-direction: column;
 		gap: 0.5rem;
@@ -48,15 +56,38 @@
 		}
 	}
 
+	&__legal {
+		display: flex;
+		flex-direction: column;
+		gap: 0.1rem;
+		margin-bottom: 1.5rem;
+		font-family: map.get($paragraph, 'font-family');
+		font-size: map.get($paragraph, 'font-size');
+		color: map.get($paragraph, 'color');
+
+		& > .footer__link {
+			text-decoration: none;
+			color: #000;
+			font-size: 0.875rem;
+		}
+
+		@media (min-width: $bp-m) {
+			font-family: map.get($h1, font-family);
+			text-align: start;
+		}
+	}
+
 	&__copy {
 		font-family: map.get($paragraph, 'font-family');
 		font-size: map.get($paragraph, 'font-size');
 		color: map.get($paragraph, 'color');
 		margin-top: 1rem;
+		margin: 0 auto;
 
 		@media (min-width: $bp-m) {
-			align-self: flex-start;
 			font-family: map.get($h1, font-family);
+			margin: 0;
+			align-self: flex-start;
 		}
 	}
 }
