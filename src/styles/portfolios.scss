@@ -6,11 +6,21 @@
 	flex-direction: column;
 	padding: 16px;
 
+	@media (min-width: $bp-l) {
+		padding: 20px;
+		flex-direction: row;
+		gap: 20px;
+	}
+
 	&__hero {
 		background: linear-gradient(to bottom, $blueDark, $purple, $bg-purple);
 		border-radius: 10px;
 		padding: 10px;
 		box-shadow: $shadow;
+
+		@media (min-width: $bp-l) {
+			padding: 0 40px;
+		}
 
 		&-title {
 			text-transform: uppercase;
@@ -21,11 +31,25 @@
 			line-height: 2.5rem;
 			font-weight: bold;
 			margin-bottom: 100px;
+
+			@media (min-width: $bp-l) {
+				font-size: 3.5rem;
+				letter-spacing: map.get($h1bold-desktop, 'letter-spacing');
+				line-height: 4rem;
+				padding-top: 60px;
+				margin-bottom: 320px;
+			}
+
+
 		}
 
 		&-subtitle {
 			font-family: map.get($paragraph, 'font-family');
 			margin-top: 40px;
+
+			@media (min-width: $bp-l) {
+				font-size: map.get($paragraph-desktop, 'font-size');
+			}
 		}
 	}
 
@@ -36,6 +60,13 @@
 			text-align: center;
 			box-shadow: $shadow;
 			border-radius: 10px;
+
+			@media (min-width: $bp-l) {
+				margin-top: 0;
+				margin-bottom: 20px;
+				background-color: $white;
+				padding: 16px;
+			}
 
 			&-title {
 				text-transform: uppercase;
@@ -65,7 +96,6 @@
 					gap: 5px;
 
 					&-icon {
-					
 						svg {
 							width: 20px;
 						}
