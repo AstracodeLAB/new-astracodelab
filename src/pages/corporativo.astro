@@ -1,0 +1,95 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../layouts/partials/Header.astro';
+import Footer from '../layouts/partials/Footer.astro';
+import CheckIcon from '../layouts/components/icons/CheckIcon.astro';
+import CtaHero from '../layouts/components/CtaHero.astro';
+---
+
+<Layout title='AstracodeLAB - Sitios web corporativos a medida'>
+	<Header />
+	<section class='web-dev'>
+		<div class='web-dev__hero'>
+			<h1 class='web-dev__hero-title'>Sitios web corporativos a medida</h1>
+			<p class='web-dev__hero-subtitle'>
+				Impulsa tu negocio con un sitio web profesional que refleje tu identidad corporativa y te ayude a conectar con
+				tus clientes.
+			</p>
+			<p class='web-dev__hero-subtitle'>
+				¿Quieres llevar tu empresa al siguiente nivel? Estamos aquí para ayudarte. Contacta con nosotros y crea un sitio
+				web que refleje la esencia de tu negocio.
+			</p>
+		</div>
+		<div class='web-dev__content'>
+			<article class='web-dev__content-card'>
+				<h2 class='web-dev__content-card-title'>¿Por qué tu empresa necesita un sitio web profesional?</h2>
+				<p class='web-dev__content-card-text'>
+					Un sitio web corporativo bien diseñado es la carta de presentación de tu negocio. Te permite transmitir
+					confianza, informar a tus clientes sobre tus servicios y mantenerte competitivo en el mercado digital.
+				</p>
+			</article>
+			<article class='web-dev__content-card'>
+				<h2 class='web-dev__content-card-title'>¿Qué incluye un sitio web corporativo?</h2>
+				<p class='web-dev__content-card-text'>
+					Diseñamos sitios web adaptados a las necesidades de tu empresa, con características como:
+				</p>
+				<ul class='web-dev__content-card-list'>
+					<li class='web-dev__content-card-list-item'>
+						<div class='web-dev__content-card-list-item-icon'>
+							<CheckIcon />
+						</div>
+						<span>
+							<strong>Página de inicio impactante:</strong> Captura la atención de tus visitantes desde el primer momento.</span
+						>
+					</li>
+
+					<li class='web-dev__content-card-list-item'>
+						<div class='web-dev__content-card-list-item-icon'>
+							<CheckIcon />
+						</div>
+						<span><strong>Sección de servicios:</strong> Explica detalladamente lo que tu empresa ofrece.</span>
+					</li>
+					<li class='web-dev__content-card-list-item'>
+						<div class='web-dev__content-card-list-item-icon'>
+							<CheckIcon />
+						</div>
+						<span
+							><strong>Testimonios y casos de éxito:</strong> Refuerza tu credibilidad mostrando la satisfacción de tus clientes
+							actuales.</span
+						>
+					</li>
+					<li class='web-dev__content-card-list-item'>
+						<div class='web-dev__content-card-list-item-icon'>
+							<CheckIcon />
+						</div>
+						<span
+							><strong>Optimización para móviles:</strong> Asegúrate de que tu web se vea perfecta en cualquier dispositivo.</span
+						>
+					</li>
+				</ul>
+			</article>
+			<article class='web-dev__content-card'>
+				<h2 class='web-dev__content-card-title'>Diferencia entre un sitio web corporativo y una landing page</h2>
+				<p class='web-dev__content-card-text'>
+					Un sitio web corporativo es más extenso, con varias páginas diseñadas para cubrir todas las necesidades de tu
+					negocio. Es ideal para mostrar información detallada sobre tu empresa, tus servicios y tu trayectoria. Por
+					otro lado, una landing page es una única página enfocada en un objetivo específico, como una promoción o
+					campaña concreta. Incluso si ya tienes un sitio web corporativo, puedes contratar una landing page adicional
+					para captar nuevos clientes o promocionar algo puntual.
+				</p>
+			</article>
+			<article class='web-dev__content-card'>
+				<h2 class='web-dev__content-card-title'>Ventajas de un sitio web corporativo</h2>
+				<p class='web-dev__content-card-text'>
+					Con un sitio web corporativo profesional, tu negocio estará disponible 24/7, mejorando la comunicación con tus
+					clientes y potenciando tus ventas. Además, podrás posicionarte como un referente en tu sector y transmitir una
+					imagen sólida y confiable.
+				</p>
+			</article>
+			<div class='web-dev__content-cta'>
+				<CtaHero />
+			</div>
+		</div>
+	</section>
+	<Footer />
+</Layout>
