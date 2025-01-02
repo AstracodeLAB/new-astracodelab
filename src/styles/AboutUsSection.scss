@@ -6,19 +6,22 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    //padding-bottom: 30px;
+    padding-top: 30px;
 
     &__title{
             font-family: map.get($h2, "font-family");
             font-size: map.get($h2, "font-size");
             color: map.get($h2, "color");
             padding-bottom: 20px;
-            
+            width: 100%;
+            text-align: center;
 
             @media (min-width: $bp-l) {
                 font-family: map.get($h2-desktop, "font-family");
                 font-size: map.get($h2-desktop, "font-size");
                 color: map.get($h2-desktop, "color");
+                text-align: start;
+                padding-left: 96px;
             }
     }
 

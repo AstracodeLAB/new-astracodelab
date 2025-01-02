@@ -1,0 +1,125 @@
+---
+
+
+
+---
+
+<div class="workingMov">
+  
+    <div class="workingMov__timeline">
+        <ol class="workingMov__timeline-list" >                  
+            <li class="workingMov__timeline-list-item" >
+                
+                <div class="workingMov__timeline-list-item-circle" ></div>
+                
+                <div class="workingMov__timeline-list-item-text">
+                    <h3 class="workingMov__timeline-list-item-text-title" >1. Reunión inicial</h3>
+                    <p class="workingMov__timeline-list-item-text-paragraph" >Entendemos tus necesidades y objetivos.</p>
+                </div>
+            </li>
+     
+        
+                      
+            <li class="workingMov__timeline-list-item" >
+                
+                <div class="workingMov__timeline-list-item-circle" ></div>
+                
+                <div class="workingMov__timeline-list-item-text">
+                    <h3 class="workingMov__timeline-list-item-text-title" >2. Compartenos tu idea</h3>
+                    <p class="workingMov__timeline-list-item-text-paragraph" >Escuchamos y analizamos tu visión.</p>
+                </div>
+            </li>
+            
+            <li class="workingMov__timeline-list-item" >
+                
+                <div class="workingMov__timeline-list-item-circle" ></div>
+                
+                <div class="workingMov__timeline-list-item-text">
+                    <h3 class="workingMov__timeline-list-item-text-title" >3. Estudio de la propuesta</h3>
+                    <p class="workingMov__timeline-list-item-text-paragraph" >Evaluamos soluciones y estrategias técnicas.</p>
+                </div>
+            </li>
+
+            <li class="workingMov__timeline-list-item" >
+                
+                <div class="workingMov__timeline-list-item-circle" ></div>
+                
+                <div class="workingMov__timeline-list-item-text">
+                    <h3 class="workingMov__timeline-list-item-text-title" >4. Propuesta inicial</h3>
+                    <p class="workingMov__timeline-list-item-text-paragraph" > Presentamos un diseño adaptado a ti.
+                    </p>
+                </div>
+            </li>
+
+            <li class="workingMov__timeline-list-item" >
+                
+                <div class="workingMov__timeline-list-item-circle" ></div>
+                
+                <div class="workingMov__timeline-list-item-text">
+                    <h3 class="workingMov__timeline-list-item-text-title" >5. Desarrollo web</h3>
+                    <p class="workingMov__timeline-list-item-text-paragraph" >Creamos tu sitio con precisión y calidad.
+                    </p>
+                </div>
+            </li>
+
+            <li class="workingMov__timeline-list-item" >
+                
+                <div class="workingMov__timeline-list-item-circle" ></div>
+                
+                <div class="workingMov__timeline-list-item-text">
+                    <h3 class="workingMov__timeline-list-item-text-title" >6. Revisión y entrega</h3>
+                    <p class="workingMov__timeline-list-item-text-paragraph" >Ajustamos y entregamos un producto final.</p>
+                </div>
+            </li>
+        </ol>
+</div>
+</div>
+<script>
+ document.addEventListener('DOMContentLoaded', function () {
+  // Seleccionamos el contenedor principal
+  const timelineList = document.querySelector('.workingMov__timeline-list');
+
+  // Validar que timelineList no sea null
+  if (!timelineList) {
+    console.error('El elemento .workingMov__timeline-list no se encontró.');
+    return;
+  }
+
+  // Seleccionamos todos los ítems de la lista
+  const timelineItems = document.querySelectorAll('.workingMov__timeline-list-item');
+
+  // Creamos el Intersection Observer
+  const observer = new IntersectionObserver((entries) => {
+    let hasActiveItem = false; // Variable para rastrear si hay al menos un ítem visible
+
+    entries.forEach(entry => {
+      const circle = entry.target.querySelector('.workingMov__timeline-list-item-circle');
+
+      if (entry.isIntersecting) {
+        // Cuando el ítem entra en la vista
+        entry.target.classList.add('active');
+        if (circle) circle.classList.add('active');
+        hasActiveItem = true; // Al menos un ítem es visible
+      } else {
+        // Cuando el ítem sale de la vista
+        entry.target.classList.remove('active');
+        if (circle) circle.classList.remove('active');
+      }
+    });
+
+    // Si hay algún ítem activo, activamos el borde del contenedor
+    if (hasActiveItem) {
+      timelineList.classList.add('active');
+    } else {
+      timelineList.classList.remove('active');
+    }
+  }, {
+    threshold: 1 // El umbral para activar el observer es cuando el 50% del ítem está en vista
+  });
+
+  // Observamos cada ítem
+  timelineItems.forEach(item => observer.observe(item));
+});
+
+  </script>
+  

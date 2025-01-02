@@ -1,1 +1,43 @@
 @use './variables.scss' as *;
+@use "sass:map";
+
+.working {
+  &__title {
+    font-family: map.get($h2, "font-family");
+    font-size: map.get($h2, "font-size");
+    color: map.get($h2, "color");
+    padding-bottom: 20px; 
+    padding-top: 30px;
+    text-align: center;  
+    width: 100%;
+
+    @media (min-width: $bp-l) {
+      font-family: map.get($h2-desktop, "font-family");
+      font-size: map.get($h2-desktop, "font-size");
+      color: map.get($h2-desktop, "color");
+      text-align: start;
+      padding-left: 96px;
+      padding-bottom: 40px;
+       
+    }
+  }
+  &__mov{
+    display: flex;
+    justify-content: center;
+    @media (min-width: $bp-l) {
+     display: none;
+    }
+  }
+  &__desktop{
+    display: none;
+    @media (min-width: $bp-l) {
+        display: flex;
+       }
+  }
+}
+  
+
+
+    
+
+    

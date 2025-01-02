@@ -1,0 +1,141 @@
+---
+
+
+
+---
+
+<div class="workingDesktop">
+  
+    <div class="workingDesktop__timeline">
+        <ol class="workingDesktop__timeline-list" >                  
+            <li class="workingDesktop__timeline-list-item" >
+                
+                <div class="workingDesktop__timeline-list-item-circle" ></div>
+                
+
+                <div class="workingDesktop__timeline-list-item-text">
+                    <h3 class="workingDesktop__timeline-list-item-text-title" >1. Reunión inicial</h3>
+                    <p class="workingDesktop__timeline-list-item-text-paragraph" >Entendemos tus necesidades y objetivos.</p>
+                </div>
+            </li>
+     
+        
+                      
+            <li class="workingDesktop__timeline-list-item" >
+                
+                <div class="workingDesktop__timeline-list-item-circle workingDesktop__timeline-list-item-circle--bottom" ></div>
+                
+                <div class="workingDesktop__timeline-list-item-text">
+                    <h3 class="workingDesktop__timeline-list-item-text-title" >2. Compartenos tu idea</h3>
+                    <p class="workingDesktop__timeline-list-item-text-paragraph" >Escuchamos y analizamos tu visión.</p>
+                </div>
+            </li>
+            
+            <li class="workingDesktop__timeline-list-item" >
+                
+                <div class="workingDesktop__timeline-list-item-circle" ></div>
+                
+                <div class="workingDesktop__timeline-list-item-text">
+                    <h3 class="workingDesktop__timeline-list-item-text-title" >3. Estudio de la propuesta</h3>
+                    <p class="workingDesktop__timeline-list-item-text-paragraph" >Evaluamos soluciones y estrategias técnicas.</p>
+                </div>
+            </li>
+
+            <li class="workingDesktop__timeline-list-item" >
+                
+                <div class="workingDesktop__timeline-list-item-circle workingDesktop__timeline-list-item-circle--bottom" ></div>
+                
+                <div class="workingDesktop__timeline-list-item-text">
+                    <h3 class="workingDesktop__timeline-list-item-text-title" >4. Propuesta inicial</h3>
+                    <p class="workingDesktop__timeline-list-item-text-paragraph" >Presentamos un diseño adaptado a ti.</p>
+                </div>
+            </li>
+
+            <li class="workingDesktop__timeline-list-item" >
+                
+                <div class="workingDesktop__timeline-list-item-circle" ></div>
+                
+                <div class="workingDesktop__timeline-list-item-text">
+                    <h3 class="workingDesktop__timeline-list-item-text-title" >5. Desarrollo web</h3>
+                    <p class="workingDesktop__timeline-list-item-text-paragraph" >Creamos tu sitio con precisión y calidad.</p>
+                </div>
+            </li>
+
+            <li class="workingDesktop__timeline-list-item" >
+                
+                <div class="workingDesktop__timeline-list-item-circle workingDesktop__timeline-list-item-circle--bottom" ></div>
+                
+                <div class="workingDesktop__timeline-list-item-text">
+                    <h3 class="workingDesktop__timeline-list-item-text-title" >6. Revisión y entrega</h3>
+                    <p class="workingDesktop__timeline-list-item-text-paragraph" >Ajustamos y entregamos un producto final.</p>
+                </div>
+            </li>
+        </ol>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+  const items = document.querySelectorAll('.workingDesktop__timeline-list-item');
+  const timeline = document.querySelector('.workingDesktop__timeline-list')!; // Usamos "!" para indicar que no es null
+  
+  items.forEach((item, index) => {
+    const circle = item.querySelector('.workingDesktop__timeline-list-item-circle')!; // Usamos "!" también aquí
+    
+    // Evento para cuando el mouse entra (hover)
+    item.addEventListener('mouseenter', () => {
+      // Cambiar el color de la línea central según el índice del círculo
+      if (index === 0) {
+        timeline.classList.add('hover1'); // Primer círculo - Primer degradado
+        timeline.classList.remove('hover2', 'hover3'); // Eliminar otros degradados
+      } else if (index === 1) {
+        timeline.classList.add('hover2'); // Segundo círculo - Segundo degradado
+        timeline.classList.remove('hover1', 'hover3'); // Eliminar otros degradados
+      } else if (index === 2) {
+        timeline.classList.add('hover3'); // Tercer círculo - Tercer degradado
+        timeline.classList.remove('hover1', 'hover2'); // Eliminar otros degradados
+      } else if (index === 3) {
+        timeline.classList.add('hover4'); // Tercer círculo - Tercer degradado
+        timeline.classList.remove('hover2', 'hover3'); // Eliminar otros degradados
+      } else if (index === 4) {
+        timeline.classList.add('hover5'); // Tercer círculo - Tercer degradado
+        timeline.classList.remove('hover6', 'hover1', 'hover4', 'hover2', 'hover3', 'hover4'); // Eliminar otros degradados
+      } else if (index === 5) {
+        timeline.classList.add('hover6'); // Tercer círculo - Tercer degradado
+        timeline.classList.remove('hover4', 'hover5'); // Eliminar otros degradados
+      }
+       else {
+        // Aquí puedes agregar más cambios si tienes más círculos
+      }
+
+      // Agregar la clase 'active' a este y todos los círculos anteriores
+      items.forEach((otherItem, otherIndex) => {
+        const otherCircle = otherItem.querySelector('.workingDesktop__timeline-list-item-circle');
+        if (otherCircle) { // Verificamos que 'otherCircle' no sea null
+          if (otherIndex <= index) {
+            otherCircle.classList.add('active');
+          } else {
+            otherCircle.classList.remove('active');
+          }
+        }
+      });
+    });
+
+    // Evento para cuando el mouse sale
+    item.addEventListener('mouseleave', () => {
+      // Limpiar la clase 'active' de todos los círculos
+      items.forEach((otherItem) => {
+        const otherCircle = otherItem.querySelector('.workingDesktop__timeline-list-item-circle');
+        if (otherCircle) { // Verificamos que 'otherCircle' no sea null
+          otherCircle.classList.remove('active');
+        } 
+      });
+
+      // Limpiar las clases de degradado al salir
+      timeline.classList.remove('hover1', 'hover2', 'hover3', 'hover4', 'hover5', 'hover6');
+    });
+  });
+});
+
+
+
+  </script>
+  

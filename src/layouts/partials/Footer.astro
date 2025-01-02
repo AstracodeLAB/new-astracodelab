@@ -1,27 +1,24 @@
 ---
-import Logo from '../components/Logo.astro';
+import Image from 'astro/components/Image.astro';
+import Logo from '../../images/Blacklogo.png';
 import SocialBar from '../components/SocialBar.astro';
 ---
 
 <footer class='footer'>
-	<div class="footer__separate">
-		<div class='footer__three'>
-			<div class='footer__logo'>
-				<Logo />
-			</div>
-			<SocialBar />
-		</div>
-		<nav class='footer__nav'>
-			<a href='#inicio' class='footer__link'>Inicio</a>
-			<a href='#servicios' class='footer__link'>Servicios</a>
-			<a href='#contacto' class='footer__link'>Contacto</a>
-			<a href='#proyectos' class='footer__link'>Proyectos</a>
-			<a href='#sobre-nosotras' class='footer__link'>Sobre nosotras</a>
-		</nav>
-		<div class='footer__legal'>
-			<a href='#aviso-legal' class='footer__link'>Aviso legal</a>
-			<a href='#politica-privacidad' class='footer__link'>Política de privacidad</a>
-		</div>
+	<div class='footer__logo'>
+		<Image src={Logo} class="logo" alt='Logo de AstracodeLAB' loading="lazy"/>
+	</div>
+	<SocialBar />
+	<nav class='footer__nav'>
+		<a href='#inicio' class='footer__link'>Inicio</a>
+		<a href='#servicios' class='footer__link'>Servicios</a>
+		<a href='#contacto' class='footer__link'>Contacto</a>
+		<a href='#proyectos' class='footer__link'>Proyectos</a>
+		<a href='#sobre-nosotras' class='footer__link'>Sobre nosotras</a>
+	</nav>
+	<div class='footer__legal'>
+		<a href='#aviso-legal' class='footer__link'>Aviso legal</a>
+		<a href='#politica-privacidad' class='footer__link'>Política de privacidad</a>
 	</div>
 	<p class='footer__copy'>© 2024 | AstracodeLAB</p>
 </footer>
