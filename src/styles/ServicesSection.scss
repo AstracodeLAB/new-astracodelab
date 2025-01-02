@@ -52,12 +52,12 @@
             padding-top: 30px; 
             text-align: center;  
             width: 100%;
-            @media (min-width: $bp-l) {
+            @media (min-width: $bp-m) {
                 font-family: map.get($h2-desktop, "font-family");
                 font-size: map.get($h2-desktop, "font-size");
                 color: map.get($h2-desktop, "color");
-                text-align: start;
-                padding-left: 96px;
+                text-align: center;
+                
              }
     }
     &__container{
@@ -152,12 +152,12 @@
                     color: map.get($h3, "color");
                     font-weight: map.get($h3, "font-weight");
                     text-align: center;
-                    @media (min-width: $bp-l) {
+                    @media (min-width: $bp-m) {
                         font-family: map.get($h3-desktop, "font-family");
                         font-size: map.get($h3-desktop-services, "font-size");
                         color: map.get($h3-desktop, "color");
                         font-weight: map.get($h3-desktop, "font-weight");
-                        text-align: start;
+                       // text-align: start;
                         
                      }
                      @media (min-width: $bp-xl) {

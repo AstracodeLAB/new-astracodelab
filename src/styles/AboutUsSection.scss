@@ -15,14 +15,14 @@
             padding-bottom: 20px;
             width: 100%;
             text-align: center;
-
-            @media (min-width: $bp-l) {
+            @media (min-width: $bp-m) {
                 font-family: map.get($h2-desktop, "font-family");
                 font-size: map.get($h2-desktop, "font-size");
                 color: map.get($h2-desktop, "color");
                 text-align: start;
                 padding-left: 96px;
             }
+            
     }
 
     &__container{
@@ -49,11 +49,16 @@
             border-right: 1px solid $purple;
             gap: 20px;
             padding: 20px 0 20px 0;
-            
+            @media (min-width: $bp-m) {
+                flex: 1; 
+                padding: 20px 96px 20px 96px;
+               // border-top-right-radius: 25px;
+               // border-bottom-right-radius: 25px;
+            }
 
             @media (min-width: $bp-l) {
                 flex: 1; 
-                padding: 20px 0 20px 120px;
+                //padding: 20px 0 20px 120px;
                 border-top-right-radius: 25px;
             border-bottom-right-radius: 25px;
             }
@@ -65,7 +70,7 @@
                 color: map.get($h3, "color");
                 font-weight: map.get($h3, "font-weight") ;
 
-                @media (min-width: $bp-l) {
+                @media (min-width: $bp-m) {
                     font-family: map.get($h3-desktop, "font-family");
                     font-size: map.get($h3-desktop, "font-size");
                     color: map.get($h3-desktop, "color");
@@ -78,14 +83,15 @@
                 color: map.get($paragraph, "color");
                 line-height: map.get($paragraph, "line-height");
                 text-align: center;
-                padding: 0 16px 0 16px;
+                padding: 0px 16px 0 16px;
+                
 
-                @media (min-width: $bp-l) {
+                @media (min-width: $bp-m) {
                     font-family: map.get($paragraph-desktop, "font-family");
                     font-size: map.get($paragraph-desktop, "font-size");
                     color: map.get($paragraph-desktop, "color");
                     line-height: map.get($paragraph-desktop, "line-height");
-                
+                    text-align: start;
                 }
             }
         }
@@ -100,7 +106,12 @@
             border-left: 1px solid $purple;
             gap: 20px;
             padding: 20px 0 20px 0;
-            
+            @media (min-width: $bp-m) {
+                flex: 1; 
+                padding: 20px 96px 20px 96px;
+                border-top-left-radius: 25px;
+                border-bottom-left-radius: 25px;
+            }
 
             @media (min-width: $bp-l) {
                 flex: 1; 
@@ -116,7 +127,7 @@
                 color: map.get($h3, "color");
                 font-weight: map.get($h3, "font-weight");
 
-                @media (min-width: $bp-l) {
+                @media (min-width: $bp-m) {
                     font-family: map.get($h3-desktop, "font-family");
                     font-size: map.get($h3-desktop, "font-size");
                     color: map.get($h3-desktop, "color");
@@ -129,17 +140,17 @@
                 color: map.get($paragraph, "color");
                 line-height: map.get($paragraph, "line-height");
                 text-align: center;
-                padding: 0 16px 0 16px;
+                padding: 0px 16px 0 16px;
+                
 
-                @media (min-width: $bp-l) {
+                @media (min-width: $bp-m) {
                     font-family: map.get($paragraph-desktop, "font-family");
                     font-size: map.get($paragraph-desktop, "font-size");
                     color: map.get($paragraph-desktop, "color");
                     line-height: map.get($paragraph-desktop, "line-height");
-                
+                    text-align: start;
                 }
             }
         }
         
-    }
-}
+    }}
