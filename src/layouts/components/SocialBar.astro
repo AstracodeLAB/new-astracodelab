@@ -1,16 +1,24 @@
 ---
-
+import Facebook from './icons/facebook.svg';
+import Linkedin from './icons/linkedin.svg';
+import Instagram from './icons/insta.svg';
+import Threads from './icons/threads.svg';
 ---
 
-<p class='footer__social'>@astracodelab</p>
-<div class='footer__icons'>
-	<a href='https://facebook.com' class='footer__icon' target='_blank'>
-		<img src='/ruta/a/facebook-icon.svg' alt='Facebook' />
-	</a>
-	<a href='https://linkedin.com' class='footer__icon' target='_blank'>
-		<img src='/ruta/a/linkedin-icon.svg' alt='LinkedIn' />
-	</a>
-	<a href='https://instagram.com' class='footer__icon' target='_blank'>
-		<img src='/ruta/a/instagram-icon.svg' alt='Instagram' />
-	</a>
+<div class='social-bar'>
+	<p class='social-bar__title'>@astracodelab</p>
+	<div class='social-bar__icons'>
+		<a href='https://facebook.com' class='social-bar__icons-icon' target='_blank'>
+			<img src={Facebook.src} alt='Facebook' />
+		</a>
+		<a href='https://linkedin.com' class='social-bar__icons-icon' target='_blank'>
+			<img src={Linkedin.src} alt='LinkedIn' />
+		</a>
+		<a href='https://instagram.com' class='social-bar__icons-icon' target='_blank'>
+			<img src={Instagram.src} alt='Instagram' />
+		</a>
+        <a href='https://threads.com' class='social-bar__icons-icon' target='_blank'>
+			<img src={Threads.src} alt='Threads' />
+		</a>
+	</div>
 </div>

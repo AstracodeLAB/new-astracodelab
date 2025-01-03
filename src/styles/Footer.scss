@@ -1,57 +1,93 @@
 @use 'sass:map';
-@use './variables.scss';
+@use './variables.scss' as *;
 
 .footer {
 	padding: 1.5rem 1rem;
-	background: linear-gradient(to bottom right, #d5caff, #a7a1fa);
+	background: linear-gradient(to bottom right, $white, $purple);
 	text-align: center;
-	font-family: 'Arial', sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 
-	&__logo {
-		margin-bottom: 0.5rem;
-
-		&-img {
-			max-width: 80px;
-			margin: 0 auto;
+	&__content {
+		@media (min-width: $bp-m) {
+			display: flex;
+			flex-direction: row-reverse;
+			justify-content: space-between;
+			width: 100%;
 		}
 	}
 
 	&__social {
-		font-size: 1rem;
-		font-weight: bold;
-		margin: 0.5rem 0;
-		color: #000;
-	}
-
-	&__icons {
 		display: flex;
-		justify-content: center;
-		gap: 1rem;
-		margin-bottom: 1.5rem;
+		flex-direction: column;
+		align-items: center;
 
-		& > .footer__icon img {
-			width: 24px;
-			height: 24px;
+		@media (min-width: $bp-m) {
+			align-items: end;
+		}
+
+		&-logo {
+			margin-bottom: 0.5rem;
+
+			@media (min-width: $bp-m) {
+				margin-bottom: 0;
+			}
 		}
 	}
 
-	&__nav,
-	&__legal {
+	&__nav {
 		display: flex;
 		flex-direction: column;
 		gap: 0.5rem;
 		margin-bottom: 1.5rem;
+		font-family: map.get($paragraph, 'font-family');
+		font-size: map.get($paragraph, 'font-size');
+		color: map.get($paragraph, 'color');
 
 		& > .footer__link {
 			text-decoration: none;
 			color: #000;
 			font-size: 0.875rem;
 		}
+
+		@media (min-width: $bp-m) {
+			font-family: map.get($h1, font-family);
+		}
+	}
+
+	&__legal {
+		display: flex;
+		flex-direction: column;
+		gap: 0.1rem;
+		margin-bottom: 1.5rem;
+		font-family: map.get($paragraph, 'font-family');
+		font-size: map.get($paragraph, 'font-size');
+		color: map.get($paragraph, 'color');
+
+		& > .footer__link {
+			text-decoration: none;
+			color: #000;
+			font-size: 0.875rem;
+		}
+
+		@media (min-width: $bp-m) {
+			font-family: map.get($h1, font-family);
+			text-align: start;
+		}
 	}
 
 	&__copy {
-		font-size: 0.75rem;
-		color: #333;
+		font-family: map.get($paragraph, 'font-family');
+		font-size: map.get($paragraph, 'font-size');
+		color: map.get($paragraph, 'color');
 		margin-top: 1rem;
+		margin: 0 auto;
+
+		@media (min-width: $bp-m) {
+			font-family: map.get($h1, font-family);
+			margin: 0;
+			align-self: flex-start;
+		}
 	}
 }
