@@ -49,6 +49,7 @@
             border-right: 1px solid $purple;
             gap: 20px;
             padding: 20px 0 20px 0;
+            box-shadow: $shadow;
             @media (min-width: $bp-m) {
                 flex: 1; 
                 padding: 20px 96px 20px 96px;
@@ -106,16 +107,16 @@
             border-left: 1px solid $purple;
             gap: 20px;
             padding: 20px 0 20px 0;
+            box-shadow: $shadow;
             @media (min-width: $bp-m) {
                 flex: 1; 
                 padding: 20px 96px 20px 96px;
-                border-top-left-radius: 25px;
-                border-bottom-left-radius: 25px;
+                
             }
 
             @media (min-width: $bp-l) {
                 flex: 1; 
-                padding: 20px 120px 20px 0;
+                //padding: 20px 120px 20px 0;
                 border-top-left-radius: 25px;
                 border-bottom-left-radius: 25px;
             }

@@ -56,7 +56,15 @@
                 font-family: map.get($h2-desktop, "font-family");
                 font-size: map.get($h2-desktop, "font-size");
                 color: map.get($h2-desktop, "color");
-                text-align: center;
+                
+                
+             }
+             @media (min-width: $bp-l) {
+                font-family: map.get($h2-desktop, "font-family");
+                font-size: map.get($h2-desktop, "font-size");
+                color: map.get($h2-desktop, "color");
+                text-align: start;
+                padding-left: 96px;
                 
              }
     }
