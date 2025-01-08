@@ -14,7 +14,7 @@
 
 	&__text {
 		font-family: map.get($paragraph, 'font-family');
-		font-size: map.get($paragraph, 'font-size');
+		font-size: 0.8rem;
 		color: map.get($paragraph, 'color');
 		line-height: map.get($paragraph, 'line-height');
 
@@ -139,7 +139,7 @@
 				}
 
 				&-link {
-					font-size: 1rem;
+					font-size: 0.8rem;
 					text-align: center;
 					color: rgb(0, 0, 0);
 					text-decoration: none;

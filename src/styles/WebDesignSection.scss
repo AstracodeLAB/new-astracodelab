@@ -21,6 +21,7 @@
 	&__container {
 		text-align: center;
 		padding-top: 30px;
+		box-shadow: $shadow;
 
 		&-title {
 			font-family: map.get($h2, 'font-family');
@@ -28,7 +29,7 @@
 			color: map.get($h2, 'color');
 			text-transform: uppercase;
 			margin: 0 16px;
-
+			padding-bottom: 20px;
 			@media (min-width: $bp-m) {
 				font-size: map.get($h2-desktop, 'font-size');
 				text-align: start;
@@ -43,7 +44,7 @@
 			line-height: map.get($paragraph, 'line-height');
 			background-color: $bg-purple;
 			border: 1px solid $purple;
-			padding: 0 16px;
+			padding: 20px 16px;
 
 			@media (min-width: $bp-m) {
 				font-size: map.get($paragraph-desktop, 'font-size');

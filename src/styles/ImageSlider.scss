@@ -31,12 +31,14 @@
 	max-height: 400px;
 	border-radius: 15px;
 	transition: transform 0.3s ease, filter 0.3s ease;
+	box-shadow: $shadow;
 }
 
 /* Imagen activa en móvil */
 .swiper-slide.swiper-slide-active .slide-image {
 	transform: scale(1);
 	filter: brightness(0.4);
+	
 }
 
 /* Imágenes laterales */
