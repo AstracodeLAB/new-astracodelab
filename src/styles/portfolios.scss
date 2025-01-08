@@ -106,6 +106,7 @@
 		@media (min-width: $bp-l) {
 			display: flex;
 			flex-direction: column;
+			gap: 20px;
 		}
 
 		&-card {
@@ -121,7 +122,7 @@
 
 			@media (min-width: $bp-l) {
 				margin-top: 0;
-				margin-bottom: 20px;
+				// margin-bottom: 20px;
 				background-color: $white;
 				padding: 16px;
 			}
@@ -243,6 +244,15 @@
 			// 		display: flex;
 			// 	}
 			// }
+		}
+	}
+
+	&-bis {
+		@media (min-width: $bp-l) {
+			margin: 20px;
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
 		}
 	}
 }

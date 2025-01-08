@@ -11,14 +11,19 @@ import CtaHero from '../layouts/components/CtaHero.astro';
 	<section class='web-dev'>
 		<div class='web-dev__hero'>
 			<h1 class='web-dev__hero-title'>Sitios web corporativos a medida</h1>
-			<p class='web-dev__hero-subtitle'>
-				Impulsa tu negocio con un sitio web profesional que refleje tu identidad corporativa y te ayude a conectar con
-				tus clientes.
-			</p>
-			<p class='web-dev__hero-subtitle'>
-				¿Quieres llevar tu empresa al siguiente nivel? Estamos aquí para ayudarte. Contacta con nosotros y crea un sitio
-				web que refleje la esencia de tu negocio.
-			</p>
+			<div class='web-dev__hero-text'>
+				<p class='web-dev__hero-subtitle'>
+					Impulsa tu negocio con un sitio web profesional que refleje tu identidad corporativa y te ayude a conectar con
+					tus clientes.
+				</p>
+				<p class='web-dev__hero-subtitle'>
+					¿Quieres llevar tu empresa al siguiente nivel? Estamos aquí para ayudarte. Contacta con nosotros y crea un
+					sitio web que refleje la esencia de tu negocio.
+				</p>
+				<div class='web-dev__content-cta'>
+					<CtaHero />
+				</div>
+			</div>
 		</div>
 		<div class='web-dev__content'>
 			<article class='web-dev__content-card'>
@@ -68,28 +73,28 @@ import CtaHero from '../layouts/components/CtaHero.astro';
 					</li>
 				</ul>
 			</article>
-			<article class='web-dev__content-card'>
-				<h2 class='web-dev__content-card-title'>Diferencia entre un sitio web corporativo y una landing page</h2>
-				<p class='web-dev__content-card-text'>
-					Un sitio web corporativo es más extenso, con varias páginas diseñadas para cubrir todas las necesidades de tu
-					negocio. Es ideal para mostrar información detallada sobre tu empresa, tus servicios y tu trayectoria. Por
-					otro lado, una landing page es una única página enfocada en un objetivo específico, como una promoción o
-					campaña concreta. Incluso si ya tienes un sitio web corporativo, puedes contratar una landing page adicional
-					para captar nuevos clientes o promocionar algo puntual.
-				</p>
-			</article>
-			<article class='web-dev__content-card'>
-				<h2 class='web-dev__content-card-title'>Ventajas de un sitio web corporativo</h2>
-				<p class='web-dev__content-card-text'>
-					Con un sitio web corporativo profesional, tu negocio estará disponible 24/7, mejorando la comunicación con tus
-					clientes y potenciando tus ventas. Además, podrás posicionarte como un referente en tu sector y transmitir una
-					imagen sólida y confiable.
-				</p>
-			</article>
-			<div class='web-dev__content-cta'>
-				<CtaHero />
-			</div>
 		</div>
+	</section>
+
+	<section class='web-dev-bis'>
+		<article class='web-dev__content-card'>
+			<h2 class='web-dev__content-card-title'>Diferencia entre un sitio web corporativo y una landing page</h2>
+			<p class='web-dev__content-card-text'>
+				Un sitio web corporativo es más extenso, con varias páginas diseñadas para cubrir todas las necesidades de tu
+				negocio. Es ideal para mostrar información detallada sobre tu empresa, tus servicios y tu trayectoria. Por otro
+				lado, una landing page es una única página enfocada en un objetivo específico, como una promoción o campaña
+				concreta. Incluso si ya tienes un sitio web corporativo, puedes contratar una landing page adicional para captar
+				nuevos clientes o promocionar algo puntual.
+			</p>
+		</article>
+		<article class='web-dev__content-card'>
+			<h2 class='web-dev__content-card-title'>Ventajas de un sitio web corporativo</h2>
+			<p class='web-dev__content-card-text'>
+				Con un sitio web corporativo profesional, tu negocio estará disponible 24/7, mejorando la comunicación con tus
+				clientes y potenciando tus ventas. Además, podrás posicionarte como un referente en tu sector y transmitir una
+				imagen sólida y confiable.
+			</p>
+		</article>
 	</section>
 	<Footer />
 </Layout>
