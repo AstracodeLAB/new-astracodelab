@@ -35,6 +35,11 @@
 				text-align: start;
 				padding-left: 80px;
 			}
+			@media (min-width: $bp-l) {
+				font-size: map.get($h2-desktop-l, 'font-size');
+				text-align: start;
+				padding-left: 80px;
+			}
 		}
 
 		&-text {

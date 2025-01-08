@@ -26,7 +26,7 @@ $services-purple: #7243c9;
 $services-hero-purple: rgba($services-purple, 0.2);
 $gray: #f3f1ff;
 $green: #bbff00;
-$backgroundContainer: rgba(214, 208, 255, 0.093);
+$backgroundContainer: #FBFAFF;
 $cardProjects:rgba(214, 208, 255, 0.1);
 
 // Shadows
@@ -102,8 +102,12 @@ $h2: (
 
 $h2-desktop: (
 	font-family: 'Raleway Variable',
+	font-size: 2rem,
+	color: $blueDark,
+);
+$h2-desktop-l: (
+	font-family: 'Raleway Variable',
 	font-size: 3rem,
-	// 48px
 	color: $blueDark,
 );
 
@@ -118,14 +122,14 @@ $h3: (
 
 $h3-desktop: (
 	font-family: 'Raleway Variable',
-	font-size: 2.0625rem,
+	font-size: 1.8rem,
 	// 33px
 	color: $black,
 	font-weight: 500,
 );
 $h3-desktop-services: (
 	font-family: 'Raleway Variable',
-	font-size: 2rem,
+	font-size: 1.8rem,
 	// 33px
 	color: $black,
 	font-weight: 500,

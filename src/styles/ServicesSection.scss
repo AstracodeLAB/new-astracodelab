@@ -7,36 +7,6 @@
     justify-content: center;
     align-items: center;
     
-    /*height: 100%;
-    margin: 0;
-    background: linear-gradient(
-        180deg,
-        #FFFFFF 0%, 
-        #CDB0F4 30%,
-        #9E63EA 40%, 
-        #5E30B2 45%, 
-        #301B5D 50%, 
-        #5E30B2 55%, 
-        #9E63EA 60%, 
-        #CDB0F4 70%,
-        #FFFFFF 100%
-    );*/
-    /* Fondo degradado */
-   /* background: linear-gradient(
-        180deg,
-        #FFFFFF 0%, 
-        #CDB0F4 10%,
-        #9E63EA 20%, 
-        #5E30B2 40%, 
-        #301B5D 50%, 
-        #5E30B2 60%, 
-        #9E63EA 80%, 
-        #CDB0F4 90%,
-        #FFFFFF 100%
-    );*/
-    //background-size: auto;
-   // background-position: center; /* Centra el degradado */
-    
     @media (min-width: $bp-l) {
        // flex-direction: row;
         
@@ -60,9 +30,9 @@
                 
              }
              @media (min-width: $bp-l) {
-                font-family: map.get($h2-desktop, "font-family");
-                font-size: map.get($h2-desktop, "font-size");
-                color: map.get($h2-desktop, "color");
+                font-family: map.get($h2-desktop-l, "font-family");
+                font-size: map.get($h2-desktop-l, "font-size");
+                color: map.get($h2-desktop-l, "color");
                 text-align: start;
                 padding-left: 96px;
                 
@@ -85,6 +55,7 @@
         #9E63EA 60%, 
         #CDB0F4 70%,
         #FFFFFF 100%
+        
     );
        
         &-cards{
@@ -92,15 +63,16 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            gap: 10px 0;
+            gap: 10px 10px;
             padding: 20px 0 20px 0;
             flex-wrap: wrap;
             background-size: 100vw;
             align-content: center;
             @media (min-width: $bp-l) {
-                
+                padding: 20px 16px 20px 16px;
                 flex-direction: row;
                 max-width: 1440px;
+                gap: 24px;
              
             }
         
@@ -110,25 +82,28 @@
                 justify-content: center;
                 align-items: center;
                 background-color: $white ;
+                border: 1px solid $purple;
                 box-shadow: $shadow;
                 border-radius: 10px;
-                margin: 0 16px 0 16px;
+                background-color: $backgroundContainer;
                 padding: 20px 16px 20px 16px;
                 gap: 5px;
                 width: 95vw;
                 flex-grow: 1; /* Hace que todos los items crezcan igual al mismo ritmo */
                 max-width: 100vw; /* Limita el ancho máximo de cada caja */
                 min-height: 100px; /* Altura mínima para que las cajas tengan un tamaño uniforme */
+                
+                
                 @media (min-width: $bp-l) {
                     width: 45%; /* 2 cajas por fila en pantallas grandes */
                     max-width: 800px; /* Limita el ancho máximo */
-                    min-height: 230px; /* Ajusta la altura mínima en pantallas grandes */
+                    min-height: 250px; /* Ajusta la altura mínima en pantallas grandes */
                     
                     flex-direction: row;
                     gap: 10px;
                     display: flex;
                     align-items: start;
-                    padding: 20px 10px 10px 10px;
+                    padding: 20px;
                     
                 }
                 @media (min-width: $bp-xl) {
@@ -171,7 +146,7 @@
                            // text-align: start;
                             
                          }
-                         @media (min-width: $bp-xl) {
+                         @media (min-width: $bp-l) {
                             font-family: map.get($h3-desktop, "font-family");
                             font-size: map.get($h3-desktop, "font-size");
                             color: map.get($h3-desktop, "color");

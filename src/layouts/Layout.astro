@@ -31,16 +31,19 @@ import '@fontsource-variable/raleway';
 	}
 	body {
 		background-image: url('../images/Astra2.png');
-		background-size: 100vw 50vh;
+		background-size: 100vw 80vh;
 		background-position: top;
 		background-repeat: no-repeat;		
 		background-color: #fdfcff;
 		overflow-x: hidden;
+		@media (min-width: 768px) {
+			background-size: 100vw 70vh;                
+             }
 		@media (min-width: 1024px) {
-			background-size: 100vw 60vh;                
+			background-size: 100vw 85vh;                
              }
 			 @media (min-width: 1440px) {
-				background-size: 100vw 70vh;                 
+				background-size: 100vw 95vh;                 
              }
 	}
 </style>
