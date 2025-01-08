@@ -13,13 +13,26 @@
 	}
 
 	&__hero {
-		background: linear-gradient(to bottom, $blueDark, $purple, $bg-purple);
+		// background: linear-gradient(to bottom, $blueDark, $purple, $bg-purple);
+		background: $services-hero-purple;
 		border-radius: 10px;
 		padding: 10px;
 		box-shadow: $shadow;
 
+		@media (min-width: $bp-m) {
+			padding: 0 30px;
+		}
+
 		@media (min-width: $bp-l) {
-			padding: 0 40px;
+			max-width: 45%;
+			padding: 5px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+
+		@media (min-width: $bp-xl) {
+			padding: 30px;
 		}
 
 		&-title {
@@ -30,25 +43,57 @@
 			letter-spacing: map.get($h1bold, 'letter-spacing');
 			line-height: 2.5rem;
 			font-weight: bold;
-			margin-bottom: 100px;
+			text-shadow: $shadow;
+
+			@media (min-width: $bp-s) {
+				padding-top: 20px;
+				margin-bottom: 30px;
+			}
+
+			@media (min-width: $bp-m) {
+				font-size: 3rem;
+				line-height: 3.5rem;
+			}
 
 			@media (min-width: $bp-l) {
-				font-size: 3.5rem;
+				// font-size: 3.5rem;
 				letter-spacing: map.get($h1bold-desktop, 'letter-spacing');
 				line-height: 4rem;
 				padding-top: 60px;
-				margin-bottom: 320px;
+				// margin-bottom: 320px;
+				text-shadow: none;
 			}
 
+			@media (min-width: $bp-xl) {
+				padding-top: 20px;
+				font-size: 3.5rem;
+				line-height: 4.5rem;
+			}
+		}
 
+		&-text {
+			
+			@media (min-width: $bp-l) {
+				margin-bottom: 30px;
+			}
 		}
 
 		&-subtitle {
 			font-family: map.get($paragraph, 'font-family');
-			margin-top: 40px;
+			margin-top: 20px;
+			color: map.get($paragraph, 'color');
 
-			@media (min-width: $bp-l) {
-				font-size: map.get($paragraph-desktop, 'font-size');
+			@media (min-width: $bp-s) {
+				margin-bottom: 30px;
+			}
+
+			@media (min-width: $bp-m) {
+				// font-size: map.get($paragraph-desktop, 'font-size');
+				font-size: 1.2rem;
+			}
+
+			@media (min-width: $bp-xl) {
+				font-size: 1.3rem;
 			}
 		}
 	}
@@ -60,6 +105,10 @@
 			text-align: center;
 			box-shadow: $shadow;
 			border-radius: 10px;
+
+			@media (min-width: $bp-m) {
+				padding: 20px;
+			}
 
 			@media (min-width: $bp-l) {
 				margin-top: 0;
@@ -74,6 +123,10 @@
 				font-size: map.get($h2, 'font-size');
 				color: map.get($h2, 'color');
 				margin-bottom: 20px;
+
+				@media (min-width: $bp-l) {
+					margin-bottom: 0;
+				}
 			}
 
 			&-text {
@@ -81,6 +134,20 @@
 				font-size: map.get($paragraph, 'font-size');
 				color: map.get($paragraph, 'color');
 				line-height: map.get($paragraph, 'line-height');
+
+				@media (min-width: $bp-m) {
+					// font-size: map.get($paragraph-desktop, 'font-size');
+					font-size: 1.2rem;
+					padding: 20px;
+				}
+
+				@media (min-width: $bp-l) {
+					padding: 20px 0;
+				}
+				
+				@media (min-width: $bp-xl) {
+					line-height: 1.8rem;
+				}
 			}
 
 			&-list {
@@ -90,14 +157,41 @@
 				color: map.get($paragraph, 'color');
 				line-height: map.get($paragraph, 'line-height');
 
+				@media (min-width: $bp-m) {
+					// font-size: map.get($paragraph-desktop, 'font-size');
+					font-size: 1.2rem;
+					text-align: start;
+					padding: 0 20px;
+				}
+
+				@media (min-width: $bp-l) {
+					padding: 0;
+				}
+
 				&-item {
 					margin-bottom: 10px;
 					display: flex;
 					gap: 5px;
 
+					@media (min-width: $bp-m) {
+						padding: 10px;
+					}
+
+					@media (min-width: $bp-l) {
+						padding: 5px;
+					}
+
+					@media (min-width: $bp-xl) {
+						line-height: 1.5rem;
+					}
+
 					&-icon {
 						svg {
 							width: 20px;
+
+							@media (min-width: $bp-m) {
+								width: 40px;
+							}
 						}
 					}
 				}
@@ -109,6 +203,20 @@
 			justify-content: center;
 			margin-top: 40px;
 			margin-bottom: 40px;
+
+			&--mobile {
+				@media (min-width: $bp-l) {
+					display: none;
+				}
+			}
+
+			&--desktop {
+				display: none;
+
+				@media (min-width: $bp-l) {
+					display: flex;
+				}
+			}
 		}
 	}
 }
