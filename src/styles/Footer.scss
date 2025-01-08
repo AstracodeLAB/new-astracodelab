@@ -9,6 +9,10 @@
 	flex-direction: column;
 	align-items: center;
 
+	@media (min-width: $bp-m) {
+		padding: 2rem;
+	}
+
 	&__content {
 		@media (min-width: $bp-m) {
 			display: flex;
@@ -49,10 +53,10 @@
 			text-decoration: none;
 			color: #000;
 			font-size: 0.875rem;
-		}
 
-		@media (min-width: $bp-m) {
-			font-family: map.get($h1, font-family);
+			@media (min-width: $bp-m) {
+				font-size: 1.2rem;
+			}
 		}
 	}
 
@@ -69,10 +73,14 @@
 			text-decoration: none;
 			color: #000;
 			font-size: 0.875rem;
+
+			@media (min-width: $bp-m) {
+				font-size: 1.2rem;
+			}
 		}
 
 		@media (min-width: $bp-m) {
-			font-family: map.get($h1, font-family);
+			// font-family: map.get($h1, font-family);
 			text-align: start;
 		}
 	}
