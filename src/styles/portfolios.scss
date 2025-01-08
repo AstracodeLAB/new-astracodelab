@@ -13,7 +13,6 @@
 	}
 
 	&__hero {
-		// background: linear-gradient(to bottom, $blueDark, $purple, $bg-purple);
 		background: $services-hero-purple;
 		border-radius: 10px;
 		padding: 10px;
@@ -29,7 +28,7 @@
 			padding: 5px;
 			display: flex;
 			flex-direction: column;
-			justify-content: space-between;
+			// justify-content: space-between;
 		}
 
 		@media (min-width: $bp-xl) {
@@ -60,7 +59,7 @@
 			@media (min-width: $bp-l) {
 				letter-spacing: map.get($h1bold-desktop, 'letter-spacing');
 				line-height: 4rem;
-				padding-top: 60px;
+				// padding-top: 60px;
 			}
 
 			@media (min-width: $bp-xl) {
@@ -72,7 +71,8 @@
 
 		&-text {
 			@media (min-width: $bp-l) {
-				margin-bottom: 30px;
+				margin-top: 170px;
+				padding: 16px;
 			}
 		}
 
@@ -224,6 +224,10 @@
 			justify-content: center;
 			margin-top: 40px;
 			margin-bottom: 40px;
+
+			@media (min-width: $bp-l) {
+				margin: 0;
+			}
 
 			// &--mobile {
 			// 	@media (min-width: $bp-l) {
