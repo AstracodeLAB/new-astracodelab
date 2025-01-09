@@ -7,13 +7,13 @@
 	padding: 16px;
 
 	@media (min-width: $bp-l) {
+		margin-top: 20px;
 		padding: 20px;
 		flex-direction: row;
 		gap: 20px;
 	}
 
 	&__hero {
-		// background: linear-gradient(to bottom, $blueDark, $purple, $bg-purple);
 		background: $services-hero-purple;
 		border-radius: 10px;
 		padding: 10px;
@@ -24,8 +24,9 @@
 		}
 
 		@media (min-width: $bp-l) {
-			max-width: 45%;
-			padding: 5px;
+			// min-width: 50%;
+			max-height: 1075px;
+			// padding: 5px;
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
@@ -33,6 +34,17 @@
 
 		@media (min-width: $bp-xl) {
 			padding: 30px;
+			max-height: 775px;
+		}
+
+		&--small {
+			@media (min-width: $bp-l) {
+				min-width: 50%;
+			}
+
+			@media (min-width: $bp-xl) {
+				max-height: 2000px;
+			}
 		}
 
 		&-title {
@@ -56,12 +68,10 @@
 			}
 
 			@media (min-width: $bp-l) {
-				// font-size: 3.5rem;
+				font-size: 3.5rem;
 				letter-spacing: map.get($h1bold-desktop, 'letter-spacing');
 				line-height: 4rem;
-				padding-top: 60px;
-				// margin-bottom: 320px;
-				text-shadow: none;
+				// padding-top: 60px;
 			}
 
 			@media (min-width: $bp-xl) {
@@ -72,33 +82,43 @@
 		}
 
 		&-text {
-			
 			@media (min-width: $bp-l) {
-				margin-bottom: 30px;
+				margin-bottom: 100px;
+			}
+			@media (min-width: $bp-xl) {
+				margin-bottom: 10px;
 			}
 		}
 
 		&-subtitle {
 			font-family: map.get($paragraph, 'font-family');
-			margin-top: 20px;
+			font-size: map.get($paragraph, 'font-size');
 			color: map.get($paragraph, 'color');
+			line-height: map.get($paragraph, 'line-height');
+			margin-top: 20px;
 
 			@media (min-width: $bp-s) {
 				margin-bottom: 30px;
 			}
 
-			@media (min-width: $bp-m) {
-				// font-size: map.get($paragraph-desktop, 'font-size');
-				font-size: 1.2rem;
+			@media (min-width: $bp-l) {
+				font-size: map.get($paragraph-desktop, 'font-size');
+				line-height: map.get($paragraph-desktop, 'line-height');
 			}
 
 			@media (min-width: $bp-xl) {
-				font-size: 1.3rem;
+				font-size: map.get($paragraph-desktop-xl, 'font-size');
 			}
 		}
 	}
 
 	&__content {
+		@media (min-width: $bp-l) {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+		}
+
 		&-card {
 			margin-top: 30px;
 			padding: 10px;
@@ -112,7 +132,7 @@
 
 			@media (min-width: $bp-l) {
 				margin-top: 0;
-				margin-bottom: 20px;
+				// margin-bottom: 20px;
 				background-color: $white;
 				padding: 16px;
 			}
@@ -126,6 +146,7 @@
 
 				@media (min-width: $bp-l) {
 					margin-bottom: 0;
+					font-size: map.get($h2-desktop, 'font-size');
 				}
 			}
 
@@ -136,17 +157,17 @@
 				line-height: map.get($paragraph, 'line-height');
 
 				@media (min-width: $bp-m) {
-					// font-size: map.get($paragraph-desktop, 'font-size');
-					font-size: 1.2rem;
 					padding: 20px;
 				}
 
 				@media (min-width: $bp-l) {
 					padding: 20px 0;
+					font-size: map.get($paragraph-desktop, 'font-size');
+					line-height: map.get($paragraph-desktop, 'line-height');
 				}
-				
+
 				@media (min-width: $bp-xl) {
-					line-height: 1.8rem;
+					font-size: map.get($paragraph-desktop-xl, 'font-size');
 				}
 			}
 
@@ -158,14 +179,18 @@
 				line-height: map.get($paragraph, 'line-height');
 
 				@media (min-width: $bp-m) {
-					// font-size: map.get($paragraph-desktop, 'font-size');
-					font-size: 1.2rem;
 					text-align: start;
 					padding: 0 20px;
 				}
 
 				@media (min-width: $bp-l) {
 					padding: 0;
+					font-size: map.get($paragraph-desktop, 'font-size');
+					line-height: map.get($paragraph-desktop, 'line-height');
+				}
+
+				@media (min-width: $bp-xl) {
+					font-size: map.get($paragraph-desktop-xl, 'font-size');
 				}
 
 				&-item {
@@ -196,6 +221,14 @@
 					}
 				}
 			}
+
+			&--last {
+				margin: 0 16px 50px 16px;
+
+				@media (min-width: $bp-l) {
+					margin: 0 20px 50px 20px;
+				}
+			}
 		}
 
 		&-cta {
@@ -204,19 +237,33 @@
 			margin-top: 40px;
 			margin-bottom: 40px;
 
-			&--mobile {
-				@media (min-width: $bp-l) {
-					display: none;
-				}
+			@media (min-width: $bp-l) {
+				margin: 0;
 			}
 
-			&--desktop {
-				display: none;
+			// &--mobile {
+			// 	@media (min-width: $bp-l) {
+			// 		display: none;
+			// 	}
+			// }
 
-				@media (min-width: $bp-l) {
-					display: flex;
-				}
-			}
+			// &--desktop {
+			// 	display: none;
+
+			// 	@media (min-width: $bp-l) {
+			// 		display: flex;
+			// 	}
+			// }
+		}
+	}
+
+	&-bis {
+		margin: 20px;
+
+		@media (min-width: $bp-l) {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
 		}
 	}
 }

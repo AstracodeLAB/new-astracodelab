@@ -30,7 +30,7 @@ import Cta from '../components/Cta.astro';
 				</li>
 
 				<li class='navigation__container-menu-itemsMap'>
-					<a href='' class='navigation__container-menu-itemsMap-link'>inicio</a>
+					<a href='/' class='navigation__container-menu-itemsMap-link'>inicio</a>
 				</li>
 
 				<li class='navigation__container-menu-itemsMap'>
@@ -58,21 +58,23 @@ import Cta from '../components/Cta.astro';
 							<a href='/landing' class='navigation__container-menu-itemsMap-linkSubmenu'>landing page</a>
 						</li>
 						<li class='navigation__container-submenu-item'>
-							<a href='#' class='navigation__container-menu-itemsMap-linkSubmenu'>sistemas de reservas y citas</a>
+							<a href='/reservas' class='navigation__container-menu-itemsMap-linkSubmenu'
+								>sistemas de reservas y citas</a
+							>
 						</li>
 					</ul>
 				</li>
 
 				<li class='navigation__container-menu-itemsMap'>
-					<a href='' class='navigation__container-menu-itemsMap-link'>contacto</a>
+					<a href='/#contact' class='navigation__container-menu-itemsMap-link'>contacto</a>
 				</li>
 
 				<li class='navigation__container-menu-itemsMap'>
-					<a href='' class='navigation__container-menu-itemsMap-link'>proyectos</a>
+					<a href='/#projects' class='navigation__container-menu-itemsMap-link'>proyectos</a>
 				</li>
 
 				<li class='navigation__container-menu-itemsMap'>
-					<a href='' class='navigation__container-menu-itemsMap-link'>sobre nosotras</a>
+					<a href='/#about' class='navigation__container-menu-itemsMap-link'>sobre nosotras</a>
 				</li>
 			</ul>
 
@@ -83,96 +85,44 @@ import Cta from '../components/Cta.astro';
 	</nav>
 </header>
 
-<!-- <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const menuItemsWithSubmenus = document.querySelectorAll('.navigation__container-menu-itemsMap');
-
-    menuItemsWithSubmenus.forEach((item) => {
-      const submenu = item.querySelector('.navigation__container-submenu') as HTMLElement;
-      const arrowIcon = item.querySelector('.navigation__container-menu-itemsMap-arrow') as SVGElement;
-
-      if (submenu && arrowIcon) {
-        item.addEventListener('click', function (event) {
-          event.stopPropagation();
-
-          submenu.classList.toggle('open');
-
-          if (submenu.classList.contains('open')) {
-            arrowIcon.style.transform = 'rotate(180deg)';
-          } else {
-            arrowIcon.style.transform = 'rotate(0deg)';
-          }
-        });
-      }
-    });
-
-    document.addEventListener('click', function () {
-      const openSubmenus = document.querySelectorAll('.navigation__container-submenu.open');
-      openSubmenus.forEach((openSubmenu) => {
-        openSubmenu.classList.remove('open');
-
-
-        const arrowIcon = openSubmenu.parentElement?.querySelector(
-          '.navigation__container-menu-itemsMap-arrow'
-        ) as SVGElement;
-        if (arrowIcon) {
-          arrowIcon.style.transform = 'rotate(0deg)';
-        }
-      });
-    });
-  });
-</script> -->
-
 <script>
 	document.addEventListener('DOMContentLoaded', function () {
 		const menuItemsWithSubmenus = document.querySelectorAll('.navigation__container-menu-itemsMap');
 
 		menuItemsWithSubmenus.forEach((item) => {
-			const submenu = item.querySelector('.navigation__container-submenu') as HTMLElement | null;
-			const arrowIcon = item.querySelector('.navigation__container-menu-itemsMap-arrow') as SVGElement | null;
+			const submenu = item.querySelector('.navigation__container-submenu');
+			const arrowIcon = item.querySelector('.navigation__container-menu-itemsMap-arrow');
 
 			if (submenu && arrowIcon) {
-				// Al hacer clic en el elemento principal del menú
-				item.addEventListener('click', function (event) {
-					event.preventDefault(); // Evita que el enlace recargue la página.
+				// Al hacer clic en el enlace principal, abre o cierra el submenú
+				item.querySelector('.navigation__container-menu-itemsMap-link').addEventListener('click', function (event) {
+					event.preventDefault(); // Evita que el enlace navegue si hay un submenú
 
-					// Cierra cualquier otro submenú abierto
-					document.querySelectorAll('.navigation__container-submenu.open').forEach((openSubmenu) => {
-						if (openSubmenu !== submenu) {
-							openSubmenu.classList.remove('open');
-
-							const openArrow = openSubmenu.parentElement?.querySelector(
-								'.navigation__container-menu-itemsMap-arrow'
-							) as SVGElement | null;
-							if (openArrow) {
-								openArrow.style.transform = 'rotate(0deg)';
-							}
-						}
-					});
-
-					// Alterna el submenú actual
+					// Alterna el submenú
 					submenu.classList.toggle('open');
-					arrowIcon.style.transform = submenu.classList.contains('open') ? 'rotate(180deg)' : 'rotate(0deg)';
+
+					// Ajusta la rotación del icono de flecha
+					if (submenu.classList.contains('open')) {
+						arrowIcon.style.transform = 'rotate(180deg)';
+					} else {
+						arrowIcon.style.transform = 'rotate(0deg)';
+					}
 				});
 			}
 		});
 
-		// Cierra todos los submenús al hacer clic fuera del menú
+		// Cierra cualquier submenú abierto al hacer clic fuera del menú
 		document.addEventListener('click', function (event) {
-			const isClickInsideMenu = (event.target as HTMLElement).closest('.navigation__container-menu');
-
-			if (!isClickInsideMenu) {
-				document.querySelectorAll('.navigation__container-submenu.open').forEach((openSubmenu) => {
-					openSubmenu.classList.remove('open');
-
-					const openArrow = openSubmenu.parentElement?.querySelector(
-						'.navigation__container-menu-itemsMap-arrow'
-					) as SVGElement | null;
-					if (openArrow) {
-						openArrow.style.transform = 'rotate(0deg)';
+			const openSubmenus = document.querySelectorAll('.navigation__container-submenu.open');
+			openSubmenus.forEach((submenu) => {
+				if (!submenu.contains(event.target) && !submenu.parentElement.contains(event.target)) {
+					submenu.classList.remove('open');
+					const arrowIcon = submenu.parentElement.querySelector('.navigation__container-menu-itemsMap-arrow');
+					if (arrowIcon) {
+						arrowIcon.style.transform = 'rotate(0deg)';
 					}
-				});
-			}
+				}
+			});
 		});
 	});
 </script>
