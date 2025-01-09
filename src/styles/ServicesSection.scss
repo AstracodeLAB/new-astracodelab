@@ -35,7 +35,7 @@
                 color: map.get($h2-desktop-l, "color");
                 text-align: start;
                 padding-left: 96px;
-                
+                padding-top: 50px;
              }
     }
     &__container{
@@ -128,6 +128,9 @@
                     
                     @media (min-width: $bp-l) {
                         max-width: 420px;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
                      }
                      @media (min-width: $bp-xl) {
                         max-width: 600px;

@@ -7,6 +7,9 @@
     justify-content: center;
     align-items: center;
     padding-top: 30px;
+    @media (min-width: $bp-l) {
+       padding-top: 50px;
+    }
 
     &__title{
             font-family: map.get($h2, "font-family");

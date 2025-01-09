@@ -160,9 +160,10 @@
 							color: $purple;
 						}
 					}
+					
 
 					@media (min-width: $bp-l) {
-						font-size: 1.5rem;
+						font-size: map.get($paragraph-desktop, 'font-size');
 					}
 				}
 
@@ -262,6 +263,13 @@
 	@media (min-width: $bp-m) {
 		display: flex;
 		width: 300px;
+		justify-content: center;
+		// align-items: center;
+		// gap: 15px;
+	}
+	@media (min-width: $bp-l) {
+		display: flex;
+		width: 400px;
 		justify-content: center;
 		// align-items: center;
 		// gap: 15px;

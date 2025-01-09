@@ -21,9 +21,9 @@
        
     }
     @media (min-width: $bp-l) {
-      font-family: map.get($h2-desktop, "font-family");
-      font-size: map.get($h2-desktop, "font-size");
-      color: map.get($h2-desktop, "color");
+      font-family: map.get($h2-desktop-l, "font-family");
+      font-size: map.get($h2-desktop-l, "font-size");
+      color: map.get($h2-desktop-l, "color");
       text-align: start;
       padding-left: 96px;
       padding-bottom: 40px;
