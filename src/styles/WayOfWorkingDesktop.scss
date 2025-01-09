@@ -40,7 +40,7 @@
         text-align: center;
         //margin: 0 5px;
         @media (min-width: $bp-xl) {
-          width: 200px;
+          width: 230px;
       }
 
         // Círculo indicador (punto del timeline)
@@ -64,7 +64,7 @@
             top: 93%;   
           }
           @media (min-width: $bp-xl) {
-            top: 83%;    
+            top: 89%;    
           }
         
           &--bottom {
@@ -74,7 +74,7 @@
               top: 10%;
             }
             @media (min-width: $bp-xl) {
-              top: 10%;    
+              top: 5%;    
             }
           }
           &-circle.active {
@@ -100,7 +100,7 @@
             transform: translateY(70px);
           }
           @media (min-width: $bp-xl) {
-            transform: translateY(90px);
+            transform: translateY(80px);
           }
         }
         

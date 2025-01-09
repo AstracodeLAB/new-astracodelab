@@ -44,7 +44,7 @@
                         color: map.get($h3, "color");
                         font-weight: map.get($h3, "font-weight");
     
-                        @media (min-width: $bp-l) {
+                        @media (min-width: $bp-m) {
                             font-family: map.get($h3-desktop, "font-family");
                             font-size: map.get($h3-desktop-services, "font-size");
                             color: map.get($h3-desktop, "color");
@@ -59,10 +59,10 @@
                         font-size: map.get($paragraph, "font-size");
                         color: map.get($paragraph, "color");
                         line-height: map.get($paragraph, "line-height");
-                        text-align: center;
+                        text-align: start;
                         padding: 0 16px 0 16px; 
-                    
-                        @media (min-width: $bp-l) {
+                        
+                        @media (min-width: $bp-m) {
                             display: flex;
                             font-family: map.get($paragraph-desktop, "font-family");
                             font-size: map.get($paragraph-desktop, "font-size");

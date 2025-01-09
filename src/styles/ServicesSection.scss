@@ -97,7 +97,7 @@
                 @media (min-width: $bp-l) {
                     width: 45%; /* 2 cajas por fila en pantallas grandes */
                     max-width: 800px; /* Limita el ancho máximo */
-                    min-height: 250px; /* Ajusta la altura mínima en pantallas grandes */
+                    min-height: 280px; /* Ajusta la altura mínima en pantallas grandes */
                     
                     flex-direction: row;
                     gap: 10px;
