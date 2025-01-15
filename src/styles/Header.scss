@@ -166,7 +166,6 @@
 							color: $purple;
 						}
 					}
-					
 
 					@media (min-width: $bp-l) {
 						font-size: map.get($paragraph-desktop, 'font-size');
@@ -225,7 +224,7 @@
 			opacity: 0; /* Lo hacemos invisible */
 			max-height: 0;
 			overflow: hidden;
-      border-radius: 10px;;
+			border-radius: 10px;
 			//transition: opacity 0.5s ease, max-height 0.5s ease;
 			display: block; /* Se mantiene el display como block, pero la visibilidad se controla con opacidad y desplazamiento */
 			transform: translateY(-20px); /* Lo colocamos un poco hacia arriba */

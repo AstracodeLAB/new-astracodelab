@@ -267,3 +267,21 @@
 		}
 	}
 }
+
+.page-container {
+	position: relative;
+	overflow: hidden; /* Evita desbordamientos durante la animación */
+	animation: slide-in 0.8s ease-out forwards;
+}
+
+/* Animación Slide-in */
+@keyframes slide-in {
+	from {
+		transform: translateX(100%); /* Comienza fuera de la pantalla */
+		opacity: 0; /* Transparente al inicio */
+	}
+	to {
+		transform: translateX(0); /* Vuelve a su posición */
+		opacity: 1; /* Totalmente visible */
+	}
+}
