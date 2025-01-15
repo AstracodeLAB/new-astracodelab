@@ -4,129 +4,128 @@ import Cta from '../components/Cta.astro';
 ---
 
 <header class='header header__text'>
-  <nav class='navigation'>
-    <div class='navigation__container'>
-      <div class='navigation__container-logo'>
-        <Logo />
-      </div>
+	<nav class='navigation'>
+		<div class='navigation__container'>
+			<div class='navigation__container-logo'>
+				<Logo />
+			</div>
 
-      <input id='nav-toggle' type='checkbox' class='navigation__container-toggle' />
-      <label for='nav-toggle' class='navigation__container-button navigation__container-button--open'>
-        <svg class='navigation__container-button-icon' viewBox='0 0 20 20'>
-          <title>Menu Open</title>
-          <path d='M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0V0z'></path>
-        </svg>
-      </label>
-      <ul id='nav-menu' class='navigation__container-menu'>
-        <li class='navigation__container-menu-item navigation__container-menu-item-close'>
-          <label for='nav-toggle' class='navigation__container-button navigation__container-button--close'>
-            <svg class='navigation__container-button-icon' viewBox='0 0 20 20'>
-              <title>Menu Close</title>
-              <polygon
-                points='11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2'
-                transform='rotate(45 10 10)'></polygon>
-            </svg>
-          </label>
-        </li>
+			<input id='nav-toggle' type='checkbox' class='navigation__container-toggle' />
+			<label for='nav-toggle' class='navigation__container-button navigation__container-button--open'>
+				<svg class='navigation__container-button-icon' viewBox='0 0 20 20'>
+					<title>Menu Open</title>
+					<path d='M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0V0z'></path>
+				</svg>
+			</label>
+			<ul id='nav-menu' class='navigation__container-menu'>
+				<li class='navigation__container-menu-item navigation__container-menu-item-close'>
+					<label for='nav-toggle' class='navigation__container-button navigation__container-button--close'>
+						<svg class='navigation__container-button-icon' viewBox='0 0 20 20'>
+							<title>Menu Close</title>
+							<polygon
+								points='11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2'
+								transform='rotate(45 10 10)'></polygon>
+						</svg>
+					</label>
+				</li>
 
-        <li class='navigation__container-menu-itemsMap'>
-          <a href='/' class='navigation__container-menu-itemsMap-link'>inicio</a>
-        </li>
+				<li class='navigation__container-menu-itemsMap'>
+					<a href='/' class='navigation__container-menu-itemsMap-link'>inicio</a>
+				</li>
 
-        <li id='services' class='navigation__container-menu-itemsMap'>
-          <a href='' class='navigation__container-menu-itemsMap-link'>
-            servicios
-            <svg
-              class='navigation__container-menu-itemsMap-arrow'
-              viewBox='0 0 20 20'
-              xmlns='http://www.w3.org/2000/svg'
-            >
-              <path d='M5 7l5 5 5-5H5z'></path>
-            </svg>
-          </a>
-          <!-- Submenú  -->
-          <ul class='navigation__container-submenu'>
-            <li class='navigation__container-submenu-item'>
-              <a href='/portfolios' class='navigation__container-menu-itemsMap-linkSubmenu'
-                >portfolios y proyectos creativos</a
-              >
-            </li>
-            <li class='navigation__container-submenu-item'>
-              <a href='/corporativo' class='navigation__container-menu-itemsMap-linkSubmenu'>sitios web corporativos</a>
-            </li>
-            <li class='navigation__container-submenu-item'>
-              <a href='/landing' class='navigation__container-menu-itemsMap-linkSubmenu'>landing page</a>
-            </li>
-            <li class='navigation__container-submenu-item'>
-              <a href='/reservas' class='navigation__container-menu-itemsMap-linkSubmenu'
-                >sistemas de reservas y citas</a
-              >
-            </li>
-          </ul>
-        </li>
+				<li id='services' class='navigation__container-menu-itemsMap'>
+					<a href='/' class='navigation__container-menu-itemsMap-link'>
+						servicios
+						<svg
+							class='navigation__container-menu-itemsMap-arrow'
+							viewBox='0 0 20 20'
+							xmlns='http://www.w3.org/2000/svg'
+						>
+							<path d='M5 7l5 5 5-5H5z'></path>
+						</svg>
+					</a>
+					<!-- Submenú  -->
+					<ul class='navigation__container-submenu'>
+						<li class='navigation__container-submenu-item'>
+							<a href='/portfolios' class='navigation__container-menu-itemsMap-linkSubmenu'
+								>portfolios y proyectos creativos</a
+							>
+						</li>
+						<li class='navigation__container-submenu-item'>
+							<a href='/corporativo' class='navigation__container-menu-itemsMap-linkSubmenu'>sitios web corporativos</a>
+						</li>
+						<li class='navigation__container-submenu-item'>
+							<a href='/landing' class='navigation__container-menu-itemsMap-linkSubmenu'>landing page</a>
+						</li>
+						<li class='navigation__container-submenu-item'>
+							<a href='/reservas' class='navigation__container-menu-itemsMap-linkSubmenu'
+								>sistemas de reservas y citas</a
+							>
+						</li>
+					</ul>
+				</li>
 
-        <li class='navigation__container-menu-itemsMap'>
-          <a href='/#contact' class='navigation__container-menu-itemsMap-link'>contacto</a>
-        </li>
+				<li class='navigation__container-menu-itemsMap'>
+					<a href='/#contact' class='navigation__container-menu-itemsMap-link'>contacto</a>
+				</li>
 
-        <li class='navigation__container-menu-itemsMap'>
-          <a href='/#projects' class='navigation__container-menu-itemsMap-link'>proyectos</a>
-        </li>
+				<li class='navigation__container-menu-itemsMap'>
+					<a href='/#projects' class='navigation__container-menu-itemsMap-link'>proyectos</a>
+				</li>
 
-        <li class='navigation__container-menu-itemsMap'>
-          <a href='/#about' class='navigation__container-menu-itemsMap-link'>sobre nosotras</a>
-        </li>
-      </ul>
+				<li class='navigation__container-menu-itemsMap'>
+					<a href='/#about' class='navigation__container-menu-itemsMap-link'>sobre nosotras</a>
+				</li>
+			</ul>
 
-      <div class='button-header'>
-        <Cta />
-      </div>
-    </div>
-  </nav>
+			<div class='button-header'>
+				<Cta />
+			</div>
+		</div>
+	</nav>
 </header>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const menuItemsWithSubmenus = document.querySelectorAll('.navigation__container-menu-itemsMap');
+	document.addEventListener('DOMContentLoaded', function () {
+		const menuItemsWithSubmenus = document.querySelectorAll('.navigation__container-menu-itemsMap');
 
-    menuItemsWithSubmenus.forEach((item) => {
-      const submenu = item.querySelector('.navigation__container-submenu');
-      const arrowIcon = item.querySelector('.navigation__container-menu-itemsMap-arrow');
+		menuItemsWithSubmenus.forEach((item) => {
+			const submenu = item.querySelector('.navigation__container-submenu');
+			const arrowIcon = item.querySelector('.navigation__container-menu-itemsMap-arrow');
 
-      if (submenu && arrowIcon) {
-        // Al hacer clic en el enlace principal, abre o cierra el submenú
-        const onclick = (event) => {
-          event.preventDefault(); // Evita que el enlace navegue si hay un submenú
-          event.stopPropagation(); // Evita que el evento se propague a los elementos padres
-          console.log('click');
-          // Alterna el submenú
-          submenu.classList.toggle('open');
+			if (submenu && arrowIcon) {
+				// Al hacer clic en el enlace principal, abre o cierra el submenú
+				const onclick = (event) => {
+					event.preventDefault(); // Evita que el enlace navegue si hay un submenú
+					event.stopPropagation(); // Evita que el evento se propague a los elementos padres
+					console.log('click');
+					// Alterna el submenú
+					submenu.classList.toggle('open');
 
-          // Ajusta la rotación del icono de flecha
-          if (submenu.classList.contains('open')) {
-            arrowIcon.style.transform = 'rotate(180deg)';
-          } else {
-            arrowIcon.style.transform = 'rotate(0deg)';
-          }
-        };
-        item.querySelector('.navigation__container-menu-itemsMap-link').addEventListener('click', onclick);
+					// Ajusta la rotación del icono de flecha
+					if (submenu.classList.contains('open')) {
+						arrowIcon.style.transform = 'rotate(180deg)';
+					} else {
+						arrowIcon.style.transform = 'rotate(0deg)';
+					}
+				};
+				item.querySelector('.navigation__container-menu-itemsMap-link').addEventListener('click', onclick);
+			}
+		});
 
-      }
-    });
-
-    // Cierra cualquier submenú abierto al hacer clic fuera del menú
-    document.addEventListener('click', function (event) {
-      const openSubmenus = document.querySelectorAll('.navigation__container-submenu.open');
-      openSubmenus.forEach((submenu) => {
-        //console.log(!submenu.parentElement.contains(event.target));
-        if (submenu.contains(event.target) || !submenu.parentElement.contains(event.target) ) {
-          submenu.classList.remove('open');
-          const arrowIcon = submenu.parentElement.querySelector('.navigation__container-menu-itemsMap-arrow');
-          if (arrowIcon) {
-            arrowIcon.style.transform = 'rotate(0deg)';
-          }
-        }
-      });
-    });
-  });
+		// Cierra cualquier submenú abierto al hacer clic fuera del menú
+		document.addEventListener('click', function (event) {
+			const openSubmenus = document.querySelectorAll('.navigation__container-submenu.open');
+			openSubmenus.forEach((submenu) => {
+				//console.log(!submenu.parentElement.contains(event.target));
+				if (submenu.contains(event.target) || !submenu.parentElement.contains(event.target)) {
+					submenu.classList.remove('open');
+					const arrowIcon = submenu.parentElement.querySelector('.navigation__container-menu-itemsMap-arrow');
+					if (arrowIcon) {
+						arrowIcon.style.transform = 'rotate(0deg)';
+					}
+				}
+			});
+		});
+	});
 </script>

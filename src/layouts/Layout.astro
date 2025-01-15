@@ -3,29 +3,30 @@ import '../styles/global.scss';
 import '@fontsource/ropa-sans';
 import '@fontsource/konkhmer-sleokchher';
 import '@fontsource-variable/raleway';
+// import { ClientRouter } from 'astro:transitions';
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang='es'>
 	<head>
-		<meta charset="UTF-8" />
+		<meta charset='UTF-8' />
 		<meta name='description' content='AstracodeLAB | Diseño y desarrollo web' />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
+		<meta name='viewport' content='width=device-width' />
+		<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+		<meta name='generator' content={Astro.generator} />
 		<title>Astro Basics</title>
 
-		
+		<!-- <ClientRouter /> -->
 	</head>
-	<body>
+	<body class='fade-in'>
 		<slot />
 	</body>
 </html>
 
 <style is:global>
-	 :root {
+	:root {
 		font-family: sans-serif;
-	} 
+	}
 	html {
 		scroll-behavior: smooth;
 	}
@@ -33,17 +34,31 @@ import '@fontsource-variable/raleway';
 		background-image: url('../images/Astra2.png');
 		background-size: 100vw 80vh;
 		background-position: top;
-		background-repeat: no-repeat;		
+		background-repeat: no-repeat;
 		background-color: #fdfcff;
 		overflow-x: hidden;
 		@media (min-width: 768px) {
-			background-size: 100vw 70vh;                
-             }
+			background-size: 100vw 70vh;
+		}
 		@media (min-width: 1024px) {
-			background-size: 100vw 85vh;                
-             }
-			 @media (min-width: 1440px) {
-				background-size: 100vw 95vh;                 
-             }
+			background-size: 100vw 85vh;
+		}
+		@media (min-width: 1440px) {
+			background-size: 100vw 95vh;
+		}
+	}
+
+	body.fade-in {
+		opacity: 0;
+		animation: fade-in 0.8s ease-out forwards;
+	}
+
+	@keyframes fade-in {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
 	}
 </style>
