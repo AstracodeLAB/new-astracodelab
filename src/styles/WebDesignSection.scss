@@ -22,7 +22,7 @@
 	&__container {
 		text-align: center;
 		padding-top: 30px;
-		box-shadow: $shadow;
+		//box-shadow: $shadow;
 
 		&-title {
 			font-family: map.get($h2, 'font-family');

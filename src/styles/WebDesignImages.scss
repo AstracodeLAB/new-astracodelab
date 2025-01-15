@@ -55,6 +55,14 @@
 		padding-bottom: 10px;
 		font-family: 'Konkhmer Sleokchher';
 		font-size: 20px;
+		@media (min-width: $bp-m) {
+			font-size: 24px;
+			
+		 }
+		 @media (min-width: $bp-l) {
+			font-size: 30px;
+			
+		 }
 	}
 
 	&__arrow {

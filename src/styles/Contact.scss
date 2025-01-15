@@ -144,7 +144,13 @@
 		box-shadow: $shadow;
 
 		&:hover {
-			background-color: $blueDark;
-		}
+            background-color: $green; 
+            color: $cta;
+        }
+        &:active {
+            background-color: $purple;
+            color: $cta;
+            
+        }
 	}
 }
