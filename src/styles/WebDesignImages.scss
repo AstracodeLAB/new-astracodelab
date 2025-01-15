@@ -4,8 +4,16 @@
 	display: flex;
 	justify-content: space-between;
 	padding: 0 16px;
-	max-width: 1440px;
-			
+	max-width: 1024px;
+	@media (min-width: $bp-l) {
+		padding: 0 50px;
+		
+		
+	 }	
+	 @media (min-width: $bp-xl) {
+		
+		max-width: 1440px;
+	 }		
 
 	&__item {
 		position: relative;

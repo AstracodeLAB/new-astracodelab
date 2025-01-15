@@ -28,9 +28,22 @@
             @media (min-width: $bp-l) {
                 
                 font-size: map.get($h2-desktop-l, "font-size");
-                padding-left: 96px;
-                text-align: start;
-                padding-left: 96px;
+                display: flex;
+                justify-content: center; 
+            }
+            &-h2{
+                @media (min-width: $bp-l) {
+					padding: 0 50px;
+					display: flex;
+					width: 1024px;
+				
+				}
+				@media (min-width: $bp-xl) {
+					
+					display: flex;
+					width: 1440px;
+				
+				}
             }
             
     }
@@ -45,6 +58,7 @@
             
             flex-direction: row;
             align-items: stretch;
+           width: 100%;
             
          }
 
@@ -62,16 +76,18 @@
             box-shadow: $shadow;
             @media (min-width: $bp-m) {
                 flex: 1; 
-                padding: 20px 96px 20px 96px;
-               // border-top-right-radius: 25px;
-               // border-bottom-right-radius: 25px;
+                padding: 20px 50px;
+               
             }
 
             @media (min-width: $bp-l) {
                 flex: 1; 
-                padding: 20px 20px 20px 96px;
+                display: flex;
+                align-items: end;
+                flex-direction: column;
                 border-top-right-radius: 10px;
-            border-bottom-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+                padding: 20px 0;
             }
             
 
@@ -89,7 +105,19 @@
                 }
                 @media (min-width: $bp-l) {
                     text-align: start;
-                    width: 100%;
+                    width: 450px;
+
+                }
+                @media (min-width: $bp-xl) {                    
+                    width: 657px;
+                }
+                
+                &-h3 {
+                    @media (min-width: $bp-l) {
+                        text-align: start;
+  
+                    }
+                    
                 }
             }
             &-paragraph{
@@ -108,14 +136,15 @@
                     line-height: map.get($paragraph-desktop, "line-height");
                     text-align: start;
                 }
-                @media (min-width: $bp-m) {
-                    font-family: map.get($paragraph-desktop, "font-family");
-                    font-size: map.get($paragraph-desktop, "font-size");
-                    color: map.get($paragraph-desktop, "color");
-                    line-height: map.get($paragraph-desktop, "line-height");
-                    text-align: start;
-                    padding: 0;
-                    
+                @media (min-width: $bp-l) {
+                    //padding: 20px 50px;
+                    max-width: 450px;
+                    padding: 0px 16px 0 0px;
+                }
+                @media (min-width: $bp-xl) {
+                    //padding: 20px 50px;
+                    max-width: 657px;
+                    padding-right: 50px;
                 }
             }
         }
@@ -133,15 +162,18 @@
             box-shadow: $shadow;
             @media (min-width: $bp-m) {
                 flex: 1; 
-                padding: 20px 96px 20px 96px;
+                padding: 20px 50px;
                 
             }
 
             @media (min-width: $bp-l) {
                 flex: 1; 
-                padding: 20px 96px 20px 20px;
+                display: flex;
+                align-items: start;
+                flex-direction: column;
                 border-top-left-radius: 10px;
                 border-bottom-left-radius: 10px;
+                padding: 20px 0;
             }
             
 
@@ -158,12 +190,30 @@
                     font-weight: map.get($h3-desktop, "font-weight") ;
                 }
                 @media (min-width: $bp-l) {
-                    font-family: map.get($h3-desktop, "font-family");
-                    font-size: map.get($h3-desktop, "font-size");
-                    color: map.get($h3-desktop, "color");
-                    font-weight: map.get($h3-desktop, "font-weight") ;
                     text-align: start;
-                    width: 100%;
+                    width: 450px;
+                    padding-left: 50px;
+                    
+                }
+                @media (min-width: $bp-l) {
+                    
+                    width: 657px;
+                    
+                    
+                }
+                
+                &-h3 {
+                    @media (min-width: $bp-l) {
+                        text-align: start;
+                        width: 450px;
+                        //padding-right: 50px;
+                        
+                    }
+                    @media (min-width: $bp-xl) {
+                        
+                        //padding-left: 50px;
+                        
+                    }
                 }
             }
             &-paragraph{
@@ -182,6 +232,16 @@
                     line-height: map.get($paragraph-desktop, "line-height");
                     text-align: start;
                     padding: 0;
+                }
+                @media (min-width: $bp-l) {
+                    //padding: 20px 50px;
+                    width: 450px;
+                    padding-left: 50px;
+                }
+                @media (min-width: $bp-xl) {
+                    //padding: 20px 50px;
+                    width: 657px;
+                    padding-left: 50px;
                 }
             }
         }

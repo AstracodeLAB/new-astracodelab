@@ -11,6 +11,11 @@
 		padding-left: 10px;
 		padding-right: 10px;
 	}
+	@media (min-width: $bp-l) {
+		display: flex;
+		flex-direction: column;
+	}
+	
 
 	&__text {
 		font-family: map.get($paragraph, 'font-family');
@@ -31,7 +36,12 @@
 	border-radius: 50px;
 	width: 100%;
 	box-shadow: $shadow;
-
+	@media (min-width: $bp-l) {
+		max-width: 1150px;
+	}
+	@media (min-width: $bp-xl) {
+		max-width: 1640px;
+	}
 	&__container {
 		margin: 0 auto;
 		display: flex;
