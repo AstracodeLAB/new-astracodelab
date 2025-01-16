@@ -5,7 +5,6 @@
 	justify-content: space-between;
 	padding: 0 16px;
 	max-width: 1440px;
-			
 
 	&__item {
 		position: relative;
@@ -57,16 +56,30 @@
 		font-size: 20px;
 		@media (min-width: $bp-m) {
 			font-size: 24px;
-			
-		 }
-		 @media (min-width: $bp-l) {
+		}
+		@media (min-width: $bp-l) {
 			font-size: 30px;
-			
-		 }
+		}
 	}
 
 	&__arrow {
 		padding-right: 10px;
 		padding-bottom: 10px;
+	}
+}
+
+.section-animation {
+	opacity: 0;
+	animation: slide-in 1.5s ease-out forwards;
+}
+
+@keyframes slide-in {
+	from {
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0);
+		opacity: 1;
 	}
 }

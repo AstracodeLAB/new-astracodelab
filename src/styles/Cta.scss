@@ -1,11 +1,38 @@
 @use './variables.scss' as *;
 
 .button-contact {
-    color: $green;
-    text-transform: uppercase;
-    transition: transform 0.3s ease, color 0.3s ease;
+	color: $green;
+	text-transform: uppercase;
+	transition: transform 0.3s ease, color 0.3s ease;
 
-    &:hover {
-        transform: scale(1.2); 
-    }
+	position: fixed;
+	top: 37px;
+	z-index: 9999;
+
+	animation: bgcolor;
+	animation-timeline: scroll();
+	animation-range: 0 10%;
+	animation-fill-mode: both;
+
+	@media (min-width: $bp-l) {
+		top: 55px;
+	}
+
+	&:hover {
+		transform: scale(1.2);
+	}
+}
+
+@keyframes bgcolor {
+	from {
+		background-color: transparent;
+	}
+
+	to {
+		background-color: $green;
+		color: $blueDark;
+		border-radius: 50px;
+		// border: 1px solid $green;
+		padding: 5px 10px;
+	}
 }

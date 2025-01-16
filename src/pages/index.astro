@@ -16,21 +16,17 @@ import Footer from '../layouts/partials/Footer.astro';
 
 <style>
 	.page-container {
-		position: relative;
-		/* margin-top: 80px; Ajusta según la altura del header */
-		overflow: hidden; /* Evita desbordamientos durante la animación */
-		animation: slide-in 0.8s ease-out forwards;
+		opacity: 0;
+		animation: fade-in 0.8s ease-out forwards;
 	}
 
-	/* Animación Slide-in */
-	@keyframes slide-in {
+	/* Animación fade-in */
+	@keyframes fade-in {
 		from {
-			transform: translateX(100%); /* Comienza fuera de la pantalla */
-			opacity: 0; /* Transparente al inicio */
+			opacity: 0;
 		}
 		to {
-			transform: translateX(0); /* Vuelve a su posición */
-			opacity: 1; /* Totalmente visible */
+			opacity: 1;
 		}
 	}
 </style>
