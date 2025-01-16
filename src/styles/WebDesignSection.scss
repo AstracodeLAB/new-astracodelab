@@ -94,7 +94,7 @@
 				
 			}
 			@media (min-width: $bp-l) {
-				font-size: map.get($paragraph-desktop, 'font-size');
+				font-size: 1.3rem;
 				line-height: map.get($paragraph-desktop, 'line-height');
 				text-align: start;
 				padding: 20 0px;

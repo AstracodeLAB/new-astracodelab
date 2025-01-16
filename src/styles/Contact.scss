@@ -10,7 +10,7 @@
 	align-items: center;
 	width: 100%;
 	@media (min-width: $bp-l) {
-		padding-top: 50px;
+		padding-top: 80px;
 	}
 
 	&__title {
@@ -87,7 +87,7 @@
 					line-height: map.get($paragraph-desktop, line-height);
 				}
 				@media (min-width: $bp-xl) {
-					font-size: map.get($paragraph-desktop-xl, font-size);
+					font-size: 1.3rem;
 				}
 			}
 		}

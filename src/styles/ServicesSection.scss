@@ -36,7 +36,7 @@
                 display: flex;
 				justify-content: center;
 				margin: 0;
-                padding-top: 50px;
+                padding-top: 80px;
                 
              }
             &-h2{
@@ -208,6 +208,9 @@
                             text-align: center;
                             padding: 0 5px 0 0;
                         }
+                        @media (min-width: $bp-xl) {
+                            font-size: 1.3rem;
+                         }
                     }
         }
 

@@ -8,7 +8,7 @@
     align-items: center;
     padding-top: 30px;
     @media (min-width: $bp-l) {
-       padding-top: 50px;
+       padding-top: 80px;
     }
 
     &__title{
@@ -142,7 +142,7 @@
                     padding: 0px 16px 0 0px;
                 }
                 @media (min-width: $bp-xl) {
-                    //padding: 20px 50px;
+                    font-size: 1.3rem;
                     max-width: 657px;
                     padding-right: 50px;
                 }
@@ -197,7 +197,7 @@
                 }
                 @media (min-width: $bp-l) {
                     
-                    width: 657px;
+                   // width: 657px;
                     
                     
                 }
@@ -239,7 +239,7 @@
                     padding-left: 50px;
                 }
                 @media (min-width: $bp-xl) {
-                    //padding: 20px 50px;
+                    font-size: 1.3rem;
                     width: 657px;
                     padding-left: 50px;
                 }

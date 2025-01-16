@@ -220,7 +220,10 @@
 				font-size: map.get($paragraph-desktop, 'font-size');
 				line-height: map.get($paragraph-desktop, 'line-heigth');
 				margin-bottom: 25px;
-				//max-width: 600px;
+				
+				@media (min-width: $bp-xl) {
+                 font-size: 1.3rem;
+				 }
 			}
 
 			&-button {
