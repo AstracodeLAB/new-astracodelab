@@ -74,3 +74,24 @@ const { icons } = Astro.props;
 		</ul>
 	</div>
 </div>
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const cards = document.querySelectorAll('.services__container-cards-item');
+
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add('visible');
+						observer.unobserve(entry.target); // Deja de observar una vez que es visible
+					}
+				});
+			},
+			{
+				threshold: 0.2, // Se activa cuando el 20% del elemento es visible
+			}
+		);
+
+		cards.forEach((card) => observer.observe(card));
+	});
+</script>

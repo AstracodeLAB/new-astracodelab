@@ -68,14 +68,14 @@
 			padding: 20px 0 20px 0;
 			box-shadow: $shadow;
 
-			view-timeline-name: --section;
-			view-timeline-axis: block;
+			// view-timeline-name: --section;
+			// view-timeline-axis: block;
 
-			animation-timeline: --section;
-			animation-name: slide-in;
+			// animation-timeline: --section;
+			// animation-name: slide-in;
 
-			animation-range: entry 25% cover 50%;
-			animation-fill-mode: both;
+			// animation-range: entry 25% cover 50%;
+			// animation-fill-mode: both;
 
 			@media (min-width: $bp-m) {
 				flex: 1;
@@ -158,14 +158,14 @@
 			padding: 20px 0 20px 0;
 			box-shadow: $shadow;
 
-			view-timeline-name: --section;
-			view-timeline-axis: block;
+			// view-timeline-name: --section;
+			// view-timeline-axis: block;
 
-			animation-timeline: --section;
-			animation-name: slide-out;
+			// animation-timeline: --section;
+			// animation-name: slide-out;
 
-			animation-range: entry 25% cover 50%;
-			animation-fill-mode: both;
+			// animation-range: entry 25% cover 50%;
+			// animation-fill-mode: both;
 
 			@media (min-width: $bp-m) {
 				flex: 1;
@@ -249,7 +249,29 @@
 	}
 }
 
-@keyframes slide-in {
+// @keyframes slide-in {
+// 	from {
+// 		transform: translateX(-100%);
+// 		opacity: 0;
+// 	}
+// 	to {
+// 		transform: translateX(0);
+// 		opacity: 1;
+// 	}
+// }
+
+// @keyframes slide-out {
+// 	from {
+// 		transform: translateX(100%);
+// 		opacity: 0;
+// 	}
+// 	to {
+// 		transform: translateX(0);
+// 		opacity: 1;
+// 	}
+// }
+
+@keyframes slide-in-left {
 	from {
 		transform: translateX(-100%);
 		opacity: 0;
@@ -260,7 +282,7 @@
 	}
 }
 
-@keyframes slide-out {
+@keyframes slide-in-right {
 	from {
 		transform: translateX(100%);
 		opacity: 0;
@@ -269,4 +291,19 @@
 		transform: translateX(0);
 		opacity: 1;
 	}
+}
+
+.aboutus__container-mision,
+.aboutus__container-compromise {
+	opacity: 0; // Ocultas inicialmente
+	animation-duration: 1s;
+	animation-fill-mode: forwards; // Mantener el estado final de la animación
+}
+
+.aboutus__container-mision.animate {
+	animation-name: slide-in-left;
+}
+
+.aboutus__container-compromise.animate {
+	animation-name: slide-in-right;
 }
