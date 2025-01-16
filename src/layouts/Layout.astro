@@ -1,9 +1,9 @@
 ---
+import Header from './partials/Header.astro';
 import '../styles/global.scss';
 import '@fontsource/ropa-sans';
 import '@fontsource/konkhmer-sleokchher';
 import '@fontsource-variable/raleway';
-// import { ClientRouter } from 'astro:transitions';
 ---
 
 <!doctype html>
@@ -15,10 +15,10 @@ import '@fontsource-variable/raleway';
 		<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
 		<meta name='generator' content={Astro.generator} />
 		<title>Astro Basics</title>
-
-		<!-- <ClientRouter /> -->
 	</head>
 	<body>
+		<!-- <div id='preloader'></div> -->
+		<Header />
 		<slot />
 	</body>
 </html>
@@ -37,15 +37,41 @@ import '@fontsource-variable/raleway';
 		background-repeat: no-repeat;
 		background-color: #fdfcff;
 		overflow-x: hidden;
-		
+
 		@media (min-width: 768px) {
 			background-size: 100vw 70vh;
 		}
 		@media (min-width: 1024px) {
-			background-size: 100vw 85vh;                
-             }
-			 @media (min-width: 1440px) {
-				background-size: 100vw 80vh;                 
-             }
+			background-size: 100vw 85vh;
+		}
+		@media (min-width: 1440px) {
+			background-size: 100vw 80vh;
+		}
 	}
+	/* 
+	#preloader {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: #fdfcff;
+		z-index: 2000;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		opacity: 1;
+		transition: opacity 0.5s ease-out;
+	}
+
+	body.loaded #preloader {
+		opacity: 0;
+		pointer-events: none;
+	} */
 </style>
+/* <script>
+	// Elimina el preloader cuando todo el contenido esté listo
+	window.addEventListener('load', () => {
+		document.body.classList.add('loaded');
+	});
+</script> */
