@@ -33,9 +33,25 @@
                 font-family: map.get($h2-desktop-l, "font-family");
                 font-size: map.get($h2-desktop-l, "font-size");
                 color: map.get($h2-desktop-l, "color");
-                text-align: start;
-                padding-left: 96px;
-                padding-top: 50px;
+                display: flex;
+				justify-content: center;
+				margin: 0;
+                padding-top: 80px;
+                
+             }
+            &-h2{
+                @media (min-width: $bp-l) {
+					padding: 0 50px;
+					display: flex;
+					width: 1024px;
+				
+				}
+				@media (min-width: $bp-xl) {
+					padding: 0;
+					display: flex;
+					width: 1440px;
+				
+				}
              }
     }
     &__container{
@@ -64,12 +80,19 @@
             justify-content: center;
             align-items: center;
             gap: 10px 10px;
-            padding: 20px 0 20px 0;
+            padding-top: 20px;
             flex-wrap: wrap;
             background-size: 100vw;
             align-content: center;
             @media (min-width: $bp-l) {
-                padding: 20px 16px 20px 16px;
+                padding: 20px 50px 0px 50px;
+                flex-direction: row;
+                max-width: 1024px;
+                gap: 24px;
+             
+            }
+            @media (min-width: $bp-xl) {
+                padding: 20px 0px 0px 0px;
                 flex-direction: row;
                 max-width: 1440px;
                 gap: 24px;
@@ -97,19 +120,19 @@
                 @media (min-width: $bp-l) {
                     width: 45%; /* 2 cajas por fila en pantallas grandes */
                     max-width: 800px; /* Limita el ancho máximo */
-                    min-height: 280px; /* Ajusta la altura mínima en pantallas grandes */
+                    min-height: 300px; /* Ajusta la altura mínima en pantallas grandes */
                     
-                    flex-direction: row;
+                    //flex-direction: row;
                     gap: 10px;
                     display: flex;
-                    align-items: start;
+                    align-items: center;
                     padding: 20px;
                     
                 }
                 @media (min-width: $bp-xl) {
                     
                     padding: 20px 10px 20px 10px;
-                    min-height: 200px; /* Ajusta la altura mínima en pantallas grandes */
+                    //min-height: 200px; /* Ajusta la altura mínima en pantallas grandes */
                     
                 }
                 &-icon{
@@ -151,10 +174,17 @@
                          }
                          @media (min-width: $bp-l) {
                             font-family: map.get($h3-desktop, "font-family");
-                            font-size: map.get($h3-desktop, "font-size");
+                            font-size: 1.6rem;
                             color: map.get($h3-desktop, "color");
                             font-weight: map.get($h3-desktop, "font-weight");
-                            text-align: start;
+                            min-height: 80px;
+                            
+                            
+                         }
+                         @media (min-width: $bp-xl) {
+                            
+                            min-height: 40px;
+                            
                             
                          }
                          
@@ -175,9 +205,12 @@
                             font-size: map.get($paragraph-desktop, "font-size");
                             color: map.get($paragraph-desktop, "color");
                             line-height: map.get($paragraph-desktop, "line-height");
-                            text-align: start;
+                            text-align: center;
                             padding: 0 5px 0 0;
                         }
+                        @media (min-width: $bp-xl) {
+                            font-size: 1.3rem;
+                         }
                     }
         }
 

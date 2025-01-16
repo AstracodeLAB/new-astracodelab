@@ -26,8 +26,29 @@ import Qjubiloso from '../../images/qjubiloso.png';
 			Web minimalista creada para una escritora y diseñada para destacar sus obras, con un enfoque en la claridad y la
 			elegancia para resaltar su estilo único.
 		</p>
-		<a href="https://qjubiloso.es/es/" class="projects-card__button" onclick="event.stopPropagation()" target="_blank">ver</a>
+		<a href="https://qjubiloso.es/es/" class="projects-card-desktop__container-content-button" onclick="event.stopPropagation()" target="_blank">ver</a>
 
+		<!-- Evitar que el clic cierre el overlay -->
+	</div>
+</div>
+<div class='projects-card'>
+	<img class='projects-card__image' src={RestaurantImage.src} alt='Web de maquilladora' />
+	<!-- Triángulo morado con flecha -->
+	<div class='projects-card__corner' onclick='toggleOverlay(event)'>
+		<img src={ArrowIcon.src} alt='Flecha' class='projects-card__arrow' />
+	</div>
+	<!-- Overlay morado -->
+	<div class='projects-card__overlay'>
+		<div class='projects-card__pills'>
+			<p class='projects-card__pills-pill'>Web de servicios</p>
+			<p class='projects-card__pills-pill'>Diseño UI/UX</p>
+			<p class='projects-card__pills-pill'>Restaurante</p>
+		</div>
+		<p class='projects-card__text'>
+			Sitio web intuitivo para un restautante, que incluye menú digital, sistema de reservas y un formulario de contacto
+			para mejorar la experiencia del cliente y la gestión del restaurante.
+		</p>
+		<a href="https://restaurant-frontend-gemy.onrender.com/" class="projects-card-desktop__container-content-button" onclick="event.stopPropagation()" target="_blank">ver</a>
 		<!-- Evitar que el clic cierre el overlay -->
 	</div>
 </div>
@@ -49,33 +70,13 @@ import Qjubiloso from '../../images/qjubiloso.png';
 			Página web diseñada para mostrar el portfolio de una maquilladora, ofrecer servicios y permitir a los clientes
 			reservar citas fácilmente a través de un calendario interactivo.
 		</p>
-		<a href="https://jazzy-sawine-757ded.netlify.app/" class="projects-card__button" onclick="event.stopPropagation()" target="_blank">ver</a>
+		<a href="https://jazzy-sawine-757ded.netlify.app/" class="projects-card-desktop__container-content-button" onclick="event.stopPropagation()" target="_blank">ver</a>
 		<!-- Evitar que el clic cierre el overlay -->
 	</div>
 </div>
 
 <!-- Card 2 -->
-<div class='projects-card'>
-	<img class='projects-card__image' src={RestaurantImage.src} alt='Web de maquilladora' />
-	<!-- Triángulo morado con flecha -->
-	<div class='projects-card__corner' onclick='toggleOverlay(event)'>
-		<img src={ArrowIcon.src} alt='Flecha' class='projects-card__arrow' />
-	</div>
-	<!-- Overlay morado -->
-	<div class='projects-card__overlay'>
-		<div class='projects-card__pills'>
-			<p class='projects-card__pills-pill'>Web de servicios</p>
-			<p class='projects-card__pills-pill'>Diseño UI/UX</p>
-			<p class='projects-card__pills-pill'>Restaurante</p>
-		</div>
-		<p class='projects-card__text'>
-			Sitio web intuitivo para un restautante, que incluye menú digital, sistema de reservas y un formulario de contacto
-			para mejorar la experiencia del cliente y la gestión del restaurante.
-		</p>
-		<a href="https://restaurant-frontend-gemy.onrender.com/" class="projects-card__button" onclick="event.stopPropagation()" target="_blank">ver</a>
-		<!-- Evitar que el clic cierre el overlay -->
-	</div>
-</div>
+
 
 
 
@@ -94,8 +95,24 @@ import Qjubiloso from '../../images/qjubiloso.png';
 				Web minimalista creada para una escritora y diseñada para destacar sus obras, con un enfoque en la claridad y la
 				elegancia para resaltar su estilo único.
 			</p>
-			<a href="https://qjubiloso.es/es/" class="projects-card__button" onclick="event.stopPropagation()" target="_blank">ver</a>
+			<a href="https://qjubiloso.es/es/" class="projects-card-desktop__container-content-button" onclick="event.stopPropagation()" target="_blank">ver</a>
 		</div>
+	</div>
+
+	<div class='projects-card-desktop__container'>
+		<div class='projects-card-desktop__container-content-left'>
+			<div class='projects-card-desktop__container-content-pills'>
+				<p class='projects-card-desktop__container-content-pills-pill--dark'>Web de servicios</p>
+				<p class='projects-card-desktop__container-content-pills-pill--dark'>Diseño UI/UX</p>
+				<p class='projects-card-desktop__container-content-pills-pill--dark'>Restaurante</p>
+			</div>
+			<p class='projects-card-desktop__container-content-text'>
+				Sitio web intuitivo para un restautante, que incluye menú digital, sistema de reservas y un formulario de
+				contacto para mejorar la experiencia del cliente y la gestión del restaurante.
+			</p>
+			<a href="https://restaurant-frontend-gemy.onrender.com/" class="projects-card-desktop__container-content-button" onclick="event.stopPropagation()" target="_blank">ver</a>
+		</div>
+		<img class='projects-card-desktop__container-image-right' src={RestaurantImage.src} alt='Web de maquilladora' />
 	</div>
 	<!-- Card 1 -->
 	<div class='projects-card-desktop__container'>
@@ -110,26 +127,12 @@ import Qjubiloso from '../../images/qjubiloso.png';
 				Página web diseñada para mostrar el portfolio de una maquilladora, ofrecer servicios y permitir a los clientes
 				reservar citas fácilmente a través de un calendario interactivo.
 			</p>
-			<a href="https://jazzy-sawine-757ded.netlify.app/" class="projects-card__button" onclick="event.stopPropagation()" target="_blank">ver</a>
+			<a href="https://jazzy-sawine-757ded.netlify.app/" class="projects-card-desktop__container-content-button" onclick="event.stopPropagation()" target="_blank">ver</a>
 		</div>
 	</div>
 
 	<!-- Card 2 -->
-	<div class='projects-card-desktop__container'>
-		<div class='projects-card-desktop__container-content-left'>
-			<div class='projects-card-desktop__container-content-pills'>
-				<p class='projects-card-desktop__container-content-pills-pill--dark'>Web de servicios</p>
-				<p class='projects-card-desktop__container-content-pills-pill--dark'>Diseño UI/UX</p>
-				<p class='projects-card-desktop__container-content-pills-pill--dark'>Restaurante</p>
-			</div>
-			<p class='projects-card-desktop__container-content-text'>
-				Sitio web intuitivo para un restautante, que incluye menú digital, sistema de reservas y un formulario de
-				contacto para mejorar la experiencia del cliente y la gestión del restaurante.
-			</p>
-			<a href="https://restaurant-frontend-gemy.onrender.com/" class="projects-card__button" onclick="event.stopPropagation()" target="_blank">ver</a>
-		</div>
-		<img class='projects-card-desktop__container-image-right' src={RestaurantImage.src} alt='Web de maquilladora' />
-	</div>
+	
 
 	
 </div>

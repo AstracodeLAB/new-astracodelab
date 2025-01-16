@@ -131,8 +131,12 @@
 	&__container {
 		display: flex;
 		height: 280px;
-		max-width: 1440px;
+		max-width: 1024px;
 		justify-content: center;
+		@media (min-width: $bp-xl) {
+			max-width: 1440px;
+			
+		}
 		&-image {
 			width: 50%;
 			height: auto;
