@@ -4,11 +4,9 @@ import RestaurantImage from '../../images/restauranteBanner.png';
 import WriterImage from '../../images/blogBanner.png';
 import ArrowIcon from '../components/icons/arrow.svg';
 import Qjubiloso from '../../images/qjubiloso.png';
-
 ---
 
-<!-- Tamaño movil --><!-- Card 1 -->
- <!-- Card 3 -->
+<!-- Tamaño movil --><!-- Card 1 --><!-- Card 3 -->
 <div class='projects-card'>
 	<img class='projects-card__image' src={Qjubiloso.src} alt='Web de maquilladora' />
 	<!-- Triángulo morado con flecha -->
@@ -26,7 +24,12 @@ import Qjubiloso from '../../images/qjubiloso.png';
 			Web minimalista creada para una escritora y diseñada para destacar sus obras, con un enfoque en la claridad y la
 			elegancia para resaltar su estilo único.
 		</p>
-		<a href="https://qjubiloso.es/es/" class="projects-card-desktop__container-content-button" onclick="event.stopPropagation()" target="_blank">ver</a>
+		<a
+			href='https://qjubiloso.es/es/'
+			class='projects-card-desktop__container-content-button'
+			onclick='event.stopPropagation()'
+			target='_blank'>ver</a
+		>
 
 		<!-- Evitar que el clic cierre el overlay -->
 	</div>
@@ -48,7 +51,12 @@ import Qjubiloso from '../../images/qjubiloso.png';
 			Sitio web intuitivo para un restautante, que incluye menú digital, sistema de reservas y un formulario de contacto
 			para mejorar la experiencia del cliente y la gestión del restaurante.
 		</p>
-		<a href="https://restaurant-frontend-gemy.onrender.com/" class="projects-card-desktop__container-content-button" onclick="event.stopPropagation()" target="_blank">ver</a>
+		<a
+			href='https://restaurant-frontend-gemy.onrender.com/'
+			class='projects-card-desktop__container-content-button'
+			onclick='event.stopPropagation()'
+			target='_blank'>ver</a
+		>
 		<!-- Evitar que el clic cierre el overlay -->
 	</div>
 </div>
@@ -70,15 +78,17 @@ import Qjubiloso from '../../images/qjubiloso.png';
 			Página web diseñada para mostrar el portfolio de una maquilladora, ofrecer servicios y permitir a los clientes
 			reservar citas fácilmente a través de un calendario interactivo.
 		</p>
-		<a href="https://jazzy-sawine-757ded.netlify.app/" class="projects-card-desktop__container-content-button" onclick="event.stopPropagation()" target="_blank">ver</a>
+		<a
+			href='https://jazzy-sawine-757ded.netlify.app/'
+			class='projects-card-desktop__container-content-button'
+			onclick='event.stopPropagation()'
+			target='_blank'>ver</a
+		>
 		<!-- Evitar que el clic cierre el overlay -->
 	</div>
 </div>
 
 <!-- Card 2 -->
-
-
-
 
 <!-- Tamaños tablet y desktop -->
 <div class='projects-card-desktop'>
@@ -95,7 +105,12 @@ import Qjubiloso from '../../images/qjubiloso.png';
 				Web minimalista creada para una escritora y diseñada para destacar sus obras, con un enfoque en la claridad y la
 				elegancia para resaltar su estilo único.
 			</p>
-			<a href="https://qjubiloso.es/es/" class="projects-card-desktop__container-content-button" onclick="event.stopPropagation()" target="_blank">ver</a>
+			<a
+				href='https://qjubiloso.es/es/'
+				class='projects-card-desktop__container-content-button'
+				onclick='event.stopPropagation()'
+				target='_blank'>ver</a
+			>
 		</div>
 	</div>
 
@@ -110,7 +125,12 @@ import Qjubiloso from '../../images/qjubiloso.png';
 				Sitio web intuitivo para un restautante, que incluye menú digital, sistema de reservas y un formulario de
 				contacto para mejorar la experiencia del cliente y la gestión del restaurante.
 			</p>
-			<a href="https://restaurant-frontend-gemy.onrender.com/" class="projects-card-desktop__container-content-button" onclick="event.stopPropagation()" target="_blank">ver</a>
+			<a
+				href='https://restaurant-frontend-gemy.onrender.com/'
+				class='projects-card-desktop__container-content-button'
+				onclick='event.stopPropagation()'
+				target='_blank'>ver</a
+			>
 		</div>
 		<img class='projects-card-desktop__container-image-right' src={RestaurantImage.src} alt='Web de maquilladora' />
 	</div>
@@ -127,42 +147,63 @@ import Qjubiloso from '../../images/qjubiloso.png';
 				Página web diseñada para mostrar el portfolio de una maquilladora, ofrecer servicios y permitir a los clientes
 				reservar citas fácilmente a través de un calendario interactivo.
 			</p>
-			<a href="https://jazzy-sawine-757ded.netlify.app/" class="projects-card-desktop__container-content-button" onclick="event.stopPropagation()" target="_blank">ver</a>
+			<a
+				href='https://jazzy-sawine-757ded.netlify.app/'
+				class='projects-card-desktop__container-content-button'
+				onclick='event.stopPropagation()'
+				target='_blank'>ver</a
+			>
 		</div>
 	</div>
 
 	<!-- Card 2 -->
-	
-
-	
 </div>
 
 <script>
-// Toggle del overlay al hacer clic en el corner
-document.querySelectorAll('.projects-card__corner').forEach((corner) => {
-  corner.addEventListener('click', (event) => {
-    // Aseguramos que currentTarget sea un Element
-    const card = (event.currentTarget as Element).closest('.projects-card');
-    if (card) {
-      const overlay = card.querySelector('.projects-card__overlay');
-      if (overlay) {
-        overlay.classList.toggle('projects-card__overlay--visible');
-      }
-    }
-  });
-});
+	// Toggle del overlay al hacer clic en el corner
+	document.querySelectorAll('.projects-card__corner').forEach((corner) => {
+		corner.addEventListener('click', (event) => {
+			// Aseguramos que currentTarget sea un Element
+			const card = (event.currentTarget as Element).closest('.projects-card');
+			if (card) {
+				const overlay = card.querySelector('.projects-card__overlay');
+				if (overlay) {
+					overlay.classList.toggle('projects-card__overlay--visible');
+				}
+			}
+		});
+	});
 
-// Cerrar el overlay si se hace clic fuera de él o dentro de él (excluyendo el botón "Ver")
-document.addEventListener('click', (event) => {
-  const overlay = document.querySelector('.projects-card__overlay--visible');
-  if (overlay) {
-    // Si el clic es dentro del overlay pero fuera del botón "Ver", lo cerramos
-    if (overlay.contains(event.target as Node) && !(event.target as Node).closest('.projects-card__button')) {
-      overlay.classList.remove('projects-card__overlay--visible');
-    }
-  }
-});
+	// Cerrar el overlay si se hace clic fuera de él o dentro de él (excluyendo el botón "Ver")
+	document.addEventListener('click', (event) => {
+		const overlay = document.querySelector('.projects-card__overlay--visible');
+		if (overlay) {
+			// Si el clic es dentro del overlay pero fuera del botón "Ver", lo cerramos
+			if (overlay.contains(event.target as Node) && !(event.target as Node).closest('.projects-card__button')) {
+				overlay.classList.remove('projects-card__overlay--visible');
+			}
+		}
+	});
 
+	//Animación border
+	document.addEventListener('DOMContentLoaded', () => {
+		const cards = document.querySelectorAll('.projects-card, .projects-card-desktop__container');
 
+		const observer = new IntersectionObserver(
+			(entries, observer) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting && !entry.target.classList.contains('animation-done')) {
+						entry.target.classList.add('animate-border', 'animation-done');
+						// Una vez añadida la clase, dejamos de observar este elemento
+						observer.unobserve(entry.target);
+					}
+				});
+			},
+			{
+				threshold: 0.1, // Observa cuando el 10% del elemento es visible.
+			}
+		);
 
+		cards.forEach((card) => observer.observe(card));
+	});
 </script>

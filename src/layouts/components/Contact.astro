@@ -2,7 +2,7 @@
 
 ---
 
-<section id="contact" class='contact'>
+<section id='contact' class='contact'>
 	<div class='contact__title'>
 		<h2 class='contact__title-h2'>CONTACTO</h2>
 	</div>
@@ -18,8 +18,8 @@
 				preguntas para conocerte mejor tu proyecto.
 			</p>
 		</div>
-		<div class="contact__container-data">
-			<form class="contact__container-data-form">
+		<div class='contact__container-data'>
+			<form class='contact__container-data-form'>
 				<input type='text' class='contact__input' placeholder='Nombre' required />
 				<input type='email' class='contact__input' placeholder='nombre@mail.com' required />
 				<textarea class='contact__textarea' placeholder='Deja tu mensaje...' required></textarea>
@@ -33,3 +33,22 @@
 		</div>
 	</div>
 </section>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const contactTitle = document.querySelector('.contact__title-h2');
+		const contactSection = document.getElementById('contact');
+
+		const handleScroll = () => {
+			const sectionPosition = contactSection.getBoundingClientRect().top;
+			const screenHeight = window.innerHeight;
+
+			if (sectionPosition <= screenHeight * 0.8) {
+				contactTitle.classList.add('animate-bounce');
+				window.removeEventListener('scroll', handleScroll); // Para evitar re-aplicar la animación
+			}
+		};
+
+		window.addEventListener('scroll', handleScroll);
+	});
+</script>
