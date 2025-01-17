@@ -266,5 +266,6 @@
 
 	&.animate-border {
 		animation: border-grow 1s ease-out;
+		border-radius: 10px;
 	}
 }
