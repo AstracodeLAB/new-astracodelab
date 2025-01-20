@@ -42,8 +42,7 @@
 			position: absolute;
 			top: 40%;
 			left: 50%;
-			transform: translate(35%, 55%) rotate(225deg); /* Rotación inicial */
-			transition: transform 0.3s ease-in-out;
+			animation: animationArrow 2s ease-in-out infinite;
 		}
 
 		// Ocultar cuando el overlay es visible
@@ -270,4 +269,17 @@
 			border-radius: 10px;
 		}
 	}
+}
+@keyframes animationArrow {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(-1);
+    transform: translate(35%, 55%) rotate(225deg);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
 }
