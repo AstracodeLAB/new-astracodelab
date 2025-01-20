@@ -15,7 +15,7 @@
     "@fontsource/ropa-sans": "^5.1.0",
     "astro": "^5.0.5",
     "photoswipe": "^5.4.4",
-    "sass": "^1.82.0",
+    "sass": "^1.83.4",
     "swiper": "^11.1.15"
   }
 }

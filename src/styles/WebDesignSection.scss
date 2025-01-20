@@ -107,9 +107,13 @@
 				max-width: 1024px;
 				
 				display: flex;
-				padding: 0 50px;
+				@media (min-width: $bp-m) {
+					
+					padding: 0 50px;
+				}
 				@media (min-width: $bp-xl) {
 					max-width: 1440px;
+					
 				}
 				
 			}
