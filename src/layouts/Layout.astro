@@ -4,6 +4,8 @@ import '../styles/global.scss';
 import '@fontsource/ropa-sans';
 import '@fontsource/konkhmer-sleokchher';
 import '@fontsource-variable/raleway';
+import raleway from '@fontsource-variable/raleway/files/raleway-latin-wght-normal.woff2?url';
+
 ---
 
 <!doctype html>
@@ -13,6 +15,7 @@ import '@fontsource-variable/raleway';
     <meta name='description' content='AstracodeLAB | Diseño y desarrollo web' />
     <meta name='viewport' content='width=device-width' />
     <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <link rel='preload' as='font' type='font/woff2' href={raleway} crossorigin='anonymous' />
     <meta name='generator' content={Astro.generator} />
     <title>Astracodelab | Diseño y desarrollo web</title>
   </head>
