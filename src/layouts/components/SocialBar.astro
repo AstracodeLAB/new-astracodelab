@@ -3,22 +3,23 @@ import Facebook from './icons/facebook.svg';
 import Linkedin from './icons/linkedin.svg';
 import Instagram from './icons/insta.svg';
 import Threads from './icons/threads.svg';
+import Image from 'astro/components/Image.astro';
 ---
 
 <div class='social-bar'>
 	<p class='social-bar__title'>@astracodelab</p>
 	<div class='social-bar__icons'>
 		<a href='https://www.facebook.com/astracodelab' class='social-bar__icons-icon' target='_blank'>
-			<img src={Facebook.src} alt='Facebook' />
+			<Image src={Facebook} alt='Facebook' />
 		</a>
 		<a href='https://www.linkedin.com/company/astracodelab/' class='social-bar__icons-icon' target='_blank'>
-			<img src={Linkedin.src} alt='LinkedIn' />
+			<Image src={Linkedin} alt='LinkedIn' />
 		</a>
 		<a href='https://www.instagram.com/astracodelab/' class='social-bar__icons-icon' target='_blank'>
-			<img src={Instagram.src} alt='Instagram' />
+			<Image src={Instagram} alt='Instagram' />
 		</a>
 		<a href='http://threads.net/@astracodelab' class='social-bar__icons-icon' target='_blank'>
-			<img src={Threads.src} alt='Threads' />
+			<Image src={Threads} alt='Threads' />
 		</a>
 	</div>
 </div>

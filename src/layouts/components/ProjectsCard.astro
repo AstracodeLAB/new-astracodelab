@@ -4,11 +4,12 @@ import RestaurantImage from '../../images/restauranteBanner.png';
 import WriterImage from '../../images/blogBanner.png';
 import ArrowIcon from '../components/icons/arrow.svg';
 import Qjubiloso from '../../images/qjubiloso.png';
+import Image from 'astro/components/Image.astro';
 ---
 
 <!-- Tamaño movil --><!-- Card 1 --><!-- Card 3 -->
 <div class='projects-card'>
-	<img class='projects-card__image' src={Qjubiloso.src} alt='Web de maquilladora' />
+	<Image class='projects-card__image' src={Qjubiloso} alt='Web de maquilladora' />
 	<!-- Triángulo morado con flecha -->
 	<div class='projects-card__corner' onclick='toggleOverlay(event)'>
 		<img src={ArrowIcon.src} alt='Flecha' class='projects-card__arrow' />
@@ -35,7 +36,7 @@ import Qjubiloso from '../../images/qjubiloso.png';
 	</div>
 </div>
 <div class='projects-card'>
-	<img class='projects-card__image' src={RestaurantImage.src} alt='Web de maquilladora' />
+	<Image class='projects-card__image' src={RestaurantImage} alt='Web de maquilladora' />
 	<!-- Triángulo morado con flecha -->
 	<div class='projects-card__corner' onclick='toggleOverlay(event)'>
 		<img src={ArrowIcon.src} alt='Flecha' class='projects-card__arrow' />
@@ -62,7 +63,7 @@ import Qjubiloso from '../../images/qjubiloso.png';
 </div>
 
 <div class='projects-card'>
-	<img class='projects-card__image' src={MakeupImage.src} alt='Web de maquilladora' />
+	<Image class='projects-card__image' src={MakeupImage} alt='Web de maquilladora' />
 	<!-- Triángulo morado con flecha -->
 	<div class='projects-card__corner' onclick='toggleOverlay(event)'>
 		<img src={ArrowIcon.src} alt='Flecha' class='projects-card__arrow' />
@@ -94,7 +95,7 @@ import Qjubiloso from '../../images/qjubiloso.png';
 <div class='projects-card-desktop'>
 	<!-- Card 3 -->
 	<div class='projects-card-desktop__container'>
-		<img class='projects-card-desktop__container-image' src={Qjubiloso.src} alt='Web de maquilladora' />
+		<Image class='projects-card-desktop__container-image' src={Qjubiloso} alt='Web de maquilladora' />
 		<div class='projects-card-desktop__container-content'>
 			<div class='projects-card-desktop__container-content-pills'>
 				<p class='projects-card-desktop__container-content-pills-pill'>Web de servicios</p>
@@ -132,11 +133,11 @@ import Qjubiloso from '../../images/qjubiloso.png';
 				target='_blank'>ver</a
 			>
 		</div>
-		<img class='projects-card-desktop__container-image-right' src={RestaurantImage.src} alt='Web de maquilladora' />
+		<Image class='projects-card-desktop__container-image-right' src={RestaurantImage} alt='Web de maquilladora' />
 	</div>
 	<!-- Card 1 -->
 	<div class='projects-card-desktop__container'>
-		<img class='projects-card-desktop__container-image' src={MakeupImage.src} alt='Web de maquilladora' />
+		<Image class='projects-card-desktop__container-image' src={MakeupImage} alt='Web de maquilladora' />
 		<div class='projects-card-desktop__container-content'>
 			<div class='projects-card-desktop__container-content-pills'>
 				<p class='projects-card-desktop__container-content-pills-pill'>Web de servicios</p>
