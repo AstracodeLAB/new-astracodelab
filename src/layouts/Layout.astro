@@ -8,46 +8,45 @@ import '@fontsource-variable/raleway';
 
 <!doctype html>
 <html lang='es'>
-	<head>
-		<meta charset='UTF-8' />
-		<meta name='description' content='AstracodeLAB | Diseño y desarrollo web' />
-		<meta name='viewport' content='width=device-width' />
-		<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
-		<meta name='generator' content={Astro.generator} />
-		<title>Astracodelab | Diseño y desarrollo web</title>
-	</head>
-	<body>
-		<!-- <div id='preloader'></div> -->
-		<Header />
-		<slot />
-	</body>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='description' content='AstracodeLAB | Diseño y desarrollo web' />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <meta name='generator' content={Astro.generator} />
+    <title>Astracodelab | Diseño y desarrollo web</title>
+  </head>
+  <body>
+    <!-- <div id='preloader'></div> -->
+    <Header />
+    <slot />
+  </body>
 </html>
 
 <style is:global>
-	:root {
-		font-family: sans-serif;
-	}
-	html {
-		scroll-behavior: smooth;
-	}
-	body {
-		background-image: url('../images/Astra2.png');
-		background-size: 100vw 80vh;
-		background-position: top;
-		background-repeat: no-repeat;
-		background-color: #fdfcff;
-		overflow-x: hidden;
+  :root {
+    font-family: 'Ropa Sans', sans-serif;
+    font-family: 'Raleway Variable', sans-serif;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-image: url('../images/Astra2.png');
+    background-size: 100vw 80vh;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-color: #fdfcff;
+    overflow-x: hidden;
 
-		@media (min-width: 768px) {
-			background-size: 100vw 70vh;
-		}
-		@media (min-width: 1024px) {
-			background-size: 100vw 85vh;
-		}
-		@media (min-width: 1440px) {
-			background-size: 100vw 80vh;
-		}
-	}
-
+    @media (min-width: 768px) {
+      background-size: 100vw 70vh;
+    }
+    @media (min-width: 1024px) {
+      background-size: 100vw 85vh;
+    }
+    @media (min-width: 1440px) {
+      background-size: 100vw 80vh;
+    }
+  }
 </style>
-
