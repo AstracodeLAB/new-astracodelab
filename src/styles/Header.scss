@@ -5,6 +5,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+    padding-top: 10px;
 
 	@media (min-width: $bp-m) {
 		padding-top: 20px;
@@ -141,24 +142,21 @@
 				position: relative;
 				display: flex;
 				flex-direction: column;
-				justify-content: center;
 				align-items: center;
 				@media (min-width: $bp-m) {
 					display: block;
 				}
 
 				&-link {
-					font-size: 0.8rem;
-					text-align: center;
+					font-size: 1.2rem;
 					color: rgb(0, 0, 0);
 					text-decoration: none;
 					display: flex;
 					flex-direction: row;
-					align-items: center;
 					justify-content: flex-start;
 					font-weight: 600;
 					text-transform: uppercase;
-					width: 100px;
+					width: 140px;
 
 					@media (min-width: $bp-m) {
 						display: flex;
@@ -178,12 +176,11 @@
 				}
 
 				&-linkSubmenu {
+          font-size: 1rem;
 					padding: 2px;
 					display: flex;
-					align-items: center;
-					justify-content: flex-start;
 					text-transform: uppercase;
-					text-align: start;
+
 
 					@media (min-width: $bp-m) {
 						&:hover {

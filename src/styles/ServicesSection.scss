@@ -34,14 +34,18 @@
 			padding-top: 80px;
 		}
 		&-h2 {
+			@media (min-width: $bp-m) {
+				padding: 0 50px;
+
+				
+			}
 			@media (min-width: $bp-l) {
 				padding: 0 50px;
 				display: flex;
 				width: 1024px;
 			}
 			@media (min-width: $bp-xl) {
-				padding: 0;
-				display: flex;
+
 				width: 1440px;
 			}
 		}
@@ -82,7 +86,7 @@
 				gap: 24px;
 			}
 			@media (min-width: $bp-xl) {
-				padding: 20px 0px 0px 0px;
+				padding: 20px 50px 0px 50px;
 				flex-direction: row;
 				max-width: 1440px;
 				gap: 24px;

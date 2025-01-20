@@ -265,5 +265,8 @@
 }
 
 .aboutus__container-compromise.animate {
-	animation-name: slide-in-right;
+	animation-name: slide-in-left;
+  @media (min-width: $bp-l) {
+      animation-name: slide-in-right;
+  }
 }
