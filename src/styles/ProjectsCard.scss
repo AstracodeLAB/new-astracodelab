@@ -164,10 +164,10 @@
 				display: flex;
 				flex-direction: column;
 
-				color: $texWhite;
+				color: $white;
 				padding: 20px;
 				justify-content: space-around;
-				background-color: rgba(156, 114, 231, 0.7);
+				background-color: rgba(156, 114, 231, 0.5);
 				border-top-left-radius: 10px;
 				border-bottom-left-radius: 10px;
 			}
@@ -271,15 +271,15 @@
 	}
 }
 @keyframes animationArrow {
-  0% {
-    transform: scale(0);
-  }
-  50% {
-    transform: scale(-1);
-    transform: translate(35%, 55%) rotate(225deg);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(0);
-  }
+	0% {
+		transform: scale(0);
+	}
+	50% {
+		transform: scale(-1);
+		transform: translate(35%, 55%) rotate(225deg);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(0);
+	}
 }
