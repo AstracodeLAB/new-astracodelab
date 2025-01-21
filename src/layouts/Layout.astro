@@ -4,58 +4,59 @@ import '../styles/global.scss';
 import '@fontsource/ropa-sans';
 import '@fontsource/konkhmer-sleokchher';
 import '@fontsource-variable/raleway';
-import raleway from '@fontsource-variable/raleway/files/raleway-latin-wght-normal.woff2?url';
-import ropaSans from '@fontsource/ropa-sans/files/ropa-sans-latin-400-normal.woff2?url';
-import konkhmer from '@fontsource/konkhmer-sleokchher/files/konkhmer-sleokchher-latin-400-normal.woff2?url';
+import raleway from '@fontsource-variable/raleway/files/raleway-latin-wght-normal.woff2';
+import ropaSans from '@fontsource/ropa-sans/files/ropa-sans-latin-400-normal.woff2';
+import konkhmer from '@fontsource/konkhmer-sleokchher/files/konkhmer-sleokchher-latin-400-normal.woff2';
 ---
 
 <!doctype html>
 <html lang='es'>
-  <head>
-    <meta charset='UTF-8' />
-    <meta name='description' content='AstracodeLAB | Diseño y desarrollo web' />
-    <meta name='viewport' content='width=device-width' />
-    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
-    <link rel='preload' as='font' type='font/woff2' href={raleway} crossorigin='anonymous' />
-    <link rel='preload' as='font' type='font/woff2' href={ropaSans} crossorigin='anonymous' />
-    <link rel='preload' as='font' type='font/woff2' href={konkhmer} crossorigin='anonymous' />
-    <meta property='og:title' content='Astracodelab | Diseño y desarrollo web' />
-    <meta
-      property='og:description'
-      content='Creación de páginas web para mejorar la visibilidad y el posicionamieto de tu marca.'
-    />
-    <meta property='og:image' content='/og_astracode.png' />
-    <meta property='og:url' content='https://astracodelab.com/' />
-    <meta name='generator' content={Astro.generator} />
-    <title>Astracodelab | Diseño y desarrollo web</title>
-  </head>
-  <!-- <div id='preloader'></div> -->
-  <Header />
-  <slot />
+	<head>
+		<meta charset='UTF-8' />
+		<meta name='description' content='AstracodeLAB | Diseño y desarrollo web' />
+		<meta name='viewport' content='width=device-width' />
+		<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+		<link rel='preload' as='font' type='font/woff2' href={raleway} crossorigin='anonymous' />
+		<link rel='preload' as='font' type='font/woff2' href={ropaSans} crossorigin='anonymous' />
+		<link rel='preload' as='font' type='font/woff2' href={konkhmer} crossorigin='anonymous' />
+		<link rel='preload' href='../styles/global.scss' />
+		<meta property='og:title' content='Astracodelab | Diseño y desarrollo web' />
+		<meta
+			property='og:description'
+			content='Creación de páginas web para mejorar la visibilidad y el posicionamieto de tu marca.'
+		/>
+		<meta property='og:image' content='/og_astracode.png' />
+		<meta property='og:url' content='https://astracodelab.com/' />
+		<meta name='generator' content={Astro.generator} />
+		<title>Astracodelab | Diseño y desarrollo web</title>
+	</head>
+	<!-- <div id='preloader'></div> -->
+	<Header />
+	<slot />
 </html><style is:global>
-  :root {
-    font-family: 'Ropa Sans', sans-serif;
-    font-family: 'Raleway Variable', sans-serif;
-  }
-  html {
-    scroll-behavior: smooth;
-  }
-  body {
-    background-image: url('../images/Astra2.png');
-    background-size: 100vw 70vh;
-    background-position: top;
-    background-repeat: no-repeat;
-    background-color: #fdfcff;
-    overflow-x: hidden;
+	:root {
+		font-family: 'Ropa Sans', sans-serif;
+		font-family: 'Raleway Variable', sans-serif;
+	}
+	html {
+		scroll-behavior: smooth;
+	}
+	body {
+		background-image: url('../images/Astra2.png');
+		background-size: 100vw 70vh;
+		background-position: top;
+		background-repeat: no-repeat;
+		background-color: #fdfcff;
+		overflow-x: hidden;
 
-    @media (min-width: 768px) {
-      background-size: 100vw 70vh;
-    }
-    @media (min-width: 1024px) {
-      background-size: 100vw 85vh;
-    }
-    @media (min-width: 1440px) {
-      background-size: 100vw 90vh;
-    }
-  }
+		@media (min-width: 768px) {
+			background-size: 100vw 70vh;
+		}
+		@media (min-width: 1024px) {
+			background-size: 100vw 85vh;
+		}
+		@media (min-width: 1440px) {
+			background-size: 100vw 90vh;
+		}
+	}
 </style>
