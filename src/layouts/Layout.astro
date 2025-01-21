@@ -19,17 +19,20 @@ import konkhmer from '@fontsource/konkhmer-sleokchher/files/konkhmer-sleokchher-
     <link rel='preload' as='font' type='font/woff2' href={raleway} crossorigin='anonymous' />
     <link rel='preload' as='font' type='font/woff2' href={ropaSans} crossorigin='anonymous' />
     <link rel='preload' as='font' type='font/woff2' href={konkhmer} crossorigin='anonymous' />
+    <meta property='og:title' content='Astracodelab | Diseño y desarrollo web' />
+    <meta
+      property='og:description'
+      content='Creación de páginas web para mejorar la visibilidad y el posicionamieto de tu marca.'
+    />
+    <meta property='og:image' content='/og_astracode.png' />
+    <meta property='og:url' content='https://astracodelab.com/' />
     <meta name='generator' content={Astro.generator} />
     <title>Astracodelab | Diseño y desarrollo web</title>
   </head>
-  <body>
-    <!-- <div id='preloader'></div> -->
-    <Header />
-    <slot />
-  </body>
-</html>
-
-<style is:global>
+  <!-- <div id='preloader'></div> -->
+  <Header />
+  <slot />
+</html><style is:global>
   :root {
     font-family: 'Ropa Sans', sans-serif;
     font-family: 'Raleway Variable', sans-serif;
