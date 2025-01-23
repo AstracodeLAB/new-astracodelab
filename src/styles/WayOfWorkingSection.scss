@@ -1,72 +1,59 @@
 @use './variables.scss' as *;
-@use "sass:map";
+@use 'sass:map';
 
 .working {
-  &__title {
-    font-family: map.get($h2, "font-family");
-    font-size: map.get($h2, "font-size");
-    color: map.get($h2, "color");
-    padding-bottom: 20px; 
-    padding-top: 30px;
-    text-align: center;  
-    width: 100%;
+	&__title {
+		font-family: map.get($h2, 'font-family');
+		font-size: map.get($h2, 'font-size');
+		color: map.get($h2, 'color');
+		padding-bottom: 20px;
+		padding-top: 30px;
+		text-align: center;
+		width: 100%;
 
-    @media (min-width: $bp-m) {
-      font-family: map.get($h2-desktop, "font-family");
-      font-size: map.get($h2-desktop, "font-size");
-      color: map.get($h2-desktop, "color");
-      //text-align: start;
-      //padding-left: 96px;
-      padding-bottom: 40px;
-       
-    }
-    @media (min-width: $bp-l) {
-      font-family: map.get($h2-desktop-l, "font-family");
-      font-size: map.get($h2-desktop-l, "font-size");
-      color: map.get($h2-desktop-l, "color");
-      text-align: start;
-      display: flex;
+		@media (min-width: $bp-m) {
+			font-family: map.get($h2-desktop, 'font-family');
+			font-size: map.get($h2-desktop, 'font-size');
+			color: map.get($h2-desktop, 'color');
+
+			padding-bottom: 40px;
+		}
+		@media (min-width: $bp-l) {
+			font-family: map.get($h2-desktop-l, 'font-family');
+			font-size: map.get($h2-desktop-l, 'font-size');
+			color: map.get($h2-desktop-l, 'color');
+			text-align: start;
+			display: flex;
 			justify-content: center;
-      padding-top: 80px;
-      @media (min-width: $bp-xl) {
-				//padding: 0;
+			padding-top: 80px;
+			@media (min-width: $bp-xl) {
 				display: flex;
 				justify-content: center;
-				
-			}	  
-    }
-    &-h2{
-      @media (min-width: $bp-l) {
-        padding: 0 50px;
-        display: flex;
-        width: 1024px;
-      
-      }
-      @media (min-width: $bp-xl) {
-       
-        display: flex;
-        width: 1440px;
-      
-      }
-    }
-  }
-  &__mov{
-    display: flex;
-    justify-content: center;
-    @media (min-width: $bp-l) {
-     display: none;
-    }
-  }
-  &__desktop{
-    display: none;
-    @media (min-width: $bp-l) {
-        display: flex;
-       }
-  }
+			}
+		}
+		&-h2 {
+			@media (min-width: $bp-l) {
+				padding: 0 50px;
+				display: flex;
+				width: 1024px;
+			}
+			@media (min-width: $bp-xl) {
+				display: flex;
+				width: 1440px;
+			}
+		}
+	}
+	&__mov {
+		display: flex;
+		justify-content: center;
+		@media (min-width: $bp-l) {
+			display: none;
+		}
+	}
+	&__desktop {
+		display: none;
+		@media (min-width: $bp-l) {
+			display: flex;
+		}
+	}
 }
-  
-
-
-    
-
-    

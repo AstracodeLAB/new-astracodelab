@@ -7,7 +7,6 @@
 
 		@media (min-width: $bp-m) {
 			display: none;
-			
 		}
 	}
 
@@ -23,15 +22,12 @@
 	&__container {
 		text-align: center;
 		padding-top: 30px;
-		//box-shadow: $shadow;
+
 		display: flex;
 		justify-content: center;
 		flex-direction: column;
 		@media (min-width: $bp-xl) {
-				
 			display: flex;
-			
-
 		}
 
 		&-title {
@@ -41,38 +37,30 @@
 			text-transform: uppercase;
 			margin: 0 16px;
 			padding-bottom: 20px;
-			
+
 			@media (min-width: $bp-m) {
 				font-size: map.get($h2-desktop, 'font-size');
-				//text-align: start;
-				//padding-left: 80px;
 			}
 			@media (min-width: $bp-l) {
 				font-size: map.get($h2-desktop-l, 'font-size');
-				//padding: 0 50px;
+
 				display: flex;
 				justify-content: center;
 				margin: 0;
 			}
 			@media (min-width: $bp-xl) {
-				//padding: 0;
 				display: flex;
 				justify-content: center;
-				
-			
 			}
-			&-h2{
+			&-h2 {
 				@media (min-width: $bp-l) {
 					padding: 0 50px;
 					display: flex;
 					width: 1024px;
-				
 				}
 				@media (min-width: $bp-xl) {
-					
 					display: flex;
 					width: 1440px;
-				
 				}
 			}
 		}
@@ -91,7 +79,6 @@
 				line-height: map.get($paragraph-desktop, 'line-height');
 				text-align: start;
 				padding: 20 96px;
-				
 			}
 			@media (min-width: $bp-l) {
 				font-size: 1.3rem;
@@ -100,22 +87,18 @@
 				padding: 20 0px;
 				display: flex;
 				justify-content: center;
-				
 			}
 
-			&-paragraph{
+			&-paragraph {
 				max-width: 1024px;
-				
+
 				display: flex;
 				@media (min-width: $bp-m) {
-					
 					padding: 0 50px;
 				}
 				@media (min-width: $bp-xl) {
 					max-width: 1440px;
-					
 				}
-				
 			}
 		}
 	}

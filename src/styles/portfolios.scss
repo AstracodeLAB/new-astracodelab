@@ -6,18 +6,16 @@
 	flex-direction: column;
 	padding: 16px;
 
-
 	@media (min-width: $bp-l) {
 		margin-top: 20px;
 		padding: 20px;
 		flex-direction: row;
 		gap: 20px;
 		max-width: 1024px;
-		margin:auto;
+		margin: auto;
 	}
 	@media (min-width: $bp-xl) {
 		max-width: 1440px;
-		
 	}
 
 	&__hero {
@@ -31,9 +29,8 @@
 		}
 
 		@media (min-width: $bp-l) {
-			// min-width: 50%;
 			max-height: 1217px;
-			// padding: 5px;
+
 			display: flex;
 			flex-direction: column;
 			justify-content: flex-start;
@@ -60,7 +57,7 @@
 			font-family: map.get($h1bold, 'font-family');
 			color: map.get($h1bold, 'color');
 			font-size: 1.9rem;
-			//letter-spacing: map.get($h1bold, 'letter-spacing');
+
 			line-height: 2.5rem;
 			font-weight: bold;
 			text-shadow: $shadow;
@@ -77,9 +74,8 @@
 
 			@media (min-width: $bp-l) {
 				font-size: 3.5rem;
-				//letter-spacing: map.get($h1bold-desktop, 'letter-spacing');
+
 				line-height: 4rem;
-				// padding-top: 60px;
 			}
 
 			@media (min-width: $bp-xl) {
@@ -140,7 +136,7 @@
 
 			@media (min-width: $bp-l) {
 				margin-top: 0;
-				// margin-bottom: 20px;
+
 				background-color: $white;
 				padding: 16px;
 			}
@@ -240,31 +236,25 @@
 					margin: auto;
 				}
 				@media (min-width: $bp-xl) {
-					
 					max-width: 1440px;
-					
 				}
-				&-item{
-				margin: 0 16px 50px 16px;
+				&-item {
+					margin: 0 16px 50px 16px;
 					box-shadow: $shadow;
 
-				@media (min-width: $bp-l) {
-					margin: 0 20px 50px 20px;
-					max-width: 1024px;
-					margin: auto;
-					
+					@media (min-width: $bp-l) {
+						margin: 0 20px 50px 20px;
+						max-width: 1024px;
+						margin: auto;
+					}
+					@media (min-width: $bp-xl) {
+						max-width: 1440px;
+					}
 				}
-				@media (min-width: $bp-xl) {
-					
-					max-width: 1440px;
-					
-				}
-				}
-				&--other{
+				&--other {
 					@media (min-width: $bp-l) {
 						padding: 20;
-						
-					}	
+					}
 				}
 			}
 		}
@@ -278,26 +268,10 @@
 			@media (min-width: $bp-l) {
 				margin: 0;
 			}
-
-			// &--mobile {
-			// 	@media (min-width: $bp-l) {
-			// 		display: none;
-			// 	}
-			// }
-
-			// &--desktop {
-			// 	display: none;
-
-			// 	@media (min-width: $bp-l) {
-			// 		display: flex;
-			// 	}
-			// }
 		}
 	}
 
 	&-bis {
-		//margin: 20px;
-
 		@media (min-width: $bp-l) {
 			display: flex;
 			flex-direction: column;
