@@ -8,10 +8,15 @@ import Image from 'astro/components/Image.astro';
 
 <!-- Tamaño movil --><!-- Card 1 --><!-- Card 3 -->
 <div class='projects-card'>
-	<Image class='projects-card__image' src={Qjubiloso} alt='Web de maquilladora' />
+	<Image
+		class='projects-card__image'
+		src={Qjubiloso}
+		alt='Ejemplo de web para ofrecer servicio de cuidado de mayores y dependientes'
+		loading='lazy'
+	/>
 	<!-- Triángulo morado con flecha -->
 	<div class='projects-card__corner' onclick='toggleOverlay(event)'>
-		<img src={ArrowIcon.src} alt='Flecha' class='projects-card__arrow' />
+		<img src={ArrowIcon.src} alt='Icono de flecha' class='projects-card__arrow' />
 	</div>
 	<!-- Overlay morado -->
 	<div class='projects-card__overlay'>
@@ -35,10 +40,15 @@ import Image from 'astro/components/Image.astro';
 	</div>
 </div>
 <div class='projects-card'>
-	<Image class='projects-card__image' src={RestaurantImage} alt='Web de maquilladora' />
+	<Image
+		class='projects-card__image'
+		src={RestaurantImage}
+		alt='Ejemplo de página para un restaurante, con sistema de reservas'
+		loading='lazy'
+	/>
 	<!-- Triángulo morado con flecha -->
 	<div class='projects-card__corner' onclick='toggleOverlay(event)'>
-		<img src={ArrowIcon.src} alt='Flecha' class='projects-card__arrow' />
+		<img src={ArrowIcon.src} alt='Icono de flecha' class='projects-card__arrow' />
 	</div>
 	<!-- Overlay morado -->
 	<div class='projects-card__overlay'>
@@ -62,10 +72,15 @@ import Image from 'astro/components/Image.astro';
 </div>
 
 <div class='projects-card'>
-	<Image class='projects-card__image' src={MakeupImage} alt='Web de maquilladora' />
+	<Image
+		class='projects-card__image'
+		src={MakeupImage}
+		alt='Muestra de una página web realizada para mostrar los servicios y trabajos de una maquilladora'
+		loading='lazy'
+	/>
 	<!-- Triángulo morado con flecha -->
 	<div class='projects-card__corner' onclick='toggleOverlay(event)'>
-		<img src={ArrowIcon.src} alt='Flecha' class='projects-card__arrow' />
+		<img src={ArrowIcon.src} alt='Icono de flecha' class='projects-card__arrow' />
 	</div>
 	<!-- Overlay morado -->
 	<div class='projects-card__overlay'>
@@ -94,7 +109,12 @@ import Image from 'astro/components/Image.astro';
 <div class='projects-card-desktop'>
 	<!-- Card 3 -->
 	<div class='projects-card-desktop__container'>
-		<Image class='projects-card-desktop__container-image' src={Qjubiloso} alt='Web de maquilladora' />
+		<Image
+			class='projects-card-desktop__container-image'
+			src={Qjubiloso}
+			alt='Ejemplo de web para ofrecer servicio de cuidado de mayores y dependientes'
+			loading='lazy'
+		/>
 		<div class='projects-card-desktop__container-content'>
 			<div class='projects-card-desktop__container-content-pills'>
 				<p class='projects-card-desktop__container-content-pills-pill'>Web de servicios</p>
@@ -132,11 +152,21 @@ import Image from 'astro/components/Image.astro';
 				target='_blank'>ver</a
 			>
 		</div>
-		<Image class='projects-card-desktop__container-image-right' src={RestaurantImage} alt='Web de maquilladora' />
+		<Image
+			class='projects-card-desktop__container-image-right'
+			src={RestaurantImage}
+			alt='Ejemplo de página para un restaurante, con sistema de reservas'
+			loading='lazy'
+		/>
 	</div>
 	<!-- Card 1 -->
 	<div class='projects-card-desktop__container'>
-		<Image class='projects-card-desktop__container-image' src={MakeupImage} alt='Web de maquilladora' />
+		<Image
+			class='projects-card-desktop__container-image'
+			src={MakeupImage}
+			alt='Muestra de una página web realizada para mostrar los servicios y trabajos de una maquilladora'
+			loading='lazy'
+		/>
 		<div class='projects-card-desktop__container-content'>
 			<div class='projects-card-desktop__container-content-pills'>
 				<p class='projects-card-desktop__container-content-pills-pill'>Web de servicios</p>
