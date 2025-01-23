@@ -5,5 +5,12 @@ import logo from '../../images/Whitelogolab.png';
 ---
 
 <a href='/'>
-	<Image src={logo} class='logo' alt='Logo de AstracodeLAB' loading='lazy' width='90' height='90'/>
+	<Image
+		src={logo}
+		class='logo'
+		alt='Logo de AstracodeLAB'
+		loading='lazy'
+		widths={[240, 340, 620, logo.width]}
+		sizes={`(max-width: 360px) 240px, (max-width: 768px) 340px, (min-width: 1024px) 620px`}
+	/>
 </a>

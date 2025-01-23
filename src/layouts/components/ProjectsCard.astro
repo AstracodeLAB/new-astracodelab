@@ -13,6 +13,8 @@ import Image from 'astro/components/Image.astro';
 		src={Qjubiloso}
 		alt='Ejemplo de web para ofrecer servicio de cuidado de mayores y dependientes'
 		loading='lazy'
+		widths={[240, 340, 620, Qjubiloso.width]}
+		sizes={`(max-width: 360px) 240px, (max-width: 768px) 340px, (min-width: 1024px) 620px`}
 	/>
 	<!-- Triángulo morado con flecha -->
 	<div class='projects-card__corner' onclick='toggleOverlay(event)'>
@@ -45,6 +47,8 @@ import Image from 'astro/components/Image.astro';
 		src={RestaurantImage}
 		alt='Ejemplo de página para un restaurante, con sistema de reservas'
 		loading='lazy'
+		widths={[240, 340, 620, RestaurantImage.width]}
+		sizes={`(max-width: 360px) 240px, (max-width: 768px) 340px, (min-width: 1024px) 620px`}
 	/>
 	<!-- Triángulo morado con flecha -->
 	<div class='projects-card__corner' onclick='toggleOverlay(event)'>
@@ -77,6 +81,8 @@ import Image from 'astro/components/Image.astro';
 		src={MakeupImage}
 		alt='Muestra de una página web realizada para mostrar los servicios y trabajos de una maquilladora'
 		loading='lazy'
+		widths={[240, 340, 620, MakeupImage.width]}
+		sizes={`(max-width: 360px) 240px, (max-width: 768px) 340px, (min-width: 1024px) 620px`}
 	/>
 	<!-- Triángulo morado con flecha -->
 	<div class='projects-card__corner' onclick='toggleOverlay(event)'>
@@ -114,6 +120,8 @@ import Image from 'astro/components/Image.astro';
 			src={Qjubiloso}
 			alt='Ejemplo de web para ofrecer servicio de cuidado de mayores y dependientes'
 			loading='lazy'
+			width='530'
+			height='298'
 		/>
 		<div class='projects-card-desktop__container-content'>
 			<div class='projects-card-desktop__container-content-pills'>
@@ -157,6 +165,8 @@ import Image from 'astro/components/Image.astro';
 			src={RestaurantImage}
 			alt='Ejemplo de página para un restaurante, con sistema de reservas'
 			loading='lazy'
+			width='530'
+			height='298'
 		/>
 	</div>
 	<!-- Card 1 -->
