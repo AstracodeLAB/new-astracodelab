@@ -194,11 +194,11 @@
 					font-size: 0.9rem;
 					box-shadow: $shadow;
 					text-align: center;
-					// width: 130px;
+
 					&--dark {
 						background-color: rgba(56, 19, 136, 0.5);
 						padding: 0 10px;
-						//background:  rgba(156, 114, 231, 0.3);;
+
 						color: $white;
 						border-radius: 16px;
 						border: 1px solid $green;
@@ -216,7 +216,6 @@
 				font-size: map.get($paragraph-desktop, 'font-size');
 				line-height: map.get($paragraph-desktop, 'line-heigth');
 				margin-bottom: 25px;
-				//max-width: 600px;
 			}
 
 			&-button {

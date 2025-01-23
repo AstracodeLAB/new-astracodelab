@@ -5,7 +5,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-    padding-top: 10px;
+	padding-top: 10px;
 
 	@media (min-width: $bp-m) {
 		padding-top: 20px;
@@ -16,7 +16,6 @@
 		display: flex;
 		flex-direction: column;
 	}
-	
 
 	&__text {
 		font-family: map.get($paragraph, 'font-family');
@@ -37,13 +36,13 @@
 	border-radius: 50px;
 	width: 100%;
 	box-shadow: $shadow;
-  
-  @media (min-width: $bp-l) {
-      max-width: 1250px;
-  }
-  @media (min-width: $bp-xl) {
-      max-width: 1500px;
-  }
+
+	@media (min-width: $bp-l) {
+		max-width: 1250px;
+	}
+	@media (min-width: $bp-xl) {
+		max-width: 1500px;
+	}
 
 	&__container {
 		margin: 0 auto;
@@ -56,7 +55,6 @@
 			flex-wrap: nowrap;
 			padding: 0;
 		}
-
 
 		&-logo {
 			order: 0;
@@ -184,11 +182,10 @@
 				}
 
 				&-linkSubmenu {
-          font-size: 1rem;
+					font-size: 1rem;
 					padding: 2px;
 					display: flex;
 					text-transform: uppercase;
-
 
 					@media (min-width: $bp-m) {
 						&:hover {
@@ -235,7 +232,6 @@
 			max-height: 0;
 			overflow: hidden;
 			border-radius: 10px;
-			//transition: opacity 0.5s ease, max-height 0.5s ease;
 			display: block; /* Se mantiene el display como block, pero la visibilidad se controla con opacidad y desplazamiento */
 			transform: translateY(-20px); /* Lo colocamos un poco hacia arriba */
 
@@ -281,14 +277,10 @@
 		display: flex;
 		width: 300px;
 		justify-content: center;
-		// align-items: center;
-		// gap: 15px;
 	}
 	@media (min-width: $bp-l) {
 		display: flex;
 		width: 400px;
 		justify-content: center;
-		// align-items: center;
-		// gap: 15px;
 	}
 }

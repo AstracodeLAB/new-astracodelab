@@ -19,7 +19,6 @@ import konkhmer from '@fontsource/konkhmer-sleokchher/files/konkhmer-sleokchher-
 		<link rel='preload' as='font' type='font/woff2' href={raleway} crossorigin='anonymous' />
 		<link rel='preload' as='font' type='font/woff2' href={ropaSans} crossorigin='anonymous' />
 		<link rel='preload' as='font' type='font/woff2' href={konkhmer} crossorigin='anonymous' />
-		<link rel='preload' href='../styles/global.scss' />
 		<link rel='preload' href='../images/diseño.png' />
 		<link rel='preload' href='../images/empresa.jpg' />
 		<link rel='preload' href='../images/landingpage.jpg' />
@@ -34,33 +33,8 @@ import konkhmer from '@fontsource/konkhmer-sleokchher/files/konkhmer-sleokchher-
 		<meta name='generator' content={Astro.generator} />
 		<title>Astracodelab | Diseño y desarrollo web</title>
 	</head>
-	<!-- <div id='preloader'></div> -->
-	<Header />
-	<slot />
-</html><style is:global>
-	:root {
-		font-family: 'Ropa Sans', sans-serif;
-		font-family: 'Raleway Variable', sans-serif;
-	}
-	html {
-		scroll-behavior: smooth;
-	}
-	body {
-		background-image: url('../images/Astra2.png');
-		background-size: 100vw 70vh;
-		background-position: top;
-		background-repeat: no-repeat;
-		background-color: #fdfcff;
-		overflow-x: hidden;
+	<body>
+		<Header />
+		<slot />
+	</body>
 
-		@media (min-width: 768px) {
-			background-size: 100vw 70vh;
-		}
-		@media (min-width: 1024px) {
-			background-size: 100vw 85vh;
-		}
-		@media (min-width: 1440px) {
-			background-size: 100vw 90vh;
-		}
-	}
-</style>

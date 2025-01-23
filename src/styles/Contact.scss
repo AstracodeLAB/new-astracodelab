@@ -21,13 +21,11 @@
 		padding-bottom: 20px;
 
 		@media (min-width: $bp-m) {
-			//text-align: center;
 			font-family: map.get($h2-desktop, font-family);
 			font-size: map.get($h2-desktop, font-size);
 			color: map.get($h2-desktop, color);
 		}
 		@media (min-width: $bp-l) {
-			//text-align: center;
 			font-family: map.get($h2-desktop-l, font-family);
 			font-size: map.get($h2-desktop-l, font-size);
 			color: map.get($h2-desktop-l, color);
