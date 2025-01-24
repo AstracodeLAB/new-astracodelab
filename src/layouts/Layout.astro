@@ -7,35 +7,33 @@ import '@fontsource-variable/raleway';
 import raleway from '@fontsource-variable/raleway/files/raleway-latin-wght-normal.woff2';
 import ropaSans from '@fontsource/ropa-sans/files/ropa-sans-latin-400-normal.woff2';
 import konkhmer from '@fontsource/konkhmer-sleokchher/files/konkhmer-sleokchher-latin-400-normal.woff2';
+
 ---
 
 <!doctype html>
 <html lang='es'>
-	<head>
-		<meta charset='UTF-8' />
-		<meta name='description' content='AstracodeLAB | Diseño y desarrollo web' />
-		<meta name='viewport' content='width=device-width' />
-		<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
-		<link rel='preload' as='font' type='font/woff2' href={raleway} crossorigin='anonymous' />
-		<link rel='preload' as='font' href={ropaSans} type='font/woff2' crossorigin='anonymous' />
-		<link rel='stylesheet' href={konkhmer} media='print' onload="this.media='all'" />
-		<link rel='preload' href='/images/diseño.png' />
-		<link rel='preload' href='/images/empresa.jpg' />
-		<link rel='preload' href='/images/landingpage.jpg' />
-		<link rel='preload' href='/images/servicios.jpg' />
-		<meta property='og:title' content='Astracodelab | Diseño y desarrollo web' />
-		<meta
-			property='og:description'
-			content='Creación de páginas web para mejorar la visibilidad y el posicionamieto de tu marca.'
-		/>
-		<meta property='og:image' content='/og_astracode.png' />
-		<meta property='og:url' content='https://astracodelab.com/' />
-		<meta name='generator' content={Astro.generator} />
-		<title>Astracodelab | Diseño y desarrollo web</title>
-	</head>
-	<body>
-		<Header />
-		<slot />
-	</body>
-</html>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='description' content='AstracodeLAB | Diseño y desarrollo web' />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <link rel='preload' as='font' type='font/woff2' href={raleway} crossorigin='anonymous' />
+    <link rel='preload' as='font' href={ropaSans} type='font/woff2' crossorigin='anonymous' />
+    <link rel='preload' as='font' href={konkhmer} type='font/woff2' crossorigin='anonymous' />
+    <!-- <link rel='stylesheet' href={konkhmer} media='print' onload="this.media='all'" /> -->
 
+    <meta property='og:title' content='Astracodelab | Diseño y desarrollo web' />
+    <meta
+      property='og:description'
+      content='Creación de páginas web para mejorar la visibilidad y el posicionamieto de tu marca.'
+    />
+    <meta property='og:image' content='/og_astracode.png' />
+    <meta property='og:url' content='https://astracodelab.com/' />
+    <meta name='generator' content={Astro.generator} />
+    <title>Astracodelab | Diseño y desarrollo web</title>
+  </head>
+  <body>
+    <Header />
+    <slot />
+  </body>
+</html>
