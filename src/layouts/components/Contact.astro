@@ -18,20 +18,29 @@
 					href='https://docs.google.com/forms/d/e/1FAIpQLSdj6jwZ5bnhqcTR_fWHebJObl8caKhlROcOrgBdnPCpXz8fAA/viewform?pli=1'
 					class='contact__container-text-description-link'
 				>
-					este formulario</a> donde te haremos unas preguntas para conocer mejor tu proyecto.
+					este formulario</a
+				> donde te haremos unas preguntas para conocer mejor tu proyecto.
 			</p>
 		</div>
 		<div class='contact__container-data'>
-			<form class='contact__container-data-form'>
-				<input type='text' class='contact__input' placeholder='Nombre' required />
-				<input type='email' class='contact__input' placeholder='nombre@mail.com' required />
-				<textarea class='contact__textarea' placeholder='Deja tu mensaje...' required></textarea>
+			<form
+				name='contact'
+				id='contact_form'
+				method='POST'
+				netlify
+				class='contact__container-data-form'
+				aria-labelledby='contact-form'
+				aria-describedby='contact-form-description'
+			>
+				<input name='name' type='text' class='contact__input' placeholder='Nombre' required />
+				<input name='email' type='email' class='contact__input' placeholder='nombre@mail.com' required />
+				<textarea name='message' class='contact__textarea' placeholder='Deja tu mensaje...' required></textarea>
 				<label class='contact__checkbox-label'>
 					<input type='checkbox' class='contact__checkbox' required />
 					Acepto que se traten mis datos para gestionar la consulta.
 				</label>
 				<p class='contact__question'>¿Tienes dudas? Pregúntanos</p>
-				<button type='submit' class='contact__button'>ENVIAR</button>
+				<button type='submit' aria-label='Send message' class='contact__button'>ENVIAR</button>
 			</form>
 		</div>
 	</div>
@@ -54,4 +63,21 @@
 
 		window.addEventListener('scroll', handleScroll);
 	});
+
+	const handleSubmit = (event) => {
+		event.preventDefault();
+
+		const myForm = event.target;
+		const formData = new FormData(myForm);
+
+		fetch('/es/', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+			body: new URLSearchParams(formData).toString(),
+		})
+			.then(() => (window.location.href = myForm.action))
+			.catch((error) => alert('error sending message, please try again'));
+	};
+
+	document.getElementById('contact_form').addEventListener('submit', handleSubmit);
 </script>
