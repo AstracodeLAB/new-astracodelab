@@ -9,12 +9,12 @@
 	gap: 30px;
 	padding: 0 16px;
 	text-align: center;
-	&_title{
+	&_title {
 		text-transform: uppercase;
 		font-family: map.get($h2, 'font-family');
 		font-size: 4rem;
 		color: $white;
-        text-align: center;
+		text-align: center;
 		padding-bottom: 20px;
 		padding-top: 30px;
 		text-shadow: $shadow;
@@ -22,54 +22,54 @@
 		@media (min-width: $bp-m) {
 			font-family: map.get($h2-desktop, 'font-family');
 			font-size: 6rem;
-			
 		}
 		@media (min-width: $bp-l) {
 			font-size: 12rem;
 			text-align: start;
 			display: flex;
 			justify-content: center;
-			
+		}
+
+		&--sent {
+			font-size: 2rem;
 		}
 	}
-	&_text{
+	&_text {
 		font-family: map.get($paragraph, font-family);
-				font-size: map.get($paragraph, font-size);
-				color: map.get($paragraph, color);
-				line-height: map.get($paragraph, line-height);
-				margin-bottom: 1rem;
+		font-size: map.get($paragraph, font-size);
+		color: map.get($paragraph, color);
+		line-height: map.get($paragraph, line-height);
+		margin-bottom: 1rem;
 
-				@media (min-width: $bp-m) {
-					font-size: map.get($paragraph-desktop, font-size);
-					line-height: map.get($paragraph-desktop, line-height);
-				}
-				@media (min-width: $bp-xl) {
-					font-size: 1.5rem;
-				}
+		@media (min-width: $bp-m) {
+			font-size: map.get($paragraph-desktop, font-size);
+			line-height: map.get($paragraph-desktop, line-height);
+		}
+		@media (min-width: $bp-xl) {
+			font-size: 1.5rem;
+		}
 	}
 	&_button {
 		font-family: Ropa Sans;
-        background-color: $cta;
-        color: $white;
-        padding: 10px 20px 10px 20px;
-        border-radius: 35px;
-        box-shadow: $shadow;
-        transition: background-color 0.3s ease, color 0.3s ease;
-        @media (min-width: $bp-m) {
-            font-size: 1.6rem;
-        }
-        @media (min-width: $bp-l) {
-            font-size: 1.8rem;
-        }
-        &:hover {
-            background-color: $green; 
-            color: $cta;
-        }
-        &:active {
-            background-color: $purple;
-            color: $cta;
-            
-        }
+		background-color: $cta;
+		color: $white;
+		padding: 10px 20px 10px 20px;
+		border-radius: 35px;
+		box-shadow: $shadow;
+		transition: background-color 0.3s ease, color 0.3s ease;
+		@media (min-width: $bp-m) {
+			font-size: 1.6rem;
+		}
+		@media (min-width: $bp-l) {
+			font-size: 1.8rem;
+		}
+		&:hover {
+			background-color: $green;
+			color: $cta;
+		}
+		&:active {
+			background-color: $purple;
+			color: $cta;
+		}
 	}
-
 }
