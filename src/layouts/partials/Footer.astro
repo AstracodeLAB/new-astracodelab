@@ -5,24 +5,26 @@ import SocialBar from '../components/SocialBar.astro';
 ---
 
 <footer class='footer'>
-	<div class='footer__content'>
-		<div class='footer__social'>
-			<a href='/' class='footer__social-logo'>
-				<Image src={BlackLogo} class='logo' alt='Logo de AstracodeLAB' loading='lazy' />
-			</a>
-			<SocialBar />
-		</div>
-		<nav class='footer__nav'>
-			<a href='/' class='footer__link'>Inicio</a>
-			<a href='/#services' class='footer__link'>Servicios</a>
-			<a href='/#contact' class='footer__link'>Contacto</a>
-			<a href='/#projects' class='footer__link'>Proyectos</a>
-			<a href='/#about' class='footer__link'>Sobre nosotras</a>
-		</nav>
-		<div class='footer__legal'>
-			<a href='/legal' class='footer__link'>Aviso legal</a>
-			<a href='/privacy-policy' class='footer__link'>Política de privacidad</a>
-		</div>
-	</div>
-	<p class='footer__copy'>© 2025 | AstracodeLAB</p>
+  <div class='footer__content'>
+    <div class='footer__social'>
+      <a href='/' class='footer__social-logo'>
+        <Image src={BlackLogo} class='logo' alt='Logo de AstracodeLAB' loading='lazy' />
+      </a>
+      <SocialBar />
+    </div>
+    <nav class='footer__nav'>
+      <a href='/' class='footer__link'>Inicio</a>
+      <a href='/#services' class='footer__link'>Servicios</a>
+      <a href='/#contact' class='footer__link'>Contacto</a>
+      <a href='/#projects' class='footer__link'>Proyectos</a>
+      <a href='/#about' class='footer__link'>Sobre nosotras</a>
+    </nav>
+    <div class='footer__legal'>
+      <a href='/legal' class='footer__link'>Aviso legal</a>
+      <a href='/privacy-policy' class='footer__link'>Política de privacidad</a>
+    </div>
+  </div>
+  <div class='footer__copy'>
+    <p>© 2025 | AstracodeLAB</p>
+  </div>
 </footer>

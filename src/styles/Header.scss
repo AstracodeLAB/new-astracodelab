@@ -111,6 +111,11 @@
 				cursor: pointer;
 				background-color: transparent;
 			}
+      &--close {
+      left: -850px;
+      }
+
+
 
 			&-item {
 				font-weight: 600;
@@ -144,7 +149,6 @@
 
 			&-itemsMap {
 				padding: 5px;
-
 				position: relative;
 				display: flex;
 				flex-direction: column;
