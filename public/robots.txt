@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap:https://astracodelab.com/sitemap.xml
+Sitemap: https://astracodelab.com/sitemap-index.xml

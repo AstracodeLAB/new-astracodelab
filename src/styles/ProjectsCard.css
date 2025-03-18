@@ -1,0 +1,272 @@
+@charset "UTF-8";
+/*&-h1bold {
+            font-family: map.get($h1bold, "font-family");
+            font-size: map.get($h1bold, "font-size");
+            color: map.get($h1bold, "color");
+        }*/
+.projects-card {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+@media (min-width: 520px) {
+  .projects-card {
+    display: none;
+  }
+}
+.projects-card__image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.projects-card__corner {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background: rgba(56, 19, 136, 0.9);
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(100% 0, 100% 100%, 0% 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Añadir transición de opacidad */
+}
+.projects-card__corner:hover {
+  transform: scale(1.1);
+}
+.projects-card__corner img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  animation: animationArrow 2s ease-in-out infinite;
+}
+.projects-card__corner--hidden {
+  opacity: 0; /* Hacerlo invisible */
+  pointer-events: none; /* Evitar clics */
+}
+.projects-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(56, 19, 136, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px;
+  color: #fdfcff;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+}
+.projects-card__overlay--visible {
+  transform: translateY(0);
+}
+.projects-card__pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.projects-card__pills-pill {
+  padding: 0 5px;
+  background: transparent;
+  color: #fdfcff;
+  border-radius: 16px;
+  border: 1px solid #bbff00;
+  font-family: "Raleway Variable";
+  font-size: 0.9rem;
+  box-shadow: 0px 2px 2px rgba(18, 12, 35, 0.5);
+  text-align: center;
+  width: 130px;
+}
+.projects-card__text {
+  text-align: center;
+  font-family: "Ropa Sans";
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+.projects-card__button {
+  width: 140px;
+  text-align: center;
+  background: #fdfcff;
+  color: #641eff;
+  padding: 2px 20px;
+  border-radius: 25px;
+  font-family: "Konkhmer Sleokchher";
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 0px 2px 2px rgba(18, 12, 35, 0.5);
+}
+
+.projects-card-desktop {
+  display: none;
+  padding: 16px;
+}
+@media (min-width: 520px) {
+  .projects-card-desktop {
+    display: flex;
+    flex-direction: column;
+    background-color: #120c23;
+    gap: 25px;
+    align-items: center;
+  }
+}
+.projects-card-desktop__container {
+  display: flex;
+  height: 280px;
+  max-width: 1024px;
+  justify-content: center;
+}
+@media (min-width: 1440px) {
+  .projects-card-desktop__container {
+    max-width: 1440px;
+  }
+}
+.projects-card-desktop__container-image {
+  width: 50%;
+  height: auto;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.projects-card-desktop__container-image-right {
+  width: 50%;
+  height: auto;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.projects-card-desktop__container-content {
+  display: flex;
+  background-color: rgba(214, 208, 255, 0.1);
+  flex-direction: column;
+  color: rgba(253, 252, 255, 0.8);
+  padding: 20px;
+  justify-content: space-around;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.projects-card-desktop__container-content-left {
+  display: flex;
+  flex-direction: column;
+  color: #fdfcff;
+  padding: 20px;
+  justify-content: space-around;
+  background-color: rgba(156, 114, 231, 0.5);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.projects-card-desktop__container-content-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .projects-card-desktop__container-content-pills {
+    justify-content: flex-start;
+    padding-left: 16px;
+  }
+}
+.projects-card-desktop__container-content-pills-pill {
+  padding: 0 10px;
+  background: rgba(156, 114, 231, 0.3);
+  color: #fdfcff;
+  border-radius: 16px;
+  border: 1px solid #bbff00;
+  font-family: "Raleway Variable";
+  font-size: 0.9rem;
+  box-shadow: 0px 2px 2px rgba(18, 12, 35, 0.5);
+  text-align: center;
+}
+.projects-card-desktop__container-content-pills-pill--dark {
+  background-color: rgba(56, 19, 136, 0.5);
+  padding: 0 10px;
+  color: #fdfcff;
+  border-radius: 16px;
+  border: 1px solid #bbff00;
+  font-family: "Raleway Variable";
+  font-size: 0.9rem;
+  box-shadow: 0px 2px 2px rgba(18, 12, 35, 0.5);
+  text-align: center;
+}
+.projects-card-desktop__container-content-text {
+  text-align: center;
+  font-family: "Ropa Sans";
+  font-size: 1.125rem;
+  margin-bottom: 25px;
+}
+.projects-card-desktop__container-content-button {
+  width: 140px;
+  text-align: center;
+  background: #fdfcff;
+  color: #641eff;
+  padding: 2px 20px;
+  border-radius: 25px;
+  font-family: "Konkhmer Sleokchher";
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 0px 2px 2px rgba(18, 12, 35, 0.5);
+  align-self: center;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+@media (min-width: 768px) {
+  .projects-card-desktop__container-content-button {
+    align-self: flex-end;
+  }
+}
+.projects-card-desktop__container-content-button:hover {
+  background: #b7aaff;
+  color: #fdfcff;
+}
+
+@keyframes border-grow {
+  0% {
+    box-shadow: 0 0 0 0 #bbff00;
+  }
+  50% {
+    box-shadow: 0 0 0 5px #bbff00;
+  }
+  100% {
+    box-shadow: 0 0 0 0 #bbff00;
+  }
+}
+.projects-card,
+.projects-card-desktop__container {
+  position: relative;
+  transition: box-shadow 0.5s ease;
+}
+.projects-card.animate-border,
+.projects-card-desktop__container.animate-border {
+  animation: border-grow 1s ease-out;
+}
+@media (min-width: 768px) {
+  .projects-card.animate-border,
+  .projects-card-desktop__container.animate-border {
+    border-radius: 10px;
+  }
+}
+
+@keyframes animationArrow {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(-1);
+    transform: translate(35%, 55%) rotate(225deg);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}/*# sourceMappingURL=ProjectsCard.css.map */

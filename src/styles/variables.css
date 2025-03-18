@@ -1,0 +1,5 @@
+/*&-h1bold {
+            font-family: map.get($h1bold, "font-family");
+            font-size: map.get($h1bold, "font-size");
+            color: map.get($h1bold, "color");
+        }*//*# sourceMappingURL=variables.css.map */

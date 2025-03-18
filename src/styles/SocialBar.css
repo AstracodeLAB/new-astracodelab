@@ -1,0 +1,19 @@
+/*&-h1bold {
+            font-family: map.get($h1bold, "font-family");
+            font-size: map.get($h1bold, "font-size");
+            color: map.get($h1bold, "color");
+        }*/
+.social-bar {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.social-bar__title {
+  font-family: "Raleway Variable";
+  color: #120c23;
+  margin-bottom: 5px;
+}
+.social-bar__icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}/*# sourceMappingURL=SocialBar.css.map */

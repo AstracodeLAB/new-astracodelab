@@ -1,0 +1,287 @@
+/*&-h1bold {
+            font-family: map.get($h1bold, "font-family");
+            font-size: map.get($h1bold, "font-size");
+            color: map.get($h1bold, "color");
+        }*/
+.aboutus {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+}
+@media (min-width: 1024px) {
+  .aboutus {
+    padding-top: 80px;
+  }
+}
+.aboutus__title {
+  font-family: "Raleway Variable";
+  font-size: 1.5rem;
+  color: #381388;
+  padding-bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .aboutus__title {
+    font-family: "Raleway Variable";
+    font-size: 2rem;
+    color: #381388;
+    text-align: center;
+  }
+}
+@media (min-width: 1024px) {
+  .aboutus__title {
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (min-width: 1024px) {
+  .aboutus__title-h2 {
+    padding: 0 50px;
+    display: flex;
+    width: 1024px;
+  }
+}
+@media (min-width: 1440px) {
+  .aboutus__title-h2 {
+    display: flex;
+    width: 1440px;
+  }
+}
+.aboutus__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+@media (min-width: 1024px) {
+  .aboutus__container {
+    flex-direction: row;
+    align-items: stretch;
+    width: 100%;
+  }
+}
+.aboutus__container-mision {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FBFAFF;
+  border-top: 1px solid #b7aaff;
+  border-bottom: 1px solid #b7aaff;
+  border-right: 1px solid #b7aaff;
+  gap: 20px;
+  padding: 20px 0 20px 0;
+  box-shadow: 0px 2px 2px rgba(18, 12, 35, 0.5);
+}
+@media (min-width: 768px) {
+  .aboutus__container-mision {
+    flex: 1;
+    padding: 20px 50px;
+  }
+}
+@media (min-width: 1024px) {
+  .aboutus__container-mision {
+    flex: 1;
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 20px 0;
+  }
+}
+.aboutus__container-mision-title {
+  font-family: "Raleway Variable";
+  font-size: 1.25rem;
+  color: #120c23;
+  font-weight: 500;
+}
+@media (min-width: 768px) {
+  .aboutus__container-mision-title {
+    font-family: "Raleway Variable";
+    font-size: 1.8rem;
+    color: #120c23;
+    font-weight: 500;
+  }
+}
+@media (min-width: 1024px) {
+  .aboutus__container-mision-title {
+    text-align: start;
+    width: 450px;
+  }
+}
+@media (min-width: 1440px) {
+  .aboutus__container-mision-title {
+    width: 657px;
+  }
+}
+@media (min-width: 1024px) {
+  .aboutus__container-mision-title-h3 {
+    text-align: start;
+  }
+}
+.aboutus__container-mision-paragraph {
+  font-family: "Ropa Sans";
+  font-size: 1rem;
+  color: rgba(18, 12, 35, 0.8);
+  line-height: 1.25rem;
+  text-align: center;
+  padding: 0px 16px 0 16px;
+}
+@media (min-width: 768px) {
+  .aboutus__container-mision-paragraph {
+    font-family: "Ropa Sans";
+    font-size: 1.125rem;
+    color: rgba(18, 12, 35, 0.8);
+    line-height: 1.5625rem;
+    text-align: start;
+  }
+}
+@media (min-width: 1024px) {
+  .aboutus__container-mision-paragraph {
+    max-width: 450px;
+    padding: 0px 16px 0 0px;
+  }
+}
+@media (min-width: 1440px) {
+  .aboutus__container-mision-paragraph {
+    font-size: 1.3rem;
+    max-width: 657px;
+    padding-right: 50px;
+  }
+}
+.aboutus__container-compromise {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FBFAFF;
+  border-top: 1px solid #b7aaff;
+  border-bottom: 1px solid #b7aaff;
+  border-left: 1px solid #b7aaff;
+  gap: 20px;
+  padding: 20px 0 20px 0;
+  box-shadow: 0px 2px 2px rgba(18, 12, 35, 0.5);
+}
+@media (min-width: 768px) {
+  .aboutus__container-compromise {
+    flex: 1;
+    padding: 20px 50px;
+  }
+}
+@media (min-width: 1024px) {
+  .aboutus__container-compromise {
+    flex: 1;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 20px 0;
+  }
+}
+.aboutus__container-compromise-title {
+  font-family: "Raleway Variable";
+  font-size: 1.25rem;
+  color: #120c23;
+  font-weight: 500;
+}
+@media (min-width: 768px) {
+  .aboutus__container-compromise-title {
+    font-family: "Raleway Variable";
+    font-size: 1.8rem;
+    color: #120c23;
+    font-weight: 500;
+  }
+}
+@media (min-width: 1024px) {
+  .aboutus__container-compromise-title {
+    font-family: "Raleway Variable";
+    font-size: 1.8rem;
+    color: #120c23;
+    font-weight: 500;
+    text-align: start;
+    width: 450px;
+    padding-left: 50px;
+  }
+}
+@media (min-width: 1024px) {
+  .aboutus__container-compromise-title-h3 {
+    text-align: start;
+    width: 450px;
+  }
+}
+.aboutus__container-compromise-paragraph {
+  font-family: "Ropa Sans";
+  font-size: 1rem;
+  color: rgba(18, 12, 35, 0.8);
+  line-height: 1.25rem;
+  text-align: center;
+  padding: 0px 16px 0 16px;
+}
+@media (min-width: 768px) {
+  .aboutus__container-compromise-paragraph {
+    font-family: "Ropa Sans";
+    font-size: 1.125rem;
+    color: rgba(18, 12, 35, 0.8);
+    line-height: 1.5625rem;
+    text-align: start;
+    padding: 0;
+  }
+}
+@media (min-width: 1024px) {
+  .aboutus__container-compromise-paragraph {
+    width: 450px;
+    padding-left: 50px;
+  }
+}
+@media (min-width: 1440px) {
+  .aboutus__container-compromise-paragraph {
+    font-size: 1.3rem;
+    width: 657px;
+    padding-left: 50px;
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.aboutus__container-mision,
+.aboutus__container-compromise {
+  opacity: 0;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.aboutus__container-mision.animate {
+  animation-name: slide-in-left;
+}
+
+.aboutus__container-compromise.animate {
+  animation-name: slide-in-left;
+}
+@media (min-width: 1024px) {
+  .aboutus__container-compromise.animate {
+    animation-name: slide-in-right;
+  }
+}/*# sourceMappingURL=AboutUsSection.css.map */
