@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://astracodelab.com/sitemap-index.xml
