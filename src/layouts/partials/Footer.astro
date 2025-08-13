@@ -1,14 +1,69 @@
 ---
 import Image from 'astro/components/Image.astro';
-import BlackLogo from '../../images/Blacklogo.png';
+import logoTextoBlanco from '../../images/logoTextoBlanco.png';
+import logoBlanco from '../../images/logoBlanco.png';
 import SocialBar from '../components/SocialBar.astro';
 ---
 
 <footer class='footer'>
-  <div class='footer__content'>
-    <div class='footer__social'>
+  <a href='/' class='footer__social-logo'>
+    <Image src={logoTextoBlanco} class='logo' alt='Logo de AstracodeLAB' loading='lazy' />
+    <Image src={logoBlanco} class='logo' alt='Logo de AstracodeLAB' loading='lazy' />
+  </a>
+  <p class='text'>Transformamos ideas en sitios web.</p>
+  <SocialBar />
+  <section>
+    <section class='services'>
+      <h2 class='webServices'>Servicios</h2>
+      <nav>
+        <ul role='list'>
+          <li><a href='#' class='text-wrapper-3'>Diseño y desarrrollo web</a></li>
+          <li><a href='#' class='text-wrapper-3'>Funcionalidades y optimización</a></li>
+          <li><a href='#' class='text-wrapper-3'>Mantenimiento y soporte</a></li>
+          <li><a href='#' class='text-wrapper-3'>Branding y marketing digital</a></li>
+        </ul>
+      </nav>
+
+      <section class='company'>
+        <h2 class='text-wrapper-2'>Empresa</h2>
+        <nav>
+          <ul role='list'>
+            <li><a href='#' class='text-wrapper-3'>Astracodelab</a></li>
+            <li><a href='#' class='text-wrapper-3'>Contacto</a></li>
+            <li><a href='#' class='text-wrapper-3'>Blog</a></li>
+          </ul>
+        </nav>
+      </section>
+      <section class='contact'>
+        <h2 class='contact-text'>Contacto</h2>
+        <address class='address'>
+          <div class='envelope-regular' aria-hidden='true'>
+            <img class='vector-7' src='img/vector-8.svg' alt='' />
+          </div>
+          <a href='mailto:info@astracodelab.com' target='_blank' rel='noopener noreferrer' class='text-wrapper-5'
+            >info@astracodelab.com</a
+          >
+        </address>
+        <address class='address'>
+          <img class='vector-8' src='img/vector.svg' alt='' aria-hidden='true' />
+          <a href='tel:666666666' class='text-wrapper-5'>666 666 666</a>
+        </address>
+      </section>
+    </section>
+
+    <nav class='policy'>
+      <a href='#' class='text-wrapper-3'>Política de cookies</a>
+      <span class='text-wrapper-6' aria-hidden='true'>|</span>
+      <a href='#' class='text-wrapper-3'>Aviso legal</a>
+    </nav>
+    <div class='footer-copy'>
+      <p class='text-wrapper-5'>© 2025 | AstracodeLAB</p>
+    </div>
+  </section>  
+
+  <!-- <div class='footer__social'>
       <a href='/' class='footer__social-logo'>
-        <Image src={BlackLogo} class='logo' alt='Logo de AstracodeLAB' loading='lazy' />
+        <Image src={logoTextoBlanco} class='logo' alt='Logo de AstracodeLAB' loading='lazy' />
       </a>
       <SocialBar />
     </div>
@@ -26,5 +81,5 @@ import SocialBar from '../components/SocialBar.astro';
   </div>
   <div class='footer__copy'>
     <p>© 2025 | AstracodeLAB</p>
-  </div>
+  </div> -->
 </footer>

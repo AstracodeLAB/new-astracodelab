@@ -2,122 +2,15 @@
 @use './variables.scss' as *;
 
 .footer {
-  padding: 1.5rem 1rem;
-  background: linear-gradient(to bottom right, $white, $purple);
-  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 20px;
+  padding: 30px 20px;
+  position: relative;
+  background-color: #310a9e;
+  // background-size: cover;
+  // background-position: 50% 50%;
 
-  @media (min-width: $bp-m) {
-    padding: 2rem;
-  }
 
-  &__content {
-    @media (min-width: $bp-m) {
-      display: flex;
-      flex-direction: row-reverse;
-      justify-content: space-between;
-      width: 100%;
-    }
-
-    @media (min-width: $bp-l) {
-      max-width: 1250px;
-    }
-
-    @media (min-width: $bp-xl) {
-      max-width: 1500px;
-    }
-  }
-
-  &__social {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    @media (min-width: $bp-m) {
-      align-items: end;
-    }
-
-    &-logo {
-      margin-bottom: 0.5rem;
-
-      @media (min-width: $bp-m) {
-        margin-bottom: 0;
-      }
-    }
-  }
-
-  &__nav {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    margin-bottom: 1.5rem;
-
-    &>.footer__link {
-      font-family: map.get($paragraph, 'font-family');
-      font-size: map.get($paragraph, 'font-size');
-      color: map.get($paragraph, 'color');
-      line-height: map.get($paragraph, 'line-height');
-
-      @media (min-width: $bp-l) {
-        font-size: map.get($paragraph-desktop, 'font-size');
-        line-height: map.get($paragraph-desktop, 'line-height');
-      }
-
-      @media (min-width: $bp-xl) {
-        font-size: map.get($paragraph-desktop-xl, 'font-size');
-      }
-    }
-  }
-
-  &__legal {
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
-    margin-bottom: 1.5rem;
-
-    &>.footer__link {
-      font-family: map.get($paragraph, 'font-family');
-      font-size: map.get($paragraph, 'font-size');
-      color: map.get($paragraph, 'color');
-      line-height: map.get($paragraph, 'line-height');
-
-      @media (min-width: $bp-l) {
-        font-size: map.get($paragraph-desktop, 'font-size');
-        line-height: map.get($paragraph-desktop, 'line-height');
-      }
-
-      @media (min-width: $bp-xl) {
-        font-size: map.get($paragraph-desktop-xl, 'font-size');
-      }
-    }
-
-    @media (min-width: $bp-m) {
-      text-align: start;
-    }
-  }
-
-  &__copy {
-    font-family: map.get($paragraph, 'font-family');
-    font-size: map.get($paragraph, 'font-size');
-    color: map.get($paragraph, 'color');
-    line-height: map.get($paragraph, 'line-height');
-    margin-top: 1rem;
-    margin: 0 auto;
-
-    @media (min-width: $bp-l) {
-      font-size: map.get($paragraph-desktop, 'font-size');
-      line-height: map.get($paragraph-desktop, 'line-height');
-      margin: 0;
-      width: 100%;
-      text-align: start;
-      max-width: 1250px;
-    }
-
-    @media (min-width: $bp-xl) {
-      font-size: map.get($paragraph-desktop-xl, 'font-size');
-      max-width: 1500px;
-    }
-  }
 }

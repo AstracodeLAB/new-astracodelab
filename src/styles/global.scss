@@ -1,25 +1,12 @@
 /* Importar archivos SCSS específicos */
-@use './CtaHero.scss';
 @use './Header.scss';
-@use './Hero.scss';
-@use './ImageSlider.scss';
 @use './Logo.scss';
-@use './WebDesignImages.scss';
-@use './WebDesignSection.scss';
-@use './Cta.scss';
-@use './AboutUsSection.scss';
-@use './ServicesSection.scss';
-@use './ProjectsSection.scss';
-@use './ProjectsCard.scss';
 @use './Contact.scss';
 @use './SocialBar.scss';
 @use './Footer.scss';
-@use './WayOfWorkingSection.scss';
-@use './WayOfWorkingMov.scss';
-@use './WayOfWorkingDesktop.scss';
-@use './portfolios.scss';
 @use './legal.scss';
 @use './Error.scss';
+@use './variables.scss' as *;
 
 /* Estilos globales */
 :root {
@@ -31,25 +18,37 @@ html {
 }
 
 body {
-    background-image: url('../images/Astra2.png');
-    background-size: 100vw 70vh;
-    background-position: top;
-    background-repeat: no-repeat;
-    background-color: #fdfcff;
-    overflow-x: hidden;
+  font-family: $font-primary;
+    header {
+        padding: 20px;
+      }
+    
+      main {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+    
+      .hero {
+        padding-top: 60px;
+      }
+    
+      section {
+        padding-top: 60px;
+      }
+    
+      footer {
+        padding: 30px 20px; // top-bottom 30px, left-right 20px
+      }
 
     @media (min-width: 768px) {
-        background-size: 100vw 70vh;
+      
     }
     @media (min-width: 1024px) {
-        background-size: 100vw 85vh;
+      
     }
     @media (min-width: 1440px) {
-        background-size: 100vw 90vh;
+       
     }
 }
 
-/* Tailwind Directives */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+

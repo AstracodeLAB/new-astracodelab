@@ -2,30 +2,19 @@
 @use './variables.scss' as *;
 
 .legal-notice {
-	background-color: $services-hero-purple;
+
 	padding: 20px;
 	margin: 10px;
 	border-radius: 10px;
 
-	@media (min-width: $bp-m) {
-		padding: 50px;
-		margin: 20px;
-	}
-
-	@media (min-width: $bp-l) {
-		padding: 70px;
-		margin: 30px;
-	}
 
 	&__title {
 		text-transform: uppercase;
-		font-family: map.get($h1, 'font-family');
-		color: map.get($h1, 'color');
+
+
 		font-size: 2rem;
 
-		@media (min-width: $bp-l) {
-			font-size: map.get($h1-desktop, 'font-size');
-		}
+		
 	}
 
 	&__section {
@@ -33,36 +22,26 @@
 		margin-bottom: 10px;
 
 		&-title {
-			font-family: map.get($h2, 'font-family');
-			font-size: map.get($h2, 'font-size');
+
 			margin-bottom: 10px;
 
-			@media (min-width: $bp-l) {
-				font-size: map.get($h2-desktop, 'font-size');
-			}
+
 		}
 	}
 
 	&__content {
-		font-family: map.get($paragraph, 'font-family');
-		font-size: map.get($paragraph, 'font-size');
-		color: map.get($paragraph, 'color');
-		line-height: map.get($paragraph, 'line-height');
+
+		color: $text-bg-white;
+
 		margin-bottom: 10px;
 
-		@media (min-width: $bp-l) {
-			font-size: map.get($paragraph-desktop, 'font-size');
-		}
 	}
 
 	&__list {
-		font-family: map.get($paragraph, 'font-family');
-		font-size: map.get($paragraph, 'font-size');
-		color: map.get($paragraph, 'color');
-		line-height: map.get($paragraph, 'line-height');
 
-		@media (min-width: $bp-l) {
-			font-size: map.get($paragraph-desktop, 'font-size');
-		}
+		color: $text-bg-white;
+
+
+
 	}
 }

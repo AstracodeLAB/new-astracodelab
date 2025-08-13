@@ -1,12 +1,6 @@
 ---
 import Header from './partials/Header.astro';
 import '../styles/global.scss';
-import '@fontsource/ropa-sans';
-import '@fontsource/konkhmer-sleokchher';
-import '@fontsource-variable/raleway';
-import raleway from '@fontsource-variable/raleway/files/raleway-latin-wght-normal.woff2';
-import ropaSans from '@fontsource/ropa-sans/files/ropa-sans-latin-400-normal.woff2';
-import konkhmer from '@fontsource/konkhmer-sleokchher/files/konkhmer-sleokchher-latin-400-normal.woff2';
 ---
 
 <!doctype html>
@@ -16,11 +10,7 @@ import konkhmer from '@fontsource/konkhmer-sleokchher/files/konkhmer-sleokchher-
     <title>Astracodelab | Diseño y desarrollo web</title>
     <meta name='description' content='AstracodeLAB | Diseño y desarrollo web' />
     <meta name='viewport' content='width=device-width' />
-    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
-    <link rel='preload' as='font' type='font/woff2' href={raleway} crossorigin='anonymous' />
-    <link rel='preload' as='font' href={ropaSans} type='font/woff2' crossorigin='anonymous' />
-    <link rel='preload' as='font' href={konkhmer} type='font/woff2' crossorigin='anonymous' />
-    <!-- <link rel='stylesheet' href={konkhmer} media='print' onload="this.media='all'" /> -->
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />    
     <meta name='msvalidate.01' content='08A045B5065017F91DE8FBA3B76391FC' />
     <meta property='og:title' content='Astracodelab | Diseño y desarrollo web' />
     <meta
@@ -35,7 +25,8 @@ import konkhmer from '@fontsource/konkhmer-sleokchher/files/konkhmer-sleokchher-
   <body>
     <Header />
     <slot />
-    <!-- 100% privacy-first analytics -->
-    <script async src='https://scripts.simpleanalyticscdn.com/latest.js'></script>
   </body>
 </html>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+</style>

@@ -4,16 +4,16 @@
 .social-bar {
     margin-top: 20px;
     margin-bottom: 20px;
+    color: white;
 
     &__title {
-        font-family: map.get($h1, font-family);
-        color: $black;
-        margin-bottom: 5px;
+       margin-bottom: 5px;
     }
 
     &__icons {
         display: flex;
         justify-content: center;
         gap: 10px;
+        
     }
 }

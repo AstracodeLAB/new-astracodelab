@@ -7,42 +7,25 @@
 	justify-content: space-between;
 	padding-top: 10px;
 
-	@media (min-width: $bp-m) {
-		padding-top: 20px;
-		padding-left: 10px;
-		padding-right: 10px;
-	}
-	@media (min-width: $bp-l) {
-		display: flex;
-		flex-direction: column;
-	}
+	
 
 	&__text {
-		font-family: map.get($paragraph, 'font-family');
 		font-size: 0.8rem;
-		color: map.get($paragraph, 'color');
-		line-height: map.get($paragraph, 'line-height');
+		color: $blue-primary;
 
-		@media (min-width: $bp-l) {
-			font-size: map.get($paragraph-desktop, 'font-size');
-			line-height: map.get($paragraph-desktop, 'line-height');
-		}
+
+
 	}
 }
 
 .navigation {
-	background-color: $bg-white;
-	border: 1px solid $white;
+
+
 	border-radius: 50px;
 	width: 100%;
 	box-shadow: $shadow;
 
-	@media (min-width: $bp-l) {
-		max-width: 1250px;
-	}
-	@media (min-width: $bp-xl) {
-		max-width: 1500px;
-	}
+
 
 	&__container {
 		margin: 0 auto;
@@ -51,19 +34,14 @@
 		align-items: center;
 		justify-content: space-between;
 		padding-right: 10px;
-		@media (min-width: $bp-m) {
-			flex-wrap: nowrap;
-			padding: 0;
-		}
+
 
 		&-logo {
 			order: 0;
 			position: relative;
 			width: 70px;
 
-			@media (min-width: $bp-m) {
-				width: 150px;
-			}
+
 		}
 		&-toggle {
 			display: none;
@@ -80,11 +58,8 @@
 			&-icon {
 				width: 30px;
 				height: 30px;
-				fill: $white;
 
-				@media (min-width: $bp-m) {
-					display: none;
-				}
+
 			}
 		}
 
@@ -94,23 +69,11 @@
 			left: -850px;
 			width: 100%;
 			height: 100%;
-			background-color: $white;
+
 			color: rgb(0, 0, 0);
 			transition: left 0.3s ease;
 			z-index: 1000;
 
-			@media (min-width: $bp-m) {
-				display: flex;
-				position: static;
-				flex-direction: row;
-				justify-content: center;
-				align-items: center;
-				margin: 0;
-				gap: 30px;
-				padding: 0;
-				cursor: pointer;
-				background-color: transparent;
-			}
       &--close {
       left: -850px;
       }
@@ -123,28 +86,20 @@
 				position: relative;
 
 				&:hover {
-					color: $purple; /* Cambiar color al hover */
+				
 				}
 				&-close {
 					display: none; /* Ocultar la "X" inicialmente */
 					text-align: right;
 					margin: 20px;
 
-					& svg {
-						fill: $black;
-					}
 
-					@media (min-width: $bp-m) {
-						display: none;
-					}
 				}
 			}
 
 			&-button {
 				display: block;
-				@media (min-width: $bp-m) {
-					display: none;
-				}
+
 			}
 
 			&-itemsMap {
@@ -153,9 +108,7 @@
 				display: flex;
 				flex-direction: column;
 				align-items: center;
-				@media (min-width: $bp-m) {
-					display: block;
-				}
+
 
 				&-link {
 					font-size: 1.2rem;
@@ -168,21 +121,8 @@
 					text-transform: uppercase;
 					width: 140px;
 
-					@media (min-width: $bp-m) {
-						display: flex;
-						flex-direction: row;
-						font-weight: 400;
-						color: $white;
-						width: auto;
+					
 
-						&:hover {
-							color: $purple;
-						}
-					}
-
-					@media (min-width: $bp-l) {
-						font-size: map.get($paragraph-desktop, 'font-size');
-					}
 				}
 
 				&-linkSubmenu {
@@ -191,23 +131,13 @@
 					display: flex;
 					text-transform: uppercase;
 
-					@media (min-width: $bp-m) {
-						&:hover {
-							color: $blueDark;
-							background-color: $purple;
-						}
-					}
+
 				}
 				&-arrow {
 					width: 20px;
 					height: 20px;
 					margin-left: 8px;
 					transition: transform 0.3s ease;
-
-					@media (min-width: $bp-m) {
-						margin: 3px 0 0 0;
-						fill: white;
-					}
 				}
 			}
 		}
@@ -254,7 +184,6 @@
 				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
 				&.open {
-					background-color: $white;
 					padding-top: 10px;
 					margin-top: 30px;
 					padding-bottom: 10px;
@@ -265,9 +194,7 @@
 					cursor: pointer;
 					padding: 5px 10px 5px 10px;
 					font-weight: 400;
-					@media (min-width: $bp-m) {
-						width: 300px;
-					}
+
 				}
 			}
 		}
@@ -277,14 +204,5 @@
 /* button contact CTA */
 .button-header {
 	display: none;
-	@media (min-width: $bp-m) {
-		display: flex;
-		width: 300px;
-		justify-content: center;
-	}
-	@media (min-width: $bp-l) {
-		display: flex;
-		width: 400px;
-		justify-content: center;
-	}
+
 }

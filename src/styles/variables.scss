@@ -6,149 +6,158 @@
             color: map.get($h1bold, "color");
         }*/
 
-// Breakpoints
-$bp-xs: 426px;
-$bp-s: 520px;
-$bp-m: 768px;
-$bp-l: 1024px;
-$bp-xl: 1440px;
 
 // Colors
-$white: #fdfcff;
-$bg-white: rgba($white, 0.05);
-$black: #120c23;
-$blueDark: #381388;
-$corner-blueDark: rgba($blueDark, 0.9);
-$cta: #641eff;
-$purple: #b7aaff;
-$bg-purple: rgba($purple, 0.05);
-$services-purple: #7243c9;
-$services-hero-purple: rgba($services-purple, 0.2);
-$gray: #f3f1ff;
+$blue-primary: #641eff;
+$blue-secondary: #f3f1ff;
 $green: #bbff00;
-$backgroundContainer: #FBFAFF;
-$cardProjects:rgba(214, 208, 255, 0.1);
-$texWhite: rgba($white, 0.8);
+$title-color: #2A1160;
+$text-bg-color: rgb(46, 30, 82,0.95);
+$text-bg-white: rgb(46, 30, 82, 0.80);
+$cardWhite: rgb(255, 255, 255,0.80);
+$gradientBlue: linear-gradient(90deg, rgb(30, 14, 98) 0%, rgb(100, 30, 255) 100%);
 
 // Shadows
-$shadow: 0px 2px 2px rgba(18, 12, 35, 0.5);
+$shadow: 0px 1px 40px 0px rgba(42, 17, 96, 0.20);
 
-// Paragraph
-$paragraph: (
-	font-family: 'Ropa Sans',
-	font-size: 1rem,
-	// 16px
-	color: rgba(18, 12, 35, 0.8),
-	line-height: 1.25rem // 20px,,,,,,,,
-);
+//fonts
+$font-primary: 'Roboto', sans-serif;
 
-$paragraph-desktop: (
-	font-family: 'Ropa Sans',
-	font-size: 1.125rem,
-	// 18px
-	color: rgba(18, 12, 35, 0.8),
-	line-height: 1.5625rem // 25px,,,,,,,,
+//fonts sizes
+// -----------------
+// MOBILE
+// -----------------
+$H1-mobile: (
+  letter-spacing: 1%,
+  line-height: 43px,
+  font-size: 36px,
+  font-weight: 700 // Bold
 );
 
-$paragraph-desktop-xl: (
-	font-family: 'Ropa Sans',
-	font-size: 1.25rem,
-	// 20px
-	color: rgba(18, 12, 35, 0.8),
-	line-height: 1.5625rem // 25px,,,,,,,,
+$H2-mobile: (
+  letter-spacing: 0,
+  line-height: 35px,
+  font-size: 28px,
+  font-weight: 700 // Bold
 );
 
-// h1
-$h1: (
-	font-family: 'Raleway Variable',
-	font-size: 2.625rem,
-	// 42px
-	color: $white,
-	letter-spacing: -0.1575rem,
-	line-height: 1.5625rem // 25px,,,,,,,
+$H3-mobile: (
+  letter-spacing: 0,
+  line-height: 23px,
+  font-size: 20px,
+  font-weight: 500 // Medium
 );
 
-$h1-desktop: (
-	font-family: 'Raleway Variable',
-	font-size: 4.6rem,
-	// 96px
-	color: $white,
-	letter-spacing: -0.1575rem,
+$Body-mobile: (
+  letter-spacing: 10%,
+  line-height: 25px,
+  font-size: 15px,
+  font-weight: 400 // Regular
 );
 
-// h1 especial
-$h1bold: (
-	font-family: 'Konkhmer Sleokchher',
-	font-size: 2.625rem,
-	// 42px
-	color: $white,
-	letter-spacing: -0.1575rem,
+$SmallText-mobile: (
+  letter-spacing: 10%,
+  line-height: 24px,
+  font-size: 12px,
+  font-weight: 500 // Medium
 );
 
-$h1bold-desktop: (
-	font-family: 'Konkhmer Sleokchher',
-	font-size: 4.6rem,
-	// 96px
-	color: $white,
-	letter-spacing: -0.1575rem,
+$Button-mobile: (
+  letter-spacing: 10%,
+  line-height: 24px,
+  font-size: 16px,
+  font-weight: 400 // Regular
 );
 
-// h2
-$h2: (
-	font-family: 'Raleway Variable',
-	font-size: 1.5rem,
-	// 24px
-	color: $blueDark,
+
+// -----------------
+// TABLET
+// -----------------
+$H1-tablet: (
+  letter-spacing: 0,
+  line-height: 40px,
+  font-size: 44px,
+  font-weight: 700 // Bold
 );
 
-$h2-desktop: (
-	font-family: 'Raleway Variable',
-	font-size: 2rem,
-	color: $blueDark,
-);
-$h2-desktop-l: (
-	font-family: 'Raleway Variable',
-	font-size: 3rem,
-	color: $blueDark,
+$H2-tablet: (
+  letter-spacing: 0,
+  line-height: 40px,
+  font-size: 32px,
+  font-weight: 700 // Bold
 );
 
-// h3
-$h3: (
-	font-family: 'Raleway Variable',
-	font-size: 1.25rem,
-	// 20px
-	color: $black,
-	font-weight: 500,
+$H3-tablet: (
+  letter-spacing: 0,
+  line-height: 32px,
+  font-size: 22px,
+  font-weight: 500 // Medium
 );
 
-$h3-desktop: (
-	font-family: 'Raleway Variable',
-	font-size: 1.8rem,
-	// 33px
-	color: $black,
-	font-weight: 500,
-);
-$h3-desktop-services: (
-	font-family: 'Raleway Variable',
-	font-size: 1.8rem,
-	// 33px
-	color: $black,
-	font-weight: 500,
+$Body-tablet: (
+  letter-spacing: 5%,
+  line-height: 26px,
+  font-size: 16px,
+  font-weight: 400 // Regular
 );
 
-// Small
-$small: (
-	font-family: 'Ropa Sans',
-	font-size: 0.75rem,
-	// 12px
-	color: rgba(18, 12, 35, 0.8),
-	line-height: 1.25rem // 20px,,,,,,,,
+$SmallText-tablet: (
+  letter-spacing: 8%,
+  line-height: 25px,
+  font-size: 13px,
+  font-weight: 500 // Medium
 );
 
-$small-desktop: (
-	font-family: 'Ropa Sans',
-	font-size: 0.875rem,
-	// 14px
-	color: rgba(18, 12, 35, 0.8),
-	line-height: 1.25rem // 20px,,,,,,,,
+$Button-tablet: (
+  letter-spacing: 8%,
+  line-height: 24px,
+  font-size: 17px,
+  font-weight: 400 // Regular
 );
+
+
+// -----------------
+// DESKTOP
+// -----------------
+$H1-desktop: (
+  letter-spacing: 0,
+  line-height: 60px,
+  font-size: 52px,
+  font-weight: 700 // Bold
+);
+
+$H2-desktop: (
+  letter-spacing: 0,
+  line-height: 46px,
+  font-size: 38px,
+  font-weight: 700 // Bold
+);
+
+$H3-desktop: (
+  letter-spacing: 0,
+  line-height: 34px,
+  font-size: 24px,
+  font-weight: 500 // Medium
+);
+
+$Body-desktop: (
+  letter-spacing: 5%,
+  line-height: 27px,
+  font-size: 17px,
+  font-weight: 400 // Regular
+);
+
+$SmallText-desktop: (
+  letter-spacing: 10%,
+  line-height: 21px,
+  font-size: 14px,
+  font-weight: 500 // Medium
+);
+
+$Button-desktop: (
+  letter-spacing: 10%,
+  line-height: 24px,
+  font-size: 20px,
+  font-weight: 400 // Regular
+);
+
