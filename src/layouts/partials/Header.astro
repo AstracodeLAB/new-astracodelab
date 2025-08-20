@@ -1,41 +1,51 @@
 ---
 import Logo from '../components/Logo.astro';
-
 ---
 
 <header class='header header__text'>
-  <nav class='navigation'>
+  <nav class='navigation' aria-label='Menú principal'>
     <div class='navigation__container'>
+      <!-- Logo -->
       <div class='navigation__container-logo'>
         <Logo />
       </div>
 
-      <input id='nav-toggle' type='checkbox' class='navigation__container-toggle' />
-      <label for='nav-toggle' class='navigation__container-button navigation__container-button--open'>
+      <!-- Botón hamburguesa (móvil) -->
+      <button
+        id='nav-toggle'
+        class='navigation__container-button navigation__container-button--open'
+        aria-expanded='false'
+        aria-controls='nav-menu'
+        aria-label='Abrir menú'
+      >
         <svg class='navigation__container-button-icon' viewBox='0 0 20 20'>
-          <title>Menu Open</title>
+          <title>Abrir menú</title>
           <path d='M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0V0z'></path>
         </svg>
-      </label>
-      <ul id='nav-menu' class='navigation__container-menu'>
+      </button>
+
+      <!-- Menú principal -->
+      <ul id='nav-menu' class='navigation__container-menu' aria-hidden='true'>
+        <!-- Botón cerrar dentro del menú móvil -->
         <li class='navigation__container-menu-item navigation__container-menu-item-close'>
-          <label for='nav-toggle' class='navigation__container-button navigation__container-button--close'>
+          <button class='navigation__container-button navigation__container-button--close' aria-label='Cerrar menú'>
             <svg class='navigation__container-button-icon' viewBox='0 0 20 20'>
-              <title>Menu Close</title>
+              <title>Cerrar menú</title>
               <polygon
                 points='11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2'
                 transform='rotate(45 10 10)'></polygon>
             </svg>
-          </label>
+          </button>
         </li>
 
+        <!-- Mega menú -->
         <li class='navigation__container-menu-itemsMap'>
-          <a href='/' class='navigation__container-menu-itemsMap-link'>inicio</a>
-        </li>
-
-        <li id='services' class='navigation__container-menu-itemsMap'>
-          <a href='/' class='navigation__container-menu-itemsMap-link'>
-            servicios
+          <button
+            class='navigation__container-menu-itemsMap-link'
+            aria-expanded='false'
+            aria-controls='submenu-services'
+          >
+            Servicios
             <svg
               class='navigation__container-menu-itemsMap-arrow'
               viewBox='0 0 20 20'
@@ -43,94 +53,114 @@ import Logo from '../components/Logo.astro';
             >
               <path d='M5 7l5 5 5-5H5z'></path>
             </svg>
-          </a>
-          <!-- Submenú  -->
-          <ul class='navigation__container-submenu'>
-            <li class='navigation__container-submenu-item'>
-              <a href='/portfolios-web' class='navigation__container-menu-itemsMap-linkSubmenu'
-                >portfolios y proyectos creativos</a
-              >
-            </li>
-            <li class='navigation__container-submenu-item'>
-              <a href='/sitios-web-corporativos' class='navigation__container-menu-itemsMap-linkSubmenu'>sitios web corporativos</a>
-            </li>
-            <li class='navigation__container-submenu-item'>
-              <a href='/landing-page' class='navigation__container-menu-itemsMap-linkSubmenu'>landing page</a>
-            </li>
-            <li class='navigation__container-submenu-item'>
-              <a href='/web-reservas-de-citas-online' class='navigation__container-menu-itemsMap-linkSubmenu'
-                >sistemas de reservas y citas</a
-              >
-            </li>
-          </ul>
+          </button>
+
+          <div id='submenu-services' class='navigation__container-megamenu' aria-hidden='true'>
+            <div class='megamenu-column'>
+              <h3>Diseño y desarrollo web</h3>
+              <a href='/web-corporativa'>Web corporativa</a>
+              <a href='/tienda-online'>Tienda online / e-commerce</a>
+              <a href='/landing-page'>Landing pages</a>
+              <a href='/redisenio-web'>Rediseño web</a>
+            </div>
+            <div class='megamenu-column'>
+              <h3>Funcionalidades y Optimización</h3>
+              <a href='/web-corporativa'>Web corporativa</a>
+              <a href='/tienda-online'>Tienda online / e-commerce</a>
+              <a href='/landing-page'>Landing pages</a>
+              <a href='/redisenio-web'>Rediseño web</a>
+            </div>
+            <div class='megamenu-column'>
+              <h3>Mantenimiento y soporte</h3>
+              <a href='/mantenimiento-web'>Mantenimiento web</a>
+              <a href='/hosting-dominio'>Hosting y dominio</a>
+            </div>
+          </div>
         </li>
 
         <li class='navigation__container-menu-itemsMap'>
-          <a href='/#contact' class='navigation__container-menu-itemsMap-link'>contacto</a>
+          <a href='/#contact' class='navigation__container-menu-itemsMap-link'>Astracodelab</a>
         </li>
 
         <li class='navigation__container-menu-itemsMap'>
-          <a href='/#projects' class='navigation__container-menu-itemsMap-link'>proyectos</a>
+          <a href='/#projects' class='navigation__container-menu-itemsMap-link'>Contacto</a>
         </li>
 
         <li class='navigation__container-menu-itemsMap'>
-          <a href='/#about' class='navigation__container-menu-itemsMap-link'>sobre nosotras</a>
+          <a href='/#about' class='navigation__container-menu-itemsMap-link'>Blog</a>
+        </li>
+        <li class='navigation__container-menu-itemsMap cta-mobile'>
+          <a href='/#contact' class='btn btn-outline'>¿Hablamos?</a>
         </li>
       </ul>
 
       <div class='button-header'>
-
+        <a href='/#contact' class='btn btn-outline'>¿Hablamos?</a>
       </div>
     </div>
   </nav>
 </header>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const menuItemsWithSubmenus = document.querySelectorAll('.navigation__container-menu-itemsMap');
-    const navToggle = document.querySelector('#nav-toggle');
+  document.addEventListener('DOMContentLoaded', () => {
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    const closeBtn = navMenu.querySelector('.navigation__container-button--close');
 
-    menuItemsWithSubmenus.forEach((item) => {
-      const submenu = item.querySelector('.navigation__container-submenu');
-      const arrowIcon = item.querySelector('.navigation__container-menu-itemsMap-arrow');
+    const toggleMenu = (open) => {
+      const expanded = open ? 'true' : 'false';
+      navToggle.setAttribute('aria-expanded', expanded);
+      navMenu.setAttribute('aria-hidden', open ? 'false' : 'true');
+      navMenu.style.display = open ? 'block' : 'none';
+    };
 
-      if (submenu && arrowIcon) {
-        // Al hacer clic en el enlace principal, abre o cierra el submenú
-        const onclick = (event) => {
-          event.preventDefault(); // Evita que el enlace navegue si hay un submenú
-          event.stopPropagation(); // Evita que el evento se propague a los elementos padres
-          console.log('click');
-          // Alterna el submenú
-          submenu.classList.toggle('open');
+    navToggle.addEventListener('click', () => {
+      const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
+      toggleMenu(!isOpen);
+    });
 
-          // Ajusta la rotación del icono de flecha
-          if (submenu.classList.contains('open')) {
-            arrowIcon.style.transform = 'rotate(180deg)';
-          } else {
-            arrowIcon.style.transform = 'rotate(0deg)';
-          }
-        };
-        item.querySelector('.navigation__container-menu-itemsMap-link').addEventListener('click', onclick);
-      } else {
-        item.querySelector('.navigation__container-menu-itemsMap-link').addEventListener('click', (event) => {
-          navToggle.checked = false;
-        });
+    closeBtn.addEventListener('click', () => {
+      toggleMenu(false);
+    });
+
+    // Controlar menú móvil con teclado
+    navToggle.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        navToggle.click();
       }
     });
 
-    // Cierra cualquier submenú abierto al hacer clic fuera del menú
-    document.addEventListener('click', function (event) {
-      const openSubmenus = document.querySelectorAll('.navigation__container-submenu.open');
-      openSubmenus.forEach((submenu) => {
-        //console.log(!submenu.parentElement.contains(event.target));
-        if (submenu.contains(event.target) || !submenu.parentElement.contains(event.target)) {
-          submenu.classList.remove('open');
-          const arrowIcon = submenu.parentElement.querySelector('.navigation__container-menu-itemsMap-arrow');
-          if (arrowIcon) {
-            arrowIcon.style.transform = 'rotate(0deg)';
-          }
-        }
-      });
+    // Mega menú accesible
+    const serviceBtn = document.querySelector('[aria-controls="submenu-services"]');
+    const submenu = document.getElementById('submenu-services');
+    const arrowIcon = serviceBtn.querySelector('svg');
+
+    const toggleSubmenu = (open) => {
+      const expanded = open ? 'true' : 'false';
+      serviceBtn.setAttribute('aria-expanded', expanded);
+      submenu.setAttribute('aria-hidden', open ? 'false' : 'true');
+      submenu.style.display = open ? 'flex' : 'none';
+      arrowIcon.style.transform = open ? 'rotate(180deg)' : 'rotate(0deg)';
+    };
+
+    serviceBtn.addEventListener('click', () => {
+      const isOpen = serviceBtn.getAttribute('aria-expanded') === 'true';
+      toggleSubmenu(!isOpen);
+    });
+
+    serviceBtn.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        serviceBtn.click();
+      }
+    });
+
+    // Cierra mega menú al hacer clic fuera
+    document.addEventListener('click', (e) => {
+      if (!serviceBtn.contains(e.target) && !submenu.contains(e.target)) {
+        toggleSubmenu(false);
+      }
     });
   });
 </script>
