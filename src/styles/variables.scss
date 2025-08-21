@@ -28,7 +28,7 @@ $font-primary: 'Roboto', sans-serif;
 // MOBILE
 // -----------------
 $H1-mobile: (
-  letter-spacing: 1%,
+  letter-spacing: 0%,
   line-height: 43px,
   font-size: 36px,
   font-weight: 700 // Bold
@@ -43,13 +43,13 @@ $H2-mobile: (
 
 $H3-mobile: (
   letter-spacing: 0,
-  line-height: 23px,
+  line-height: 26px,
   font-size: 20px,
   font-weight: 500 // Medium
 );
 
 $Body-mobile: (
-  letter-spacing: 10%,
+  letter-spacing: 5%,
   line-height: 25px,
   font-size: 15px,
   font-weight: 400 // Regular
@@ -57,7 +57,7 @@ $Body-mobile: (
 
 $SmallText-mobile: (
   letter-spacing: 10%,
-  line-height: 24px,
+  line-height: 18px,
   font-size: 12px,
   font-weight: 500 // Medium
 );
@@ -75,7 +75,7 @@ $Button-mobile: (
 // -----------------
 $H1-tablet: (
   letter-spacing: 0,
-  line-height: 40px,
+  line-height: 52px,-
   font-size: 44px,
   font-weight: 700 // Bold
 );
@@ -155,6 +155,51 @@ $SmallText-desktop: (
 );
 
 $Button-desktop: (
+  letter-spacing: 10%,
+  line-height: 24px,
+  font-size: 20px,
+  font-weight: 400 // Regular
+);
+
+// -----------------
+// DESKTOP XL
+// -----------------
+$H1-desktop-xl: (
+  letter-spacing: 0,
+  line-height: 68px,
+  font-size: 60px,
+  font-weight: 700 // Bold
+);
+
+$H2-desktop-xl: (
+  letter-spacing: 0,
+  line-height: 52px,
+  font-size: 44px,
+  font-weight: 700 // Bold
+);
+
+$H3-desktop-xl: (
+  letter-spacing: 0,
+  line-height: 34px,
+  font-size: 26px,
+  font-weight: 500 // Medium
+);
+
+$Body-desktop-xl: (
+  letter-spacing: 5%,
+  line-height: 27px,
+  font-size: 17px,
+  font-weight: 400 // Regular
+);
+
+$SmallText-desktop-xl: (
+  letter-spacing: 10%,
+  line-height: 21px,
+  font-size: 14px,
+  font-weight: 500 // Medium
+);
+
+$Button-desktop-xl: (
   letter-spacing: 10%,
   line-height: 24px,
   font-size: 20px,
