@@ -7,6 +7,7 @@
   width: 100%;
   background: #ffffff;
   border-bottom: 1px solid #eee;
+
 }
 
 .navigation {
@@ -16,7 +17,7 @@
 .navigation__container {
   width: 100%;
   margin: 0 auto;
-  padding: 0.75rem 1rem;
+  padding: 0.75rem 1.25rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -27,6 +28,9 @@
 .navigation__container-logo {
   display: flex;
   align-items: center;
+  @media (min-width: 1024px) {
+    width:150px;
+  }
 }
 
 /* ---- BOTÓN HAMBURGUESA  ---- */
@@ -78,7 +82,7 @@
 .navigation__container-menu-itemsMap-link {
   font-size: 1rem;
   font-weight: 500;
-  color: #333;
+  color: $text-bg-color;
   text-decoration: none;
   background: none;
   border: none;
@@ -89,8 +93,8 @@
 }
 
 .navigation__container-menu-itemsMap-link:hover {
-  color: #6b46c1;
-  /* tu violeta */
+  color:$blue-primary;
+
 }
 
 /* ---- MEGA MENÚ (por defecto estilo mobile: acordeón) ---- */
@@ -119,11 +123,11 @@
   font-weight: 700;
   font-size: 1rem;
   margin: 1rem 0 0.5rem 0;
-  color: #111;
+  color:$title-color;
 }
 
 .megamenu-column a {
-  color: #333;
+  color: $text-bg-color;
   text-decoration: none;
   margin: 0.25rem 0;
   font-weight: 400;
@@ -131,7 +135,7 @@
 }
 
 .megamenu-column a:hover {
-  color: #6b46c1;
+  color: $blue-primary;
 }
 
 /* ---- FLECHA DEL BOTÓN ---- */
@@ -182,7 +186,7 @@
   .navigation__container-megamenu {
     position: absolute;
     top: 100%;
-    left: 0;
+    left: 20%;
     display: none;
     flex-direction: row;
     gap: 2rem;
