@@ -6,11 +6,12 @@
 @use './Footer.scss';
 @use './legal.scss';
 @use './Error.scss';
+@use './CardPrecio.scss';
 @use './variables.scss' as *;
 
 /* Estilos globales */
 :root {
-    font-family: 'Ropa Sans', 'Raleway Variable', sans-serif;
+    font-family: $font-primary;
 }
 
 html {
@@ -23,10 +24,10 @@ body {
         padding: 20px;
       }
     
-      main {
-        padding-left: 30px;
-        padding-right: 30px;
-      }
+      // main {
+      //   padding-left: 30px;
+      //   padding-right: 30px;
+      // }
     
       .hero {
         padding-top: 60px;

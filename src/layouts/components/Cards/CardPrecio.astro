@@ -1,0 +1,252 @@
+---
+// PricingComponent.astro
+const pricingPlans = [
+  {
+    id: 'landing',
+    price: '500€',
+    title: 'LANDING PAGE',
+    description: 'Ideal para Campañas, eventos, web promocionales.',
+    features: [
+      'Landing one-page optimizada',
+      'Adaptada para todos los dispositivos',
+      'Activación o migración de dominio',
+      'Extras y Optimización opcionales',
+    ],
+    buttonText: 'Solicitar información',
+    highlighted: false,
+  },
+  {
+    id: 'impulso',
+    price: '750€',
+    title: 'IMPULSO WEB',
+    description: 'Ideal para webs corporativas o portfolios profesionales',
+    features: [
+      'Hasta 6 secciones',
+      'Adaptada para todos los dispositivos',
+      'Activación o migración de dominio',
+      'Extras y Optimización opcionales',
+      'Copywriting y accesibilidad',
+    ],
+    buttonText: 'Solicitar información',
+    highlighted: true,
+    badge: 'MÁS VENDIDO/CONSULTADO',
+    note: 'IVA no incluido*',
+  },
+  {
+    id: 'ecommerce',
+    price: '140€',
+    title: 'E-COMMERCE',
+    description: 'Tienda online ideal para pymes y emprendedores',
+    features: [
+      'Landing one-page optimizada',
+      'Adaptada para todos los dispositivos',
+      'Activación o migración de dominio',
+      'Extras y Optimización opcionales',
+    ],
+    buttonText: 'Solicitar información',
+    highlighted: false,
+    note: '12,50€/mes durante 12 meses + 150€ único pago',
+  },
+];
+---
+
+<section class='pricing-section'>
+  <div class='pricing-container'>
+    <!-- Desktop/Tablet View -->
+    <div class='pricing-grid'>
+      {
+        pricingPlans.map((plan) => (
+          <div class={`pricing-card ${plan.highlighted ? 'highlighted' : ''}`}>
+            {plan.badge && <div class='badge'>{plan.badge}</div>}
+
+            <div class={`pricing-header ${plan.badge ? '' : 'nb'}`}>
+              <span class='price-label'>Desde</span>
+              <div class='price'>{plan.price}</div>
+              {plan.note && <div class='price-note'>{plan.note}</div>}
+              <div class='plan-title'>{plan.title}</div>
+            </div>
+
+            <div class='plan-description'>{plan.description}</div>
+
+            <ul class='features-list'>
+              {plan.features.map((feature) => (
+                <li class='feature-item'>
+                  <svg class='check-icon' viewBox='0 0 20 20' fill='currentColor'>
+                    <path
+                      fill-rule='evenodd'
+                      d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'
+                      clip-rule='evenodd'
+                    />
+                  </svg>
+                  {feature}
+                </li>
+              ))}
+            </ul>
+
+            <button class={`cta-button ${plan.highlighted ? 'primary' : 'secondary'}`}>{plan.buttonText}</button>
+          </div>
+        ))
+      }
+    </div>
+
+    <!-- Mobile Carousel -->
+    <div class='mobile-carousel'>
+      <div class='carousel-container'>
+        <div class='carousel-track' id='carousel-track'>
+          {
+            pricingPlans.map((plan, index) => (
+              <div class={`pricing-card mobile ${plan.highlighted ? 'highlighted' : ''}`} data-slide={index}>
+                {plan.badge && <div class='badge'>{plan.badge}</div>}
+
+                <div class='pricing-header'>
+                  <span class='price-label'>Desde</span>
+                  <div class='price'>{plan.price}</div>
+                  {plan.note && <div class='price-note'>{plan.note}</div>}
+                  <div class='plan-title'>{plan.title}</div>
+                </div>
+
+                <div class='plan-description'>{plan.description}</div>
+
+                <ul class='features-list'>
+                  {plan.features.map((feature) => (
+                    <li class='feature-item'>
+                      <svg class='check-icon' viewBox='0 0 20 20' fill='currentColor'>
+                        <path
+                          fill-rule='evenodd'
+                          d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'
+                          clip-rule='evenodd'
+                        />
+                      </svg>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+
+                <button class={`cta-button ${plan.highlighted ? 'primary' : 'secondary'}`}>{plan.buttonText}</button>
+              </div>
+            ))
+          }
+        </div>
+
+        <button class='carousel-btn prev' id='prev-btn'>
+          <svg viewBox='0 0 24 24' fill='currentColor'>
+            <path d='M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z'></path>
+          </svg>
+        </button>
+
+        <button class='carousel-btn next' id='next-btn'>
+          <svg viewBox='0 0 24 24' fill='currentColor'>
+            <path d='M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z'></path>
+          </svg>
+        </button>
+      </div>
+
+      <div class='carousel-dots'>
+        {pricingPlans.map((_, index) => <button class={`dot ${index === 1 ? 'active' : ''}`} data-slide={index} />)}
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const track = document.getElementById('carousel-track');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const dots = document.querySelectorAll('.dot');
+
+    let currentSlide = 1; // Start with the 750€ card (index 1)
+    const totalSlides = 3;
+
+    function updateCarousel() {
+      const translateValue = currentSlide * 33.333333;
+      track.style.transform = `translateX(-${translateValue}%)`;
+
+      // Update dots
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentSlide);
+      });
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      updateCarousel();
+    }
+
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+      updateCarousel();
+    }
+
+    // Button event listeners
+    nextBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      nextSlide();
+    });
+
+    prevBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      prevSlide();
+    });
+
+    // Dot event listeners
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        currentSlide = index;
+        updateCarousel();
+      });
+    });
+
+    // Set initial position to show 750€ card
+    setTimeout(() => {
+      updateCarousel();
+    }, 200);
+
+    // Touch/swipe functionality
+    let startX = 0;
+    let startY = 0;
+    let distX = 0;
+    let distY = 0;
+    let threshold = 150;
+    let restraint = 100;
+    let allowedTime = 300;
+    let elapsedTime = 0;
+    let startTime = 0;
+
+    track.addEventListener(
+      'touchstart',
+      function (e) {
+        const touchobj = e.changedTouches[0];
+        startX = touchobj.pageX;
+        startY = touchobj.pageY;
+        startTime = new Date().getTime();
+      },
+      { passive: true }
+    );
+
+    track.addEventListener(
+      'touchend',
+      function (e) {
+        const touchobj = e.changedTouches[0];
+        distX = touchobj.pageX - startX;
+        distY = touchobj.pageY - startY;
+        elapsedTime = new Date().getTime() - startTime;
+
+        if (elapsedTime <= allowedTime) {
+          if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint) {
+            if (distX > 0) {
+              prevSlide();
+            } else {
+              nextSlide();
+            }
+          }
+        }
+      },
+      { passive: true }
+    );
+
+    track.addEventListener('touchmove', function (e) {
+      e.preventDefault();
+    });
+  });
+</script>
