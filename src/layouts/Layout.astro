@@ -1,7 +1,6 @@
 ---
 import Header from './partials/Header.astro';
 import '../styles/global.scss';
-import Buttons from './components/Buttons/Buttons.astro';
 ---
 
 <!doctype html>
@@ -26,8 +25,6 @@ import Buttons from './components/Buttons/Buttons.astro';
   <body>
     <Header />
    
-    <Buttons className="btn-primary" href="/contacto">Ir a contacto</Buttons>
-
     <slot />
   </body>
 </html>

@@ -1,10 +1,15 @@
 ---
-// src/components/Buttons/Buttons.astro
-// Esto recibe las propiedades, incluyendo 'className'
-const { href, className} = Astro.props;
+const { href, className = "" } = Astro.props;
+import Arrow from '../icons/Arrow.astro';
 ---
 
-<a href={href} class={className}>
-  <slot />
-</a>
-
+{href ? (
+  <a href={href} class={className}>
+    <slot />
+    {className.includes("linkSecondary") && <Arrow />}
+  </a>
+) : (
+  <button class={className}>
+    <slot />
+  </button>
+)}

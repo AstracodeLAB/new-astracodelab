@@ -11,12 +11,14 @@
 $blue-primary: #641eff;
 $blue-secondary: #f3f1ff;
 $green: #bbff00;
+$blue-dark:  #1E0E62;
 $title-color: #2A1160;
 $text-bg-color: rgb(46, 30, 82,0.95);
 $text-bg-white: rgb(46, 30, 82, 0.80);
 $cardWhite: rgb(255, 255, 255,0.80);
 $gradientBlue: linear-gradient(90deg, rgb(30, 14, 98) 0%, rgb(100, 30, 255) 100%);
-
+$gradientButton: linear-gradient(180deg, #641EFF 10.96%, #1E0E62 127.4%);
+$gradientButtonFlip: linear-gradient(90deg, #641EFF 10.96%, #1E0E62 100%);
 // Shadows
 $shadow: 0px 1px 40px 0px rgba(42, 17, 96, 0.20);
 
@@ -202,7 +204,7 @@ $SmallText-desktop-xl: (
 $Button-desktop-xl: (
   letter-spacing: 10%,
   line-height: 24px,
-  font-size: 20px,
+  font-size: 22px,
   font-weight: 400 // Regular
 );
 
