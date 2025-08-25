@@ -1,6 +1,9 @@
 ---
 import Header from './partials/Header.astro';
 import '../styles/global.scss';
+import TitlesHero from './components/Titles/TitlesHero.astro';
+import TitleSecondary from './components/Titles/TitleSecondary.astro';
+import Subtitle from './components/Titles/Subtitle.astro';
 ---
 
 <!doctype html>
@@ -25,7 +28,11 @@ import '../styles/global.scss';
   <body>
     <Header />
    
+    <TitlesHero title="AstracodeLAB." subtitle="Diseño y desarrollo web" className="heroHome" />
+    <TitleSecondary text="Sección Importante" />
+    <Subtitle text="Subtítulo dentro de la sección" />
     <slot />
+
   </body>
 </html>
 <style>

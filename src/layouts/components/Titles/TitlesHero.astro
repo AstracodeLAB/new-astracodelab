@@ -1,0 +1,10 @@
+
+---
+const { title, subtitle, className = "" } = Astro.props;
+---
+
+<section class={`heroHome ${className}`}>
+  <h1 class="heroHome__h1">
+    {title} <span class="heroHome__tagline">{subtitle}</span>
+  </h1>
+</section>
