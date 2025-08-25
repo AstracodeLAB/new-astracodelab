@@ -1,0 +1,98 @@
+@use 'sass:map';
+@use './variables.scss' as *;
+
+.cardPregunta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media (min-width: 768px) {
+    padding: 0 90px;
+  }
+  @media (min-width: 1024px) {
+    padding: 0 90px;
+  }
+  @media (min-width: 1440px) {
+    padding: 0 208px;
+  }
+  &__content {
+    background-color: $blue-dark;
+    padding: 30px 20px;
+    @media (min-width: 768px) {
+      border-radius: 15px;
+      padding: 30px 30px;
+    }
+    @media (min-width: 1024px) {
+      border-radius: 15px;
+      padding: 40px 60px;
+      max-width: 878px;
+    }
+    
+
+    &-title {
+      font-family: $font-primary;
+      font-size: map.get($H2-mobile, 'font-size');
+      line-height: map.get($H2-mobile, 'line-height');
+      font-weight: map.get($H2-mobile, 'font-weight');
+      color: $blue-secondary;
+      margin-bottom: 10px;
+      
+
+      @media (min-width: 768px) {
+        font-size: map.get($H2-tablet, 'font-size');
+        line-height: map.get($H2-tablet, 'line-height');
+        font-weight: map.get($H2-tablet, 'font-weight');
+        letter-spacing: map.get($H2-tablet, 'letter-spacing');
+        
+      }
+      @media (min-width: 1024px) {
+        font-size: map.get($H2-desktop, 'font-size');
+        line-height: map.get($H2-desktop, 'line-height');
+        font-weight: map.get($H2-desktop, 'font-weight');
+        letter-spacing: map.get($H2-desktop, 'letter-spacing');
+        
+      }
+      @media (min-width: 1440px) {
+        font-size: map.get($H2-desktop-xl, 'font-size');
+        line-height: map.get($H2-desktop-xl, 'line-height');
+        font-weight: map.get($H2-desktop-xl, 'font-weight');
+        letter-spacing: map.get($H2-desktop-xl, 'letter-spacing');
+        
+      }
+    }
+    &-text {
+      font-family: $font-primary;
+      font-size: map.get($Body-mobile, 'font-size');
+      line-height: map.get($Body-mobile, 'line-height');
+      font-weight: map.get($Body-mobile, 'font-weight');
+      color: $blue-secondary;
+      margin-bottom: 20px;
+      
+      @media (min-width: 768px) {
+        font-size: map.get($Body-tablet, 'font-size');
+        line-height: map.get($Body-tablet, 'line-height');
+        font-weight: map.get($Body-tablet, 'font-weight');
+        letter-spacing: map.get($Body-tablet, 'letter-spacing');
+        
+      }
+      @media (min-width: 1024px) {
+        font-size: map.get($Body-desktop, 'font-size');
+        line-height: map.get($Body-desktop, 'line-height');
+        font-weight: map.get($Body-desktop, 'font-weight');
+        letter-spacing: map.get($Body-desktop, 'letter-spacing');
+        
+      }
+      @media (min-width: 1440px) {
+        font-size: map.get($Body-desktop-xl, 'font-size');
+        line-height: map.get($Body-desktop-xl, 'line-height');
+        font-weight: map.get($Body-desktop-xl, 'font-weight');
+        letter-spacing: map.get($Body-desktop-xl, 'letter-spacing');
+        
+      }
+    }
+    &-btn {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+  }
+}
