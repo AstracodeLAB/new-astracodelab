@@ -1,0 +1,20 @@
+//@use 'sass:map';
+@use './variables.scss' as *;
+
+.btn-primary {
+  display: flex;
+  max-width: 170px;
+  height: 42px;
+  padding: 5px 0;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 50px;
+  border: 2px solid $blue-primary; // borde visible
+  background: $blue-secondary;
+  cursor: pointer;
+
+  &:hover {
+    background: $blue-primary;
+  }
+}

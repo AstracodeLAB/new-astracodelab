@@ -1,0 +1,10 @@
+---
+// src/components/Buttons/Buttons.astro
+// Esto recibe las propiedades, incluyendo 'className'
+const { href, className} = Astro.props;
+---
+
+<a href={href} class={className}>
+  <slot />
+</a>
+
