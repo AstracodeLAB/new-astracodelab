@@ -11,6 +11,8 @@
 @use './Buttons.scss';
 @use './Titles.scss';
 @use './CardPregunta.scss';
+@use './Hero.scss';
+@use './MainHome.scss';
 
 /* Estilos globales */
 :root {
@@ -26,8 +28,7 @@ body {
     header {
         padding: 20px;
       }
-
-    
+      
       footer {
         padding: 30px 20px; // top-bottom 30px, left-right 20px
       }
