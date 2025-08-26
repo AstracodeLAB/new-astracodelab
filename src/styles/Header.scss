@@ -7,6 +7,7 @@
   width: 100%;
   background: #ffffff;
   border-bottom: 1px solid #eee;
+  box-shadow: 0 1px 10px 0 rgba(42, 17, 96, 0.20);
 }
 
 .navigation {
@@ -16,7 +17,6 @@
 .navigation__container {
   width: 100%;
   margin: 0 auto;
-  padding: 0.75rem 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -42,7 +42,7 @@
 .navigation__container-button-icon {
   width: 28px;
   height: 28px;
-  fill: #333;
+  fill:$blue-dark;
 }
 
 /* ---- MENÚ PRINCIPAL (oculto por defecto en mobile) ---- */
@@ -78,7 +78,7 @@
 .navigation__container-menu-itemsMap-link {
   font-size: 1rem;
   font-weight: 500;
-  color: #333;
+  color:$blue-dark;
   text-decoration: none;
   background: none;
   border: none;
@@ -89,8 +89,8 @@
 }
 
 .navigation__container-menu-itemsMap-link:hover {
-  color: #6b46c1;
-  /* tu violeta */
+  color:$links ;
+
 }
 
 /* ---- MEGA MENÚ (por defecto estilo mobile: acordeón) ---- */
@@ -119,11 +119,11 @@
   font-weight: 700;
   font-size: 1rem;
   margin: 1rem 0 0.5rem 0;
-  color: #111;
+  color:$title-color;
 }
 
 .megamenu-column a {
-  color: #333;
+  color: $text-bg-white;
   text-decoration: none;
   margin: 0.25rem 0;
   font-weight: 400;
@@ -131,7 +131,7 @@
 }
 
 .megamenu-column a:hover {
-  color: #6b46c1;
+  color: $links;
 }
 
 /* ---- FLECHA DEL BOTÓN ---- */
