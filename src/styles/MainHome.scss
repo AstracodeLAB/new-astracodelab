@@ -1,0 +1,24 @@
+@use 'sass:map';
+@use './variables.scss' as *;
+
+
+.mainHome {
+  background-image: url('/src/images/backgroundWhiteB.jpg');
+  background-repeat: no-repeat;
+  background-size: cover; // llena todo el ancho SIEMPRE
+  background-position: center top; // centra la imagen
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    background-size: auto; // no fuerza escalado
+    background-position: center top; // muestra solo el trozo visible
+  }
+  @media (max-width: 1440px) {
+    background-size: cover;
+  background-position: center;
+  }
+}
