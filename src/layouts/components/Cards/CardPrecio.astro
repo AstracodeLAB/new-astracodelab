@@ -1,4 +1,7 @@
 ---
+import Buttons from '../Buttons/Buttons.astro';
+
+
 const pricingPlans = [
   {
     id: 'landing',
@@ -81,8 +84,11 @@ const pricingPlans = [
                 </li>
               ))}
             </ul>
-
-            <button class={`cta-button ${plan.highlighted ? 'primary' : 'secondary'}`}>{plan.buttonText}</button>
+            <Buttons className={`btnPrimaryLight ${plan.highlighted ? 'btnSecondaryDark' : 'btnPrimaryLight'}`}>
+              {' '}
+              Solicitar información{' '}
+            </Buttons>
+            {/* <button class={`cta-button ${plan.highlighted ? 'primary' : 'secondary'}`}>{plan.buttonText}</button> */}
             {plan.noteAdv && <div class='price-noteAdv'>{plan.noteAdv}</div>}
           </div>
         ))
