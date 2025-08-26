@@ -1,0 +1,15 @@
+---
+const { href, className = "" } = Astro.props;
+import Arrow from '../icons/Arrow.astro';
+---
+
+{href ? (
+  <a href={href} class={className}>
+    <slot />
+    {className.includes("linkSecondary") && <Arrow />}
+  </a>
+) : (
+  <button class={className}>
+    <slot />
+  </button>
+)}
