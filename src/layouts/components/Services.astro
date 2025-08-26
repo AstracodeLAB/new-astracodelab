@@ -1,0 +1,29 @@
+---
+import TitleSecondary from '../components/Titles/TitleSecondary.astro';  
+import Subtitle from '../components/Titles/Subtitle.astro';
+import Buttons from '../components/Buttons/Buttons.astro';
+---
+
+<section class="servicesHome">
+  
+   <article>
+    <TitleSecondary text="¿Qué hacemos?" />
+    <p class="servicesHome__intro">En AstracodeLAB, creamos tu sitio web a medida, añadimos las funcionalidades que necesites y lo mantenemos seguro y actualizado, para que tú solo te dediques a tu negocio o proyecto.</p>
+   </article>
+
+   <article class="servicesHome__container">
+    <div class="servicesHome__container-card">
+      <Subtitle text="Servicios de diseño y desarrollo web" />
+      <p>En Astracodelab convertimos tu idea en una página web rápida y optimizada. Diseñamos y desarrollamos proyectos  personalizados que refuerzan tu marca, atraen tráfico y convierten visitas en clientes.</p>
+      <div class="servicesHome__container-card-btn">
+        <Buttons className="btnPrimaryLight" href="/" >VER MÁS</Buttons>
+      </div>      
+    </div>
+    <div class="servicesHome__container-services">
+      <div>
+        <Buttons className="linkServicesHero" href="/" >WEB CORPORATIVA PROFESIONAL</Buttons>
+      </div>
+    </div>
+   </article>
+  
+</section>

@@ -1,0 +1,67 @@
+@use 'sass:map';
+@use './variables.scss' as *;
+
+.servicesHome {
+  padding: 0 30px;
+  font-size: map.get($Body-mobile, 'font-size');
+    line-height: map.get($Body-mobile, 'line-height');
+    font-weight: map.get($Body-mobile, 'font-weight');
+    letter-spacing: map.get($Body-mobile, 'letter-spacing');
+    color: $text-bg-color;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    
+
+    @media (min-width: 768px) {
+      font-size: map.get($Body-tablet, 'font-size');
+      line-height: map.get($Body-tablet, 'line-height');
+      font-weight: map.get($Body-tablet, 'font-weight');
+      letter-spacing: map.get($Body-tablet, 'letter-spacing');
+      padding: 0 120px;
+    }
+    
+    @media (min-width: 1024px) {
+      font-size: map.get($Body-desktop, 'font-size');
+      line-height: map.get($Body-desktop, 'line-height');
+      font-weight: map.get($Body-desktop, 'font-weight');
+      letter-spacing: map.get($Body-desktop, 'letter-spacing');
+      padding: 0 60px;
+      
+    }
+    
+    @media (min-width: 1440px) {
+      font-size: map.get($Body-desktop-xl, 'font-size');
+      line-height: map.get($Body-desktop-xl, 'line-height');
+      font-weight: map.get($Body-desktop-xl, 'font-weight');
+      letter-spacing: map.get($Body-desktop-xl, 'letter-spacing');
+      max-width: 1100px;
+      padding: 0 0
+    }
+
+    &__container {
+      
+      &-card {
+        background-color: $cardWhite;
+        box-shadow: $shadow;
+        border-radius: 15px;
+        padding: 20px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        &-btn {
+          width: 100%;
+          display: flex;
+          justify-content: flex-end;
+        }
+
+      }
+
+      &-services {
+        display: flex;
+        
+      }
+    }
+  }
+  
