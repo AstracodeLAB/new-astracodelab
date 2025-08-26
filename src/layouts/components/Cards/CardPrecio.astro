@@ -1,5 +1,4 @@
 ---
-// PricingComponent.astro
 const pricingPlans = [
   {
     id: 'landing',
@@ -45,7 +44,7 @@ const pricingPlans = [
     ],
     buttonText: 'Solicitar información',
     highlighted: false,
-    note: '12,50€/mes durante 12 meses + 150€ único pago',
+    noteAdv: '12,50€/mes durante 12 meses + 150€ único pago',
   },
 ];
 ---
@@ -84,6 +83,7 @@ const pricingPlans = [
             </ul>
 
             <button class={`cta-button ${plan.highlighted ? 'primary' : 'secondary'}`}>{plan.buttonText}</button>
+            {plan.noteAdv && <div class='price-noteAdv'>{plan.noteAdv}</div>}
           </div>
         ))
       }
@@ -135,6 +135,7 @@ const pricingPlans = [
               </ul>
 
               <button class={`cta-button ${plan.highlighted ? 'primary' : 'secondary'}`}>{plan.buttonText}</button>
+              {plan.noteAdv && <div class='price-noteAdv'>{plan.noteAdv}</div>}
             </div>
           ))
         }

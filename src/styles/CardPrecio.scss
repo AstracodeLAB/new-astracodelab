@@ -6,20 +6,31 @@
 // LAYOUT COMPONENTS
 // ===========================
 .pricing-section {
-  background: $blue-secondary;
+  background: $cardWhite;
+  padding-top: 60px;
+  width: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
-  font-family: $font-primary;  
-  
+  align-items: flex-start;
+  font-family: $font-primary;
+
+  @media (min-width: 767px) {
+    margin-bottom: 100px;
+
+
+  }
+
+
 }
 
 .pricing-container {
-  
+
   @media (max-width: 767px) {
     border-radius: 16px;
     box-shadow: -4px 0 4px 0 rgba(0, 0, 0, 0.25), 4px 0 5px 4px rgba(0, 0, 0, 0.25);
   }
+
 }
 
 .pricing-grid {
@@ -35,13 +46,14 @@
   @media (min-width: 1024px) {
     gap: 2rem;
   }
+
 }
 
 .mobile-carousel {
   display: block;
   position: relative;
 
-  @media (min-width: 768px) {    
+  @media (min-width: 768px) {
     display: none;
   }
 }
@@ -55,9 +67,10 @@
   border-radius: 16px;
   width: 290px;
   margin: 0 auto;
+
   @media (min-width: 768px) {
-      display: none;
-    }
+    display: none;
+  }
 
 }
 
@@ -66,15 +79,15 @@
   transition: transform 0.3s ease;
   width: 300%;
   height: auto;
-  
+
   @media (min-width: 768px) {
-      display: none;
-    }
+    display: none;
+  }
 }
 
 .carousel-btn {
   position: absolute;
-  top:15%;
+  top: 15%;
   transform: translateY(-50%);
   border: none;
   background: $title-color;
@@ -118,16 +131,16 @@
 
   &.prev {
     left: -12px;
-     top: 50px;
+    top: 50px;
 
   }
 
   &.next {
     right: -12px;
-    top:50px;
-   
-    
-    
+    top: 50px;
+
+
+
   }
 }
 
@@ -144,15 +157,19 @@
   @media (min-width: 768px) {
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    overflow: hidden;
+    min-width: 190px;
+    max-width: 293px;
   }
 
   &.highlighted {
     @media (min-width: 768px) {
       border: 2px solid $blue-primary;
       transform: scale(1.05);
-      z-index: 2;
+      margin-top: 13px;
+
     }
+
+
   }
 
   @media (min-width: 768px) and (max-width: 1023px) {
@@ -163,16 +180,17 @@
 .badge {
   text-align: center;
   background: $blue-primary;
-  color:$cardWhite;
+  color: $cardWhite;
   font-size: map.get($SmallText-mobile, 'font-size');
   line-height: map.get($SmallText-mobile, 'line-height');
   letter-spacing: map.get($SmallText-mobile, 'letter-spacing');
 
   @media (min-width: 768px) {
-    border-radius: 10px 10px 0 0;
+
   }
 
-  @media (min-width: 768px) and (max-width: 1023px) {
+  @media (min-width: 768px)  {
+    border-radius: 5px 5px 0 0;
     font-size: map.get($SmallText-tablet, 'font-size');
     line-height: map.get($SmallText-tablet, 'line-height');
     letter-spacing: map.get($SmallText-tablet, 'letter-spacing');
@@ -192,16 +210,17 @@
   text-align: center;
   margin-bottom: 1.5rem;
   margin-top: 1rem;
-  
+
 
 
   @media (max-width: 767px) {
     margin-bottom: 0.8rem;
     margin-top: 0.5rem;
   }
-    &.nb {
-      padding-top: 28px;
-    }
+
+  &.nb {
+    padding-top: 28px;
+  }
 }
 
 
@@ -247,7 +266,7 @@
 }
 
 .price-note {
-  color:$text-bg-white;
+  color: $text-bg-white;
   margin-bottom: 0.5rem;
   margin-right: 30px;
   text-align: right;
@@ -268,10 +287,31 @@
   }
 }
 
+.price-noteAdv {
+  color: $text-bg-white;
+  padding: 10px 20px;
+  font-size: map.get($SmallText-mobile, 'font-size');
+  line-height: map.get($SmallText-mobile, 'line-height');
+  letter-spacing: map.get($SmallText-mobile, 'letter-spacing');
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    font-size: map.get($SmallText-tablet, 'font-size');
+    line-height: map.get($SmallText-tablet, 'line-height');
+    letter-spacing: map.get($SmallText-tablet, 'letter-spacing');
+  }
+
+  @media (min-width: 1024px) {
+    font-size: map.get($SmallText-desktop, 'font-size');
+    line-height: map.get($SmallText-desktop, 'line-height');
+    letter-spacing: map.get($SmallText-desktop, 'letter-spacing');
+  }
+
+}
+
 .plan-title {
   color: $title-color;
   height: 25px;
-  background-color:$blue-secondary;
+  background-color: $blue-secondary;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 0.5px;
@@ -294,23 +334,25 @@
 
 .plan-description {
   text-align: center;
-  color:$text-bg-white;
+  color: $text-bg-white;
   margin-bottom: 2rem;
-  margin-right:10px;
+  margin-right: 10px;
   font-size: map.get($Body-mobile, 'font-size');
   line-height: map.get($SmallText-mobile, 'line-height');
   letter-spacing: map.get($SmallText-mobile, 'letter-spacing');
 
-  @media (min-width: 768px) and (max-width: 1023px) {
-    font-size: map.get($SmallText-tablet, 'font-size');
-      line-height: map.get($SmallText-tablet, 'line-height');
-      letter-spacing: map.get($SmallText-tablet, 'letter-spacing');
+  @media (min-width: 768px) {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: map.get($Body-tablet, 'font-size');
+    line-height: map.get($Body-tablet, 'line-height');
+    letter-spacing: map.get($Body-tablet, 'letter-spacing');
   }
 
   @media (min-width: 1024px) {
-    font-size: map.get($SmallText-desktop, 'font-size');
-      line-height: map.get($SmallText-desktop, 'line-height');
-      letter-spacing: map.get($SmallText-desktop, 'letter-spacing');
+    font-size: map.get($Body-desktop, 'font-size');
+    line-height: map.get($Body-desktop, 'line-height');
+    letter-spacing: map.get($Body-desktop, 'letter-spacing');
   }
 }
 
