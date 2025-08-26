@@ -5,6 +5,9 @@ import Contact from '../components/Contact.astro';
 import Hero from '../components/Hero.astro';
 import Subtitle from '../components/Titles/Subtitle.astro';
 import TitleSecondary from '../components/Titles/TitleSecondary.astro';
+import Title from '../components/Timeline/Title.astro';
+import TimelineWrapper from '../components/Timeline/TimelineWrapper.astro';
+import PasoProceso from '../components/Timeline/PasoProceso.astro';
 ---
 
 <main class='mainHome'>
@@ -18,5 +21,36 @@ import TitleSecondary from '../components/Titles/TitleSecondary.astro';
     </div>
     <CardPrecio />
     <CardPregunta />
+  </section>
+
+  <section class='timeline-section'>
+    <TitleSecondary text='¿Cómo lo hacemos?' />
+    <TimelineWrapper>
+      <PasoProceso
+        numero='1'
+        titulo='Análisis y planificación'
+        descripcion='Estudiamos tu proyecto en detalle para entender tus necesidades y objetivos específicos.'
+      />
+      <PasoProceso
+        numero='2'
+        titulo='Diseño personalizado'
+        descripcion='Creamos un diseño único que refleje tu marca y conecte con tu audiencia.'
+      />
+      <PasoProceso
+        numero='3'
+        titulo='Desarrollo y programación'
+        descripcion='Desarrollamos tu web con las mejores tecnologías, asegurando velocidad y funcionalidad.'
+      />
+      <PasoProceso
+        numero='4'
+        titulo='Revisión y optimización'
+        descripcion='Realizamos pruebas exhaustivas y optimizamos cada detalle antes del lanzamiento.'
+      />
+      <PasoProceso
+        numero='5'
+        titulo='Lanzamiento y seguimiento'
+        descripcion='Publicamos tu web y te acompañamos durante el primer mes con soporte completo.'
+      />
+    </TimelineWrapper>
   </section>
 </main>
