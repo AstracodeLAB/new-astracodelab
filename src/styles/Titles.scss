@@ -137,3 +137,33 @@
     letter-spacing: map.get($H3-desktop-xl, 'letter-spacing');
   }
 }
+
+.description {
+  font-family: $font-primary;
+  font-size: map.get($Body-mobile, 'font-size');
+  line-height: map.get($Body-mobile, 'line-height');
+  font-weight: map.get($Body-mobile, 'font-weight');
+  letter-spacing: map.get($Body-mobile, 'letter-spacing');
+  color: $text-bg-color;
+  margin: 0.5rem 0;
+
+  @media (min-width: 768px) {
+    font-size: map.get($Body-tablet, 'font-size');
+    line-height: map.get($Body-tablet, 'line-height');
+    font-weight: map.get($Body-tablet, 'font-weight');
+    letter-spacing: map.get($Body-tablet, 'letter-spacing');
+  }
+  @media (min-width: 1024px) {
+    font-size: map.get($Body-desktop, 'font-size');
+    line-height: map.get($Body-desktop, 'line-height');
+    font-weight: map.get($Body-desktop, 'font-weight');
+    letter-spacing: map.get($Body-desktop, 'letter-spacing');
+  }
+  @media (min-width: 1440px) {
+    font-size: map.get($Body-desktop-xl, 'font-size');
+    line-height: map.get($Body-desktop-xl, 'line-height');
+    font-weight: map.get($Body-desktop-xl, 'font-weight');
+    letter-spacing: map.get($Body-desktop-xl, 'letter-spacing');
+  }
+
+}

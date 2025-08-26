@@ -1,0 +1,486 @@
+@use 'sass:map';
+@use 'sass:color';
+@use './variables.scss' as *;
+
+// ===========================
+// LAYOUT COMPONENTS
+// ===========================
+.pricing-section {background-color: $blue-secondary;
+  padding-top: 60px;
+  width: 100%;
+  // height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: $font-primary;
+
+  @media (min-width: 767px) {
+    margin-bottom: 100px;
+
+
+  }
+
+
+}
+
+.pricing-container {
+
+  @media (max-width: 767px) {
+    border-radius: 16px;
+    box-shadow: -4px 0 4px 0 rgba(0, 0, 0, 0.25), 4px 0 5px 4px rgba(0, 0, 0, 0.25);
+  }
+
+}
+
+.pricing-grid {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(1rem, 3vw, 2rem);
+    justify-items: center;
+  }
+
+  @media (min-width: 1024px) {
+    gap: 2rem;
+  }
+
+}
+
+.mobile-carousel {
+  display: block;
+  position: relative;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+// ===========================
+// CAROUSEL COMPONENTS
+// ===========================
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  width: 290px;
+  margin: 0 auto;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.3s ease;
+  width: 300%;
+  height: auto;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 15%;
+  transform: translateY(-50%);
+  border: none;
+  background: $title-color;
+  border-radius: 20%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 15;
+  box-shadow: 0px 2px 12px rgba(42, 17, 96, 0.25);
+  transition: all 0.3s ease;
+  width: 26px;
+  height: 26px;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+
+
+  @media (max-width: 767px) {
+    width: 32px;
+    height: 32px;
+  }
+
+  svg {
+    width: 18px;
+    height: 18px;
+    color: white;
+
+    @media (max-width: 767px) {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &:hover {
+    transform: translateY(-50%) scale(1.05);
+  }
+
+  &.prev {
+    left: -12px;
+    top: 50px;
+
+  }
+
+  &.next {
+    right: -12px;
+    top: 50px;
+
+
+
+  }
+}
+
+// 
+
+// ===========================
+// CARD COMPONENTS
+// ===========================
+.pricing-card {
+  background: $cardWhite;
+  min-width: 290px;
+
+
+  @media (min-width: 768px) {
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    min-width: 190px;
+    max-width: 293px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.07);
+      box-shadow: 0 6px 20px rgba(100, 30, 255, 0.3);
+    }
+  }
+
+  &.highlighted {
+    @media (min-width: 768px) {
+      border: 2px solid $blue-primary;
+      transform: scale(1.05);
+      margin-top: 13px;
+
+    }
+    &:hover {   
+      transform: scale(1.07);
+      box-shadow: 0 6px 20px rgba(100, 30, 255, 0.3);
+    }
+
+
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    max-width: clamp(240px, 25vw, 280px);
+  }
+}
+
+.badge {
+  width: 100% ;
+  text-align: center;
+  padding:5px;
+  background: $blue-primary;
+  color: $cardWhite;
+  font-size: map.get($SmallText-mobile, 'font-size');
+  line-height: map.get($SmallText-mobile, 'line-height');
+  // letter-spacing: map.get($SmallText-mobile, 'letter-spacing');
+
+  @media (min-width: 768px) {
+
+  }
+
+  @media (min-width: 768px)  {
+    border-radius: 5px 5px 0 0;
+    font-size: map.get($SmallText-tablet, 'font-size');
+    line-height: map.get($SmallText-tablet, 'line-height');
+    letter-spacing: map.get($SmallText-tablet, 'letter-spacing');
+  }
+
+  @media (min-width: 1024px) {
+    font-size: map.get($SmallText-desktop, 'font-size');
+    line-height: map.get($SmallText-desktop, 'line-height');
+    letter-spacing: map.get($SmallText-desktop, 'letter-spacing');
+  }
+}
+
+// ===========================
+// CARD CONTENT
+// ===========================
+.pricing-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+
+
+
+  @media (max-width: 767px) {
+    margin-bottom: 0.8rem;
+    margin-top: 0.5rem;
+  }
+
+  &.nb {
+    padding-top: 40px;
+  }
+}
+
+
+.price-label {
+  color: $text-bg-white;
+  font-size: map.get($Body-mobile, 'font-size');
+  line-height: map.get($Body-mobile, 'line-height');
+  letter-spacing: map.get($Body-mobile, 'letter-spacing');
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    font-size: map.get($Body-tablet, 'font-size');
+    line-height: map.get($Body-tablet, 'line-height');
+    letter-spacing: map.get($Body-tablet, 'letter-spacing');
+  }
+
+  @media (min-width: 1024px) {
+    font-size: map.get($Body-desktop, 'font-size');
+    line-height: map.get($Body-desktop, 'line-height');
+    letter-spacing: map.get($Body-desktop, 'letter-spacing');
+  }
+
+}
+
+.price {
+  color: $title-color;
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+  font-size: map.get($H1-mobile, 'font-size');
+  line-height: map.get($H1-mobile, 'line-height');
+  letter-spacing: map.get($H1-mobile, 'letter-spacing');
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    font-size: map.get($H1-tablet, 'font-size');
+    line-height: map.get($H1-tablet, 'line-height');
+    letter-spacing: map.get($H1-tablet, 'letter-spacing');
+  }
+
+  @media (min-width: 1024px) {
+    font-size: map.get($H1-desktop, 'font-size');
+    line-height: map.get($H1-desktop, 'line-height');
+    letter-spacing: map.get($H1-desktop, 'letter-spacing');
+  }
+}
+
+.price-note {
+  color: $text-bg-white;
+  margin-bottom: 0.5rem;
+  margin-right: 30px;
+  text-align: right;
+  font-size: map.get($SmallText-mobile, 'font-size');
+  line-height: map.get($SmallText-mobile, 'line-height');
+  letter-spacing: map.get($SmallText-mobile, 'letter-spacing');
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    font-size: map.get($SmallText-tablet, 'font-size');
+    line-height: map.get($SmallText-tablet, 'line-height');
+    letter-spacing: map.get($SmallText-tablet, 'letter-spacing');
+  }
+
+  @media (min-width: 1024px) {
+    font-size: map.get($SmallText-desktop, 'font-size');
+    line-height: map.get($SmallText-desktop, 'line-height');
+    letter-spacing: map.get($SmallText-desktop, 'letter-spacing');
+  }
+}
+
+.price-noteAdv {
+  color: $text-bg-white;
+  padding: 10px 20px;
+  font-size: map.get($SmallText-mobile, 'font-size');
+  line-height: map.get($SmallText-mobile, 'line-height');
+  letter-spacing: map.get($SmallText-mobile, 'letter-spacing');
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    font-size: map.get($SmallText-tablet, 'font-size');
+    line-height: map.get($SmallText-tablet, 'line-height');
+    letter-spacing: map.get($SmallText-tablet, 'letter-spacing');
+  }
+
+  @media (min-width: 1024px) {
+    font-size: map.get($SmallText-desktop, 'font-size');
+    line-height: map.get($SmallText-desktop, 'line-height');
+    letter-spacing: map.get($SmallText-desktop, 'letter-spacing');
+  }
+
+}
+
+.plan-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $title-color;
+  height: 25px;
+  background-color: $blue-secondary;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-size: map.get($SmallText-mobile, 'font-size');
+  line-height: map.get($SmallText-mobile, 'line-height');
+  letter-spacing: map.get($SmallText-mobile, 'letter-spacing');
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    font-size: map.get($SmallText-tablet, 'font-size');
+    line-height: map.get($SmallText-tablet, 'line-height');
+    letter-spacing: map.get($SmallText-tablet, 'letter-spacing');
+  }
+
+  @media (min-width: 1024px) {
+    font-size: map.get($SmallText-desktop, 'font-size');
+    line-height: map.get($SmallText-desktop, 'line-height');
+    letter-spacing: map.get($SmallText-desktop, 'letter-spacing');
+  }
+}
+
+.plan-description {
+  text-align: center;
+  color: $text-bg-white;
+  margin-bottom: 2rem;
+  margin-top:2rem;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: map.get($Body-mobile, 'font-size');
+  line-height: map.get($SmallText-mobile, 'line-height');
+  letter-spacing: map.get($SmallText-mobile, 'letter-spacing');
+
+  @media (min-width: 768px) {
+    font-size: map.get($Body-tablet, 'font-size');
+    line-height: map.get($Body-tablet, 'line-height');
+    letter-spacing: map.get($Body-tablet, 'letter-spacing');
+  }
+
+  @media (min-width: 1024px) {
+    font-size: map.get($Body-desktop, 'font-size');
+    line-height: map.get($Body-desktop, 'line-height');
+    letter-spacing: map.get($Body-desktop, 'letter-spacing');
+  }
+}
+
+// ===========================
+// FEATURES LIST
+// ===========================
+.features-list {
+  list-style: none;
+  padding: 0 20px;
+  margin: 0 0 2rem 0;
+  flex-grow: 1;
+
+
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.4;
+
+  @media (max-width: 767px) {
+    font-size: 13px;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+  }
+
+  .check-icon {
+    width: 1.1rem;
+    height: 1.1rem;
+    color: $blue-primary;
+    margin-right: 0.6rem;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+
+    @media (max-width: 767px) {
+      width: 1rem;
+      height: 1rem;
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+// ===========================
+// BUTTONS
+// ===========================
+
+.carousel-button-container {
+  display: flex;
+  justify-content: center;
+  align-items:end ;
+  margin-bottom: 40px;
+}
+
+// .cta-button {
+//   width: 100%;
+//   border: none;
+//   border-radius: 25px;
+//   cursor: pointer;
+//   transition: all 0.3s ease;
+//   margin-top: auto;
+//   white-space: nowrap;
+//   overflow: hidden;
+//   text-overflow: ellipsis;
+//   box-sizing: border-box;
+//   letter-spacing: 0.5px;
+//   padding: 0.9rem 1.5rem;
+//   font-weight: 500;
+//   font-size: map.get($Button-mobile, 'font-size');
+//   line-height: map.get($Button-mobile, 'line-height');
+
+//   @media (min-width: 768px) {
+//     padding: 1rem 2rem;
+//   }
+
+//   @media (max-width: 767px) {
+//     margin-top: 0;
+//     padding: 0.9rem 1.5rem;
+//   }
+
+//   @media (min-width: 768px) and (max-width: 1023px) {
+//     font-size: map.get($Button-tablet, 'font-size');
+//     line-height: map.get($Button-tablet, 'line-height');
+//     letter-spacing: map.get($Button-tablet, 'letter-spacing');
+//   }
+
+//   @media (min-width: 1024px) {
+//     font-size: map.get($Button-desktop, 'font-size');
+//     line-height: map.get($Button-desktop, 'line-height');
+//     letter-spacing: map.get($Button-desktop, 'letter-spacing');
+//   }
+
+//   &.primary {
+//     background: $blue-primary;
+//     color: white;
+//     font-weight: 600;
+
+//     &:hover {
+//       background: color.adjust($blue-primary, $lightness: -5%);
+//       transform: translateY(-1px);
+//       box-shadow: 0 6px 20px rgba(100, 30, 255, 0.3);
+//     }
+//   }
+
+//   &.secondary {
+//     background: transparent;
+//     color: $blue-primary;
+//     border: 1.5px solid rgba(100, 30, 255, 0.3);
+//     font-weight: 500;
+
+//     &:hover {
+//       background: rgba(100, 30, 255, 0.05);
+//       border-color: $blue-primary;
+//       transform: translateY(-1px);
+//     }
+//   }
+// }

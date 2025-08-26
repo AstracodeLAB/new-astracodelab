@@ -15,6 +15,7 @@ $blue-dark:  #1E0E62;
 $title-color: #2A1160;
 $text-bg-color: rgb(46, 30, 82,0.95);
 $text-bg-white: rgb(46, 30, 82, 0.80);
+$links: #6b46c1;
 $cardWhite: rgb(255, 255, 255,0.80);
 $gradientBlue: linear-gradient(90deg, rgb(30, 14, 98) 0%, rgb(100, 30, 255) 100%);
 $gradientButton: linear-gradient(180deg, #641EFF 10.96%, #1E0E62 127.4%);
@@ -65,7 +66,7 @@ $SmallText-mobile: (
 );
 
 $Button-mobile: (
-  letter-spacing: 10%,
+  letter-spacing: 0.1em,
   line-height: 24px,
   font-size: 16px,
   font-weight: 400 // Regular
@@ -97,23 +98,23 @@ $H3-tablet: (
 );
 
 $Body-tablet: (
-  letter-spacing: 5%,
+  letter-spacing: 0.05em,
   line-height: 26px,
   font-size: 16px,
   font-weight: 400 // Regular
 );
 
 $SmallText-tablet: (
-  letter-spacing: 8%,
+  letter-spacing: 0.08em,
   line-height: 25px,
   font-size: 13px,
   font-weight: 500 // Medium
 );
 
 $Button-tablet: (
-  letter-spacing: 8%,
+  letter-spacing: 0.08em,
   line-height: 24px,
-  font-size: 17px,
+  font-size: 16px,
   font-weight: 400 // Regular
 );
 
@@ -143,23 +144,23 @@ $H3-desktop: (
 );
 
 $Body-desktop: (
-  letter-spacing: 5%,
+  letter-spacing: 0.05em,
   line-height: 27px,
   font-size: 17px,
   font-weight: 400 // Regular
 );
 
 $SmallText-desktop: (
-  letter-spacing: 10%,
+  letter-spacing: 0.1em,
   line-height: 21px,
   font-size: 14px,
   font-weight: 500 // Medium
 );
 
 $Button-desktop: (
-  letter-spacing: 10%,
+  letter-spacing: 0.1em,
   line-height: 24px,
-  font-size: 20px,
+  font-size: 18px,
   font-weight: 400 // Regular
 );
 
@@ -204,7 +205,7 @@ $SmallText-desktop-xl: (
 $Button-desktop-xl: (
   letter-spacing: 10%,
   line-height: 24px,
-  font-size: 22px,
+  font-size: 18px,
   font-weight: 400 // Regular
 );
 

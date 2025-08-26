@@ -1,11 +1,24 @@
 ---
-import Contact from "../components/Contact.astro";
-import Hero from "../components/Hero.astro";
-import Services from "../components/services.astro";
+import CardPrecio from '../components/Cards/CardPrecio.astro';
+import CardPregunta from '../components/Cards/CardPregunta.astro';
+import Contact from '../components/Contact.astro';
+import Hero from '../components/Hero.astro';
+import Services from '../components/services.astro';
+import Subtitle from '../components/Titles/Subtitle.astro';
+import TitleSecondary from '../components/Titles/TitleSecondary.astro';
 ---
 
 <main class='mainHome'>
   <Hero />
   <Services />
-  <Contact />  
+  <section class='section-prices'>
+    <div class='section-prices-header'>
+      <TitleSecondary
+        text='Precios claros y flexibles diseñados para todo el mundo'
+        description='Elige el plan que mejor se adapta a tu proyecto. Todos incluyen diseño responsive y soporte durante el primer mes. (IVA)'
+      />
+    </div>
+    <CardPrecio />
+    <CardPregunta />
+  </section>
 </main>

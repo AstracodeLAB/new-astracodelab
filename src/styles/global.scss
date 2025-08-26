@@ -6,6 +6,7 @@
 @use './Footer.scss';
 @use './legal.scss';
 @use './Error.scss';
+@use './CardPrecio.scss';
 @use './variables.scss' as *;
 @use './Buttons.scss';
 @use './Titles.scss';
@@ -16,7 +17,7 @@
 
 /* Estilos globales */
 :root {
-    font-family: 'Ropa Sans', 'Raleway Variable', sans-serif;
+    font-family: $font-primary;
 }
 
 html {
