@@ -124,8 +124,6 @@
   }
 
   &:hover {
-    // background: $blue-primary;
-    // box-shadow: 0px 4px 16px rgba(100, 30, 255, 0.4);
     transform: translateY(-50%) scale(1.05);
   }
 
@@ -159,6 +157,12 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     min-width: 190px;
     max-width: 293px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.07);
+      box-shadow: 0 6px 20px rgba(100, 30, 255, 0.3);
+    }
   }
 
   &.highlighted {
@@ -167,6 +171,10 @@
       transform: scale(1.05);
       margin-top: 13px;
 
+    }
+    &:hover {
+      transform: scale(1.07);
+      box-shadow: 0 6px 20px rgba(100, 30, 255, 0.3);
     }
 
 
