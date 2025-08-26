@@ -76,8 +76,8 @@
 
 /* ---- LINKS PRINCIPALES ---- */
 .navigation__container-menu-itemsMap-link {
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: map.get($Body-mobile, 'font-size');
+  font-weight: map.get($SmallText-mobile, 'font-weight');;
   color:$blue-dark;
   text-decoration: none;
   background: none;
@@ -86,6 +86,15 @@
   display: flex;
   align-items: center;
   gap: 0.25rem;
+  @media (min-width: 768px) {
+    font-size: map.get($Body-tablet, 'font-size');
+    font-weight: map.get($Body-tablet, 'font-weight');
+  }
+  @media (min-width: 1024px) {
+    font-size: map.get($Body-desktop, 'font-size');
+    font-weight: map.get($Body-desktop, 'font-weight');
+  }
+
 }
 
 .navigation__container-menu-itemsMap-link:hover {
@@ -120,6 +129,15 @@
   font-size: 1rem;
   margin: 1rem 0 0.5rem 0;
   color:$title-color;
+
+  @media(min-width: 768px) {
+    font-size: map.get($Body-tablet, 'font-size');
+    font-weight: map.get($H3-tablet, 'font-weight');
+  }
+  @media(min-width: 1024px) {
+    font-size: map.get($Body-desktop, 'font-size');
+    font-weight: map.get($H3-desktop, 'font-weight');
+  }
 }
 
 .megamenu-column a {
@@ -128,6 +146,17 @@
   margin: 0.25rem 0;
   font-weight: 400;
   font-size: 0.95rem;
+
+
+  @media(min-width: 768px) {
+      font-size: map.get($Body-tablet, 'font-size');
+      
+    }
+  
+    @media(min-width: 1024px) {
+      font-size: map.get($Body-desktop, 'font-size');
+     
+    }
 }
 
 .megamenu-column a:hover {

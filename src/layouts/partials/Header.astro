@@ -1,4 +1,5 @@
 ---
+import Buttons from '../components/Buttons/Buttons.astro';
 import Logo from '../components/Logo.astro';
 ---
 
@@ -90,12 +91,12 @@ import Logo from '../components/Logo.astro';
           <a href='/#about' class='navigation__container-menu-itemsMap-link'>Blog</a>
         </li>
         <li class='navigation__container-menu-itemsMap cta-mobile'>
-          <a href='/#contact' class='btn btn-outline'>¿Hablamos?</a>
+          <Buttons href='/#contact' className='btnPrimaryLight'>¿Hablamos?</Buttons>
         </li>
       </ul>
 
       <div class='button-header'>
-        <a href='/#contact' class='btn btn-outline'>¿Hablamos?</a>
+        <Buttons href='/#contact' className='btnPrimaryLight'>¿Hablamos?</Buttons>
       </div>
     </div>
   </nav>
