@@ -1,7 +1,6 @@
 ---
 import Buttons from '../Buttons/Buttons.astro';
 
-
 const pricingPlans = [
   {
     id: 'landing',
@@ -84,11 +83,11 @@ const pricingPlans = [
                 </li>
               ))}
             </ul>
-            <Buttons className={`btnSecondaryLight ${plan.highlighted ? 'btnSecondaryDark' : 'btnPrimaryLight'}`}>
-              {' '}
-              Solicitar información{' '}
-            </Buttons>
-            {/* <button class={`cta-button ${plan.highlighted ? 'primary' : 'secondary'}`}>{plan.buttonText}</button> */}
+            <div class='carousel-button-container'>
+              <Buttons className={plan.highlighted ? 'btnSecondaryDark' : 'btnSecondaryLight'}>
+                Solicitar información
+              </Buttons>
+            </div>
             {plan.noteAdv && <div class='price-noteAdv'>{plan.noteAdv}</div>}
           </div>
         ))
@@ -140,7 +139,11 @@ const pricingPlans = [
                 ))}
               </ul>
 
-              <button class={`cta-button ${plan.highlighted ? 'primary' : 'secondary'}`}>{plan.buttonText}</button>
+              <div class='carousel-button-container'>
+                <Buttons className={`btnSecondaryLight ${plan.highlighted ? 'btnSecondaryDark' : 'btnSecondaryLight'}`}>
+                  Solicitar información
+                </Buttons>
+              </div>
               {plan.noteAdv && <div class='price-noteAdv'>{plan.noteAdv}</div>}
             </div>
           ))

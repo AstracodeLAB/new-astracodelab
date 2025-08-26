@@ -161,14 +161,14 @@
     line-height: map.get($Button-tablet, 'line-height');
     font-weight: map.get($Button-tablet, 'font-weight');
     letter-spacing: map.get($Button-tablet, 'letter-spacing');
-    padding: 4px 14px;
+    padding: 0.5rem 0.875rem;
   }
   @media (min-width: 1024px) {
-    font-size: map.get($Button-desktop, 'font-size');
+    font-size: map.get($Body-desktop, 'font-size');
     line-height: map.get($Button-desktop, 'line-height');
     font-weight: map.get($Button-desktop, 'font-weight');
     letter-spacing: map.get($Button-desktop, 'letter-spacing');
-    padding: 6px 18px;
+    padding: 0.9rem 1.5rem;
   }
   @media (min-width: 1440px) {
     font-size: map.get($Button-desktop-xl, 'font-size');
@@ -183,7 +183,7 @@
 .btnSecondaryLight {
   display: inline-flex;
   width: auto;
-  padding: 2px 14px;
+  padding: 14px 24px;
   justify-content: center;
   align-items: center;
   gap: 10px;
@@ -198,14 +198,14 @@
 
   background: $blue-secondary;
   &:hover {
-    background: $blue-primary;
-    color: $blue-secondary;
-    border: 2px solid $blue-primary
-  }
-
-  &:active {
     background: $blue-dark;
-    border: 2px solid $blue-dark;
+    color: $blue-secondary;
+    border: 2px solid $blue-dark
+  }
+  
+  &:active {
+    background: $blue-primary;
+    border: 2px solid $blue-primary;
     color: $blue-secondary;
   }
 
@@ -214,21 +214,21 @@
     line-height: map.get($Button-tablet, 'line-height');
     font-weight: map.get($Button-tablet, 'font-weight');
     letter-spacing: map.get($Button-tablet, 'letter-spacing');
-    padding: 4px 14px;
+    padding: 0.5rem 0.875rem;
   }
   @media (min-width: 1024px) {
-    font-size: map.get($Button-desktop, 'font-size');
+    font-size: map.get($Body-desktop, 'font-size');
     line-height: map.get($Button-desktop, 'line-height');
     font-weight: map.get($Button-desktop, 'font-weight');
     letter-spacing: map.get($Button-desktop, 'letter-spacing');
-    padding: 6px 18px;
+    padding: 0.9rem 1.5rem;
   }
   @media (min-width: 1440px) {
     font-size: map.get($Button-desktop-xl, 'font-size');
     line-height: map.get($Button-desktop-xl, 'line-height');
     font-weight: map.get($Button-desktop-xl, 'font-weight');
     letter-spacing: map.get($Button-desktop-xl, 'letter-spacing');
-    padding: 8px 18px;
+
   }
 }
 

@@ -172,7 +172,7 @@
       margin-top: 13px;
 
     }
-    &:hover {
+    &:hover {   
       transform: scale(1.07);
       box-shadow: 0 6px 20px rgba(100, 30, 255, 0.3);
     }
@@ -186,12 +186,14 @@
 }
 
 .badge {
+  width: 100% ;
   text-align: center;
+  padding:5px;
   background: $blue-primary;
   color: $cardWhite;
   font-size: map.get($SmallText-mobile, 'font-size');
   line-height: map.get($SmallText-mobile, 'line-height');
-  letter-spacing: map.get($SmallText-mobile, 'letter-spacing');
+  // letter-spacing: map.get($SmallText-mobile, 'letter-spacing');
 
   @media (min-width: 768px) {
 
@@ -227,7 +229,7 @@
   }
 
   &.nb {
-    padding-top: 28px;
+    padding-top: 40px;
   }
 }
 
@@ -317,6 +319,9 @@
 }
 
 .plan-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: $title-color;
   height: 25px;
   background-color: $blue-secondary;
@@ -344,14 +349,14 @@
   text-align: center;
   color: $text-bg-white;
   margin-bottom: 2rem;
-  margin-right: 10px;
+  margin-top:2rem;
+  padding-left: 20px;
+  padding-right: 20px;
   font-size: map.get($Body-mobile, 'font-size');
   line-height: map.get($SmallText-mobile, 'line-height');
   letter-spacing: map.get($SmallText-mobile, 'letter-spacing');
 
   @media (min-width: 768px) {
-    margin-left: 20px;
-    margin-right: 20px;
     font-size: map.get($Body-tablet, 'font-size');
     line-height: map.get($Body-tablet, 'line-height');
     letter-spacing: map.get($Body-tablet, 'letter-spacing');
@@ -409,66 +414,74 @@
 // ===========================
 // BUTTONS
 // ===========================
-.cta-button {
-  width: 100%;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin-top: auto;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  box-sizing: border-box;
-  letter-spacing: 0.5px;
-  padding: 0.9rem 1.5rem;
-  font-weight: 500;
-  font-size: map.get($Button-mobile, 'font-size');
-  line-height: map.get($Button-mobile, 'line-height');
 
-  @media (min-width: 768px) {
-    padding: 1rem 2rem;
-  }
-
-  @media (max-width: 767px) {
-    margin-top: 0;
-    padding: 0.9rem 1.5rem;
-  }
-
-  @media (min-width: 768px) and (max-width: 1023px) {
-    font-size: map.get($Button-tablet, 'font-size');
-    line-height: map.get($Button-tablet, 'line-height');
-    letter-spacing: map.get($Button-tablet, 'letter-spacing');
-  }
-
-  @media (min-width: 1024px) {
-    font-size: map.get($Button-desktop, 'font-size');
-    line-height: map.get($Button-desktop, 'line-height');
-    letter-spacing: map.get($Button-desktop, 'letter-spacing');
-  }
-
-  &.primary {
-    background: $blue-primary;
-    color: white;
-    font-weight: 600;
-
-    &:hover {
-      background: color.adjust($blue-primary, $lightness: -5%);
-      transform: translateY(-1px);
-      box-shadow: 0 6px 20px rgba(100, 30, 255, 0.3);
-    }
-  }
-
-  &.secondary {
-    background: transparent;
-    color: $blue-primary;
-    border: 1.5px solid rgba(100, 30, 255, 0.3);
-    font-weight: 500;
-
-    &:hover {
-      background: rgba(100, 30, 255, 0.05);
-      border-color: $blue-primary;
-      transform: translateY(-1px);
-    }
-  }
+.carousel-button-container {
+  display: flex;
+  justify-content: center;
+  align-items:end ;
+  margin-bottom: 40px;
 }
+
+// .cta-button {
+//   width: 100%;
+//   border: none;
+//   border-radius: 25px;
+//   cursor: pointer;
+//   transition: all 0.3s ease;
+//   margin-top: auto;
+//   white-space: nowrap;
+//   overflow: hidden;
+//   text-overflow: ellipsis;
+//   box-sizing: border-box;
+//   letter-spacing: 0.5px;
+//   padding: 0.9rem 1.5rem;
+//   font-weight: 500;
+//   font-size: map.get($Button-mobile, 'font-size');
+//   line-height: map.get($Button-mobile, 'line-height');
+
+//   @media (min-width: 768px) {
+//     padding: 1rem 2rem;
+//   }
+
+//   @media (max-width: 767px) {
+//     margin-top: 0;
+//     padding: 0.9rem 1.5rem;
+//   }
+
+//   @media (min-width: 768px) and (max-width: 1023px) {
+//     font-size: map.get($Button-tablet, 'font-size');
+//     line-height: map.get($Button-tablet, 'line-height');
+//     letter-spacing: map.get($Button-tablet, 'letter-spacing');
+//   }
+
+//   @media (min-width: 1024px) {
+//     font-size: map.get($Button-desktop, 'font-size');
+//     line-height: map.get($Button-desktop, 'line-height');
+//     letter-spacing: map.get($Button-desktop, 'letter-spacing');
+//   }
+
+//   &.primary {
+//     background: $blue-primary;
+//     color: white;
+//     font-weight: 600;
+
+//     &:hover {
+//       background: color.adjust($blue-primary, $lightness: -5%);
+//       transform: translateY(-1px);
+//       box-shadow: 0 6px 20px rgba(100, 30, 255, 0.3);
+//     }
+//   }
+
+//   &.secondary {
+//     background: transparent;
+//     color: $blue-primary;
+//     border: 1.5px solid rgba(100, 30, 255, 0.3);
+//     font-weight: 500;
+
+//     &:hover {
+//       background: rgba(100, 30, 255, 0.05);
+//       border-color: $blue-primary;
+//       transform: translateY(-1px);
+//     }
+//   }
+// }
