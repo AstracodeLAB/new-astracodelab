@@ -6,21 +6,22 @@ import Buttons from '../components/Buttons/Buttons.astro';
 
 <section class="servicesHome">
   
-   <article>
+   <article class="servicesHome__intro">
     <TitleSecondary text="¿Qué hacemos?" />
-    <p class="servicesHome__intro">En AstracodeLAB, creamos tu sitio web a medida, añadimos las funcionalidades que necesites y lo mantenemos seguro y actualizado, para que tú solo te dediques a tu negocio o proyecto.</p>
+    <p class="servicesHome__intro-text">En AstracodeLAB, creamos tu sitio web a medida, añadimos las funcionalidades que necesites y lo mantenemos seguro y actualizado, para que tú solo te dediques a tu negocio o proyecto.</p>
    </article>
 
    <article class="servicesHome__services">
-    <div class="servicesHome__services-containerDisign">
-      <div class="servicesHome__services-container-card">
+
+    <div class="servicesHome__services-containerDesign">
+      <div class="servicesHome__services-containerDesign-card">
         <Subtitle text="Servicios de diseño y desarrollo web" />
         <p>En Astracodelab convertimos tu idea en una página web rápida y optimizada. Diseñamos y desarrollamos proyectos  personalizados que refuerzan tu marca, atraen tráfico y convierten visitas en clientes.</p>
-        <div class="servicesHome__services-container-card-btn">
+        <div class="servicesHome__services-containerDesign-card-btn">
           <Buttons className="btnPrimaryLight" href="/" >VER MÁS</Buttons>
         </div>      
       </div>
-      <div class="servicesHome__services-container-services">
+      <div class="servicesHome__services-containerDesign-services">
         
           <Buttons className="linkServicesHero" href="/" >WEB CORPORATIVA PROFESIONAL</Buttons>
           <Buttons className="linkServicesHero" href="/" >LANDING PAGE</Buttons>
@@ -28,36 +29,43 @@ import Buttons from '../components/Buttons/Buttons.astro';
           <Buttons className="linkServicesHero" href="/" >TIENDA ONLINE (E-COMMERCE)</Buttons>
           <Buttons className="linkServicesHero" href="/" >PORTFOLIO ONLINE</Buttons>     
       </div>
+    </div>
 
-      <div class="servicesHome__services-containerFunc">
-        <div class="servicesHome__services-container-card">
-          <Subtitle text="Funcionalidades y optimización web: haz que tu página sea fácil de usar y fácil de encontrar" />
-          <p>Nos fijamos en cada detalle: añadimos las funciones que tus visitantes necesitan y optimizamos la parte técnica para que tu página rinda al máximo.</p>
-          <div class="servicesHome__services-container-card-btn">
-            <Buttons className="btnPrimaryLight" href="/" >VER MÁS</Buttons>
-          </div>      
+    <div class="servicesHome__services-containerFunc">
+      <div class="servicesHome__services-containerFunc-card">
+        <Subtitle text="Funcionalidades y optimización web: haz que tu página sea fácil de usar y fácil de encontrar" />
+        <p>Nos fijamos en cada detalle: añadimos las funciones que tus visitantes necesitan y optimizamos la parte técnica para que tu página rinda al máximo.</p>
+        <div class="servicesHome__services-containerFunc-card-btn">
+          <Buttons className="btnPrimaryLight" href="/" >VER MÁS</Buttons>
+        </div>      
+      </div>
+      <div class="servicesHome__services-containerFunc-services">
+        
+          <Buttons className="linkServicesHero" href="/" >WEB MULTILINGÜE</Buttons>
+          <Buttons className="linkServicesHero" href="/" >SISTEMAS DE RESERVAS</Buttons>
+          <Buttons className="linkServicesHero" href="/" >ACCESIBILIDAD WEB</Buttons>
+          <Buttons className="linkServicesHero" href="/" >CARTAS DIGITALES</Buttons>    
+      </div>
+    </div>
+
+    <div class="servicesHome__services-containerMant">
+      <div class="servicesHome__services-containerMant-card">
+        <Subtitle text="Mantenimiento web y Soporte continuo" />
+        <p>Tu web siempre disponible, nos encargamos del funcionamiento de tu web para que disfrutes de un sitio seguro, rápido y disponible las 24h.</p>
+        <div class="servicesHome__services-containerMant-card-btn">
+          <Buttons className="btnPrimaryLight" href="/" >VER MÁS</Buttons>
+        </div>      
+      </div>
+      <div class="servicesHome__services-containerMant-services">
+        <div class="servicesHome__services-containerMant-services-links">
+          <Buttons className="linkServicesHero" href="/" >HOSTING Y DOMINIO</Buttons>
+          <Buttons className="linkServicesHero" href="/" >MANTENIMIENTO WEB</Buttons>  
         </div>
-        <div class="servicesHome__services-container-services">
+        <div class="servicesHome__services-containerMant-services-cta">
+          <Buttons className="btnSecondaryDark" href="/" >ESCUCHAMOS TU HISTORIA</Buttons>  
+        </div>
           
-            <Buttons className="linkServicesHero" href="/" >WEB MULTILINGÜE</Buttons>
-            <Buttons className="linkServicesHero" href="/" >SISTEMAS DE RESERVAS</Buttons>
-            <Buttons className="linkServicesHero" href="/" >ACCESIBILIDAD WEB</Buttons>
-            <Buttons className="linkServicesHero" href="/" >CARTAS DIGITALES</Buttons>    
-        </div>
-
-        <div class="servicesHome__services-containerMant">
-          <div class="servicesHome__services-container-card">
-            <Subtitle text="Mantenimiento web y Soporte continuo" />
-            <p>Tu web siempre disponible, nos encargamos del funcionamiento de tu web para que disfrutes de un sitio seguro, rápido y disponible las 24h.</p>
-            <div class="servicesHome__services-container-card-btn">
-              <Buttons className="btnPrimaryLight" href="/" >VER MÁS</Buttons>
-            </div>      
-          </div>
-          <div class="servicesHome__services-container-services">
-            
-              <Buttons className="linkServicesHero" href="/" >HOSTING Y DOMINIO</Buttons>
-              <Buttons className="linkServicesHero" href="/" >MANTENIMIENTO WEB</Buttons>    
-          </div>
+      </div>
     </div>
     
    </article>
