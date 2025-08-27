@@ -1,0 +1,66 @@
+@use 'sass:map';
+@use './variables.scss' as *;
+
+
+.banner-cta {
+  background-color: $title-color;
+  padding: 1.25rem;
+  text-align: center;
+
+  margin: 2rem 0;
+
+  @media (min-width: 768px) {
+    padding: 2rem;
+    margin: 3rem 0;
+  }
+
+  @media(min-width: 1024px) {
+    border-radius: 8px;
+    padding: 3rem;
+    margin: 4rem 0;
+  }
+
+  .banner {
+    color: $blue-secondary;
+  }
+
+  .text {
+    font-size: map.get($H2-mobile, 'font-size');
+    line-height: map.get($H2-mobile, 'line-height');
+    font-weight: map.get($H2-mobile, 'font-weight');
+
+    @media (min-width: 768px) {
+      font-size: map.get($H2-tablet, 'font-size');
+      line-height: map.get($H2-tablet, 'line-height');
+      font-weight: map.get($H2-tablet, 'font-weight');
+    }
+
+    @media(min-width: 1024px) {
+      font-size: map.get($H2-desktop, 'font-size');
+      line-height: map.get($H2-desktop, 'line-height');
+      font-weight: map.get($H2-desktop, 'font-weight');
+
+    }
+
+  }
+
+  .desc {
+  font-size: map.get($Body-mobile, 'font-size');
+  line-height: map.get($Body-mobile, 'line-height');
+  font-weight: map.get($Body-mobile, 'font-weight');
+
+
+    @media (min-width: 768px) {
+        font-size: map.get($Body-tablet, 'font-size');
+        line-height: map.get($Body-tablet, 'line-height');
+        font-weight: map.get($Body-tablet, 'font-weight');
+    }
+
+    @media(min-width: 1024px) {
+      font-size: map.get($Body-desktop, 'font-size');
+      line-height: map.get($Body-desktop, 'line-height');
+      font-weight: map.get($Body-desktop, 'font-weight');
+    }
+
+  }
+}
