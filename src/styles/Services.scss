@@ -78,7 +78,10 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
-        
+        @media (min-width: 768px) {
+          padding: 30px 30px;
+          
+        }
         @media (min-width: 1024px) {
           padding: 60px 60px;
           height: 100%; // Añadido para igualar altura
@@ -127,7 +130,10 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
-        
+        @media (min-width: 768px) {
+          padding: 30px 30px;
+          
+        }
         @media (min-width: 1024px) {
           padding: 60px 60px;
           height: 100%; // Añadido para igualar altura
@@ -172,7 +178,10 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
-        
+        @media (min-width: 768px) {
+          padding: 30px 30px;
+          
+        }
         @media (min-width: 1024px) {
           padding: 60px 60px;
         }
