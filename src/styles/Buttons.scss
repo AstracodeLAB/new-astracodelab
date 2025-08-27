@@ -9,6 +9,7 @@
 //BOTÓN fondo plano claro className="btnSecondaryLight"
 //LINK className="linkPrimary"
 //LINK ARROW className="linkSecondary"
+//LINK services className="linkServicesHero"
 
 //BOTON FONDO CLARO
 .btnPrimaryLight {
@@ -295,5 +296,49 @@
     font-weight: map.get($Button-desktop-xl, 'font-weight');
     letter-spacing: map.get($Button-desktop-xl, 'letter-spacing');
     
+  }
+}
+
+.linkServicesHero {
+  color: $text-bg-color;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; // 🔑 separa texto y flecha a extremos
+  width: 100%; // 🔑 hace que el link ocupe el ancho del div padre
+  padding: 10px 0;
+  font-family: $font-primary;
+  font-size: map.get($SmallText-mobile, 'font-size');
+  line-height: map.get($SmallText-mobile, 'line-height');
+  font-weight: map.get($SmallText-mobile, 'font-weight');
+  border-bottom: 1px solid rgba(42, 17, 96, 0.2);
+  &:last-child {
+    border-bottom: none; 
+  }
+  &:hover {
+    color: $blue-primary;
+  }
+
+  @media (min-width: 768px) {
+    font-size: map.get($Button-tablet, 'font-size');
+    line-height: map.get($Button-tablet, 'line-height');
+    font-weight: map.get($Button-tablet, 'font-weight');
+    letter-spacing: map.get($Button-tablet, 'letter-spacing');
+    //width: 330px;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: map.get($Button-desktop, 'font-size');
+    line-height: map.get($Button-desktop, 'line-height');
+    font-weight: map.get($Button-desktop, 'font-weight');
+    letter-spacing: map.get($Button-desktop, 'letter-spacing');
+  }
+
+  @media (min-width: 1440px) {
+    font-size: map.get($Button-desktop-xl, 'font-size');
+    line-height: map.get($Button-desktop-xl, 'line-height');
+    font-weight: map.get($Button-desktop-xl, 'font-weight');
+    letter-spacing: map.get($Button-desktop-xl, 'letter-spacing');
   }
 }

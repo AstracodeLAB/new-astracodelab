@@ -1,0 +1,236 @@
+@use 'sass:map';
+@use './variables.scss' as *;
+
+.servicesHome {
+  padding: 0 30px;
+  font-size: map.get($Body-mobile, 'font-size');
+  line-height: map.get($Body-mobile, 'line-height');
+  font-weight: map.get($Body-mobile, 'font-weight');
+  letter-spacing: map.get($Body-mobile, 'letter-spacing');
+  color: $text-bg-color;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    font-size: map.get($Body-tablet, 'font-size');
+    line-height: map.get($Body-tablet, 'line-height');
+    font-weight: map.get($Body-tablet, 'font-weight');
+    letter-spacing: map.get($Body-tablet, 'letter-spacing');
+    padding: 0 120px;
+  }
+  
+  @media (min-width: 1024px) {
+    font-size: map.get($Body-desktop, 'font-size');
+    line-height: map.get($Body-desktop, 'line-height');
+    font-weight: map.get($Body-desktop, 'font-weight');
+    letter-spacing: map.get($Body-desktop, 'letter-spacing');
+    padding: 0 60px;
+    gap: 20px;
+  }
+  
+  @media (min-width: 1440px) {
+    font-size: map.get($Body-desktop-xl, 'font-size');
+    line-height: map.get($Body-desktop-xl, 'line-height');
+    font-weight: map.get($Body-desktop-xl, 'font-weight');
+    letter-spacing: map.get($Body-desktop-xl, 'letter-spacing');
+    max-width: 1024px;
+    padding: 0 0;
+    margin: 0 auto;
+  }
+  &__intro {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    @media (min-width: 768px) {
+      gap: 20px;
+    }
+
+  }
+  &__services {
+    @media (min-width: 1024px) {
+      display: grid; 
+      grid-template-columns: 1fr 1fr; 
+      grid-template-rows: 1fr auto; 
+      gap: 20px 20px; 
+      grid-template-areas: 
+        "containerDesign containerFunc"
+        "containerMant containerMant"; 
+      align-items: stretch;
+    }
+    
+    &-containerDesign {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      grid-area: containerDesign;
+      
+      @media (min-width: 1024px) {
+        //height: 100%;
+      }
+      
+      &-card {
+        background-color: $cardWhite;
+        box-shadow: $shadow;
+        border-radius: 15px;
+        padding: 20px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        @media (min-width: 768px) {
+          padding: 30px 30px;
+          
+        }
+        @media (min-width: 1024px) {
+          padding: 60px 60px;
+          height: 100%; // Añadido para igualar altura
+        }
+        
+        p {
+          @media (min-width: 1024px) {
+            flex: 1; // Para que el párrafo ocupe el espacio sobrante
+          }
+        }
+        &-btn {
+          width: 100%;
+          display: flex;
+          justify-content: flex-end;
+        }
+      }
+      
+      
+      
+      &-services {
+        display: flex;
+        flex-direction: column;
+        padding: 0 20px;
+        @media (min-width: 768px) {
+          padding: 0 40px;
+        }
+      }
+    }
+    
+    &-containerFunc {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      grid-area: containerFunc;
+      
+      @media (min-width: 1024px) {
+        //height: 100%;
+        max-height: 500px;
+      }
+      
+      &-card {
+        background-color: $cardWhite;
+        box-shadow: $shadow;
+        border-radius: 15px;
+        padding: 20px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        @media (min-width: 768px) {
+          padding: 30px 30px;
+          
+        }
+        @media (min-width: 1024px) {
+          padding: 60px 60px;
+          height: 100%; // Añadido para igualar altura
+        }
+        
+        p {
+          @media (min-width: 1024px) {
+            flex: 1; // Para que el párrafo ocupe el espacio sobrante
+          }
+        }
+        &-btn {
+          width: 100%;
+          display: flex;
+          justify-content: flex-end;
+        }
+      }
+      
+      
+      
+      &-services {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        padding: 0 20px;
+        @media (min-width: 768px) {
+          padding: 0 40px;
+        }
+      }  
+    }
+    
+    &-containerMant {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      grid-area: containerMant;
+      
+      &-card {
+        background-color: $cardWhite;
+        box-shadow: $shadow;
+        border-radius: 15px;
+        padding: 20px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        @media (min-width: 768px) {
+          padding: 30px 30px;
+          
+        }
+        @media (min-width: 1024px) {
+          padding: 60px 60px;
+        }
+        &-btn {
+          width: 100%;
+          display: flex;
+          justify-content: flex-end;
+        }
+      }
+      
+      
+      
+      &-services {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+        
+        @media (min-width: 768px) {
+          padding: 0 40px;
+          gap: 20px;
+        }
+        @media (min-width: 1024px) {
+          gap: 20px;
+          flex-direction: row;
+          align-items: flex-end;;
+        }
+        &-links {
+          flex: 2;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          padding: 0 20px;
+          @media (min-width: 768px) {
+            padding: 0 40px 0 0;
+          }
+        }
+        &-cta {
+          flex: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          @media (min-width: 768px) {
+            justify-content: flex-end;
+          }
+          @media (min-width: 1024px) {
+            flex: 2;
+          }
+      }
+    }
+  }
+}}

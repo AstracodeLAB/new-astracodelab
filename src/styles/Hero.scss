@@ -42,8 +42,8 @@
       gap: 10px;
     
       @media (min-width: 768px) {
-        flex: 0 0 60%; 
-        order: 1;
+        flex: 0 0 60%;
+        order: 1; 
       }
 
       @media (min-width: 1024px) {
@@ -56,7 +56,7 @@
     
   }
 
-  &__description {
+  &-description {
     font-family: $font-primary;
     font-size: map.get($Body-mobile, 'font-size');
     line-height: map.get($Body-mobile, 'line-height');

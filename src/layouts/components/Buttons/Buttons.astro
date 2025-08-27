@@ -6,7 +6,7 @@ import Arrow from '../icons/Arrow.astro';
 {href ? (
   <a href={href} class={className}>
     <slot />
-    {className.includes("linkSecondary") && <Arrow />}
+    {(className.includes("linkSecondary") || className.includes("linkServicesHero")) && <Arrow />}
   </a>
 ) : (
   <button class={className}>
