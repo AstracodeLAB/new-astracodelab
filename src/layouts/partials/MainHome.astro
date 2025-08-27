@@ -1,11 +1,15 @@
 ---
 import CardPrecio from '../components/Cards/CardPrecio.astro';
 import CardPregunta from '../components/Cards/CardPregunta.astro';
+import imgTimeLine from '../../images/backgroundImageSectionWhy.jpg';
 import Contact from '../components/Contact.astro';
 import Hero from '../components/Hero.astro';
 import Services from '../components/services.astro';
 import Subtitle from '../components/Titles/Subtitle.astro';
 import TitleSecondary from '../components/Titles/TitleSecondary.astro';
+import Title from '../components/Timeline/Title.astro';
+import TimelineWrapper from '../components/Timeline/TimelineWrapper.astro';
+import PasoProceso from '../components/Timeline/PasoProceso.astro';
 ---
 
 <main class='mainHome'>
@@ -20,5 +24,35 @@ import TitleSecondary from '../components/Titles/TitleSecondary.astro';
     </div>
     <CardPrecio />
     <CardPregunta />
+  </section>
+
+  <section class='timeline-section'>
+    <div class='timeline-section-header'>
+      <TitleSecondary text='¿Cómo lo hacemos?' />
+    </div>
+    <TimelineWrapper>
+      <PasoProceso
+        numero='1'
+        titulo='Reunión inicial'
+        descripcion='Estudiamos tu proyecto. Hacemos una primera toma de contacto por la vía que prefieras, videollamada o llamada, donde nos cuentas tus necesidades y objetivos.'
+      />
+      <PasoProceso
+        numero='2'
+        titulo='Análisis y toma de requisitos'
+        descripcion='Recopilamos ejemplos, funcionalidades imprescindibles y contenido disponible. Analizamos tu mercado y las búsquedas clave para definir una arquitectura enfocada al usuario.'
+        imagen={imgTimeLine.src}
+        descripcionSec='Creamos un prototipo en el que podrás ajustar colores, tipografía y jerarquía hasta que digas <strong>«ahora sí»</strong>.'
+      />
+      <PasoProceso
+        numero='3'
+        titulo='Desarrollo ágil '
+        descripcion='Convertimos el diseño en código accesible y disponible para todos los dispositivos.'
+      />
+      <PasoProceso
+        numero='4'
+        titulo='Revisión, lanzamiento y soporte'
+        descripcionSec='Probamos rendimiento, seguridad y usabilidad; lanzamos tu web y te acompañamos 30 días para ajustes y dudas. Si quieres, también podemos ofrecerte <a href="">planes de mantenimiento continuos.</a>'
+      />
+    </TimelineWrapper>
   </section>
 </main>
