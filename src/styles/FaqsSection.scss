@@ -47,7 +47,12 @@
   }
 
   &__accordion {
-    // Estilos específicos para acordeones dentro de FAQs si es necesario
+    // Estilos específicos para acordeones dentro de FAQs
+    margin-bottom: 0.75rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   &__cta {
