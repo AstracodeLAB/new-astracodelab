@@ -4,47 +4,44 @@ export const faqs = [
     contenido: "Una web corporativa es un sitio completo para reflejar tu imagen de tu marca, con secciones como \"Quienes somos\", \"Servicios\" o \"Contacto\", y está optimizada para tener un diseño web elegante y profesional. Una landing page, en cambio, es una sola completa específica enfocada en una acción concreta y un mensaje muy directo."
   },
   {
-    titulo: "¿Ofrece Astracodellab soporte y mantenimiento web 24/7 después de la entrega?",
-    contenido: "Sí, ofrecemos diferentes planes de soporte y mantenimiento web. Incluimos soporte técnico, actualizaciones de seguridad, copias de seguridad automáticas y monitoreo continuo para garantizar el óptimo funcionamiento de tu sitio web."
+    titulo: "¿Ofrece AstracodeLAB soporte y mantenimiento web después de la entrega?",
+    contenido: "Sí. Disponemos de planes de mantenimiento web, puedes consultarlos desde nuestra sección de Mantenimiento y Soporte."
   },
   {
     titulo: "¿Mi página web se verá bien en móviles y otros dispositivos?",
-    contenido: "Absolutamente. Todos nuestros diseños son completamente responsive, lo que significa que se adaptan perfectamente a cualquier dispositivo: móviles, tablets, computadoras de escritorio. Utilizamos las últimas tecnologías para garantizar una experiencia de usuario óptima en todos los tamaños de pantalla."
+    contenido: "Por supuesto, la página web estará adaptada para que se vea correctamente en móviles, tablets y ordenadores (diseño responsive)."
   },
   {
-    titulo: "¿Cuántos productos puedo subir y gestionar yo mismo? ¿Me enseñarán?",
-    contenido: "No hay límite en la cantidad de productos que puedes agregar a tu tienda online. Te proporcionamos un panel de administración intuitivo y te enseñamos paso a paso cómo gestionar tu inventario, precios, descripciones y categorías. Además, incluimos documentación detallada y sesiones de capacitación."
+    titulo: "¿Cuántos productos puedo subir y gestionar yo mismo? ¿Me enseñaréis?",
+    contenido: "Podrás incluir productos ilimitados. Al finalizar el proyecto te proporcionaremos un manual para que puedas gestionar tu web. Si por el contrario prefieres delegar esta tarea, nuestro equipo puede encargarse de hacer esta gestión por ti."
   },
   {
     titulo: "¿Cuál es la diferencia entre un rediseño y una web nueva?",
-    contenido: "Un rediseño implica actualizar y mejorar un sitio web existente, manteniendo parte del contenido y estructura actual, pero renovando el diseño y funcionalidades. Una web nueva se crea desde cero, con una arquitectura completamente nueva, diseño personalizado y contenido desarrollado específicamente para tus objetivos actuales."
+    contenido: "Un rediseño web reaprovecha la estructura y contenidos existentes, focalizándose en renovar la estética y la experiencia de usuario. Una web nueva implica la creación desde cero de todo el sitio."
   },
   {
     titulo: "¿Podéis rediseñar solo el logotipo?",
-    contenido: "Sí, ofrecemos servicios de rediseño de logotipo como parte de nuestros servicios de branding. Podemos actualizar tu identidad visual manteniendo la esencia de tu marca o crear un concepto completamente nuevo. Este servicio incluye diferentes propuestas, revisiones y entrega de archivos en todos los formatos necesarios."
+    contenido: "Sí, podemos rediseñar únicamente el logotipo. Nos adaptamos siempre a tus necesidades."
   },
   {
     titulo: "¿Quién escribirá los textos de la web? ¿Me debo encargar de enviaros las imágenes?",
-    contenido: "Podemos ayudarte con ambos aspectos. Si tienes contenido propio, perfecto, lo optimizamos para web. Si necesitas ayuda con los textos, contamos con redactores especializados en copywriting web. En cuanto a las imágenes, puedes proporcionarlas o podemos usar bancos de imágenes profesionales y crear contenido visual personalizado."
+    contenido: "Lo ideal es que nos facilites tus propios textos e imágenes para reflejar al máximo la esencia de tu marca. No obstante, si lo prefieres, nuestro equipo puede encargarse de redactar los textos."
   },
   {
     titulo: "¿El precio incluye IVA?",
-    contenido: "Todos nuestros precios mostrados incluyen IVA. No hay costos ocultos ni sorpresas en la facturación final. El precio que ves es exactamente lo que pagas, incluyendo todos los impuestos correspondientes."
+    contenido: "En la página web se muestran los precios sin IVA para facilitar la comparación de precios. En la factura final se aplicará el 21% de IVA según lo establecido por la legislación española."
   },
   {
     titulo: "¿Seré el propietario de mi web?",
-    contenido: "Sí, absolutamente. Una vez completado el pago, tú eres el propietario completo de tu sitio web. Esto incluye todos los archivos, código fuente, diseños y contenido. Te proporcionamos acceso total a tu hosting y dominio, y puedes hacer los cambios que desees o migrar a otro proveedor cuando quieras."
+    contenido: "Sí.  Al completar el pago, eres propietario de tu página web, sin licencias ocultas ni permanencias."
   },
   {
     titulo: "¿Qué tipo de webs hacemos?",
-    contenido: "Creamos todo tipo de sitios web: webs corporativas, tiendas online (ecommerce), landing pages, portfolios profesionales, blogs, sitios web para restaurantes, clínicas, abogados, arquitectos, y muchos más sectores. Cada proyecto se desarrolla a medida según las necesidades específicas de tu negocio."
+    contenido: "En AstracodeLAB desarrollamos soluciones digitales adaptadas a la meta de cada negocio. Nos especializamos en: webs corporativas, webs a medida, portfolios profesionales, tiendas online (e-commerce), y rediseño y renovación web. Para más detalles, visita nuestra sección de Diseño y Desarrollo Web."
   },
   {
-    titulo: "¿Dónde presta sus servicios Astracodellab?",
-    contenido: "Prestamos servicios en toda España. Aunque nuestro equipo trabaja de forma remota, colaboramos con clientes de todas las comunidades autónomas. La comunicación online nos permite ofrecer el mismo nivel de servicio y calidad independientemente de tu ubicación geográfica."
+    titulo: "¿Dónde presta sus servicios AstracodeLAB?",
+    contenido: "AstracodeLAB está ubicada en Barcelona, Castellón y Málaga, pero presta servicios para toda España."
   },
-  {
-    titulo: "¿Tienes alguna pregunta?",
-    contenido: "Si tienes cualquier duda que no esté resuelta aquí, no dudes en contactarnos. Puedes escribirnos un email, llamarnos o usar nuestro formulario de contacto. Estaremos encantados de resolver todas tus preguntas y ayudarte a encontrar la solución perfecta para tu proyecto web."
-  }
+
 ];
