@@ -1,0 +1,78 @@
+@use 'sass:map';
+@use './variables.scss' as *;
+
+// ===========================
+// SOCIAL ICONS
+// ===========================
+.social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // gap: 0.5rem;
+
+
+  @media (min-width: 768px) {
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    gap: 2rem;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: transparent;
+    transition: all 0.3s ease;
+    text-decoration: none;
+
+    @media (min-width: 768px) {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+    }
+
+    @media (min-width: 1024px) {
+      width: 52px;
+      height: 52px;
+    }
+
+    &:hover {
+      background: rgba($blue-dark, 0.1);
+      transform: translateY(-2px);
+    }
+  }
+
+  &__icon {
+    width:42px;
+    height: 42px;
+    filter: brightness(0) saturate(100%) invert(11%) sepia(100%) saturate(2466%) hue-rotate(223deg) brightness(84%) contrast(101%);
+    transition: all 0.3s ease;
+
+    @media (min-width: 768px) {
+
+    }
+
+    @media (min-width: 1024px) {
+      width: 62px;
+      height: 62px;
+    }
+  }
+
+  // Contexto específico para work-section
+  &.work-section__social {
+    margin-top: 2rem;
+
+    @media (min-width: 768px) {
+      margin-top: 2.5rem;
+    }
+
+    @media (min-width: 1024px) {
+      margin-top: 3rem;
+    }
+  }
+}

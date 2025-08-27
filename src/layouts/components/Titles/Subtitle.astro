@@ -1,5 +1,6 @@
 ---
-const { text, className = "" } = Astro.props;
+const { text, className = '', description } = Astro.props;
 ---
 
 <h3 class={`subtitle ${className}`}>{text}</h3>
+{description && <p class={`description ${className}`}>{description}</p>}

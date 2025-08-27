@@ -1,0 +1,13 @@
+---
+import TitleSecondary from './Titles/TitleSecondary.astro';
+import SocialIcons from './SocialIcons.astro';
+
+const { titulo } = Astro.props;
+---
+
+<section class='work-section'>
+  <div class='work-section__container'>
+    <TitleSecondary text={titulo} />
+    <SocialIcons className="work-section__social" />
+  </div>
+</section>

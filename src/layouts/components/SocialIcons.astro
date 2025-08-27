@@ -1,0 +1,18 @@
+---
+const { className = "" } = Astro.props;
+---
+
+<div class={`social-icons ${className}`}>
+  <a href="#" class="social-icons__link" aria-label="Instagram">
+    <img src="/src/layouts/components/icons/insta.svg" alt="Instagram" class="social-icons__icon" />
+  </a>
+  <a href="#" class="social-icons__link" aria-label="LinkedIn">
+    <img src="/src/layouts/components/icons/linkedin.svg" alt="LinkedIn" class="social-icons__icon" />
+  </a>
+  <a href="#" class="social-icons__link" aria-label="Threads">
+    <img src="/src/layouts/components/icons/threads.svg" alt="Threads" class="social-icons__icon" />
+  </a>
+  <a href="#" class="social-icons__link" aria-label="Facebook">
+    <img src="/src/layouts/components/icons/facebook.svg" alt="Facebook" class="social-icons__icon" />
+  </a>
+</div>

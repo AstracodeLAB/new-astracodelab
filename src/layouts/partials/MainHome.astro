@@ -2,14 +2,18 @@
 import CardPrecio from '../components/Cards/CardPrecio.astro';
 import CardPregunta from '../components/Cards/CardPregunta.astro';
 import imgTimeLine from '../../images/backgroundImageSectionWhy.jpg';
-import Contact from '../components/Contact.astro';
 import Hero from '../components/Hero.astro';
 import Services from '../components/services.astro';
 import Subtitle from '../components/Titles/Subtitle.astro';
 import TitleSecondary from '../components/Titles/TitleSecondary.astro';
-import Title from '../components/Timeline/Title.astro';
 import TimelineWrapper from '../components/Timeline/TimelineWrapper.astro';
 import PasoProceso from '../components/Timeline/PasoProceso.astro';
+import BannerImg from '../components/Banners/BannerImg.astro';
+import TextContent from '../components/TextContent.astro';
+import BannerCta from '../components/Banners/BannerCta.astro';
+import CardTestimonio from '../components/Cards/CardTestimonio.astro';
+import WorkSection from '../components/WorkSection.astro';
+import FaqsSection from '../components/FaqsSection.astro';
 ---
 
 <main class='mainHome'>
@@ -40,10 +44,48 @@ import PasoProceso from '../components/Timeline/PasoProceso.astro';
       <PasoProceso
         numero='4'
         titulo='Revisión, lanzamiento y soporte'
-        descripcionSec='Probamos rendimiento, seguridad y usabilidad; lanzamos tu web y te acompañamos 30 días para ajustes y dudas. Si quieres, también podemos ofrecerte <a href="">planes de mantenimiento continuos.</a>'
+        descripcionSec='Probamos rendimiento, seguridad y usabilidad; lanzamos tu web y te acompañamos 30 días para ajustes y dudas. Si quieres, también podemos ofrecerte <a class= "linkPrimary"href="">planes de mantenimiento continuos.</a>'
       />
     </TimelineWrapper>
   </section>
+
+  <section class='why-choose-us-section'>
+    <div class='why-choose-us-header'>
+      <TitleSecondary text='¿Por qué elegirnos?' />
+    </div>
+
+    <BannerImg
+      imagen={imgTimeLine.src}
+      titulo='En AstracodeLAB somos una agencia de diseño web con proyección en toda España'
+      descripcion='Nos importa la experiencia online y tu presencia únicamente que demanda un mercado específico. Lo hacemos destacar, convertimos, aceleramos, pontificamos. Nuestros métodos ayudan al crecimiento; ponerte donde perteneces, estructuramos y promocionamos que vendas más. Calidad artística y habilidad para hacer ver que vendas creatividad y honestidad.'
+      alt='Imagen de diseño web'
+    />
+
+    <div class='why-choose-us-content'>
+      <TextContent
+        titulo='Webs personalizadas y optimizadas'
+        descripcion='No usamos plantillas genéricas. Diseñamos desde cero cada interfaz, a medida de tus competencia de tu empresa, tu fondo online o portfolio, que refueje la historia. Optimizamos y estructuramos tu contenido para SEO y configuramos con lo imprescindible para que puedas dedicar tu tiempo a lo que más valor aporta y tu negocio a hacer crecer tu proyecto.'
+      />
+
+      <div class='why-choose-us-right-column'>
+        <div class='why-choose-us-image'>
+          <img src={imgTimeLine.src} alt='Imagen de optimización web' />
+        </div>
+
+        <TextContent
+          titulo='Diseño estratégico con enfoque humano'
+          descripcion='En AstracodeLAB nos gusta conectar contigo desde el primer minuto de tecnología, que funcionarán, sin generar incomodidad alguna. Desde la idea hasta la entrega de todos los accesibles hasta la simplificar el proceso para que tengas lo mejor sin complicaciones que te ayude la mejor manera.'
+        />
+      </div>
+    </div>
+  </section>
+
+  <BannerCta
+    titulo='¿Listo para destacar?'
+    descripcion='Tanto si quieres hacer una página web profesional, lanzar un nuevo ecommerce o renovar tu web actual, podemos transformar tu idea en resultados concretos. Cada proyecto es único y cada diseño tiene su propio propósito.'
+    texto='Contacta con nosotros'
+  />
+
   <section class='section-prices'>
     <div class='section-prices-header'>
       <TitleSecondary
@@ -55,5 +97,34 @@ import PasoProceso from '../components/Timeline/PasoProceso.astro';
     <CardPregunta />
   </section>
 
-  
+  <section class='testimonial-section'>
+    <CardTestimonio
+      titulo='¿Aún tienes dudas?'
+      subtitulo='Quienes mejor hablan de nosotras son nuestros clientes'
+      testimonials={[
+        {
+          imagen: imgTimeLine.src,
+          testimonial:
+            'Muy contenta con el trabajo de esta empresa. Les di el contacto para un familiar y ha quedado encantado. Estuvieron en todo momento en contacto, supieron plasmar sus ideas y, además, aportaron mucha creatividad al proyecto. También me dice que son encantadoras y que, desde el primer momento, ya sabía que estaba en buenas manos. Las volveré a recomendar sin duda.',
+          alt: 'Cliente satisfecho 1',
+        },
+        {
+          imagen: imgTimeLine.src,
+          testimonial:
+            'Ha sido genial trabajar con el equipo AstraCodeLab. Desde el principio han mostrado una gran profesionalidad y han cumplido con todo lo acordado y plazos propuestos.Su implicación en el proyecto ha hecho obtener un diseño de la web maravilloso. Nos encanta el resultado.Sin duda cuento con ellas para futuros trabajos.',
+          alt: 'Cliente satisfecho 2',
+        },
+        {
+          imagen: imgTimeLine.src,
+          testimonial:
+            'Muy satisfecho con el resultado obtenido, la web que me han diseñado funciona estupendamente y a un precio muy competitivo. El trato recibido estupendo, no se puede ser más profesional.',
+          alt: 'Cliente satisfecho 3',
+        },
+      ]}
+    />
+  </section>
+
+  <WorkSection titulo='¿Quieres ver nuestros trabajos?' />
+
+  <FaqsSection titulo='Preguntas frecuentes' />
 </main>

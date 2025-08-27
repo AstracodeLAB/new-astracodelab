@@ -1,0 +1,145 @@
+@use 'sass:map';
+@use './variables.scss' as *;
+
+// ===========================
+// ACCORDION COMPONENT
+// ===========================
+.accordion {
+  border: 1px solid #E5E5E5;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  background: $cardWhite;
+  overflow: hidden;
+
+  @media (min-width: 768px) {
+    border-radius: 12px;
+    margin-bottom: 1.25rem;
+  }
+
+  @media (min-width: 1024px) {
+    margin-bottom: 1.5rem;
+  }
+
+  &__header {
+    width: 100%;
+    padding: 1.25rem 1rem;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+
+    @media (min-width: 768px) {
+      padding: 1.5rem 1.5rem;
+    }
+
+    @media (min-width: 1024px) {
+      padding: 1.75rem 2rem;
+    }
+
+    &:hover {
+      background-color: rgba($blue-primary, 0.02);
+    }
+
+    &:focus {
+      outline: none;
+      background-color: rgba($blue-primary, 0.05);
+    }
+  }
+
+  &__title {
+    font-family: $font-primary;
+    font-size: map.get($Body-mobile, 'font-size');
+    line-height: map.get($Body-mobile, 'line-height');
+    font-weight: 600;
+    letter-spacing: map.get($Body-mobile, 'letter-spacing');
+    color: $title-color;
+    margin: 0;
+    flex: 1;
+    padding-right: 1rem;
+
+    @media (min-width: 768px) {
+      font-size: map.get($Body-tablet, 'font-size');
+      line-height: map.get($Body-tablet, 'line-height');
+      font-weight: 600;
+      letter-spacing: map.get($Body-tablet, 'letter-spacing');
+    }
+
+    @media (min-width: 1024px) {
+      font-size: map.get($Body-desktop, 'font-size');
+      line-height: map.get($Body-desktop, 'line-height');
+      font-weight: 600;
+      letter-spacing: map.get($Body-desktop, 'letter-spacing');
+    }
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    color: $blue-dark;
+    flex-shrink: 0;
+
+    @media (min-width: 768px) {
+      width: 24px;
+      height: 24px;
+    }
+
+    @media (min-width: 1024px) {
+      width: 28px;
+      height: 28px;
+    }
+  }
+
+  &__content {
+    border-top: 1px solid #F0F0F0;
+    transition: height 0.3s ease;
+  }
+
+  &__text {
+    padding: 1.25rem 1rem;
+
+    @media (min-width: 768px) {
+      padding: 1.5rem 1.5rem;
+    }
+
+    @media (min-width: 1024px) {
+      padding: 1.75rem 2rem;
+    }
+
+    p {
+      font-family: $font-primary;
+      font-size: map.get($Body-mobile, 'font-size');
+      line-height: map.get($Body-mobile, 'line-height');
+      font-weight: map.get($Body-mobile, 'font-weight');
+      letter-spacing: map.get($Body-mobile, 'letter-spacing');
+      color: $text-bg-color;
+      margin: 0;
+
+      @media (min-width: 768px) {
+        font-size: map.get($Body-tablet, 'font-size');
+        line-height: map.get($Body-tablet, 'line-height');
+        font-weight: map.get($Body-tablet, 'font-weight');
+        letter-spacing: map.get($Body-tablet, 'letter-spacing');
+      }
+
+      @media (min-width: 1024px) {
+        font-size: map.get($Body-desktop, 'font-size');
+        line-height: map.get($Body-desktop, 'line-height');
+        font-weight: map.get($Body-desktop, 'font-weight');
+        letter-spacing: map.get($Body-desktop, 'letter-spacing');
+      }
+    }
+  }
+
+  // Estado abierto
+  &--open {
+    border-color: rgba($blue-primary, 0.3);
+
+    .accordion__header {
+      background-color: rgba($blue-primary, 0.05);
+    }
+  }
+}
