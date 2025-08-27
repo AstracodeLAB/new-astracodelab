@@ -12,16 +12,6 @@ import TextContent from '../components/TextContent.astro';
 
 <main class='mainHome'>
   <Hero />
-  <section class='section-prices'>
-    <div class='section-prices-header'>
-      <TitleSecondary
-        text='Precios claros y flexibles diseñados para todo el mundo'
-        description='Elige el plan que mejor se adapta a tu proyecto. Todos incluyen diseño responsive y soporte durante el primer mes. (IVA)'
-      />
-    </div>
-    <CardPrecio />
-    <CardPregunta />
-  </section>
 
   <section class='timeline-section'>
     <div class='timeline-section-header'>
@@ -57,8 +47,8 @@ import TextContent from '../components/TextContent.astro';
     <div class='why-choose-us-header'>
       <TitleSecondary text='¿Por qué elegirnos?' />
     </div>
-    
-    <BannerImg 
+
+    <BannerImg
       imagen={imgTimeLine.src}
       titulo='En AstracodeLAB somos una agencia de diseño web con proyección en toda España'
       descripcion='Nos importa la experiencia online y tu presencia únicamente que demanda un mercado específico. Lo hacemos destacar, convertimos, aceleramos, pontificamos. Nuestros métodos ayudan al crecimiento; ponerte donde perteneces, estructuramos y promocionamos que vendas más. Calidad artística y habilidad para hacer ver que vendas creatividad y honestidad.'
@@ -66,7 +56,7 @@ import TextContent from '../components/TextContent.astro';
     />
 
     <div class='why-choose-us-content'>
-      <TextContent 
+      <TextContent
         titulo='Webs personalizadas y optimizadas'
         descripcion='No usamos plantillas genéricas. Diseñamos desde cero cada interfaz, a medida de tus competencia de tu empresa, tu fondo online o portfolio, que refueje la historia. Optimizamos y estructuramos tu contenido para SEO y configuramos con lo imprescindible para que puedas dedicar tu tiempo a lo que más valor aporta y tu negocio a hacer crecer tu proyecto.'
       />
@@ -75,12 +65,23 @@ import TextContent from '../components/TextContent.astro';
         <div class='why-choose-us-image'>
           <img src={imgTimeLine.src} alt='Imagen de optimización web' />
         </div>
-        
-        <TextContent 
+
+        <TextContent
           titulo='Diseño estratégico con enfoque humano'
           descripcion='En AstracodeLAB nos gusta conectar contigo desde el primer minuto de tecnología, que funcionarán, sin generar incomodidad alguna. Desde la idea hasta la entrega de todos los accesibles hasta la simplificar el proceso para que tengas lo mejor sin complicaciones que te ayude la mejor manera.'
         />
       </div>
     </div>
+  </section>
+
+  <section class='section-prices'>
+    <div class='section-prices-header'>
+      <TitleSecondary
+        text='Precios claros y flexibles diseñados para todo el mundo'
+        description='Elige el plan que mejor se adapta a tu proyecto. Todos incluyen diseño responsive y soporte durante el primer mes. (IVA)'
+      />
+    </div>
+    <CardPrecio />
+    <CardPregunta />
   </section>
 </main>
