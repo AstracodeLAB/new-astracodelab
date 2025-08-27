@@ -11,6 +11,8 @@ import PasoProceso from '../components/Timeline/PasoProceso.astro';
 import BannerImg from '../components/Banners/BannerImg.astro';
 import TextContent from '../components/TextContent.astro';
 import BannerCta from '../components/Banners/BannerCta.astro';
+import CardTestimonio from '../components/Cards/CardTestimonio.astro';
+import WorkSection from '../components/WorkSection.astro';
 ---
 
 <main class='mainHome'>
@@ -93,4 +95,33 @@ import BannerCta from '../components/Banners/BannerCta.astro';
     <CardPrecio />
     <CardPregunta />
   </section>
+
+  <section class='testimonial-section'>
+    <CardTestimonio
+      titulo='¿Aún tienes dudas?'
+      subtitulo='Quienes mejor hablan de nosotras son nuestros clientes'
+      testimonials={[
+        {
+          imagen: imgTimeLine.src,
+          testimonial:
+            'Muy contenta con el trabajo de esta empresa. Les di el contacto para un familiar y ha quedado encantado. Estuvieron en todo momento en contacto, supieron plasmar sus ideas y, además, aportaron mucha creatividad al proyecto. También me dice que son encantadoras y que, desde el primer momento, ya sabía que estaba en buenas manos. Las volveré a recomendar sin duda.',
+          alt: 'Cliente satisfecho 1',
+        },
+        {
+          imagen: imgTimeLine.src,
+          testimonial:
+            'Ha sido genial trabajar con el equipo AstraCodeLab. Desde el principio han mostrado una gran profesionalidad y han cumplido con todo lo acordado y plazos propuestos.Su implicación en el proyecto ha hecho obtener un diseño de la web maravilloso. Nos encanta el resultado.Sin duda cuento con ellas para futuros trabajos.',
+          alt: 'Cliente satisfecho 2',
+        },
+        {
+          imagen: imgTimeLine.src,
+          testimonial:
+            'Muy satisfecho con el resultado obtenido, la web que me han diseñado funciona estupendamente y a un precio muy competitivo. El trato recibido estupendo, no se puede ser más profesional.',
+          alt: 'Cliente satisfecho 3',
+        },
+      ]}
+    />
+  </section>
+
+  <WorkSection titulo='¿Quieres ver nuestros trabajos?' />
 </main>

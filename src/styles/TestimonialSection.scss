@@ -1,0 +1,24 @@
+@use 'sass:map';
+@use './variables.scss' as *;
+
+
+.testimonial-section{
+  margin-top: 30px;
+
+  @media(min-width: 768px) {
+
+  }
+  @media(min-width: 1024px) {
+
+    margin-top: 60px;
+  }
+}
+.card-testimonio {
+  box-shadow: 0 1px 40px 0 rgba(42, 17, 96, 0.20);
+
+  @media(min-width: 768px) {
+    min-width: 403px;
+  }
+  
+
+}

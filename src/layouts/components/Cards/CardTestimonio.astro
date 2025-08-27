@@ -1,0 +1,93 @@
+---
+import TitleSecondary from '../Titles/TitleSecondary.astro';
+
+const { titulo, subtitulo, testimonials } = Astro.props;
+---
+
+<div class='card-testimonio' data-testimonial-slider>
+  <div class='card-testimonio__header'>
+    <TitleSecondary text={titulo} description={subtitulo} />
+  </div>
+  
+  <div class='card-testimonio__content'>
+    <div class='card-testimonio__profile'>
+      <img src={testimonials[0].imagen} alt={testimonials[0].alt} class='card-testimonio__avatar' data-testimonial-avatar />
+    </div>
+    
+    <div class='card-testimonio__testimonial'>
+      <div class='card-testimonio__navigation'>
+        <button class='card-testimonio__nav-btn card-testimonio__nav-btn--prev' data-testimonial-prev>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class='card-testimonio__nav-btn card-testimonio__nav-btn--next' data-testimonial-next>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      
+      <p class='card-testimonio__text' data-testimonial-text>{testimonials[0].testimonial}</p>
+    </div>
+  </div>
+</div>
+
+<script define:vars={{testimonials}}>
+  class TestimonialSlider {
+    constructor() {
+      this.slider = document.querySelector('[data-testimonial-slider]');
+      if (!this.slider) return;
+      
+      this.testimonials = testimonials;
+      this.currentIndex = 0;
+      
+      this.prevBtn = this.slider.querySelector('[data-testimonial-prev]');
+      this.nextBtn = this.slider.querySelector('[data-testimonial-next]');
+      this.textElement = this.slider.querySelector('[data-testimonial-text]');
+      this.avatarElement = this.slider.querySelector('[data-testimonial-avatar]');
+      
+      this.init();
+    }
+    
+    init() {
+      this.prevBtn.addEventListener('click', () => this.prev());
+      this.nextBtn.addEventListener('click', () => this.next());
+    }
+    
+    prev() {
+      this.currentIndex = this.currentIndex === 0 ? this.testimonials.length - 1 : this.currentIndex - 1;
+      this.updateContent();
+    }
+    
+    next() {
+      this.currentIndex = this.currentIndex === this.testimonials.length - 1 ? 0 : this.currentIndex + 1;
+      this.updateContent();
+    }
+    
+    updateContent() {
+      const current = this.testimonials[this.currentIndex];
+      
+      // Fade out
+      this.textElement.style.opacity = '0';
+      this.avatarElement.style.opacity = '0';
+      
+      setTimeout(() => {
+        this.textElement.textContent = current.testimonial;
+        this.avatarElement.src = current.imagen;
+        this.avatarElement.alt = current.alt;
+        
+        // Fade in
+        this.textElement.style.opacity = '1';
+        this.avatarElement.style.opacity = '1';
+      }, 150);
+    }
+  }
+  
+  // Initialize when DOM is loaded
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => new TestimonialSlider());
+  } else {
+    new TestimonialSlider();
+  }
+</script>
