@@ -1,0 +1,27 @@
+---
+import Accordion from './Accordion.astro';
+import { faqs } from '../data/faqs.js'; // ajusta la ruta según tu estructura de carpetas
+---
+
+<section class="max-w-3xl mx-auto py-8">
+  <h2 class="text-2xl font-bold mb-6">Preguntas frecuentes</h2>
+  {faqs.map((faq) => (
+    <Accordion titulo={faq.titulo} contenido={faq.contenido} />
+  ))}
+</section>
+
+export const faqs = [
+{
+titulo: "¿Cuánto tiempo tarda un proyecto?",
+contenido: "Depende de la complejidad, normalmente entre 2 y 4 semanas.",
+},
+{
+titulo: "¿Qué incluye el mantenimiento?",
+contenido: "Actualizaciones de seguridad, copias de seguridad y soporte técnico.",
+},
+{
+titulo: "¿Puedo modificar mi página luego?",
+contenido: "Sí, siempre podrás solicitar cambios o aprender a gestionarla tú misma.",
+},
+// Puedes añadir más preguntas aquí
+];
