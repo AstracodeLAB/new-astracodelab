@@ -87,17 +87,6 @@ import Footer from '../components/Footer.astro';
     texto='Contacta con nosotros'
   />
 
-  <section class='section-prices'>
-    <div class='section-prices-header'>
-      <TitleSecondary
-        text='Precios claros y flexibles diseñados para todo el mundo'
-        description='Elige el plan que mejor se adapta a tu proyecto. Todos incluyen diseño responsive y soporte durante el primer mes. (IVA)'
-      />
-    </div>
-    <CardPrecio />
-    <CardPregunta />
-  </section>
-
   <section class='testimonial-section'>
     <CardTestimonio
       titulo='¿Aún tienes dudas?'
@@ -126,6 +115,16 @@ import Footer from '../components/Footer.astro';
   </section>
 
   <WorkSection titulo='¿Quieres ver nuestros trabajos?' />
+  <section class='section-prices'>
+    <div class='section-prices-header'>
+      <TitleSecondary
+        text='Precios claros y flexibles diseñados para todo el mundo'
+        description='Elige el plan que mejor se adapta a tu proyecto. Todos incluyen diseño responsive y soporte durante el primer mes. (IVA)'
+      />
+    </div>
+    <CardPrecio />
+    <CardPregunta />
+  </section>
 
   <FaqsSection titulo='Preguntas frecuentes' />
 </main>
