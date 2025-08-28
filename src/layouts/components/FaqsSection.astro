@@ -3,28 +3,29 @@ import TitleSecondary from './Titles/TitleSecondary.astro';
 import Accordion from './Accordion.astro';
 import { faqs } from '../../data/faqs.js';
 
-const { titulo, className = "" } = Astro.props;
+const { titulo, className = '' } = Astro.props;
 ---
 
 <section class={`faqs-section ${className}`}>
-  <div class="faqs-section__container">
-    <div class="faqs-section__header">
-      <TitleSecondary text={titulo} />
-    </div>
-    
-    <div class="faqs-section__content">
-      {faqs.map((faq) => (
-        <Accordion 
-          titulo={faq.titulo} 
-          contenido={faq.contenido}
-          className="faqs-section__accordion"
-        />
-      ))}
-    </div>
-    
-    <div class="faqs-section__cta">
-      <p class="faqs-section__cta-text">¿Tienes alguna pregunta?</p>
-      <a href="/contacto" class="faqs-section__cta-button">Obtener ayuda</a>
+  <div class='faqs-section__container'>
+    <article>
+      <div class='faqs-section__header'>
+        <TitleSecondary text={titulo} />
+      </div>
+
+      <div class='faqs-section__content'>
+        {
+          faqs.map((faq) => (
+            <Accordion titulo={faq.titulo} contenido={faq.contenido} className='faqs-section__accordion' />
+          ))
+        }
+      </div>
+    </article>
+
+    <div class='faqs-section__cta'>
+      <p class='faqs-section__cta-title'>¿Tienes alguna pregunta?</p>
+      <p class='faqs-section__cta-text'>Estamos aquí para ayudarte a sacar el máximo provecho de tu proyecto.</p>
+      <a href='/contacto' class='faqs-section__cta-button'>Obtener ayuda</a>
     </div>
   </div>
 </section>
