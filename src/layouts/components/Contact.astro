@@ -3,81 +3,78 @@
 ---
 
 <section id='contact' class='contact'>
-	<div class='contact__title'>
-		<h2 class='contact__title-h2'>CONTACTO</h2>
-	</div>
-	<div class='contact__container'>
-		<div class='contact__container-text'>
-			<p class='contact__container-text-description'>
-				En AstracodeLAB, te ayudamos a convertir tus ideas en realidad. Si necesitas más información sobre nuestros
-				servicios o deseas que analicemos tu próximo proyecto, no dudes en ponerte en contacto con nosotras a través del
-				formulario. Te responderemos lo antes posible. ¡Estamos deseando trabajar contigo!
-			</p>
-			<p class='contact__container-text-description'>
-				Si ya sabes exactamente qué tipo de página necesitas, puedes acceder a <a
-					href='https://docs.google.com/forms/d/e/1FAIpQLSdj6jwZ5bnhqcTR_fWHebJObl8caKhlROcOrgBdnPCpXz8fAA/viewform?pli=1'
-					class='contact__container-text-description-link'
-				>
-					este formulario</a
-				> donde te haremos unas preguntas para conocer mejor tu proyecto.
-			</p>
-		</div>
-		<div class='contact__container-data'>
-			<form
-				name='contact'
-				id='contact_form'
-				method='POST'
-				netlify
-				class='contact__container-data-form'
-				aria-labelledby='contact-form'
-				aria-describedby='contact-form-description'
-			>
-				<input name='name' type='text' class='contact__input' placeholder='Nombre' required />
-				<input name='email' type='email' class='contact__input' placeholder='nombre@mail.com' required />
-				<textarea name='message' class='contact__textarea' placeholder='Deja tu mensaje...' required></textarea>
-				<label class='contact__checkbox-label'>
-					<input type='checkbox' class='contact__checkbox' required />
-					Acepto que se traten mis datos para gestionar la consulta.
-				</label>
-				<p class='contact__question'>¿Tienes dudas? Pregúntanos</p>
-				<button type='submit' aria-label='Send message' class='contact__button'>ENVIAR</button>
-			</form>
-		</div>
-	</div>
+  <div class='contact__title'>
+    <h2 class='contact__title-h2'>CONTACTO</h2>
+  </div>
+  <div class='contact__container'>
+    <div class='contact__container-text'>
+      <p class='contact__container-text-description'>¡Transforma tu idea en una web profesional!</p>
+      <p class='contact__container-text-description'>
+        En Astracodelab, diseñamos y desarrollamos soluciones web pensadas para tu marca. Desde una página web a medida
+        hasta un e-commerce potente, nuestro equipo está listo para convertir tu visión en realidad.
+      </p>
+      <p class='contact__container-text-description'>¿Tienes un proyecto en mente?</p>
+      <p class='contact__container-text-description'>
+        Completa el formulario y nos pondremos en contacto contigo para una asesoría gratuita. Es el primer paso para
+        conseguir la página web que siempre soñaste.
+      </p>
+    </div>
+    <div class='contact__container-data'>
+      <form
+        name='contact'
+        id='contact_form'
+        method='POST'
+        netlify
+        class='contact__container-data-form'
+        aria-labelledby='contact-form'
+        aria-describedby='contact-form-description'
+      >
+        <input name='name' type='text' class='contact__input' placeholder='Nombre' required />
+        <input name='email' type='email' class='contact__input' placeholder='nombre@mail.com' required />
+        <textarea name='message' class='contact__textarea' placeholder='Deja tu mensaje...' required></textarea>
+        <label class='contact__checkbox-label'>
+          <input type='checkbox' class='contact__checkbox' required />
+          Acepto que se traten mis datos para gestionar la consulta.
+        </label>
+        <p class='contact__question'>¿Tienes dudas? Pregúntanos</p>
+        <button type='submit' aria-label='Send message' class='contact__button'>ENVIAR</button>
+      </form>
+    </div>
+  </div>
 </section>
 
 <script>
-	document.addEventListener('DOMContentLoaded', () => {
-		const contactTitle = document.querySelector('.contact__title-h2');
-		const contactSection = document.getElementById('contact');
+  document.addEventListener('DOMContentLoaded', () => {
+    const contactTitle = document.querySelector('.contact__title-h2');
+    const contactSection = document.getElementById('contact');
 
-		const handleScroll = () => {
-			const sectionPosition = contactSection.getBoundingClientRect().top;
-			const screenHeight = window.innerHeight;
+    const handleScroll = () => {
+      const sectionPosition = contactSection.getBoundingClientRect().top;
+      const screenHeight = window.innerHeight;
 
-			if (sectionPosition <= screenHeight * 0.8) {
-				contactTitle.classList.add('tracking-in-contract');
-				window.removeEventListener('scroll', handleScroll); // Para evitar re-aplicar la animación
-			}
-		};
+      if (sectionPosition <= screenHeight * 0.8) {
+        contactTitle.classList.add('tracking-in-contract');
+        window.removeEventListener('scroll', handleScroll); // Para evitar re-aplicar la animación
+      }
+    };
 
-		window.addEventListener('scroll', handleScroll);
-	});
+    window.addEventListener('scroll', handleScroll);
+  });
 
-	const handleSubmit = (event) => {
-		event.preventDefault();
+  const handleSubmit = (event) => {
+    event.preventDefault();
 
-		const myForm = event.target;
-		const formData = new FormData(myForm);
+    const myForm = event.target;
+    const formData = new FormData(myForm);
 
-		fetch('/es/', {
-			method: 'POST',
-			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-			body: new URLSearchParams(formData).toString(),
-		})
-			.then(() => (window.location.href = '/sent'))
-			.catch((error) => alert('error sending message, please try again'));
-	};
+    fetch('/es/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => (window.location.href = '/sent'))
+      .catch((error) => alert('error sending message, please try again'));
+  };
 
-	document.getElementById('contact_form').addEventListener('submit', handleSubmit);
+  document.getElementById('contact_form').addEventListener('submit', handleSubmit);
 </script>
