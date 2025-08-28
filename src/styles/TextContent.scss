@@ -44,11 +44,11 @@
 
     @media (min-width: 1024px) {
       // Limitar el ancho del texto para mantener consistencia
-      max-width: calc(100% - 280px);
+
       
       // Si no hay imagen, mantener el mismo ancho que si la hubiera
       .text-content:not(.text-content--with-image) & {
-        max-width: calc(100% - 280px);
+        // max-width: calc(100% - 280px);
       }
     }
   }

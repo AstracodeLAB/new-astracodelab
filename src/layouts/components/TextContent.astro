@@ -1,11 +1,13 @@
 ---
-const { titulo, descripcion, imagen, alt = "" } = Astro.props;
+const { titulo, descripcion,descripcionSec, imagen, alt = "" } = Astro.props;
 ---
 
 <div class={`text-content${imagen ? ' text-content--with-image' : ''}`}>
   <div class='text-content__text'>
     <h3 class='text-content__title'>{titulo}</h3>
     <p class='text-content__description'>{descripcion}</p>
+    <br>
+    <p class='text-content__description'>{descripcionSec}</p>
   </div>
   {imagen && (
     <div class='text-content__image-container'>
