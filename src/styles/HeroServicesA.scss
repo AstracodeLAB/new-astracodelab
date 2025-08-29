@@ -1,0 +1,7 @@
+@use 'sass:map';
+@use './variables.scss' as *;
+
+.heroServicesA {
+  width: 100vw;
+  background-color: $blue-primary;
+}

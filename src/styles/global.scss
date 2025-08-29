@@ -25,35 +25,31 @@
 @use './TestimonialSection.scss';
 @use './Accordion.scss';
 @use './FaqsSection.scss';
+@use './HeroServicesA.scss';
 
 /* Estilos globales */
 :root {
-    font-family: $font-primary;
+  font-family: $font-primary;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: $font-primary;
-    header {
-        padding: 20px;
-      }
-      
-      footer {
-        padding: 30px 20px; // top-bottom 30px, left-right 20px
-      }
+  header {
+    padding: 20px;
+  }
 
-    @media (min-width: 768px) {
-      
-    }
-    @media (min-width: 1024px) {
-      
-    }
-    @media (min-width: 1440px) {
-       
-    }
+  footer {
+    padding: 30px 20px; // top-bottom 30px, left-right 20px
+  }
+
+  @media (min-width: 768px) {
+  }
+  @media (min-width: 1024px) {
+  }
+  @media (min-width: 1440px) {
+  }
 }
-
-
