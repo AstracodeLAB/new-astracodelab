@@ -1,5 +1,5 @@
 ---
-const { imagen, titulo, descripcion, alt = "" } = Astro.props;
+const { imagen, titulo, descripcion, alt = '' } = Astro.props;
 ---
 
 <div class='banner-img'>
@@ -7,7 +7,7 @@ const { imagen, titulo, descripcion, alt = "" } = Astro.props;
     <img src={imagen} alt={alt} class='banner-img__image' />
     <div class='banner-img__card'>
       <h3 class='banner-img__card-title'>{titulo}</h3>
-      <p class='banner-img__card-description'>{descripcion}</p>
+      <p class='banner-img__card-description'><Fragment set:html={descripcion} /></p>
     </div>
   </div>
 </div>

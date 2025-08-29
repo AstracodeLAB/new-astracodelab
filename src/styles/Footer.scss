@@ -1,16 +1,456 @@
 @use 'sass:map';
 @use './variables.scss' as *;
 
+// ===========================
+// FOOTER
+// ===========================
 .footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  padding: 30px 20px;
-  position: relative;
-  background-color: #310a9e;
-  // background-size: cover;
-  // background-position: 50% 50%;
+  background: $blue-dark;
+  color: $cardWhite;
+  padding:1rem 1rem 0.5rem;
+
+  @media (min-width: 768px) {
+
+  }
+
+  @media (min-width: 1024px) {
+
+  }
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__main-content {
 
 
+    @media (min-width: 1024px) {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 4rem;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__brand {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    @media (min-width: 1024px) {
+      text-align: left;
+      margin-bottom: 0;
+      width: 350px;
+      flex-shrink: 0;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    gap: 0.75rem;
+
+
+    @media (min-width: 1024px) {
+
+      gap:0px;
+    }
+  }
+
+  &__logo-text {
+    height: 130px;
+
+
+    @media (min-width: 768px) {
+      height: 170px;
+    }
+
+    @media (min-width: 1024px) {
+      height: 230px;
+    }
+  }
+
+  &__logo-icon {
+    height: 28px;
+    width: auto;
+
+    @media (min-width: 768px) {
+      height: 32px;
+    }
+
+    @media (min-width: 1024px) {
+      height: 36px;
+    }
+  }
+
+  &__description {
+    font-family: $font-primary;
+    font-size: map.get($Body-mobile, 'font-size');
+    line-height: map.get($Body-mobile, 'line-height');
+    font-weight: map.get($Body-mobile, 'font-weight');
+    letter-spacing: map.get($Body-mobile, 'letter-spacing');
+    color: rgba($cardWhite, 0.9);
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (min-width: 768px) {
+      font-size: map.get($Body-tablet, 'font-size');
+      line-height: map.get($Body-tablet, 'line-height');
+      font-weight: map.get($Body-tablet, 'font-weight');
+      letter-spacing: map.get($Body-tablet, 'letter-spacing');
+      max-width: 350px;
+    }
+
+    @media (min-width: 1024px) {
+      font-size: map.get($SmallText-desktop, 'font-size');
+      line-height: map.get($SmallText-desktop, 'line-height');
+      font-weight: map.get($SmallText-desktop, 'font-weight');
+      letter-spacing: map.get($SmallText-desktop, 'letter-spacing');
+      padding-left: 42px;;
+
+    }
+  }
+
+  &__social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    @media (min-width: 1024px) {
+      align-items: center;
+    }
+  }
+
+  &__social-handle {
+    font-family: $font-primary;
+    font-size: map.get($Body-mobile, 'font-size');
+    line-height: map.get($SmallText-mobile, 'line-height');
+    font-weight: map.get($SmallText-mobile, 'font-weight');
+    letter-spacing: map.get($SmallText-mobile, 'letter-spacing');;
+    color: rgba($cardWhite, 0.8);
+    margin: 0;
+
+    @media (min-width: 768px) {
+      font-size: map.get($SmallText-tablet, 'font-size');
+      line-height: map.get($SmallText-tablet, 'line-height');
+      font-weight: map.get($SmallText-tablet, 'font-weight');
+    }
+
+    @media (min-width: 1024px) {
+      font-size: map.get($SmallText-desktop, 'font-size');
+      line-height: map.get($SmallText-desktop, 'line-height');
+      font-weight: map.get($SmallText-desktop, 'font-weight');
+    }
+  }
+
+  &__separator {
+    border-bottom: 1px solid rgba($cardWhite, 0.2);
+    margin: 2rem 0;
+
+    @media (min-width: 768px) {
+      margin: 2.5rem 0;
+    }
+
+    @media (min-width: 1024px) {
+      display: none;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-bottom: 3.5rem;
+    }
+
+    @media (min-width: 1024px) {
+      flex-direction: row;
+      gap: 3rem;
+      margin-bottom: 0;
+      flex: 1;
+    }
+  }
+
+  &__column {
+    flex: 1;
+
+    @media (min-width: 1024px) {
+      flex: 1;
+
+      &:first-child {
+        flex: 1.5;
+      }
+    }
+  }
+  &__line {
+    border-bottom: 1px solid rgba($cardWhite, 0.2);
+    margin-bottom: 20px;
+
+    @media (min-width: 1024px) {
+      display: none;
+    }
+  }
+  &__column-title {
+
+    font-family: $font-primary;
+    font-size: map.get($H3-mobile, 'font-size');
+    line-height: map.get($H3-mobile, 'line-height');
+    font-weight: map.get($H3-mobile, 'font-weight');
+    letter-spacing: map.get($H3-mobile, 'letter-spacing');
+    color: $cardWhite;
+    margin: 0 0 1.25rem 0;
+
+    @media (min-width: 768px) {
+      font-size: map.get($H3-tablet, 'font-size');
+      line-height: map.get($H3-tablet, 'line-height');
+      font-weight: map.get($H3-tablet, 'font-weight');
+      letter-spacing: map.get($H3-tablet, 'letter-spacing');
+    }
+
+    @media (min-width: 1024px) {
+      font-size: map.get($H3-desktop, 'font-size');
+      line-height: map.get($H3-desktop, 'line-height');
+      font-weight: map.get($H3-desktop, 'font-weight');
+      letter-spacing: map.get($H3-desktop, 'letter-spacing');
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__column-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__link {
+    display: block;
+    font-family: $font-primary;
+    font-size: map.get($Body-mobile, 'font-size');
+    line-height: map.get($Body-mobile, 'line-height');
+    font-weight: map.get($Body-mobile, 'font-weight');
+    letter-spacing: map.get($Body-mobile, 'letter-spacing');
+    color: rgba($cardWhite, 0.85);
+    text-decoration: none;
+    padding: 0.4rem 0;
+    transition: color 0.3s ease;
+
+    @media (min-width: 768px) {
+      font-size: map.get($Body-tablet, 'font-size');
+      line-height: map.get($Body-tablet, 'line-height');
+      font-weight: map.get($Body-tablet, 'font-weight');
+      letter-spacing: map.get($Body-tablet, 'letter-spacing');
+    }
+
+    @media (min-width: 1024px) {
+      font-size: map.get($SmallText-desktop, 'font-size');
+      line-height: map.get($SmallText-desktop, 'line-height');
+      font-weight: map.get($SmallText-desktop, 'font-weight');
+      letter-spacing: map.get($SmallText-desktop, 'letter-spacing');
+      padding: 0.5rem 0;
+    }
+
+    &:hover {
+      color: $links;
+    }
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+
+    @media (min-width: 1024px) {
+      gap: 1rem;
+      min-width: 122px;
+    }
+  }
+
+  &__contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: $font-primary;
+    font-size: map.get($Body-mobile, 'font-size');
+    line-height: map.get($Body-mobile, 'line-height');
+    font-weight: map.get($Body-mobile, 'font-weight');
+    letter-spacing: map.get($Body-mobile, 'letter-spacing');
+    color: rgba($cardWhite, 0.85);
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    @media (min-width: 768px) {
+      font-size: map.get($Body-tablet, 'font-size');
+      line-height: map.get($Body-tablet, 'line-height');
+      font-weight: map.get($Body-tablet, 'font-weight');
+      letter-spacing: map.get($Body-tablet, 'letter-spacing');
+    }
+
+    @media (min-width: 1024px) {
+      font-size: map.get($SmallText-desktop, 'font-size');
+      line-height: map.get($SmallText-desktop, 'line-height');
+      font-weight: map.get($SmallText-desktop, 'font-weight');
+      letter-spacing: map.get($SmallText-desktop, 'letter-spacing');
+    }
+
+    &:hover {
+      color: $cardWhite;
+    }
+  }
+
+  &__contact-icon {
+    width: 16px;
+    height: 16px;
+    color: rgba($cardWhite, 0.7);
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba($cardWhite, 0.2);
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+      padding-top: 2.5rem;
+    }
+
+    @media (min-width: 1024px) {
+      padding-top: 3rem;
+      margin-top: auto;
+    }
+  }
+
+  &__legal {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  &__legal-link {
+    font-family: $font-primary;
+    font-size: map.get($SmallText-mobile, 'font-size');
+    line-height: map.get($SmallText-mobile, 'line-height');
+    font-weight: map.get($SmallText-mobile, 'font-weight');
+    color: rgba($cardWhite, 0.7);
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    @media (min-width: 768px) {
+      font-size: map.get($SmallText-tablet, 'font-size');
+      line-height: map.get($SmallText-tablet, 'line-height');
+      font-weight: map.get($SmallText-tablet, 'font-weight');
+    }
+
+    @media (min-width: 1024px) {
+      font-size: map.get($SmallText-desktop, 'font-size');
+      line-height: map.get($SmallText-desktop, 'line-height');
+      font-weight: map.get($SmallText-desktop, 'font-weight');
+    }
+
+    &:hover {
+      color: rgba($cardWhite, 0.9);
+    }
+  }
+
+  &__legal-separator {
+    color: rgba($cardWhite, 0.5);
+    font-size: map.get($SmallText-mobile, 'font-size');
+
+    @media (min-width: 768px) {
+      font-size: map.get($SmallText-tablet, 'font-size');
+    }
+
+    @media (min-width: 1024px) {
+      font-size: map.get($SmallText-desktop, 'font-size');
+    }
+  }
+
+  &__copyright {
+    font-family: $font-primary;
+    font-size: map.get($SmallText-mobile, 'font-size');
+    line-height: map.get($SmallText-mobile, 'line-height');
+    font-weight: map.get($SmallText-mobile, 'font-weight');
+    color: rgba($cardWhite, 0.7);
+
+    @media (min-width: 768px) {
+      font-size: map.get($SmallText-tablet, 'font-size');
+      line-height: map.get($SmallText-tablet, 'line-height');
+      font-weight: map.get($SmallText-tablet, 'font-weight');
+    }
+
+    @media (min-width: 1024px) {
+      font-size: map.get($SmallText-desktop, 'font-size');
+      line-height: map.get($SmallText-desktop, 'line-height');
+      font-weight: map.get($SmallText-desktop, 'font-weight');
+    }
+  }
+
+  // Estilos específicos para social-bar en footer
+  .social-bar {
+    
+    &__icons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+
+      @media (min-width: 1024px) {
+        justify-content: flex-start;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+
+        @media (min-width: 768px) {
+          width: 44px;
+          height: 44px;
+        }
+
+        @media (min-width: 1024px) {
+          width: 48px;
+          height: 48px;
+        }
+
+        &:hover {
+          background: rgba($cardWhite, 0.2);
+          transform: translateY(-2px);
+        }
+
+        img {
+          width: 30px;
+          height: 30px;
+          filter: brightness(0) invert(1);
+
+          @media (min-width: 768px) {
+          width: 40px;
+          height: 40px;
+          }
+
+          @media (min-width: 1024px) {
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+    }
+  }
 }

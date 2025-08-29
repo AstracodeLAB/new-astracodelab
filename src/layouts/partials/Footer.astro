@@ -1,85 +1,89 @@
 ---
-import Image from 'astro/components/Image.astro';
+import SocialBar from '../components/SocialBar.astro';
 import logoTextoBlanco from '../../images/logoTextoBlanco.png';
 import logoBlanco from '../../images/logoBlanco.png';
-import SocialBar from '../components/SocialBar.astro';
 ---
 
 <footer class='footer'>
-  <a href='/' class='footer__social-logo'>
-    <Image src={logoTextoBlanco} class='logo' alt='Logo de AstracodeLAB' loading='lazy' />
-    <Image src={logoBlanco} class='logo' alt='Logo de AstracodeLAB' loading='lazy' />
-  </a>
-  <p class='text'>Transformamos ideas en sitios web.</p>
-  <SocialBar />
-  <section>
-    <section class='services'>
-      <h2 class='webServices'>Servicios</h2>
-      <nav>
-        <ul role='list'>
-          <li><a href='#' class='text-wrapper-3'>Diseño y desarrrollo web</a></li>
-          <li><a href='#' class='text-wrapper-3'>Funcionalidades y optimización</a></li>
-          <li><a href='#' class='text-wrapper-3'>Mantenimiento y soporte</a></li>
-          <li><a href='#' class='text-wrapper-3'>Branding y marketing digital</a></li>
-        </ul>
-      </nav>
+  <div class='footer__container'>
+    
+    <div class='footer__main-content'>
+      <!-- Logo y descripción -->
+      <div class='footer__brand'>
+        <div class='footer__logo'>
+          <img src={logoTextoBlanco.src} alt='AstracodeLAB' class='footer__logo-text' />
+          <img src={logoBlanco.src} alt='AstracodeLAB' class='footer__logo-icon' />
+        </div>
+        <p class='footer__description'>
+          Transformamos ideas en sitios web excepcionales
+        </p>
+        <div class='footer__social'>
+          <SocialBar className="footer__social-bar" />
+          <p class='footer__social-handle'>@astracodelab</p>
+        </div>
+      </div>
 
-      <section class='company'>
-        <h2 class='text-wrapper-2'>Empresa</h2>
-        <nav>
-          <ul role='list'>
-            <li><a href='#' class='text-wrapper-3'>Astracodelab</a></li>
-            <li><a href='#' class='text-wrapper-3'>Contacto</a></li>
-            <li><a href='#' class='text-wrapper-3'>Blog</a></li>
+      <!-- Línea separadora -->
+      <div class='footer__separator'></div>
+
+      <!-- Contenido en columnas para desktop -->
+      <div class='footer__content'>
+        
+        <!-- Servicios -->
+        <div class='footer__column'>
+          <h4 class='footer__column-title'>Servicios</h4>
+          <ul class='footer__column-list'>
+            <li><a href='/servicios/diseno-desarrollo-web' class='footer__link'>Diseño y desarrollo web</a></li>
+            <li><a href='/servicios/funcionalidades-optimizacion' class='footer__link'>Funcionalidades y optimización</a></li>
+            <li><a href='/servicios/mantenimiento-soporte' class='footer__link'>Mantenimiento y soporte</a></li>
+            <li><a href='/servicios/branding-marketing-digital' class='footer__link'>Branding y marketing digital</a></li>
           </ul>
-        </nav>
-      </section>
-      <section class='contact'>
-        <h2 class='contact-text'>Contacto</h2>
-        <address class='address'>
-          <div class='envelope-regular' aria-hidden='true'>
-            <img class='vector-7' src='img/vector-8.svg' alt='' />
+        </div>
+
+        <!-- Empresa -->
+        <div class='footer__column'>
+          <h4 class='footer__column-title'>Empresa</h4>
+          <ul class='footer__column-list'>
+            <li><a href='/sobre-astracodelab' class='footer__link'>AstracodeLab</a></li>
+            <li><a href='/contacto' class='footer__link'>Contacto</a></li>
+            <li><a href='/blog' class='footer__link'>Blog</a></li>
+          </ul>
+        </div>
+
+        <!-- Contacto -->
+        <div class='footer__column'>
+          <h4 class='footer__column-title'>Contacto</h4>
+          <div class='footer__contact'>
+            <a href='mailto:info@astracodelab.com' class='footer__contact-item'>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class='footer__contact-icon'>
+                <path d="M2.667 2.667h10.666c.734 0 1.334.6 1.334 1.333v8c0 .733-.6 1.333-1.334 1.333H2.667c-.734 0-1.334-.6-1.334-1.333V4c0-.733.6-1.333 1.334-1.333z" stroke="currentColor" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M14.667 4L8 8.667 1.333 4" stroke="currentColor" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              info@astracodelab.com
+            </a>
+            <a href='tel:+34966666666' class='footer__contact-item'>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class='footer__contact-icon'>
+                <path d="M14.667 11.28v1.387c.001.346-.132.678-.368.923-.236.245-.559.389-.897.4-.748.067-1.503-.024-2.227-.267-2.133-.717-4.063-1.933-5.627-3.547C3.982 8.612 2.766 6.682 2.05 4.549c-.243-.724-.334-1.479-.267-2.227.011-.338.155-.661.4-.897.245-.236.577-.369.923-.368h1.387c.464-.007.9.19 1.187.536.287.347.387.803.273 1.24-.096.364-.227.717-.393 1.054-.139.282-.378.507-.673.634L4.4 4.8c.6 1.147 1.387 2.187 2.32 3.067.88.933 1.92 1.72 3.067 2.32l.28-.467c.127-.295.352-.534.634-.673.337-.166.69-.297 1.054-.393.437-.114.893-.014 1.24.273.346.287.543.723.536 1.187v.066z" stroke="currentColor" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              966 666 666
+            </a>
           </div>
-          <a href='mailto:info@astracodelab.com' target='_blank' rel='noopener noreferrer' class='text-wrapper-5'
-            >info@astracodelab.com</a
-          >
-        </address>
-        <address class='address'>
-          <img class='vector-8' src='img/vector.svg' alt='' aria-hidden='true' />
-          <a href='tel:666666666' class='text-wrapper-5'>666 666 666</a>
-        </address>
-      </section>
-    </section>
+        </div>
 
-    <nav class='policy'>
-      <a href='#' class='text-wrapper-3'>Política de cookies</a>
-      <span class='text-wrapper-6' aria-hidden='true'>|</span>
-      <a href='#' class='text-wrapper-3'>Aviso legal</a>
-    </nav>
-    <div class='footer-copy'>
-      <p class='text-wrapper-5'>© 2025 | AstracodeLAB</p>
+      </div>
     </div>
-  </section>  
 
-  <!-- <div class='footer__social'>
-      <a href='/' class='footer__social-logo'>
-        <Image src={logoTextoBlanco} class='logo' alt='Logo de AstracodeLAB' loading='lazy' />
-      </a>
-      <SocialBar />
+    <!-- Links legales y copyright -->
+    <div class='footer__bottom'>
+      <div class='footer__legal'>
+        <a href='/politica-cookies' class='footer__legal-link'>Política de cookies</a>
+        <span class='footer__legal-separator'>|</span>
+        <a href='/aviso-legal' class='footer__legal-link'>Aviso legal</a>
+      </div>
+      <div class='footer__copyright'>
+        © 2024 | AstracodeLAB
+      </div>
     </div>
-    <nav class='footer__nav'>
-      <a href='/' class='footer__link'>Inicio</a>
-      <a href='/#services' class='footer__link'>Servicios</a>
-      <a href='/#contact' class='footer__link'>Contacto</a>
-      <a href='/#projects' class='footer__link'>Proyectos</a>
-      <a href='/#about' class='footer__link'>Sobre nosotras</a>
-    </nav>
-    <div class='footer__legal'>
-      <a href='/legal' class='footer__link'>Aviso legal</a>
-      <a href='/privacy-policy' class='footer__link'>Política de privacidad</a>
-    </div>
+
   </div>
-  <div class='footer__copy'>
-    <p>© 2025 | AstracodeLAB</p>
-  </div> -->
 </footer>

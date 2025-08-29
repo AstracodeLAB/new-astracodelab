@@ -15,6 +15,7 @@ import CardTestimonio from '../components/Cards/CardTestimonio.astro';
 import WorkSection from '../components/WorkSection.astro';
 import FaqsSection from '../components/FaqsSection.astro';
 import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <main class='mainHome'>
@@ -57,15 +58,15 @@ import Contact from '../components/Contact.astro';
 
     <BannerImg
       imagen={imgTimeLine.src}
-      titulo='En AstracodeLAB somos una agencia de diseño web con proyección en toda España'
-      descripcion='Nos importa la experiencia online y tu presencia únicamente que demanda un mercado específico. Lo hacemos destacar, convertimos, aceleramos, pontificamos. Nuestros métodos ayudan al crecimiento; ponerte donde perteneces, estructuramos y promocionamos que vendas más. Calidad artística y habilidad para hacer ver que vendas creatividad y honestidad.'
+      descripcion='En <strong>AstracodeLAB </strong> somos una agencia de diseño web con proyectos en toda España.  No importa si eres una empresa consolidada, un autónomo que despega o un creador (escritor, músico, ilustrador...), aquí tienes tu sitio. Desarrollamos webs corporativas, ecommerce, portfolios artísticos y landings promocionales combinando estrategia digital, creatividad y desarrollo.'
       alt='Imagen de diseño web'
     />
 
     <div class='why-choose-us-content'>
       <TextContent
-        titulo='Webs personalizadas y optimizadas'
-        descripcion='No usamos plantillas genéricas. Diseñamos desde cero cada interfaz, a medida de tus competencia de tu empresa, tu fondo online o portfolio, que refueje la historia. Optimizamos y estructuramos tu contenido para SEO y configuramos con lo imprescindible para que puedas dedicar tu tiempo a lo que más valor aporta y tu negocio a hacer crecer tu proyecto.'
+        titulo='Webs Personalizadas y Estratégicas'
+        descripcion='No usamos plantillas genéricas. Diseñamos páginas web profesionales totalmente a medida: la web corporativa de tu empresa, tu tienda online o el portfolio que muestra tu talento. '
+        descripcionSec='Optimizamos y estructuramos tu contenido para SEO y configuramos un diseño responsive para que tu web se vea perfecta en cualquier dispositivo. Además, nos ocupamos de las actualizaciones y el mantenimiento para que puedas dedicar tu tiempo a lo que más valor aporta a tu negocio o a hacer crecer tu proyecto.'
       />
 
       <div class='why-choose-us-right-column'>
@@ -75,7 +76,7 @@ import Contact from '../components/Contact.astro';
 
         <TextContent
           titulo='Diseño estratégico con enfoque humano'
-          descripcion='En AstracodeLAB nos gusta conectar contigo desde el primer minuto de tecnología, que funcionarán, sin generar incomodidad alguna. Desde la idea hasta la entrega de todos los accesibles hasta la simplificar el proceso para que tengas lo mejor sin complicaciones que te ayude la mejor manera.'
+          descripcion='En Astracodelab nos gusta conectar contigo desde el primer minuto: sin tecnicismos, con una atención personalizada y aportando valor. Desde la idea hasta la entrega, te acompañamos en todo el proceso para que tengas la web profesional que tu marca merece.'
         />
       </div>
     </div>
@@ -86,17 +87,6 @@ import Contact from '../components/Contact.astro';
     descripcion='Tanto si quieres hacer una página web profesional, lanzar un nuevo ecommerce o renovar tu web actual, podemos transformar tu idea en resultados concretos. Cada proyecto es único y cada diseño tiene su propio propósito.'
     texto='Contacta con nosotros'
   />
-
-  <section class='section-prices'>
-    <div class='section-prices-header'>
-      <TitleSecondary
-        text='Precios claros y flexibles diseñados para todo el mundo'
-        description='Elige el plan que mejor se adapta a tu proyecto. Todos incluyen diseño responsive y soporte durante el primer mes. (IVA)'
-      />
-    </div>
-    <CardPrecio />
-    <CardPregunta />
-  </section>
 
   <section class='testimonial-section'>
     <CardTestimonio
@@ -126,6 +116,16 @@ import Contact from '../components/Contact.astro';
   </section>
 
   <WorkSection titulo='¿Quieres ver nuestros trabajos?' />
+  <section class='section-prices'>
+    <div class='section-prices-header'>
+      <TitleSecondary
+        text='Precios claros y flexibles diseñados para todo el mundo'
+        description='Elige el plan que mejor se adapta a tu proyecto. Todos incluyen diseño responsive y soporte durante el primer mes. (IVA)'
+      />
+    </div>
+    <CardPrecio />
+    <CardPregunta />
+  </section>
 
   <FaqsSection titulo='Preguntas frecuentes' />
 

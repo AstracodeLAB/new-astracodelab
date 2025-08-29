@@ -21,21 +21,23 @@
 .why-choose-us-content {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 3rem 1.25rem;
+  padding: 3rem 1.875rem;
 
   @media (min-width: 768px) {
-    padding: 5rem 2rem;
+    padding: 5rem 7.5rem;
   }
 
   @media (min-width: 1024px) {
-    padding: 6rem 2rem;
+    padding: 6rem 3.75rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
     align-items: start;
 
   }
-
+    @media (min-width: 1024px) {
+      gap: 3.5rem;
+    }
   @media (min-width: 1440px) {
     padding: 7rem 2rem;
     gap: 5rem;
