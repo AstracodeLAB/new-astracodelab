@@ -8,15 +8,30 @@
   align-items: center;
   min-height: 100vh;
 
+  @media (min-width: 1024px) {
+    padding: 0;
+  }
+
   &__card {
     max-width: 600px;
     width: 100%;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: $shadow;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 1024px) {
+      flex-direction: row;
+      max-width: 800px;
+    }
 
     &-top {
       padding: 2rem 1.5rem;
+
+      @media (min-width: 1024px) {
+        width: 50%;
+      }
 
       &-text {
         letter-spacing: map.get($Body-mobile, letter-spacing);
@@ -38,6 +53,10 @@
     &-bottom {
       background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 50%, #c084fc 100%);
       padding: 2rem 1.5rem;
+
+      @media (min-width: 1024px) {
+        width: 50%;
+      }
     }
   }
 
@@ -45,6 +64,10 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
+
+    @media (min-width: 1024px) {
+      margin: 60px auto;
+    }
 
     &-field {
       display: flex;
