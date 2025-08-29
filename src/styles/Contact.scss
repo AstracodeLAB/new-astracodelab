@@ -63,6 +63,11 @@
   color: #333;
   outline: none;
   transition: background-color 0.3s ease;
+
+  &:focus {
+    background: #fff;
+    box-shadow: 0 0 0 2px $blue-primary;
+  }
 }
 
 input[type='checkbox'] {
