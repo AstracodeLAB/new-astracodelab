@@ -24,16 +24,23 @@ import Buttons from './Buttons/Buttons.astro';
       <!-- TO-DO añadir method para manejar el formulario -->
       <form class='contact__card-bottom-form'>
         <div class='contact__card-bottom-form-info'>
-          <input type='text' placeholder='Nombre' required />
+          <input type='text' id='name' name='name' placeholder='Nombre' aria-label='Nombre' required />
         </div>
         <div class='contact__card-bottom-form-info'>
-          <input type='email' placeholder='Email' required />
+          <input type='email' id='email' name='email' placeholder='Email' aria-label='Correo electrónico' required />
         </div>
         <div class='contact__card-bottom-form-info'>
-          <textarea placeholder='Deja tu mensaje' rows='4' required></textarea>
+          <textarea id='message' name='message' placeholder='Deja tu mensaje' rows='4' aria-label='Mensaje' required
+          ></textarea>
         </div>
         <div class='contact__card-bottom-form-info contact__card-bottom-form-checkbox'>
-          <input id='privacy' name='privacy' type='checkbox' required />
+          <input
+            id='privacy'
+            name='privacy'
+            type='checkbox'
+            aria-label='Acepto que se traten mis datos para gestionar la consulta'
+            required
+          />
           <label for='privacy'> Acepto que se traten mis datos para gestionar la consulta. </label>
         </div>
         <Buttons type='submit' className='btnSecondaryDark'> Enviar </Buttons>
