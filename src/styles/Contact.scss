@@ -14,16 +14,16 @@
     border-radius: 15px;
     overflow: hidden;
     box-shadow: $shadow;
-    background: white;
 
     &-top {
       padding: 2rem 1.5rem;
-      background: white;
 
       &-text {
-        font-size: 0.9rem;
-        line-height: 1.6;
-        color: #666;
+        letter-spacing: map.get($Body-mobile, letter-spacing);
+        line-height: map.get($Body-mobile, line-height);
+        font-size: map.get($Body-mobile, font-size);
+        font-weight: map.get($Body-mobile, font-weight);
+        color: $text-bg-white;
         margin: 0 0 1rem 0;
       }
     }
