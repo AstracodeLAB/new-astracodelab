@@ -25,6 +25,13 @@
         font-weight: map.get($Body-mobile, font-weight);
         color: $text-bg-white;
         margin: 0 0 1rem 0;
+
+        @media (min-width: 768px) {
+          letter-spacing: map.get($Body-tablet, 'letter-spacing');
+          line-height: map.get($Body-tablet, 'line-height');
+          font-size: map.get($Body-tablet, 'font-size');
+          font-weight: map.get($Body-tablet, 'font-weight');
+        }
       }
     }
 
