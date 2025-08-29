@@ -41,6 +41,13 @@
           display: flex;
           flex-direction: column;
         }
+
+        &-checkbox {
+          display: flex;
+          flex-direction: row;
+          // align-items: flex-start;
+          gap: 0.5rem;
+        }
       }
     }
   }
@@ -56,4 +63,21 @@
   color: #333;
   outline: none;
   transition: background-color 0.3s ease;
+}
+
+input[type='checkbox'] {
+  width: 1rem;
+  height: 1rem;
+  accent-color: $blue-primary; // color del check (funciona en navegadores modernos)
+  cursor: pointer;
+}
+
+label {
+  color: $text-bg-color;
+  letter-spacing: map.get($SmallText-mobile, letter-spacing);
+  line-height: map.get($SmallText-mobile, line-height);
+  font-size: map.get($SmallText-mobile, font-size);
+  font-weight: map.get($SmallText-mobile, font-weight);
+
+  cursor: pointer;
 }

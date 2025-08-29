@@ -21,7 +21,7 @@ import Buttons from './Buttons/Buttons.astro';
       </p>
     </div>
     <div class='contact__card-bottom'>
-      //TO-DO añadir method para manejar el formulario
+      <!-- TO-DO añadir method para manejar el formulario -->
       <form class='contact__card-bottom-form'>
         <div class='contact__card-bottom-form-info'>
           <input type='text' placeholder='Nombre' required />
@@ -31,6 +31,10 @@ import Buttons from './Buttons/Buttons.astro';
         </div>
         <div class='contact__card-bottom-form-info'>
           <textarea placeholder='Deja tu mensaje' rows='4' required></textarea>
+        </div>
+        <div class='contact__card-bottom-form-info contact__card-bottom-form-checkbox'>
+          <input id='privacy' name='privacy' type='checkbox' required />
+          <label for='privacy'> Acepto que se traten mis datos para gestionar la consulta. </label>
         </div>
         <Buttons type='submit' className='btnSecondaryDark'> Enviar </Buttons>
       </form>
