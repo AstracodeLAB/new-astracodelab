@@ -3,73 +3,67 @@ import TitleSecondary from './Titles/TitleSecondary.astro';
 import Buttons from './Buttons/Buttons.astro';
 ---
 
-<section id="contact" class="contact">
-  <div class="contact__card">
-    <div class="contact__card-top">
-      <div class="contact__card-top-title">
-        <TitleSecondary text="Contacto" />
+<section id='contact' class='contact'>
+  <div class='contact__card'>
+    <div class='contact__card-top'>
+      <div class='contact__card-top-title'>
+        <TitleSecondary text='Contacto' />
       </div>
-      <p class="contact__card-top-text">¡Transforma tu idea en una web profesional!</p>
-      <p class="contact__card-top-text">
+      <p class='contact__card-top-text'>¡Transforma tu idea en una web profesional!</p>
+      <p class='contact__card-top-text'>
         En Astracodelab, diseñamos y desarrollamos soluciones web pensadas para tu marca. Desde una página web a medida
         hasta un e-commerce potente, nuestro equipo está listo para convertir tu visión en realidad.
       </p>
-      <p class="contact__card-top-text">¿Tienes un proyecto en mente?</p>
-      <p class="contact__card-top-text">
+      <p class='contact__card-top-text'>¿Tienes un proyecto en mente?</p>
+      <p class='contact__card-top-text'>
         Completa el formulario y nos pondremos en contacto contigo para una asesoría gratuita. Es el primer paso para
         conseguir la página web que siempre soñaste.
       </p>
     </div>
 
-    <div class="contact__card-bottom">
-      <form class="contact__form">
-        <div class="contact__form-field">
+    <div class='contact__card-bottom'>
+      <form class='contact__form'>
+        <div class='contact__form-field'>
           <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Nombre"
-            aria-label="Nombre"
-            minlength="3"
-            maxlength="50"
+            type='text'
+            id='name'
+            name='name'
+            placeholder='Nombre'
+            aria-label='Nombre'
+            minlength='3'
+            maxlength='50'
             required
           />
         </div>
-        <div class="contact__form-field">
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Email"
-            aria-label="Correo electrónico"
-            required
-          />
+        <div class='contact__form-field'>
+          <input type='email' id='email' name='email' placeholder='Email' aria-label='Correo electrónico' required />
         </div>
-        <div class="contact__form-field">
+        <div class='contact__form-field'>
           <textarea
-            id="message"
-            name="message"
-            placeholder="Deja tu mensaje"
-            rows="4"
-            aria-label="Mensaje"
-            minlength="10"
-            maxlength="500"
-            required
-          ></textarea>
+            id='message'
+            name='message'
+            placeholder='Deja tu mensaje'
+            rows='4'
+            aria-label='Mensaje'
+            minlength='10'
+            maxlength='500'
+            required></textarea>
         </div>
-        <div class="contact__form-field contact__form-field--checkbox">
+        <div class='contact__form-field contact__form-field--checkbox'>
           <input
-            id="privacy"
-            name="privacy"
-            type="checkbox"
-            aria-label="Acepto que se traten mis datos para gestionar la consulta"
+            id='privacy'
+            name='privacy'
+            type='checkbox'
+            aria-label='Acepto que se traten mis datos para gestionar la consulta'
             required
           />
-          <label for="privacy" class="contact__form-label">
+          <label for='privacy' class='contact__form-label'>
             Acepto que se traten mis datos para gestionar la consulta.
           </label>
         </div>
-        <Buttons type="submit" className="btnSecondaryDark">Enviar</Buttons>
+        <div class='contact__form-actions'>
+          <Buttons type='submit' className='btnSecondaryDark'>Enviar</Buttons>
+        </div>
       </form>
     </div>
   </div>
