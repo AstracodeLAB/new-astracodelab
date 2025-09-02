@@ -1,15 +1,17 @@
 ---
-const { href, className = "" } = Astro.props;
+const { href, className = '', type = 'button' } = Astro.props;
 import Arrow from '../icons/Arrow.astro';
 ---
 
-{href ? (
-  <a href={href} class={className}>
-    <slot />
-    {(className.includes("linkSecondary") || className.includes("linkServicesHero")) && <Arrow />}
-  </a>
-) : (
-  <button class={className}>
-    <slot />
-  </button>
-)}
+{
+  href ? (
+    <a href={href} class={className}>
+      <slot />
+      {(className.includes('linkSecondary') || className.includes('linkServicesHero')) && <Arrow />}
+    </a>
+  ) : (
+    <button type={type} class={className}>
+      <slot />
+    </button>
+  )
+}
