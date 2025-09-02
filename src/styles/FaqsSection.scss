@@ -17,6 +17,10 @@
     padding: 120px 0 0 0;
   }
 
+  @media (min-width: 1440px) {
+    max-width: 1024px;
+  }
+
   &__container {
     @media (min-width: 1024px) {
       display: flex;

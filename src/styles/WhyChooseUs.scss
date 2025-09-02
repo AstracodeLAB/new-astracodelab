@@ -8,8 +8,13 @@
 .why-choose-us-section {
   padding-top: 60px;
 
-  @media (min-width: 768px) {
+  
+   @media (min-width: 1024px) {
     max-width: 904px;
+  }
+
+   @media (min-width: 1440px) {
+    max-width: 1024px;
   }
 }
 
@@ -46,8 +51,9 @@
   }
  
   @media (min-width: 1440px) {
-    padding: 7rem 2rem;
-    gap: 5rem;
+    // padding: 7rem 2rem;
+    // gap: 5rem;
+    max-width: 1024px;
   }
 }
 
