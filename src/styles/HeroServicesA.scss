@@ -4,24 +4,21 @@
 .heroServicesA {
   width: 100vw;
   background-color: $blue-primary;
-  padding: 50px 30px;
+  padding: 50px 20px;
 
   @media (min-width: 768px) {
-    padding: 60px;
-  }
-
-  @media (min-width: 1024px) {
     padding: 60px 120px;
   }
 
+  @media (min-width: 1024px) {
+    // padding: 60px 120px;
+  }
+
   @media (min-width: 1440px) {
-    padding: 60px 160px;
+    padding: 60px 280px;
   }
 
   &__container {
-    @media (min-width: 768px) {
-      // max-width: 543px;
-    }
     @media (min-width: 1024px) {
       max-width: 904px;
     }
