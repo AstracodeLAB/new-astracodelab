@@ -60,4 +60,8 @@
 
 .banner-cta__button {
   margin-top: 20px;
+
+  @media (min-width: 768px) {
+    margin-top: 30px;
+  }
 }
