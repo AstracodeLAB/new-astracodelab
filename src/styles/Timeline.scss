@@ -12,7 +12,8 @@
   }
 
   @media (min-width: 1024px) {
-    padding: 6rem 2rem;
+    max-width: 904px;
+    padding: 0;
   }
   &-header {
     text-align: left;

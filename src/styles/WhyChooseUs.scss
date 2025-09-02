@@ -7,6 +7,10 @@
 
 .why-choose-us-section {
   padding-top: 60px;
+
+  @media (min-width: 768px) {
+    max-width: 904px;
+  }
 }
 
 .why-choose-us-header {
@@ -31,15 +35,16 @@
   }
 
   @media (min-width: 1024px) {
-    padding: 6rem 3.75rem;
+    // padding: 6rem 3.75rem;
+    max-width: 904px;
+    padding: 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    align-items: start;
+    gap: 1.5rem;
+    // align-items: start;
+    margin-top: 120px;
   }
-  @media (min-width: 1024px) {
-    gap: 3.5rem;
-  }
+ 
   @media (min-width: 1440px) {
     padding: 7rem 2rem;
     gap: 5rem;
@@ -76,6 +81,7 @@
 
     @media (min-width: 1024px) {
       height: 128px;
+      width: 99%;
     }
   }
 }
