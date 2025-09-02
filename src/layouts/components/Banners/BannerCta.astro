@@ -9,6 +9,8 @@ const { titulo, descripcion, texto } = Astro.props;
   <div class='banner-cta__container'>
     <Subtitle className='banner text' text={titulo} />
     <Subtitle className='banner desc' description={descripcion} />
-    <Buttons className='btnPrimaryLight' text={texto} href='/contacto'>{texto}<Buttons /> </Buttons>
+    <div class='banner-cta__button'>
+      <Buttons className='btnPrimaryLight' text={texto} href='/contacto'>{texto}<Buttons /> </Buttons>
+    </div>
   </div>
 </div>

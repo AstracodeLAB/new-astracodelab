@@ -7,28 +7,24 @@
 .faqs-section {
   padding: 3rem 1rem;
 
-
   @media (min-width: 768px) {
     padding: 4rem 2rem;
   }
 
   @media (min-width: 1024px) {
+    // padding: 5rem 3.75rem;
+    max-width: 904px;
+    padding: 120px 0 0 0;
+  }
 
-    padding: 5rem 3.75rem;
+  @media (min-width: 1440px) {
+    max-width: 1024px;
   }
 
   &__container {
-
-    margin: 0 20px;
-
-
-    @media(min-width: 1024px) {
-
-    display: flex;
-    gap: 2rem;
-
-
-
+    @media (min-width: 1024px) {
+      display: flex;
+      gap: 2rem;
     }
   }
 
@@ -72,8 +68,7 @@
     background: rgba($blue-primary, 0.01);
     border-radius: 12px;
     border: 1px solid rgba($blue-primary, 0.1);
-    box-shadow: 0 1px 40px 0 rgba(42, 17, 96, 0.20);
-
+    box-shadow: 0 1px 40px 0 rgba(42, 17, 96, 0.2);
 
     @media (min-width: 768px) {
       padding: 2.5rem 2rem;
@@ -83,13 +78,10 @@
     @media (min-width: 1024px) {
       padding: 3rem 1.5rem;
       max-height: 400px;
-      margin-top:120px;
-      
+      margin-top: 120px;
     }
     @media (min-width: 1440px) {
-
       max-height: 330px;
-    
     }
   }
 
@@ -126,42 +118,41 @@
     }
   }
   &__cta-text {
-  font-family: $font-primary;
-  font-size: map.get($Body-mobile, 'font-size');
-  line-height: map.get($Body-mobile, 'line-height');
-  font-weight: map.get($Body-mobile, 'font-weight');
-  letter-spacing: map.get($Body-mobile, 'letter-spacing');
-  color: $title-color;
-  margin: 0 0 1.5rem 0;
+    font-family: $font-primary;
+    font-size: map.get($Body-mobile, 'font-size');
+    line-height: map.get($Body-mobile, 'line-height');
+    font-weight: map.get($Body-mobile, 'font-weight');
+    letter-spacing: map.get($Body-mobile, 'letter-spacing');
+    color: $title-color;
+    margin: 0 0 1.5rem 0;
 
-  @media (min-width: 768px) {
-    font-size: map.get($Body-tablet, 'font-size');
-    line-height: map.get($Body-tablet, 'line-height');
-    font-weight: map.get($Body-tablet, 'font-weight');
-    letter-spacing: map.get($Body-tablet, 'letter-spacing');
-    margin-bottom: 1.75rem;
-  }
+    @media (min-width: 768px) {
+      font-size: map.get($Body-tablet, 'font-size');
+      line-height: map.get($Body-tablet, 'line-height');
+      font-weight: map.get($Body-tablet, 'font-weight');
+      letter-spacing: map.get($Body-tablet, 'letter-spacing');
+      margin-bottom: 1.75rem;
+    }
 
-  @media (min-width: 1024px) {
-    font-size: map.get($Body-desktop, 'font-size');
-    line-height: map.get($Body-desktop, 'line-height');
-    font-weight: map.get($Body-desktop, 'font-weight');
-    letter-spacing: map.get($Body-desktop, 'letter-spacing');
-    margin-bottom: 2rem;
-  }
-  @media (min-width: 1440px) {
-    font-size: map.get($Body-desktop-xl, 'font-size');
-    line-height: map.get($Body-desktop-xl, 'line-height');
-    font-weight: map.get($Body-desktop-xl, 'font-weight');
-    letter-spacing: map.get($Body-desktop-xl, 'letter-spacing');
-    margin-bottom: 2rem;
-  }
-
+    @media (min-width: 1024px) {
+      font-size: map.get($Body-desktop, 'font-size');
+      line-height: map.get($Body-desktop, 'line-height');
+      font-weight: map.get($Body-desktop, 'font-weight');
+      letter-spacing: map.get($Body-desktop, 'letter-spacing');
+      margin-bottom: 2rem;
+    }
+    @media (min-width: 1440px) {
+      font-size: map.get($Body-desktop-xl, 'font-size');
+      line-height: map.get($Body-desktop-xl, 'line-height');
+      font-weight: map.get($Body-desktop-xl, 'font-weight');
+      letter-spacing: map.get($Body-desktop-xl, 'letter-spacing');
+      margin-bottom: 2rem;
+    }
   }
 
   &__cta-button {
     display: inline-block;
-    background:$blue-primary;
+    background: $blue-primary;
     color: $blue-secondary;
     font-family: $font-primary;
     font-size: map.get($Button-mobile, 'font-size');
@@ -188,7 +179,7 @@
       line-height: map.get($Button-desktop, 'line-height');
       font-weight: map.get($Button-desktop, 'font-weight');
       letter-spacing: map.get($Button-desktop, 'letter-spacing');
-      padding: 1.125rem ;
+      padding: 1.125rem;
       border-radius: 12px;
       min-width: 190px;
       min-height: 41px;
@@ -198,9 +189,7 @@
       line-height: map.get($Button-desktop-xl, 'line-height');
       font-weight: map.get($Button-desktop-xl, 'font-weight');
       letter-spacing: map.get($Button-desktop-xl, 'letter-spacing');
-
     }
-   
 
     &:hover {
       background: transparent;

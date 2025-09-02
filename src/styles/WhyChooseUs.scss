@@ -5,9 +5,21 @@
 // WHY CHOOSE US SECTION
 // ===========================
 
+.why-choose-us-section {
+  padding-top: 60px;
+
+  
+   @media (min-width: 1024px) {
+    max-width: 904px;
+  }
+
+   @media (min-width: 1440px) {
+    max-width: 1024px;
+  }
+}
+
 .why-choose-us-header {
   text-align: center;
-  margin-bottom: 3rem;
 
   @media (min-width: 768px) {
     margin-bottom: 4rem;
@@ -28,40 +40,40 @@
   }
 
   @media (min-width: 1024px) {
-    padding: 6rem 3.75rem;
+    // padding: 6rem 3.75rem;
+    max-width: 904px;
+    padding: 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    align-items: start;
-
+    gap: 1.5rem;
+    // align-items: start;
+    margin-top: 120px;
   }
-    @media (min-width: 1024px) {
-      gap: 3.5rem;
-    }
+ 
   @media (min-width: 1440px) {
-    padding: 7rem 2rem;
-    gap: 5rem;
+    // padding: 7rem 2rem;
+    // gap: 5rem;
+    max-width: 1024px;
   }
 }
 
 .why-choose-us-right-column {
   // display: contents;
-  
+
   @media (max-width: 1023px) {
     display: block;
-
   }
 }
 
 .why-choose-us-image {
   margin-bottom: 2rem;
-  
+
   @media (min-width: 1024px) {
     grid-column: 2;
     grid-row: 1;
     margin-bottom: 2rem;
   }
-  
+
   img {
     width: 100%;
     height: auto;
@@ -75,6 +87,7 @@
 
     @media (min-width: 1024px) {
       height: 128px;
+      width: 99%;
     }
   }
 }
