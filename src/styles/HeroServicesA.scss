@@ -2,8 +2,9 @@
 @use './variables.scss' as *;
 
 .heroServicesA {
-  width: 100vw;
-  background-color: $blue-primary;
+  // width: 100vw;
+  background: url('/src/images/degradoClaro.png') no-repeat center center;
+  // background-size: cover;
   padding: 50px 20px;
 
   @media (min-width: 768px) {
@@ -32,6 +33,7 @@
     }
 
     &-text {
+      color: $text-bg-color;
       letter-spacing: map.get($Body-mobile, letter-spacing);
       line-height: map.get($Body-mobile, line-height);
       font-size: map.get($Body-mobile, font-size);
