@@ -51,7 +51,8 @@
     }
 
     &-bottom {
-      background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 50%, #c084fc 100%);
+      background: url('src/images/backgroundWhiteA.jpg') no-repeat center center;
+      background-size: cover;
       padding: 2rem 1.5rem;
 
       @media (min-width: 1024px) {
@@ -99,7 +100,7 @@
 .contact__form-field input,
 .contact__form-field textarea {
   padding: 0.75rem;
-  border: none;
+  border: 1px solid $text-bg-color;
   border-radius: 8px;
   font-size: 0.9rem;
   background: rgba(255, 255, 255, 0.9);
