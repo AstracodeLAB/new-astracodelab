@@ -135,7 +135,7 @@
 
       @media (min-width: 1024px) {
         //height: 100%;
-        max-height: 500px;
+        //max-height: 500px;
       }
 
       &-card {
@@ -159,15 +159,19 @@
           position: absolute;
           top: 50%; // centrada verticalmente
           right: 0; // pegada al borde izquierdo
-          transform: translate(20%, -120%); // se sale un poco a la izquierda y queda centrada
-          width: clamp(80px, 17vw, 220px); // escala fluida
+          transform: translate(20%, -150%); // se sale un poco a la izquierda y queda centrada
+          width: clamp(80px, 17vw, 160px); // escala fluida
           pointer-events: none;
           z-index: 2;
-
+          @media (min-width: 445px) {
+            transform: translate(20%, -100%);
+            width: clamp(80px, 17vw, 100px);
+          }
           @media (min-width: 768px) {
-            transform: translate(45%, -70%);
+            transform: translate(20%, -100%);
           }
           @media (min-width: 1024px) {
+            width: clamp(80px, 17vw, 200px);
             transform: translate(
               15%,
               -90%
@@ -228,12 +232,17 @@
           width: clamp(80px, 17vw, 220px);  // escala fluida
           pointer-events: none;
           z-index: 2;
-         
+          @media (min-width: 445px) {
+            transform: translate(-20%, -60%);
+            width: clamp(80px, 17vw, 90px);
+          }
           @media (min-width: 768px) {
-            transform: translate(45%, -70%);
+            transform: translate(-20%, -50%);
+            width: clamp(80px, 17vw, 100px);
           }
           @media (min-width: 1024px) {
-            transform: translate(15%, -90%);//AIDA cambié los valores para evitar desbordamiento antes eran transform: translate(45%, -70%);
+            transform: translate(-15%, -50%);
+            width: clamp(80px, 17vw, 180px);
           }
         }
         &-text{
@@ -242,6 +251,13 @@
           @media (min-width: 1024px) {
             //padding-left: 10px;
           }
+        }
+        &-parr {
+           //padding-left: 60px;
+           //margin-left: clamp(60px, 12vw, 110px);
+           @media (min-width: 768px) {
+           // margin-left: clamp(60px, 12vw, 110px);
+           }
         }
         &-btn {
           width: 100%;
