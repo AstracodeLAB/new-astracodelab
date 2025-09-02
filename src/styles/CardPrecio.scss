@@ -5,8 +5,9 @@
 // ===========================
 // LAYOUT COMPONENTS
 // ===========================
-.pricing-section {background-color: $blue-secondary;
-  padding-top: 60px;
+.pricing-section {
+  background-color: $blue-secondary;
+  padding-bottom: 60px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -15,20 +16,14 @@
 
   @media (min-width: 767px) {
     margin-bottom: 100px;
-
-
   }
-
-
 }
 
 .pricing-container {
-
   @media (max-width: 767px) {
     border-radius: 16px;
     box-shadow: -4px 0 4px 0 rgba(0, 0, 0, 0.25), 4px 0 5px 4px rgba(0, 0, 0, 0.25);
   }
-
 }
 
 .pricing-grid {
@@ -44,7 +39,6 @@
   @media (min-width: 1024px) {
     gap: 2rem;
   }
-
 }
 
 .mobile-carousel {
@@ -69,7 +63,6 @@
   @media (min-width: 768px) {
     display: none;
   }
-
 }
 
 .carousel-track {
@@ -104,7 +97,6 @@
     display: none;
   }
 
-
   @media (max-width: 767px) {
     width: 32px;
     height: 32px;
@@ -128,19 +120,15 @@
   &.prev {
     left: -12px;
     top: 50px;
-
   }
 
   &.next {
     right: -12px;
     top: 50px;
-
-
-
   }
 }
 
-// 
+//
 
 // ===========================
 // CARD COMPONENTS
@@ -148,7 +136,6 @@
 .pricing-card {
   background: $cardWhite;
   min-width: 290px;
-
 
   @media (min-width: 768px) {
     border-radius: 10px;
@@ -168,14 +155,11 @@
       border: 2px solid $blue-primary;
       transform: scale(1.05);
       margin-top: 13px;
-
     }
-    &:hover {   
+    &:hover {
       transform: scale(1.07);
       box-shadow: 0 6px 20px rgba(100, 30, 255, 0.3);
     }
-
-
   }
 
   @media (min-width: 768px) and (max-width: 1023px) {
@@ -184,9 +168,9 @@
 }
 
 .badge {
-  width: 100% ;
+  width: 100%;
   text-align: center;
-  padding:5px;
+  padding: 5px;
   background: $blue-primary;
   color: $cardWhite;
   font-size: map.get($SmallText-mobile, 'font-size');
@@ -194,10 +178,9 @@
   // letter-spacing: map.get($SmallText-mobile, 'letter-spacing');
 
   @media (min-width: 768px) {
-
   }
 
-  @media (min-width: 768px)  {
+  @media (min-width: 768px) {
     border-radius: 5px 5px 0 0;
     font-size: map.get($SmallText-tablet, 'font-size');
     line-height: map.get($SmallText-tablet, 'line-height');
@@ -219,8 +202,6 @@
   margin-bottom: 1.5rem;
   margin-top: 1rem;
 
-
-
   @media (max-width: 767px) {
     margin-bottom: 0.8rem;
     margin-top: 0.5rem;
@@ -230,7 +211,6 @@
     padding-top: 40px;
   }
 }
-
 
 .price-label {
   color: $text-bg-white;
@@ -249,7 +229,6 @@
     line-height: map.get($Body-desktop, 'line-height');
     letter-spacing: map.get($Body-desktop, 'letter-spacing');
   }
-
 }
 
 .price {
@@ -313,7 +292,6 @@
     line-height: map.get($SmallText-desktop, 'line-height');
     letter-spacing: map.get($SmallText-desktop, 'letter-spacing');
   }
-
 }
 
 .plan-title {
@@ -347,7 +325,7 @@
   text-align: center;
   color: $text-bg-white;
   margin-bottom: 2rem;
-  margin-top:2rem;
+  margin-top: 2rem;
   padding-left: 20px;
   padding-right: 20px;
   font-size: map.get($Body-mobile, 'font-size');
@@ -375,8 +353,6 @@
   padding: 0 20px;
   margin: 0 0 2rem 0;
   flex-grow: 1;
-
-
 }
 
 .feature-item {
@@ -416,7 +392,7 @@
 .carousel-button-container {
   display: flex;
   justify-content: center;
-  align-items:end ;
+  align-items: end;
   margin-bottom: 40px;
 }
 
