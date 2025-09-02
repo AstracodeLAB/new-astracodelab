@@ -4,6 +4,7 @@ import Subtitle from '../components/Titles/Subtitle.astro';
 import Buttons from '../components/Buttons/Buttons.astro';
 import imgDesign from '../../images/servicesCardIlustrationSvg.svg';
 import imgFunc from '../../images/functionalitiesCardIlustrationSvg.svg';
+import imgMant from '../../images/maintenanceCardIlustrationSvg.svg';
 ---
 
 <section class="servicesHome">
@@ -68,7 +69,15 @@ import imgFunc from '../../images/functionalitiesCardIlustrationSvg.svg';
 
     <div class="servicesHome__services-containerMant">
       <div class="servicesHome__services-containerMant-card">
-        <Subtitle text="Mantenimiento web y Soporte continuo" />
+        <img 
+          src={imgMant.src} 
+          alt="Ilustración diseño web" 
+          class="servicesHome__services-containerMant-card-illustration" 
+        />
+        <div class="servicesHome__services-containerMant-card-text">
+          <Subtitle text="Mantenimiento web y Soporte continuo" />
+        </div>
+        
         <p>Tu web siempre disponible, nos encargamos del funcionamiento de tu web para que disfrutes de un sitio seguro, rápido y disponible las 24h.</p>
         <div class="servicesHome__services-containerMant-card-btn">
           <Buttons className="btnPrimaryLight" href="/" >VER MÁS</Buttons>
