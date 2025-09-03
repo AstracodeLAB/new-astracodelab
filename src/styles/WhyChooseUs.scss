@@ -8,12 +8,11 @@
 .why-choose-us-section {
   padding-top: 60px;
 
-  
-   @media (min-width: 1024px) {
+  @media (min-width: 1024px) {
     max-width: 904px;
   }
 
-   @media (min-width: 1440px) {
+  @media (min-width: 1440px) {
     max-width: 1024px;
   }
 }
@@ -33,10 +32,10 @@
 .why-choose-us-content {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 60px 20px 0 20px;
+  padding: 20px 20px 0 20px;
 
   @media (min-width: 768px) {
-    padding: 5rem 7.5rem;
+    padding: 20px 120px 0 120px;
   }
 
   @media (min-width: 1024px) {
@@ -49,7 +48,7 @@
     // align-items: start;
     margin-top: 120px;
   }
- 
+
   @media (min-width: 1440px) {
     // padding: 7rem 2rem;
     // gap: 5rem;

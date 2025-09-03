@@ -1,7 +1,6 @@
 @use 'sass:map';
 @use './variables.scss' as *;
 
-
 .mainHome {
   background-image: url('/src/images/backgroundWhiteB.jpg');
   background-repeat: no-repeat;
@@ -19,32 +18,33 @@
   }
   @media (max-width: 1440px) {
     background-size: cover;
-  background-position: center;
+    background-position: center;
   }
 }
 
 .timeline-section {
-
 }
 
-.section-prices{
+.section-prices {
   background-color: $blue-secondary;
   width: 100%;
+  padding: 30px 20px 0 20px;
+
+  @media (min-width: 768px) {
+    padding: 60px 0 0 0;
+  }
+
   &-header {
     text-align: left;
-    margin:30px;
-    @media(min-width: 768px) {
+    padding-bottom: 20px;
+
+    @media (min-width: 768px) {
       text-align: center;
-      padding-top: 60px;
-      padding-left: 90px;
-      padding-right: 90px;
     }
-    @media(min-width: 1024px) {
+    @media (min-width: 1024px) {
       padding-top: 60px;
       padding-left: 30px;
       padding-right: 30px;
     }
   }
 }
-
-
