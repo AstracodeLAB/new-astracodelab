@@ -54,7 +54,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr auto;
-      gap: 20px 20px;
+      gap: 30px 20px;
       grid-template-areas:
         'containerDesign containerFunc'
         'containerMant containerMant';
@@ -100,7 +100,7 @@
             transform: translate(-20%, -70%);
           }
           @media (min-width: 1024px) {
-            transform: translate(-20%, -60%);
+            transform: translate(-20%, -70%);
           }
         }
         &-text {
@@ -165,17 +165,18 @@
           z-index: 2;
           @media (min-width: 445px) {
             transform: translate(20%, -100%);
-            width: clamp(80px, 17vw, 100px);
+            width: clamp(80px, 17vw, 90px);
           }
           @media (min-width: 768px) {
             transform: translate(20%, -100%);
+            width: clamp(80px, 17vw, 100px);
           }
           @media (min-width: 1024px) {
             width: clamp(80px, 17vw, 200px);
             transform: translate(
               15%,
-              -90%
-            ); //AIDA cambié los valores para evitar desbordamiento antes eran transform: translate(45%, -70%);
+              -95%
+            );
           }
         }
         &-text {
@@ -241,7 +242,7 @@
             width: clamp(80px, 17vw, 100px);
           }
           @media (min-width: 1024px) {
-            transform: translate(-15%, -50%);
+            transform: translate(-25%, -50%);
             width: clamp(80px, 17vw, 180px);
           }
         }
