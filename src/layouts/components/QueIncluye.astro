@@ -1,12 +1,19 @@
 ---
 import TitleSecondary from './Titles/TitleSecondary.astro';
-const { title, paragraphs = [] } = Astro.props;
+const { title, paragraphs = [], image } = Astro.props;
 ---
 
-<section class="incluye">
-  <TitleSecondary text={title} />
+<section class='incluye'>
+  <div class='incluye__title'>
+    <TitleSecondary text={title} />
+  </div>
 
-  {paragraphs.map((p) => (
-    <p>{p}</p>
-  ))}
+  {
+    paragraphs.map((p, i) => (
+      <>
+        <p class='incluye__text'>{p}</p>
+        {i === 0 && image && <img src={image} alt='Imagen relacionada' class='incluye__image' />}
+      </>
+    ))
+  }
 </section>
