@@ -2,11 +2,15 @@
 @use './variables.scss' as *;
 
 .contact {
-  padding: 30px 16px 60px 16px;
+  padding: 30px 20px 60px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+
+  @media (min-width: 768px) {
+    padding: 30px 120px 60px 120px;
+  }
 
   @media (min-width: 1024px) {
     padding: 120px 0;
@@ -32,10 +36,11 @@
     }
 
     &-top {
-      padding: 2rem 1.5rem;
+      padding: 20px;
 
       @media (min-width: 1024px) {
         width: 50%;
+        padding: 40px;
       }
 
       &-text {
@@ -56,11 +61,13 @@
     }
 
     &-bottom {
-      background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 50%, #c084fc 100%);
-      padding: 2rem 1.5rem;
+      background: url('src/images/backgroundWhiteA.jpg') no-repeat center center;
+      background-size: cover;
+      padding: 20px;
 
       @media (min-width: 1024px) {
         width: 50%;
+        padding: 40px;
       }
     }
   }
@@ -104,7 +111,7 @@
 .contact__form-field input,
 .contact__form-field textarea {
   padding: 0.75rem;
-  border: none;
+  border: 1px solid $text-bg-color;
   border-radius: 8px;
   font-size: 0.9rem;
   background: rgba(255, 255, 255, 0.9);
