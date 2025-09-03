@@ -4,16 +4,23 @@ const { title, paragraphs = [], image } = Astro.props;
 ---
 
 <section class='incluye'>
-  <div class='incluye__title'>
-    <TitleSecondary text={title} />
+  <div class='incluye__grid'>
+    <div class='incluye__col1'>
+      <div class='incluye__title'>
+        <TitleSecondary text={title} />
+      </div>
+      {paragraphs[0] && <p class='incluye__text'>{paragraphs[0]}</p>}
+    </div>
+
+    {
+      image && (
+        <div class='incluye__col2'>
+          <img src={image} alt='Imagen relacionada' class='incluye__image' />
+        </div>
+      )
+    }
   </div>
 
-  {
-    paragraphs.map((p, i) => (
-      <>
-        <p class='incluye__text'>{p}</p>
-        {i === 0 && image && <img src={image} alt='Imagen relacionada' class='incluye__image' />}
-      </>
-    ))
-  }
+  
+  {paragraphs.slice(1).map((p) => <p class='incluye__text'>{p}</p>)}
 </section>

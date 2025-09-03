@@ -4,6 +4,26 @@
 .incluye {
   padding: 60px 20px 0 20px;
 
+  @media (min-width: 768px) {
+    padding: 60px 120px 0 120px;
+  }
+
+  &__grid {
+    display: block;
+
+    @media (min-width: 768px) {
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      align-items: start;
+      gap: 2rem;
+    }
+  }
+
+  &__col1,
+  &__col2 {
+    display: block;
+  }
+
   &__text {
     padding-top: 20px;
     font-family: $font-primary;
@@ -12,9 +32,22 @@
     line-height: map.get($Body-mobile, line-height);
     font-size: map.get($Body-mobile, font-size);
     font-weight: map.get($Body-mobile, font-weight);
+
+    @media (min-width: 768px) {
+      letter-spacing: map.get($Body-tablet, letter-spacing);
+      line-height: map.get($Body-tablet, line-height);
+      font-size: map.get($Body-tablet, font-size);
+      font-weight: map.get($Body-tablet, font-weight);
+    }
   }
 
   &__image {
     padding-top: 20px;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+
+    @media (min-width: 768px) {
+    }
   }
 }
