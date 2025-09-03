@@ -1,0 +1,12 @@
+---
+import TitleSecondary from './Titles/TitleSecondary.astro';
+const { title, paragraphs = [] } = Astro.props;
+---
+
+<section class="incluye">
+  <TitleSecondary text={title} />
+
+  {paragraphs.map((p) => (
+    <p>{p}</p>
+  ))}
+</section>
