@@ -1,0 +1,76 @@
+@use 'sass:map';
+@use './variables.scss' as *;
+
+.sectionPorqNecesitoWeb {
+    padding: 60px 20px;
+    font-size: map.get($Body-mobile, 'font-size');
+    line-height: map.get($Body-mobile, 'line-height');
+    font-weight: map.get($Body-mobile, 'font-weight');
+    letter-spacing: map.get($Body-mobile, 'letter-spacing');
+    color: $text-bg-color;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+  
+    @media (min-width: 768px) {
+      font-size: map.get($Body-tablet, 'font-size');
+      line-height: map.get($Body-tablet, 'line-height');
+      font-weight: map.get($Body-tablet, 'font-weight');
+      letter-spacing: map.get($Body-tablet, 'letter-spacing');
+      padding: 60px 120px;
+      gap: 20px;
+    }
+  
+    @media (min-width: 1024px) {
+      font-size: map.get($Body-desktop, 'font-size');
+      line-height: map.get($Body-desktop, 'line-height');
+      font-weight: map.get($Body-desktop, 'font-weight');
+      letter-spacing: map.get($Body-desktop, 'letter-spacing'); 
+      max-width: 904px;  
+      padding: 120px 0;   
+    }
+  
+    @media (min-width: 1440px) {
+      font-size: map.get($Body-desktop-xl, 'font-size');
+      line-height: map.get($Body-desktop-xl, 'line-height');
+      font-weight: map.get($Body-desktop-xl, 'font-weight');
+      letter-spacing: map.get($Body-desktop-xl, 'letter-spacing');
+      max-width: 1024px;
+    } 
+  &__intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    gap: 10px;
+
+    @media (min-width: 768px) {
+      gap: 20px;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    
+    gap: 10px;
+
+    @media (min-width: 768px) {
+      gap: 20px;
+    }
+    &-containerImageText {
+      display: flex;
+      flex-direction: column;
+    
+      gap: 10px;
+
+      @media (min-width: 768px) {
+        gap: 20px;
+      }
+      &-img {
+        width: 100%;
+        height: 150px;
+      }
+    }
+  }
+}
