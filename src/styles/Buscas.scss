@@ -1,0 +1,48 @@
+@use 'sass:map';
+@use './variables.scss' as *;
+
+.buscas {
+  &__content {
+    box-shadow: $shadow;
+    margin: 30px 20px 0 20px;
+    padding: 30px 20px 20px 20px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-image: url('/src/images/degradoClaro.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &-text {
+      font-family: $font-primary;
+      color: $cardWhite;
+      letter-spacing: map.get($Body-mobile, letter-spacing);
+      line-height: map.get($Body-mobile, line-height);
+      font-size: map.get($Body-mobile, font-size);
+      font-weight: map.get($Body-mobile, font-weight);
+    }
+  }
+
+  &__cta {
+    padding: 12px 20px 20px 20px;
+    margin: 0 20px;
+    box-shadow: $shadow;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+    &-text {
+      font-family: $font-primary;
+      color: $text-bg-white;
+      letter-spacing: map.get($Body-mobile, letter-spacing);
+      line-height: map.get($Body-mobile, line-height);
+      font-size: map.get($Body-mobile, font-size);
+      font-weight: map.get($Body-mobile, font-weight);
+    }
+
+    &-button {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+  }
+}

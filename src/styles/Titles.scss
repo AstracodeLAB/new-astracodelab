@@ -107,6 +107,10 @@
     font-weight: map.get($H2-desktop-xl, 'font-weight');
     letter-spacing: map.get($H2-desktop-xl, 'letter-spacing');
   }
+
+  &--white {
+    color: $cardWhite;
+  }
 }
 
 .subtitle {
