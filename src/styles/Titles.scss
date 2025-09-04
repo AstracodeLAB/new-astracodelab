@@ -111,6 +111,10 @@
   &--white {
     color: $cardWhite;
   }
+
+  &--gradient {
+    color: $blue-secondary;
+  }
 }
 
 .subtitle {
