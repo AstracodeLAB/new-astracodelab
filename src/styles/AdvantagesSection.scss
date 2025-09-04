@@ -5,14 +5,17 @@
 // ADVANTAGES SECTION
 // ===========================
 .advantages-section {
-  padding: 3rem 1.25rem;
+  padding: 3.75rem 1.25rem;
 
   @media (min-width: 768px) {
-    padding: 4rem 2rem;
+    padding: 3.75rem 7.5rem;
   }
 
   @media (min-width: 1024px) {
-    padding: 5rem 2rem;
+   max-width: 904px;
+  }
+  @media (min-width: 1440px) {
+   max-width: 1024px;
   }
 
   &__container {
