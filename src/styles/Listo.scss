@@ -4,8 +4,17 @@
 .listo {
   padding: 30px 20px 0 20px;
 
+  @media (min-width: 768px) {
+    padding: 60px 120px 0 120px;
+  }
+
   &__image {
     margin-top: 20px;
+
+    @media (min-width: 768px) {
+      max-width: 269px;
+      margin: 20px auto 0;
+    }
   }
 
   &__text {
@@ -16,10 +25,28 @@
     line-height: map.get($Body-mobile, line-height);
     font-size: map.get($Body-mobile, font-size);
     font-weight: map.get($Body-mobile, font-weight);
+
+    @media (min-width: 768px) {
+      letter-spacing: map.get($Body-tablet, letter-spacing);
+      line-height: map.get($Body-tablet, line-height);
+      font-size: map.get($Body-tablet, font-size);
+      font-weight: map.get($Body-tablet, font-weight);
+    }
   }
 
   &__cta {
     margin-top: 20px;
     padding: 10px 0;
+
+    @media (min-width: 768px) {
+      display: flex;
+      justify-content: end;
+    }
+
+    & div {
+      @media (min-width: 768px) {
+        max-width: 276px;
+      }
+    }
   }
 }
