@@ -2,5 +2,58 @@
 @use './variables.scss' as *;
 
 .conector {
-  padding-top: 12px;
+  &__header {
+    padding: 12px 20px 0 20px;
+  }
+
+  &__content {
+    margin-top: 12px;
+    background-color: white;
+    border-top: 1px solid $cardWhite;
+    box-shadow: $shadow;
+  }
+
+  &__text {
+    padding: 0 20px;
+    font-family: $font-primary;
+    color: $text-bg-white;
+    letter-spacing: map.get($Body-mobile, letter-spacing);
+    line-height: map.get($Body-mobile, line-height);
+    font-size: map.get($Body-mobile, font-size);
+    font-weight: map.get($Body-mobile, font-weight);
+
+    position: relative;
+    text-align: left;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 241px;
+      height: 1px;
+      background-color: $blue-primary;
+      margin: 10px;
+    }
+
+    &:first-child {
+      padding-top: 20px;
+    }
+
+    &:last-child {
+      padding-bottom: 20px;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__summary {
+    padding: 20px 20px 0 20px;
+    font-family: $font-primary;
+    color: $text-bg-white;
+    letter-spacing: map.get($Body-mobile, letter-spacing);
+    line-height: map.get($Body-mobile, line-height);
+    font-size: map.get($Body-mobile, font-size);
+    font-weight: map.get($Body-mobile, font-weight);
+  }
 }
