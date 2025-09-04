@@ -2,6 +2,14 @@
 @use './variables.scss' as *;
 
 .buscas {
+  @media (min-width: 1024px) {
+    display: flex;
+    margin: 120px auto 0;
+    max-width: 904px;
+    border-radius: 15px;
+    box-shadow: $shadow;
+  }
+
   &__content {
     box-shadow: 0px -4px 6px -2px rgba(0, 0, 0, 0.2), 4px 0 6px -2px rgba(0, 0, 0, 0.2),
       -4px 0 6px -2px rgba(0, 0, 0, 0.2);
@@ -17,6 +25,15 @@
     @media (min-width: 768px) {
       margin: 60px 120px 0 120px;
       padding: 52px 30px 30px 30px;
+    }
+
+    @media (min-width: 1024px) {
+      margin: 0;
+      padding: 60px 30px;
+      width: 50%;
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 15px;
+      box-shadow: none;
     }
 
     &-text {
@@ -35,6 +52,13 @@
       font-size: map.get($Body-tablet, font-size);
       font-weight: map.get($Body-tablet, font-weight);
     }
+
+    @media (min-width: 1024px) {
+      letter-spacing: map.get($Body-desktop, letter-spacing);
+      line-height: map.get($Body-desktop, line-height);
+      font-size: map.get($Body-desktop, font-size);
+      font-weight: map.get($Body-desktop, font-weight);
+    }
   }
 
   &__cta {
@@ -48,6 +72,19 @@
       margin: 0 120px 0 120px;
       padding-left: 30px;
       padding-right: 30px;
+    }
+
+    @media (min-width: 1024px) {
+      margin: 0;
+      padding: 60px 30px;
+      width: 50%;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 15px;
+      border-top-right-radius: 15px;
+      box-shadow: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     &-text {
@@ -65,6 +102,13 @@
         font-size: map.get($Body-tablet, font-size);
         font-weight: map.get($Body-tablet, font-weight);
       }
+
+      @media (min-width: 1024px) {
+        letter-spacing: map.get($Body-desktop, letter-spacing);
+        line-height: map.get($Body-desktop, line-height);
+        font-size: map.get($Body-desktop, font-size);
+        font-weight: map.get($Body-desktop, font-weight);
+      }
     }
 
     &-button {
@@ -75,6 +119,8 @@
       @media (min-width: 768px) {
         justify-content: end;
       }
+
+      
     }
   }
 }
