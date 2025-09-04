@@ -1,0 +1,131 @@
+@use 'sass:map';
+@use './variables.scss' as *;
+
+.incluye {
+  padding: 60px 20px 0 20px;
+
+  @media (min-width: 768px) {
+    padding: 60px 120px 0 120px;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 120px 0 0 0;
+    max-width: 904px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 1440px) {
+    max-width: 1024px;
+  }
+
+  &__grid {
+    display: block;
+
+    @media (min-width: 768px) {
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      gap: 2rem;
+    }
+
+    @media (min-width: 1024px) {
+      grid-template-columns: 1fr 1fr;
+      align-items: start;
+    }
+  }
+
+  &__col1 {
+    display: block;
+    @media (min-width: 1440px) {
+      display: flex;
+      flex-direction: column;
+      gap: 27px;
+    }
+  }
+
+  &__col2 {
+    display: block;
+  }
+
+  &__text {
+    padding-top: 20px;
+    font-family: $font-primary;
+    color: $text-bg-white;
+    letter-spacing: map.get($Body-mobile, letter-spacing);
+    line-height: map.get($Body-mobile, line-height);
+    font-size: map.get($Body-mobile, font-size);
+    font-weight: map.get($Body-mobile, font-weight);
+
+    @media (min-width: 768px) {
+      letter-spacing: map.get($Body-tablet, letter-spacing);
+      line-height: map.get($Body-tablet, line-height);
+      font-size: map.get($Body-tablet, font-size);
+      font-weight: map.get($Body-tablet, font-weight);
+    }
+
+    @media (min-width: 1024px) {
+      letter-spacing: map.get($Body-desktop, letter-spacing);
+      line-height: map.get($Body-desktop, line-height);
+      font-size: map.get($Body-desktop, font-size);
+      font-weight: map.get($Body-desktop, font-weight);
+    }
+
+    @media (min-width: 1440px) {
+      letter-spacing: map.get($Body-desktop-xl, letter-spacing);
+      line-height: map.get($Body-desktop-xl, line-height);
+      font-size: map.get($Body-desktop-xl, font-size);
+      font-weight: map.get($Body-desktop-xl, font-weight);
+    }
+  }
+
+  &__image {
+    max-width: 100%;
+    display: block;
+    margin: 20px auto;
+    box-shadow: $shadow;
+
+    @media (min-width: 1024px) {
+      margin-bottom: 0.1px;
+    }
+  }
+
+  &__extra-col1,
+  &__extra-col2 {
+    display: none;
+
+    @media (min-width: 1024px) {
+      display: block;
+    }
+  }
+
+  &__full {
+    display: none;
+    padding-top: 20px;
+    font-family: $font-primary;
+    color: $text-bg-white;
+    letter-spacing: map.get($Body-mobile, letter-spacing);
+    line-height: map.get($Body-mobile, line-height);
+    font-size: map.get($Body-mobile, font-size);
+    font-weight: map.get($Body-mobile, font-weight);
+
+    @media (min-width: 768px) {
+      letter-spacing: map.get($Body-tablet, letter-spacing);
+      line-height: map.get($Body-tablet, line-height);
+      font-size: map.get($Body-tablet, font-size);
+      font-weight: map.get($Body-tablet, font-weight);
+    }
+
+    @media (min-width: 1024px) {
+      display: block;
+      letter-spacing: map.get($Body-desktop, letter-spacing);
+      line-height: map.get($Body-desktop, line-height);
+      font-size: map.get($Body-desktop, font-size);
+      font-weight: map.get($Body-desktop, font-weight);
+    }
+  }
+
+  &__resto {
+    @media (min-width: 1024px) {
+      display: none;
+    }
+  }
+}

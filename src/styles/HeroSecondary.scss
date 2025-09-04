@@ -1,0 +1,171 @@
+@use 'sass:map';
+@use './variables.scss' as *;
+
+//uso
+//import heroImg from '../../images/heroIlustration.svg';
+//<HeroSecondary title="Web corporativa:" subtitle="La base digital para el éxito de tu marca" text="En el panorama empresarial actual, una web corporativa es mucho más que una simple tarjeta de presentación online..." image={heroImg} alt="Diseño web corporativo"/>
+
+.sectionHeroSecondary {
+  background-image: url('../images/backgroundWhiteC.jpg');
+  
+  background-size: cover;      // rellena el contenedor
+  background-position: center 96%; // centra la parte media
+  background-repeat: no-repeat;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media (min-width: 768px) {
+    padding: 60px 120px;
+    background-position: center 90%;
+    
+  }
+  @media (min-width: 1024px) {
+    //padding: 60px 120px;
+    width: 100%;
+    background-position: center 85%;
+  }
+
+  
+
+  &__content {
+    background-color: $cardWhite;
+    padding: 20px 20px;
+    border-radius: 2%;
+    box-shadow: $shadow;
+    @media (min-width: 768px) {
+      padding: 60px 60px;
+      max-width: 904px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    @media (min-width: 1440px) {
+      padding: 60px 60px;
+      max-width: 1024px;
+    }
+
+    &-intro {
+      display: flex;
+      flex-direction: column;
+      //align-items: center;
+      @media (min-width: 768px) {
+        justify-content: space-around;
+        flex-direction: row;
+        gap: 20px;
+      }
+      
+      &-image{
+        display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+      @media (min-width: 768px) {
+        width: clamp(150px, 20vw, 300px); 
+        height: auto;
+        }
+        &-item {
+          //width: 100%;
+          height: auto;
+          max-width: 200px;
+          @media (min-width: 768px) {
+            max-width: 100%;
+          }
+        }
+      }
+      &-title {
+        font-family: $font-primary;
+        font-size: map.get($H2-mobile, 'font-size');
+        line-height: map.get($H2-mobile, 'line-height');
+        font-weight: map.get($H2-mobile, 'font-weight');
+        letter-spacing: map.get($H2-mobile, 'letter-spacing');
+        color: $title-color;
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: 768px) {
+          font-size: map.get($H2-tablet, 'font-size');
+          //line-height: map.get($H1-tablet, 'line-height');
+          font-weight: map.get($H2-tablet, 'font-weight');
+          letter-spacing: map.get($H2-tablet, 'letter-spacing');
+          justify-content: center;
+        }
+        @media (min-width: 1024px) {
+          font-size: map.get($H1-desktop, 'font-size');
+          line-height: map.get($H1-desktop, 'line-height');
+          font-weight: map.get($H1-desktop, 'font-weight');
+          letter-spacing: map.get($H1-desktop, 'letter-spacing');
+        }
+        @media (min-width: 1440px) {
+          font-size: map.get($H1-desktop-xl, 'font-size');
+          line-height: map.get($H1-desktop-xl, 'line-height');
+          font-weight: map.get($H1-desktop-xl, 'font-weight');
+          letter-spacing: map.get($H1-desktop-xl, 'letter-spacing');
+        }
+        
+      }
+      &-subtitle {
+          display: flex;
+          font-size: map.get($H3-mobile, 'font-size');
+        line-height: map.get($H3-mobile, 'line-height');
+        font-weight: map.get($H3-mobile, 'font-weight');
+        letter-spacing: map.get($H3-mobile, 'letter-spacing');
+
+        @media (min-width: 768px) {
+          font-size: map.get($H3-tablet, 'font-size');
+          //line-height: map.get($H1-tablet, 'line-height');
+          font-weight: map.get($H3-tablet, 'font-weight');
+          letter-spacing: map.get($H3-tablet, 'letter-spacing');
+        }
+        @media (min-width: 1024px) {
+          font-size: map.get($H2-desktop, 'font-size');
+          line-height: map.get($H2-desktop, 'line-height');
+          font-weight: map.get($H2-desktop, 'font-weight');
+          letter-spacing: map.get($H2-desktop, 'letter-spacing');
+        }
+        @media (min-width: 1440px) {
+          font-size: map.get($H2-desktop-xl, 'font-size');
+          line-height: map.get($H2-desktop-xl, 'line-height');
+          font-weight: map.get($H2-desktop-xl, 'font-weight');
+          letter-spacing: map.get($H2-desktop-xl, 'letter-spacing');
+        }
+        }
+        
+        
+      
+    }
+  }
+  &__text {
+    font-size: map.get($Body-mobile, 'font-size');
+    line-height: map.get($Body-mobile, 'line-height');
+    font-weight: map.get($Body-mobile, 'font-weight');
+    letter-spacing: map.get($Body-mobile, 'letter-spacing');
+    color: $text-bg-color;
+    
+    
+  
+    @media (min-width: 768px) {
+      font-size: map.get($Body-tablet, 'font-size');
+      line-height: map.get($Body-tablet, 'line-height');
+      font-weight: map.get($Body-tablet, 'font-weight');
+      letter-spacing: map.get($Body-tablet, 'letter-spacing');
+      
+    }
+  
+    @media (min-width: 1024px) {
+      font-size: map.get($Body-desktop, 'font-size');
+      line-height: map.get($Body-desktop, 'line-height');
+      font-weight: map.get($Body-desktop, 'font-weight');
+      letter-spacing: map.get($Body-desktop, 'letter-spacing');
+      
+    }
+  
+    @media (min-width: 1440px) {
+      font-size: map.get($Body-desktop-xl, 'font-size');
+      line-height: map.get($Body-desktop-xl, 'line-height');
+      font-weight: map.get($Body-desktop-xl, 'font-weight');
+      letter-spacing: map.get($Body-desktop-xl, 'letter-spacing');
+      
+    } 
+  }
+}
