@@ -39,15 +39,19 @@
     justify-content: center;
     gap: 1rem;
     text-align: center;
-    // margin-bottom: 1rem;
+    padding-bottom: 0;
 
     @media (min-width: 768px) {
       flex: 0 0 40%;
-      
       gap: 1.25rem;
       margin-bottom: 0;
       justify-content: flex-start;
       text-align: none;
+      padding-bottom: 1.5rem;
+    }
+
+    @media (min-width: 1024px) {
+      padding-bottom: 2.5rem;
     }
   }
 

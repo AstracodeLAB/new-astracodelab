@@ -52,7 +52,7 @@
     font-weight: map.get($H3-mobile, 'font-weight');
     letter-spacing: map.get($H3-mobile, 'letter-spacing');
     color: white;
-    text-align: left;
+    text-align: center;
     padding: 1.5rem;
 
     @media (min-width: 768px) {
@@ -61,6 +61,7 @@
       font-weight: map.get($H3-tablet, 'font-weight');
       letter-spacing: map.get($H3-tablet, 'letter-spacing');
       padding: 2rem;
+      text-align: left;
     }
 
     @media (min-width: 1024px) {
@@ -72,11 +73,20 @@
     }
 
     &:first-child {
-      flex: 0 0 40%;
+      flex: 1;
+      
+      @media (min-width: 768px) {
+        flex: 0 0 40%;
+      }
     }
 
     &:last-child {
-      flex: 0 0 60%;
+      display: none;
+      
+      @media (min-width: 768px) {
+        display: block;
+        flex: 0 0 60%;
+      }
     }
   }
 
