@@ -4,7 +4,6 @@ import CardPregunta from '../components/Cards/CardPregunta.astro';
 import imgTimeLine from '../../images/backgroundImageSectionWhy.jpg';
 import Hero from '../components/Hero.astro';
 import Services from '../components/services.astro';
-import Subtitle from '../components/Titles/Subtitle.astro';
 import TitleSecondary from '../components/Titles/TitleSecondary.astro';
 import TimelineWrapper from '../components/Timeline/TimelineWrapper.astro';
 import PasoProceso from '../components/Timeline/PasoProceso.astro';
@@ -14,10 +13,8 @@ import BannerCta from '../components/Banners/BannerCta.astro';
 import CardTestimonio from '../components/Cards/CardTestimonio.astro';
 import WorkSection from '../components/WorkSection.astro';
 import FaqsSection from '../components/FaqsSection.astro';
-import BenefitsSection from '../components/BenefitsSection.astro';
-import AdvantagesSection from '../components/AdvantagesSection.astro';
 import Contact from '../components/Contact.astro';
-import Footer from '../components/Footer.astro';
+
 
 
 ---
@@ -132,65 +129,6 @@ import Footer from '../components/Footer.astro';
   </section>
 
   <FaqsSection titulo='Preguntas frecuentes' />
-
-  <BenefitsSection 
-    titulo="Beneficios clave de un e-commerce profesional:" 
-    benefits={[
-      {
-        titulo: "Venta sin horarios",
-        descripcion: "Tu tienda online no cierra nunca. Estés durmiendo o de vacaciones, tus productos o servicios están disponibles para clientes de todo el mundo, en cualquier momento."
-      },
-      {
-        titulo: "Aumento en conversiones",
-        descripcion: "Desde la facilidad de navegación hasta un proceso de pago seguro y eficiente, cada elemento de tu tienda online está orientado para guiar al usuario hacia la compra, maximizando tus tasas de conversión."
-      },
-      {
-        titulo: "Costes operativos más bajos",
-        descripcion: "A diferencia de un local físico, una tienda online reduce gastos fijos y te permite escalar con mayor libertad."
-      },
-      {
-        titulo: "Datos reales para mejores decisiones",
-        descripcion: "Analiza qué buscan tus clientes, cómo navegan, qué productos generan más interés y optimiza tu estrategia con información tangible."
-      },
-      {
-        titulo: "Mayor visibilidad en buscadores",
-        descripcion: "Un e-commerce optimizado para SEO te ayuda a aparecer en los primeros resultados de Google, lo que significa más visitas y más oportunidades de venta."
-      }
-    ]}
-  />
-
-  <AdvantagesSection 
-    titulo="Qué ganas al elegir astracodelab como tu agencia web"
-    descripcion="Apostamos por un modelo de agencia de diseño y desarrollo web, con equipo repartido en Barcelona, Málaga y Valencia prestando servicios a clientes de toda España. Nuestra metodología incluye un estudio de mercado, la creatividad y un proceso de trabajo transparente para ofrecerte una página web orientada para cualquier dispositivo"
-    advantages={[
-      {
-        icono: '<svg width="64" height="64" viewBox="0 0 64 64" fill="none"><rect x="12" y="16" width="40" height="28" rx="4" stroke="currentColor" stroke-width="2"/><path d="m16 20 16 12 16-12" stroke="currentColor" stroke-width="2"/></svg>',
-        titulo: "Ventaja",
-        descripcion: "El objetivo no es menos precio sino un mensaje. Nos ocupamos de que tu web tenga un cuidado estudio de negocio, tu identidad y la navegación que buscabas sin que tú hagas ajustes."
-      },
-      {
-        icono: '<svg width="64" height="64" viewBox="0 0 64 64" fill="none"><circle cx="32" cy="24" r="8" stroke="currentColor" stroke-width="2"/><path d="M16 56v-4c0-8.837 7.163-16 16-16s16 7.163 16 16v4" stroke="currentColor" stroke-width="2"/></svg>',
-        titulo: "Diseño pensado para personas (Diseño centrado en el navegador)",
-        descripcion: "Navegación sencilla y lectura cómoda. Nuestro objetivo es que sea fácil para cualquier usuario encontrar lo que buscaba ya sea desde un móvil o la pantalla para cada visitante."
-      },
-      {
-        icono: '<svg width="64" height="64" viewBox="0 0 64 64" fill="none"><rect x="12" y="12" width="40" height="40" rx="6" stroke="currentColor" stroke-width="2"/><path d="M20 28h24M20 36h16" stroke="currentColor" stroke-width="2"/></svg>',
-        titulo: "Contenido listo para buscadores",
-        descripcion: "Mejor visibilidad en Google sin focós ni sobre optimización SEO. Analizamos las ideas más relevantes y desarrollamos un contenido y descartamos las que trate con un código optimizado."
-      },
-      {
-        icono: '<svg width="64" height="64" viewBox="0 0 64 64" fill="none"><rect x="8" y="16" width="48" height="32" rx="4" stroke="currentColor" stroke-width="2"/><path d="M16 32h32M16 40h24" stroke="currentColor" stroke-width="2"/></svg>',
-        titulo: "Proyectos escalables y adaptables",
-        descripcion: "Tu proyecto puede crecer. Desde una tienda sencilla hasta un ecommerce con funcionalidades multilenguaje cuando tu necesites: integración avanzada de integración y desarrollo de webs funcionales."
-      },
-      {
-        icono: '<svg width="64" height="64" viewBox="0 0 64 64" fill="none"><circle cx="32" cy="20" r="8" stroke="currentColor" stroke-width="2"/><path d="M20 48v-8c0-6.627 5.373-12 12-12s12 5.373 12 12v8M24 44h16" stroke="currentColor" stroke-width="2"/></svg>',
-        titulo: "Acompañamiento cercano y personalizado",
-        descripcion: "Desde el primer contacto hasta tu lanzamiento automatizamos sin data alguna. Respondemos a tus mensajes, llamamos tú siempre tienes en tu bandeja u otro la atención que necesitas."
-      }
-    ]}
-  />
-
   <Contact titulo='Contacto' />
   
 </main>

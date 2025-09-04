@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import AdvantagesSection from '../../layouts/components/AdvantagesSection.astro';
 import Buscas from '../../layouts/components/Buscas.astro';
 import Conector from '../../layouts/components/Conector.astro';
 import Estrategia from '../../layouts/components/Estrategia.astro';
@@ -24,6 +25,47 @@ import QueIncluye from '../../layouts/components/QueIncluye.astro';
   />
 
   <Estrategia />
+  <AdvantagesSection
+    titulo='Qué ganas al elegir astracodelab como tu agencia web'
+    descripcion='AstracodeLAB es una agencia de diseño y desarrollo web, con equipo repartido en Barcelona, Málaga y Valencia prestando servicio a clientes en toda España. Nuestra metodología fusiona el estudio de negocio, la creatividad y un proceso de trabajo transparente para ofrecerte una página web que inspira confianza y convierte visitas en oportunidades reales.'
+    advantages={[
+      {
+        icono:
+          '<svg width="64" height="64" viewBox="0 0 64 64" fill="none"><rect x="12" y="16" width="40" height="28" rx="4" stroke="currentColor" stroke-width="2"/><path d="m16 20 16 12 16-12" stroke="currentColor" stroke-width="2"/></svg>',
+        titulo: 'Carga rápida',
+        descripcion:
+          'El visitante no se marcha antes de ver tu mensaje. Nos aseguramos de que tu web cargue en cuestión de segundos. La optimización del rendimiento web es clave.',
+      },
+      {
+        icono:
+          '<svg width="64" height="64" viewBox="0 0 64 64" fill="none"><circle cx="32" cy="24" r="8" stroke="currentColor" stroke-width="2"/><path d="M16 56v-4c0-8.837 7.163-16 16-16s16 7.163 16 16v4" stroke="currentColor" stroke-width="2"/></svg>',
+        titulo: 'Diseño centrado en el usuario',
+        descripcion:
+          'Navegación sencilla y lectura cómoda. Nuestras webs son accesibles para todos, garantizando una experiencia positiva para cada visitante.',
+      },
+      {
+        icono:
+          '<svg width="64" height="64" viewBox="0 0 64 64" fill="none"><rect x="12" y="12" width="40" height="40" rx="6" stroke="currentColor" stroke-width="2"/><path d="M20 28h24M20 36h16" stroke="currentColor" stroke-width="2"/></svg>',
+        titulo: 'Contenido listo para buscadores',
+        descripcion:
+          'Mayor visibilidad en Google sin trucos ni sobre-optimización. Estructuramos el contenido y desarrollamos tu sitio con un código optimizado.',
+      },
+      {
+        icono:
+          '<svg width="64" height="64" viewBox="0 0 64 64" fill="none"><rect x="8" y="16" width="48" height="32" rx="4" stroke="currentColor" stroke-width="2"/><path d="M16 32h32M16 40h24" stroke="currentColor" stroke-width="2"/></svg>',
+        titulo: 'Proyectos escalables y adaptables',
+        descripcion:
+          'Tu proyecto puede crecer. Añade una tienda online, sistemas de reservas o funcionalidades multilingües cuando lo necesites, asegurando la longevidad y relevancia de tu inversión.',
+      },
+      {
+        icono:
+          '<svg width="64" height="64" viewBox="0 0 64 64" fill="none"><circle cx="32" cy="20" r="8" stroke="currentColor" stroke-width="2"/><path d="M20 48v-8c0-6.627 5.373-12 12-12s12 5.373 12 12v8M24 44h16" stroke="currentColor" stroke-width="2"/></svg>',
+        titulo: 'Acompañamiento cercano y personalizado',
+        descripcion:
+          'Desde el primer contacto hasta el lanzamiento y el soporte continuo, te acompañamos en cada etapa. Respondemos a tus mensajes, llamadas o mails siempre en tu horario y con la atención que mereces.',
+      },
+    ]}
+  />
   <Conector />
   <Buscas />
   <Listo />
