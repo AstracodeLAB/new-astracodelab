@@ -1,0 +1,155 @@
+@use 'sass:map';
+@use './variables.scss' as *;
+
+.conector {
+  &__header {
+    padding: 12px 20px 0 20px;
+
+    @media (min-width: 768px) {
+      padding: 12px 120px 20px 120px;
+    }
+
+    @media (min-width: 1024px) {
+      padding: 12px 0 0 0;
+      max-width: 904px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 1440px) {
+      max-width: 1024px;
+    }
+  }
+
+  &__content {
+    margin-top: 12px;
+    background-color: white;
+    border-top: 1px solid $cardWhite;
+    box-shadow: $shadow;
+
+    @media (min-width: 768px) {
+      border-radius: 15px;
+      margin: 0 120px;
+      padding: 0 30px;
+    }
+
+    @media (min-width: 1024px) {
+      max-width: 904px;
+      margin: 20px auto 0;
+      display: flex;
+      flex-direction: row;
+      padding: 10px 0;
+    }
+
+    @media (min-width: 1440px) {
+      max-width: 1024px;
+      padding: 40px 60px;
+    }
+  }
+
+  &__text {
+    padding: 0 20px;
+    font-family: $font-primary;
+    color: $text-bg-white;
+    letter-spacing: map.get($Body-mobile, letter-spacing);
+    line-height: map.get($Body-mobile, line-height);
+    font-size: map.get($Body-mobile, font-size);
+    font-weight: map.get($Body-mobile, font-weight);
+
+    position: relative;
+    text-align: left;
+
+    @media (min-width: 768px) {
+      letter-spacing: map.get($Body-tablet, letter-spacing);
+      line-height: map.get($Body-tablet, line-height);
+      font-size: map.get($Body-tablet, font-size);
+      font-weight: map.get($Body-tablet, font-weight);
+    }
+
+    @media (min-width: 1024px) {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      letter-spacing: map.get($Body-desktop, letter-spacing);
+      line-height: map.get($Body-desktop, line-height);
+      font-size: map.get($Body-desktop, font-size);
+      font-weight: map.get($Body-desktop, font-weight);
+    }
+
+    @media (min-width: 1440px) {
+      letter-spacing: map.get($Body-desktop-xl, letter-spacing);
+      line-height: map.get($Body-desktop-xl, line-height);
+      font-size: map.get($Body-desktop-xl, font-size);
+      font-weight: map.get($Body-desktop-xl, font-weight);
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      width: 241px;
+      height: 1px;
+      background-color: $blue-primary;
+      margin: 10px;
+
+      @media (min-width: 768px) {
+        margin: 20px auto;
+      }
+
+      @media (min-width: 1024px) {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 70%;
+        margin: 0 5px;
+      }
+    }
+
+    &:first-child {
+      padding-top: 20px;
+    }
+
+    &:last-child {
+      padding-bottom: 20px;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__summary {
+    padding: 20px 20px 0 20px;
+    font-family: $font-primary;
+    color: $text-bg-white;
+    letter-spacing: map.get($Body-mobile, letter-spacing);
+    line-height: map.get($Body-mobile, line-height);
+    font-size: map.get($Body-mobile, font-size);
+    font-weight: map.get($Body-mobile, font-weight);
+
+    @media (min-width: 768px) {
+      padding: 20px 120px 0 120px;
+      letter-spacing: map.get($Body-tablet, letter-spacing);
+      line-height: map.get($Body-tablet, line-height);
+      font-size: map.get($Body-tablet, font-size);
+      font-weight: map.get($Body-tablet, font-weight);
+    }
+
+    @media (min-width: 1024px) {
+      padding: 20px 0 0 0;
+      max-width: 904px;
+      margin: 0 auto;
+      letter-spacing: map.get($Body-desktop, letter-spacing);
+      line-height: map.get($Body-desktop, line-height);
+      font-size: map.get($Body-desktop, font-size);
+      font-weight: map.get($Body-desktop, font-weight);
+    }
+
+    @media (min-width: 1440px) {
+      max-width: 1024px;
+      letter-spacing: map.get($Body-desktop-xl, letter-spacing);
+      line-height: map.get($Body-desktop-xl, line-height);
+      font-size: map.get($Body-desktop-xl, font-size);
+      font-weight: map.get($Body-desktop-xl, font-weight);
+    }
+  }
+}

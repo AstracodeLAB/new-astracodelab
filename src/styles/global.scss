@@ -31,7 +31,9 @@
 @use './PorqueNecesitoWeb.scss';
 @use './SimpleNumber.scss';
 @use './Estrategia.scss';
-@use './NuestrosServicios.scss';
+@use './NuestrosServicios.scss';@use './Conector.scss';
+@use './Buscas.scss';
+
 /* Estilos globales */
 :root {
   font-family: $font-primary;
