@@ -1,0 +1,149 @@
+@use 'sass:map';
+@use './variables.scss' as *;
+
+.estrategia {
+  padding: 30px 20px 0 20px;
+
+  @media (min-width: 768px) {
+    padding: 60px 120px 0 120px;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 120px 0 0 0;
+    max-width: 904px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 1440px) {
+    max-width: 1024px;
+  }
+
+  &__text {
+    padding-top: 12px;
+    font-family: $font-primary;
+    color: $text-bg-white;
+    letter-spacing: map.get($Body-mobile, letter-spacing);
+    line-height: map.get($Body-mobile, line-height);
+    font-size: map.get($Body-mobile, font-size);
+    font-weight: map.get($Body-mobile, font-weight);
+
+    @media (min-width: 768px) {
+      letter-spacing: map.get($Body-tablet, letter-spacing);
+      line-height: map.get($Body-tablet, line-height);
+      font-size: map.get($Body-tablet, font-size);
+      font-weight: map.get($Body-tablet, font-weight);
+    }
+
+    @media (min-width: 1024px) {
+      letter-spacing: map.get($Body-desktop, letter-spacing);
+      line-height: map.get($Body-desktop, line-height);
+      font-size: map.get($Body-desktop, font-size);
+      font-weight: map.get($Body-desktop, font-weight);
+    }
+
+    @media (min-width: 1440px) {
+      letter-spacing: map.get($Body-desktop-xl, letter-spacing);
+      line-height: map.get($Body-desktop-xl, line-height);
+      font-size: map.get($Body-desktop-xl, font-size);
+      font-weight: map.get($Body-desktop-xl, font-weight);
+    }
+  }
+
+  &__subtitle {
+    padding-top: 12px;
+  }
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: 768px) {
+      align-items: flex-start;
+    }
+
+    @media (min-width: 1024px) {
+      flex-direction: row;
+      gap: 20px;
+    }
+
+    &--bottom {
+      @media (min-width: 1024px) {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  &__image {
+    border-radius: 15px;
+    margin-top: 20px;
+    width: 100%;
+    height: auto;
+
+    @media (min-width: 768px) {
+      max-width: 268px;
+    }
+
+    @media (min-width: 1024px) {
+      max-width: 444px;
+      height: 442px;
+    }
+
+    &--bottom {
+      box-shadow: $shadow;
+      align-self: flex-end;
+    }
+  }
+
+  &__list {
+    padding: 0 20px;
+    list-style: disc;
+
+    @media (min-width: 1024px) {
+      margin: 0 60px;
+      padding: 0;
+    }
+
+    &--top {
+      @media (min-width: 1440px) {
+        margin-top: 60px;
+      }
+    }
+
+    &--bottom {
+      @media (min-width: 1440px) {
+        margin-top: 60px;
+        margin-bottom: 60px;
+      }
+    }
+
+    &-item {
+      margin-top: 20px;
+      font-family: $font-primary;
+      color: $text-bg-white;
+      letter-spacing: map.get($Body-mobile, letter-spacing);
+      line-height: map.get($Body-mobile, line-height);
+      font-size: map.get($Body-mobile, font-size);
+      font-weight: map.get($Body-mobile, font-weight);
+
+      @media (min-width: 768px) {
+        letter-spacing: map.get($Body-tablet, letter-spacing);
+        line-height: map.get($Body-tablet, line-height);
+        font-size: map.get($Body-tablet, font-size);
+        font-weight: map.get($Body-tablet, font-weight);
+      }
+
+      @media (min-width: 1024px) {
+        letter-spacing: map.get($Body-desktop, letter-spacing);
+        line-height: map.get($Body-desktop, line-height);
+        font-size: map.get($Body-desktop, font-size);
+        font-weight: map.get($Body-desktop, font-weight);
+      }
+
+      &::marker {
+        font-size: 20px;
+        color: $text-bg-white;
+      }
+    }
+  }
+}
