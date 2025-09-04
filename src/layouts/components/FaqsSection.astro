@@ -7,12 +7,11 @@ const { titulo, className = '' } = Astro.props;
 ---
 
 <section class={`faqs-section ${className}`}>
+  <div class='faqs-section__header'>
+    <TitleSecondary text={titulo} />
+  </div>
   <div class='faqs-section__container'>
     <article>
-      <div class='faqs-section__header'>
-        <TitleSecondary text={titulo} />
-      </div>
-
       <div class='faqs-section__content'>
         {
           faqs.map((faq) => (

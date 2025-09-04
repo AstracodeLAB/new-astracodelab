@@ -1,0 +1,74 @@
+@use 'sass:map';
+@use './variables.scss' as *;
+
+// ===========================
+// BENEFIT CARD
+// ===========================
+.benefit-card {
+  background: white;
+  border-radius: 12px;
+  padding: 0;
+  color: $title-color;
+  box-shadow: $shadow;
+
+  @media (min-width: 768px) {
+    border-radius: 16px;
+  }
+
+  &__title {
+    font-family: $font-primary;
+    font-size: map.get($Body-mobile, 'font-size');
+    line-height: map.get($H3-mobile, 'line-height');
+    font-weight: map.get($H3-mobile, 'font-weight');
+    letter-spacing: map.get($H3-mobile, 'letter-spacing');
+    color: white;
+    background: $gradientBlue;
+    margin: 0;
+    padding: 1.5rem;
+    border-radius: 12px 12px 0 0;
+
+    @media (min-width: 768px) {
+      font-size: map.get($Body-tablet, 'font-size');
+      line-height: map.get($H3-tablet, 'line-height');
+      font-weight: map.get($H3-tablet, 'font-weight');
+      letter-spacing: map.get($H3-tablet, 'letter-spacing');
+
+      border-radius: 16px 16px 0 0;
+    }
+
+    @media (min-width: 1024px) {
+      font-size: map.get($H3-desktop, 'font-size');
+      line-height: map.get($H3-desktop, 'line-height');
+      font-weight: map.get($H3-desktop, 'font-weight');
+      letter-spacing: map.get($H3-desktop, 'letter-spacing');
+
+    }
+  }
+
+  &__description {
+    font-family: $font-primary;
+    font-size: map.get($Body-mobile, 'font-size');
+    line-height: map.get($Body-mobile, 'line-height');
+    font-weight: map.get($Body-mobile, 'font-weight');
+    letter-spacing: map.get($Body-mobile, 'letter-spacing');
+    color: $title-color;
+    margin: 0;
+    padding: 1.5rem;
+
+    @media (min-width: 768px) {
+      font-size: map.get($Body-tablet, 'font-size');
+      line-height: map.get($Body-tablet, 'line-height');
+      font-weight: map.get($Body-tablet, 'font-weight');
+      letter-spacing: map.get($Body-tablet, 'letter-spacing');
+      padding: 2rem;
+    }
+
+    @media (min-width: 1024px) {
+      font-size: map.get($Body-desktop, 'font-size');
+      line-height: map.get($Body-desktop, 'line-height');
+      font-weight: map.get($Body-desktop, 'font-weight');
+      letter-spacing: map.get($Body-desktop, 'letter-spacing');
+      padding: 2rem;
+    }
+  }
+}

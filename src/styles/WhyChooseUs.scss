@@ -19,27 +19,25 @@
 }
 
 .why-choose-us-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 3rem 1.875rem;
+
+  padding: 3.75rem 1.25rem;
 
   @media (min-width: 768px) {
     padding: 5rem 7.5rem;
   }
 
   @media (min-width: 1024px) {
-    padding: 6rem 3.75rem;
+   padding: 0;
+   max-width: 904px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    gap: 3.5rem;
     align-items: start;
 
   }
-    @media (min-width: 1024px) {
-      gap: 3.5rem;
-    }
+
   @media (min-width: 1440px) {
-    padding: 7rem 2rem;
+    max-width: 1024px;
     gap: 5rem;
   }
 }

@@ -1,0 +1,25 @@
+---
+import TitleSecondary from './Titles/TitleSecondary.astro';
+import BenefitCard from './Cards/BenefitCard.astro';
+import Subtitle from './Titles/Subtitle.astro';
+
+const { titulo, benefits, className = '' } = Astro.props;
+---
+
+<section class={`benefits-section ${className}`}>
+  <div class="benefits-section__container">
+    <div class="benefits-section__header">
+      <Subtitle text={titulo} />
+    </div>
+    
+    <div class="benefits-section__content">
+      {benefits.map((benefit) => (
+        <BenefitCard 
+          titulo={benefit.titulo}
+          descripcion={benefit.descripcion}
+          className="benefits-section__card"
+        />
+      ))}
+    </div>
+  </div>
+</section>
