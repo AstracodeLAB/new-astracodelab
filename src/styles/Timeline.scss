@@ -80,6 +80,7 @@
   padding-left: 3.2rem;
   max-width: 800px;
   margin: 30px auto;
+  
 
   @media (min-width: 768px) {
     padding-left: 4rem;
@@ -91,6 +92,7 @@
     top: 5px;
     width: 2px;
     height: 78.5%;
+
     background: $blue-dark;
     z-index: 1;
 
@@ -125,6 +127,31 @@
 
     @media (min-width: 1024px) {
       height: 84.5%;
+    }
+  }
+}
+.timeline-wrapper {
+  position: relative;
+  padding-left: 3.2rem;
+  max-width: 800px;
+  margin: 30px auto;
+
+  @media (min-width: 768px) {
+    padding-left: 4rem;
+  }
+
+  &__linea {
+    position: absolute;
+    left: 1rem;
+    top: 0; // empieza arriba
+    bottom: 0; // llega hasta el final
+    width: 2px;
+    background: $blue-dark;
+    z-index: 1;
+
+    @media (min-width: 768px) {
+      left: 1.25rem;
+      width: 3px;
     }
   }
 }

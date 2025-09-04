@@ -1,0 +1,124 @@
+@use 'sass:map';
+@use './variables.scss' as *;
+
+// ===========================
+// ADVANTAGE ITEM
+// ===========================
+.advantage-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__advantage,
+  &__help {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+
+
+    @media (min-width: 768px) {
+      padding: 2rem;
+      text-align: left;
+      flex-direction: row;
+      border-right: 1px solid rgba($title-color, 0.1);
+    }
+
+    @media (min-width: 1024px) {
+      padding: 2.5rem;
+    }
+  }
+
+  &__advantage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+    // margin-bottom: 1rem;
+
+    @media (min-width: 768px) {
+      flex: 0 0 40%;
+      
+      gap: 1.25rem;
+      margin-bottom: 0;
+      justify-content: flex-start;
+      text-align: none;
+    }
+  }
+
+  &__help {
+    @media (min-width: 768px) {
+      flex: 0 0 60%;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    svg {
+      width: 32px;
+      height: 32px;
+      color: $blue-primary;
+
+      @media (min-width: 768px) {
+        width: 40px;
+        height: 40px;
+      }
+
+      @media (min-width: 1024px) {
+        width: 48px;
+        height: 48px;
+      }
+    }
+  }
+
+  &__title{
+    font-family: $font-primary;
+    font-size: map.get($H3-mobile, 'font-size');
+    line-height: map.get($H3-mobile, 'line-height');
+    font-weight: map.get($H3-mobile, 'font-weight');
+    letter-spacing: map.get($H3-mobile, 'letter-spacing');
+    color: $title-color;
+  }
+
+
+  &__description {
+    font-family: $font-primary;
+    font-size: map.get($Body-mobile, 'font-size');
+    line-height: map.get($Body-mobile, 'line-height');
+    font-weight: map.get($Body-mobile, 'font-weight');
+    letter-spacing: map.get($Body-mobile, 'letter-spacing');
+    color: $title-color;
+    margin: 0;
+    text-align: center;
+
+    @media (min-width: 768px) {
+      font-size: map.get($Body-tablet, 'font-size');
+      line-height: map.get($Body-tablet, 'line-height');
+      font-weight: map.get($Body-tablet, 'font-weight');
+      letter-spacing: map.get($Body-tablet, 'letter-spacing');
+    }
+
+    @media (min-width: 1024px) {
+      font-size: map.get($Body-desktop, 'font-size');
+      line-height: map.get($Body-desktop, 'line-height');
+      font-weight: map.get($Body-desktop, 'font-weight');
+      letter-spacing: map.get($Body-desktop, 'letter-spacing');
+    }
+  }
+
+  &__title {
+    flex: 1;
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+}

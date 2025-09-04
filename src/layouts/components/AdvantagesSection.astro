@@ -1,0 +1,32 @@
+---
+import TitleSecondary from './Titles/TitleSecondary.astro';
+import AdvantageItem from './AdvantageItem.astro';
+
+const { titulo, descripcion, advantages, className = '' } = Astro.props;
+---
+
+<section class={`advantages-section ${className}`}>
+  <div class="advantages-section__container">
+    <div class="advantages-section__header">
+      <TitleSecondary text={titulo} description={descripcion} />
+    </div>
+   
+    <div class="advantages-section__content">
+      <div class="advantages-section__headers">
+        <div class="advantages-section__header-cell">Ventaja</div>
+        <div class="advantages-section__header-cell">Como te ayuda</div>
+      </div>
+      
+      <div class="advantages-section__items">
+        {advantages.map((advantage) => (
+          <AdvantageItem 
+            icono={advantage.icono}
+            titulo={advantage.titulo}
+            descripcion={advantage.descripcion}
+            className="advantages-section__item"
+          />
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
