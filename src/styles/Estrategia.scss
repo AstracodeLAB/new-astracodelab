@@ -4,6 +4,10 @@
 .estrategia {
   padding: 30px 20px 0 20px;
 
+  @media (min-width: 768px) {
+    padding: 60px 120px 0 120px;
+  }
+
   &__text {
     font-family: $font-primary;
     color: $text-bg-white;
@@ -11,11 +15,43 @@
     line-height: map.get($Body-mobile, line-height);
     font-size: map.get($Body-mobile, font-size);
     font-weight: map.get($Body-mobile, font-weight);
+
+    @media (min-width: 768px) {
+      letter-spacing: map.get($Body-tablet, letter-spacing);
+      line-height: map.get($Body-tablet, line-height);
+      font-size: map.get($Body-tablet, font-size);
+      font-weight: map.get($Body-tablet, font-weight);
+    }
+  }
+
+  &__subtitle {
+    padding-top: 12px;
+  }
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: 768px) {
+      align-items: flex-start;
+    }
   }
 
   &__image {
     border-radius: 15px;
     margin-top: 20px;
+    width: 100%;
+    height: auto;
+
+    @media (min-width: 768px) {
+      max-width: 268px;
+    }
+
+    &--bottom {
+      box-shadow: $shadow;
+      align-self: flex-end;
+    }
   }
 
   &__list {
@@ -30,6 +66,13 @@
       line-height: map.get($Body-mobile, line-height);
       font-size: map.get($Body-mobile, font-size);
       font-weight: map.get($Body-mobile, font-weight);
+
+      @media (min-width: 768px) {
+        letter-spacing: map.get($Body-tablet, letter-spacing);
+        line-height: map.get($Body-tablet, line-height);
+        font-size: map.get($Body-tablet, font-size);
+        font-weight: map.get($Body-tablet, font-weight);
+      }
 
       &::marker {
         font-size: 20px;
