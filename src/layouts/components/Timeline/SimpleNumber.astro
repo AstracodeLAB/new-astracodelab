@@ -1,0 +1,20 @@
+---
+const { number = 1, text = "Texto de ejemplo", title } = Astro.props;
+
+---
+
+<div class="simpleNumber">
+  <!-- Número en círculo -->
+  <div class="simpleNumber__circle">
+    {number}
+  </div>
+
+  <!-- Línea -->
+  <div class="simpleNumber__line"></div>
+
+  <!-- Texto -->
+  <p class="simpleNumber__text">
+    <span class="simpleNumber__text-title">{title}</span>
+    {text}
+  </p>
+</div>
