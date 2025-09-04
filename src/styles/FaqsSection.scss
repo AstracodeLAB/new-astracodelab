@@ -5,14 +5,17 @@
 // FAQS SECTION
 // ===========================
 .faqs-section {
-  padding: 3rem 1rem;
-
+  padding: 50px 20px 20px 20px;
 
   @media (min-width: 768px) {
-    padding: 4rem 2rem;
+    padding: 60px 30px;
   }
 
   @media (min-width: 1024px) {
+    // padding: 5rem 3.75rem;
+    max-width: 904px;
+    padding: 120px 0 0 0;
+  }
 
     padding-top: 7.5rem;
     max-width: 1004px;
@@ -78,16 +81,17 @@
     background: rgba($blue-primary, 0.01);
     border-radius: 12px;
     border: 1px solid rgba($blue-primary, 0.1);
-    box-shadow: 0 1px 40px 0 rgba(42, 17, 96, 0.20);
-
+    box-shadow: 0 1px 40px 0 rgba(42, 17, 96, 0.2);
 
     @media (min-width: 768px) {
       padding: 2.5rem 2rem;
       border-radius: 16px;
+      margin: 0 87px;
     }
 
     @media (min-width: 1024px) {
       max-height: 400px;
+      margin-top: 120px;
     }
 
     @media (min-width: 1440px) {}
@@ -128,6 +132,13 @@
   }
 
   &__cta-text {
+    font-family: $font-primary;
+    font-size: map.get($Body-mobile, 'font-size');
+    line-height: map.get($Body-mobile, 'line-height');
+    font-weight: map.get($Body-mobile, 'font-weight');
+    letter-spacing: map.get($Body-mobile, 'letter-spacing');
+    color: $title-color;
+    margin: 0 0 1.5rem 0;
     font-family: $font-primary;
     font-size: map.get($Body-mobile, 'font-size');
     line-height: map.get($Body-mobile, 'line-height');
@@ -202,7 +213,6 @@
       line-height: map.get($Button-desktop-xl, 'line-height');
       font-weight: map.get($Button-desktop-xl, 'font-weight');
       letter-spacing: map.get($Button-desktop-xl, 'letter-spacing');
-
     }
 
 

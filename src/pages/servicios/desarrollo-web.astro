@@ -1,0 +1,28 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Buscas from '../../layouts/components/Buscas.astro';
+import Conector from '../../layouts/components/Conector.astro';
+import Estrategia from '../../layouts/components/Estrategia.astro';
+import HeroServicesA from '../../layouts/components/HeroServicesA.astro';
+import QueIncluye from '../../layouts/components/QueIncluye.astro';
+---
+
+<Layout title='Servicios de diseño y desarrollo web'>
+  <HeroServicesA />
+  <QueIncluye
+    title='¿Qué incluye nuestro servicio de creación de web corporativa?'
+    paragraphs={[
+      'En AstracodeLAB, nos encargamos de cada etapa del proceso para que no tengas que preocuparte por los aspectos técnicos. Te ofrecemos un servicio profesional y completo que asegurará tu presencia digital: ',
+      'Diseño Exclusivo y Personalizado: Tu web corporativa reflejará la esencia de tu marca con un diseño único, sin plantillas.',
+      'Estructura Web Optimizada: Navegación intuitiva y arquitectura de contenidos pensada para el usuario y los motores de búsqueda.',
+      'Diseño para todos los dispositivos: Tu web corporativa se verá y funcionará perfectamente en ordenadores, tablets y móviles.',
+      'Integración de Funcionalidades Clave: Formularios de contacto, mapas interactivos, y más, según tus necesidades.',
+      'Soporte Post-Lanzamiento:  Tu tranquilidad es clave. Por eso, te acompañamos y  ofrecemos asistencia durante el primer mes tras la publicación de tu web, con planes de mantenimiento  continuo disponibles, si quieres olvidarte de la parte técnica a largo plazo.',
+    ]}
+    image='/src/images/test.jpg'
+  />
+
+  <Estrategia />
+  <Conector />
+  <Buscas />
+</Layout>

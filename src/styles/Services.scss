@@ -2,7 +2,7 @@
 @use './variables.scss' as *;
 
 .servicesHome {
-  padding: 0 30px;
+  padding: 30px 20px 0 20px;
   font-size: map.get($Body-mobile, 'font-size');
   line-height: map.get($Body-mobile, 'line-height');
   font-weight: map.get($Body-mobile, 'font-weight');
@@ -18,18 +18,19 @@
     font-weight: map.get($Body-tablet, 'font-weight');
     letter-spacing: map.get($Body-tablet, 'letter-spacing');
     padding: 0 120px;
-    gap:20px;
+    gap: 20px;
   }
-  
+
   @media (min-width: 1024px) {
     font-size: map.get($Body-desktop, 'font-size');
     line-height: map.get($Body-desktop, 'line-height');
     font-weight: map.get($Body-desktop, 'font-weight');
     letter-spacing: map.get($Body-desktop, 'letter-spacing');
-    padding: 0 60px;
-    
+    max-width: 904px;
+    margin-top: 120px;
+    padding: 0;
   }
-  
+
   @media (min-width: 1440px) {
     font-size: map.get($Body-desktop-xl, 'font-size');
     line-height: map.get($Body-desktop-xl, 'line-height');
@@ -37,7 +38,6 @@
     letter-spacing: map.get($Body-desktop-xl, 'letter-spacing');
     max-width: 1024px;
     padding: 0 0;
-    margin: 0 auto;
   }
   &__intro {
     display: flex;
@@ -47,30 +47,29 @@
     @media (min-width: 768px) {
       gap: 20px;
     }
-
   }
   &__services {
     @media (min-width: 1024px) {
-      display: grid; 
-      grid-template-columns: 1fr 1fr; 
-      grid-template-rows: 1fr auto; 
-      gap: 20px 20px; 
-      grid-template-areas: 
-        "containerDesign containerFunc"
-        "containerMant containerMant"; 
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr auto;
+      gap: 30px 20px;
+      grid-template-areas:
+        'containerDesign containerFunc'
+        'containerMant containerMant';
       align-items: stretch;
     }
-    
+
     &-containerDesign {
       display: flex;
       flex-direction: column;
       gap: 10px;
       grid-area: containerDesign;
-      
+
       @media (min-width: 1024px) {
         //height: 100%;
       }
-      
+
       &-card {
         background-color: $cardWhite;
         box-shadow: $shadow;
@@ -82,29 +81,28 @@
         position: relative;
         @media (min-width: 768px) {
           padding: 30px 30px;
-          
         }
         @media (min-width: 1024px) {
           padding: 60px 60px;
-          height: 100%; 
+          height: 100%;
         }
         &-illustration {
           position: absolute;
-          top: 20%;                         // centrada verticalmente
-          left: 0;                          // pegada al borde izquierdo
+          top: 20%; // centrada verticalmente
+          left: 0; // pegada al borde izquierdo
           transform: translate(-20%, -60%); // se sale un poco a la izquierda y queda centrada
-          width: clamp(80px, 17vw, 220px);  // escala fluida
+          width: clamp(80px, 17vw, 220px); // escala fluida
           pointer-events: none;
           z-index: 2;
-         
+
           @media (min-width: 768px) {
             transform: translate(-20%, -70%);
           }
           @media (min-width: 1024px) {
-            transform: translate(-20%, -60%);
+            transform: translate(-20%, -70%);
           }
         }
-        &-text{
+        &-text {
           //padding-left: 60px;
           margin-left: clamp(60px, 12vw, 110px);
           @media (min-width: 1024px) {
@@ -117,9 +115,7 @@
           justify-content: flex-end;
         }
       }
-      
-      
-      
+
       &-services {
         display: flex;
         flex-direction: column;
@@ -129,18 +125,18 @@
         }
       }
     }
-    
+
     &-containerFunc {
       display: flex;
       flex-direction: column;
       gap: 10px;
       grid-area: containerFunc;
-      
+
       @media (min-width: 1024px) {
         //height: 100%;
-        max-height: 500px;
+        //max-height: 500px;
       }
-      
+
       &-card {
         background-color: $cardWhite;
         box-shadow: $shadow;
@@ -152,30 +148,37 @@
         position: relative;
         @media (min-width: 768px) {
           padding: 30px 30px;
-          
         }
         @media (min-width: 1024px) {
           padding: 60px 60px;
           height: 100%; // Añadido para igualar altura
         }
-        
+
         &-illustration {
           position: absolute;
-          top: 50%;                         // centrada verticalmente
-          right: 0;                          // pegada al borde izquierdo
-          transform: translate(20%, -120%); // se sale un poco a la izquierda y queda centrada
-          width: clamp(80px, 17vw, 220px);  // escala fluida
+          top: 50%; // centrada verticalmente
+          right: 0; // pegada al borde izquierdo
+          transform: translate(20%, -150%); // se sale un poco a la izquierda y queda centrada
+          width: clamp(80px, 17vw, 160px); // escala fluida
           pointer-events: none;
           z-index: 2;
-         
+          @media (min-width: 445px) {
+            transform: translate(20%, -100%);
+            width: clamp(80px, 17vw, 90px);
+          }
           @media (min-width: 768px) {
-            transform: translate(45%, -70%);
+            transform: translate(20%, -100%);
+            width: clamp(80px, 17vw, 100px);
           }
           @media (min-width: 1024px) {
-            transform: translate(15%, -90%);//AIDA cambié los valores para evitar desbordamiento antes eran transform: translate(45%, -70%);
+            width: clamp(80px, 17vw, 200px);
+            transform: translate(
+              15%,
+              -95%
+            );
           }
         }
-        &-text{
+        &-text {
           //padding-right: 30px;
           margin-right: clamp(60px, 12vw, 110px);
           @media (min-width: 1024px) {
@@ -188,9 +191,7 @@
           justify-content: flex-end;
         }
       }
-      
-      
-      
+
       &-services {
         display: flex;
         width: 100%;
@@ -199,15 +200,15 @@
         @media (min-width: 768px) {
           padding: 0 40px;
         }
-      }  
+      }
     }
-    
+
     &-containerMant {
       display: flex;
       flex-direction: column;
       gap: 10px;
       grid-area: containerMant;
-      
+
       &-card {
         background-color: $cardWhite;
         box-shadow: $shadow;
@@ -216,12 +217,47 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
+        position: relative;
         @media (min-width: 768px) {
           padding: 30px 30px;
-          
         }
         @media (min-width: 1024px) {
           padding: 60px 60px;
+        }
+        &-illustration {
+          position: absolute;
+          top: 20%;                         // centrada verticalmente
+          left: 0;                        // pegada al borde izquierdo
+          transform: translate(-20%, -60%); // se sale un poco a la izquierda y queda centrada
+          width: clamp(80px, 17vw, 220px);  // escala fluida
+          pointer-events: none;
+          z-index: 2;
+          @media (min-width: 445px) {
+            transform: translate(-20%, -60%);
+            width: clamp(80px, 17vw, 90px);
+          }
+          @media (min-width: 768px) {
+            transform: translate(-20%, -50%);
+            width: clamp(80px, 17vw, 100px);
+          }
+          @media (min-width: 1024px) {
+            transform: translate(-25%, -50%);
+            width: clamp(80px, 17vw, 180px);
+          }
+        }
+        &-text{
+          //padding-left: 60px;
+          margin-left: clamp(60px, 12vw, 110px);
+          @media (min-width: 1024px) {
+            //padding-left: 10px;
+          }
+        }
+        &-parr {
+           //padding-left: 60px;
+           //margin-left: clamp(60px, 12vw, 110px);
+           @media (min-width: 768px) {
+           // margin-left: clamp(60px, 12vw, 110px);
+           }
         }
         &-btn {
           width: 100%;
@@ -229,15 +265,13 @@
           justify-content: flex-end;
         }
       }
-      
-      
-      
+
       &-services {
         display: flex;
         width: 100%;
         flex-direction: column;
         gap: 10px;
-        
+
         @media (min-width: 768px) {
           padding: 0 40px;
           gap: 20px;
@@ -245,7 +279,7 @@
         @media (min-width: 1024px) {
           gap: 20px;
           flex-direction: row;
-          align-items: flex-end;;
+          align-items: flex-end;
         }
         &-links {
           flex: 2;
@@ -268,7 +302,8 @@
           @media (min-width: 1024px) {
             flex: 2;
           }
+        }
       }
     }
   }
-}}
+}

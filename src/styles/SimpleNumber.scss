@@ -1,0 +1,127 @@
+@use 'sass:map';
+@use './variables.scss' as *;
+
+//uso
+//<SimpleNumber number={1} title="Velocidad y Claridad para una Experiencia Óptima:" text=" Si una página tarda en cargar o su navegación confunde, el usuario se marchará antes de conocer tu propuesta. Priorizamos la velocidad de carga y una navegación intuitiva para asegurar una experiencia de usuario fluida y satisfactoria en cualquier dispositivo" />
+
+.simpleNumber {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 9999px;
+    background-color: $blue-dark;
+    border: 1px solid $blue-primary; 
+    color: white;
+    font-weight: semibold;
+    font-size: 0.94rem;
+    font-family: Arial, Helvetica, sans-serif;
+
+    @media (min-width: 1024px) {
+      width: 2.8rem;
+      height: 2.8rem;
+      font-size: 1.25rem;
+    }
+  }
+
+  &__line {
+    width: 8rem;
+    height: 1px;
+    background-color: $blue-primary;
+    margin: 0.5rem 0;
+    @media (min-width: 1024px) {
+      width: 2px;
+      height: 4rem;
+      margin: 0 1rem;
+    }
+  }
+  
+  &__text {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-size: map.get($Body-mobile, 'font-size');
+    line-height: map.get($Body-mobile, 'line-height');
+    font-weight: map.get($Body-mobile, 'font-weight');
+    letter-spacing: map.get($Body-mobile, 'letter-spacing');
+    color: $text-bg-color;
+    
+    
+  
+    @media (min-width: 768px) {
+      font-size: map.get($Body-tablet, 'font-size');
+      line-height: map.get($Body-tablet, 'line-height');
+      font-weight: map.get($Body-tablet, 'font-weight');
+      letter-spacing: map.get($Body-tablet, 'letter-spacing');
+      text-align: left;
+      
+    }
+  
+    @media (min-width: 1024px) {
+      font-size: map.get($Body-desktop, 'font-size');
+      line-height: map.get($Body-desktop, 'line-height');
+      font-weight: map.get($Body-desktop, 'font-weight');
+      letter-spacing: map.get($Body-desktop, 'letter-spacing'); 
+      max-width: 90%;
+    }
+  
+    @media (min-width: 1440px) {
+      font-size: map.get($Body-desktop-xl, 'font-size');
+      line-height: map.get($Body-desktop-xl, 'line-height');
+      font-weight: map.get($Body-desktop-xl, 'font-weight');
+      letter-spacing: map.get($Body-desktop-xl, 'letter-spacing');
+      
+    } 
+
+    &-title {
+      font-size: map.get($Body-mobile, 'font-size');
+      line-height: map.get($Body-mobile, 'line-height');
+      font-weight: 600;
+      letter-spacing: map.get($Body-mobile, 'letter-spacing');
+      color: $text-bg-color;
+      
+      
+    
+      @media (min-width: 768px) {
+        font-size: map.get($Body-tablet, 'font-size');
+        line-height: map.get($Body-tablet, 'line-height');
+        //font-weight: map.get($Body-tablet, 'font-weight');
+        letter-spacing: map.get($Body-tablet, 'letter-spacing');
+        text-align: left;
+        
+      }
+    
+      @media (min-width: 1024px) {
+        font-size: map.get($Body-desktop, 'font-size');
+        line-height: map.get($Body-desktop, 'line-height');
+        //font-weight: map.get($Body-desktop, 'font-weight');
+        letter-spacing: map.get($Body-desktop, 'letter-spacing'); 
+          
+      }
+    
+      @media (min-width: 1440px) {
+        font-size: map.get($Body-desktop-xl, 'font-size');
+        line-height: map.get($Body-desktop-xl, 'line-height');
+        //font-weight: map.get($Body-desktop-xl, 'font-weight');
+        letter-spacing: map.get($Body-desktop-xl, 'letter-spacing');
+        
+      } 
+    }
+  
+  }
+  
+}
+
+
