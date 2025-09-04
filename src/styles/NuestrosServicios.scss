@@ -1,0 +1,233 @@
+@use 'sass:map';
+@use './variables.scss' as *;
+
+.sectionNuestrosServicios {
+  padding: 60px 20px 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  @media (min-width: 768px) {
+    padding: 60px 120px 0 120px;
+  }
+  @media (min-width: 1024px) {
+    padding: 120px 0 0 0;
+    max-width: 904px;
+    gap: 20px;
+  }
+  @media (min-width: 1440px) {
+    padding: 120px 0 0 0;
+    max-width: 1024px;
+    gap: 20px;
+  }
+  &__intro {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 1024px) {
+      gap: 20px;
+    }
+
+    &-text {
+      font-size: map.get($Body-mobile, 'font-size');
+      line-height: map.get($Body-mobile, 'line-height');
+      font-weight: map.get($Body-mobile, 'font-weight');
+      letter-spacing: map.get($Body-mobile, 'letter-spacing');
+      color: $text-bg-color;
+    
+    
+  
+    @media (min-width: 768px) {
+      font-size: map.get($Body-tablet, 'font-size');
+      line-height: map.get($Body-tablet, 'line-height');
+      font-weight: map.get($Body-tablet, 'font-weight');
+      letter-spacing: map.get($Body-tablet, 'letter-spacing');
+      
+    }
+  
+    @media (min-width: 1024px) {
+      font-size: map.get($Body-desktop, 'font-size');
+      line-height: map.get($Body-desktop, 'line-height');
+      font-weight: map.get($Body-desktop, 'font-weight');
+      letter-spacing: map.get($Body-desktop, 'letter-spacing'); 
+        
+    }
+  
+    @media (min-width: 1440px) {
+      font-size: map.get($Body-desktop-xl, 'font-size');
+      line-height: map.get($Body-desktop-xl, 'line-height');
+      font-weight: map.get($Body-desktop-xl, 'font-weight');
+      letter-spacing: map.get($Body-desktop-xl, 'letter-spacing');
+      
+    } 
+    }
+  }
+  &__paraNegocios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (min-width: 1024px) {
+      position: relative;
+      min-height: 500px;
+      
+    }
+    
+    &-img {
+      width: 90%;
+      height: auto;
+      
+      @media (min-width: 1024px) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 0;
+        opacity: 1;
+        /* TAMAÑO MÁS PEQUEÑO - AJUSTA ESTOS VALORES */
+        width: 100%; // En lugar de 100% (más pequeña)
+        max-width: 600px; // Límite máximo opcional
+        height: auto; // Mantiene proporción
+        object-fit: contain; // Muestra toda la imagen sin recortar
+      }
+    }
+    &-cards {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.62rem;
+      
+      @media (min-width: 1024px) {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 100%;
+      }
+    }
+    &-card {
+      position: relative;
+      z-index: 1; // Aseguramos que las cards estén sobre la imagen
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+      
+      
+      @media (min-width: 1024px) {
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 0; // Quitamos el margen superior anterior
+        padding:20px; // Espaciado para que no toquen bordes
+        width: 320px;
+      }
+      @media (min-width: 1440px) {
+        width: 380px;
+      }
+      &-title {
+        font-size: map.get($Body-mobile, 'font-size');
+        line-height: map.get($Body-mobile, 'line-height');
+        font-weight: 600;
+        letter-spacing: map.get($Body-mobile, 'letter-spacing');
+        color: $text-bg-color;
+
+        @media (min-width: 768px) {
+          font-size: map.get($Body-tablet, 'font-size');
+          line-height: map.get($Body-tablet, 'line-height');
+          font-weight: map.get($Body-tablet, 'font-weight');
+          letter-spacing: map.get($Body-tablet, 'letter-spacing');
+            
+        }
+      
+        @media (min-width: 1024px) {
+          font-size: map.get($Body-desktop, 'font-size');
+          line-height: map.get($Body-desktop, 'line-height');
+          font-weight: map.get($Body-desktop, 'font-weight');
+          letter-spacing: map.get($Body-desktop, 'letter-spacing'); 
+            
+        }
+      
+        @media (min-width: 1440px) {
+          font-size: map.get($Body-desktop-xl, 'font-size');
+          line-height: map.get($Body-desktop-xl, 'line-height');
+          font-weight: map.get($Body-desktop-xl, 'font-weight');
+          letter-spacing: map.get($Body-desktop-xl, 'letter-spacing');
+          
+        } 
+      }
+      &-line {
+        width: 100%;
+        height: 1px;
+        background-color: $blue-primary;
+        margin-bottom: 5px;
+        
+        
+        @media (min-width: 1024px) {
+          width: 100%;
+          height: 2px;
+          margin-bottom: 5px;
+        }
+      }
+      &-white {
+        background-color: $cardWhite;
+        padding: 1.25rem;
+        border-bottom-left-radius: 0.9rem;
+        border-bottom-right-radius: 0.9rem;
+        box-shadow: $shadow;
+        width: 100%;
+        @media (min-width: 1024px) {
+          width: 320px;
+        }
+        @media (min-width: 1440px) {
+          width: 380px;
+        }
+
+        &-text {
+          font-size: map.get($Body-mobile, 'font-size');
+          line-height: map.get($Body-mobile, 'line-height');
+          font-weight: map.get($Body-mobile, 'font-weight');
+          letter-spacing: map.get($Body-mobile, 'letter-spacing');
+          color: $text-bg-white;
+          
+          
+        
+          @media (min-width: 768px) {
+            font-size: map.get($Body-tablet, 'font-size');
+            line-height: map.get($Body-tablet, 'line-height');
+            font-weight: map.get($Body-tablet, 'font-weight');
+            letter-spacing: map.get($Body-tablet, 'letter-spacing');
+            
+            
+          }
+        
+          @media (min-width: 1024px) {
+            font-size: map.get($Body-desktop, 'font-size');
+            line-height: map.get($Body-desktop, 'line-height');
+            font-weight: map.get($Body-desktop, 'font-weight');
+            letter-spacing: map.get($Body-desktop, 'letter-spacing'); 
+            
+          }
+        
+          @media (min-width: 1440px) {
+            font-size: map.get($Body-desktop-xl, 'font-size');
+            line-height: map.get($Body-desktop-xl, 'line-height');
+            font-weight: map.get($Body-desktop-xl, 'font-weight');
+            letter-spacing: map.get($Body-desktop-xl, 'letter-spacing');
+            
+          } 
+        }
+      }
+    }
+  }
+}
+
+.cardNuestrosServicios {
+  width: 100%;
+
+  @media (min-width: 1024px) {
+    width: 320px;
+  }
+  @media (min-width: 1440px) {
+    width: 380px;
+  }
+}
