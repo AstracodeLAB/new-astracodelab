@@ -1,18 +1,27 @@
 ---
+import Buttons from './Buttons/Buttons.astro';
 import TitleSecondary from './Titles/TitleSecondary.astro';
 ---
 
-<section>
-  <TitleSecondary text='¿Listo para transformar tu presencia digital?' />
-  <img src='/src/images/heroIlustration.svg' />
-  <p>
-    En AstracodeLAB, no solo construimos sitios web; construimos plataformas que impulsan el crecimiento de tu negocio.
-    Si estás buscando una agencia de diseño web que combine experiencia técnica, creatividad y un enfoque humano, has
-    llegado al lugar correcto.
-  </p>
-  <p>
-    Contáctanos hoy mismo para agendar una reunión gratuita y descubramos cómo podemos ayudarte a crear la página web
-    profesional que tu marca necesita para destacar en el competitivo mundo digital.
-  </p>
-  <a href='https://calendly.com/astracodelab'>¿Hablamos de tu proyecto web? Agenda tu reunión gratuita</a>
+<section class='listo'>
+  <div class='listo__heading'>
+    <TitleSecondary text='¿Listo para transformar tu presencia digital?' />
+  </div>
+  <div class='listo__image'>
+    <img src='/src/images/heroIlustration.svg' alt='Ilustración' />
+  </div>
+  <div class='listo__content'>
+    <p class='listo__text'>
+      En AstracodeLAB, no solo construimos sitios web; construimos plataformas que impulsan el crecimiento de tu
+      negocio. Si estás buscando una agencia de diseño web que combine experiencia técnica, creatividad y un enfoque
+      humano, has llegado al lugar correcto.
+    </p>
+    <p class='listo__text'>
+      Contáctanos hoy mismo para agendar una reunión gratuita y descubramos cómo podemos ayudarte a crear la página web
+      profesional que tu marca necesita para destacar en el competitivo mundo digital.
+    </p>
+    <div class='listo__cta'>
+      <Buttons className='linkSecondary' href='/'>¿Hablamos de tu proyecto web? Agenda tu reunión</Buttons>
+    </div>
+  </div>
 </section>

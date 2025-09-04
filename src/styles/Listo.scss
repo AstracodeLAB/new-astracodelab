@@ -1,2 +1,25 @@
 @use 'sass:map';
 @use './variables.scss' as *;
+
+.listo {
+  padding: 30px 20px 0 20px;
+
+  &__image {
+    margin-top: 20px;
+  }
+
+  &__text {
+    padding-top: 20px;
+    font-family: $font-primary;
+    color: $text-bg-white;
+    letter-spacing: map.get($Body-mobile, letter-spacing);
+    line-height: map.get($Body-mobile, line-height);
+    font-size: map.get($Body-mobile, font-size);
+    font-weight: map.get($Body-mobile, font-weight);
+  }
+
+  &__cta {
+    margin-top: 20px;
+    padding: 10px 0;
+  }
+}
