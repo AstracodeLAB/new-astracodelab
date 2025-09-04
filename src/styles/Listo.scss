@@ -1,0 +1,98 @@
+@use 'sass:map';
+@use './variables.scss' as *;
+
+.listo {
+  padding: 30px 20px 0 20px;
+
+  @media (min-width: 768px) {
+    padding: 60px 120px 0 120px;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 120px 0 0 0;
+    max-width: 904px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 1440px) {
+    max-width: 1024px;
+  }
+
+  &__container {
+    @media (min-width: 1024px) {
+      display: flex;
+      padding-top: 20px;
+    }
+  }
+
+  &__image {
+    margin-top: 20px;
+
+    @media (min-width: 768px) {
+      max-width: 269px;
+      margin: 20px auto 0;
+    }
+
+    @media (min-width: 1024px) {
+      max-width: 400px;
+      margin: 20px 60px 0 30px;
+    }
+
+    @media (min-width: 1440px) {
+      margin: 0;
+    }
+  }
+
+  &__content {
+    @media (min-width: 1440px) {
+      padding-left: 100px;
+    }
+  }
+
+  &__text {
+    padding-top: 20px;
+    font-family: $font-primary;
+    color: $text-bg-white;
+    letter-spacing: map.get($Body-mobile, letter-spacing);
+    line-height: map.get($Body-mobile, line-height);
+    font-size: map.get($Body-mobile, font-size);
+    font-weight: map.get($Body-mobile, font-weight);
+
+    @media (min-width: 768px) {
+      letter-spacing: map.get($Body-tablet, letter-spacing);
+      line-height: map.get($Body-tablet, line-height);
+      font-size: map.get($Body-tablet, font-size);
+      font-weight: map.get($Body-tablet, font-weight);
+    }
+
+    @media (min-width: 1024px) {
+      letter-spacing: map.get($Body-desktop, letter-spacing);
+      line-height: map.get($Body-desktop, line-height);
+      font-size: map.get($Body-desktop, font-size);
+      font-weight: map.get($Body-desktop, font-weight);
+    }
+
+    @media (min-width: 1440px) {
+      letter-spacing: map.get($Body-desktop-xl, letter-spacing);
+      line-height: map.get($Body-desktop-xl, line-height);
+      font-size: map.get($Body-desktop-xl, font-size);
+      font-weight: map.get($Body-desktop-xl, font-weight);
+    }
+  }
+
+  &__cta {
+    margin-top: 20px;
+    padding: 10px 0;
+
+    @media (min-width: 768px) {
+      display: flex;
+      justify-content: end;
+    }
+
+    & div {
+      @media (min-width: 768px) {
+        max-width: 276px;
+      }
+    }
+  }
+}
