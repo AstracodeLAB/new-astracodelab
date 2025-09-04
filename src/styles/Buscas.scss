@@ -10,6 +10,10 @@
     box-shadow: $shadow;
   }
 
+  @media (min-width: 1440px) {
+    max-width: 1024px;
+  }
+
   &__content {
     box-shadow: 0px -4px 6px -2px rgba(0, 0, 0, 0.2), 4px 0 6px -2px rgba(0, 0, 0, 0.2),
       -4px 0 6px -2px rgba(0, 0, 0, 0.2);
@@ -36,6 +40,10 @@
       box-shadow: none;
     }
 
+    @media (min-width: 1440px) {
+      padding: 60px;
+    }
+
     &-text {
       padding-top: 20px;
       font-family: $font-primary;
@@ -58,6 +66,13 @@
       line-height: map.get($Body-desktop, line-height);
       font-size: map.get($Body-desktop, font-size);
       font-weight: map.get($Body-desktop, font-weight);
+    }
+
+    @media (min-width: 1440px) {
+      letter-spacing: map.get($Body-desktop-xl, letter-spacing);
+      line-height: map.get($Body-desktop-xl, line-height);
+      font-size: map.get($Body-desktop-xl, font-size);
+      font-weight: map.get($Body-desktop-xl, font-weight);
     }
   }
 
@@ -87,6 +102,10 @@
       justify-content: space-between;
     }
 
+    @media (min-width: 1440px) {
+      padding: 60px;
+    }
+
     &-text {
       font-family: $font-primary;
       color: $text-bg-white;
@@ -109,6 +128,13 @@
         font-size: map.get($Body-desktop, font-size);
         font-weight: map.get($Body-desktop, font-weight);
       }
+
+      @media (min-width: 1440px) {
+        letter-spacing: map.get($Body-desktop-xl, letter-spacing);
+        line-height: map.get($Body-desktop-xl, line-height);
+        font-size: map.get($Body-desktop-xl, font-size);
+        font-weight: map.get($Body-desktop-xl, font-weight);
+      }
     }
 
     &-button {
@@ -119,8 +145,6 @@
       @media (min-width: 768px) {
         justify-content: end;
       }
-
-      
     }
   }
 }
