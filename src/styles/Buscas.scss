@@ -3,8 +3,9 @@
 
 .buscas {
   &__content {
-    box-shadow: $shadow;
-    margin: 30px 20px 0 20px;
+    box-shadow: 0px -4px 6px -2px rgba(0, 0, 0, 0.2), 4px 0 6px -2px rgba(0, 0, 0, 0.2),
+      -4px 0 6px -2px rgba(0, 0, 0, 0.2);
+    margin: 28px 20px 0 20px;
     padding: 30px 20px 20px 20px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
@@ -13,7 +14,13 @@
     background-position: center;
     background-repeat: no-repeat;
 
+    @media (min-width: 768px) {
+      margin: 60px 120px 0 120px;
+      padding: 52px 30px 30px 30px;
+    }
+
     &-text {
+      padding-top: 20px;
       font-family: $font-primary;
       color: $cardWhite;
       letter-spacing: map.get($Body-mobile, letter-spacing);
@@ -21,14 +28,27 @@
       font-size: map.get($Body-mobile, font-size);
       font-weight: map.get($Body-mobile, font-weight);
     }
+
+    @media (min-width: 768px) {
+      letter-spacing: map.get($Body-tablet, letter-spacing);
+      line-height: map.get($Body-tablet, line-height);
+      font-size: map.get($Body-tablet, font-size);
+      font-weight: map.get($Body-tablet, font-weight);
+    }
   }
 
   &__cta {
     padding: 12px 20px 20px 20px;
     margin: 0 20px;
-    box-shadow: $shadow;
+    box-shadow: 4px 0 6px -2px rgba(0, 0, 0, 0.2), -4px 0 6px -2px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+
+    @media (min-width: 768px) {
+      margin: 0 120px 0 120px;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
 
     &-text {
       font-family: $font-primary;
@@ -37,12 +57,24 @@
       line-height: map.get($Body-mobile, line-height);
       font-size: map.get($Body-mobile, font-size);
       font-weight: map.get($Body-mobile, font-weight);
+
+      @media (min-width: 768px) {
+        padding-top: 12px;
+        letter-spacing: map.get($Body-tablet, letter-spacing);
+        line-height: map.get($Body-tablet, line-height);
+        font-size: map.get($Body-tablet, font-size);
+        font-weight: map.get($Body-tablet, font-weight);
+      }
     }
 
     &-button {
       display: flex;
       justify-content: center;
       margin-top: 20px;
+
+      @media (min-width: 768px) {
+        justify-content: end;
+      }
     }
   }
 }
