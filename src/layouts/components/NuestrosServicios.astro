@@ -1,60 +1,68 @@
-
 ---
-import TitleSecondary from '../components/Titles/TitleSecondary.astro'; 
+import TitleSecondary from '../components/Titles/TitleSecondary.astro';
 import Subtitle from '../components/Titles/Subtitle.astro';
 import CardNuestrosServicios from './Cards/CardNuestrosServicios.astro';
 import Buttons from './Buttons/Buttons.astro';
 ---
 
-<section class="sectionNuestrosServicios">
-  <article class="sectionNuestrosServicios__intro">
-    <TitleSecondary text="Nuestros servicios de diseño y desarrollo web: soluciones a medida para cada objetivo" />
-    <p class="sectionNuestrosServicios__intro-text">En AstracodeLAB, comprendemos que cada proyecto es único. Ofrecemos una gama completa de servicios de diseño y desarrollo web a medida, diseñados para satisfacer tus necesidades específicas, desde una web corporativa hasta un ecommerce.</p>
+<section class='sectionNuestrosServicios'>
+  <article class='sectionNuestrosServicios__intro'>
+    <TitleSecondary text='Nuestros servicios de diseño y desarrollo web: soluciones a medida para cada objetivo' />
+    <p class='sectionNuestrosServicios__intro-text'>
+      En AstracodeLAB, comprendemos que cada proyecto es único. Ofrecemos una gama completa de servicios de diseño y
+      desarrollo web a medida, diseñados para satisfacer tus necesidades específicas, desde una web corporativa hasta un
+      ecommerce.
+    </p>
   </article>
-  
-  <article class="sectionNuestrosServicios__paraNegocios">
-    <Subtitle text="Para Negocios y Empresas:" />
-    <img 
-      src="/src/images/desktopMockup.png" 
-      alt="Mockup de ejemplo"
-      class="sectionNuestrosServicios__paraNegocios-img"
+
+  <article class='sectionNuestrosServicios__paraNegocios'>
+    <Subtitle text='Para Negocios y Empresas:' />
+    <img
+      src='/src/images/desktopMockup.png'
+      alt='Mockup de ejemplo'
+      class='sectionNuestrosServicios__paraNegocios-img'
     />
-    <div class="sectionNuestrosServicios__paraNegocios-cards">
-      <CardNuestrosServicios 
-      title="Blogs y revistas online" 
-      text="Compartir tu conocimiento en un blog corporativo o lanzar una revista digital es la estrategia más sólida para  atraer tráfico orgánico constante.  Nosotras te ayudamos a llegar a tu objetivo y conectar con tu audiencia."
+    <div class='sectionNuestrosServicios__paraNegocios-cards'>
+      <CardNuestrosServicios
+        title='Blogs y revistas online'
+        text='Compartir tu conocimiento en un blog corporativo o lanzar una revista digital es la estrategia más sólida para  atraer tráfico orgánico constante.  Nosotras te ayudamos a llegar a tu objetivo y conectar con tu audiencia.'
       />
-      <CardNuestrosServicios 
-        title="Campañas de alto impacto" 
-        text="Explora nuestra landing page optimizada para conversión , ideales para campañas específicas, y maximiza cada visita."       
+      <CardNuestrosServicios
+        title='Campañas de alto impacto'
+        text='Explora nuestra landing page optimizada para conversión , ideales para campañas específicas, y maximiza cada visita.'
       />
-      <CardNuestrosServicios 
-        title="Imagen renovada" 
-        text="Si tu sitio actual ha quedado obsoleto o no cumple con tus expectativas, consulta el servicio de rediseño web y empieza de nuevo con fuerza."    
+      <CardNuestrosServicios
+        title='Imagen renovada'
+        text='Si tu sitio actual ha quedado obsoleto o no cumple con tus expectativas, consulta el servicio de rediseño web y empieza de nuevo con fuerza.'
       />
-      <CardNuestrosServicios 
-        title="Venta 24/7 " 
-        text="Lanza tu catálogo  de productos con nuestras soluciones de tienda online."   
+      <CardNuestrosServicios
+        title='Venta 24/7 '
+        text='Lanza tu catálogo  de productos con nuestras soluciones de tienda online.'
       />
     </div>
   </article>
-  
-  <article class="sectionNuestrosServicios__paraNegocios">
-    <Subtitle text="Para creativos y profesionales independientes:" />
-    <img 
-      src="/src/images/desktopMockup.png" 
-      alt="Mockup de ejemplo"
-      class="sectionNuestrosServicios__paraNegocios-img"
+
+  <article class='sectionNuestrosServicios__paraNegocios'>
+    <Subtitle text='Para creativos y profesionales independientes:' />
+    <img
+      src='/src/images/desktopMockup.png'
+      alt='Mockup de ejemplo'
+      class='sectionNuestrosServicios__paraNegocios-img'
     />
-    <div class="sectionNuestrosServicios__paraNegocios-cards">
-      <CardNuestrosServicios 
-      title="Presencia de marca completa " 
-      text="Descubre cómo creamos una web corporativa profesional que refuerza la identidad de tu marca y presenta tus servicios de forma clara y atractiva."
+    <div class='sectionNuestrosServicios__paraNegocios-cards'>
+      <CardNuestrosServicios
+        title='Presencia de marca completa '
+        text='Descubre cómo creamos una web corporativa profesional que refuerza la identidad de tu marca y presenta tus servicios de forma clara y atractiva.'
       />
-      <CardNuestrosServicios 
-        title="Portfolios personalizados para creativos y profesionales" 
-        text="Compartir tu conocimiento en un blog corporativo o lanzar una revista digital es la estrategia más sólida para  atraer tráfico orgánico constante.  Nosotras te ayudamos a llegar a tu objetivo y conectar con tu audiencia."       
+      <CardNuestrosServicios
+        title='Portfolios personalizados para creativos y profesionales'
+        text='Compartir tu conocimiento en un blog corporativo o lanzar una revista digital es la estrategia más sólida para  atraer tráfico orgánico constante.  Nosotras te ayudamos a llegar a tu objetivo y conectar con tu audiencia.'
       />
     </div>
   </article>
+  <div class='sectionNuestrosServicios__button'>
+    <div>
+      <Buttons className='linkSecondary' href='/'>Hablemos de tu portfolio</Buttons>
+    </div>
+  </div>
 </section>

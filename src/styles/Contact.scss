@@ -2,19 +2,20 @@
 @use './variables.scss' as *;
 
 .contact {
-  padding: 30px 20px 60px 20px;
+  padding: 60px 20px 60px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
 
   @media (min-width: 768px) {
-    padding: 30px 120px 60px 120px;
+    padding: 60px 120px 60px 120px;
   }
 
   @media (min-width: 1024px) {
-    padding: 120px 0;
+    padding: 120px 0 120px 0;
     max-width: 904px;
+    margin: 0 auto;
   }
 
   @media (min-width: 1440px) {
@@ -61,7 +62,7 @@
     }
 
     &-bottom {
-      background: url('src/images/backgroundWhiteA.jpg') no-repeat center center;
+      background: url('/src/images/backgroundWhiteA.jpg') no-repeat center center;
       background-size: cover;
       padding: 20px;
 
