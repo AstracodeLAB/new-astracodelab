@@ -7,6 +7,9 @@ import BenefitsSection from '../../layouts/components/BenefitsSection.astro'
 import QueIncluye from '../../layouts/components/QueIncluye.astro';
 import ImgIncluye from '../../images/backgroundImageSectionWhy.jpg';
 import BannerCta from '../../layouts/components/Banners/BannerCta.astro';
+import FaqsSection from '../../layouts/components/FaqsSection.astro';
+import {faqsEcommerce} from '../../layouts/components/accordeon/faqs.js';
+import Contact from '../../layouts/components/Contact.astro';
 
 const benefits = [
   {
@@ -61,9 +64,16 @@ const benefits = [
   <BannerCta titulo="¿Listo para abrir tu tienda online y multiplicar tus ventas?" 
   descripcion="Si estás buscando una tienda online profesional, moderna y que realmente funcione, en AstracodeLAB estamos listos para ayudarte a dar ese paso. No pierdas la oportunidad de invertir en un e-commerce. Este será un elemento clave para el futuro y el crecimiento de tu negocio."
   texto="¿Quieres una tienda online que venda? Agenda tu reunión gratuita"
-  className="linkSecondary">
+  className="linkSecondaryGreen">
 
   </BannerCta>
+  <section class="ecommerceFinal">
+    <FaqsSection titulo="Preguntas frecuentes sobre tiendas online y e-commerce" faqs={faqsEcommerce}></FaqsSection>
+  </section>
+  <section class="ecommerceFinal">
+    <Contact></Contact>
+  </section>
+  
   
 
 </Layout>

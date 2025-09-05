@@ -2,7 +2,7 @@
 @use './variables.scss' as *;
 
 .incluye {
-  padding: 60px 20px 0 20px;
+  padding: 60px 20px 60px 20px;
 
   @media (min-width: 768px) {
     padding: 60px 120px 0 120px;

@@ -10,7 +10,7 @@ const { title, paragraphs = [], image } = Astro.props;
       <div class='incluye__title'>
         <TitleSecondary text={title} />
       </div>
-      {paragraphs[0] && <p class='incluye__text'>{paragraphs[0]}</p>}
+      {paragraphs[0] && <p class='incluye__text' set:html={paragraphs[0]}></p>}
 
      
       <div class='incluye__extra-col1'>
@@ -38,9 +38,9 @@ const { title, paragraphs = [], image } = Astro.props;
   
 {paragraphs[6] && <p class="incluye__full" set:html={paragraphs[6]}></p>}
  
-  <div class="incluye__resto">
-    {paragraphs.slice(1).map((p) => (
-      <p class='incluye__text'>{p}</p>
-    ))}
-  </div>
+<div class="incluye__resto">
+  {paragraphs.slice(1).map((p) => (
+    <p class='incluye__text' set:html={p}></p>
+  ))}
+</div>
 </section>

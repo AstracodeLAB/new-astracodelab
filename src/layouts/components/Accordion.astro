@@ -11,7 +11,7 @@ const { titulo, contenido, className = "" } = Astro.props;
   </button>
   <div class="accordion__content" data-accordion-content>
     <div class="accordion__text">
-      <p>{contenido}</p>
+      <p set:html={contenido}></p>
     </div>
   </div>
 </div>
