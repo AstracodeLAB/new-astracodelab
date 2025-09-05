@@ -4,7 +4,7 @@ import TitleSecondary from '../Titles/TitleSecondary.astro';
 const { titulo, subtitulo, testimonials } = Astro.props;
 ---
 
-<div class='card-testimonio' data-testimonial-slider>
+<article class='card-testimonio' data-testimonial-slider>
   <div class='card-testimonio__header'>
     <TitleSecondary text={titulo} description={subtitulo} />
   </div>
@@ -31,7 +31,7 @@ const { titulo, subtitulo, testimonials } = Astro.props;
       <p class='card-testimonio__text' data-testimonial-text>{testimonials[0].testimonial}</p>
     </div>
   </div>
-</div>
+</article>
 
 <script define:vars={{testimonials}}>
   class TestimonialSlider {

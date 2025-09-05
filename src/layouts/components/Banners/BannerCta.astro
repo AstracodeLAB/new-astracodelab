@@ -5,12 +5,12 @@ import Subtitle from '../Titles/Subtitle.astro';
 const { titulo, descripcion, texto } = Astro.props;
 ---
 
-<div class='banner-cta'>
-  <div class='banner-cta__container'>
+<section class='banner-cta'>
+  <article class='banner-cta__container'>
     <Subtitle className='banner text' text={titulo} />
     <Subtitle className='banner desc' description={descripcion} />
     <div class='banner-cta__button'>
       <Buttons className='btnPrimaryLight' text={texto} href='/contacto'>{texto}<Buttons /> </Buttons>
     </div>
-  </div>
-</div>
+  </article>
+</section>
