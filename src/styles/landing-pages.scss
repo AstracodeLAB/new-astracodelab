@@ -1,0 +1,23 @@
+@use 'sass:map';
+@use './variables.scss' as *;
+
+.landing {
+  padding: 30px 20px 0 20px;
+}
+
+.incluye {
+  @media (min-width: 768px) {
+    display: flex;
+  }
+
+  & img {
+    border-radius: 15px;
+    box-shadow: $shadow;
+  }
+
+  &__numbers {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+}
