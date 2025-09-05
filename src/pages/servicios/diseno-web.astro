@@ -1,30 +1,21 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import AdvantagesSection from '../../layouts/components/AdvantagesSection.astro';
-import Buscas from '../../layouts/components/Buscas.astro';
-import Conector from '../../layouts/components/Conector.astro';
-import Estrategia from '../../layouts/components/Estrategia.astro';
 import HeroServicesA from '../../layouts/components/HeroServicesA.astro';
+import PorqNecesitoWeb from '../../layouts/components/PorqNecesitoWeb.astro';
+import AdvantagesSection from '../../layouts/components/AdvantagesSection.astro';
+import NuestrosServicios from '../../layouts/components/NuestrosServicios.astro';
+import Buscas from '../../layouts/components/Buscas.astro';
+import TitleSecondary from '../../layouts/components/Titles/TitleSecondary.astro';
+import TimelineWrapper from '../../layouts/components/Timeline/TimelineWrapper.astro';
+import PasoProceso from '../../layouts/components/Timeline/PasoProceso.astro';
+import imgTimeLine from '/src/images/backgroundImageSectionWhy.jpg';
 import Listo from '../../layouts/components/Listo.astro';
-import QueIncluye from '../../layouts/components/QueIncluye.astro';
+import Contact from '../../layouts/components/Contact.astro';
 ---
 
 <Layout title='Servicios de diseño y desarrollo web'>
   <HeroServicesA />
-  <QueIncluye
-    title='¿Qué incluye nuestro servicio de creación de web corporativa?'
-    paragraphs={[
-      'En AstracodeLAB, nos encargamos de cada etapa del proceso para que no tengas que preocuparte por los aspectos técnicos. Te ofrecemos un servicio profesional y completo que asegurará tu presencia digital: ',
-      'Diseño Exclusivo y Personalizado: Tu web corporativa reflejará la esencia de tu marca con un diseño único, sin plantillas.',
-      'Estructura Web Optimizada: Navegación intuitiva y arquitectura de contenidos pensada para el usuario y los motores de búsqueda.',
-      'Diseño para todos los dispositivos: Tu web corporativa se verá y funcionará perfectamente en ordenadores, tablets y móviles.',
-      'Integración de Funcionalidades Clave: Formularios de contacto, mapas interactivos, y más, según tus necesidades.',
-      'Soporte Post-Lanzamiento:  Tu tranquilidad es clave. Por eso, te acompañamos y  ofrecemos asistencia durante el primer mes tras la publicación de tu web, con planes de mantenimiento  continuo disponibles, si quieres olvidarte de la parte técnica a largo plazo.',
-    ]}
-    image='/src/images/test.jpg'
-  />
-
-  <Estrategia />
+  <PorqNecesitoWeb />
   <AdvantagesSection
     titulo='Qué ganas al elegir astracodelab como tu agencia web'
     descripcion='AstracodeLAB es una agencia de diseño y desarrollo web, con equipo repartido en Barcelona, Málaga y Valencia prestando servicio a clientes en toda España. Nuestra metodología fusiona el estudio de negocio, la creatividad y un proceso de trabajo transparente para ofrecerte una página web que inspira confianza y convierte visitas en oportunidades reales.'
@@ -66,7 +57,40 @@ import QueIncluye from '../../layouts/components/QueIncluye.astro';
       },
     ]}
   />
-  <Conector />
+  <NuestrosServicios />
   <Buscas />
+  <section class='timeline-section'>
+    <div class='timeline-section-header'>
+      <TitleSecondary
+        text='¿Cuáles son las etapas que tiene un desarrollo de una página web?'
+        description='Nuestro proceso de creación de tu página web profesional es transparente, colaborativo y diseñado para garantizar tu tranquilidad en todo momento:'
+      />
+    </div>
+    <TimelineWrapper>
+      <PasoProceso
+        numero='1'
+        descripcion='Empezamos con una reunión para entender tu idea, tus objetivos y las referencias que te inspiran. Así dibujamos un alcance de proyecto realista y alineado con tus plazos.'
+      />
+      <PasoProceso
+        numero='2'
+        descripcion='Antes de hablar de colores, trazamos un mapa detallado con las secciones, flujos del usuario y la estructura de contenidos. Realizamos un análisis de tu mercado y de las palabras clave para definir una buena arquitectura web.'
+        imagen={imgTimeLine.src}
+        descripcionSec='Creamos un prototipo en el que podrás ajustar colores, tipografía y jerarquía hasta que digas <strong>«ahora sí»</strong>.'
+      />
+      <PasoProceso
+        numero='3'
+        descripcion='Con la estructura firme, trabajamos en el estilo visual de tu marca: colores, tipografías y elementos gráficos. Creamos un prototipo donde podrás previsualizar y ajustar el diseño.'
+      />
+      <PasoProceso
+        numero='4'
+        descripcionSec='Nos ponemos manos a la obra con el código. Convertimos el diseño en una web funcional, accesible y adaptada a todos los dispositivos (móviles, tablets y ordenadores), asegurando un rendimiento óptimo.'
+      />
+      <PasoProceso
+        numero='5'
+        descripcionSec='Después de activar tu web, te proporcionamos un manual básico y te acompañamos durante el primer mes para cualquier ajuste o duda. Si lo deseas, puedes optar por nuestro plan de mantenimiento web mensual, si quieres olvidarte de la parte técnica.'
+      />
+    </TimelineWrapper>
+  </section>
   <Listo />
+  <Contact />
 </Layout>
