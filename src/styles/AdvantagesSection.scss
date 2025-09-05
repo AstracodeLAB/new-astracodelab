@@ -6,17 +6,16 @@
 // ===========================
 .advantages-section {
   padding: 60px 20px 0 20px;
-  
 
   @media (min-width: 768px) {
-    padding: 3.75rem 7.5rem;
+    padding: 60px 120px 0 120px;
   }
 
   @media (min-width: 1024px) {
-   max-width: 904px;
+    max-width: 904px;
   }
   @media (min-width: 1440px) {
-   max-width: 1024px;
+    max-width: 1024px;
   }
 
   &__container {
@@ -70,7 +69,7 @@
       font-weight: map.get($H3-tablet, 'font-weight');
       letter-spacing: map.get($H3-tablet, 'letter-spacing');
       padding: 2rem;
-      text-align: left;
+      text-transform: uppercase;
     }
 
     @media (min-width: 1024px) {
@@ -83,7 +82,7 @@
 
     &:first-child {
       flex: 1;
-      
+
       @media (min-width: 768px) {
         flex: 0 0 40%;
       }
@@ -91,7 +90,7 @@
 
     &:last-child {
       display: none;
-      
+
       @media (min-width: 768px) {
         display: block;
         flex: 0 0 60%;
