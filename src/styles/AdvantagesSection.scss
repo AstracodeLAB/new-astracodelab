@@ -5,7 +5,8 @@
 // ADVANTAGES SECTION
 // ===========================
 .advantages-section {
-  padding: 3.75rem 1.25rem;
+  padding: 60px 20px 0 20px;
+  
 
   @media (min-width: 768px) {
     padding: 3.75rem 7.5rem;
@@ -24,7 +25,7 @@
   }
 
   &__header {
-    text-align: center;
+    text-align: left;
     margin-bottom: 2.5rem;
 
     @media (min-width: 768px) {
@@ -33,6 +34,11 @@
 
     @media (min-width: 1024px) {
       margin-bottom: 4rem;
+    }
+
+    & p {
+      padding-top: 5px;
+      text-align: left;
     }
   }
 
