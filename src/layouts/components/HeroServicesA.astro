@@ -1,9 +1,32 @@
 ---
-import TitlesHero from './Titles/TitlesHero.astro';
 import TitlesHeroServices from './Titles/TitlesHeroServices.astro';
+
+interface Props {
+  title: string;
+  subtitle: string;
+  text: string;
+  className?: string;
+}
+
+const { title, subtitle, text, className = '' } = Astro.props;
 ---
 
-<section class='heroServicesA'>
+<section class={`heroServicesA ${className}`}>
+  <div class="heroServicesA__container">
+    <div class="heroServicesA__container-title">
+      <TitlesHeroServices
+        title={title}
+        subtitle={subtitle}
+        class="heroServicesTitle"
+      />
+    </div>
+    <p class="heroServicesA__container-text">
+      {text}
+    </p>
+  </div>
+</section>
+
+<!-- <section class='heroServicesA'>
   <div class='heroServicesA__container'>
     <div class='heroServicesA__container-title'>
       <TitlesHeroServices
@@ -20,4 +43,4 @@ import TitlesHeroServices from './Titles/TitlesHeroServices.astro';
       también son herramientas estratégicas, ágiles y accesibles, pensadas para impulsar tus objetivos de negocio.
     </p>
   </div>
-</section>
+</section> -->

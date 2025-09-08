@@ -124,3 +124,36 @@ export const faqsRedi = [
       'Lo ideal es que nos facilites tus propios textos e imágenes para reflejar al máximo la esencia y la voz de tu marca. No obstante, si lo prefieres, nuestro equipo de copywriting puede encargarse de redactar los textos optimizados y/arte puede ayudarte con la selección de imágenes.',
   },
 ];
+
+export const faqsOptimizacion = [
+  {
+    titulo: '¿Qué es la velocidad de carga web y por qué es tan importante?',
+    contenido:
+      'La velocidad de carga web es el tiempo que tarda tu página en mostrarse completamente al usuario. Es crucial porque afecta directamente la experiencia del usuario (una web lenta frustra y hace que el usuario se vaya) . Una web rápida mejora las conversiones y la imagen de tu marca.',
+  },
+  {
+    titulo: '¿Mi web será accesible para personas con discapacidades?',
+    contenido:
+      'Sí. Implementamos las directrices de accesibilidad web (WCAG) para garantizar que tu sitio sea usable por el mayor número de personas posible, incluyendo aquellas con discapacidades visuales, auditivas o motoras. ',
+  },
+  {
+    titulo: '¿Qué significa "diseño responsive" y por qué lo necesito?',
+    contenido:
+      'El diseño responsive significa que tu web se adapta y se ve perfectamente en cualquier tamaño de pantalla: ordenadores, tablets o smartphones. Es absolutamente necesario hoy en día, ya que la mayoría de los usuarios navegan desde móviles. ',
+  },
+  {
+    titulo: '¿Podéis integrar un sistema de reservas en mi web?',
+    contenido:
+      'Sí, podemos integrar sistemas de reservas y calendarios adaptados a tus necesidades. Ya sea para citas, alquileres, eventos o clases, podemos configurar la funcionalidad que mejor se adapte a tu negocio para que tus clientes puedan reservar directamente desde tu web.',
+  },
+  {
+    titulo: '¿Una web multilingüe mejora mi SEO?',
+    contenido:
+      'Una web multilingüe  puede mejorar significativamente tu SEO internacional. Te permite llegar a audiencias en diferentes idiomas y países, y Google puede indexar y mostrar la versión correcta de tu sitio según la ubicación e idioma del usuario, aumentando tu visibilidad global.',
+  },
+  {
+    titulo: '¿Qué es el SEO técnico y cómo me ayuda a posicionar mi web?',
+    contenido:
+      'El SEO técnico se refiere a las optimizaciones en la infraestructura y el código de tu web que ayudan a los motores de búsqueda a rastrear, indexar y comprender tu sitio de manera más eficiente. Incluye mejoras en la velocidad, la estructura de URLs, los datos estructurados, la compatibilidad móvil y la seguridad. Es fundamental para un buen posicionamiento web y para que los crawlers de IA interpreten correctamente tu contenido.',
+  },
+];
