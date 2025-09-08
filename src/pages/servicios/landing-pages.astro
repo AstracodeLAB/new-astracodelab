@@ -7,7 +7,9 @@ import TitleSecondary from '../../layouts/components/Titles/TitleSecondary.astro
 import SimpleNumber from '../../layouts/components/Timeline/SimpleNumber.astro';
 import Subtitle from '../../layouts/components/Titles/Subtitle.astro';
 import ConectorContent from '../../layouts/components/ConectorContent.astro';
-import BannerCta from '../../layouts/components/Banners/BannerContacto.astro';
+import BannerCta from '../../layouts/components/Banners/BannerCta.astro';
+import FaqsSection from '../../layouts/components/FaqsSection.astro';
+import {faqsLanding} from '../../layouts/components/accordeon/faqs.js';
 
 const benefits = [
   {
@@ -124,9 +126,13 @@ const benefits = [
       />
     </div>
   </section>
-  <BannerContacto
-    titilo='¿Listo para disparar conversiones con una landing page profesional?'
-    desription='Si buscas una landing page de alto impacto capaz de captar más leads, aumentar tus ventas o lanzar campañas efectivas, estamos listos para ayudarte.'
+  <BannerCta
+    titulo='¿Listo para disparar tus conversiones con una landing page profesional?'
+    descripcion='Si buscas una landing page de alto impacto capaz de captar más leads, aumentar tus ventas o lanzar campañas efectivas, estamos listos para ayudarte.'
     texto='¿Quieres una landing page que convierta? Agenda tu reunión gratuita y exploremos tu proyecto.'
+    className='linkSecondaryGreen'
   />
+  <section class="preguntas">
+    <FaqsSection titulo="Preguntas frecuentes sobre una landing page profesional" faqs={faqsLanding}></FaqsSection>
+  </section>
 </Layout>
