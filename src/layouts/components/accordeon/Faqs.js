@@ -152,3 +152,32 @@ export const faqsRedi = [
       'Lo ideal es que nos facilites tus propios textos e imágenes para reflejar al máximo la esencia y la voz de tu marca. No obstante, si lo prefieres, nuestro equipo de copywriting puede encargarse de redactar los textos optimizados y/arte puede ayudarte con la selección de imágenes.',
   },
 ];
+
+export const faqsReservas = [
+  {
+    titulo: '¿Qué tipos de negocios se benefician más de un sistema de reservas online?',
+    contenido:
+      'Un sistema de reservas online es ideal para cualquier negocio que gestione citas, clases, eventos o servicios con disponibilidad limitada. Esto incluye gimnasios, centros de belleza, clínicas de salud, consultorías, instructores, peluquerías, servicios de alquiler, abogados, etc.',
+  },
+  {
+    titulo: '¿Es un sistema de reservas seguro para los pagos online?',
+    contenido:
+      'Sí. Implementamos pasarelas de pago seguras. Esto garantiza que los datos financieros de tus clientes estén siempre protegidos durante el proceso de reserva y pago.',
+  },
+  {
+    titulo: '¿Puedo gestionar las disponibilidades y horarios de mi personal?',
+    contenido:
+      'Sí. La mayoría de los sistemas de reservas profesionales permiten configurar horarios individuales para cada miembro de tu equipo, así como gestionar sus servicios, días libres y capacidades. Esto te da un control total sobre tu agenda y recursos.',
+  },
+  {
+    titulo: '¿Qué ocurre si un cliente cancela o necesita reprogramar una cita?',
+    contenido:
+      'Los sistemas de reservas online incluyen funcionalidades para que los clientes puedan cancelar o reprogramar sus citas de forma autónoma (dentro de las políticas que establezcas), lo que reduce el trabajo administrativo para tu equipo y mejora la satisfacción del cliente.',
+  },
+  {
+    titulo: '¿Puedo ofrecer diferentes tipos de servicios o clases con precios variados?',
+    contenido:
+      'Sí, los sistemas de reservas te permiten configurar un catálogo ilimitado de servicios, clases o eventos, cada uno con sus propias duraciones, precios, disponibilidades y descripciones, ofreciendo total flexibilidad a tu negocio.',
+  },
+
+]

@@ -8,11 +8,11 @@
   padding: 30px 20px 0 20px;
 
   @media (min-width: 768px) {
-    padding: 5rem 7.5rem;
+    padding: 5rem 0rem;
   }
 
   @media (min-width: 1024px) {
-    padding: 0;
+    padding: 0px;
     max-width: 904px;
   }
   @media (min-width: 1440px) {
@@ -71,9 +71,11 @@
     }
 
     @media (min-width: 1024px) {
+
       gap: 2.5rem;
       align-items: stretch;
       justify-content: center;
+      grid-template-columns: repeat(3, 1fr);
       &:has(.benefits-section__card:nth-child(even):last-child) {          
             grid-column: 1 / -1;
             justify-self: center;
