@@ -1,0 +1,13 @@
+---
+interface Props {
+  paragraphs: string[];
+}
+
+const { paragraphs } = Astro.props;
+---
+
+<div class="conector__content">
+  {paragraphs.map((text) => (
+    <p class="conector__text">{text}</p>
+  ))}
+</div>

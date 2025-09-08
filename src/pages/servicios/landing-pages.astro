@@ -1,0 +1,144 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import HeroSecondary from '../../layouts/components/HeroSecondary.astro';
+import heroImg from '../../images/heroIlustration.svg';
+import BenefitsSection from '../../layouts/components/BenefitsSection.astro';
+import TitleSecondary from '../../layouts/components/Titles/TitleSecondary.astro';
+import SimpleNumber from '../../layouts/components/Timeline/SimpleNumber.astro';
+import Subtitle from '../../layouts/components/Titles/Subtitle.astro';
+import ConectorContent from '../../layouts/components/ConectorContent.astro';
+import BannerCta from '../../layouts/components/Banners/BannerCta.astro';
+import FaqsSection from '../../layouts/components/FaqsSection.astro';
+import { faqsLanding } from '../../layouts/components/accordeon/faqs.js';
+import Contact from '../../layouts/components/Contact.astro';
+
+const benefits = [
+  {
+    titulo: 'Convierte más con menos distracciones',
+    descripcion:
+      'A diferencia de un sitio web corporativo, una landing page está diseñada para eliminar cualquier elemento que no contribuya a la conversión. Esto resulta en un camino claro para el usuario, aumentando drásticamente la probabilidad de que complete el objetivo (rellenar un formulario, realizar una compra, descargar un recurso).',
+  },
+  {
+    titulo: 'Claridad y enfoque del mensaje',
+    descripcion:
+      'Cada elemento de una landing page está pensado para comunicar una propuesta única y clara. Esto es ideal para campañas específicas, promociones o lanzamientos de productos, donde el objetivo es presentar información directa y persuasiva.',
+  },
+  {
+    titulo: 'Resultados medibles desde el primer clic',
+    descripcion:
+      'Las landing pages son perfectas para el seguimiento de métricas y la optimización de campañas. Podrás saber exactamente cuántos visitantes se convierten y ajustar tu estrategia para mejorar el rendimiento de tus anuncios y acciones de marketing.',
+  },
+  {
+    titulo: 'Generación de Leads Cualificados',
+    descripcion:
+      'Al centrarse en una oferta específica y una llamada a la acción clara, atraen a usuarios que ya tienen un interés definido, lo que se traduce en leads de mayor calidad y con mayor probabilidad de convertirse en clientes.',
+  },
+  {
+    titulo: 'Agilidad para adaptarte al mercado',
+    descripcion:
+      'Las landing pages se pueden diseñar y lanzar con mayor agilidad que una web completa, lo que te permite reaccionar rápidamente a las oportunidades del mercado o probar diferentes ofertas con mínimo esfuerzo.',
+  },
+];
+---
+
+<Layout title='Landing Page Profesional a Medida | AstracodeLAB'>
+  <HeroSecondary
+    title='Landing pages: '
+    subtitle='Convierte visitantes en clientes potenciales'
+    text='En el  mundo del marketing digital, una landing page es una herramienta estratégica, una carta de presentación más enfocada, diseñada con un solo y potente objetivo: convertir visitas en oportunidades. En AstracodeLAB, nos especializamos en diseñar landing pages estratégicas que capturan la atención, conectan con tu audiencia y comunican tu propuesta de valor, sin rodeos guiando al usuario hacia una acción específica y medible.'
+    image={heroImg}
+  />
+  <article class='landing'>
+    <TitleSecondary
+      text='¿Por qué tu negocio necesita una landing page profesional y estratégica?'
+      description='Una landing page o página de aterrizaje es una página que busca transmitir una mensaje claro e inmediato. Se utiliza para publicitar un producto, curso, servicio, etc y su principal objetivo es conseguir que los clientes tomen acción. A diferencia de una página web tradicional, una landing page está enfocada en estrategias de conversión dentro de campañas de marketing específicas. Cada elemento, desde el texto hasta el diseño, está pensado para guiar al usuario hacia ese único objetivo.'
+    />
+  </article>
+  <div class='beneficios'>
+    <BenefitsSection titulo='Beneficios clave de un e-commerce profesional:' benefits={benefits} />
+  </div>
+  <section class='incluye'>
+    <div class='incluye__title'>
+      <div>
+        <TitleSecondary
+          text='¿Qué incluye nuestro servicio de creación de landing pages?'
+          description='En AstracodeLAB, desarrollamos landing pages a medida visualmente atractivas y optimizadas para la conversión.'
+        />
+      </div>
+      <img src='/src/images/test.jpg' />
+    </div>
+
+    <article class='incluye__numbers'>
+      <Subtitle text='Elementos clave de nuestras landing pages de alto rendimiento' />
+      <div class='sectionPorqNecesitoWeb__numbers'>
+        <SimpleNumber
+          number={1}
+          title='Diseño persuasivo y centrado en la conversión: '
+          text='Creamos diseños visualmente atractivos y limpios, que dirigen la mirada del usuario hacia la llamada a la acción. Cada elemento, desde la tipografía hasta los colores, está pensado para generar confianza y urgencia.'
+        />
+        <SimpleNumber
+          number={2}
+          title='Mensajes claros y copywriting estratégico: '
+          text='Desarrollamos textos concisos y potentes que destacan los beneficios clave de tu oferta, resuelven objeciones y motivan al usuario a actuar. El copywriting persuasivo es fundamental para una alta conversión.'
+        />
+        <SimpleNumber
+          number={3}
+          title='Llamadas a la acción (CTAs) irresistibles: '
+          text='Diseñamos CTAs prominentes y claros que invitan a la acción de forma directa (Ej: "Solicita Presupuesto Gratuito", "Descarga tu Guía", "Reserva Ahora").'
+        />
+        <SimpleNumber
+          number={4}
+          title='Formularios optimizados: '
+          text='Creamos formularios sencillos y eficientes, solicitando solo la información esencial para minimizar la fricción y aumentar las probabilidades de completado.'
+        />
+        <SimpleNumber
+          number={5}
+          title='Diseño responsive para todos los dispositivos: '
+          text='Tu landing page se verá y funcionará perfectamente en ordenadores, tablets y, crucialmente, en móviles, asegurando que no pierdas oportunidades de conversión desde ningún canal.'
+        />
+        <SimpleNumber
+          number={6}
+          title='Optimización de velocidad de carga: '
+          text='Sabemos que cada segundo cuenta. Optimizamos la landing page para una carga ultrarrápida, reduciendo la tasa de rebote y mejorando la experiencia del usuario.'
+        />
+        <SimpleNumber
+          number={7}
+          title='Integración de herramientas de marketing: '
+          text='Conectamos tu landing page con tus plataformas de CRM, email marketing o herramientas de análisis para un seguimiento y gestión eficientes de tus leads.'
+        />
+        <SimpleNumber
+          number={8}
+          title='Pruebas A/B y optimización (opcional): '
+          text='Ofrecemos servicios de pruebas A/B para experimentar con diferentes versiones de tu landing page y determinar cuál ofrece mejores resultados, optimizando continuamente el rendimiento.'
+        />
+      </div>
+    </article>
+  </section>
+  <section class='cuando'>
+    <div class='cuando__title'>
+      <TitleSecondary
+        text='¿Cuándo necesitas una landing page? Ejemplos de uso'
+        description='Las landing pages son herramientas versátiles para diversas estrategias de marketing:'
+      />
+    </div>
+    <div class='cuando__table'>
+      <ConectorContent
+        paragraphs={[
+          'Campañas de Publicidad Online (Google Ads, Redes Sociales): Dirige el tráfico de tus anuncios a una página específica con un mensaje coherente, maximizando la efectividad de tu inversión publicitaria.',
+          'Lanzamiento de Nuevos Productos o Servicios: Genera expectación y capta el interés de clientes potenciales antes, durante y después del lanzamiento.',
+          'Promociones y Ofertas Especiales: Crea una página dedicada a una oferta limitada para generar urgencia y motivar la acción.',
+        ]}
+      />
+    </div>
+  </section>
+  <BannerCta
+    titulo='¿Listo para disparar tus conversiones con una landing page profesional?'
+    descripcion='Si buscas una landing page de alto impacto capaz de captar más leads, aumentar tus ventas o lanzar campañas efectivas, estamos listos para ayudarte.'
+    texto='¿Quieres una landing page que convierta? Agenda tu reunión gratuita y exploremos tu proyecto.'
+    className='linkSecondaryGreen'
+  />
+  <section class='preguntas'>
+    <FaqsSection titulo='Preguntas frecuentes sobre una landing page profesional' faqs={faqsLanding} />
+  </section>
+  <Contact />
+</Layout>
