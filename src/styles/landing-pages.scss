@@ -7,12 +7,27 @@
   @media (min-width: 768px) {
     padding: 60px 120px 0 120px;
   }
+
+  @media (min-width: 1024px) {
+    padding: 120px 0 0 0;
+    max-width: 904px;
+    margin: 0 auto;
+  }
+}
+
+.beneficios {
+  @media (min-width: 1024px) {
+    padding-top: 20px;
+    max-width: 904px;
+    margin: 0 auto;
+  }
 }
 
 .incluye {
   &__title {
     @media (min-width: 1024px) {
       display: flex;
+      gap: 80px;
     }
 
     & img {
@@ -23,6 +38,10 @@
         margin-top: 20px;
         margin-bottom: 20px;
       }
+
+      @media (min-width: 1024px) {
+        max-width: 400px;
+      }
     }
   }
 
@@ -30,6 +49,11 @@
     padding-top: 20px;
     padding-bottom: 10px;
     text-align: center;
+
+    @media (min-width: 1024px) {
+      text-align: left;
+      padding-top: 50px;
+    }
   }
 }
 
@@ -40,6 +64,12 @@
     @media (min-width: 768px) {
       padding: 60px 120px 0 120px;
     }
+
+    @media (min-width: 768px) {
+      padding: 120px 0 0 0;
+      max-width: 904px;
+      margin: 0 auto;
+    }
   }
 
   &__table {
@@ -49,5 +79,13 @@
       margin-top: 20px;
       padding-bottom: 0;
     }
+  }
+}
+
+.preguntas {
+  @media (min-width: 1024px) {
+    padding: 0;
+    max-width: 904px;
+    margin: 0 auto;
   }
 }
