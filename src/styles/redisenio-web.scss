@@ -17,6 +17,10 @@
     max-width: 904px;
     margin: 0 auto;
   }
+
+  @media (min-width: 1440px) {
+    max-width: 1024px;
+  }
 }
 
 .preguntas {
