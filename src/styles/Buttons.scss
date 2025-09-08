@@ -10,6 +10,7 @@
 //LINK className="linkPrimary"
 //LINK ARROW className="linkSecondary"
 //LINK services className="linkServicesHero"
+//LINK ARROW verde className="linkSecondaryGreen"
 
 //BOTON FONDO CLARO
 .btnPrimaryLight {
@@ -340,5 +341,42 @@
     line-height: map.get($Button-desktop-xl, 'line-height');
     font-weight: map.get($Button-desktop-xl, 'font-weight');
     letter-spacing: map.get($Button-desktop-xl, 'letter-spacing');
+  }
+}
+
+.linkSecondaryGreen{
+  color: $green;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  font-family: $font-primary;
+  font-size: map.get($Button-mobile, 'font-size');
+  line-height: map.get($Button-mobile, 'line-height');
+  font-weight: map.get($Button-mobile, 'font-weight');
+  justify-content: flex-end;
+  &:hover {
+    color: $cardWhite;
+  }
+
+  @media (min-width: 768px) {
+    font-size: map.get($Button-tablet, 'font-size');
+    line-height: map.get($Button-tablet, 'line-height');
+    font-weight: map.get($Button-tablet, 'font-weight');
+    letter-spacing: map.get($Button-tablet, 'letter-spacing');
+    
+  }
+  @media (min-width: 1024px) {
+    font-size: map.get($Button-desktop, 'font-size');
+    line-height: map.get($Button-desktop, 'line-height');
+    font-weight: map.get($Button-desktop, 'font-weight');
+    letter-spacing: map.get($Button-desktop, 'letter-spacing');
+    
+  }
+  @media (min-width: 1440px) {
+    font-size: map.get($Button-desktop-xl, 'font-size');
+    line-height: map.get($Button-desktop-xl, 'line-height');
+    font-weight: map.get($Button-desktop-xl, 'font-weight');
+    letter-spacing: map.get($Button-desktop-xl, 'letter-spacing');
+    
   }
 }
