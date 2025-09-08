@@ -3,12 +3,12 @@ import TitleSecondary from './Titles/TitleSecondary.astro';
 import Accordion from './Accordion.astro';
 
 
-const { titulo, className = '', faqs = [] } = Astro.props;
+const { titulo, description, className = '', faqs = [] } = Astro.props;
 ---
 
 <section class={`faqs-section ${className}`}>
   <div class='faqs-section__header'>
-    <TitleSecondary text={titulo} />
+    <TitleSecondary text={titulo} description={description}/>
   </div>
   <div class='faqs-section__container'>
     <article>

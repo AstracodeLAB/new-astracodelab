@@ -101,3 +101,26 @@ export const faqsLanding = [
       'Necesitaremos conocer el objetivo principal de la página (por ejemplo, si buscas generar leads, vender un producto o conseguir registros), a qué tipo de público te diriges (edad, intereses, ubicación, nivel de conocimiento del producto o servicio), detalles clave sobre lo que estás promocionando (incluyendo beneficios, ventajas competitivas, descuentos o pruebas gratuitas si aplica), cuál es tu identidad de marca (colores, logotipo, tipografías, tono de comunicación), qué contenido ya tienes disponible para usar (como textos, imágenes, videos, testimonios).',
   },
 ];
+
+export const faqsRedi = [
+  {
+    titulo: '¿Es lo mismo rediseñar una web que crear una desde cero?',
+    contenido:
+      'No exactamente. Un rediseño parte de tu web actual: se aprovecha lo que funciona, se corrige lo que no y se renueva el conjunto. En cambio, una web nueva se crea desde cero, ideal si tu negocio aún no tiene presencia online o si necesitas empezar con un enfoque completamente distinto.',
+  },
+  {
+    titulo: '¿Mi web rediseñada será compatible con móviles y tablets?',
+    contenido:
+      '¡Absolutamente! Todos nuestros proyectos de rediseño web incluyen un diseño responsive, lo que garantiza que tu sitio se verá y funcionará perfectamente en cualquier dispositivo (ordenadores, tablets y smartphones), ofreciendo una experiencia de usuario óptima.',
+  },
+  {
+    titulo: '¿Ofrecéis mantenimiento web después del rediseño?',
+    contenido:
+      'Sí. Una vez finalizado el rediseño web, el mantenimiento web es crucial para asegurar que tu sitio siga seguro, actualizado y funcionando a pleno rendimiento. En AstracodeLAB, disponemos de planes de mantenimiento web continuos adaptados a tus necesidades. Puedes consultar nuestros planes aquí [enlazar a la página de mantenimiento].',
+  },
+  {
+    titulo: '¿Necesito proporcionar el contenido (textos e imágenes) para el rediseño?',
+    contenido:
+      'Lo ideal es que nos facilites tus propios textos e imágenes para reflejar al máximo la esencia y la voz de tu marca. No obstante, si lo prefieres, nuestro equipo de copywriting puede encargarse de redactar los textos optimizados y/arte puede ayudarte con la selección de imágenes.',
+  },
+];
