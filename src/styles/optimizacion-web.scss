@@ -2,7 +2,25 @@
 @use './variables.scss' as *;
 
 .incluye {
+  &__title {
+    display: block;
+  }
+
   padding: 30px 20px 0 20px;
+
+  @media (min-width: 768px) {
+    padding: 60px 120px 0 120px;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 120px 0 0 0;
+    max-width: 904px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 1440px) {
+    max-width: 1024px;
+  }
 }
 
 .banner {
