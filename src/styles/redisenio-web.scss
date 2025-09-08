@@ -11,6 +11,12 @@
   @media (min-width: 768px) {
     padding: 60px 120px 0 120px;
   }
+
+  @media (min-width: 1024px) {
+    padding: 120px 0 0 0;
+    max-width: 904px;
+    margin: 0 auto;
+  }
 }
 
 .preguntas {
