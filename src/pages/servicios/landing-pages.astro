@@ -9,7 +9,8 @@ import Subtitle from '../../layouts/components/Titles/Subtitle.astro';
 import ConectorContent from '../../layouts/components/ConectorContent.astro';
 import BannerCta from '../../layouts/components/Banners/BannerCta.astro';
 import FaqsSection from '../../layouts/components/FaqsSection.astro';
-import {faqsLanding} from '../../layouts/components/accordeon/faqs.js';
+import { faqsLanding } from '../../layouts/components/accordeon/faqs.js';
+import Contact from '../../layouts/components/Contact.astro';
 
 const benefits = [
   {
@@ -132,7 +133,8 @@ const benefits = [
     texto='¿Quieres una landing page que convierta? Agenda tu reunión gratuita y exploremos tu proyecto.'
     className='linkSecondaryGreen'
   />
-  <section class="preguntas">
-    <FaqsSection titulo="Preguntas frecuentes sobre una landing page profesional" faqs={faqsLanding}></FaqsSection>
+  <section class='preguntas'>
+    <FaqsSection titulo='Preguntas frecuentes sobre una landing page profesional' faqs={faqsLanding} />
   </section>
+  <Contact />
 </Layout>
