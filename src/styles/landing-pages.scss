@@ -3,16 +3,27 @@
 
 .landing {
   padding: 30px 20px 0 20px;
+
+  @media (min-width: 768px) {
+    padding: 60px 120px 0 120px;
+  }
 }
 
 .incluye {
-  @media (min-width: 768px) {
-    display: flex;
-  }
+  &__title {
+    @media (min-width: 1024px) {
+      display: flex;
+    }
 
-  & img {
-    border-radius: 15px;
-    box-shadow: $shadow;
+    & img {
+      border-radius: 15px;
+      box-shadow: $shadow;
+
+      @media (min-width: 768px) {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+    }
   }
 
   &__numbers {
@@ -25,9 +36,18 @@
 .cuando {
   &__title {
     padding: 0 20px;
+
+    @media (min-width: 768px) {
+      padding: 60px 120px 0 120px;
+    }
   }
 
   &__table {
     padding-bottom: 60px;
+
+    @media (min-width: 768px) {
+      margin-top: 20px;
+      padding-bottom: 0;
+    }
   }
 }
