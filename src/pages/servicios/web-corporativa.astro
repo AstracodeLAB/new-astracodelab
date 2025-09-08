@@ -9,6 +9,7 @@ import Conector from '../../layouts/components/Conector.astro';
 import QueIncluye from '../../layouts/components/QueIncluye.astro';
 import FaqsSection from '../../layouts/components/FaqsSection.astro';
 import Contact from '../../layouts/components/Contact.astro';
+import { faqsWebCorporate } from '../../layouts/components/accordeon/faqs.js';
 ---
 
 <Layout title='Servicios de diseño y desarrollo web'>
@@ -59,36 +60,7 @@ import Contact from '../../layouts/components/Contact.astro';
     ]}
     image='https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'
   />
-  <FaqsSection
-    title='Preguntas frecuentes sobre la creación de webs corporativas'
-    faqs={[
-      {
-        question: '¿La web corporativa estará adaptada para móviles y tablets?',
-        answer:
-          '¡Absolutamente! Todas nuestras webs corporativas se desarrollan con un diseño responsive, lo que garantiza que tu sitio se verá y funcionará perfectamente en cualquier dispositivo (ordenadores, tablets y smartphones), ofreciendo una experiencia de usuario óptima y mejorando tu posicionamiento SEO.',
-      },
-      {
-        question: '¿Por qué es tan importante el mantenimiento web?',
-        answer:
-          'El mantenimiento web es, a menudo, la pieza olvidada en el éxito digital de una empresa, pero es absolutamente crucial. Piensa en tu web corporativa como en tu coche: si no le haces revisiones periódicas, cambias el aceite o te aseguras de que todo funciona bien, tarde o temprano se estropeará o no rendirá como debería. Lo mismo ocurre con tu página web. En Astracodelab, disponemos de planes de mantenimiento web corporativo continuos para asegurar que tu sitio esté siempre seguro, actualizado y funcionando a pleno rendimiento. Puedes consultar nuestros planes de mantenimiento aquí.',
-      },
-      {
-        question: '¿El servicio de web corporativa incluye dominio y hosting?',
-        answer:
-          'Sí, nuestros servicios de creación de web corporativa profesional incluyen la gestión inicial y configuración de tu dominio y hosting. Esto significa que:-Gestionamos la activación o migración de tu dominio: Si ya tienes un dominio, nos ocupamos de migrarlo y si necesitas uno nuevo, te asesoramos en la elección y lo registramos a tu nombre.Tu web corporativa se alojará en servidores optimizados para garantizar una velocidad de carga excepcional y la máxima fiabilidad.De esta forma, no tienes que preocuparte por buscar proveedores externos ni por la configuración técnica. Nos aseguramos de que todos los elementos fundamentales de tu presencia digital estén perfectamente integrados y optimizados desde el inicio.',
-      },
-      {
-        question: '¿Qué pasa si necesito soporte después del lanzamiento?',
-        answer:
-          'Ofrecemos un mes de soporte gratuito tras el lanzamiento y planes de mantenimiento continuo para asegurar que tu web esté siempre actualizada y funcionando correctamente.',
-      },
-      {
-        question: '¿Pueden integrar funcionalidades específicas en mi web corporativa?',
-        answer:
-          'Sí, podemos integrar diversas funcionalidades como formularios personalizados, chat en vivo, integración con redes sociales y más, según tus necesidades.',
-      },
-    ]}
-  />
+  <FaqsSection title='Preguntas frecuentes sobre la creación de webs corporativas' faqs={faqsWebCorporate} />
 
   <Contact />
 </Layout>
