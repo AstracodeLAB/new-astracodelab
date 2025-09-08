@@ -273,3 +273,21 @@ export const faqsMantenimiento = [
 
 
 ]
+
+export const faqsCartasDigitales = [
+  {
+    titulo: '¿Qué es un código QR y cómo funciona para mi carta digital?',
+    contenido:
+      'Un código QR (Quick Response) es un código de barras bidimensional que los clientes escanean con la cámara de su smartphone. Al escanearlo, el teléfono los dirige automáticamente a tu carta digital online. ',
+  },
+  {
+    titulo: '¿La carta digital estará disponible en varios idiomas?',
+    contenido:
+      'Sí, la opción de una carta digital multilingüe es una de nuestras funcionalidades clave. Podrás ofrecer tu menú en los idiomas que necesites, permitiendo a tus clientes extranjeros sentirse más cómodos y facilitando su elección.',
+  },
+  {
+    titulo: '¿Puedo incluir fotos de mis platos en la carta digital?',
+    contenido:
+      'Por supuesto. Incluir fotos de alta calidad de tus platos aumentan el atractivo visual de tu carta digital y pueden influir positivamente en la decisión de tus clientes.',
+  }
+];
