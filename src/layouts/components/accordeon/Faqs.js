@@ -198,3 +198,23 @@ export const faqsMultilang = [
       'Una web en varios idiomas es el primer paso, pero no lo es todo. Una web multilingüe correctamente implementada es la base para mejorar tu posicionamiento global. Sin embargo, también requiere una estrategia SEO internacional que incluya contenido optimizado por idioma, enlaces relevantes en cada mercado y una arquitectura clara para cada versión lingüística.',
   }
 ];
+
+export const faqsMantenimiento = [
+  {
+    titulo: '¿El mantenimiento web mejora mi SEO?',
+    contenido:
+      'Sí. Una web rápida, segura y sin errores técnicos tiene más posibilidades de aparecer bien posicionada en buscadores. Las acciones de mantenimiento web ayudan a que Google vea tu sitio como confiable y bien optimizado.',
+  },
+  {
+    titulo: '¿Necesito mantenimiento web si mi web es nueva?',
+    contenido:
+      'Sí, incluso más recomendable. Empezar con una base sólida evita que se acumulen errores o fallos con el tiempo. Además, mantiene el sitio en condiciones óptimas desde el inicio y alarga su vida útil.',
+  },
+  {
+    titulo: '¿Qué incluye el soporte técnico?',
+    contenido:
+      'El soporte técnico cubre la resolución de incidencias, la asistencia con el funcionamiento de tu web, respuesta a preguntas y pequeñas modificaciones o ajustes de contenido. Nuestro objetivo es que tengas un punto de contacto experto para cualquier necesidad que surja con tu plataforma digital.',
+  },
+
+
+]
