@@ -275,6 +275,8 @@ export const faqsHosting = [
     contenido:
       'Tanto el dominio como el hosting son servicios que se contratan por períodos definidos. El dominio, por lo general, se renueva cada año, mientras que el hosting puede contratarse de forma anual o mensual, según el proveedor. Ambos requieren renovación periódica para que tu sitio siga activo y accesible. En AstracodeLAB te ayudamos a gestionar todo este proceso para que no tengas que preocuparte por fechas, pagos o interrupciones.',
   },
+];
+
 export const faqsMantenimiento = [
   {
     titulo: '¿El mantenimiento web mejora mi SEO?',
@@ -291,9 +293,7 @@ export const faqsMantenimiento = [
     contenido:
       'El soporte técnico cubre la resolución de incidencias, la asistencia con el funcionamiento de tu web, respuesta a preguntas y pequeñas modificaciones o ajustes de contenido. Nuestro objetivo es que tengas un punto de contacto experto para cualquier necesidad que surja con tu plataforma digital.',
   },
-
-
-]
+];
 
 export const faqsCartasDigitales = [
   {
@@ -310,5 +310,5 @@ export const faqsCartasDigitales = [
     titulo: '¿Puedo incluir fotos de mis platos en la carta digital?',
     contenido:
       'Por supuesto. Incluir fotos de alta calidad de tus platos aumentan el atractivo visual de tu carta digital y pueden influir positivamente en la decisión de tus clientes.',
-  }
+  },
 ];
