@@ -3,6 +3,6 @@ const { titulo, descripcion, className = '' } = Astro.props;
 ---
 
 <div class={`benefit-card ${className}`}>
-  <h3 class="benefit-card__title">{titulo}</h3>
-  <p class="benefit-card__description">{descripcion}</p>
+  <h3 class='benefit-card__title'>{titulo}</h3>
+  <p class='benefit-card__description' set:html={descripcion} />
 </div>

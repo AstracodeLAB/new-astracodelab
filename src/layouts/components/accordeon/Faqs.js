@@ -54,6 +54,34 @@ export const faqsHome = [
   },
 ];
 
+export const faqsWebCorporate = [
+  {
+    titulo: '¿La web corporativa estará adaptada para móviles y tablets?',
+    contenido:
+      '¡Absolutamente! Todas nuestras webs corporativas se desarrollan con un <b>diseño responsive</b>, lo que garantiza que tu sitio se verá y funcionará perfectamente en cualquier dispositivo (ordenadores, tablets y smartphones), ofreciendo una experiencia de usuario óptima y mejorando tu posicionamiento SEO.',
+  },
+  {
+    titulo: '¿Por qué es tan importante el mantenimiento web?',
+    contenido:
+      'El mantenimiento web es, a menudo, la pieza olvidada en el éxito digital de una empresa, pero es absolutamente crucial. Piensa en tu web corporativa como en tu coche: si no le haces revisiones periódicas, cambias el aceite o te aseguras de que todo funciona bien, tarde o temprano se estropeará o no rendirá como debería. Lo mismo ocurre con tu página web.<br> <br>En Astracodelab, disponemos de planes de mantenimiento web corporativo continuos para asegurar que tu sitio esté siempre seguro, actualizado y funcionando a pleno rendimiento. Puedes consultar nuestros planes de mantenimiento aquí.',
+  },
+  {
+    titulo: '¿El servicio de web corporativa incluye dominio y hosting?',
+    contenido:
+      'Sí, nuestros servicios de creación de web corporativa profesional incluyen la gestión inicial y configuración de tu <b>dominio y hosting</b>. Esto significa que:<br>- Gestionamos la activación o migración de tu dominio: Si ya tienes un dominio, nos ocupamos de migrarlo y si necesitas uno nuevo, te asesoramos en la elección y lo registramos a tu nombre.<br>Tu web corporativa se alojará en servidores optimizados para garantizar una velocidad de carga excepcional y la máxima fiabilidad. De esta forma, no tienes que preocuparte por buscar proveedores externos ni por la configuración técnica. Nos aseguramos de que todos los elementos fundamentales de tu presencia digital estén perfectamente integrados y optimizados desde el inicio.',
+  },
+  {
+    titulo: '¿Qué pasa si necesito soporte después del lanzamiento?',
+    contenido:
+      'Ofrecemos un mes de soporte gratuito tras el lanzamiento y planes de mantenimiento continuo para asegurar que tu web esté siempre actualizada y funcionando correctamente.',
+  },
+  {
+    titulo: '¿Pueden integrar funcionalidades específicas en mi web corporativa?',
+    contenido:
+      'Sí, podemos integrar diversas funcionalidades como formularios personalizados, chat, integración con redes sociales y más, según tus necesidades.',
+  },
+]
+
 export const faqsEcommerce = [
   {
     titulo: '¿La tienda online estará adaptada para móviles y tablets?',
