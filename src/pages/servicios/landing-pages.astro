@@ -6,6 +6,7 @@ import BenefitsSection from '../../layouts/components/BenefitsSection.astro';
 import TitleSecondary from '../../layouts/components/Titles/TitleSecondary.astro';
 import SimpleNumber from '../../layouts/components/Timeline/SimpleNumber.astro';
 import Subtitle from '../../layouts/components/Titles/Subtitle.astro';
+import ConectorContent from '../../layouts/components/ConectorContent.astro';
 
 const benefits = [
   {
@@ -53,7 +54,7 @@ const benefits = [
   <section class='incluye'>
     <div class='incluye__title'>
       <TitleSecondary
-        text='¿Qué incluye nuestro servicio de creación de langind pages?'
+        text='¿Qué incluye nuestro servicio de creación de landing pages?'
         description='En AstracodeLAB, desarrollamos landing pages a medida visualmente atractivas y optimizadas para la conversión.'
       />
     </div>
@@ -104,5 +105,18 @@ const benefits = [
         />
       </div>
     </article>
+  </section>
+  <section>
+    <TitleSecondary
+      text='¿Cuándo necesitas una landing page? Ejemplos de uso'
+      description='Las landing pages son herramientas versátiles para diversas estrategias de marketing:'
+    />
+    <ConectorContent
+      paragraphs={[
+        'Campañas de Publicidad Online (Google Ads, Redes Sociales): Dirige el tráfico de tus anuncios a una página específica con un mensaje coherente, maximizando la efectividad de tu inversión publicitaria.',
+        'Lanzamiento de Nuevos Productos o Servicios: Genera expectación y capta el interés de clientes potenciales antes, durante y después del lanzamiento.',
+        'Promociones y Ofertas Especiales: Crea una página dedicada a una oferta limitada para generar urgencia y motivar la acción.',
+      ]}
+    />
   </section>
 </Layout>

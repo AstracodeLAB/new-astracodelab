@@ -1,12 +1,20 @@
 ---
 import Subtitle from './Titles/Subtitle.astro';
+import ConectorContent from './ConectorContent.astro';
 ---
 
 <article class='conector'>
   <div class='conector__header'>
     <Subtitle text='Las redes sociales: Conector social' />
   </div>
-  <div class='conector__content'>
+  <ConectorContent
+    paragraphs={[
+      'Interacción Inmediata: Plataformas como Instagram, LinkedIn o Facebook son perfectas para interactuar en tiempo real, resolver dudas rápidamente, generar comunidad y compartir contenido dinámico que humaniza tu marca.',
+      'Alcance y Viralidad: Ofrecen un potencial enorme para campañas de publicidad y la posibilidad de que tu contenido se viralice, llegando a audiencias masivas.',
+      'Tráfico Cualificado: Cada publicación puede incluir un enlace que redirija a tu página web corporativa, donde podrás expandir la información y mostrar tus servicios en detalle',
+    ]}
+  />
+  <!-- <div class='conector__content'>
     <p class='conector__text'>
       Interacción Inmediata: Plataformas como Instagram, LinkedIn o Facebook son perfectas para interactuar en tiempo
       real, resolver dudas rápidamente, generar comunidad y compartir contenido dinámico que humaniza tu marca.
@@ -19,7 +27,7 @@ import Subtitle from './Titles/Subtitle.astro';
       Tráfico Cualificado: Cada publicación puede incluir un enlace que redirija a tu página web corporativa, donde
       podrás expandir la información y mostrar tus servicios en detalle
     </p>
-  </div>
+  </div> -->
   <div class='conector__footer'>
     <p class='conector__summary'>
       En resumen, las redes sociales te ayudan a captar la atención y dirigirla. Tu sitio web empresarial es el lugar
