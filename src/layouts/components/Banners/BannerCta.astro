@@ -2,7 +2,7 @@
 import Buttons from '../Buttons/Buttons.astro';
 import Subtitle from '../Titles/Subtitle.astro';
 
-const { titulo, descripcion, texto } = Astro.props;
+const { titulo, descripcion, texto, className } = Astro.props;
 ---
 
 <section class='banner-cta'>
@@ -10,7 +10,7 @@ const { titulo, descripcion, texto } = Astro.props;
     <Subtitle className='banner text' text={titulo} />
     <Subtitle className='banner desc' description={descripcion} />
     <div class='banner-cta__button'>
-      <Buttons className='btnPrimaryLight' text={texto} href='/contacto'>{texto}<Buttons /> </Buttons>
+      <Buttons className={className} text={texto} href='/contacto'>{texto}<Buttons /> </Buttons>
     </div>
   </article>
 </section>

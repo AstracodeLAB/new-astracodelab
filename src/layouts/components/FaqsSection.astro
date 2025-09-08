@@ -1,9 +1,9 @@
 ---
 import TitleSecondary from './Titles/TitleSecondary.astro';
 import Accordion from './Accordion.astro';
-import { faqs } from '../../data/faqs.js';
 
-const { titulo, className = '' } = Astro.props;
+
+const { titulo, className = '', faqs = [] } = Astro.props;
 ---
 
 <section class={`faqs-section ${className}`}>

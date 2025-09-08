@@ -229,3 +229,19 @@
     }
   }
 }
+.faqs-section {
+  .faqs-section__content {
+    p {
+      a {
+        color: $blue-primary; // tu variable de color
+        font-weight: 600;       // opcional para resaltar
+        text-decoration: underline; // o none si prefieres sin subrayado
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $blue-dark; // otro color al pasar el ratón
+        }
+      }
+    }
+  }
+}
