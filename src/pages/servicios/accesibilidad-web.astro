@@ -9,6 +9,7 @@ import BannerCta from '../../layouts/components/Banners/BannerCta.astro';
 import FaqsSection from '../../layouts/components/FaqsSection.astro';
 import { faqsAccesibilidad } from '../../layouts/components/accordeon/faqs.js';
 import Contact from '../../layouts/components/Contact.astro';
+import testImg from '../../images/test.jpg';
 
 const benefits = [
   {
@@ -55,6 +56,7 @@ const benefits = [
   <div class='beneficios'>
     <BenefitsSection titulo='Beneficios clave de un e-commerce profesional:' benefits={benefits} />
   </div>
+
   <QueIncluye
     title='¿Qué incluye nuestro servicio de diseño web accesible?'
     paragraphs={[
@@ -66,6 +68,7 @@ const benefits = [
       'Estructura semántica y clara: Uso adecuado de encabezados y listas para una mejor comprensión por parte de usuarios y herramientas.',
       'Soporte post-lanzamiento: Acompañamiento y asistencia durante el primer mes tras la publicación, con opciones de mantenimiento web continuo para asegurar la accesibilidad a largo plazo.',
     ]}
+    image='/src/images/test.jpg'
   />
   <BannerCta
     titulo='¿Listo para construir una web sin barreras y llegar a todos?'
