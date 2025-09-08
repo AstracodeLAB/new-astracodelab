@@ -254,6 +254,29 @@ export const faqsAccesibilidad = [
   },
 ];
 
+export const faqsHosting = [
+  {
+    titulo: '¿Qué es un dominio web y por qué es importante tener uno propio?',
+    contenido:
+      'Un dominio web es la dirección única de tu página en internet (ej., astracodelab.com). Es importante porque es la identidad digital de tu marca, te da profesionalidad, credibilidad y facilita que tus clientes te encuentren con facilidad.',
+  },
+  {
+    titulo: '¿Qué es el hosting web y qué hace?',
+    contenido:
+      'El hosting web es el servicio que te permite almacenar todos los archivos y datos de tu página web (textos, imágenes, vídeos, código) en un servidor conectado a internet. Es lo que hace posible que tu web esté accesible para los usuarios 24 horas al día, 7 días a la semana.',
+  },
+  {
+    titulo: '¿Qué es un certificado SSL y por qué lo necesito?',
+    contenido:
+      'Un certificado SSL (Secure Sockets Layer) es un protocolo de seguridad que cifra la información que se transmite entre tu web y los navegadores de los usuarios. Es el responsable del "candadito" en la barra de dirección. Lo necesitas para proteger los datos de tus clientes, generar confianza y porque es un factor de SEO que Google exige para todas las webs.',
+  },
+  {
+    titulo: '¿Es el hosting y dominio un pago único o hay que renovarlo?',
+    contenido:
+      'Tanto el dominio como el hosting son servicios que se contratan por períodos definidos. El dominio, por lo general, se renueva cada año, mientras que el hosting puede contratarse de forma anual o mensual, según el proveedor. Ambos requieren renovación periódica para que tu sitio siga activo y accesible. En AstracodeLAB te ayudamos a gestionar todo este proceso para que no tengas que preocuparte por fechas, pagos o interrupciones.',
+  },
+];
+
 export const faqsMantenimiento = [
   {
     titulo: '¿El mantenimiento web mejora mi SEO?',
@@ -270,9 +293,7 @@ export const faqsMantenimiento = [
     contenido:
       'El soporte técnico cubre la resolución de incidencias, la asistencia con el funcionamiento de tu web, respuesta a preguntas y pequeñas modificaciones o ajustes de contenido. Nuestro objetivo es que tengas un punto de contacto experto para cualquier necesidad que surja con tu plataforma digital.',
   },
-
-
-]
+];
 
 export const faqsCartasDigitales = [
   {
@@ -289,5 +310,5 @@ export const faqsCartasDigitales = [
     titulo: '¿Puedo incluir fotos de mis platos en la carta digital?',
     contenido:
       'Por supuesto. Incluir fotos de alta calidad de tus platos aumentan el atractivo visual de tu carta digital y pueden influir positivamente en la decisión de tus clientes.',
-  }
+  },
 ];
