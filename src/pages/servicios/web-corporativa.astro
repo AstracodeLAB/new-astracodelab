@@ -10,6 +10,7 @@ import QueIncluye from '../../layouts/components/QueIncluye.astro';
 import FaqsSection from '../../layouts/components/FaqsSection.astro';
 import Contact from '../../layouts/components/Contact.astro';
 import { faqsWebCorporate } from '../../layouts/components/accordeon/faqs.js';
+import BannerCta from '../../layouts/components/Banners/BannerCta.astro';
 ---
 
 <Layout title='Servicios de diseño y desarrollo web'>
@@ -26,20 +27,20 @@ import { faqsWebCorporate } from '../../layouts/components/accordeon/faqs.js';
       description='En un mercado tan competitivo, la primera impresión de tu web es crucial. Tu web corporativa tiene que ser intuitiva y accesible, pensada específicamente para guiar a tus visitantes hacía la acción que aporte más valor a tu negocio:  ya sea solicitar más información, agendar una llamada o convertir esos servicios que ofreces en oportunidades.'
     />
     <BenefitsSection
-      titulo='La Importancia de una Web Corporativa Estratégica:'
+      titulo='La importancia de una web corporativa estratégica:'
       benefits={[
         {
-          titulo: 'Refuerza la Credibilidad y Confianza:',
+          titulo: 'Refuerza la credibilidad y confianza:',
           descripcion:
             'Una web corporativa profesional transmite seriedad, estabilidad y confianza. Los clientes potenciales buscan información y validación online; un sitio bien estructurado y con un diseño cuidado es sinónimo de profesionalidad.',
         },
         {
-          titulo: 'Genera Oportunidades de Negocio: ',
+          titulo: 'Genera oportunidades de negocio: ',
           descripcion:
             'Va más allá de ser un simple catálogo. Una web corporativa efectiva está diseñada para guiar al visitante hacia la acción, ya sea una solicitud de presupuesto, una llamada, una suscripción a tu newsletter o la descarga de un recurso, convirtiendo visitas en leads cualificados.',
         },
         {
-          titulo: 'Soporte al Cliente y Comunicación Eficaz: ',
+          titulo: 'Soporte al cliente y comunicación eficaz: ',
           descripcion:
             'Una buena web permite integrar funcionalidades de soporte, secciones de preguntas frecuentes o formularios de contacto que mejoran la experiencia del usuario y optimizan la gestión de consultas, liberando un tiempo valioso para que puedas invertir en otras tareas.',
         },
@@ -60,6 +61,13 @@ import { faqsWebCorporate } from '../../layouts/components/accordeon/faqs.js';
     ]}
     image='https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'
   />
+  <BannerCta
+    titulo='¿Listo para impulsar tu marca con una web corporativa?'
+    descripcion='En AstracodeLAB, somos tu agencia de diseño web. Nos especializamos en transformar tus ideas en una realidad digital.'
+    texto='¿Quieres una web corporativa? Agenda tu reunión gratuita'
+    className='linkSecondaryGreen'
+  />
+
   <FaqsSection titulo='Preguntas frecuentes sobre la creación de webs corporativas' faqs={faqsWebCorporate} />
 
   <Contact />

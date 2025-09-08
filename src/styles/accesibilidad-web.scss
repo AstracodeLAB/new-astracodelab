@@ -1,0 +1,30 @@
+@use 'sass:map';
+@use './variables.scss' as *;
+
+.accesibilidad {
+  padding: 30px 20px 30px 20px;
+
+  @media (min-width: 768px) {
+    padding: 60px 120px 0 60px;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 120px 0 0 0;
+    max-width: 904px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 1440px) {
+    max-width: 1024px;
+  }
+}
+
+.incluye {
+  padding-bottom: 30px;
+}
+
+.preguntas {
+  @media (min-width: 768px) {
+    padding: 0;
+  }
+}

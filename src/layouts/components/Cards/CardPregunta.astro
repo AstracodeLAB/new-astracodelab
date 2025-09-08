@@ -1,14 +1,34 @@
 ---
 import '../../../styles/global.scss';
 import Buttons from '../Buttons/Buttons.astro';
+
+interface Props {
+  title: string;
+  text: string;
+  buttonText: string;
+  buttonHref: string;
+  buttonClass?: string;
+  className?: string;
+}
+
+const {
+  title,
+  text,
+  buttonText,
+  buttonHref,
+  buttonClass = "btnSecondaryDark",
+  className = "",
+} = Astro.props;
 ---
-<section class="cardPregunta">
+
+<section class={`cardPregunta ${className}`}>
   <article class="cardPregunta__content">
-    <h2 class="cardPregunta__content-title">¿Tienes una idea que no encuentras en estos planes o no sabes por donde empezar?</h2>
-    <p class="cardPregunta__content-text">Cuéntanosla y te guiaremos hacia la solución perfecta para tu proyecto.</p>
+    <h2 class="cardPregunta__content-title">{title}</h2>
+    <p class="cardPregunta__content-text">{text}</p>
     <div class="cardPregunta__content-btn">
-      <Buttons className="btnSecondaryDark" href="/" >¿Hablamos?</Buttons>
+      <Buttons className={buttonClass} href={buttonHref}>
+        {buttonText}
+      </Buttons>
     </div>
   </article>
-  
 </section>
