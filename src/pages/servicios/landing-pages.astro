@@ -7,6 +7,7 @@ import TitleSecondary from '../../layouts/components/Titles/TitleSecondary.astro
 import SimpleNumber from '../../layouts/components/Timeline/SimpleNumber.astro';
 import Subtitle from '../../layouts/components/Titles/Subtitle.astro';
 import ConectorContent from '../../layouts/components/ConectorContent.astro';
+import BannerCta from '../../layouts/components/Banners/BannerContacto.astro';
 
 const benefits = [
   {
@@ -106,17 +107,26 @@ const benefits = [
       </div>
     </article>
   </section>
-  <section>
-    <TitleSecondary
-      text='¿Cuándo necesitas una landing page? Ejemplos de uso'
-      description='Las landing pages son herramientas versátiles para diversas estrategias de marketing:'
-    />
-    <ConectorContent
-      paragraphs={[
-        'Campañas de Publicidad Online (Google Ads, Redes Sociales): Dirige el tráfico de tus anuncios a una página específica con un mensaje coherente, maximizando la efectividad de tu inversión publicitaria.',
-        'Lanzamiento de Nuevos Productos o Servicios: Genera expectación y capta el interés de clientes potenciales antes, durante y después del lanzamiento.',
-        'Promociones y Ofertas Especiales: Crea una página dedicada a una oferta limitada para generar urgencia y motivar la acción.',
-      ]}
-    />
+  <section class='cuando'>
+    <div class='cuando__title'>
+      <TitleSecondary
+        text='¿Cuándo necesitas una landing page? Ejemplos de uso'
+        description='Las landing pages son herramientas versátiles para diversas estrategias de marketing:'
+      />
+    </div>
+    <div class='cuando__table'>
+      <ConectorContent
+        paragraphs={[
+          'Campañas de Publicidad Online (Google Ads, Redes Sociales): Dirige el tráfico de tus anuncios a una página específica con un mensaje coherente, maximizando la efectividad de tu inversión publicitaria.',
+          'Lanzamiento de Nuevos Productos o Servicios: Genera expectación y capta el interés de clientes potenciales antes, durante y después del lanzamiento.',
+          'Promociones y Ofertas Especiales: Crea una página dedicada a una oferta limitada para generar urgencia y motivar la acción.',
+        ]}
+      />
+    </div>
   </section>
+  <BannerContacto
+    titilo='¿Listo para disparar conversiones con una landing page profesional?'
+    desription='Si buscas una landing page de alto impacto capaz de captar más leads, aumentar tus ventas o lanzar campañas efectivas, estamos listos para ayudarte.'
+    texto='¿Quieres una landing page que convierta? Agenda tu reunión gratuita y exploremos tu proyecto.'
+  />
 </Layout>
