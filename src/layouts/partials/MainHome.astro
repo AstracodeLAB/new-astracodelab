@@ -14,7 +14,7 @@ import CardTestimonio from '../components/Cards/CardTestimonio.astro';
 import WorkSection from '../components/WorkSection.astro';
 import FaqsSection from '../components/FaqsSection.astro';
 import Contact from '../components/Contact.astro';
-import {faqsHome} from '../../layouts/components/accordeon/faqs.js';
+import { faqsHome } from '../../layouts/components/accordeon/faqs.js';
 ---
 
 <main class='mainHome'>
@@ -85,7 +85,7 @@ import {faqsHome} from '../../layouts/components/accordeon/faqs.js';
     titulo='¿Listo para destacar?'
     descripcion='Tanto si quieres hacer una página web profesional, lanzar un nuevo ecommerce o renovar tu web actual, podemos transformar tu idea en resultados concretos. Cada proyecto es único y cada diseño tiene su propio propósito.'
     texto='Contacta con nosotros'
-    className="btnPrimaryLight"
+    className='btnPrimaryLight'
   />
 
   <section class='testimonial-section'>
@@ -124,7 +124,12 @@ import {faqsHome} from '../../layouts/components/accordeon/faqs.js';
       />
     </div>
     <CardPrecio />
-    <CardPregunta />
+    <CardPregunta
+      title='¿Tienes una idea que no encuentras en estos planes o no sabes por dónde empezar?'
+      text='Cuéntanosla y te guiaremos hacia la solución perfecta para tu proyecto.'
+      buttonText='¿Hablamos?'
+      buttonHref='/contacto'
+    />
   </section>
 
   <FaqsSection titulo='Preguntas frecuentes' faqs={faqsHome} />

@@ -80,7 +80,7 @@ export const faqsWebCorporate = [
     contenido:
       'Sí, podemos integrar diversas funcionalidades como formularios personalizados, chat, integración con redes sociales y más, según tus necesidades.',
   },
-]
+];
 
 export const faqsEcommerce = [
   {
@@ -153,6 +153,39 @@ export const faqsRedi = [
   },
 ];
 
+export const faqsOptimizacion = [
+  {
+    titulo: '¿Qué es la velocidad de carga web y por qué es tan importante?',
+    contenido:
+      'La velocidad de carga web es el tiempo que tarda tu página en mostrarse completamente al usuario. Es crucial porque afecta directamente la experiencia del usuario (una web lenta frustra y hace que el usuario se vaya) . Una web rápida mejora las conversiones y la imagen de tu marca.',
+  },
+  {
+    titulo: '¿Mi web será accesible para personas con discapacidades?',
+    contenido:
+      'Sí. Implementamos las directrices de accesibilidad web (WCAG) para garantizar que tu sitio sea usable por el mayor número de personas posible, incluyendo aquellas con discapacidades visuales, auditivas o motoras. ',
+  },
+  {
+    titulo: '¿Qué significa "diseño responsive" y por qué lo necesito?',
+    contenido:
+      'El diseño responsive significa que tu web se adapta y se ve perfectamente en cualquier tamaño de pantalla: ordenadores, tablets o smartphones. Es absolutamente necesario hoy en día, ya que la mayoría de los usuarios navegan desde móviles. ',
+  },
+  {
+    titulo: '¿Podéis integrar un sistema de reservas en mi web?',
+    contenido:
+      'Sí, podemos integrar sistemas de reservas y calendarios adaptados a tus necesidades. Ya sea para citas, alquileres, eventos o clases, podemos configurar la funcionalidad que mejor se adapte a tu negocio para que tus clientes puedan reservar directamente desde tu web.',
+  },
+  {
+    titulo: '¿Una web multilingüe mejora mi SEO?',
+    contenido:
+      'Una web multilingüe  puede mejorar significativamente tu SEO internacional. Te permite llegar a audiencias en diferentes idiomas y países, y Google puede indexar y mostrar la versión correcta de tu sitio según la ubicación e idioma del usuario, aumentando tu visibilidad global.',
+  },
+  {
+    titulo: '¿Qué es el SEO técnico y cómo me ayuda a posicionar mi web?',
+    contenido:
+      'El SEO técnico se refiere a las optimizaciones en la infraestructura y el código de tu web que ayudan a los motores de búsqueda a rastrear, indexar y comprender tu sitio de manera más eficiente. Incluye mejoras en la velocidad, la estructura de URLs, los datos estructurados, la compatibilidad móvil y la seguridad. Es fundamental para un buen posicionamiento web y para que los crawlers de IA interpreten correctamente tu contenido.',
+  },
+];
+
 export const faqsReservas = [
   {
     titulo: '¿Qué tipos de negocios se benefician más de un sistema de reservas online?',
@@ -179,8 +212,7 @@ export const faqsReservas = [
     contenido:
       'Sí, los sistemas de reservas te permiten configurar un catálogo ilimitado de servicios, clases o eventos, cada uno con sus propias duraciones, precios, disponibilidades y descripciones, ofreciendo total flexibilidad a tu negocio.',
   },
-
-]
+];
 export const faqsMultilang = [
   {
     titulo: '¿Necesito traducir todo el contenido de mi web?',
@@ -196,7 +228,30 @@ export const faqsMultilang = [
     titulo: '¿Una web multilingüe mejora automáticamente mi posicionamiento global?',
     contenido:
       'Una web en varios idiomas es el primer paso, pero no lo es todo. Una web multilingüe correctamente implementada es la base para mejorar tu posicionamiento global. Sin embargo, también requiere una estrategia SEO internacional que incluya contenido optimizado por idioma, enlaces relevantes en cada mercado y una arquitectura clara para cada versión lingüística.',
-  }
+  },
+];
+
+export const faqsAccesibilidad = [
+  {
+    titulo: '¿Qué son las WCAG y por qué son importantes?',
+    contenido:
+      'Las WCAG (Web Content Accessibility Guidelines) son un conjunto de directrices internacionales desarrolladas por el W3C (World Wide Web Consortium) para hacer el contenido web más accesible para personas con discapacidad. Son importantes porque proporcionan un estándar reconocido que asegura que tu web accesible sea usable para todos y te ayuda a cumplir con posibles requisitos legales.',
+  },
+  {
+    titulo: '¿La accesibilidad web solo beneficia a las personas con discapacidad?',
+    contenido:
+      'No. Aunque están diseñadas pensando en personas con discapacidad, las prácticas de accesibilidad web benefician a todos los usuarios. Por ejemplo, una buena estructura de encabezados ayuda a los lectores de pantalla, pero también mejora la legibilidad para cualquier persona. La optimización para teclado es clave para algunos usuarios con movilidad reducida, pero también útil para usuarios avanzados.',
+  },
+  {
+    titulo: '¿Una web accesible mejora mi posicionamiento SEO?',
+    contenido:
+      'Sí. Muchos principios de la accesibilidad web (como la buena estructura de encabezados, el texto alternativo para imágenes, la navegación clara, la velocidad de carga y el diseño responsive) son también factores importantes para el SEO. Una web que Google considera accesible suele ser mejor ranqueada.',
+  },
+  {
+    titulo: '¿Mi web será compatible con lectores de pantalla y otras tecnologías asistivas?',
+    contenido:
+      'Sí. Nuestro objetivo es que tu web accesible funcione sin problemas con las tecnologías asistivas más comunes, como lectores de pantalla (ej., JAWS, NVDA, VoiceOver), magnificadores de pantalla y sistemas de navegación por voz o teclado.',
+  },
 ];
 
 export const faqsMantenimiento = [
