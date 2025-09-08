@@ -2,11 +2,10 @@
 @use './variables.scss' as *;
 
 .incluye {
+  padding: 30px 20px 0 20px;
   &__title {
     display: block;
   }
-
-  padding: 30px 20px 0 20px;
 
   @media (min-width: 768px) {
     padding: 60px 120px 0 120px;

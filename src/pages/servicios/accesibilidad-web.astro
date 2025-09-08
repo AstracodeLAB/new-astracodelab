@@ -1,0 +1,84 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import HeroSecondary from '../../layouts/components/HeroSecondary.astro';
+import heroImg from '../../images/heroIlustration.svg';
+import TitleSecondary from '../../layouts/components/Titles/TitleSecondary.astro';
+import BenefitsSection from '../../layouts/components/BenefitsSection.astro';
+import QueIncluye from '../../layouts/components/QueIncluye.astro';
+import BannerCta from '../../layouts/components/Banners/BannerCta.astro';
+import FaqsSection from '../../layouts/components/FaqsSection.astro';
+import { faqsAccesibilidad } from '../../layouts/components/accordeon/faqs.js';
+import Contact from '../../layouts/components/Contact.astro';
+
+const benefits = [
+  {
+    titulo: 'Llegas a más personas',
+    descripcion:
+      'Una web diseñada para ser accesible se abre a millones de usuarios que, de otro modo, podrían quedar excluidos. Esto amplía tu mercado y te posiciona como una marca más inclusiva.',
+  },
+  {
+    titulo: 'Fortaleces tu marca',
+    descripcion:
+      'Este compromiso no solo mejora tu reputación, también refuerza los valores de tu marca frente a clientes, colaboradores y la sociedad.',
+  },
+  {
+    titulo: 'Reduce riesgos legales',
+    descripcion:
+      'En muchos países, la accesibilidad web es un requisito legal. Cumplir con normativas como las WCAG (Web Content Accessibility Guidelines) te protege de posibles litigios y sanciones.',
+  },
+  {
+    titulo: 'Mejoras la experiencia para todos',
+    descripcion:
+      'Las prácticas de accesibilidad web benefician a todos los usuarios, no solo a las personas con discapacidad. Un diseño claro, una navegación intuitiva y una buena estructura de contenido mejoran la experiencia general para cualquier visitante.',
+  },
+  {
+    titulo: 'Mayor compatibilidad tecnológica',
+    descripcion:
+      'Las webs accesibles suelen ser más robustas y compatibles con una gama más amplia de dispositivos y navegadores, incluyendo  tecnologías de asistencia (lectores de pantalla, teclados especiales).',
+  },
+];
+---
+
+<Layout title='Accesibilidad Web Profesional | AstracodeLAB'>
+  <HeroSecondary
+    title='Accesibilidad web: '
+    subtitle='Tu web para todos, sin barreras digitales'
+    text='Una web accesible permite que cualquier persona, sin importar sus capacidades, pueda interactuar con tu contenido de forma cómoda y efectiva. En AstracodeLAB, diseñamos y desarrollamos páginas web accesibles que cumplen con los estándares, asegurando que cualquier persona, independientemente de sus capacidades, pueda navegar y utilizar tu sitio sin dificultad.'
+    image={heroImg}
+  />
+  <article class='accesibilidad'>
+    <TitleSecondary
+      text='¿Por qué tu negocio necesita una web accesible?'
+      description='La accesibilidad web garantiza que personas con discapacidades (visuales, auditivas, cognitivas, motoras, etc.) puedan percibir, entender, navegar e interactuar con tu sitio web. Ignorar este aspecto limita tu alcance e incluso puede afectar a la imagen de tu marca.'
+    />
+  </article>
+  <div class='beneficios'>
+    <BenefitsSection titulo='Beneficios clave de un e-commerce profesional:' benefits={benefits} />
+  </div>
+  <QueIncluye
+    title='¿Qué incluye nuestro servicio de diseño web accesible?'
+    paragraphs={[
+      'En AstracodeLAB nos aseguramos de que tu sitio cumpla con los principales principios de accesibilidad, no solo desde lo técnico, sino también desde la experiencia del usuario. Cada proyecto incluye un diseño UX y UI pensado para que cualquier persona pueda navegar de forma cómoda, independientemente de sus capacidades.',
+      'Implementamos el desarrollo siguiendo las pautas establecidas por las WCAG, que son los estándares internacionales en accesibilidad digital. Esto incluye: ',
+      'Optimización para navegación : Garantía de que toda la web es funcional sin el uso del ratón.',
+      'Textos alternativos (Alt Text) para imágenes: Descripciones precisas para que lectores de pantalla interpreten el contenido visual.',
+      'Contraste de colores y tipografía accesible: Selección de combinaciones visuales que aseguren la legibilidad para todos.',
+      'Estructura semántica y clara: Uso adecuado de encabezados y listas para una mejor comprensión por parte de usuarios y herramientas.',
+      'Soporte post-lanzamiento: Acompañamiento y asistencia durante el primer mes tras la publicación, con opciones de mantenimiento web continuo para asegurar la accesibilidad a largo plazo.',
+    ]}
+  />
+  <BannerCta
+    titulo='¿Listo para construir una web sin barreras y llegar a todos?'
+    descripcion='En AstracodeLAB desarrollamos sitios accesibles desde la base, diseñados para ser utilizados por cualquier persona. Nuestro enfoque combina diseño inclusivo con criterios técnicos sólidos para que tu web funcione bien, se vea bien y esté abierta a todos. Haz de tu presencia digital un espacio sin barreras. Tu audiencia es diversa, tu web también debería serlo.'
+    texto='¿Quieres que tu web sea 100% accesible? Agenda tu reunión gratuita y hablemos de inclusión digital.'
+    className='linkSecondaryGreen'
+  />
+  <section class='preguntas'>
+    <FaqsSection
+      titulo='Preguntas frecuentes sobre una landing page profesional'
+      description='Aquí resolvemos algunas de las dudas más comunes sobre el desarrollo de webs accesibles:'
+      faqs={faqsAccesibilidad}
+    />
+  </section>
+  <Contact />
+</Layout>

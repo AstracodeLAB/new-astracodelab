@@ -80,7 +80,7 @@ export const faqsWebCorporate = [
     contenido:
       'Sí, podemos integrar diversas funcionalidades como formularios personalizados, chat, integración con redes sociales y más, según tus necesidades.',
   },
-]
+];
 
 export const faqsEcommerce = [
   {
@@ -183,5 +183,28 @@ export const faqsOptimizacion = [
     titulo: '¿Qué es el SEO técnico y cómo me ayuda a posicionar mi web?',
     contenido:
       'El SEO técnico se refiere a las optimizaciones en la infraestructura y el código de tu web que ayudan a los motores de búsqueda a rastrear, indexar y comprender tu sitio de manera más eficiente. Incluye mejoras en la velocidad, la estructura de URLs, los datos estructurados, la compatibilidad móvil y la seguridad. Es fundamental para un buen posicionamiento web y para que los crawlers de IA interpreten correctamente tu contenido.',
+  },
+];
+
+export const faqsAccesibilidad = [
+  {
+    titulo: '¿Qué son las WCAG y por qué son importantes?',
+    contenido:
+      'Las WCAG (Web Content Accessibility Guidelines) son un conjunto de directrices internacionales desarrolladas por el W3C (World Wide Web Consortium) para hacer el contenido web más accesible para personas con discapacidad. Son importantes porque proporcionan un estándar reconocido que asegura que tu web accesible sea usable para todos y te ayuda a cumplir con posibles requisitos legales.',
+  },
+  {
+    titulo: '¿La accesibilidad web solo beneficia a las personas con discapacidad?',
+    contenido:
+      'No. Aunque están diseñadas pensando en personas con discapacidad, las prácticas de accesibilidad web benefician a todos los usuarios. Por ejemplo, una buena estructura de encabezados ayuda a los lectores de pantalla, pero también mejora la legibilidad para cualquier persona. La optimización para teclado es clave para algunos usuarios con movilidad reducida, pero también útil para usuarios avanzados.',
+  },
+  {
+    titulo: '¿Una web accesible mejora mi posicionamiento SEO?',
+    contenido:
+      'Sí. Muchos principios de la accesibilidad web (como la buena estructura de encabezados, el texto alternativo para imágenes, la navegación clara, la velocidad de carga y el diseño responsive) son también factores importantes para el SEO. Una web que Google considera accesible suele ser mejor ranqueada.',
+  },
+  {
+    titulo: '¿Mi web será compatible con lectores de pantalla y otras tecnologías asistivas?',
+    contenido:
+      'Sí. Nuestro objetivo es que tu web accesible funcione sin problemas con las tecnologías asistivas más comunes, como lectores de pantalla (ej., JAWS, NVDA, VoiceOver), magnificadores de pantalla y sistemas de navegación por voz o teclado.',
   },
 ];
