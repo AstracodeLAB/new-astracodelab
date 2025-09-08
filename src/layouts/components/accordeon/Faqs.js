@@ -181,3 +181,20 @@ export const faqsReservas = [
   },
 
 ]
+export const faqsMultilang = [
+  {
+    titulo: '¿Necesito traducir todo el contenido de mi web?',
+    contenido:
+      'Lo ideal es traducir todo el contenido relevante para la experiencia del usuario y tus objetivos de negocio.',
+  },
+  {
+    titulo: '¿Afecta una web multilingüe a la velocidad de carga de mi sitio?',
+    contenido:
+      'Si está mal construida, puede afectar el rendimiento. Pero en AstracodeLAB cuidamos la estructura técnica para que cada versión del sitio mantenga una velocidad de carga ágil y eficiente, sin importar cuántos idiomas tenga.',
+  },
+  {
+    titulo: '¿Una web multilingüe mejora automáticamente mi posicionamiento global?',
+    contenido:
+      'Una web en varios idiomas es el primer paso, pero no lo es todo. Una web multilingüe correctamente implementada es la base para mejorar tu posicionamiento global. Sin embargo, también requiere una estrategia SEO internacional que incluya contenido optimizado por idioma, enlaces relevantes en cada mercado y una arquitectura clara para cada versión lingüística.',
+  }
+];
