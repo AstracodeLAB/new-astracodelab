@@ -13,6 +13,10 @@
     max-width: 904px;
     margin: 0 auto;
   }
+
+  @media (min-width: 1440px) {
+    max-width: 1024px;
+  }
 }
 
 .beneficios {
@@ -20,6 +24,10 @@
     padding-top: 20px;
     max-width: 904px;
     margin: 0 auto;
+  }
+
+  @media (min-width: 1440px) {
+    max-width: 1024px;
   }
 }
 
@@ -70,6 +78,10 @@
       max-width: 904px;
       margin: 0 auto;
     }
+
+    @media (min-width: 1440px) {
+      max-width: 1024px;
+    }
   }
 
   &__table {
@@ -87,5 +99,9 @@
     padding: 0;
     max-width: 904px;
     margin: 0 auto;
+  }
+
+  @media (min-width: 1440px) {
+    max-width: 1024px;
   }
 }
