@@ -22,6 +22,7 @@ const { titulo, descripcion, advantages, className = '' } = Astro.props;
           advantages.map((advantage) => (
             <AdvantageItem
               icono={advantage.icono}
+              iconoComponent={advantage.iconoComponent}
               titulo={advantage.titulo}
               descripcion={advantage.descripcion}
               className='advantages-section__item'

@@ -1,11 +1,17 @@
 ---
-const { icono, titulo, descripcion, className = '' } = Astro.props;
+const { icono, iconoComponent, titulo, descripcion, className = '' } = Astro.props;
+
+const IconComponent = iconoComponent;
 ---
 
 <div class={`advantage-item ${className}`}>
   <div class="advantage-item__advantage">
     <div class="advantage-item__icon">
-      <Fragment set:html={icono} />
+      {IconComponent ? (
+        <IconComponent />
+      ) : (
+        <Fragment set:html={icono} />
+      )}
     </div>
     <h3 class="advantage-item__title">{titulo}</h3>
   </div>
