@@ -60,6 +60,8 @@ html {
 
 body {
   font-family: $font-primary;
+  padding-top: 80px;
+  
   header {
     padding: 20px;
   }
@@ -69,8 +71,10 @@ body {
   }
 
   @media (min-width: 768px) {
+    padding-top: 90px;
   }
   @media (min-width: 1024px) {
+    padding-top: 100px;
   }
   @media (min-width: 1440px) {
   }
