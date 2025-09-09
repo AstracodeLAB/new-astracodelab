@@ -10,7 +10,7 @@ const { numero, titulo, descripcion, imagen, descripcionSec } = Astro.props;
     <div class='process-step__text-content'>
       <h3 class='process-step__title'>{titulo}</h3>
       <p class='process-step__description'>{descripcion}</p>
-      {descripcionSec && <p class='process-step__description'>{descripcionSec}</p>}
+      {descripcionSec && <p class='process-step__description'set:html={descripcionSec}></p>}
     </div>
     {
       imagen && (

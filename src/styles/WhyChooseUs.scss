@@ -6,9 +6,10 @@
 // ===========================
 
 .why-choose-us-section {
-  padding-top: 60px;
+  padding-top: 30px;
 
   @media (min-width: 1024px) {
+    padding-top: 120px;
     max-width: 904px;
   }
 
@@ -21,29 +22,30 @@
   text-align: center;
 
   @media (min-width: 768px) {
-    margin-bottom: 4rem;
+    margin-bottom: 1.25rem;
   }
 
   @media (min-width: 1024px) {
-    margin-bottom: 5rem;
+
   }
 }
 
 .why-choose-us-content {
 
-  padding: 3.75rem 1.25rem;
+  padding: 3.75rem 1.25rem 0rem 1.25rem;
 
   @media (min-width: 768px) {
-    padding: 20px 120px 0 120px;
+    padding: 20px 120px 0rem 120px;
   }
 
   @media (min-width: 1024px) {
    padding: 0;
+   padding-top:20px;
    max-width: 904px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3.5rem;
-    align-items: start;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   align-items: start;
+   gap:30px;
 
   }
 

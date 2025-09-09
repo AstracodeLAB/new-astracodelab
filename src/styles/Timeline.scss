@@ -22,10 +22,9 @@
   }
 
   &-header {
-    text-align: left;
+    text-align: center;
 
     @media (min-width: 1024px) {
-      padding-top: 60px;
       padding-left: 30px;
       padding-right: 30px;
     }
@@ -33,7 +32,7 @@
 
   & p {
     @media (min-width: 1024px) {
-      padding-top: 20px;
+      margin:0 auto;
     }
   }
 }
@@ -91,10 +90,9 @@
     position: absolute;
     left: 1rem;
     top: 5px;
-    width: 2px;
+    width: 1px;
     height: 78.5%;
-
-    background: $blue-dark;
+    background: $blue-primary;
     z-index: 1;
 
     @media (min-width: 348px) {
@@ -106,9 +104,12 @@
     @media (min-width: 400px) {
       height: 81.8%;
     }
+    @media (min-width: 421px) {
+      height: 86%;
+    }
 
     @media (min-width: 440px) {
-      height: 84%;
+      height: 87%;
     }
 
     @media (min-width: 556px) {
@@ -117,12 +118,12 @@
 
     @media (min-width: 768px) {
       left: 1.25rem;
-      width: 3px;
-      height: 85%;
+      width: 1px;
+      height: 84.5%;
     }
 
     @media (min-width: 1024px) {
-      height: 84.5%;
+      height: 79.7%;
     }
   }
 }
@@ -139,14 +140,14 @@
 
   @media (min-width: 768px) {
     gap: 1.5rem;
-    margin-bottom: 3rem;
+
   }
 
   &__number {
     z-index: 10;
     flex-shrink: 0;
     background: $blue-dark;
-    color: $cardWhite;
+    color:white;
     border-radius: 50%;
     width: 1.75rem;
     height: 1.75rem;
@@ -228,7 +229,7 @@
     font-weight: map.get($Body-mobile, 'font-weight');
     letter-spacing: map.get($Body-mobile, 'letter-spacing');
     color: $text-bg-color;
-    margin: 0 0 1rem 0;
+
 
     @media (min-width: 768px) {
       font-size: map.get($Body-tablet, 'font-size');

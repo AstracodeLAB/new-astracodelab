@@ -27,7 +27,7 @@
     font-weight: map.get($Body-desktop, 'font-weight');
     letter-spacing: map.get($Body-desktop, 'letter-spacing');
     max-width: 904px;
-    margin-top: 120px;
+    margin-top: 5rem;
     padding: 0;
   }
 
@@ -38,6 +38,7 @@
     letter-spacing: map.get($Body-desktop-xl, 'letter-spacing');
     max-width: 1024px;
     padding: 0 0;
+    margin-top:7.5rem;
   }
   &__intro {
     display: flex;

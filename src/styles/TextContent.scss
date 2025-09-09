@@ -44,7 +44,7 @@
 
     @media (min-width: 1024px) {
       // Limitar el ancho del texto para mantener consistencia
-
+      gap:20px;
       
       // Si no hay imagen, mantener el mismo ancho que si la hubiera
       .text-content:not(.text-content--with-image) & {
@@ -94,7 +94,7 @@
     }
 
     @media (min-width: 1024px) {
-      min-width: 442px;
+      min-width: 400px;
       font-size: map.get($Body-desktop, 'font-size');
       line-height: map.get($Body-desktop, 'line-height');
       font-weight: map.get($Body-desktop, 'font-weight');
