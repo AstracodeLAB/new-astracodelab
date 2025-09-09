@@ -2,7 +2,7 @@
 @use './variables.scss' as *;
 
 .sectionPorqNecesitoWeb {
-  padding: 60px 20px 0 20px;
+  padding: 30px 20px 0 20px;
   font-size: map.get($Body-mobile, 'font-size');
   line-height: map.get($Body-mobile, 'line-height');
   font-weight: map.get($Body-mobile, 'font-weight');
@@ -27,7 +27,7 @@
     font-weight: map.get($Body-desktop, 'font-weight');
     letter-spacing: map.get($Body-desktop, 'letter-spacing');
     max-width: 904px;
-    padding: 120px 0 0 0;
+    padding: 60px 0 0 0;
     margin: 0 auto;
   }
 
@@ -41,7 +41,6 @@
   &__intro {
     display: flex;
     flex-direction: column;
-    align-items: center;
 
     gap: 12px;
 
