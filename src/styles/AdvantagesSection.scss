@@ -52,7 +52,7 @@
 
   &__headers {
     display: flex;
-    background: $gradientBlue;
+    background: $gradientViolet;
   }
 
   &__header-cell {
@@ -63,15 +63,13 @@
     letter-spacing: map.get($H3-mobile, 'letter-spacing');
     color: white;
     text-align: center;
-    padding: 1.5rem;
+    padding: 1rem;
 
     @media (min-width: 768px) {
       font-size: map.get($H3-tablet, 'font-size');
       line-height: map.get($H3-tablet, 'line-height');
       font-weight: map.get($H3-tablet, 'font-weight');
       letter-spacing: map.get($H3-tablet, 'letter-spacing');
-      padding: 2rem;
-      text-transform: uppercase;
     }
 
     @media (min-width: 1024px) {
@@ -79,7 +77,6 @@
       line-height: map.get($H3-desktop, 'line-height');
       font-weight: map.get($H3-desktop, 'font-weight');
       letter-spacing: map.get($H3-desktop, 'letter-spacing');
-      padding: 2.5rem;
     }
 
     &:first-child {
@@ -106,8 +103,11 @@
   }
 
   &__item {
+    &::after {
+      border-right: 1px solid rgba($blue-primary, 0.5);
+    }
     &:not(:last-child) {
-      border-bottom: 1px solid rgba($title-color, 0.1);
+      border-bottom: 1px solid rgba($blue-primary, 0.5);
     }
   }
 }
