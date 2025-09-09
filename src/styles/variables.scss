@@ -6,22 +6,22 @@
             color: map.get($h1bold, "color");
         }*/
 
-
 // Colors
 $blue-primary: #641eff;
 $blue-secondary: #f3f1ff;
 $green: #bbff00;
-$blue-dark:  #1E0E62;
-$title-color: #2A1160;
-$text-bg-color: rgb(46, 30, 82,0.95);
-$text-bg-white: rgb(46, 30, 82, 0.80);
+$blue-dark: #1e0e62;
+$title-color: #2a1160;
+$text-bg-color: rgb(46, 30, 82, 0.95);
+$text-bg-white: rgb(46, 30, 82, 0.8);
 $links: #6b46c1;
-$cardWhite: rgb(255, 255, 255,0.80);
+$cardWhite: rgb(255, 255, 255, 0.8);
+$gradientViolet: linear-gradient(90deg, #1e0e62 0%, #641eff 66.66%, #641eff 33.33%,  #b99aff 100%);
 $gradientBlue: linear-gradient(90deg, rgb(30, 14, 98) 0%, rgb(100, 30, 255) 100%);
-$gradientButton: linear-gradient(180deg, #641EFF 10.96%, #1E0E62 127.4%);
-$gradientButtonFlip: linear-gradient(90deg, #641EFF 10.96%, #1E0E62 100%);
+$gradientButton: linear-gradient(180deg, #641eff 10.96%, #1e0e62 127.4%);
+$gradientButtonFlip: linear-gradient(90deg, #641eff 10.96%, #1e0e62 100%);
 // Shadows
-$shadow: 0px 1px 40px 0px rgba(42, 17, 96, 0.20);
+$shadow: 0px 1px 40px 0px rgba(42, 17, 96, 0.2);
 
 //fonts
 $font-primary: 'Roboto', sans-serif;
@@ -34,44 +34,43 @@ $H1-mobile: (
   letter-spacing: 0%,
   line-height: 43px,
   font-size: 36px,
-  font-weight: 700 // Bold
+  font-weight: 700 // Bold,
 );
 
 $H2-mobile: (
   letter-spacing: 0,
   line-height: 35px,
   font-size: 28px,
-  font-weight: 700 // Bold
+  font-weight: 700 // Bold,
 );
 
 $H3-mobile: (
   letter-spacing: 0,
   line-height: 26px,
   font-size: 20px,
-  font-weight: 500 // Medium
+  font-weight: 500 // Medium,
 );
 
 $Body-mobile: (
   letter-spacing: 5%,
   line-height: 25px,
   font-size: 15px,
-  font-weight: 400 // Regular
+  font-weight: 400 // Regular,
 );
 
 $SmallText-mobile: (
   letter-spacing: 1.8px,
   line-height: 18px,
   font-size: 12px,
-  font-weight: 500 // Medium
+  font-weight: 500 // Medium,
 );
 
 $Button-mobile: (
   letter-spacing: 0.1em,
   line-height: 24px,
   font-size: 16px,
-  font-weight: 400 // Regular
+  font-weight: 400 // Regular,
 );
-
 
 // -----------------
 // TABLET
@@ -80,44 +79,43 @@ $H1-tablet: (
   letter-spacing: 0,
   line-height: 52px,
   font-size: 44px,
-  font-weight: 700 // Bold
+  font-weight: 700 // Bold,
 );
 
 $H2-tablet: (
   letter-spacing: 0,
   line-height: 40px,
   font-size: 32px,
-  font-weight: 700 // Bold
+  font-weight: 700 // Bold,
 );
 
 $H3-tablet: (
   letter-spacing: 0,
   line-height: 32px,
   font-size: 22px,
-  font-weight: 500 // Medium
+  font-weight: 500 // Medium,
 );
 
 $Body-tablet: (
   letter-spacing: 0.05em,
   line-height: 26px,
   font-size: 16px,
-  font-weight: 400 // Regular
+  font-weight: 400 // Regular,
 );
 
 $SmallText-tablet: (
   letter-spacing: 0.08em,
   line-height: 25px,
   font-size: 13px,
-  font-weight: 500 // Medium
+  font-weight: 500 // Medium,
 );
 
 $Button-tablet: (
   letter-spacing: 0.08em,
   line-height: 24px,
   font-size: 16px,
-  font-weight: 400 // Regular
+  font-weight: 400 // Regular,
 );
-
 
 // -----------------
 // DESKTOP
@@ -126,42 +124,42 @@ $H1-desktop: (
   letter-spacing: 0,
   line-height: 60px,
   font-size: 52px,
-  font-weight: 700 // Bold
+  font-weight: 700 // Bold,
 );
 
 $H2-desktop: (
   letter-spacing: 0,
   line-height: 46px,
   font-size: 38px,
-  font-weight: 700 // Bold
+  font-weight: 700 // Bold,
 );
 
 $H3-desktop: (
   letter-spacing: 0,
   line-height: 34px,
   font-size: 24px,
-  font-weight: 500 // Medium
+  font-weight: 500 // Medium,
 );
 
 $Body-desktop: (
   letter-spacing: 0.05em,
   line-height: 27px,
   font-size: 17px,
-  font-weight: 400 // Regular
+  font-weight: 400 // Regular,
 );
 
 $SmallText-desktop: (
   letter-spacing: 0.1em,
   line-height: 21px,
   font-size: 14px,
-  font-weight: 500 // Medium
+  font-weight: 500 // Medium,
 );
 
 $Button-desktop: (
   letter-spacing: 0.1em,
   line-height: 24px,
   font-size: 18px,
-  font-weight: 400 // Regular
+  font-weight: 400 // Regular,
 );
 
 // -----------------
@@ -171,41 +169,40 @@ $H1-desktop-xl: (
   letter-spacing: 0,
   line-height: 68px,
   font-size: 60px,
-  font-weight: 700 // Bold
+  font-weight: 700 // Bold,
 );
 
 $H2-desktop-xl: (
   letter-spacing: 0,
   line-height: 52px,
   font-size: 44px,
-  font-weight: 700 // Bold
+  font-weight: 700 // Bold,
 );
 
 $H3-desktop-xl: (
   letter-spacing: 0,
   line-height: 34px,
   font-size: 26px,
-  font-weight: 500 // Medium
+  font-weight: 500 // Medium,
 );
 
 $Body-desktop-xl: (
   letter-spacing: 5%,
   line-height: 27px,
   font-size: 17px,
-  font-weight: 400 // Regular
+  font-weight: 400 // Regular,
 );
 
 $SmallText-desktop-xl: (
   letter-spacing: 10%,
   line-height: 21px,
   font-size: 14px,
-  font-weight: 500 // Medium
+  font-weight: 500 // Medium,
 );
 
 $Button-desktop-xl: (
   letter-spacing: 10%,
   line-height: 24px,
   font-size: 18px,
-  font-weight: 400 // Regular
+  font-weight: 400 // Regular,
 );
-
