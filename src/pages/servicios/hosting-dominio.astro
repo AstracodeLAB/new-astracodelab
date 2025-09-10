@@ -12,59 +12,61 @@ import Contact from '../../layouts/components/Contact.astro';
 ---
 
 <Layout title='Hosting y dominio web | AstracodeLAB'>
-  <HeroSecondary
-    title='Hosting y dominio web'
-    text='El hosting y el dominio web son los cimientos esenciales sobre los que se construye tu página online.  El dominio es la dirección o nombre por la que te encuentran los usuarios. El hosting es el lugar donde vive tu página web. Ambos son piezas clave para que tu web funcione sin interrupciones. En AstracodeLAB, te ayudamos te ayudamos a escoger un dominio que represente tu marca y sea fácil de recordar. También te ofrecemos alojamiento web adaptado a tus necesidades, con un rendimiento estable, tiempos de carga rápidos y una capa de seguridad que protege tu sitio en todo momento.'
-    image={heroImgHosting}
-  />
-  <div class='proceso'>
-    <TitleSecondary
-      text='Nuestro proceso para gestionar tu hosting y dominio web'
-      description='En AstracodeLAB, te liberamos de las complejidades técnicas del hosting y dominio. Sabemos que estas cuestiones técnicas pueden quitarte tiempo o generar dudas. Por eso lo gestionamos de forma integral, para que puedas centrarte en tu negocio sin preocuparte por la parte técnica.'
+  <div class="container_main_services">
+    <HeroSecondary
+      title='Hosting y dominio web'
+      text='El hosting y el dominio web son los cimientos esenciales sobre los que se construye tu página online.  El dominio es la dirección o nombre por la que te encuentran los usuarios. El hosting es el lugar donde vive tu página web. Ambos son piezas clave para que tu web funcione sin interrupciones. En AstracodeLAB, te ayudamos te ayudamos a escoger un dominio que represente tu marca y sea fácil de recordar. También te ofrecemos alojamiento web adaptado a tus necesidades, con un rendimiento estable, tiempos de carga rápidos y una capa de seguridad que protege tu sitio en todo momento.'
+      image={heroImgHosting}
     />
-    <article class='proceso__numbers'>
-      <Subtitle text='Así aseguramos que tu presencia online esté bien respaldada' />
-      <div class='sectionPorqNecesitoWeb__numbers'>
-        <SimpleNumber
-          number={1}
-          title='Te ayudamos a elegir el dominio adecuado: '
-          text='Buscamos un nombre de dominio que represente bien a tu marca y comprobamos que esté disponible. Una vez definido, lo registramos a tu nombre para que tengas el control total.'
-        />
-        <SimpleNumber
-          number={2}
-          title='Seleccionamos el mejor plan de hosting según tu proyecto: '
-          text='Analizamos las necesidades de tu web (tipo de proyecto, tráfico esperado) para elegir el plan de hosting más adecuado. Configuramos el servidor para garantizar la máxima velocidad y rendimiento.'
-        />
-        <SimpleNumber
-          number={3}
-          title='Instalación y configuración del certificado SSL: '
-          text='Este paso protege los datos que se envían desde y hacia tu sitio, garantizando la seguridad y mejorando tu SEO.'
-        />
-        <SimpleNumber
-          number={4}
-          title='Configuramos tus cuentas de correo con dominio propio: '
-          text='Creamos y configuramos tus cuentas de correo electrónico personalizadas con tu propio dominio (ej., info@tuempresa.com).'
-        />
-        <SimpleNumber
-          number={5}
-          title='Soporte técnico continuo: '
-          text='stamos disponibles para resolver cualquier duda o incidencia relacionada con tu hosting y dominio, asegurando que tu web esté siempre operativa.'
-        />
-      </div>
-    </article>
+    <div class='proceso'>
+      <TitleSecondary
+        text='Nuestro proceso para gestionar tu hosting y dominio web'
+        description='En AstracodeLAB, te liberamos de las complejidades técnicas del hosting y dominio. Sabemos que estas cuestiones técnicas pueden quitarte tiempo o generar dudas. Por eso lo gestionamos de forma integral, para que puedas centrarte en tu negocio sin preocuparte por la parte técnica.'
+      />
+      <article class='proceso__numbers'>
+        <Subtitle text='Así aseguramos que tu presencia online esté bien respaldada' />
+        <div class='sectionPorqNecesitoWeb__numbers'>
+          <SimpleNumber
+            number={1}
+            title='Te ayudamos a elegir el dominio adecuado: '
+            text='Buscamos un nombre de dominio que represente bien a tu marca y comprobamos que esté disponible. Una vez definido, lo registramos a tu nombre para que tengas el control total.'
+          />
+          <SimpleNumber
+            number={2}
+            title='Seleccionamos el mejor plan de hosting según tu proyecto: '
+            text='Analizamos las necesidades de tu web (tipo de proyecto, tráfico esperado) para elegir el plan de hosting más adecuado. Configuramos el servidor para garantizar la máxima velocidad y rendimiento.'
+          />
+          <SimpleNumber
+            number={3}
+            title='Instalación y configuración del certificado SSL: '
+            text='Este paso protege los datos que se envían desde y hacia tu sitio, garantizando la seguridad y mejorando tu SEO.'
+          />
+          <SimpleNumber
+            number={4}
+            title='Configuramos tus cuentas de correo con dominio propio: '
+            text='Creamos y configuramos tus cuentas de correo electrónico personalizadas con tu propio dominio (ej., info@tuempresa.com).'
+          />
+          <SimpleNumber
+            number={5}
+            title='Soporte técnico continuo: '
+            text='stamos disponibles para resolver cualquier duda o incidencia relacionada con tu hosting y dominio, asegurando que tu web esté siempre operativa.'
+          />
+        </div>
+      </article>
+    </div>
+    <BannerCta
+      titulo='¿Preparado para que tu web tenga la estabilidad y el respaldo que necesita?'
+      descripcion='Tener un dominio claro y un hosting bien configurado es lo que permite que tu sitio funcione bien, cargue rápido y esté siempre disponible para quienes te buscan. En AstracodeLAB te acompañamos en todo el proceso. Nos aseguramos de que tu web tenga el soporte técnico necesario desde el primer día, con soluciones pensadas para que crezcas con estabilidad.'
+      texto='¿Necesitas un hosting rápido y un dominio profesional? Agenda tu reunión gratuita y empecemos.'
+      className='linkSecondaryGreen'
+    />
+    <section class='preguntas'>
+      <FaqsSection
+        titulo='Preguntas frecuentes sobre Hosting y Dominio web'
+        description='Aquí resolvemos algunas de las dudas más comunes sobre el hosting y dominio de tu página web:'
+        faqs={faqsHosting}
+      />
+    </section>
+    <Contact />
   </div>
-  <BannerCta
-    titulo='¿Preparado para que tu web tenga la estabilidad y el respaldo que necesita?'
-    descripcion='Tener un dominio claro y un hosting bien configurado es lo que permite que tu sitio funcione bien, cargue rápido y esté siempre disponible para quienes te buscan. En AstracodeLAB te acompañamos en todo el proceso. Nos aseguramos de que tu web tenga el soporte técnico necesario desde el primer día, con soluciones pensadas para que crezcas con estabilidad.'
-    texto='¿Necesitas un hosting rápido y un dominio profesional? Agenda tu reunión gratuita y empecemos.'
-    className='linkSecondaryGreen'
-  />
-  <section class='preguntas'>
-    <FaqsSection
-      titulo='Preguntas frecuentes sobre Hosting y Dominio web'
-      description='Aquí resolvemos algunas de las dudas más comunes sobre el hosting y dominio de tu página web:'
-      faqs={faqsHosting}
-    />
-  </section>
-  <Contact />
 </Layout>

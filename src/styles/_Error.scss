@@ -28,7 +28,7 @@
   color: $text-bg-white;
   display: flex;
   gap: 10px;
-
+	margin-bottom: 1rem;
 
   @media (min-width: 768px) {
     font-size: map.get($Body-tablet, 'font-size');
@@ -52,7 +52,7 @@
     font-weight: map.get($Body-desktop-xl, 'font-weight');
     letter-spacing: map.get($Body-desktop-xl, 'letter-spacing');
   }
-		margin-bottom: 1rem;
+		
 	}
 
 	&__button {
