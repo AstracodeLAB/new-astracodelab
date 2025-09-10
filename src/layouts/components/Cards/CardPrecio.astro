@@ -84,7 +84,7 @@ const pricingPlans = [
               ))}
             </ul>
             <div class='carousel-button-container'>
-              <Buttons className={plan.highlighted ? 'btnSecondaryDark' : 'btnSecondaryLight'}>
+              <Buttons href='/#contact' className={plan.highlighted ? 'btnSecondaryDark' : 'btnSecondaryLight'}>
                 Solicitar información
               </Buttons>
             </div>
@@ -140,7 +140,10 @@ const pricingPlans = [
               </ul>
 
               <div class='carousel-button-container'>
-                <Buttons className={`btnSecondaryLight ${plan.highlighted ? 'btnSecondaryDark' : 'btnSecondaryLight'}`}>
+                <Buttons
+                  href='/#contact'
+                  className={`btnSecondaryLight ${plan.highlighted ? 'btnSecondaryDark' : 'btnSecondaryLight'}`}
+                >
                   Solicitar información
                 </Buttons>
               </div>

@@ -6,7 +6,6 @@
 // ===========================
 .card-testimonio {
   background: $cardWhite;
-  border-radius: 12px;
   box-shadow: 0 1px 40px 0 rgba(42, 17, 96, 0.2);
   // box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 40px 20px;
@@ -14,17 +13,23 @@
   max-width: 400px;
   margin: 0 auto;
 
+  @media (min-width: 400px) {
+  border-radius: 12px;
+  }
+
   @media (min-width: 768px) {
     padding: 2.5rem 2rem;
     max-width: 550px;
   }
 
   @media (min-width: 1024px) {
-    max-width: 100%;
-    width: 100%;
+    max-width: 904px;
     padding: 3rem;
   }
-
+  @media (min-width: 1440px) {
+    max-width: 1024px;
+  }
+  
   &__header {
     margin-bottom: 2rem;
 
