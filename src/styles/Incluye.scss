@@ -82,6 +82,7 @@
     display: block;
     margin: 20px auto;
     box-shadow: $shadow;
+    border-radius: 15px;
 
     @media (min-width: 1024px) {
       margin-bottom: 0.1px;
