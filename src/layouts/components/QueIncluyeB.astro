@@ -1,0 +1,46 @@
+---
+import TitleSecondary from './Titles/TitleSecondary.astro';
+const { title, paragraphs = [], image } = Astro.props;
+---
+
+<section class='incluye'>
+  <div class='incluye__grid'>
+    
+    <div class='incluye__col1'>
+      <div class='incluye__title'>
+        <TitleSecondary text={title} />
+      </div>
+      {paragraphs[0] && <p class='incluye__text' set:html={paragraphs[0]}></p>}
+
+     
+      <div class='incluye__extra-col1'>
+        {paragraphs[1] && <p class='incluye__text' set:html={paragraphs[1]}></p>}
+        {paragraphs[2] && <p class='incluye__text' set:html={paragraphs[2]}></p>}
+      </div>
+    </div>
+    
+    
+    {image && (
+      <div class='incluye__col2'>
+        <img src={image} alt='Imagen relacionada' class='incluye__image' />
+
+        <!-- Párrafo 4 -->
+        <div class='incluye__extra-col2'>
+          
+        {paragraphs[3] && <p class='incluye__text' set:html={paragraphs[3]}></p>}
+        {paragraphs[4] && <p class="incluye__full" set:html={paragraphs[4]}></p>}
+        {paragraphs[5] && <p class="incluye__full" set:html={paragraphs[5]}></p>}
+        </div>
+      </div>
+    )}
+  </div>
+
+  
+{paragraphs[6] && <p class="incluye__full" set:html={paragraphs[6]}></p>}
+ 
+<div class="incluye__resto">
+  {paragraphs.slice(1).map((p) => (
+    <p class='incluye__text' set:html={p}></p>
+  ))}
+</div>
+</section>
