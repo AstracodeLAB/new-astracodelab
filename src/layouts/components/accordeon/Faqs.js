@@ -63,12 +63,12 @@ export const faqsWebCorporate = [
   {
     titulo: '¿Por qué es tan importante el mantenimiento web?',
     contenido:
-      'El mantenimiento web es, a menudo, la pieza olvidada en el éxito digital de una empresa, pero es absolutamente crucial. Piensa en tu web corporativa como en tu coche: si no le haces revisiones periódicas, cambias el aceite o te aseguras de que todo funciona bien, tarde o temprano se estropeará o no rendirá como debería. Lo mismo ocurre con tu página web.<br> <br>En Astracodelab, disponemos de planes de mantenimiento web corporativo continuos para asegurar que tu sitio esté siempre seguro, actualizado y funcionando a pleno rendimiento. Puedes consultar nuestros planes de mantenimiento aquí.',
+      'El mantenimiento web es, a menudo, la pieza olvidada en el éxito digital de una empresa, pero es absolutamente crucial. Piensa en tu web corporativa como en tu coche: si no le haces revisiones periódicas, cambias el aceite o te aseguras de que todo funciona bien, tarde o temprano se estropeará o no rendirá como debería. Lo mismo ocurre con tu página web.<br> <br>En Astracodelab, disponemos de planes de mantenimiento web corporativo continuos para asegurar que tu sitio esté siempre seguro, actualizado y funcionando a pleno rendimiento. Puedes consultar nuestros planes de mantenimiento <a href=/>aquí</a>.',
   },
   {
     titulo: '¿El servicio de web corporativa incluye dominio y hosting?',
     contenido:
-      'Sí, nuestros servicios de creación de web corporativa profesional incluyen la gestión inicial y configuración de tu <b>dominio y hosting</b>. Esto significa que:<br>- Gestionamos la activación o migración de tu dominio: Si ya tienes un dominio, nos ocupamos de migrarlo y si necesitas uno nuevo, te asesoramos en la elección y lo registramos a tu nombre.<br>Tu web corporativa se alojará en servidores optimizados para garantizar una velocidad de carga excepcional y la máxima fiabilidad. De esta forma, no tienes que preocuparte por buscar proveedores externos ni por la configuración técnica. Nos aseguramos de que todos los elementos fundamentales de tu presencia digital estén perfectamente integrados y optimizados desde el inicio.',
+      'Sí, nuestros servicios de creación de web corporativa profesional incluyen la gestión inicial y configuración de tu <b>dominio y hosting</b>. Esto significa que:<br>- Gestionamos la activación o migración de tu dominio: Si ya tienes un dominio, nos ocupamos de migrarlo y si necesitas uno nuevo, te asesoramos en la elección y lo registramos a tu nombre.<br>- Tu web corporativa se alojará en servidores optimizados para garantizar una velocidad de carga excepcional y la máxima fiabilidad. De esta forma, no tienes que preocuparte por buscar proveedores externos ni por la configuración técnica.<br>- Nos aseguramos de que todos los elementos fundamentales de tu presencia digital estén perfectamente integrados y optimizados desde el inicio.',
   },
   {
     titulo: '¿Qué pasa si necesito soporte después del lanzamiento?',
@@ -100,7 +100,7 @@ export const faqsEcommerce = [
   {
     titulo: '¿Ofrecéis mantenimiento continuo para la tienda online una vez esté publicada?',
     contenido:
-      'Sí. Una vez lanzada tu <b>tienda online</b>, el <b> mantenimiento web</b> es fundamental para su éxito a largo plazo. AstracodeLAB, ofrece <b>planes de mantenimiento para e-commerce</b>. Puedes consultar nuestros planes aquí [enlazar a la página de mantenimiento].',
+      'Sí. Una vez lanzada tu <b>tienda online</b>, el <b> mantenimiento web</b> es fundamental para su éxito a largo plazo. AstracodeLAB, ofrece <b>planes de mantenimiento para e-commerce</b>. Puedes consultar nuestros planes <a href=/>aquí</a>.',
   },
 ];
 
