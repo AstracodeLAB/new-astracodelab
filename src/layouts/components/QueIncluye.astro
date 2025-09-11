@@ -10,9 +10,7 @@ const { title, intro, paragraphs = [], image } = Astro.props;
         <TitleSecondary text={title} />
     </div>
 
-    <div class='incluye__intro-text'>
-      {intro}
-    </div>
+    <div class='incluye__intro-text' set:html={intro}></div>
     
     <div class='incluye__intro-img'>
       <img class="incluye__intro-img-item" src={image} alt="">
