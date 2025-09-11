@@ -5,7 +5,7 @@
 // BENEFIT CARD
 // ===========================
 .benefit-card {
-  background: white;
+  background: $cardWhite;
   border-radius: 12px;
   padding: 0;
   color: $title-color;
@@ -13,32 +13,38 @@
 
   @media (min-width: 768px) {
     border-radius: 16px;
-    height: 100%;
+    //width: ;: 100%;
     display: flex;
     flex-direction: column;
+    //flex: 1 1 294px;
+    flex-wrap: wrap;
   }
   
   @media(min-width: 1024px) {
-    width: 295px;
-    min-height: 507px;
+    width: 294px;
+    flex: 1 1 294px;
+  }
+  @media(min-width: 1440px) {
+    width: 328px;
+    
   }
 
   &__title {
     font-family: $font-primary;
     font-size: map.get($Body-mobile, 'font-size');
     line-height: map.get($H3-mobile, 'line-height');
-    font-weight: map.get($H3-mobile, 'font-weight');
+    //font-weight: map.get($H3-mobile, 'font-weight');
     letter-spacing: map.get($H3-mobile, 'letter-spacing');
     color: white;
-    background: $gradientBlue;
+    background: $gradientBlueVertical;
     margin: 0;
-    padding: 1.5rem;
+    padding: 0.5rem 1.5rem 0.5rem 1.5rem;
     border-radius: 12px 12px 0 0;
 
     @media (min-width: 768px) {
       font-size: map.get($Body-tablet, 'font-size');
       line-height: map.get($H3-tablet, 'line-height');
-      font-weight: map.get($H3-tablet, 'font-weight');
+     
       letter-spacing: map.get($H3-tablet, 'letter-spacing');
 
       border-radius: 16px 16px 0 0;
@@ -47,9 +53,12 @@
     @media (min-width: 1024px) {
       font-size: map.get($Body-desktop, 'font-size');
       line-height: map.get($H3-desktop, 'line-height');
-      font-weight: map.get($H3-desktop, 'font-weight');
+      text-align: center;
       letter-spacing: map.get($H3-desktop, 'letter-spacing');
-
+      height: 90px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
   }
 
@@ -79,7 +88,7 @@
       line-height: map.get($Body-desktop, 'line-height');
       font-weight: map.get($Body-desktop, 'font-weight');
       letter-spacing: map.get($Body-desktop, 'letter-spacing');
-      padding: 1.25rem;
+      padding: 1.8rem;
     }
   }
 }
