@@ -154,13 +154,14 @@
   font-weight: map.get($Body-mobile, 'font-weight');
   letter-spacing: map.get($Body-mobile, 'letter-spacing');
   color: $text-bg-color;
-  margin: 0.5rem 0;
+  margin: 0.625rem 0;
 
   @media (min-width: 768px) {
     font-size: map.get($Body-tablet, 'font-size');
     line-height: map.get($Body-tablet, 'line-height');
     font-weight: map.get($Body-tablet, 'font-weight');
     letter-spacing: map.get($Body-tablet, 'letter-spacing');
+    margin: 1.25rem 0;
   }
   @media (min-width: 1024px) {
     font-size: map.get($Body-desktop, 'font-size');

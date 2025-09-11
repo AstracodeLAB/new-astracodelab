@@ -22,8 +22,9 @@ import Buttons from './Buttons/Buttons.astro';
     </div>
 
     <div class='contact__card-bottom'>
-      <form class='contact__form'>
+      <form class='contact__form' action='https://formspree.io/f/xzzaoaya' method='POST'>
         <div class='contact__form-field'>
+          <input type='hidden' name='redirect' value='https://astracodelab.com/sent' />
           <input
             type='text'
             id='name'
