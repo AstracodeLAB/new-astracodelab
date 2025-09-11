@@ -14,61 +14,64 @@ import BannerCta from '../../layouts/components/Banners/BannerCta.astro';
 ---
 
 <Layout title='Servicios de diseño y desarrollo web'>
-  <HeroSecondary
+  <div class="container_main_services">
+    <HeroSecondary
     title='Web corporativa profesional'
     subtitle='La base digital para el éxito de tu marca'
     text='En el panorama empresarial actual, una web corporativa es mucho más que una simple tarjeta de presentación online. Es un pilar fundamental para tener presencia digital, conectar con tu audiencia y generar oportunidades de negocio. En AstracodeLAB, nos especializamos en el diseño y desarrollo de webs corporativas profesionales y a medida que reflejan la esencia de tu marca y comunican tu mensaje con claridad.'
     image={HeroWebCorporativa}
     alt='Imagen de diseño web corporativa'
-  />
-  <section class='why-web-corporativa-section'>
-    <TitleSecondary
-      text='¿Por qué tu empresa necesita una web corporativa profesional y optimizada?'
-      description='En un mercado tan competitivo, la primera impresión de tu web es crucial. Tu web corporativa tiene que ser intuitiva y accesible, pensada específicamente para guiar a tus visitantes hacía la acción que aporte más valor a tu negocio:  ya sea solicitar más información, agendar una llamada o convertir esos servicios que ofreces en oportunidades.'
     />
-    <BenefitsSection
-      titulo='La importancia de una web corporativa estratégica:'
-      benefits={[
-        {
-          titulo: 'Refuerza la credibilidad y confianza:',
-          descripcion:
-            'Una web corporativa profesional transmite seriedad, estabilidad y confianza. Los clientes potenciales buscan información y validación online; un sitio bien estructurado y con un diseño cuidado es sinónimo de profesionalidad.',
-        },
-        {
-          titulo: 'Genera oportunidades de negocio: ',
-          descripcion:
-            'Va más allá de ser un simple catálogo. Una web corporativa efectiva está diseñada para guiar al visitante hacia la acción, ya sea una solicitud de presupuesto, una llamada, una suscripción a tu newsletter o la descarga de un recurso, convirtiendo visitas en leads cualificados.',
-        },
-        {
-          titulo: 'Soporte al cliente y comunicación eficaz: ',
-          descripcion:
-            'Una buena web permite integrar funcionalidades de soporte, secciones de preguntas frecuentes o formularios de contacto que mejoran la experiencia del usuario y optimizan la gestión de consultas, liberando un tiempo valioso para que puedas invertir en otras tareas.',
-        },
+    <section class='why-web-corporativa-section'>
+      <TitleSecondary
+        text='¿Por qué tu empresa necesita una web corporativa profesional y optimizada?'
+        description='En un mercado tan competitivo, la primera impresión de tu web es crucial. Tu web corporativa tiene que ser intuitiva y accesible, pensada específicamente para guiar a tus visitantes hacía la acción que aporte más valor a tu negocio:  ya sea solicitar más información, agendar una llamada o convertir esos servicios que ofreces en oportunidades.'
+      />
+      <BenefitsSection
+        titulo='La importancia de una web corporativa estratégica:'
+        benefits={[
+          {
+            titulo: 'Refuerza la credibilidad y confianza:',
+            descripcion:
+              'Una web corporativa profesional transmite seriedad, estabilidad y confianza. Los clientes potenciales buscan información y validación online; un sitio bien estructurado y con un diseño cuidado es sinónimo de profesionalidad.',
+          },
+          {
+            titulo: 'Genera oportunidades de negocio: ',
+            descripcion:
+              'Va más allá de ser un simple catálogo. Una web corporativa efectiva está diseñada para guiar al visitante hacia la acción, ya sea una solicitud de presupuesto, una llamada, una suscripción a tu newsletter o la descarga de un recurso, convirtiendo visitas en leads cualificados.',
+          },
+          {
+            titulo: 'Soporte al cliente y comunicación eficaz: ',
+            descripcion:
+              'Una buena web permite integrar funcionalidades de soporte, secciones de preguntas frecuentes o formularios de contacto que mejoran la experiencia del usuario y optimizan la gestión de consultas, liberando un tiempo valioso para que puedas invertir en otras tareas.',
+          },
+        ]}
+      />
+    </section>
+    <Estrategia />
+    <Conector />
+    <QueIncluye
+      title='¿Qué incluye nuestro servicio de creación de web corporativa?'
+      paragraphs={[
+        'En AstracodeLAB, nos encargamos de cada etapa del proceso para que no tengas que preocuparte por los aspectos técnicos. Te ofrecemos un servicio profesional y completo que asegurará tu presencia digital: ',
+        '<b>Diseño Exclusivo y Personalizado:</b> Tu web corporativa reflejará la esencia de tu marca con un diseño único, sin plantillas.',
+        '<b>Estructura Web Optimada:</b> Navegación intuitiva y arquitectura de contenidos pensada para el usuario y los motores de búsqueda.',
+        '<b>Diseño para todos los dispositivos:</b> Tu web corporativa se verá y funcionará perfectamente en ordenadores, tablets y móviles.',
+        '<b>Integración de Funcionalidades Clave:</b> Formularios de contacto, mapas interactivos, y más, según tus necesidades.',
+        '<b>Soporte Post-Lanzamiento:</b> Tu tranquilidad es clave. Por eso, te acompañamos y  ofrecemos asistencia durante el primer mes tras la publicación de tu web, con planes de mantenimiento  continuo disponibles, si quieres olvidarte de la parte técnica a largo plazo.',
       ]}
+      image='/src/images/web-corporativa3.jpg'
     />
-  </section>
-  <Estrategia />
-  <Conector />
-  <QueIncluye
-    title='¿Qué incluye nuestro servicio de creación de web corporativa?'
-    paragraphs={[
-      'En AstracodeLAB, nos encargamos de cada etapa del proceso para que no tengas que preocuparte por los aspectos técnicos. Te ofrecemos un servicio profesional y completo que asegurará tu presencia digital: ',
-      '<b>Diseño Exclusivo y Personalizado:</b> Tu web corporativa reflejará la esencia de tu marca con un diseño único, sin plantillas.',
-      '<b>Estructura Web Optimada:</b> Navegación intuitiva y arquitectura de contenidos pensada para el usuario y los motores de búsqueda.',
-      '<b>Diseño para todos los dispositivos:</b> Tu web corporativa se verá y funcionará perfectamente en ordenadores, tablets y móviles.',
-      '<b>Integración de Funcionalidades Clave:</b> Formularios de contacto, mapas interactivos, y más, según tus necesidades.',
-      '<b>Soporte Post-Lanzamiento:</b> Tu tranquilidad es clave. Por eso, te acompañamos y  ofrecemos asistencia durante el primer mes tras la publicación de tu web, con planes de mantenimiento  continuo disponibles, si quieres olvidarte de la parte técnica a largo plazo.',
-    ]}
-    image='https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'
-  />
-  <BannerCta
-    titulo='¿Listo para impulsar tu marca con una web corporativa?'
-    descripcion='En AstracodeLAB, somos tu agencia de diseño web. Nos especializamos en transformar tus ideas en una realidad digital.'
-    texto='¿Quieres una web corporativa? Agenda tu reunión gratuita'
-    className='linkSecondaryGreen'
-  />
+    <BannerCta
+      titulo='¿Listo para impulsar tu marca con una web corporativa?'
+      descripcion='En AstracodeLAB, somos tu agencia de diseño web. Nos especializamos en transformar tus ideas en una realidad digital.'
+      texto='¿Quieres una web corporativa? Agenda tu reunión gratuita'
+      className='linkSecondaryGreen'
+    />
 
-  <FaqsSection titulo='Preguntas frecuentes sobre la creación de webs corporativas' faqs={faqsWebCorporate} />
+    <FaqsSection titulo='Preguntas frecuentes sobre la creación de webs corporativas' faqs={faqsWebCorporate} />
 
-  <Contact />
+    <Contact />
+  </div>
+  
 </Layout>

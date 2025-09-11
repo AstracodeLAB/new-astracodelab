@@ -1,18 +1,25 @@
 ---
-
 import Layout from '../layouts/Layout.astro';
 import Footer from '../layouts/partials/Footer.astro';
-
 import Header from '../layouts/partials/Header.astro';
+import ErrorA from './../images/errorA.svg';
+import ErrorB from './../images/errorB.svg';
+import Buttons from '../layouts/components/Buttons/Buttons.astro';
 
+// Array con las imágenes
+const errorImages = [ErrorA, ErrorB];
+
+// Elegir una aleatoriamente
+const randomImage = errorImages[Math.floor(Math.random() * errorImages.length)];
 ---
 <Layout>
-	
-	<main class="error">
-		<h1 class="error_title">404</h1>
-		<p class="error_text">Lo siento, no podemos encontrar la página que estás buscando.
+    <main class="error">
+        
+        <img src={randomImage.src} alt="Imagen de error" class="error__img">
+        <p class="error__text">
+            Lo siento, no podemos encontrar la página que estás buscando.
         </p>
-		<a href='/' class='error_button'>Volver al inicio</a>
-	</main>
-	<Footer />
+        <Buttons className="btnPrimaryLight" href="/" >Volver al inicio</Buttons>
+    </main>
+    <Footer />
 </Layout>

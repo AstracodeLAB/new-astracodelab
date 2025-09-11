@@ -23,13 +23,13 @@
 
     @media (min-width: 768px) {
       display: grid;
-      grid-template-columns: 3fr 1fr;
-      gap: 2rem;
+      grid-template-columns: 3fr 2fr;
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: 1005px) {
       grid-template-columns: 1fr 1fr;
       align-items: start;
+      gap: 1.5rem;
     }
   }
 
@@ -78,13 +78,23 @@
   }
 
   &__image {
-    max-width: 100%;
+    max-width: 250px;
     display: block;
     margin: 20px auto;
     box-shadow: $shadow;
+    border-radius: 15px;
 
-    @media (min-width: 1024px) {
+    @media (min-width: 768px) {
+      // max-width: 300px;
+      margin-top: 80px;
+      transform: rotate(-90deg);
+    }
+
+    @media (min-width: 1005px) {
       margin-bottom: 0.1px;
+      transform: rotate(0);
+      margin-top: 0;
+      max-width: 100%;
     }
   }
 
@@ -129,13 +139,13 @@
     }
   }
   &__optional {
-  padding-top: 20px;
-  font-family: $font-primary;
-  color: $text-bg-white;
-  letter-spacing: map.get($Body-mobile, letter-spacing);
-  line-height: map.get($Body-mobile, line-height);
-  font-size: map.get($Body-mobile, font-size);
-  font-weight: map.get($Body-mobile, font-weight);
+    padding-top: 20px;
+    font-family: $font-primary;
+    color: $text-bg-white;
+    letter-spacing: map.get($Body-mobile, letter-spacing);
+    line-height: map.get($Body-mobile, line-height);
+    font-size: map.get($Body-mobile, font-size);
+    font-weight: map.get($Body-mobile, font-weight);
 
     @media (min-width: 768px) {
       letter-spacing: map.get($Body-tablet, letter-spacing);
