@@ -14,7 +14,7 @@ import CardTestimonio from '../components/Cards/CardTestimonio.astro';
 import WorkSection from '../components/WorkSection.astro';
 import FaqsSection from '../components/FaqsSection.astro';
 import Contact from '../components/Contact.astro';
-import { faqsHome } from '../../layouts/components/accordeon/faqs.js';
+import { faqs } from '../../data/faqsHome.js';
 ---
 
 <main class='mainHome'>
@@ -138,6 +138,6 @@ import { faqsHome } from '../../layouts/components/accordeon/faqs.js';
     />
   </section>
 
-  <FaqsSection titulo='Preguntas frecuentes' faqs={faqsHome} />
+  <FaqsSection titulo='Preguntas frecuentes' faqs={faqs} />
   <Contact titulo='Contacto' />
 </main>
