@@ -10,6 +10,7 @@ import BannerCta from '../../layouts/components/Banners/BannerCta.astro';
 import FaqsSection from '../../layouts/components/FaqsSection.astro';
 import { faqsMultilang } from '../../layouts/components/accordeon/Faqs.js';
 import Contact from '../../layouts/components/Contact.astro';
+import idiomas from '../../images/idiomas.jpg';
 
 const benefits = [
   {
@@ -67,7 +68,7 @@ const benefits = [
       <QueIncluye
         title='¿Qué incluye nuestro servicio de creación de webs multilingües?'
         intro='En AstracodeLAB te ofrecemos una solución completa para tu web multilingüe.'
-        image='/src/images/idiomas.jpg'
+        image={idiomas.src}
         paragraphs={[
           '<b>Desarrollo de Estructura Multilingüe Optimizada:</b> Implementación de la arquitectura técnica ideal para la gestión de idiomas.',
           '<b>Configuración precisa para buscadores internacionales:</b> Implementación técnica crucial para el SEO internacional y para guiar a los motores de búsqueda.',

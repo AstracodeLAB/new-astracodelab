@@ -9,6 +9,7 @@ import FaqsSection from '../../layouts/components/FaqsSection.astro';
 import Contact from '../../layouts/components/Contact.astro';
 import { faqsReservas } from '../../layouts/components/accordeon/Faqs.js';
 import BannerCta from '../../layouts/components/Banners/BannerCta.astro';
+import reservas from '../../images/reservas.jpg';
 ---
 
 <Layout title='AstracodeLAB - Sistemas de Reservas Online'>
@@ -74,7 +75,7 @@ import BannerCta from '../../layouts/components/Banners/BannerCta.astro';
         '<b>Optimización para dispositivos vóviles (Responsive):</b>Tus clientes podrán reservar cómodamente desde cualquier smartphone o tablet.',
         '<b>Soporte Post-Implementación:</b> Acompañamiento y asistencia durante el primer mes tras la puesta en marcha.',
       ]}
-      image='/src/images/reservas.jpg'
+      image={reservas.src}
       src='Persona trabajando desde casa con una laptop y una agenda tipo libro abierto, pasando citas de la agenda al calendario manualmente.'
     />
     <BannerCta

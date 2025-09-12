@@ -15,6 +15,9 @@ import WorkSection from '../components/WorkSection.astro';
 import FaqsSection from '../components/FaqsSection.astro';
 import Contact from '../components/Contact.astro';
 import { faqs } from '../../data/faqsHome.js';
+import avatar1 from '../../images/avatar1.jpg';
+import avatar2 from '../../images/avatar2.jpg';
+import avatar3 from '../../images/avatar3.jpg';
 ---
 
 <main class='mainHome'>
@@ -98,19 +101,19 @@ import { faqs } from '../../data/faqsHome.js';
       subtitulo='Quienes mejor hablan de nosotras son nuestros clientes'
       testimonials={[
         {
-          imagen: '/src/images/avatar1.jpg',
+          imagen: {avatar1},
           testimonial:
             'Muy contenta con el trabajo de esta empresa. Les di el contacto para un familiar y ha quedado encantado. Estuvieron en todo momento en contacto, supieron plasmar sus ideas y, además, aportaron mucha creatividad al proyecto. También me dice que son encantadoras y que, desde el primer momento, ya sabía que estaba en buenas manos. Las volveré a recomendar sin duda.',
           alt: 'Avatar de usuario. Ilustración 3D de un personaje con cabello morado en coletas, chaqueta amarilla y gafas de sol en la cabeza, sobre un fondo verde.',
         },
         {
-          imagen: '/src/images/avatar2.jpg',
+          imagen: {avatar2},
           testimonial:
             'Ha sido genial trabajar con el equipo AstraCodeLab. Desde el principio han mostrado una gran profesionalidad y han cumplido con todo lo acordado y plazos propuestos.Su implicación en el proyecto ha hecho obtener un diseño de la web maravilloso. Nos encanta el resultado.Sin duda cuento con ellas para futuros trabajos.',
           alt: 'Avatar de usuario. Ilustración 3D de un personaje con gorra celeste y camiseta azul, sobre un fondo verde.',
         },
         {
-          imagen: '/src/images/avatar3.jpg',
+          imagen: {avatar3},
           testimonial:
             'Muy satisfecho con el resultado obtenido, la web que me han diseñado funciona estupendamente y a un precio muy competitivo. El trato recibido estupendo, no se puede ser más profesional.',
           alt: 'Avatar de usuario. Ilustración 3D de un personaje con cabello pelirrojo y sudadera morada, sobre un fondo azul oscuro. ',
@@ -134,7 +137,7 @@ import { faqs } from '../../data/faqsHome.js';
       title='¿Tienes una idea que no encuentras en estos planes o no sabes por dónde empezar?'
       text='Cuéntanosla y te guiaremos hacia la solución perfecta para tu proyecto.'
       buttonText='¿Hablamos?'
-      buttonHref='/contacto'
+      buttonHref='/#contact'
     />
   </section>
 

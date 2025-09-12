@@ -11,6 +11,7 @@ import FaqsSection from '../../layouts/components/FaqsSection.astro';
 import Contact from '../../layouts/components/Contact.astro';
 import { faqsMantenimiento } from '../../layouts/components/accordeon/Faqs.js';
 import BannerCta from '../../layouts/components/Banners/BannerCta.astro';
+import soporte from '../../images/soporte.jpg';
 ---
 
 <Layout title='AstracodeLAB - Mantenimiento y soporte web'>
@@ -79,7 +80,7 @@ import BannerCta from '../../layouts/components/Banners/BannerCta.astro';
         '<b>Soporte técnico prioritario:</b> Si necesitas ayuda, tienes acceso rápido a nuestro equipo. Respondemos con claridad y te damos soluciones concretas.',
         '<b>Pequeñas modificaciones de contenido:</b> Flexibilidad para realizar ajustes rápidos sin coste adicional.',
       ]}
-      image='/src/images/soporte.jpg'
+      image={soporte.src}
       alt='Equipo de audio para comunicación y soporte en línea, mostrando auriculares con micrófono junto a una computadora portátil.'
     />
     <BannerCta

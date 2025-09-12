@@ -1,6 +1,7 @@
 ---
 import Buttons from './Buttons/Buttons.astro';
 import TitleSecondary from './Titles/TitleSecondary.astro';
+import heroIlustration from '../../images/heroIlustration.svg';
 ---
 
 <section class='listo'>
@@ -9,7 +10,7 @@ import TitleSecondary from './Titles/TitleSecondary.astro';
   </div>
   <div class='listo__container'>
     <div class='listo__image'>
-      <img src='/src/images/heroIlustration.svg' alt='Ilustración de un ordenador portátil con una ventana web abierta y un botón de Click Here, acompañado de un      cohete
+      <img src={heroIlustration.src} alt='Ilustración de un ordenador portátil con una ventana web abierta y un botón de Click Here, acompañado de un      cohete
         despegando.' />
     </div>
     <div class='listo__content'>

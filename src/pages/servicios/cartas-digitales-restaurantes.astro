@@ -5,7 +5,7 @@ import Layout from '../../layouts/Layout.astro';
 import TitleSecondary from '../../layouts/components/Titles/TitleSecondary.astro';
 import BenefitsSection from '../../layouts/components/BenefitsSection.astro';
 import QueIncluye from '../../layouts/components/QueIncluye.astro';
-import ImgIncluye from '../../images/backgroundImageSectionWhy.jpg';
+import carta from '../../images/carta.jpg';
 import BannerCta from '../../layouts/components/Banners/BannerCta.astro';
 import FaqsSection from '../../layouts/components/FaqsSection.astro';
 import { faqsCartasDigitales } from '../../layouts/components/accordeon/Faqs.js';
@@ -60,7 +60,7 @@ const benefits = [
 
     <QueIncluye
       title='¿Qué incluye nuestro servicio de diseño de cartas digitales?'
-      image='/src/images/carta.jpg'
+      image={carta.src}
       intro='En AstracodeLAB te ofrecemos una solución completa para la carta digital de tu restaurante.'
       paragraphs={[
         '<b>Diseño exclusivo y personalizado:</b> Tu carta digital tendrá una estética única que refleje la personalidad de tu restaurante.',
