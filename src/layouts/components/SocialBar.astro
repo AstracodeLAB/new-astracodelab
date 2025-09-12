@@ -1,6 +1,6 @@
 ---
 const { className = "" } = Astro.props;
-
+import Facebook from './icons/facebook.svg';
 import Linkedin from './icons/linkedin.svg';
 import Instagram from './icons/insta.svg';
 import Threads from './icons/threads.svg';
@@ -10,7 +10,7 @@ import Image from 'astro/components/Image.astro';
 <div class={`social-bar ${className}`}>
   <div class='social-bar__icons'>
     <a href='https://www.facebook.com/astracodelab' target='_blank'>
-      <img src="/icons/facebook.svg" alt='Facebook' />
+      <img alt='Facebook' /> <Facebook />
     </a>
     <a href='https://www.linkedin.com/company/astracodelab/' target='_blank'>
       <img src={Linkedin.src} alt='LinkedIn' />
