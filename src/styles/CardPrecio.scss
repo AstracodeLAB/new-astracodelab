@@ -465,3 +465,30 @@
 //     }
 //   }
 // }
+.containersSpans {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.65rem;
+  padding: 0 0 0 4rem;
+
+  &-month {
+    color: $text-bg-white;
+  
+  font-size: map.get($SmallText-mobile, 'font-size');
+  line-height: map.get($SmallText-mobile, 'line-height');
+  letter-spacing: map.get($SmallText-mobile, 'letter-spacing');
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    font-size: map.get($SmallText-tablet, 'font-size');
+    line-height: map.get($SmallText-tablet, 'line-height');
+    letter-spacing: map.get($SmallText-tablet, 'letter-spacing');
+  }
+
+  @media (min-width: 1024px) {
+    font-size: map.get($SmallText-desktop, 'font-size');
+    line-height: map.get($SmallText-desktop, 'line-height');
+    letter-spacing: map.get($SmallText-desktop, 'letter-spacing');
+  }
+  }
+}
