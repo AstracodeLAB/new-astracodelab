@@ -3,80 +3,91 @@ import HeroSecondary from '../../layouts/components/HeroSecondary.astro';
 import heroImgRestaurante from '../../images/restaurante.svg';
 import Layout from '../../layouts/Layout.astro';
 import TitleSecondary from '../../layouts/components/Titles/TitleSecondary.astro';
-import BenefitsSection from '../../layouts/components/BenefitsSection.astro'
+import BenefitsSection from '../../layouts/components/BenefitsSection.astro';
 import QueIncluye from '../../layouts/components/QueIncluye.astro';
 import ImgIncluye from '../../images/backgroundImageSectionWhy.jpg';
 import BannerCta from '../../layouts/components/Banners/BannerCta.astro';
 import FaqsSection from '../../layouts/components/FaqsSection.astro';
-import {faqsCartasDigitales} from '../../layouts/components/accordeon/faqs.js';
+import { faqsCartasDigitales } from '../../layouts/components/accordeon/faqs.js';
 import Contact from '../../layouts/components/Contact.astro';
 
 const benefits = [
   {
-    titulo: "Más higiene",
-    descripcion: "Evitas el manejo de menús impresos, algo cada vez más valorado por los clientes. Esto refuerza la sensación de seguridad y cuidado dentro del local.",
+    titulo: 'Más higiene',
+    descripcion:
+      'Evitas el manejo de menús impresos, algo cada vez más valorado por los clientes. Esto refuerza la sensación de seguridad y cuidado dentro del local.',
   },
   {
-    titulo: "Menú actualizado en segundos",
-    descripcion: "¿Suben los precios? ¿Hay un plato del día? ¿Se acabó un ingrediente? Actualiza tu carta digital al instante desde cualquier dispositivo, sin costes de impresión ni esperas. Tu menú siempre estará al día.",
+    titulo: 'Menú actualizado en segundos',
+    descripcion:
+      '¿Suben los precios? ¿Hay un plato del día? ¿Se acabó un ingrediente? Actualiza tu carta digital al instante desde cualquier dispositivo, sin costes de impresión ni esperas. Tu menú siempre estará al día.',
   },
   {
-    titulo: "Una experiencia más clara y completa",
-    descripcion: "Los clientes pueden acceder a tu menú de forma rápida y sencilla escaneando un código QR con su smartphone. Ofrece descripciones detalladas, fotos de alta calidad, alérgenos y opciones de idioma, todo al alcance de su mano.",
+    titulo: 'Una experiencia más clara y completa',
+    descripcion:
+      'Los clientes pueden acceder a tu menú de forma rápida y sencilla escaneando un código QR con su smartphone. Ofrece descripciones detalladas, fotos de alta calidad, alérgenos y opciones de idioma, todo al alcance de su mano.',
   },
   {
-    titulo: "Ahorro en impresión y logística",
-    descripcion: "Di adiós a los gastos recurrentes en impresión y reimpresión de menús. Una carta digital es una inversión única que te ahorrará dinero a largo plazo.",
+    titulo: 'Ahorro en impresión y logística',
+    descripcion:
+      'Di adiós a los gastos recurrentes en impresión y reimpresión de menús. Una carta digital es una inversión única que te ahorrará dinero a largo plazo.',
   },
   {
-    titulo: "Mejora tu imagen de marca",
-    descripcion: "Presentarte con una carta digital moderna transmite una actitud innovadora y cercana al cliente. Una forma efectiva de diferenciarte en un sector tan competitivo.",
+    titulo: 'Mejora tu imagen de marca',
+    descripcion:
+      'Presentarte con una carta digital moderna transmite una actitud innovadora y cercana al cliente. Una forma efectiva de diferenciarte en un sector tan competitivo.',
   },
 ];
 ---
 
-
 <Layout title='Servicios de diseño y desarrollo web'>
-  <section class="cartasDigitales">
-    <HeroSecondary title="Cartas digitales para restaurantes" subtitle="Moderniza tu menú y mejora la experiencia del cliente" text="En la industria de la hostelería, la innovación es clave para destacar. Las cartas digitales o menús QR son mucho más que una tendencia; son una herramienta esencial para modernizar tu restaurante. En AstracodeLAB, diseñamos e implementamos cartas digitales a medida que reflejan la esencia de tu marca, son fáciles de gestionar y están preparadas para impulsar la eficiencia de tu negocio." image={heroImgRestaurante} alt="Diseño web corporativo"/>  
-      
-    <article class="cartasDigitales__intro">
-      <TitleSecondary text="¿Por qué tu restaurante necesita una carta digital?" description="El cambio hacia lo digital es es evidente, también en la restauración. Un menú digital QR ofrece una imagen moderna y práctica, algo que los comensales valoran cada vez más." />
-      <BenefitsSection titulo="Beneficios clave de una carta digital profesional:" benefits={benefits} />
+  <section class='cartasDigitales'>
+    <HeroSecondary
+      title='Cartas digitales para restaurantes'
+      subtitle='Moderniza tu menú y mejora la experiencia del cliente'
+      text='En la industria de la hostelería, la innovación es clave para destacar. Las cartas digitales o menús QR son mucho más que una tendencia; son una herramienta esencial para modernizar tu restaurante. En AstracodeLAB, diseñamos e implementamos cartas digitales a medida que reflejan la esencia de tu marca, son fáciles de gestionar y están preparadas para impulsar la eficiencia de tu negocio.'
+      image={heroImgRestaurante}
+      alt='Ilustración de una persona usando un dispositivo móvil para gestionar o navegar por una carta digital de restaurante, con menús y opciones interactivas.'
+    />
+
+    <article class='cartasDigitales__intro'>
+      <TitleSecondary
+        text='¿Por qué tu restaurante necesita una carta digital?'
+        description='El cambio hacia lo digital es es evidente, también en la restauración. Un menú digital QR ofrece una imagen moderna y práctica, algo que los comensales valoran cada vez más.'
+      />
+      <BenefitsSection titulo='Beneficios clave de una carta digital profesional:' benefits={benefits} />
     </article>
-      
-    
-    <QueIncluye 
-    title="¿Qué incluye nuestro servicio de diseño de cartas digitales?"
-    image={ImgIncluye.src}
-    paragraphs={[
-    //"En AstracodeLAB te ofrecemos una solución completa para tu web multilingüe.",
-    "<b>Diseño exclusivo y personalizado:</b> Tu carta digital tendrá una estética única que refleje la personalidad de tu restaurante.",
-    "<b>Funcionalidades de alérgenos y filtros:</b> Permite a tus clientes consultar información crucial sobre ingredientes.",
-    "<b>Carga inicial de contenido:</b> Nos encargamos de la digitalización y carga de tus platos y descripciones iniciales.",
-    "<b>Estructura de menú intuitiva:</b> Categorización clara de platos y bebidas para una navegación sencilla.",
-    "<b>Soporte multilingüe (opcional):</b> Amplía tu clientela ofreciendo el menú en varios idiomas.",
-    "<b>Generación de códigos QR personalizados:</b> Códigos listos para imprimir y distribuir en tu local.",
-    "<b>Soporte post-lanzamiento: </b>Acompañamiento y asistencia durante el primer mes tras la publicación.",
-    
-    
-    ]}
+
+    <QueIncluye
+      title='¿Qué incluye nuestro servicio de diseño de cartas digitales?'
+      image='/src/images/carta.jpg'
+      intro='En AstracodeLAB te ofrecemos una solución completa para la carta digital de tu restaurante.'
+      paragraphs={[
+        '<b>Diseño exclusivo y personalizado:</b> Tu carta digital tendrá una estética única que refleje la personalidad de tu restaurante.',
+        '<b>Funcionalidades de alérgenos y filtros:</b> Permite a tus clientes consultar información crucial sobre ingredientes.',
+        '<b>Carga inicial de contenido:</b> Nos encargamos de la digitalización y carga de tus platos y descripciones iniciales.',
+        '<b>Estructura de menú intuitiva:</b> Categorización clara de platos y bebidas para una navegación sencilla.',
+        '<b>Soporte multilingüe (opcional):</b> Amplía tu clientela ofreciendo el menú en varios idiomas.',
+        '<b>Generación de códigos QR personalizados:</b> Códigos listos para imprimir y distribuir en tu local.',
+        '<b>Soporte post-lanzamiento: </b>Acompañamiento y asistencia durante el primer mes tras la publicación.',
+      ]}
+      alt='Persona usando un smartphone para navegar un menú digital de restaurante, mostrando opciones de selección de platos.'
     />
   </section>
-  <BannerCta titulo="¿Listo para modernizar tu restaurante con una carta digital?" 
-  descripcion="En AstracodeLAB desarrollamos menús digitales adaptados a tu estilo y fáciles de gestionar desde cualquier dispositivo.Haz que tu carta hable bien de ti. Mejora la forma en que presentas tus platos y ofrece a tus comensales una experiencia más práctica, visual y actual."
-  texto="¿Quieres un menú moderno y eficiente? Agenda tu reunión gratuita para tu carta digital."
-  className="linkSecondaryGreen">
-
-    </BannerCta>
-    <section class="cartasDigitalesFinal">
-      <FaqsSection titulo="Preguntas frecuentes sobre cartas digitales para restaurantes" description="Aquí resolvemos algunas de las dudas más comunes al considerar una carta digital para tu negocio:" faqs={faqsCartasDigitales}></FaqsSection>
-    </section>
-    <section class="cartasDigitalesFinal">
-      <Contact></Contact>
-    </section>
-  </div>
-  
-  
-
+  <BannerCta
+    titulo='¿Listo para modernizar tu restaurante con una carta digital?'
+    descripcion='En AstracodeLAB desarrollamos menús digitales adaptados a tu estilo y fáciles de gestionar desde cualquier dispositivo.Haz que tu carta hable bien de ti. Mejora la forma en que presentas tus platos y ofrece a tus comensales una experiencia más práctica, visual y actual.'
+    texto='¿Quieres un menú moderno y eficiente? Agenda tu reunión gratuita para tu carta digital.'
+    className='linkSecondaryGreen'
+  />
+  <section class='cartasDigitalesFinal'>
+    <FaqsSection
+      titulo='Preguntas frecuentes sobre cartas digitales para restaurantes'
+      description='Aquí resolvemos algunas de las dudas más comunes al considerar una carta digital para tu negocio:'
+      faqs={faqsCartasDigitales}
+    />
+  </section>
+  <section class='cartasDigitalesFinal'>
+    <Contact />
+  </section>
 </Layout>

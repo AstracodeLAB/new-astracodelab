@@ -36,6 +36,7 @@ import { faqsHome } from '../../layouts/components/accordeon/faqs.js';
         descripcion='Recopilamos ejemplos, funcionalidades imprescindibles y contenido disponible. Analizamos tu mercado y las búsquedas clave para definir una arquitectura enfocada al usuario.'
         imagen={imgTimeLine.src}
         descripcionSec='Creamos un prototipo en el que podrás ajustar colores, tipografía y jerarquía hasta que digas <strong>«ahora sí»</strong>.'
+        alt='Mesa de oficina con portátil, taza de café y cuadernos frente a una silla vacía'
       />
       <PasoProceso
         numero='3'
@@ -70,7 +71,10 @@ import { faqsHome } from '../../layouts/components/accordeon/faqs.js';
 
       <div class='why-choose-us-right-column'>
         <div class='why-choose-us-image'>
-          <img src={imgTimeLine.src} alt='Imagen de optimización web' />
+          <img
+            src='/src/images/landing.jpg'
+            alt='Personas trabajando en equipo, revisando documentos y datos en una computadora portátil, simbolizando colaboración y análisis en proyectos tecnológicos.'
+          />
         </div>
 
         <TextContent
@@ -94,22 +98,22 @@ import { faqsHome } from '../../layouts/components/accordeon/faqs.js';
       subtitulo='Quienes mejor hablan de nosotras son nuestros clientes'
       testimonials={[
         {
-          imagen: imgTimeLine.src,
+          imagen: '/src/images/avatar1.jpg',
           testimonial:
             'Muy contenta con el trabajo de esta empresa. Les di el contacto para un familiar y ha quedado encantado. Estuvieron en todo momento en contacto, supieron plasmar sus ideas y, además, aportaron mucha creatividad al proyecto. También me dice que son encantadoras y que, desde el primer momento, ya sabía que estaba en buenas manos. Las volveré a recomendar sin duda.',
-          alt: 'Cliente satisfecho 1',
+          alt: 'Avatar de usuario. Ilustración 3D de un personaje con cabello morado en coletas, chaqueta amarilla y gafas de sol en la cabeza, sobre un fondo verde.',
         },
         {
-          imagen: imgTimeLine.src,
+          imagen: '/src/images/avatar2.jpg',
           testimonial:
             'Ha sido genial trabajar con el equipo AstraCodeLab. Desde el principio han mostrado una gran profesionalidad y han cumplido con todo lo acordado y plazos propuestos.Su implicación en el proyecto ha hecho obtener un diseño de la web maravilloso. Nos encanta el resultado.Sin duda cuento con ellas para futuros trabajos.',
-          alt: 'Cliente satisfecho 2',
+          alt: 'Avatar de usuario. Ilustración 3D de un personaje con gorra celeste y camiseta azul, sobre un fondo verde.',
         },
         {
-          imagen: imgTimeLine.src,
+          imagen: '/src/images/avatar3.jpg',
           testimonial:
             'Muy satisfecho con el resultado obtenido, la web que me han diseñado funciona estupendamente y a un precio muy competitivo. El trato recibido estupendo, no se puede ser más profesional.',
-          alt: 'Cliente satisfecho 3',
+          alt: 'Avatar de usuario. Ilustración 3D de un personaje con cabello pelirrojo y sudadera morada, sobre un fondo azul oscuro. ',
         },
       ]}
     />

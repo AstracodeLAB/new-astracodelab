@@ -1,5 +1,5 @@
 ---
-const { numero, titulo, descripcion, imagen, descripcionSec } = Astro.props;
+const { numero, titulo, descripcion, imagen, descripcionSec, alt } = Astro.props;
 ---
 
 <div class='process-step'>
@@ -15,7 +15,7 @@ const { numero, titulo, descripcion, imagen, descripcionSec } = Astro.props;
     {
       imagen && (
         <div class='process-step__image-wrapper'>
-          <img src={imagen} alt={titulo} class='process-step__image' />
+          <img src={imagen} alt={alt} class='process-step__image' />
         </div>
       )
     }

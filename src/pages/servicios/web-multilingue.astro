@@ -3,84 +3,97 @@ import HeroSecondary from '../../layouts/components/HeroSecondary.astro';
 import heroImgMultilang from '../../images/multilingue.svg';
 import Layout from '../../layouts/Layout.astro';
 import TitleSecondary from '../../layouts/components/Titles/TitleSecondary.astro';
-import BenefitsSection from '../../layouts/components/BenefitsSection.astro'
+import BenefitsSection from '../../layouts/components/BenefitsSection.astro';
 import QueIncluye from '../../layouts/components/QueIncluye.astro';
 import ImgIncluye from '../../images/backgroundImageSectionWhy.jpg';
 import BannerCta from '../../layouts/components/Banners/BannerCta.astro';
 import FaqsSection from '../../layouts/components/FaqsSection.astro';
-import {faqsMultilang} from '../../layouts/components/accordeon/faqs.js';
+import { faqsMultilang } from '../../layouts/components/accordeon/faqs.js';
 import Contact from '../../layouts/components/Contact.astro';
 
 const benefits = [
   {
-    titulo: "Llega a nuevos mercados sin barreras",
-    descripcion: "Una web multilingüe te permite llegar a clientes potenciales en diferentes países e idiomas. Ya sea que apuntes a un país específico o a comunidades multilingües dentro del tuyo, tu alcance se multiplica.",
+    titulo: 'Llega a nuevos mercados sin barreras',
+    descripcion:
+      'Una web multilingüe te permite llegar a clientes potenciales en diferentes países e idiomas. Ya sea que apuntes a un país específico o a comunidades multilingües dentro del tuyo, tu alcance se multiplica.',
   },
   {
-    titulo: "Gana visibilidad internacional en buscadores",
-    descripcion: "Google y otros motores de búsqueda valoran el contenido relevante adaptado para cada idioma y región. Una web multilingüe bien optimizada te ayuda a mejorar tu presencia en búsquedas específicas de cada mercado.",
+    titulo: 'Gana visibilidad internacional en buscadores',
+    descripcion:
+      'Google y otros motores de búsqueda valoran el contenido relevante adaptado para cada idioma y región. Una web multilingüe bien optimizada te ayuda a mejorar tu presencia en búsquedas específicas de cada mercado.',
   },
   {
-    titulo: "Conecta desde la confianza",
-    descripcion: "Ofrecer contenido en el idioma nativo de tus visitantes demuestra profesionalidad y compromiso con tu audiencia, generando una mayor conexión y confianza, lo cual tiene un impacto directo en tus conversiones.",
+    titulo: 'Conecta desde la confianza',
+    descripcion:
+      'Ofrecer contenido en el idioma nativo de tus visitantes demuestra profesionalidad y compromiso con tu audiencia, generando una mayor conexión y confianza, lo cual tiene un impacto directo en tus conversiones.',
   },
   {
-    titulo: "Evita que tus visitantes se vayan al primer clic",
-    descripcion: "Una página que no está en el idioma del visitante puede provocar su salida inmediata. Una web multilingüe mantiene su atención desde el primer segundo al ofrecer un entorno cómodo y accesible.",
+    titulo: 'Evita que tus visitantes se vayan al primer clic',
+    descripcion:
+      'Una página que no está en el idioma del visitante puede provocar su salida inmediata. Una web multilingüe mantiene su atención desde el primer segundo al ofrecer un entorno cómodo y accesible.',
   },
   {
-    titulo: "Ventaja competitiva",
-    descripcion: "Destácate de competidores que solo operan en un idioma. Una web multilingüe te posiciona como una empresa con visión global y capacidad para atender a un público más amplio.",
+    titulo: 'Ventaja competitiva',
+    descripcion:
+      'Destácate de competidores que solo operan en un idioma. Una web multilingüe te posiciona como una empresa con visión global y capacidad para atender a un público más amplio.',
   },
   {
-    titulo: "Mejora la experiencia para cada usuario",
-    descripcion: "Cuando adaptas idioma, moneda e incluso ciertas referencias culturales, estás creando una experiencia mucho más fluida. Esa personalización marca la diferencia para el usuario y refuerza tu propuesta de valor",
+    titulo: 'Mejora la experiencia para cada usuario',
+    descripcion:
+      'Cuando adaptas idioma, moneda e incluso ciertas referencias culturales, estás creando una experiencia mucho más fluida. Esa personalización marca la diferencia para el usuario y refuerza tu propuesta de valor',
   },
 ];
 ---
 
-
 <Layout title='Servicios de diseño y desarrollo web'>
-  
-    <section class="multilingue">
-      <div class="container_main_services">
-      <HeroSecondary title="Web multilingüe" subtitle="Llega más lejos, conecta mejor." text="Internet borra las fronteras, pero una web en un solo idioma puede seguir limitando tu alcance.  Si tu negocio quiere crecer en mercados internacionales, o si tu audiencia local habla diferentes idiomas, una web multilingüe es una inversión esencial. En AstracodeLAB, diseñamos y desarrollamos páginas web multilingües profesionales que adaptan tu mensaje, abriendo las puertas a nuevos mercados y clientes." image={heroImgMultilang} alt="Diseño web corporativo"/>  
-        
-      <article class="multilingue__intro">
-        <TitleSecondary text="¿Por qué necesitas una web multilingüe?" description="Una web multilingüe es una forma inteligente de expandir tu alcance y conectar con personas en su idioma . Es una estrategia que te permite comunicarte con una audiencia diversa, generar confianza y posicionar tu marca en mercados internacionales." />
-        <BenefitsSection titulo="Beneficios clave de una web multilingüe profesional:" benefits={benefits} />
+  <section class='multilingue'>
+    <div class='container_main_services'>
+      <HeroSecondary
+        title='Web multilingüe'
+        subtitle='Llega más lejos, conecta mejor.'
+        text='Internet borra las fronteras, pero una web en un solo idioma puede seguir limitando tu alcance.  Si tu negocio quiere crecer en mercados internacionales, o si tu audiencia local habla diferentes idiomas, una web multilingüe es una inversión esencial. En AstracodeLAB, diseñamos y desarrollamos páginas web multilingües profesionales que adaptan tu mensaje, abriendo las puertas a nuevos mercados y clientes.'
+        image={heroImgMultilang}
+        alt='Ilustración de creación de contenido con documentos, texto, imágenes, lupa y elementos de edición y revisión.'
+      />
+
+      <article class='multilingue__intro'>
+        <TitleSecondary
+          text='¿Por qué necesitas una web multilingüe?'
+          description='Una web multilingüe es una forma inteligente de expandir tu alcance y conectar con personas en su idioma . Es una estrategia que te permite comunicarte con una audiencia diversa, generar confianza y posicionar tu marca en mercados internacionales.'
+        />
+        <BenefitsSection titulo='Beneficios clave de una web multilingüe profesional:' benefits={benefits} />
       </article>
-        
-      
-      <QueIncluye 
-      title="¿Qué incluye nuestro servicio de creación de webs multilingües?"
-      intro="En AstracodeLAB te ofrecemos una solución completa para tu web multilingüe."
-      image={ImgIncluye.src}
-      paragraphs={[
-      "<b>Desarrollo de Estructura Multilingüe Optimizada:</b> Implementación de la arquitectura técnica ideal para la gestión de idiomas.",
-      "<b>Configuración precisa para buscadores internacionales:</b> Implementación técnica crucial para el SEO internacional y para guiar a los motores de búsqueda.",
-      "<b>Selector de Idiomas Intuitivo:</b> Integración de un menú de cambio de idioma visible y fácil de usar para tus visitantes.",
-      "<b>Diseño Responsive y Adaptable:</b> Tu web multilingüe se verá y funcionará perfectamente en cualquier dispositivo e idioma.",
-      "<b>Optimización de Velocidad de Carga:</b> Aseguramos que el rendimiento de tu web se mantenga óptimo en todas sus versiones.",
-      "<b>Soporte Post-Lanzamiento:</b> Acompañamiento y asistencia durante el primer mes tras la publicación, con opciones de mantenimiento web continuo para tu web multilingüe.",
-      
-      
-      ]}
+
+      <QueIncluye
+        title='¿Qué incluye nuestro servicio de creación de webs multilingües?'
+        intro='En AstracodeLAB te ofrecemos una solución completa para tu web multilingüe.'
+        image='/src/images/idiomas.jpg'
+        paragraphs={[
+          '<b>Desarrollo de Estructura Multilingüe Optimizada:</b> Implementación de la arquitectura técnica ideal para la gestión de idiomas.',
+          '<b>Configuración precisa para buscadores internacionales:</b> Implementación técnica crucial para el SEO internacional y para guiar a los motores de búsqueda.',
+          '<b>Selector de Idiomas Intuitivo:</b> Integración de un menú de cambio de idioma visible y fácil de usar para tus visitantes.',
+          '<b>Diseño Responsive y Adaptable:</b> Tu web multilingüe se verá y funcionará perfectamente en cualquier dispositivo e idioma.',
+          '<b>Optimización de Velocidad de Carga:</b> Aseguramos que el rendimiento de tu web se mantenga óptimo en todas sus versiones.',
+          '<b>Soporte Post-Lanzamiento:</b> Acompañamiento y asistencia durante el primer mes tras la publicación, con opciones de mantenimiento web continuo para tu web multilingüe.',
+        ]}
+        alt='Imagen conceptual de alcance global, con un globo terráqueo en blanco y negro centrado en Europa, simbolizando estrategia internacional y presencia global.'
+      />
+    </div>
+    <BannerCta
+      titulo='¿Listo para conquistar nuevos mercados con tu web multilingüe?'
+      descripcion='Una web multilingüe bien diseñada puede ser el paso que marque la diferencia en tu estrategia de expansión. En AstracodeLAB te ayudamos a crear una presencia digital capaz de conectar con personas de distintos países y culturas sin perder tu identidad de marca. El idioma no debería limitar el alcance de tu negocio. Da el siguiente paso con una  web multilingüe que hable con claridad a cada audiencia, sin importar dónde se encuentren.'
+      texto='¿Quieres que tu web rinda al máximo? Agenda tu reunión gratuita y exploremos tus funcionalidades.'
+      className='linkSecondaryGreen'
+    />
+    <section class='multilingueFinal'>
+      <FaqsSection
+        titulo='Preguntas frecuentes sobre webs multilingües'
+        description='Aquí resolvemos algunas de las dudas más comunes al planificar tu web multilingüe:'
+        faqs={faqsMultilang}
       />
     </section>
-    <BannerCta titulo="¿Listo para conquistar nuevos mercados con tu web multilingüe?" 
-    descripcion="Una web multilingüe bien diseñada puede ser el paso que marque la diferencia en tu estrategia de expansión. En AstracodeLAB te ayudamos a crear una presencia digital capaz de conectar con personas de distintos países y culturas sin perder tu identidad de marca. El idioma no debería limitar el alcance de tu negocio. Da el siguiente paso con una  web multilingüe que hable con claridad a cada audiencia, sin importar dónde se encuentren."
-    texto="¿Quieres que tu web rinda al máximo? Agenda tu reunión gratuita y exploremos tus funcionalidades."
-    className="linkSecondaryGreen">
-
-    </BannerCta>
-    <section class="multilingueFinal">
-      <FaqsSection titulo="Preguntas frecuentes sobre webs multilingües" description="Aquí resolvemos algunas de las dudas más comunes al planificar tu web multilingüe:" faqs={faqsMultilang}></FaqsSection>
+    <section class='multilingueFinal'>
+      <Contact />
     </section>
-    <section class="multilingueFinal">
-      <Contact></Contact>
-    </section>
-  </div>
-  
-
+  </section>
 </Layout>

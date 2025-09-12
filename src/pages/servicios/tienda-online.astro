@@ -24,7 +24,8 @@ const benefits = [
   },
   {
     titulo: 'Costes operativos más bajos',
-    descripcion: 'A diferencia de un local físico, una tienda online reduce gastos fijos y te permite escalar con mayor libertad. Automatiza pagos, envíos y gestión de pedidos fácilmente.',
+    descripcion:
+      'A diferencia de un local físico, una tienda online reduce gastos fijos y te permite escalar con mayor libertad. Automatiza pagos, envíos y gestión de pedidos fácilmente.',
   },
   {
     titulo: 'Datos reales para mejores decisiones',
@@ -40,45 +41,51 @@ const benefits = [
 ---
 
 <Layout title='Servicios de diseño y desarrollo web'>
-  
-    <section class="ecommerce">
-      <div class="container_main_services">
-      <HeroSecondary title="Tiendas online y e-commerce:" subtitle="Vende sin límites, conecta con más clientes" text="Tener una tienda online ya no es solo una ventaja, es una necesidad para cualquier negocio que quiera crecer. Un ecommerce bien diseñado se convierte en tu escaparate digital. Podrás vender tus  productos o servicios 24/7, a clientes de cualquier lugar. Ahora bien, no basta con tener un ecommerce y “estar online”. El 73% de los usuarios abandona tiendas online con diseños anticuados o procesos de compra lentos. Por eso, en AstracodeLAB nos enfocamos en crear tiendas online profesionales, pensadas especialmente para pymes y autónomos. Combinamos una estética moderna con una estructura funcional, diseñada para algo más que verse bien: convertir visitas en ventas reales." image={heroImgEcommerce} alt="Diseño web corporativo"/>  
-        
-      <article class="ecommerce__intro">
-        <TitleSecondary text="¿Por qué necesitas una tienda online profesional?" description="Hoy más que nunca, comprar online se ha vuelto parte de la rutina diaria. La gente compra desde el sofá, en el metro o mientras espera un café.  Los consumidores ya no buscan solo buenos productos: esperan comodidad, variedad y rapidez. Por eso, es necesario que tu tienda online esté bien diseñada para llegar a más clientes y competir a nivel global. Además con un e-commerce podrás optimizar todos los procesos desde que el usuario encuentra tu producto hasta la confirmación de la venta, asegurando una experiencia rápida y segura para tus clientes." />
-        <BenefitsSection titulo="Beneficios clave de un e-commerce profesional:" benefits={benefits} />
-      </article>
-        
-      
-      <QueIncluye 
-      title="¿Qué incluye nuestro servicio de diseño y desarrollo de tiendas online?"
-      intro="En AstracodeLAB, ofrecemos un servicio integral para la creación de tu tienda online, asegurando que todos los aspectos importantes, estén cubiertos para que tengas éxito en tu negocio."
-      image={Ecommerce.src}
-      paragraphs={[
-      "<b>Diseño personalizado:</b> Cada negocio tiene una identidad única. El desarrollo debe adaptarse a tu marca, ofreciendo una experiencia visual coherente y profesional en todos los dispositivos. Tu tienda online reflejará esa identidad con un diseño único.",
-
-      "<b>Catálogo de Productos Optimizado:</b> Gestión y carga inicial de productos, con opciones para ampliar el catálogo",
-      "<b>Pasarelas de Pago Seguras:</b> Configuración de métodos de pago (tarjeta, PayPal, etc.).",
-      "<b>Diseño Responsive y Multidispositivo:</b> Tu e-commerce se verá y funcionará perfectamente en ordenadores, tablets y móviles.",
-      "<b>Soporte Post-Lanzamiento:</b> El lanzamiento es solo inicio. Es necesario mantener tu sitio actualizado y seguro. Para ello recibirás acompañamiento y asistencia durante el primer mes tras la publicación de tu tienda. Después, te ofrecemos planes de  mantenimiento web para que siempre te sientas protegido y acompañado.",
-      "<b>Formación y autonomía en la gestión:</b> Te capacitamos para que puedas actualizar y administrar tu tienda de forma autónoma.",
-      
-      ]}
+  <section class='ecommerce'>
+    <div class='container_main_services'>
+      <HeroSecondary
+        title='Tiendas online y e-commerce:'
+        subtitle='Vende sin límites, conecta con más clientes'
+        text='Tener una tienda online ya no es solo una ventaja, es una necesidad para cualquier negocio que quiera crecer. Un ecommerce bien diseñado se convierte en tu escaparate digital. Podrás vender tus  productos o servicios 24/7, a clientes de cualquier lugar. Ahora bien, no basta con tener un ecommerce y “estar online”. El 73% de los usuarios abandona tiendas online con diseños anticuados o procesos de compra lentos. Por eso, en AstracodeLAB nos enfocamos en crear tiendas online profesionales, pensadas especialmente para pymes y autónomos. Combinamos una estética moderna con una estructura funcional, diseñada para algo más que verse bien: convertir visitas en ventas reales.'
+        image={heroImgEcommerce}
+        alt='Ilustración de comercio electrónico con carrito de compras sobre una laptop, tarjetas bancarias, paquetes y elementos de seguridad digital.'
       />
-    </section>
-    <BannerCta titulo="¿Listo para abrir tu tienda online y multiplicar tus ventas?" 
-    descripcion="Si estás buscando una tienda online profesional, moderna y que realmente funcione, en AstracodeLAB estamos listos para ayudarte a dar ese paso. No pierdas la oportunidad de invertir en un e-commerce. Este será un elemento clave para el futuro y el crecimiento de tu negocio."
-    texto="¿Quieres una tienda online que venda? Agenda tu reunión gratuita"
-    className="linkSecondaryGreen">
 
-    </BannerCta>
-    <section class="ecommerceFinal">
-      <FaqsSection titulo="Preguntas frecuentes sobre tiendas online y e-commerce" faqs={faqsEcommerce}></FaqsSection>
-    </section>
-    <section class="ecommerceFinal">
-      <Contact></Contact>
-    </section>
-  </div>
+      <article class='ecommerce__intro'>
+        <TitleSecondary
+          text='¿Por qué necesitas una tienda online profesional?'
+          description='Hoy más que nunca, comprar online se ha vuelto parte de la rutina diaria. La gente compra desde el sofá, en el metro o mientras espera un café.  Los consumidores ya no buscan solo buenos productos: esperan comodidad, variedad y rapidez. Por eso, es necesario que tu tienda online esté bien diseñada para llegar a más clientes y competir a nivel global. Además con un e-commerce podrás optimizar todos los procesos desde que el usuario encuentra tu producto hasta la confirmación de la venta, asegurando una experiencia rápida y segura para tus clientes.'
+        />
+        <BenefitsSection titulo='Beneficios clave de un e-commerce profesional:' benefits={benefits} />
+      </article>
 
+      <QueIncluye
+        title='¿Qué incluye nuestro servicio de diseño y desarrollo de tiendas online?'
+        intro='En AstracodeLAB, ofrecemos un servicio integral para la creación de tu tienda online, asegurando que todos los aspectos importantes, estén cubiertos para que tengas éxito en tu negocio.'
+        image={Ecommerce.src}
+        paragraphs={[
+          '<b>Diseño personalizado:</b> Cada negocio tiene una identidad única. El desarrollo debe adaptarse a tu marca, ofreciendo una experiencia visual coherente y profesional en todos los dispositivos. Tu tienda online reflejará esa identidad con un diseño único.',
+
+          '<b>Catálogo de Productos Optimizado:</b> Gestión y carga inicial de productos, con opciones para ampliar el catálogo',
+          '<b>Pasarelas de Pago Seguras:</b> Configuración de métodos de pago (tarjeta, PayPal, etc.).',
+          '<b>Diseño Responsive y Multidispositivo:</b> Tu e-commerce se verá y funcionará perfectamente en ordenadores, tablets y móviles.',
+          '<b>Soporte Post-Lanzamiento:</b> El lanzamiento es solo inicio. Es necesario mantener tu sitio actualizado y seguro. Para ello recibirás acompañamiento y asistencia durante el primer mes tras la publicación de tu tienda. Después, te ofrecemos planes de  mantenimiento web para que siempre te sientas protegido y acompañado.',
+          '<b>Formación y autonomía en la gestión:</b> Te capacitamos para que puedas actualizar y administrar tu tienda de forma autónoma.',
+        ]}
+        alt='Persona diseñando una tienda en línea desde una laptop, utilizando una plataforma de diseño web con una interfaz gráfica moderna.'
+      />
+    </div>
+    <BannerCta
+      titulo='¿Listo para abrir tu tienda online y multiplicar tus ventas?'
+      descripcion='Si estás buscando una tienda online profesional, moderna y que realmente funcione, en AstracodeLAB estamos listos para ayudarte a dar ese paso. No pierdas la oportunidad de invertir en un e-commerce. Este será un elemento clave para el futuro y el crecimiento de tu negocio.'
+      texto='¿Quieres una tienda online que venda? Agenda tu reunión gratuita'
+      className='linkSecondaryGreen'
+    />
+    <section class='ecommerceFinal'>
+      <FaqsSection titulo='Preguntas frecuentes sobre tiendas online y e-commerce' faqs={faqsEcommerce} />
+    </section>
+    <section class='ecommerceFinal'>
+      <Contact />
+    </section>
+  </section>
 </Layout>
