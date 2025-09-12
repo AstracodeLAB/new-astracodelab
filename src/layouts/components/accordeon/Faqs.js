@@ -144,12 +144,12 @@ export const faqsRedi = [
   {
     titulo: '¿Ofrecéis mantenimiento web después del rediseño?',
     contenido:
-      'Sí. Una vez finalizado el rediseño web, el mantenimiento web es crucial para asegurar que tu sitio siga seguro, actualizado y funcionando a pleno rendimiento. En AstracodeLAB, disponemos de planes de mantenimiento web continuos adaptados a tus necesidades. Puedes consultar nuestros planes aquí [enlazar a la página de mantenimiento].',
+      'Sí. Una vez finalizado el rediseño web, el mantenimiento web es crucial para asegurar que tu sitio siga seguro, actualizado y funcionando a pleno rendimiento. En AstracodeLAB, disponemos de planes de mantenimiento web continuos adaptados a tus necesidades. Puedes consultar nuestros planes <a href=/>aquí</a>.',
   },
   {
     titulo: '¿Necesito proporcionar el contenido (textos e imágenes) para el rediseño?',
     contenido:
-      'Lo ideal es que nos facilites tus propios textos e imágenes para reflejar al máximo la esencia y la voz de tu marca. No obstante, si lo prefieres, nuestro equipo de copywriting puede encargarse de redactar los textos optimizados y/arte puede ayudarte con la selección de imágenes.',
+      'Lo ideal es que nos facilites tus propios textos e imágenes para reflejar al máximo la esencia y la voz de tu marca. No obstante, si lo prefieres, nuestro equipo de copywriting puede encargarse de redactar los textos optimizados y puede ayudarte con la selección de imágenes.',
   },
 ];
 
@@ -157,7 +157,7 @@ export const faqsOptimizacion = [
   {
     titulo: '¿Qué es la velocidad de carga web y por qué es tan importante?',
     contenido:
-      'La velocidad de carga web es el tiempo que tarda tu página en mostrarse completamente al usuario. Es crucial porque afecta directamente la experiencia del usuario (una web lenta frustra y hace que el usuario se vaya) . Una web rápida mejora las conversiones y la imagen de tu marca.',
+      'La velocidad de carga web es el tiempo que tarda tu página en mostrarse completamente al usuario. Es crucial porque afecta directamente la experiencia del usuario (una web lenta frustra y hace que el usuario se vaya). Una web rápida mejora las conversiones y la imagen de tu marca.',
   },
   {
     titulo: '¿Mi web será accesible para personas con discapacidades?',
