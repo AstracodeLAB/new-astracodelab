@@ -11,7 +11,7 @@ const { titulo, subtitulo, testimonials } = Astro.props;
   
   <div class='card-testimonio__content'>
     <div class='card-testimonio__profile'>
-      <img src={testimonials[0].imagen} alt={testimonials[0].alt} class='card-testimonio__avatar' data-testimonial-avatar />
+      <img src={testimonials[0].imagen.src} alt={testimonials[0].alt} class='card-testimonio__avatar' data-testimonial-avatar />
     </div>
     
     <div class='card-testimonio__testimonial'>
@@ -74,7 +74,7 @@ const { titulo, subtitulo, testimonials } = Astro.props;
       
       setTimeout(() => {
         this.textElement.textContent = current.testimonial;
-        this.avatarElement.src = current.imagen;
+        this.avatarElement.src = current.imagen.src;
         this.avatarElement.alt = current.alt;
         
         // Fade in

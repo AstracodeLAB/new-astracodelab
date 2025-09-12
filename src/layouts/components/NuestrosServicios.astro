@@ -3,6 +3,8 @@ import TitleSecondary from '../components/Titles/TitleSecondary.astro';
 import Subtitle from '../components/Titles/Subtitle.astro';
 import CardNuestrosServicios from './Cards/CardNuestrosServicios.astro';
 import Buttons from './Buttons/Buttons.astro';
+import mockupRestaurante from '../../images/mockupRestaurante.png';
+import desktopMockup from '../../images/mockupAlexis.png';
 ---
 
 <section class='sectionNuestrosServicios'>
@@ -18,7 +20,7 @@ import Buttons from './Buttons/Buttons.astro';
   <article class='sectionNuestrosServicios__paraNegocios'>
     <Subtitle text='Para Negocios y Empresas:' />
     <img
-      src='/src/images/mockupRestaurante.png'
+      src={mockupRestaurante.src}
       alt='Mockup de una web de ejemplo en la pantalla de un ordenador portatil. '
       class='sectionNuestrosServicios__paraNegocios-img'
     />
@@ -45,7 +47,7 @@ import Buttons from './Buttons/Buttons.astro';
   <article class='sectionNuestrosServicios__paraNegocios'>
     <Subtitle text='Para creativos y profesionales independientes:' />
     <img
-      src='/src/images/desktopMockup.png'
+      src={desktopMockup.src}
       alt='Mockup de ejemplo'
       class='sectionNuestrosServicios__paraNegocios-img'
     />

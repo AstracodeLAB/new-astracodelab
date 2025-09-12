@@ -14,6 +14,7 @@ import CardTestimonio from '../components/Cards/CardTestimonio.astro';
 import WorkSection from '../components/WorkSection.astro';
 import FaqsSection from '../components/FaqsSection.astro';
 import Contact from '../components/Contact.astro';
+import landing from '../../images/landing.jpg';
 import { faqs } from '../../data/faqsHome.js';
 import avatar1 from '../../images/avatar1.jpg';
 import avatar2 from '../../images/avatar2.jpg';
@@ -75,7 +76,7 @@ import avatar3 from '../../images/avatar3.jpg';
       <div class='why-choose-us-right-column'>
         <div class='why-choose-us-image'>
           <img
-            src='/src/images/landing.jpg'
+            src={landing.src}
             alt='Personas trabajando en equipo, revisando documentos y datos en una computadora portátil, simbolizando colaboración y análisis en proyectos tecnológicos.'
           />
         </div>
