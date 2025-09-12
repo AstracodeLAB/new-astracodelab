@@ -9,12 +9,12 @@ import Conector from '../../layouts/components/Conector.astro';
 import QueIncluye from '../../layouts/components/QueIncluye.astro';
 import FaqsSection from '../../layouts/components/FaqsSection.astro';
 import Contact from '../../layouts/components/Contact.astro';
-import { faqsWebCorporate } from '../../layouts/components/accordeon/faqs.js';
+import { faqsMantenimiento } from '../../layouts/components/accordeon/faqs.js';
 import BannerCta from '../../layouts/components/Banners/BannerCta.astro';
 ---
 
 <Layout title='AstracodeLAB - Mantenimiento y soporte web'>
-  <div class="container_main_services">
+  <div class='container_main_services'>
     <HeroSecondary
       title='Mantenimiento y soporte web'
       subtitle='Tranquilidad digital para negocios que no paran'
@@ -31,37 +31,37 @@ import BannerCta from '../../layouts/components/Banners/BannerCta.astro';
         titulo='Beneficios clave del mantenimiento y soporte web:'
         benefits={[
           {
-            titulo: 'Seguridad activa y constante:',
+            titulo: 'Seguridad activa y constante',
             descripcion:
               'Cada día aparecen nuevas amenazas digitales, tu web está constantemente expuesta a ataques de hackers, malware y virus. El mantenimiento web incluye actualizaciones de seguridad para proteger tus datos. Tu web se mantiene a salvo y tú evitas sobresaltos. ',
           },
           {
-            titulo: 'Velocidad optimizada: ',
+            titulo: 'Velocidad optimizada',
             descripcion:
               'Una web lenta frustra a los usuarios y penaliza tu SEO. Con un mantenimiento web, revisamos configuraciones internas para que tu sitio cargue con agilidad y ofrezca una mejor experiencia. ',
           },
           {
-            titulo: 'Mejor visibilidad en buscadores: ',
+            titulo: 'Mejor visibilidad en buscadores',
             descripcion:
               'Google presta atención a muchos factores técnicos. El mantenimiento web periódico ayuda a que todo esté en orden y eso repercute directamente en el posicionamiento. Es una forma silenciosa pero efectiva de mejorar tu posicionamiento SEO.',
           },
           {
-            titulo: 'Prevención de errores: ',
+            titulo: 'Prevención de errores',
             descripcion:
               'Detectamos problemas antes de que afecten a quienes visitan tu página. Corregimos enlaces rotos, funciones que fallan o comportamientos inusuales. Lo que funciona bien transmite confianza.',
           },
           {
-            titulo: 'Compatibilidad tecnológica garantizada: ',
+            titulo: 'Compatibilidad tecnológica garantizada',
             descripcion:
               'Los navegadores, sistemas y extensiones evolucionan rápido. Mantenemos tu sitio preparado para los cambios, evitando conflictos y asegurando que todo siga funcionando con fluidez.',
           },
           {
-            titulo: 'Soporte técnico cercano y resolutivo: ',
+            titulo: 'Soporte técnico cercano y resolutivo',
             descripcion:
               '¿Surge un problema? ¿Necesitas una pequeña modificación? Con un servicio de soporte web, cuentas con nuestro equipo. Respondemos de forma clara y directa, sin procesos engorrosos.',
           },
           {
-            titulo: 'Menos preocupaciones, más enfoque: ',
+            titulo: 'Menos preocupaciones, más enfoque',
             descripcion:
               'Al delegar el mantenimiento web  en manos expertas te libera tiempo. Puedes dedicarte al desarrollo de tu negocio sabiendo que tu web está bajo control.',
           },
@@ -71,24 +71,24 @@ import BannerCta from '../../layouts/components/Banners/BannerCta.astro';
 
     <QueIncluye
       title='¿Qué incluyen nuestros planes de mantenimiento y soporte web?'
+      intro='En AstracodeLAB, hemos creado planes que cubren lo esencial para ofrecerte una cobertura completa.  La idea es sencilla: que puedas contar con una web bien cuidada y con el respaldo técnico que te dé tranquilidad día a día.'
       paragraphs={[
-        'En AstracodeLAB, hemos creado planes que cubren lo esencial para ofrecerte una cobertura completa.  La idea es sencilla: que puedas contar con una web bien cuidada y con el respaldo técnico que te dé tranquilidad día a día.',
         '<b>Actualización del sistema:</b> Mantenemos tu software al día para seguridad y funcionalidad.',
-        '<b>Revisión de Enlaces Rotos:</b> Buscamos y corregimos enlaces que ya no funcionan. Esto mejora la navegación y evita penalizaciones por parte de los buscadores.',
-        '<b>Optimización de Velocidad de Carga:</b> Hacemos ajustes técnicos para que tu web funcione con agilidad. Una buena velocidad mejora tanto la experiencia del usuario como el posicionamiento.',
-        '<b>Soporte Técnico Prioritario:</b> Si necesitas ayuda, tienes acceso rápido a nuestro equipo. Respondemos con claridad y te damos soluciones concretas.',
-        '<b>Pequeñas Modificaciones de Contenido:</b> Flexibilidad para realizar ajustes rápidos sin coste adicional.',
+        '<b>Revisión de enlaces rotos:</b> Buscamos y corregimos enlaces que ya no funcionan. Esto mejora la navegación y evita penalizaciones por parte de los buscadores.',
+        '<b>Optimización de la velocidad de carga:</b> Hacemos ajustes técnicos para que tu web funcione con agilidad. Una buena velocidad mejora tanto la experiencia del usuario como el posicionamiento.',
+        '<b>Soporte técnico prioritario:</b> Si necesitas ayuda, tienes acceso rápido a nuestro equipo. Respondemos con claridad y te damos soluciones concretas.',
+        '<b>Pequeñas modificaciones de contenido:</b> Flexibilidad para realizar ajustes rápidos sin coste adicional.',
       ]}
-      image='https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'
+      image='/src/images/soporte.jpg'
     />
     <BannerCta
       titulo='¿Listo para cuidar tu web y hacerla crecer?'
       descripcion='El mantenimiento y soporte web no es un gasto, es una forma de proteger tu inversión digital y asegurar que tu sitio siga funcionando bien con el paso del tiempo. Un sitio seguro, rápido y bien optimizado marca la diferencia cuando se trata de atraer clientes y generar confianza. No esperes a que tu web falle. En AstracodeLAB trabajamos contigo para que tu web esté siempre en forma. Estable, actualizada y lista para acompañar el crecimiento de tu negocio.'
-      texto='¿Quieres una web corporativa? Agenda tu reunión gratuita'
+      texto=' ¿Quieres que tu web funcione sin preocupaciones? Agenda tu reunión gratuita y descubre nuestros planes de mantenimiento'
       className='linkSecondaryGreen'
     />
 
-    <FaqsSection titulo='Preguntas frecuentes sobre la creación de webs corporativas' faqs={faqsWebCorporate} />
+    <FaqsSection titulo='Preguntas frecuentes sobre mantenimiento y soporte web' faqs={faqsMantenimiento} />
 
     <Contact />
   </div>
