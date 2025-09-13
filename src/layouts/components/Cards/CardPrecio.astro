@@ -47,9 +47,8 @@ const pricingPlans = [
     ],
     buttonText: 'Solicitar información',
     highlighted: false,
-    noteAdv: '12,50€/mes durante 12 meses + 150€ único pago',
+    noteAdv: '105€/mes durante 12 meses + 140€ único pago',
     note: 'IVA no incluido*',
-    
   },
 ];
 ---
@@ -66,20 +65,19 @@ const pricingPlans = [
             <div class={`pricing-header ${plan.badge ? '' : 'nb'}`}>
               <div>
                 <span class='price-label'>Desde</span>
-                  
               </div>
               {plan.noteMonth ? (
-                <div class="containersSpans">
+                <div class='containersSpans'>
                   <div class='price'>{plan.price}</div>
                   <div class='containersSpans-month'>{plan.noteMonth}</div>
                 </div>
               ) : (
                 <div class='price'>{plan.price}</div>
               )}
-            
-            {plan.note && <div class='price-note'>{plan.note}</div>}
-            <div class='plan-title'>{plan.title}</div>
-          </div>
+
+              {plan.note && <div class='price-note'>{plan.note}</div>}
+              <div class='plan-title'>{plan.title}</div>
+            </div>
 
             <div class='plan-description'>{plan.description}</div>
 
@@ -132,14 +130,14 @@ const pricingPlans = [
               <div class='pricing-header'>
                 <span class='price-label'>Desde</span>
                 {plan.noteMonth ? (
-                <div class="containersSpans">
+                  <div class='containersSpans'>
+                    <div class='price'>{plan.price}</div>
+                    <div class='containersSpans-month'>{plan.noteMonth}</div>
+                  </div>
+                ) : (
                   <div class='price'>{plan.price}</div>
-                  <div class='containersSpans-month'>{plan.noteMonth}</div>
-                </div>
-              ) : (
-                <div class='price'>{plan.price}</div>
-              )}
-                
+                )}
+
                 {plan.note && <div class='price-note'>{plan.note}</div>}
                 <div class='plan-title'>{plan.title}</div>
               </div>
