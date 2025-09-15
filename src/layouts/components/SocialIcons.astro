@@ -1,5 +1,5 @@
 ---
-const { className = "" } = Astro.props;
+const { className = '' } = Astro.props;
 import Facebook from './icons/facebook.svg';
 import Linkedin from './icons/linkedin.svg';
 import Instagram from './icons/insta.svg';
@@ -7,16 +7,40 @@ import Threads from './icons/threads.svg';
 ---
 
 <div class={`social-icons ${className}`}>
-  <a href='https://www.instagram.com/astracodelab/' class="social-icons__link" aria-label="Instagram">
-    <img src={Instagram.src} alt="Instagram" class="social-icons__icon" />
+  <a
+    href='https://www.instagram.com/astracodelab/'
+    class='social-icons__link'
+    aria-label='Instagram'
+    target='_blank'
+    rel='noopener noreferrer'
+  >
+    <img src={Instagram.src} alt='Instagram' class='social-icons__icon' />
   </a>
-  <a href='https://www.linkedin.com/company/astracodelab/' class="social-icons__link" aria-label="LinkedIn">
-    <img src={Linkedin.src} alt="LinkedIn" class="social-icons__icon" />
+  <a
+    href='https://www.linkedin.com/company/astracodelab/'
+    class='social-icons__link'
+    aria-label='LinkedIn'
+    target='_blank'
+    rel='noopener noreferrer'
+  >
+    <img src={Linkedin.src} alt='LinkedIn' class='social-icons__icon' />
   </a>
-  <a href='http://threads.net/@astracodelab' class="social-icons__link" aria-label="Threads">
-    <img src={Threads.src} alt="Threads" class="social-icons__icon" />
+  <a
+    href='http://threads.net/@astracodelab'
+    class='social-icons__link'
+    aria-label='Threads'
+    target='_blank'
+    rel='noopener noreferrer'
+  >
+    <img src={Threads.src} alt='Threads' class='social-icons__icon' />
   </a>
-  <a href='https://www.facebook.com/astracodelab' class="social-icons__link" aria-label="Facebook">
-    <img src={Facebook.src} alt="Facebook" class="social-icons__icon" />
+  <a
+    href='https://www.facebook.com/p/Astracodelab-61564205213789/'
+    class='social-icons__link'
+    aria-label='Facebook'
+    target='_blank'
+    rel='noopener noreferrer'
+  >
+    <img src={Facebook.src} alt='Facebook' class='social-icons__icon' />
   </a>
 </div>

@@ -10,17 +10,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 1px 10px 0 rgba(42, 17, 96, 0.20);
+  box-shadow: 0 1px 10px 0 rgba(42, 17, 96, 0.2);
   @media (min-width: 768px) {
     padding: 60px 120px;
   }
 
   @media (min-width: 1024px) {
-    // padding: 60px 120px;
-  }
-
-  @media (min-width: 1440px) {
-    padding: 60px 280px;
+    padding: 60px 0;
   }
 
   &__container {

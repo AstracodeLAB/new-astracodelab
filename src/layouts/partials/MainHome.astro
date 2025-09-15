@@ -38,7 +38,6 @@ import avatar3 from '../../images/avatar3.jpg';
         numero='2'
         titulo='Análisis y toma de requisitos'
         descripcion='Recopilamos ejemplos, funcionalidades imprescindibles y contenido disponible. Analizamos tu mercado y las búsquedas clave para definir una arquitectura enfocada al usuario.'
-        imagen={imgTimeLine.src}
         descripcionSec='Creamos un prototipo en el que podrás ajustar colores, tipografía y jerarquía hasta que digas <strong>«ahora sí»</strong>.'
         alt='Mesa de oficina con portátil, taza de café y cuadernos frente a una silla vacía'
       />
@@ -132,14 +131,14 @@ import avatar3 from '../../images/avatar3.jpg';
       />
     </div>
     <CardPrecio />
-  </section>
-  <section>
-    <CardPregunta
-      title='¿Tienes una idea que no encuentras en estos planes o no sabes por dónde empezar?'
-      text='Cuéntanosla y te guiaremos hacia la solución perfecta para tu proyecto.'
-      buttonText='¿Hablamos?'
-      buttonHref='/#contact'
-    />
+    <div>
+      <CardPregunta
+        title='¿Tienes una idea que no encuentras en estos planes o no sabes por dónde empezar?'
+        text='Cuéntanosla y te guiaremos hacia la solución perfecta para tu proyecto.'
+        buttonText='¿Hablamos?'
+        buttonHref='/#contact'
+      />
+    </div>
   </section>
 
   <FaqsSection titulo='Preguntas frecuentes' faqs={faqs} />

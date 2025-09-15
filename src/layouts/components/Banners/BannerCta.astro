@@ -1,8 +1,8 @@
 ---
-import Buttons from '../Buttons/Buttons.astro';
+// import Buttons from '../Buttons/Buttons.astro';
 import Subtitle from '../Titles/Subtitle.astro';
 
-const { titulo, descripcion, texto, className } = Astro.props;
+const { titulo, descripcion, texto } = Astro.props;
 ---
 
 <section class='banner-cta'>
@@ -10,7 +10,9 @@ const { titulo, descripcion, texto, className } = Astro.props;
     <Subtitle className='banner text' text={titulo} />
     <Subtitle className='banner desc' description={descripcion} />
     <div class='banner-cta__button'>
-      <Buttons className={className} text={texto} href='/#contact'>{texto}<Buttons /> </Buttons>
+      <a class='linkSecondaryGreen' href='https://calendly.com/astracodelab' target='_blank' rel='noopener noreferrer'
+        >{texto}
+      </a>
     </div>
   </article>
 </section>
