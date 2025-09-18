@@ -163,5 +163,12 @@ import Logo from '../components/Logo.astro';
         toggleSubmenu(false);
       }
     });
+    // Cierra el menú al hacer clic en cualquier enlace
+    const navLinks = navMenu.querySelectorAll('a, button.btnPrimaryLight');
+    navLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        toggleMenu(false);
+      });
+    });
   });
 </script>
