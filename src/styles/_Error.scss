@@ -2,73 +2,70 @@
 @use './variables.scss' as *;
 
 .error {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 30px;
-	padding: 20px 20px;
-	text-align: center;
-	@media (min-width: 1024px) {
-	
-		padding: 60px 60px;
-	}
-	&__img {
-		max-width: 80%;
-
-		@media (min-width: 768px) {
-			max-width: 40%;
-		}
-	}
-
-	&__text {
-		font-size: map.get($Body-mobile, 'font-size');
-  line-height: map.get($Body-mobile, 'line-height');
-  font-weight: map.get($Body-mobile, 'font-weight');
-  letter-spacing: map.get($Body-mobile, 'letter-spacing');
-  color: $text-bg-white;
   display: flex;
-  gap: 10px;
-	margin-bottom: 1rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.875rem;
+  padding: 1.25rem 1.25rem;
+  text-align: center;
 
-  @media (min-width: 768px) {
-    font-size: map.get($Body-tablet, 'font-size');
-    line-height: map.get($Body-tablet, 'line-height');
-    font-weight: map.get($Body-tablet, 'font-weight');
-    letter-spacing: map.get($Body-tablet, 'letter-spacing');
+  @media (min-width: 64rem) {
+    padding: 3.75rem 3.75rem;
+  }
+  &__img {
+    max-width: 80%;
 
+    @media (min-width: 48rem) {
+      max-width: 40%;
+    }
   }
 
-  @media (min-width: 1024px) {
-    font-size: map.get($Body-desktop, 'font-size');
-    line-height: map.get($Body-desktop, 'line-height');
-    font-weight: map.get($Body-desktop, 'font-weight');
-    letter-spacing: map.get($Body-desktop, 'letter-spacing');
+  &__text {
+    font-size: map.get($Body-mobile, 'font-size');
+    line-height: map.get($Body-mobile, 'line-height');
+    font-weight: map.get($Body-mobile, 'font-weight');
+    letter-spacing: map.get($Body-mobile, 'letter-spacing');
+    color: $text-bg-white;
+    display: flex;
+    gap: 0.625rem;
+    margin-bottom: 1rem;
 
+    @media (min-width: 48rem) {
+      font-size: map.get($Body-tablet, 'font-size');
+      line-height: map.get($Body-tablet, 'line-height');
+      font-weight: map.get($Body-tablet, 'font-weight');
+      letter-spacing: map.get($Body-tablet, 'letter-spacing');
+    }
+
+    @media (min-width: 64rem) {
+      font-size: map.get($Body-desktop, 'font-size');
+      line-height: map.get($Body-desktop, 'line-height');
+      font-weight: map.get($Body-desktop, 'font-weight');
+      letter-spacing: map.get($Body-desktop, 'letter-spacing');
+    }
+
+    @media (min-width: 90rem) {
+      font-size: map.get($Body-desktop-xl, 'font-size');
+      line-height: map.get($Body-desktop-xl, 'line-height');
+      font-weight: map.get($Body-desktop-xl, 'font-weight');
+      letter-spacing: map.get($Body-desktop-xl, 'letter-spacing');
+    }
   }
 
-  @media (min-width: 1440px) {
-    font-size: map.get($Body-desktop-xl, 'font-size');
-    line-height: map.get($Body-desktop-xl, 'line-height');
-    font-weight: map.get($Body-desktop-xl, 'font-weight');
-    letter-spacing: map.get($Body-desktop-xl, 'letter-spacing');
-  }
-		
-	}
+  &__button {
+    font-family: Ropa Sans;
+    background-color: $blue-primary;
+    padding: 0.625rem 1.25rem 0.625rem 1.25rem;
+    border-radius: 2.188rem;
+    box-shadow: $shadow;
+    transition: background-color 0.3s ease, color 0.3s ease;
 
-	&__button {
-		font-family: Ropa Sans;
-		background-color: $blue-primary;
-		padding: 10px 20px 10px 20px;
-		border-radius: 35px;
-		box-shadow: $shadow;
-		transition: background-color 0.3s ease, color 0.3s ease;
-		
-		&:hover {
-			background-color: $green;
-			color: $blue-primary;
-		}
-		&:active {
-			color: $blue-primary;
-		}
-	}
+    &:hover {
+      background-color: $green;
+      color: $blue-primary;
+    }
+    &:active {
+      color: $blue-primary;
+    }
+  }
 }

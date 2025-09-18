@@ -11,29 +11,25 @@
   color: $title-color;
   box-shadow: $shadow;
 
-  @media (min-width: 768px) {
+  @media (min-width: 48rem) {
     border-radius: 16px;
-    //width: ;: 100%;
     display: flex;
     flex-direction: column;
-    //flex: 1 1 294px;
     flex-wrap: wrap;
   }
-  
-  @media(min-width: 1024px) {
-    width: 294px;
+
+  @media (min-width: 64rem) {
+    width: 18.375rem;
     flex: 1 1 294px;
   }
-  @media(min-width: 1440px) {
-    width: 328px;
-    
+  @media (min-width: 90rem) {
+    width: 20.5rem;
   }
 
   &__title {
     font-family: $font-primary;
     font-size: map.get($Body-mobile, 'font-size');
     line-height: map.get($H3-mobile, 'line-height');
-    //font-weight: map.get($H3-mobile, 'font-weight');
     letter-spacing: map.get($H3-mobile, 'letter-spacing');
     color: white;
     background: $gradientBlueVertical;
@@ -41,21 +37,19 @@
     padding: 0.5rem 1.5rem 0.5rem 1.5rem;
     border-radius: 12px 12px 0 0;
 
-    @media (min-width: 768px) {
+    @media (min-width: 48rem) {
       font-size: map.get($Body-tablet, 'font-size');
       line-height: map.get($H3-tablet, 'line-height');
-     
       letter-spacing: map.get($H3-tablet, 'letter-spacing');
-
       border-radius: 16px 16px 0 0;
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: 64rem) {
       font-size: map.get($Body-desktop, 'font-size');
       line-height: map.get($H3-desktop, 'line-height');
       text-align: center;
       letter-spacing: map.get($H3-desktop, 'letter-spacing');
-      height: 90px;
+      height: 5.625rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -72,7 +66,7 @@
     margin: 0;
     padding: 1.5rem;
 
-    @media (min-width: 768px) {
+    @media (min-width: 48rem) {
       font-size: map.get($Body-tablet, 'font-size');
       line-height: map.get($Body-tablet, 'line-height');
       font-weight: map.get($Body-tablet, 'font-weight');
@@ -83,7 +77,7 @@
       align-items: flex-start;
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: 64rem) {
       font-size: map.get($Body-desktop, 'font-size');
       line-height: map.get($Body-desktop, 'line-height');
       font-weight: map.get($Body-desktop, 'font-weight');

@@ -3,7 +3,7 @@
 
 .banner-cta {
   background-image: url('../images/backgroundDark.png');
-  background-size: cover;      // rellena el contenedor
+  background-size: cover; // rellena el contenedor
   background-position: center 60%; // centra la parte media
   background-repeat: no-repeat;
   padding: 1.25rem;
@@ -12,28 +12,24 @@
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  @media (min-width: 768px) {
+  @media (min-width: 48rem) {
     padding: 2rem;
     margin: 3rem 0;
     background-position: center 53%;
   }
 
-  @media (min-width: 1024px) {
-    // border-radius: 8px;
-    // padding: 3rem;
-    margin: 120px 0 0 0;
+  @media (min-width: 64rem) {
+    margin: 7.5rem 0 0 0;
     display: flex;
     align-items: center;
-    
   }
 
-  &__container{
-    
-    @media (min-width: 1024px) {
-      max-width: 904px;
+  &__container {
+    @media (min-width: 64rem) {
+      max-width: 56.5rem;
     }
-    @media (min-width: 1024px) {
-      max-width: 1024px;
+    @media (min-width: 64rem) {
+      max-width: 64rem;
     }
   }
   .banner {
@@ -45,13 +41,13 @@
     line-height: map.get($H2-mobile, 'line-height');
     font-weight: map.get($H2-mobile, 'font-weight');
 
-    @media (min-width: 768px) {
+    @media (min-width: 48rem) {
       font-size: map.get($H2-tablet, 'font-size');
       line-height: map.get($H2-tablet, 'line-height');
       font-weight: map.get($H2-tablet, 'font-weight');
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: 64rem) {
       font-size: map.get($H2-desktop, 'font-size');
       line-height: map.get($H2-desktop, 'line-height');
       font-weight: map.get($H2-desktop, 'font-weight');
@@ -63,27 +59,24 @@
     line-height: map.get($Body-mobile, 'line-height');
     font-weight: map.get($Body-mobile, 'font-weight');
 
-    @media (min-width: 768px) {
+    @media (min-width: 48rem) {
       font-size: map.get($Body-tablet, 'font-size');
       line-height: map.get($Body-tablet, 'line-height');
       font-weight: map.get($Body-tablet, 'font-weight');
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: 64rem) {
       font-size: map.get($Body-desktop, 'font-size');
       line-height: map.get($Body-desktop, 'line-height');
       font-weight: map.get($Body-desktop, 'font-weight');
-      
     }
-
-    
   }
 }
 
 .banner-cta__button {
-  margin-top: 20px;
-  
-  @media (min-width: 768px) {
-    margin-top: 30px;
+  margin-top: 1.25rem;
+
+  @media (min-width: 48rem) {
+    margin-top: 1.875rem;
   }
 }

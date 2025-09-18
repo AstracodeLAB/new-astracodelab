@@ -5,18 +5,18 @@
 // ACCORDION COMPONENT
 // ===========================
 .accordion {
-  border: 1px solid #E5E5E5;
+  border: 1px solid #e5e5e5;
   border-radius: 8px;
   margin-bottom: 1rem;
   background: $cardWhite;
   overflow: hidden;
 
-  @media (min-width: 768px) {
+  @media (min-width: 48rem) {
     border-radius: 12px;
     margin-bottom: 1.25rem;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 64rem) {
     margin-bottom: 1.5rem;
   }
 
@@ -32,11 +32,11 @@
     align-items: center;
     transition: background-color 0.3s ease;
 
-    @media (min-width: 768px) {
+    @media (min-width: 48rem) {
       padding: 1.5rem 1.5rem;
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: 64rem) {
       padding: 1.75rem 2rem;
     }
 
@@ -61,14 +61,14 @@
     flex: 1;
     padding-right: 1rem;
 
-    @media (min-width: 768px) {
+    @media (min-width: 48rem) {
       font-size: map.get($Body-tablet, 'font-size');
       line-height: map.get($Body-tablet, 'line-height');
       font-weight: 600;
       letter-spacing: map.get($Body-tablet, 'letter-spacing');
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: 64rem) {
       font-size: map.get($Body-desktop, 'font-size');
       line-height: map.get($Body-desktop, 'line-height');
       font-weight: 600;
@@ -77,35 +77,35 @@
   }
 
   &__icon {
-    width: 20px;
-    height: 20px;
+    width: 1.25rem;
+    height: 1.25rem;
     color: $blue-dark;
     flex-shrink: 0;
 
-    @media (min-width: 768px) {
-      width: 24px;
-      height: 24px;
+    @media (min-width: 48rem) {
+      width: 1.5rem;
+      height: 1.5rem;
     }
 
-    @media (min-width: 1024px) {
-      width: 28px;
-      height: 28px;
+    @media (min-width: 64rem) {
+      width: 1.75rem;
+      height: 1.75rem;
     }
   }
 
   &__content {
-    border-top: 1px solid #F0F0F0;
+    border-top: 1px solid #f0f0f0;
     transition: height 0.3s ease;
   }
 
   &__text {
     padding: 1.25rem 1rem;
 
-    @media (min-width: 768px) {
+    @media (min-width: 48rem) {
       padding: 1.5rem 1.5rem;
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: 64rem) {
       padding: 1.75rem 2rem;
     }
 
@@ -118,14 +118,14 @@
       color: $text-bg-color;
       margin: 0;
 
-      @media (min-width: 768px) {
+      @media (min-width: 48rem) {
         font-size: map.get($Body-tablet, 'font-size');
         line-height: map.get($Body-tablet, 'line-height');
         font-weight: map.get($Body-tablet, 'font-weight');
         letter-spacing: map.get($Body-tablet, 'letter-spacing');
       }
 
-      @media (min-width: 1024px) {
+      @media (min-width: 64rem) {
         font-size: map.get($Body-desktop, 'font-size');
         line-height: map.get($Body-desktop, 'line-height');
         font-weight: map.get($Body-desktop, 'font-weight');

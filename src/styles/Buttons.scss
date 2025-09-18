@@ -16,10 +16,10 @@
 .btnPrimaryLight {
   display: inline-flex;
   width: auto;
-  padding: 2px 14px;
+  padding: 0.125rem 0.875rem;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 0.625rem;
   color: $blue-primary;
   border-radius: 50px;
   border: 2px solid transparent;
@@ -30,14 +30,15 @@
   font-weight: map.get($Button-mobile, 'font-weight');
 
   /* Gradiente en el borde y fondo sólido */
-  background-image: linear-gradient($blue-secondary, $blue-secondary), // fondo interno
-                    $gradientButton;                                // borde con degradado
+  background-image: linear-gradient($blue-secondary, $blue-secondary),
+    // fondo interno
+    $gradientButton; // borde con degradado
   background-origin: padding-box, border-box;
   background-clip: padding-box, border-box;
   &:hover {
     background: $gradientButtonFlip;
     color: $blue-secondary;
-    border: 2px solid $blue-primary
+    border: 2px solid $blue-primary;
   }
 
   &:active {
@@ -46,26 +47,26 @@
     color: $blue-secondary;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 48rem) {
     font-size: map.get($Button-tablet, 'font-size');
     line-height: map.get($Button-tablet, 'line-height');
     font-weight: map.get($Button-tablet, 'font-weight');
     letter-spacing: map.get($Button-tablet, 'letter-spacing');
-    padding: 4px 14px;
+    padding: 0.25rem 0.875rem;
   }
-  @media (min-width: 1024px) {
+  @media (min-width: 64rem) {
     font-size: map.get($Button-desktop, 'font-size');
     line-height: map.get($Button-desktop, 'line-height');
     font-weight: map.get($Button-desktop, 'font-weight');
     letter-spacing: map.get($Button-desktop, 'letter-spacing');
-    padding: 6px 18px;
+    padding: 0.375rem 1.125rem;
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 90rem) {
     font-size: map.get($Button-desktop-xl, 'font-size');
     line-height: map.get($Button-desktop-xl, 'line-height');
     font-weight: map.get($Button-desktop-xl, 'font-weight');
     letter-spacing: map.get($Button-desktop-xl, 'letter-spacing');
-    padding: 8px 18px;
+    padding: 0.5rem 1.125rem;
   }
 }
 
@@ -73,10 +74,10 @@
 .btnPrimaryDark {
   display: inline-flex;
   width: auto;
-  padding: 2px 14px;
+  padding: 0.125rem 0.875rem;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 0.625rem;
   color: $blue-secondary;
   border-radius: 50px;
   border: 2px solid $blue-primary;
@@ -93,8 +94,9 @@
     border: 2px solid $blue-primary;
     color: $blue-dark;
     border: 2px solid transparent;
-    background-image: linear-gradient($blue-secondary, $blue-secondary), // fondo interno
-                    $gradientButton;                                // borde con degradado
+    background-image: linear-gradient($blue-secondary, $blue-secondary),
+      // fondo interno
+      $gradientButton; // borde con degradado
     background-origin: padding-box, border-box;
     background-clip: padding-box, border-box;
   }
@@ -105,26 +107,26 @@
     color: $blue-secondary;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 48rem) {
     font-size: map.get($Button-tablet, 'font-size');
     line-height: map.get($Button-tablet, 'line-height');
     font-weight: map.get($Button-tablet, 'font-weight');
     letter-spacing: map.get($Button-tablet, 'letter-spacing');
-    padding: 4px 14px;
+    padding: 0.25rem 0.875rem;
   }
-  @media (min-width: 1024px) {
+  @media (min-width: 64rem) {
     font-size: map.get($Button-desktop, 'font-size');
     line-height: map.get($Button-desktop, 'line-height');
     font-weight: map.get($Button-desktop, 'font-weight');
     letter-spacing: map.get($Button-desktop, 'letter-spacing');
-    padding: 6px 18px;
+    padding: 0.375rem 1.125rem;
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 90rem) {
     font-size: map.get($Button-desktop-xl, 'font-size');
     line-height: map.get($Button-desktop-xl, 'line-height');
     font-weight: map.get($Button-desktop-xl, 'font-weight');
     letter-spacing: map.get($Button-desktop-xl, 'letter-spacing');
-    padding: 8px 18px;
+    padding: 0.5rem 1.125rem;
   }
 }
 
@@ -132,10 +134,10 @@
 .btnSecondaryDark {
   display: inline-flex;
   width: auto;
-  padding: 2px 14px;
+  padding: 0.125rem 0.875rem;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 0.625rem;
   color: $blue-secondary;
   border-radius: 50px;
   border: 2px solid transparent;
@@ -149,7 +151,7 @@
   &:hover {
     background: $blue-secondary;
     color: $blue-primary;
-    border: 2px solid $blue-primary
+    border: 2px solid $blue-primary;
   }
 
   &:active {
@@ -158,37 +160,35 @@
     color: $blue-secondary;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 48rem) {
     font-size: map.get($Button-tablet, 'font-size');
     line-height: map.get($Button-tablet, 'line-height');
     font-weight: map.get($Button-tablet, 'font-weight');
     letter-spacing: map.get($Button-tablet, 'letter-spacing');
     padding: 0.5rem 0.875rem;
   }
-  @media (min-width: 1024px) {
+  @media (min-width: 64rem) {
     font-size: map.get($Body-desktop, 'font-size');
     line-height: map.get($Button-desktop, 'line-height');
     font-weight: map.get($Button-desktop, 'font-weight');
     letter-spacing: map.get($Button-desktop, 'letter-spacing');
-    //padding: 0.9rem 1.5rem;
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 90rem) {
     font-size: map.get($Button-desktop-xl, 'font-size');
     line-height: map.get($Button-desktop-xl, 'line-height');
     font-weight: map.get($Button-desktop-xl, 'font-weight');
     letter-spacing: map.get($Button-desktop-xl, 'letter-spacing');
-    padding: 8px 18px;
+    padding: 0.5rem 1.125rem;
   }
-
 }
 //BOTON FONDO PLANO CLARO secondary cards
 .btnSecondaryLight {
   display: inline-flex;
   width: auto;
-  padding: 14px 24px;
+  padding: 0.875rem 1.5rem;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 0.625rem;
   color: $title-color;
   border-radius: 50px;
   border: 2px solid transparent;
@@ -202,40 +202,39 @@
   &:hover {
     background: $blue-dark;
     color: $blue-secondary;
-    border: 2px solid $blue-dark
+    border: 2px solid $blue-dark;
   }
-  
+
   &:active {
     background: $blue-primary;
     border: 2px solid $blue-primary;
     color: $blue-secondary;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 48rem) {
     font-size: map.get($Button-tablet, 'font-size');
     line-height: map.get($Button-tablet, 'line-height');
     font-weight: map.get($Button-tablet, 'font-weight');
     letter-spacing: map.get($Button-tablet, 'letter-spacing');
     padding: 0.5rem 0.875rem;
   }
-  @media (min-width: 1024px) {
+  @media (min-width: 64rem) {
     font-size: map.get($Body-desktop, 'font-size');
     line-height: map.get($Button-desktop, 'line-height');
     font-weight: map.get($Button-desktop, 'font-weight');
     letter-spacing: map.get($Button-desktop, 'letter-spacing');
     padding: 0.9rem 1.5rem;
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 90rem) {
     font-size: map.get($Button-desktop-xl, 'font-size');
     line-height: map.get($Button-desktop-xl, 'line-height');
     font-weight: map.get($Button-desktop-xl, 'font-weight');
     letter-spacing: map.get($Button-desktop-xl, 'letter-spacing');
-
   }
 }
 
-//LINK 
-.linkPrimary{
+//LINK
+.linkPrimary {
   color: $blue-primary;
   cursor: pointer;
   font-family: $font-primary;
@@ -243,31 +242,28 @@
   line-height: map.get($Button-mobile, 'line-height');
   font-weight: map.get($Button-mobile, 'font-weight');
 
-  @media (min-width: 768px) {
+  @media (min-width: 48rem) {
     font-size: map.get($Button-tablet, 'font-size');
     line-height: map.get($Button-tablet, 'line-height');
     font-weight: map.get($Button-tablet, 'font-weight');
     letter-spacing: map.get($Button-tablet, 'letter-spacing');
-    
   }
-  @media (min-width: 1024px) {
+  @media (min-width: 64rem) {
     font-size: map.get($Button-desktop, 'font-size');
     line-height: map.get($Button-desktop, 'line-height');
     font-weight: map.get($Button-desktop, 'font-weight');
     letter-spacing: map.get($Button-desktop, 'letter-spacing');
-    
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 90rem) {
     font-size: map.get($Button-desktop-xl, 'font-size');
     line-height: map.get($Button-desktop-xl, 'line-height');
     font-weight: map.get($Button-desktop-xl, 'font-weight');
     letter-spacing: map.get($Button-desktop-xl, 'letter-spacing');
-    
   }
 }
 
 //LINK ARROW
-.linkSecondary{
+.linkSecondary {
   color: $blue-primary;
   cursor: pointer;
   display: flex;
@@ -277,26 +273,23 @@
   line-height: map.get($Button-mobile, 'line-height');
   font-weight: map.get($Button-mobile, 'font-weight');
 
-  @media (min-width: 768px) {
+  @media (min-width: 48rem) {
     font-size: map.get($Button-tablet, 'font-size');
     line-height: map.get($Button-tablet, 'line-height');
     font-weight: map.get($Button-tablet, 'font-weight');
     letter-spacing: map.get($Button-tablet, 'letter-spacing');
-    
   }
-  @media (min-width: 1024px) {
+  @media (min-width: 64rem) {
     font-size: map.get($Button-desktop, 'font-size');
     line-height: map.get($Button-desktop, 'line-height');
     font-weight: map.get($Button-desktop, 'font-weight');
     letter-spacing: map.get($Button-desktop, 'letter-spacing');
-    
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 90rem) {
     font-size: map.get($Button-desktop-xl, 'font-size');
     line-height: map.get($Button-desktop-xl, 'line-height');
     font-weight: map.get($Button-desktop-xl, 'font-weight');
     letter-spacing: map.get($Button-desktop-xl, 'letter-spacing');
-    
   }
 }
 
@@ -308,35 +301,34 @@
   align-items: center;
   justify-content: space-between; // 🔑 separa texto y flecha a extremos
   width: 100%; // 🔑 hace que el link ocupe el ancho del div padre
-  padding: 10px 0;
+  padding: 0.625rem 0;
   font-family: $font-primary;
   font-size: map.get($SmallText-mobile, 'font-size');
   line-height: map.get($SmallText-mobile, 'line-height');
   font-weight: map.get($SmallText-mobile, 'font-weight');
   border-bottom: 1px solid rgba(42, 17, 96, 0.2);
   &:last-child {
-    border-bottom: none; 
+    border-bottom: none;
   }
   &:hover {
     color: $blue-primary;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 48rem) {
     font-size: map.get($Button-tablet, 'font-size');
     line-height: map.get($Button-tablet, 'line-height');
     font-weight: map.get($Button-tablet, 'font-weight');
     letter-spacing: map.get($Button-tablet, 'letter-spacing');
-    //width: 330px;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 64rem) {
     font-size: map.get($Button-desktop, 'font-size');
     line-height: map.get($Button-desktop, 'line-height');
     font-weight: map.get($Button-desktop, 'font-weight');
     letter-spacing: map.get($Button-desktop, 'letter-spacing');
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: 90rem) {
     font-size: map.get($Button-desktop-xl, 'font-size');
     line-height: map.get($Button-desktop-xl, 'line-height');
     font-weight: map.get($Button-desktop-xl, 'font-weight');
@@ -344,7 +336,7 @@
   }
 }
 
-.linkSecondaryGreen{
+.linkSecondaryGreen {
   color: $green;
   cursor: pointer;
   display: flex;
@@ -358,25 +350,22 @@
     color: $cardWhite;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 48rem) {
     font-size: map.get($Button-tablet, 'font-size');
     line-height: map.get($Button-tablet, 'line-height');
     font-weight: map.get($Button-tablet, 'font-weight');
     letter-spacing: map.get($Button-tablet, 'letter-spacing');
-    
   }
-  @media (min-width: 1024px) {
+  @media (min-width: 64rem) {
     font-size: map.get($Button-desktop, 'font-size');
     line-height: map.get($Button-desktop, 'line-height');
     font-weight: map.get($Button-desktop, 'font-weight');
     letter-spacing: map.get($Button-desktop, 'letter-spacing');
-    
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 90rem) {
     font-size: map.get($Button-desktop-xl, 'font-size');
     line-height: map.get($Button-desktop-xl, 'line-height');
     font-weight: map.get($Button-desktop-xl, 'font-weight');
     letter-spacing: map.get($Button-desktop-xl, 'letter-spacing');
-    
   }
 }
