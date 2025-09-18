@@ -1,7 +1,7 @@
 @use 'sass:map';
 @use './variables.scss' as *;
 
-.estrategia {
+.estrategiaContainer {
   padding: 30px 20px 0 20px;
 
   @media (min-width: 768px) {
@@ -9,7 +9,7 @@
   }
 
   @media (min-width: 1024px) {
-    padding: 120px 0 0 0;
+    padding: 0 0 0 0;
     max-width: 904px;
     margin: 0 auto;
   }
@@ -82,6 +82,7 @@
     max-width: 250px;
     max-height: 170px;
     object-fit: cover;
+    box-shadow: $shadow;
 
     @media (min-width: 768px) {
       max-width: 268px;
