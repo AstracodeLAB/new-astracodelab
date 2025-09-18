@@ -2,13 +2,15 @@
 import Layout from '../layouts/Layout.astro';
 // import Header from '../layouts/partials/Header.astro';
 import Footer from '../layouts/partials/Footer.astro';
+import TitlesHero from '../layouts/components/Titles/TitlesHero.astro';
 ---
 
 <Layout>
 	<!-- <Header /> -->
 	<main class='legal-notice'>
-		<h1 class='legal-notice__title'>Aviso legal</h1>
-
+		
+		<div class="containerLegal">
+			<TitlesHero title="Aviso legal" className="heroHome" />
 		<section class='legal-notice__section legal-notice__section--info'>
 			<h2 class='legal-notice__section-title'>Información legal y aceptación</h2>
 			<p class='legal-notice__content'>
@@ -184,6 +186,7 @@ import Footer from '../layouts/partials/Footer.astro';
 				sus datos.
 			</p>
 		</section>
+	</div>
 	</main>
 	<Footer />
 </Layout>

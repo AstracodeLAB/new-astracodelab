@@ -3,15 +3,22 @@
 
 .legal-notice {
 
-	padding: 20px;
-	margin: 10px;
+	padding: 30px 20px 30px 20px;
 	border-radius: 10px;
-
-
+	color: $text-bg-white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	@media (min-width:768px) {
+		padding: 60px 120px 60px 120px;
+	}
+	@media (min-width:1024px) {
+		padding: 60px 0 60px 0;
+		//max-width: 904px;
+	}
 	&__title {
 		text-transform: uppercase;
-
-
 		font-size: 2rem;
 
 		
@@ -22,19 +29,43 @@
 		margin-bottom: 10px;
 
 		&-title {
-
-			margin-bottom: 10px;
-
-
+			font-family: $font-primary;
+			font-size: map.get($H2-mobile, 'font-size');
+			line-height: map.get($H2-mobile, 'line-height');
+			font-weight: map.get($H2-mobile, 'font-weight');
+			letter-spacing: map.get($H2-mobile, 'letter-spacing');
+			color: $title-color;
+			margin: 0.5rem 0;
+		
+			@media (min-width: 768px) {
+				font-size: map.get($H2-tablet, 'font-size');
+				line-height: map.get($H2-tablet, 'line-height');
+				font-weight: map.get($H2-tablet, 'font-weight');
+				letter-spacing: map.get($H2-tablet, 'letter-spacing');
+			}
+			@media (min-width: 1024px) {
+				font-size: map.get($H2-desktop, 'font-size');
+				line-height: map.get($H2-desktop, 'line-height');
+				font-weight: map.get($H2-desktop, 'font-weight');
+				letter-spacing: map.get($H2-desktop, 'letter-spacing');
+			}
+			@media (min-width: 1440px) {
+				font-size: map.get($H2-desktop-xl, 'font-size');
+				line-height: map.get($H2-desktop-xl, 'line-height');
+				font-weight: map.get($H2-desktop-xl, 'font-weight');
+				letter-spacing: map.get($H2-desktop-xl, 'letter-spacing');
+			}
 		}
 	}
 
 	&__content {
 
 		color: $text-bg-white;
-
 		margin-bottom: 10px;
-
+		&-link {
+			cursor: pointer;
+			font-weight: 600;
+		}
 	}
 
 	&__list {
@@ -43,5 +74,16 @@
 
 
 
+	}
+}
+
+.containerLegal {
+	@media (min-width:1024px) {
+		padding: 120px 0 120px 0;
+		max-width: 904px;
+	}
+	@media (min-width:1440px) {
+		padding: 120px 0 120px 0;
+		max-width: 1024px;
 	}
 }
