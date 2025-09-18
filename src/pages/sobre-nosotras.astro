@@ -1,0 +1,54 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Contact from "../layouts/components/Contact.astro";
+import keyboard from "../images/keyboard.png";
+import TitleSecondary from "../layouts/components/Titles/TitleSecondary.astro";
+import Subtitle from "../layouts/components/Titles/Subtitle.astro";
+import team from "../images/team.png";
+import Buttons from "../layouts/components/Buttons/Buttons.astro";
+import WorkSection from "../layouts/components/WorkSection.astro";
+---
+
+<Layout title='Accesibilidad Web Profesional | AstracodeLAB'>
+  <main class="mainSobreNosotras">
+    <article class="mainSobreNosotras__title">
+      <p class="mainSobreNosotras__title-text">Astracodelab</p>
+      <img class="mainSobreNosotras__title-img" src={keyboard.src} alt="">
+    </article>
+
+    <article class="mainSobreNosotras__contain">
+      <section class="mainSobreNosotras__contain-card">
+        <h1 class="titleSecondary">Nuestra filosofía</h1>
+        <Subtitle text="Diseño, rendimiento y cercanía" />
+        <p>Astracodelab está formado por un equipo de desarrolladoras comprometidas con el éxito de tu proyecto. Creemos que una web de calidad surge del equilibrio entre un buen diseño, funcionalidad y una cuidada experiencia de usuario. Pero, sobre todo, valoramos la cercanía con nuestros clientes. Escuchamos tus ideas, comprendemos tus negocio y transformamos tus objetivos en soluciones digitales.</p>
+      </section>
+
+      <section class="mainSobreNosotras__about">
+        <div class="mainSobreNosotras__about-img">
+          <img src={team.src} alt="" class="mainSobreNosotras__about-img-item">
+        </div>
+        <div class="mainSobreNosotras__about-container">
+          <TitleSecondary text="¿A quien nos dirigimos?"/>
+          <p class="mainSobreNosotras__about-container-paragraph"> Colaboramos con personas emprendedoras, pequeñas y medianas empresas, agencias y organizaciones que buscan soluciones digitales adaptadas a sus necesidades. Ya sea que estés dando tus primeros pasos o quieras escalar una plataforma consolidada, nos involucramos desde el principio. Acompañamos cada proyecto con el mismo compromiso, sin importar su tamaño o etapa. Porque estamos convencidos de que toda buena idea merece una solución tecnológica que esté a la altura de su ambición.</p>
+        </div>
+      </section>
+
+      <section class="mainSobreNosotras__contain-card">
+        <TitleSecondary text="¿Nos tomamos un café digital?" />
+        <p>Contáctanos y cuéntanos tu idea. Te ayudaremos a darle el impulso que necesita y a mejorar tu presencia digital con soluciones a medida.</p>
+        <div class="mainSobreNosotras__contain-card-button">
+          <Buttons 
+          className="btnSecondaryDark" 
+          href='https://calendly.com/astracodelab'
+          target='_blank'
+          rel='noopener noreferrer'>
+          Contacta con nosotras
+        </Buttons>
+        </div>
+        
+      </section>
+    </article>
+    <WorkSection titulo='¿Quieres ver nuestros trabajos?' />
+  </main>
+  <Contact />
+</Layout>

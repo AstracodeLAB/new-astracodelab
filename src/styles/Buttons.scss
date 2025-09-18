@@ -170,7 +170,7 @@
     line-height: map.get($Button-desktop, 'line-height');
     font-weight: map.get($Button-desktop, 'font-weight');
     letter-spacing: map.get($Button-desktop, 'letter-spacing');
-    padding: 0.9rem 1.5rem;
+    //padding: 0.9rem 1.5rem;
   }
   @media (min-width: 1440px) {
     font-size: map.get($Button-desktop-xl, 'font-size');
