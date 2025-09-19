@@ -1,0 +1,106 @@
+@use 'sass:map';
+@use './variables.scss' as *;
+
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(30, 14, 98, 0.9);
+  color: #fff;
+  padding: 1rem 1rem;
+  display: none;
+  flex-direction: column;
+  align-items: start;
+  z-index: 1000;
+  text-align: start;
+  gap: 0.623rem;
+
+  @media (min-width: 48rem) {
+    padding: 2rem 2rem;
+  }
+  @media (min-width: 64rem) {
+    padding: 1rem 6rem;
+  }
+  @media (min-width: 90rem) {
+    padding: 1rem 10rem;
+  }
+
+  &__title {
+    font-family: $font-primary;
+    font-size: map.get($H3-mobile, 'font-size');
+    line-height: map.get($H3-mobile, 'line-height');
+    font-weight: map.get($H3-mobile, 'font-weight');
+    letter-spacing: map.get($H3-mobile, 'letter-spacing');
+    color: $blue-secondary;
+    margin: 0.5rem 0;
+
+    @media (min-width: 48rem) {
+      font-size: map.get($H3-tablet, 'font-size');
+      line-height: map.get($H3-tablet, 'line-height');
+      font-weight: map.get($H3-tablet, 'font-weight');
+      letter-spacing: map.get($H3-tablet, 'letter-spacing');
+    }
+  }
+  &__paragraph {
+    font-family: $font-primary;
+    font-size: map.get($Body-mobile, 'font-size');
+    line-height: map.get($Body-mobile, 'line-height');
+    font-weight: 300;
+    letter-spacing: map.get($Body-mobile, 'letter-spacing');
+    color: $blue-secondary;
+
+    @media (min-width: 48rem) {
+      font-size: map.get($Body-tablet, 'font-size');
+      line-height: map.get($Body-tablet, 'line-height');
+      font-weight: map.get($Body-tablet, 'font-weight');
+      letter-spacing: map.get($Body-tablet, 'letter-spacing');
+    }
+
+    @media (min-width: 64rem) {
+      font-size: map.get($Body-desktop, 'font-size');
+      line-height: map.get($Body-desktop, 'line-height');
+      font-weight: map.get($Body-desktop, 'font-weight');
+      letter-spacing: map.get($Body-desktop, 'letter-spacing');
+    }
+
+    @media (min-width: 90rem) {
+      font-size: map.get($Body-desktop-xl, 'font-size');
+      line-height: map.get($Body-desktop-xl, 'line-height');
+      font-weight: map.get($Body-desktop-xl, 'font-weight');
+      letter-spacing: map.get($Body-desktop-xl, 'letter-spacing');
+    }
+  }
+}
+.cookie-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  flex-direction: column;
+  align-items: end;
+  width: 100%;
+
+  @media (min-width: 48rem) {
+    flex-direction: row;
+    justify-content: end;
+  }
+}
+.btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: $blue-secondary;
+  color: $blue-dark;
+  font-weight: bold;
+  min-width: 9.375rem;
+
+  &:hover {
+    background-color: $blue-primary;
+    color: $blue-secondary;
+  }
+}
+.btn-secondary {
+  background-color: #263238;
+  color: $blue-secondary;
+}

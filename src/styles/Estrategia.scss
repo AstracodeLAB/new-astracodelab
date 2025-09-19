@@ -82,6 +82,7 @@
     max-width: 15.625rem;
     max-height: 10.625rem;
     object-fit: cover;
+    box-shadow: $shadow;
 
     @media (min-width: 48rem) {
       max-width: 16.75rem;
