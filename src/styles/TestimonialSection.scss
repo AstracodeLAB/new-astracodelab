@@ -1,19 +1,15 @@
 @use 'sass:map';
 @use './variables.scss' as *;
 
+.testimonial-section {
+  margin-top: 1.875rem;
 
-.testimonial-section{
-  margin-top: 30px;
-
-  @media(min-width: 768px) {
-
+  @media (min-width: 48rem) {
   }
-  @media(min-width: 1024px) {
-
-    margin-top: 60px;
+  @media (min-width: 64rem) {
+    margin-top: 3.75rem;
   }
 }
 .card-testimonio {
-  box-shadow: 0 1px 40px 0 rgba(42, 17, 96, 0.20);
-
+  box-shadow: 0 1px 40px 0 rgba(42, 17, 96, 0.2);
 }

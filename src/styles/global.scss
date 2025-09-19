@@ -63,22 +63,22 @@ html {
 
 body {
   font-family: $font-primary;
-  padding-top: 80px;
-  
+  padding-top: 5rem;
+
   header {
-    padding: 20px;
+    padding: 1.25rem;
   }
 
   footer {
-    padding: 30px 20px; // top-bottom 30px, left-right 20px
+    padding: 1.875rem 1.25rem; // top-bottom1.875rem, left-right1.25rem
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 48rem) {
     padding-top: 90px;
   }
-  @media (min-width: 1024px) {
-    padding-top: 100px;
+  @media (min-width: 64rem) {
+    padding-top: 6.25rem;
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 90rem) {
   }
 }

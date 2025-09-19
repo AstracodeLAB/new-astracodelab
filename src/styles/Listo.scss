@@ -2,55 +2,55 @@
 @use './variables.scss' as *;
 
 .listo {
-  padding: 60px 20px 0 20px;
+  padding: 3.75rem 1.25rem 0 1.25rem;
 
-  @media (min-width: 768px) {
-    padding: 60px 120px 0 120px;
+  @media (min-width: 48rem) {
+    padding: 3.75rem 7.5rem 0 7.5rem;
   }
 
-  @media (min-width: 1024px) {
-    padding: 120px 0 0 0;
-    max-width: 904px;
+  @media (min-width: 64rem) {
+    padding: 7.5rem 0 0 0;
+    max-width: 56.5rem;
     margin: 0 auto;
   }
 
-  @media (min-width: 1440px) {
-    max-width: 1024px;
+  @media (min-width: 90rem) {
+    max-width: 64rem;
   }
 
   &__container {
-    @media (min-width: 1024px) {
+    @media (min-width: 64rem) {
       display: flex;
-      padding-top: 20px;
+      padding-top: 1.25rem;
     }
   }
 
   &__image {
-    margin-top: 20px;
+    margin-top: 1.25rem;
 
-    @media (min-width: 768px) {
-      max-width: 269px;
-      margin: 20px auto 0;
+    @media (min-width: 48rem) {
+      max-width: 16.813rem;
+      margin: 1.25rem auto 0;
     }
 
-    @media (min-width: 1024px) {
-      max-width: 400px;
-      margin: 20px 60px 0 30px;
+    @media (min-width: 64rem) {
+      max-width: 25rem;
+      margin: 1.25rem 3.75rem 0 1.875rem;
     }
 
-    @media (min-width: 1440px) {
+    @media (min-width: 90rem) {
       margin: 0;
     }
   }
 
   &__content {
-    @media (min-width: 1440px) {
-      padding-left: 100px;
+    @media (min-width: 90rem) {
+      padding-left: 6.25rem;
     }
   }
 
   &__text {
-    padding-top: 20px;
+    padding-top: 1.25rem;
     font-family: $font-primary;
     color: $text-bg-white;
     letter-spacing: map.get($Body-mobile, letter-spacing);
@@ -58,21 +58,21 @@
     font-size: map.get($Body-mobile, font-size);
     font-weight: map.get($Body-mobile, font-weight);
 
-    @media (min-width: 768px) {
+    @media (min-width: 48rem) {
       letter-spacing: map.get($Body-tablet, letter-spacing);
       line-height: map.get($Body-tablet, line-height);
       font-size: map.get($Body-tablet, font-size);
       font-weight: map.get($Body-tablet, font-weight);
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: 64rem) {
       letter-spacing: map.get($Body-desktop, letter-spacing);
       line-height: map.get($Body-desktop, line-height);
       font-size: map.get($Body-desktop, font-size);
       font-weight: map.get($Body-desktop, font-weight);
     }
 
-    @media (min-width: 1440px) {
+    @media (min-width: 90rem) {
       letter-spacing: map.get($Body-desktop-xl, letter-spacing);
       line-height: map.get($Body-desktop-xl, line-height);
       font-size: map.get($Body-desktop-xl, font-size);
@@ -81,10 +81,10 @@
   }
 
   &__cta {
-    margin-top: 20px;
-    padding: 10px 0;
+    margin-top: 1.25rem;
+    padding: 0.625rem 0;
 
-    @media (min-width: 768px) {
+    @media (min-width: 48rem) {
       display: flex;
       justify-content: end;
     }

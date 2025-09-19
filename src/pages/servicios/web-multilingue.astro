@@ -49,52 +49,54 @@ const benefits = [
 <Layout title='Servicios de diseño y desarrollo web'>
   <section class='multilingue'>
     <div class='container_main_services'>
-      <HeroSecondary
-        title='Web multilingüe'
-        subtitle='Llega más lejos, conecta mejor.'
-        text='Internet borra las fronteras, pero una web en un solo idioma puede seguir limitando tu alcance.  Si tu negocio quiere crecer en mercados internacionales, o si tu audiencia local habla diferentes idiomas, una web multilingüe es una inversión esencial. En AstracodeLAB, diseñamos y desarrollamos páginas web multilingües profesionales que adaptan tu mensaje, abriendo las puertas a nuevos mercados y clientes.'
-        image={heroImgMultilang}
-        alt='Ilustración de creación de contenido con documentos, texto, imágenes, lupa y elementos de edición y revisión.'
-      />
-
-      <article class='multilingue__intro'>
-        <TitleSecondary
-          text='¿Por qué necesitas una web multilingüe?'
-          description='Una web multilingüe es una forma inteligente de expandir tu alcance y conectar con personas en su idioma . Es una estrategia que te permite comunicarte con una audiencia diversa, generar confianza y posicionar tu marca en mercados internacionales.'
+      <div class='container_main_services'>
+        <HeroSecondary
+          title='Web multilingüe'
+          subtitle='Llega más lejos, conecta mejor.'
+          text='Internet borra las fronteras, pero una web en un solo idioma puede seguir limitando tu alcance.  Si tu negocio quiere crecer en mercados internacionales, o si tu audiencia local habla diferentes idiomas, una web multilingüe es una inversión esencial. En AstracodeLAB, diseñamos y desarrollamos páginas web multilingües profesionales que adaptan tu mensaje, abriendo las puertas a nuevos mercados y clientes.'
+          image={heroImgMultilang}
+          alt='Ilustración de creación de contenido con documentos, texto, imágenes, lupa y elementos de edición y revisión.'
         />
-        <BenefitsSection titulo='Beneficios clave de una web multilingüe profesional:' benefits={benefits} />
-      </article>
 
-      <QueIncluye
-        title='¿Qué incluye nuestro servicio de creación de webs multilingües?'
-        intro='En AstracodeLAB te ofrecemos una solución completa para tu web multilingüe.'
-        image={idiomas.src}
-        paragraphs={[
-          '<b>Desarrollo de Estructura Multilingüe Optimizada:</b> Implementación de la arquitectura técnica ideal para la gestión de idiomas.',
-          '<b>Configuración precisa para buscadores internacionales:</b> Implementación técnica crucial para el SEO internacional y para guiar a los motores de búsqueda.',
-          '<b>Selector de Idiomas Intuitivo:</b> Integración de un menú de cambio de idioma visible y fácil de usar para tus visitantes.',
-          '<b>Diseño Responsive y Adaptable:</b> Tu web multilingüe se verá y funcionará perfectamente en cualquier dispositivo e idioma.',
-          '<b>Optimización de Velocidad de Carga:</b> Aseguramos que el rendimiento de tu web se mantenga óptimo en todas sus versiones.',
-          '<b>Soporte Post-Lanzamiento:</b> Acompañamiento y asistencia durante el primer mes tras la publicación, con opciones de mantenimiento web continuo para tu web multilingüe.',
-        ]}
-        alt='Imagen conceptual de alcance global, con un globo terráqueo en blanco y negro centrado en Europa, simbolizando estrategia internacional y presencia global.'
+        <article class='multilingue__intro'>
+          <TitleSecondary
+            text='¿Por qué necesitas una web multilingüe?'
+            description='Una web multilingüe es una forma inteligente de expandir tu alcance y conectar con personas en su idioma . Es una estrategia que te permite comunicarte con una audiencia diversa, generar confianza y posicionar tu marca en mercados internacionales.'
+          />
+          <BenefitsSection titulo='Beneficios clave de una web multilingüe profesional:' benefits={benefits} />
+        </article>
+
+        <QueIncluye
+          title='¿Qué incluye nuestro servicio de creación de webs multilingües?'
+          intro='En AstracodeLAB te ofrecemos una solución completa para tu web multilingüe.'
+          image={idiomas.src}
+          paragraphs={[
+            '<b>Desarrollo de Estructura Multilingüe Optimizada:</b> Implementación de la arquitectura técnica ideal para la gestión de idiomas.',
+            '<b>Configuración precisa para buscadores internacionales:</b> Implementación técnica crucial para el SEO internacional y para guiar a los motores de búsqueda.',
+            '<b>Selector de Idiomas Intuitivo:</b> Integración de un menú de cambio de idioma visible y fácil de usar para tus visitantes.',
+            '<b>Diseño Responsive y Adaptable:</b> Tu web multilingüe se verá y funcionará perfectamente en cualquier dispositivo e idioma.',
+            '<b>Optimización de Velocidad de Carga:</b> Aseguramos que el rendimiento de tu web se mantenga óptimo en todas sus versiones.',
+            '<b>Soporte Post-Lanzamiento:</b> Acompañamiento y asistencia durante el primer mes tras la publicación, con opciones de mantenimiento web continuo para tu web multilingüe.',
+          ]}
+          alt='Imagen conceptual de alcance global, con un globo terráqueo en blanco y negro centrado en Europa, simbolizando estrategia internacional y presencia global.'
+        />
+      </div>
+      <BannerCta
+        titulo='¿Listo para conquistar nuevos mercados con tu web multilingüe?'
+        descripcion='Una web multilingüe bien diseñada puede ser el paso que marque la diferencia en tu estrategia de expansión. En AstracodeLAB te ayudamos a crear una presencia digital capaz de conectar con personas de distintos países y culturas sin perder tu identidad de marca. El idioma no debería limitar el alcance de tu negocio. Da el siguiente paso con una  web multilingüe que hable con claridad a cada audiencia, sin importar dónde se encuentren.'
+        texto='¿Quieres que tu web rinda al máximo? Agenda tu reunión gratuita y exploremos tus funcionalidades.'
+        className='linkSecondaryGreen'
       />
+      <section class='multilingueFinal'>
+        <FaqsSection
+          titulo='Preguntas frecuentes sobre webs multilingües'
+          description='Aquí resolvemos algunas de las dudas más comunes al planificar tu web multilingüe:'
+          faqs={faqsMultilang}
+        />
+      </section>
+      <section class='multilingueFinal'>
+        <Contact />
+      </section>
     </div>
-    <BannerCta
-      titulo='¿Listo para conquistar nuevos mercados con tu web multilingüe?'
-      descripcion='Una web multilingüe bien diseñada puede ser el paso que marque la diferencia en tu estrategia de expansión. En AstracodeLAB te ayudamos a crear una presencia digital capaz de conectar con personas de distintos países y culturas sin perder tu identidad de marca. El idioma no debería limitar el alcance de tu negocio. Da el siguiente paso con una  web multilingüe que hable con claridad a cada audiencia, sin importar dónde se encuentren.'
-      texto='¿Quieres que tu web rinda al máximo? Agenda tu reunión gratuita y exploremos tus funcionalidades.'
-      className='linkSecondaryGreen'
-    />
-    <section class='multilingueFinal'>
-      <FaqsSection
-        titulo='Preguntas frecuentes sobre webs multilingües'
-        description='Aquí resolvemos algunas de las dudas más comunes al planificar tu web multilingüe:'
-        faqs={faqsMultilang}
-      />
-    </section>
-    <section class='multilingueFinal'>
-      <Contact />
-    </section>
   </section>
 </Layout>

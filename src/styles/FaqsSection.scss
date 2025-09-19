@@ -5,19 +5,16 @@
 // FAQS SECTION
 // ===========================
 .faqs-section {
-  // padding: 50px 20px 20px 20px;
-
-  @media (min-width: 768px) {
-    padding: 60px 30px 0px 30px;
+  @media (min-width: 48rem) {
+    padding: 3.75rem 1.875rem 0 1.875rem;
   }
 
-  @media (min-width: 1024px) {
-    padding: 120px 0 0 0;
+  @media (min-width: 64rem) {
+    padding: 7.5rem 0 0 0;
   }
 
   &__container {
-
-    @media(min-width: 1024px) {
+    @media (min-width: 64rem) {
       display: flex;
       gap: 2rem;
     }
@@ -27,8 +24,7 @@
     text-align: center;
     margin-bottom: 0.625rem;
 
-
-    @media (min-width: 1024px) {
+    @media (min-width: 64rem) {
       margin-bottom: 1.25rem;
     }
   }
@@ -36,13 +32,12 @@
   &__content {
     margin-bottom: 3rem;
 
-    @media (min-width: 768px) {
+    @media (min-width: 48rem) {
       margin-bottom: 3.5rem;
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: 64rem) {
       margin-bottom: 4rem;
-
     }
   }
 
@@ -58,24 +53,21 @@
   &__cta {
     text-align: center;
     padding: 2rem 1rem;
-    background: rgba($blue-primary, 0.01);
+    background: $cardWhite;
     border-radius: 12px;
     border: 1px solid rgba($blue-primary, 0.1);
     box-shadow: 0 1px 40px 0 rgba(42, 17, 96, 0.2);
 
-    @media (min-width: 768px) {
-     // padding: 2.5rem 2rem;
+    @media (min-width: 48rem) {
       border-radius: 16px;
       margin: 0 87px;
     }
 
-    @media (min-width: 1024px) {
-      max-height: 400px;
-      padding-right:1.25rem; 
+    @media (min-width: 64rem) {
+      max-height: 25rem;
+      padding-right: 1.25rem;
       margin: 0;
     }
-
-    @media (min-width: 1440px) {}
   }
 
   &__cta-title {
@@ -87,7 +79,7 @@
     color: $title-color;
     margin: 0 0 1.5rem 0;
 
-    @media (min-width: 768px) {
+    @media (min-width: 48rem) {
       font-size: map.get($H3-tablet, 'font-size');
       line-height: map.get($H3-tablet, 'line-height');
       font-weight: map.get($H3-tablet, 'font-weight');
@@ -95,7 +87,7 @@
       margin-bottom: 1.75rem;
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: 64rem) {
       font-size: map.get($H3-desktop, 'font-size');
       line-height: map.get($H3-desktop, 'line-height');
       font-weight: map.get($H3-desktop, 'font-weight');
@@ -103,7 +95,7 @@
       margin-bottom: 2rem;
     }
 
-    @media (min-width: 1440px) {
+    @media (min-width: 90rem) {
       font-size: map.get($H3-desktop-xl, 'font-size');
       line-height: map.get($H3-desktop-xl, 'line-height');
       font-weight: map.get($H3-desktop-xl, 'font-weight');
@@ -128,7 +120,7 @@
     color: $title-color;
     margin: 0 0 1.5rem 0;
 
-    @media (min-width: 768px) {
+    @media (min-width: 48rem) {
       font-size: map.get($Body-tablet, 'font-size');
       line-height: map.get($Body-tablet, 'line-height');
       font-weight: map.get($Body-tablet, 'font-weight');
@@ -136,7 +128,7 @@
       margin-bottom: 1.75rem;
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: 64rem) {
       font-size: map.get($Body-desktop, 'font-size');
       line-height: map.get($Body-desktop, 'line-height');
       font-weight: map.get($Body-desktop, 'font-weight');
@@ -144,14 +136,13 @@
       margin-bottom: 2rem;
     }
 
-    @media (min-width: 1440px) {
+    @media (min-width: 90rem) {
       font-size: map.get($Body-desktop-xl, 'font-size');
       line-height: map.get($Body-desktop-xl, 'line-height');
       font-weight: map.get($Body-desktop-xl, 'font-weight');
       letter-spacing: map.get($Body-desktop-xl, 'letter-spacing');
       margin-bottom: 2rem;
     }
-
   }
 
   &__cta-button {
@@ -169,33 +160,32 @@
     transition: all 0.3s ease;
     border: 2px solid $blue-primary;
 
-    @media (min-width: 768px) {
+    @media (min-width: 48rem) {
       font-size: map.get($Button-tablet, 'font-size');
       line-height: map.get($Button-tablet, 'line-height');
       font-weight: map.get($Button-tablet, 'font-weight');
       letter-spacing: map.get($Button-tablet, 'letter-spacing');
       padding: 1rem 2.5rem;
-      border-radius: 10px;
+      border-radius: 0.625rem;
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: 64rem) {
       font-size: map.get($Button-desktop, 'font-size');
       line-height: map.get($Button-desktop, 'line-height');
       font-weight: map.get($Button-desktop, 'font-weight');
       letter-spacing: map.get($Button-desktop, 'letter-spacing');
       padding: 1.125rem;
       border-radius: 12px;
-      min-width: 190px;
-      min-height: 41px;
+      min-width: 11.875rem;
+      min-height: 2.563rem;
     }
 
-    @media (min-width: 1440px) {
+    @media (min-width: 90rem) {
       font-size: map.get($Button-desktop-xl, 'font-size');
       line-height: map.get($Button-desktop-xl, 'line-height');
       font-weight: map.get($Button-desktop-xl, 'font-weight');
       letter-spacing: map.get($Button-desktop-xl, 'letter-spacing');
     }
-
 
     &:hover {
       background: transparent;
@@ -215,7 +205,7 @@
     p {
       a {
         color: $blue-primary; // tu variable de color
-        font-weight: 600;       // opcional para resaltar
+        font-weight: 600; // opcional para resaltar
         text-decoration: underline; // o none si prefieres sin subrayado
         transition: color 0.3s ease;
 

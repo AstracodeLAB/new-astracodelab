@@ -2,23 +2,23 @@
 @use './variables.scss' as *;
 
 .incluye {
-  padding: 60px 20px 60px 20px;
+  padding: 3.75rem 1.25rem 3.75rem 1.25rem;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
 
-  @media (min-width: 768px) {
-    padding: 60px 120px 0 120px;
+  @media (min-width: 48rem) {
+    padding: 3.75rem 7.5rem 0 7.5rem;
   }
 
-  @media (min-width: 1024px) {
-    padding: 120px 0 0 0;
-    max-width: 904px;
+  @media (min-width: 64rem) {
+    padding: 7.5rem 0 0 0;
+    max-width: 56.5rem;
     margin: 0 auto;
   }
 
-  @media (min-width: 1440px) {
-    max-width: 1024px;
+  @media (min-width: 90rem) {
+    max-width: 64rem;
   }
 
   &__intro {
@@ -26,49 +26,48 @@
     flex-direction: column;
     gap: 0.63rem;
 
-    @media (min-width: 768px) {
+    @media (min-width: 48rem) {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      grid-template-areas: 
-        "title img"
-        "text text";
+      grid-template-areas:
+        'title img'
+        'text text';
       gap: 1.25rem;
 
-      @media (min-width: 1024px) {
+      @media (min-width: 64rem) {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-areas: 
-        "title img"
-        "text img";
-      //gap: 1.25rem;
+        grid-template-areas:
+          'title img'
+          'text img';
       }
     }
+
     &-title {
       grid-area: title;
     }
+
     &-img {
       display: flex;
       justify-content: center;
       grid-area: img;
-      
-      &-item {
-      max-width: 250px;
-      display: block;
-      //margin: 20px auto;
-      box-shadow: $shadow;
-      border-radius: 15px;
-  
-      @media (min-width: 768px) {
-       max-width: 100%;  
-       height: 100%;   
-      }
 
-      @media (min-width: 1005px) {
-        margin-bottom: 0.1px;
-        margin-top: 0;
-        max-width: 100%;
+      &-item {
+        max-width: 15.625rem;
+        display: block;
+        box-shadow: $shadow;
+        border-radius: 15px;
+
+        @media (min-width: 48rem) {
+          max-width: 100%;
+          height: 100%;
+        }
+
+        @media (min-width: 62.813rem) {
+          margin-bottom: 0.1px;
+          margin-top: 0;
+          max-width: 100%;
+        }
       }
-      }
-      
     }
     &-text {
       grid-area: text;
@@ -79,47 +78,48 @@
       font-size: map.get($Body-mobile, font-size);
       font-weight: map.get($Body-mobile, font-weight);
 
-    @media (min-width: 768px) {
-      letter-spacing: map.get($Body-tablet, letter-spacing);
-      line-height: map.get($Body-tablet, line-height);
-      font-size: map.get($Body-tablet, font-size);
-      font-weight: map.get($Body-tablet, font-weight);
-    }
+      @media (min-width: 48rem) {
+        letter-spacing: map.get($Body-tablet, letter-spacing);
+        line-height: map.get($Body-tablet, line-height);
+        font-size: map.get($Body-tablet, font-size);
+        font-weight: map.get($Body-tablet, font-weight);
+      }
 
-    @media (min-width: 1024px) {
-      letter-spacing: map.get($Body-desktop, letter-spacing);
-      line-height: map.get($Body-desktop, line-height);
-      font-size: map.get($Body-desktop, font-size);
-      font-weight: map.get($Body-desktop, font-weight);
-    }
+      @media (min-width: 64rem) {
+        letter-spacing: map.get($Body-desktop, letter-spacing);
+        line-height: map.get($Body-desktop, line-height);
+        font-size: map.get($Body-desktop, font-size);
+        font-weight: map.get($Body-desktop, font-weight);
+      }
 
-    @media (min-width: 1440px) {
-      letter-spacing: map.get($Body-desktop-xl, letter-spacing);
-      line-height: map.get($Body-desktop-xl, line-height);
-      font-size: map.get($Body-desktop-xl, font-size);
-      font-weight: map.get($Body-desktop-xl, font-weight);
-    }
+      @media (min-width: 90rem) {
+        letter-spacing: map.get($Body-desktop-xl, letter-spacing);
+        line-height: map.get($Body-desktop-xl, line-height);
+        font-size: map.get($Body-desktop-xl, font-size);
+        font-weight: map.get($Body-desktop-xl, font-weight);
+      }
     }
   }
 
   &__paragraphs {
-      font-family: $font-primary;
-      color: $text-bg-white;
-      letter-spacing: map.get($Body-mobile, letter-spacing);
-      line-height: map.get($Body-mobile, line-height);
-      font-size: map.get($Body-mobile, font-size);
-      font-weight: map.get($Body-mobile, font-weight);
-      display: flex;
-      flex-direction: column;
-      gap: 0.65rem;
-    @media (min-width: 768px) {
+    font-family: $font-primary;
+    color: $text-bg-white;
+    letter-spacing: map.get($Body-mobile, letter-spacing);
+    line-height: map.get($Body-mobile, line-height);
+    font-size: map.get($Body-mobile, font-size);
+    font-weight: map.get($Body-mobile, font-weight);
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+
+    @media (min-width: 48rem) {
       letter-spacing: map.get($Body-tablet, letter-spacing);
       line-height: map.get($Body-tablet, line-height);
       font-size: map.get($Body-tablet, font-size);
       font-weight: map.get($Body-tablet, font-weight);
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: 64rem) {
       letter-spacing: map.get($Body-desktop, letter-spacing);
       line-height: map.get($Body-desktop, line-height);
       font-size: map.get($Body-desktop, font-size);
@@ -131,7 +131,7 @@
       justify-content: space-between;
     }
 
-    @media (min-width: 1440px) {
+    @media (min-width: 90rem) {
       letter-spacing: map.get($Body-desktop-xl, letter-spacing);
       line-height: map.get($Body-desktop-xl, line-height);
       font-size: map.get($Body-desktop-xl, font-size);
@@ -139,18 +139,16 @@
     }
 
     &-text {
-      @media (min-width: 1024px) {
-        flex: 0 0 440px;
-       
+      @media (min-width: 64rem) {
+        flex: 0 0 27.5rem;
       }
-      @media (min-width: 1440px) {
-        flex: 0 0 500px;
-       
+      @media (min-width: 90rem) {
+        flex: 0 0 31.25rem;
       }
     }
-  
+
     &-text--full {
-      @media (min-width: 1024px) {
+      @media (min-width: 64rem) {
         flex: 0 0 100%;
         max-width: 100%;
       }

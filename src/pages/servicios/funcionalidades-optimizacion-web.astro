@@ -16,70 +16,72 @@ import Contact from '../../layouts/components/Contact.astro';
     subtitle='Potencia tu presencia digital al máximo'
     text='Tu sitio web debería evolucionar contigo, no quedarse estancado como una postal olvidada. En AstracodeLAB incorporamos funcionalidades avanzadas  prácticas y afinamos cada aspecto técnico: carga rápida, estructura clara, compatibilidad total y una experiencia pensada para tus usuarios.'
   />
-  <div class='incluye'>
-    <div class='incluye__title'>
-      <div>
-        <TitleSecondary text='¿Qué incluye nuestro servicio de funcionalidades y optimización web?' />
-      </div>
-      <article class='incluye__numbers'>
-        <div class='sectionPorqNecesitoWeb__numbers'>
-          <SimpleNumber
-            number={1}
-            title='Optimización de velocidad de carga: '
-            text='Mejora drástica del tiempo de carga de tu web para una mejor experiencia de usuario y SEO.'
-          />
-          <SimpleNumber
-            number={2}
-            title='Diseño responsive avanzado: '
-            text='Adaptación perfecta de tu web a cualquier dispositivo: móviles, tablets y ordenadores.'
-          />
-          <SimpleNumber
-            number={3}
-            title='Implementación de sistemas de reservas / calendarios: '
-            text='Gestión online de citas, clases o eventos, facilitando la interacción con tus clientes.'
-          />
-          <SimpleNumber
-            number={4}
-            title='Desarrollo de webs multilingües: '
-            text='Extiende tu alcance a nivel global con una web diseñada para diferentes idiomas y culturas.'
-          />
-          <SimpleNumber
-            number={5}
-            title='Mejora de la accesibilidad web (WCAG): '
-            text='Hacemos tu web usable para todos, cumpliendo los estándares internacionales de accesibilidad.'
-          />
-          <SimpleNumber
-            number={6}
-            title='Optimización SEO técnica: '
-            text='Ajustes en la estructura interna, URLs, metadatos y código para mejorar tu visibilidad en buscadores.'
-          />
-          <SimpleNumber
-            number={7}
-            title='Integración de chats online / bots: '
-            text='Ofrece soporte instantáneo a tus visitantes, mejorando la atención al cliente y la conversión.'
-          />
+  <div class='container_main_services'>
+    <div class='opti'>
+      <div class='opti__title'>
+        <div>
+          <TitleSecondary text='¿Qué incluye nuestro servicio de funcionalidades y optimización web?' />
         </div>
-      </article>
+        <article class='opti__numbers'>
+          <div class='sectionPorqNecesitoWeb__numbers'>
+            <SimpleNumber
+              number={1}
+              title='Optimización de velocidad de carga: '
+              text='Mejora drástica del tiempo de carga de tu web para una mejor experiencia de usuario y SEO.'
+            />
+            <SimpleNumber
+              number={2}
+              title='Diseño responsive avanzado: '
+              text='Adaptación perfecta de tu web a cualquier dispositivo: móviles, tablets y ordenadores.'
+            />
+            <SimpleNumber
+              number={3}
+              title='Implementación de sistemas de reservas / calendarios: '
+              text='Gestión online de citas, clases o eventos, facilitando la interacción con tus clientes.'
+            />
+            <SimpleNumber
+              number={4}
+              title='Desarrollo de webs multilingües: '
+              text='Extiende tu alcance a nivel global con una web diseñada para diferentes idiomas y culturas.'
+            />
+            <SimpleNumber
+              number={5}
+              title='Mejora de la accesibilidad web (WCAG): '
+              text='Hacemos tu web usable para todos, cumpliendo los estándares internacionales de accesibilidad.'
+            />
+            <SimpleNumber
+              number={6}
+              title='Optimización SEO técnica: '
+              text='Ajustes en la estructura interna, URLs, metadatos y código para mejorar tu visibilidad en buscadores.'
+            />
+            <SimpleNumber
+              number={7}
+              title='Integración de chats online / bots: '
+              text='Ofrece soporte instantáneo a tus visitantes, mejorando la atención al cliente y la conversión.'
+            />
+          </div>
+        </article>
+      </div>
+      <div class='pregunta'>
+        <CardPregunta
+          title='¿Tu idea no encaja con estos ejemplos?'
+          text='Cuéntanosla. Estaremos encantadas de escuchar tu proyecto y ofrecerte la ruta adecuada, aunque todavía no exista en nuestro catálogo. '
+          buttonText='Contacta con nosotras'
+          buttonHref='/#contacto'
+        />
+      </div>
     </div>
-    <div class='pregunta'>
-      <CardPregunta
-        title='¿Tu idea no encaja con estos ejemplos?'
-        text='Cuéntanosla. Estaremos encantadas de escuchar tu proyecto y ofrecerte la ruta adecuada, aunque todavía no exista en nuestro catálogo. '
-        buttonText='Contacta con nosotras'
-        buttonHref='/#contacto'
+    <div class='banner'>
+      <BannerCta
+        titulo='¿Listo para potenciar tu web y destacar en el mundo digital?'
+        descripcion='No permitas que una web lenta o con funcionalidades limitadas frene tu crecimiento. Invierte en una web optimizada que trabaje 24/7 para tu negocio.'
+        texto='¿Quieres que tu web rinda al máximo? Agenda tu reunión gratuita y exploremos tus funcionalidades.'
+        className='linkSecondaryGreen'
       />
     </div>
+    <section class='preguntas'>
+      <FaqsSection titulo='Preguntas frecuentes sobre funcionalidades y optimización web' faqs={faqsOptimizacion} />
+    </section>
+    <Contact />
   </div>
-  <div class='banner'>
-    <BannerCta
-      titulo='¿Listo para potenciar tu web y destacar en el mundo digital?'
-      descripcion='No permitas que una web lenta o con funcionalidades limitadas frene tu crecimiento. Invierte en una web optimizada que trabaje 24/7 para tu negocio.'
-      texto='¿Quieres que tu web rinda al máximo? Agenda tu reunión gratuita y exploremos tus funcionalidades.'
-      className='linkSecondaryGreen'
-    />
-  </div>
-  <section class='preguntas'>
-    <FaqsSection titulo='Preguntas frecuentes sobre funcionalidades y optimización web' faqs={faqsOptimizacion} />
-  </section>
-  <Contact />
 </Layout>

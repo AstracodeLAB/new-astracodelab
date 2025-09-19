@@ -2,7 +2,7 @@
 @use './variables.scss' as *;
 
 .accesibilidad {
-  padding: 1.875rem 1.25rem 1.875rem 1.25rem;
+  padding: 1.875rem 1.25rem 0 1.25rem;
 
   @media (min-width: 48rem) {
     padding: 3.75rem 7.5rem 0 3.75rem;

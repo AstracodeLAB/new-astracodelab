@@ -7,26 +7,17 @@
 // ===========================
 .pricing-section {
   background-color: $blue-secondary;
-  padding-bottom: 60px;
+  padding-bottom: 3.75rem;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   font-family: $font-primary;
-
-  @media (min-width: 768px) {
-    // margin-bottom: 100px;
-  }
-
-  @media (min-width: 1024px) {
-    // max-width: 904px;
-    // align-items: center;
-  }
 }
 
 .pricing-container {
-  @media (max-width: 767px) {
-    border-radius: 16px;
+  @media (max-width: 47.938rem) {
+    border-radius: 1rem;
     box-shadow: -4px 0 4px 0 rgba(0, 0, 0, 0.25), 4px 0 5px 4px rgba(0, 0, 0, 0.25);
   }
 }
@@ -34,14 +25,14 @@
 .pricing-grid {
   display: none;
 
-  @media (min-width: 768px) {
+  @media (min-width: 48rem) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: clamp(1rem, 3vw, 2rem);
     justify-items: center;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 64rem) {
     gap: 2rem;
   }
 }
@@ -50,7 +41,7 @@
   display: block;
   position: relative;
 
-  @media (min-width: 768px) {
+  @media (min-width: 48rem) {
     display: none;
   }
 }
@@ -61,11 +52,11 @@
 .carousel-container {
   position: relative;
   overflow: hidden;
-  border-radius: 16px;
-  width: 290px;
+  border-radius: 1rem;
+  width: 18.125rem;
   margin: 0 auto;
 
-  @media (min-width: 768px) {
+  @media (min-width: 48rem) {
     display: none;
   }
 }
@@ -76,7 +67,7 @@
   width: 300%;
   height: auto;
 
-  @media (min-width: 768px) {
+  @media (min-width: 48rem) {
     display: none;
   }
 }
@@ -95,26 +86,26 @@
   z-index: 15;
   box-shadow: 0px 2px 12px rgba(42, 17, 96, 0.25);
   transition: all 0.3s ease;
-  width: 26px;
-  height: 26px;
+  width: 1.625rem;
+  height: 1.625rem;
 
-  @media (min-width: 768px) {
+  @media (min-width: 48rem) {
     display: none;
   }
 
-  @media (max-width: 767px) {
-    width: 32px;
-    height: 32px;
+  @media (max-width: 47.938rem) {
+    width: 2rem;
+    height: 2rem;
   }
 
   svg {
-    width: 18px;
-    height: 18px;
+    width: 1.125rem;
+    height: 1.125rem;
     color: white;
 
-    @media (max-width: 767px) {
-      width: 16px;
-      height: 16px;
+    @media (max-width: 47.938rem) {
+      width: 1rem;
+      height: 1rem;
     }
   }
 
@@ -123,13 +114,13 @@
   }
 
   &.prev {
-    left: -12px;
-    top: 50px;
+    left: -0.75rem;
+    top: 3.125rem;
   }
 
   &.next {
-    right: -12px;
-    top: 50px;
+    right: -0.75rem;
+    top: 3.125rem;
   }
 }
 
@@ -140,13 +131,13 @@
 // ===========================
 .pricing-card {
   background: $cardWhite;
-  min-width: 290px;
+  min-width: 18.125rem;
 
-  @media (min-width: 768px) {
+  @media (min-width: 48rem) {
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    min-width: 190px;
-    max-width: 293px;
+    min-width: 11.875rem;
+    max-width: 18.313rem;
     transition: all 0.3s ease;
 
     &:hover {
@@ -156,44 +147,41 @@
   }
 
   &.highlighted {
-    @media (min-width: 768px) {
+    @media (min-width: 48rem) {
       border: 2px solid $blue-primary;
       transform: scale(1.05);
-      margin-top: 13px;
+      margin-top: 0.813px;
 
-      &:hover {   
+      &:hover {
         transform: scale(1.07);
         box-shadow: 0 6px 20px rgba(100, 30, 255, 0.3);
       }
     }
   }
 
-  @media (min-width: 768px) and (max-width: 1023px) {
-    max-width: clamp(240px, 25vw, 280px);
+  @media (min-width: 48rem) and (max-width: 63.938px) {
+    max-width: clamp(15rem, 25vw, 17.5rem);
   }
 }
 
 .badge {
   width: 100%;
   text-align: center;
-  padding: 5px;
+  padding: 0.313rem;
   background: $blue-primary;
   color: $cardWhite;
   font-size: map.get($SmallText-mobile, 'font-size');
   line-height: map.get($SmallText-mobile, 'line-height');
   // letter-spacing: map.get($SmallText-mobile, 'letter-spacing');
 
-  @media (min-width: 768px) {
-  }
-
-  @media (min-width: 768px) {
+  @media (min-width: 48rem) {
     border-radius: 5px 5px 0 0;
     font-size: map.get($SmallText-tablet, 'font-size');
     line-height: map.get($SmallText-tablet, 'line-height');
     letter-spacing: map.get($SmallText-tablet, 'letter-spacing');
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 64rem) {
     font-size: map.get($SmallText-desktop, 'font-size');
     line-height: map.get($SmallText-desktop, 'line-height');
     letter-spacing: map.get($SmallText-desktop, 'letter-spacing');
@@ -208,13 +196,13 @@
   margin-bottom: 1.5rem;
   margin-top: 1rem;
 
-  @media (max-width: 767px) {
+  @media (max-width: 47.938rem) {
     margin-bottom: 0.8rem;
     margin-top: 0.5rem;
   }
 
   &.nb {
-    padding-top: 40px;
+    padding-top: 2.5rem;
   }
 }
 
@@ -224,13 +212,13 @@
   line-height: map.get($Body-mobile, 'line-height');
   letter-spacing: map.get($Body-mobile, 'letter-spacing');
 
-  @media (min-width: 768px) and (max-width: 1023px) {
+  @media (min-width: 48rem) and (max-width: 63.938px) {
     font-size: map.get($Body-tablet, 'font-size');
     line-height: map.get($Body-tablet, 'line-height');
     letter-spacing: map.get($Body-tablet, 'letter-spacing');
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 64rem) {
     font-size: map.get($Body-desktop, 'font-size');
     line-height: map.get($Body-desktop, 'line-height');
     letter-spacing: map.get($Body-desktop, 'letter-spacing');
@@ -245,13 +233,13 @@
   line-height: map.get($H1-mobile, 'line-height');
   letter-spacing: map.get($H1-mobile, 'letter-spacing');
 
-  @media (min-width: 768px) and (max-width: 1023px) {
+  @media (min-width: 48rem) and (max-width: 63.938px) {
     font-size: map.get($H1-tablet, 'font-size');
     line-height: map.get($H1-tablet, 'line-height');
     letter-spacing: map.get($H1-tablet, 'letter-spacing');
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 64rem) {
     font-size: map.get($H1-desktop, 'font-size');
     line-height: map.get($H1-desktop, 'line-height');
     letter-spacing: map.get($H1-desktop, 'letter-spacing');
@@ -261,19 +249,19 @@
 .price-note {
   color: $text-bg-white;
   margin-bottom: 0.5rem;
-  margin-right: 30px;
+  margin-right: 1.875rem;
   text-align: right;
   font-size: map.get($SmallText-mobile, 'font-size');
   line-height: map.get($SmallText-mobile, 'line-height');
   letter-spacing: map.get($SmallText-mobile, 'letter-spacing');
 
-  @media (min-width: 768px) and (max-width: 1023px) {
+  @media (min-width: 48rem) and (max-width: 63.938rem) {
     font-size: map.get($SmallText-tablet, 'font-size');
     line-height: map.get($SmallText-tablet, 'line-height');
     letter-spacing: map.get($SmallText-tablet, 'letter-spacing');
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 64rem) {
     font-size: map.get($SmallText-desktop, 'font-size');
     line-height: map.get($SmallText-desktop, 'line-height');
     letter-spacing: map.get($SmallText-desktop, 'letter-spacing');
@@ -282,18 +270,18 @@
 
 .price-noteAdv {
   color: $text-bg-white;
-  padding: 10px 20px;
+  padding: 0.625rem 1.25rem;
   font-size: map.get($SmallText-mobile, 'font-size');
   line-height: map.get($SmallText-mobile, 'line-height');
   letter-spacing: map.get($SmallText-mobile, 'letter-spacing');
 
-  @media (min-width: 768px) and (max-width: 1023px) {
+  @media (min-width: 48rem) and (max-width: 63.938rem) {
     font-size: map.get($SmallText-tablet, 'font-size');
     line-height: map.get($SmallText-tablet, 'line-height');
     letter-spacing: map.get($SmallText-tablet, 'letter-spacing');
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 64rem) {
     font-size: map.get($SmallText-desktop, 'font-size');
     line-height: map.get($SmallText-desktop, 'line-height');
     letter-spacing: map.get($SmallText-desktop, 'letter-spacing');
@@ -305,7 +293,7 @@
   justify-content: center;
   align-items: center;
   color: $title-color;
-  height: 25px;
+  height: 1.563rem;
   background-color: $blue-secondary;
   text-transform: uppercase;
   font-weight: 600;
@@ -314,13 +302,13 @@
   line-height: map.get($SmallText-mobile, 'line-height');
   letter-spacing: map.get($SmallText-mobile, 'letter-spacing');
 
-  @media (min-width: 768px) and (max-width: 1023px) {
+  @media (min-width: 48rem) and (max-width: 63.938rem) {
     font-size: map.get($SmallText-tablet, 'font-size');
     line-height: map.get($SmallText-tablet, 'line-height');
     letter-spacing: map.get($SmallText-tablet, 'letter-spacing');
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 64rem) {
     font-size: map.get($SmallText-desktop, 'font-size');
     line-height: map.get($SmallText-desktop, 'line-height');
     letter-spacing: map.get($SmallText-desktop, 'letter-spacing');
@@ -332,19 +320,19 @@
   color: $text-bg-white;
   margin-bottom: 2rem;
   margin-top: 2rem;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
   font-size: map.get($Body-mobile, 'font-size');
   line-height: map.get($SmallText-mobile, 'line-height');
   letter-spacing: map.get($SmallText-mobile, 'letter-spacing');
 
-  @media (min-width: 768px) {
+  @media (min-width: 48rem) {
     font-size: map.get($Body-tablet, 'font-size');
     line-height: map.get($Body-tablet, 'line-height');
     letter-spacing: map.get($Body-tablet, 'letter-spacing');
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 64rem) {
     font-size: map.get($Body-desktop, 'font-size');
     line-height: map.get($Body-desktop, 'line-height');
     letter-spacing: map.get($Body-desktop, 'letter-spacing');
@@ -356,7 +344,7 @@
 // ===========================
 .features-list {
   list-style: none;
-  padding: 0 20px;
+  padding: 0 1.25rem;
   margin: 0 0 2rem 0;
   flex-grow: 1;
 }
@@ -366,13 +354,13 @@
   align-items: flex-start;
   margin-bottom: 0.75rem;
   color: #333;
-  font-size: 14px;
-  line-height: 1.4;
+  font-size: 0.875rem;
+  line-height: 1.4rem;
 
-  @media (max-width: 767px) {
-    font-size: 13px;
+  @media (max-width: 47.938rem) {
+    font-size: 0.813rem;
     margin-bottom: 0.5rem;
-    line-height: 1.3;
+    line-height: 1.3rem;
   }
 
   .check-icon {
@@ -383,7 +371,7 @@
     flex-shrink: 0;
     margin-top: 0.1rem;
 
-    @media (max-width: 767px) {
+    @media (max-width: 47.938rem) {
       width: 1rem;
       height: 1rem;
       margin-right: 0.5rem;
@@ -399,72 +387,9 @@
   display: flex;
   justify-content: center;
   align-items: end;
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
 }
 
-// .cta-button {
-//   width: 100%;
-//   border: none;
-//   border-radius: 25px;
-//   cursor: pointer;
-//   transition: all 0.3s ease;
-//   margin-top: auto;
-//   white-space: nowrap;
-//   overflow: hidden;
-//   text-overflow: ellipsis;
-//   box-sizing: border-box;
-//   letter-spacing: 0.5px;
-//   padding: 0.9rem 1.5rem;
-//   font-weight: 500;
-//   font-size: map.get($Button-mobile, 'font-size');
-//   line-height: map.get($Button-mobile, 'line-height');
-
-//   @media (min-width: 768px) {
-//     padding: 1rem 2rem;
-//   }
-
-//   @media (max-width: 767px) {
-//     margin-top: 0;
-//     padding: 0.9rem 1.5rem;
-//   }
-
-//   @media (min-width: 768px) and (max-width: 1023px) {
-//     font-size: map.get($Button-tablet, 'font-size');
-//     line-height: map.get($Button-tablet, 'line-height');
-//     letter-spacing: map.get($Button-tablet, 'letter-spacing');
-//   }
-
-//   @media (min-width: 1024px) {
-//     font-size: map.get($Button-desktop, 'font-size');
-//     line-height: map.get($Button-desktop, 'line-height');
-//     letter-spacing: map.get($Button-desktop, 'letter-spacing');
-//   }
-
-//   &.primary {
-//     background: $blue-primary;
-//     color: white;
-//     font-weight: 600;
-
-//     &:hover {
-//       background: color.adjust($blue-primary, $lightness: -5%);
-//       transform: translateY(-1px);
-//       box-shadow: 0 6px 20px rgba(100, 30, 255, 0.3);
-//     }
-//   }
-
-//   &.secondary {
-//     background: transparent;
-//     color: $blue-primary;
-//     border: 1.5px solid rgba(100, 30, 255, 0.3);
-//     font-weight: 500;
-
-//     &:hover {
-//       background: rgba(100, 30, 255, 0.05);
-//       border-color: $blue-primary;
-//       transform: translateY(-1px);
-//     }
-//   }
-// }
 .containersSpans {
   display: flex;
   flex-direction: row;
@@ -474,21 +399,21 @@
 
   &-month {
     color: $text-bg-white;
-  
-  font-size: map.get($SmallText-mobile, 'font-size');
-  line-height: map.get($SmallText-mobile, 'line-height');
-  letter-spacing: map.get($SmallText-mobile, 'letter-spacing');
 
-  @media (min-width: 768px) and (max-width: 1023px) {
-    font-size: map.get($SmallText-tablet, 'font-size');
-    line-height: map.get($SmallText-tablet, 'line-height');
-    letter-spacing: map.get($SmallText-tablet, 'letter-spacing');
-  }
+    font-size: map.get($SmallText-mobile, 'font-size');
+    line-height: map.get($SmallText-mobile, 'line-height');
+    letter-spacing: map.get($SmallText-mobile, 'letter-spacing');
 
-  @media (min-width: 1024px) {
-    font-size: map.get($SmallText-desktop, 'font-size');
-    line-height: map.get($SmallText-desktop, 'line-height');
-    letter-spacing: map.get($SmallText-desktop, 'letter-spacing');
-  }
+    @media (min-width: 48rem) and (max-width: 63.938rem) {
+      font-size: map.get($SmallText-tablet, 'font-size');
+      line-height: map.get($SmallText-tablet, 'line-height');
+      letter-spacing: map.get($SmallText-tablet, 'letter-spacing');
+    }
+
+    @media (min-width: 64rem) {
+      font-size: map.get($SmallText-desktop, 'font-size');
+      line-height: map.get($SmallText-desktop, 'line-height');
+      letter-spacing: map.get($SmallText-desktop, 'letter-spacing');
+    }
   }
 }

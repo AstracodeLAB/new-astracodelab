@@ -2,34 +2,33 @@
 @use './variables.scss' as *;
 
 .heroServicesA {
-  // width: 100vw;
   background: url('/src/images/degradoClaro.png') no-repeat center center;
   background-size: cover;
-  // background-size: cover;
-  padding: 50px 20px;
+  padding: 3.125rem 1.25rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   box-shadow: 0 1px 10px 0 rgba(42, 17, 96, 0.2);
-  @media (min-width: 768px) {
-    padding: 60px 120px;
+
+  @media (min-width: 48rem) {
+    padding: 3.75rem 7.5rem;
   }
 
-  @media (min-width: 1024px) {
-    padding: 60px 0;
+  @media (min-width: 64rem) {
+    padding: 3.75rem 0;
   }
 
   &__container {
-    @media (min-width: 1024px) {
-      max-width: 904px;
+    @media (min-width: 64rem) {
+      max-width: 56.5rem;
     }
 
-    @media (min-width: 1440px) {
-      max-width: 1024px;
+    @media (min-width: 90rem) {
+      max-width: 64rem;
     }
 
     &-title {
-      padding-bottom: 15px;
+      padding-bottom: 0 938rem;
     }
 
     &-text {
@@ -39,21 +38,21 @@
       font-size: map.get($Body-mobile, font-size);
       font-weight: map.get($Body-mobile, font-weight);
 
-      @media (min-width: 768px) {
+      @media (min-width: 48rem) {
         letter-spacing: map.get($Body-tablet, letter-spacing);
         line-height: map.get($Body-tablet, line-height);
         font-size: map.get($Body-tablet, font-size);
         font-weight: map.get($Body-tablet, font-weight);
       }
 
-      @media (min-width: 1024px) {
+      @media (min-width: 64rem) {
         letter-spacing: map.get($Body-desktop, letter-spacing);
         line-height: map.get($Body-desktop, line-height);
         font-size: map.get($Body-desktop, font-size);
         font-weight: map.get($Body-desktop, font-weight);
       }
 
-      @media (min-width: 1440px) {
+      @media (min-width: 90rem) {
         letter-spacing: map.get($Body-desktop-xl, letter-spacing);
         line-height: map.get($Body-desktop-xl, line-height);
         font-size: map.get($Body-desktop-xl, font-size);

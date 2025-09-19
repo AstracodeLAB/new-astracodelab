@@ -2,46 +2,32 @@
 @use './variables.scss' as *;
 
 .legal-notice {
+  padding: 1.25rem;
+  margin: 0.625rem;
+  border-radius: 0.625rem;
 
-	padding: 20px;
-	margin: 10px;
-	border-radius: 10px;
+  &__title {
+    text-transform: uppercase;
 
+    font-size: 2rem;
+  }
 
-	&__title {
-		text-transform: uppercase;
+  &__section {
+    margin-top: 0.625rem;
+    margin-bottom: 0.625rem;
 
+    &-title {
+      margin-bottom: 0.625rem;
+    }
+  }
 
-		font-size: 2rem;
+  &__content {
+    color: $text-bg-white;
 
-		
-	}
+    margin-bottom: 0.625rem;
+  }
 
-	&__section {
-		margin-top: 10px;
-		margin-bottom: 10px;
-
-		&-title {
-
-			margin-bottom: 10px;
-
-
-		}
-	}
-
-	&__content {
-
-		color: $text-bg-white;
-
-		margin-bottom: 10px;
-
-	}
-
-	&__list {
-
-		color: $text-bg-white;
-
-
-
-	}
+  &__list {
+    color: $text-bg-white;
+  }
 }

@@ -12,39 +12,36 @@
   flex-direction: column;
   align-items: center;
 
-  @media (max-width: 768px) {
+  @media (max-width: 48rem) {
     background-size: auto; // no fuerza escalado
     background-position: center top; // muestra solo el trozo visible
   }
-  @media (max-width: 1440px) {
+  @media (max-width: 90rem) {
     background-size: cover;
     background-position: center;
   }
 }
 
-.timeline-section {
-}
-
 .section-prices {
   background-color: $blue-secondary;
   width: 100%;
-  padding: 30px 20px 0 20px;
+  padding: 1.875rem 1.25rem 0 1.25rem;
 
-  @media (min-width: 768px) {
-    padding: 60px 0 0 0;
+  @media (min-width: 48rem) {
+    padding: 3.75rem 0 0 0;
   }
 
   &-header {
     text-align: left;
-    padding-bottom: 20px;
+    padding-bottom: 1.25rem;
 
-    @media (min-width: 768px) {
+    @media (min-width: 48rem) {
       text-align: center;
     }
-    @media (min-width: 1024px) {
-      padding-top: 60px;
-      padding-left: 30px;
-      padding-right: 30px;
+    @media (min-width: 64rem) {
+      padding-top: 3.75rem;
+      padding-left: 1.875rem;
+      padding-right: 1.875rem;
     }
   }
 }

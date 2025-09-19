@@ -11,48 +11,47 @@
   &__title {
     position: relative; // importante para que los hijos absolutos se posicionen relativo a este contenedor
     margin: 1rem;
-    max-width: 524px;  
-    @media (min-width: 768px) {
-      
-      margin: 3.75rem 7.5rem 3.75px 7.5rem;
+    max-width: 32.75rem;
+
+    @media (min-width: 48rem) {
+      margin: 3.75rem 7.5rem 3.75rem 7.5rem;
     }
-    @media (min-width: 1024px) {
-      max-width: 904px;  
+    @media (min-width: 64rem) {
+      max-width: 56.5rem;
       margin: 3rem;
     }
-    @media (min-width: 1440px) {
-      max-width: 1024px;  
+    @media (min-width: 90rem) {
+      max-width: 64rem;
       margin: 3.5rem;
     }
 
     &-text {
       position: absolute;
-      top: 0;      // arriba
-      left: 0;     // izquierda
-      
+      top: 0; // arriba
+      left: 0; // izquierda
+
       font-family: $font-primary;
-      font-size: 18px;
-      line-height: 15px;
+      font-size: 1.125rem;
+      line-height: 0.935rem;
       font-weight: map.get($H1-mobile, 'font-weight');
       letter-spacing: map.get($H1-mobile, 'letter-spacing');
       color: $title-color;
-      @media (min-width: 425px) {
-        font-size: 24px;
+
+      @media (min-width: 26.563rem) {
+        font-size: 1.5rem;
       }
-      @media (min-width: 768px) {
-        
-        font-size: 32px;
-        //line-height: map.get($H1-tablet, 'line-height');
+      @media (min-width: 48rem) {
+        font-size: 2rem;
         font-weight: map.get($H1-tablet, 'font-weight');
         letter-spacing: map.get($H1-tablet, 'letter-spacing');
       }
-      @media (min-width: 1024px) {
+      @media (min-width: 64rem) {
         font-size: map.get($H1-desktop, 'font-size');
         line-height: map.get($H1-desktop, 'line-height');
         font-weight: map.get($H1-desktop, 'font-weight');
         letter-spacing: map.get($H1-desktop, 'letter-spacing');
       }
-      @media (min-width: 1440px) {
+      @media (min-width: 90rem) {
         font-size: map.get($H1-desktop-xl, 'font-size');
         line-height: map.get($H1-desktop-xl, 'line-height');
         font-weight: map.get($H1-desktop-xl, 'font-weight');
@@ -71,20 +70,20 @@
     display: flex;
     flex-direction: column;
     gap: 0.65rem;
-    
-    @media (min-width: 768px) {
+
+    @media (min-width: 48rem) {
       padding: 1.9rem 7.5rem 1.9rem 7.5rem;
       gap: 1.25rem;
     }
-    @media (min-width: 1024px) {
-      max-width: 904px;  
+    @media (min-width: 64rem) {
+      max-width: 56.5rem;
       padding: 1.9rem 0 1.9rem 0;
-      gap: 5rem;  
+      gap: 5rem;
     }
-    @media (min-width: 1440px) {
-      max-width: 1024px;  
+    @media (min-width: 90rem) {
+      max-width: 64rem;
     }
-    &-card{
+    &-card {
       background-color: $cardWhite;
       box-shadow: $shadow;
       padding: 2rem;
@@ -94,19 +93,18 @@
       line-height: map.get($Body-mobile, 'line-height');
       font-weight: map.get($Body-mobile, 'font-weight');
 
-      @media (min-width: 768px) {
+      @media (min-width: 48rem) {
         font-size: map.get($Body-tablet, 'font-size');
         line-height: map.get($Body-tablet, 'line-height');
         font-weight: map.get($Body-tablet, 'font-weight');
       }
 
-      @media (min-width: 1024px) {
+      @media (min-width: 64rem) {
         font-size: map.get($Body-desktop, 'font-size');
         line-height: map.get($Body-desktop, 'line-height');
         font-weight: map.get($Body-desktop, 'font-weight');
-        
       }
-      @media (min-width: 1440px) {
+      @media (min-width: 90rem) {
         font-size: map.get($Body-desktop-xl, 'font-size');
         line-height: map.get($Body-desktop-xl, 'line-height');
         font-weight: map.get($Body-desktop-xl, 'font-weight');
@@ -118,7 +116,7 @@
         flex-direction: row;
         justify-content: center;
 
-        @media (min-width: 768px) {
+        @media (min-width: 48rem) {
           justify-content: end;
         }
       }
@@ -128,20 +126,20 @@
   &__about {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    @media (min-width: 678px) {
-      gap: 20px;
+    gap: 0.625rem;
+
+    @media (min-width: 42.375rem) {
+      gap: 1.25rem;
     }
-    @media (min-width: 1024px) {
+    @media (min-width: 64rem) {
       flex-direction: row;
-      gap: 20px;
-      
+      gap: 1.25rem;
     }
     &-img {
       display: flex;
       flex-direction: column;
       align-items: center;
-      @media (min-width: 1024px) {
+      @media (min-width: 64rem) {
         width: 50%;
         border-radius: 15px;
         align-items: start;
@@ -152,7 +150,7 @@
     }
     &-container {
       text-align: center;
-      @media (min-width: 1024px) {
+      @media (min-width: 64rem) {
         width: 50%;
         border-radius: 15px;
         text-align: start;
@@ -164,19 +162,18 @@
         line-height: map.get($Body-mobile, 'line-height');
         font-weight: map.get($Body-mobile, 'font-weight');
 
-        @media (min-width: 768px) {
+        @media (min-width: 48rem) {
           font-size: map.get($Body-tablet, 'font-size');
           line-height: map.get($Body-tablet, 'line-height');
           font-weight: map.get($Body-tablet, 'font-weight');
         }
 
-        @media (min-width: 1024px) {
+        @media (min-width: 64rem) {
           font-size: map.get($Body-desktop, 'font-size');
           line-height: map.get($Body-desktop, 'line-height');
           font-weight: map.get($Body-desktop, 'font-weight');
-          
         }
-        @media (min-width: 1440px) {
+        @media (min-width: 90rem) {
           font-size: map.get($Body-desktop-xl, 'font-size');
           line-height: map.get($Body-desktop-xl, 'line-height');
           font-weight: map.get($Body-desktop-xl, 'font-weight');

@@ -10,28 +10,28 @@
   gap: 2rem;
   margin-bottom: 2.5rem;
 
-  @media (min-width: 768px) {
+  @media (min-width: 48rem) {
     flex-direction: row;
     align-items: flex-start;
     gap: 2.5rem;
     margin-bottom: 3rem;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 64rem) {
     gap: 3rem;
     margin-bottom: 0;
-    
+
     // En el contexto de why-choose-us, layout específico para desktop
     .why-choose-us-content & {
       display: block;
       margin-bottom: 0;
-      
+
       &:first-child {
         grid-column: 1;
         grid-row: 1;
       }
     }
-    
+
     // TextContent dentro de why-choose-us-right-column
     .why-choose-us-right-column & {
       grid-column: 2;
@@ -42,10 +42,10 @@
   &__text {
     flex: 1;
 
-    @media (min-width: 1024px) {
+    @media (min-width: 64rem) {
       // Limitar el ancho del texto para mantener consistencia
-      gap:20px;
-      
+      gap: 20px;
+
       // Si no hay imagen, mantener el mismo ancho que si la hubiera
       .text-content:not(.text-content--with-image) & {
         // max-width: calc(100% - 280px);
@@ -62,14 +62,14 @@
     color: $title-color;
     margin: 0 0 1rem 0;
 
-    @media (min-width: 768px) {
+    @media (min-width: 48rem) {
       font-size: map.get($H3-tablet, 'font-size');
       line-height: map.get($H3-tablet, 'line-height');
       font-weight: map.get($H3-tablet, 'font-weight');
       letter-spacing: map.get($H3-tablet, 'letter-spacing');
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: 64rem) {
       font-size: map.get($H3-desktop, 'font-size');
       line-height: map.get($H3-desktop, 'line-height');
       font-weight: map.get($H3-desktop, 'font-weight');
@@ -86,15 +86,15 @@
     color: $text-bg-color;
     margin: 0;
 
-    @media (min-width: 768px) {
+    @media (min-width: 48rem) {
       font-size: map.get($Body-tablet, 'font-size');
       line-height: map.get($Body-tablet, 'line-height');
       font-weight: map.get($Body-tablet, 'font-weight');
       letter-spacing: map.get($Body-tablet, 'letter-spacing');
     }
 
-    @media (min-width: 1024px) {
-      min-width: 400px;
+    @media (min-width: 64rem) {
+      min-width: 25rem;
       font-size: map.get($Body-desktop, 'font-size');
       line-height: map.get($Body-desktop, 'line-height');
       font-weight: map.get($Body-desktop, 'font-weight');
@@ -104,13 +104,13 @@
 
   &__image-container {
     flex-shrink: 0;
-    
-    @media (min-width: 768px) {
-      max-width: 200px;
+
+    @media (min-width: 48rem) {
+      max-width: 12.5rem;
     }
 
-    @media (min-width: 1024px) {
-      max-width: 250px;
+    @media (min-width: 64rem) {
+      max-width: 15.625rem;
     }
   }
 
@@ -121,12 +121,12 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     object-fit: cover;
 
-    @media (min-width: 768px) {
-      height: 140px;
+    @media (min-width: 48rem) {
+      height: 8.75rem;
     }
 
-    @media (min-width: 1024px) {
-      height: 160px;
+    @media (min-width: 64rem) {
+      height: 10rem;
     }
   }
 }

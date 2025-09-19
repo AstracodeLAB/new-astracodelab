@@ -15,7 +15,7 @@
   display: flex;
   flex-direction: column;
   //align-items: baseline;
-  gap: 5px;
+  gap: 0.313rem;
 
   &__h1,
   &__tagline {
@@ -30,19 +30,19 @@
     letter-spacing: map.get($H1-mobile, 'letter-spacing');
     color: $title-color;
 
-    @media (min-width: 768px) {
+    @media (min-width: 48rem) {
       font-size: map.get($H1-tablet, 'font-size');
       //line-height: map.get($H1-tablet, 'line-height');
       font-weight: map.get($H1-tablet, 'font-weight');
       letter-spacing: map.get($H1-tablet, 'letter-spacing');
     }
-    @media (min-width: 1024px) {
+    @media (min-width: 64rem) {
       font-size: map.get($H1-desktop, 'font-size');
       line-height: map.get($H1-desktop, 'line-height');
       font-weight: map.get($H1-desktop, 'font-weight');
       letter-spacing: map.get($H1-desktop, 'letter-spacing');
     }
-    @media (min-width: 1440px) {
+    @media (min-width: 90rem) {
       font-size: map.get($H1-desktop-xl, 'font-size');
       line-height: map.get($H1-desktop-xl, 'line-height');
       font-weight: map.get($H1-desktop-xl, 'font-weight');
@@ -59,19 +59,19 @@
     color: $blue-primary;
     color: $title-color;
 
-    @media (min-width: 768px) {
+    @media (min-width: 48rem) {
       font-size: map.get($H3-tablet, 'font-size');
       line-height: map.get($H3-tablet, 'line-height');
       font-weight: map.get($H3-tablet, 'font-weight');
       letter-spacing: map.get($H3-tablet, 'letter-spacing');
     }
-    @media (min-width: 1024px) {
+    @media (min-width: 64rem) {
       font-size: map.get($H3-desktop, 'font-size');
       line-height: map.get($H3-desktop, 'line-height');
       font-weight: map.get($H3-desktop, 'font-weight');
       letter-spacing: map.get($H3-desktop, 'letter-spacing');
     }
-    @media (min-width: 1440px) {
+    @media (min-width: 90rem) {
       font-size: map.get($H3-desktop-xl, 'font-size');
       line-height: map.get($H3-desktop-xl, 'line-height');
       font-weight: map.get($H3-desktop-xl, 'font-weight');
@@ -89,19 +89,19 @@
   color: $title-color;
   margin: 0.5rem 0;
 
-  @media (min-width: 768px) {
+  @media (min-width: 48rem) {
     font-size: map.get($H2-tablet, 'font-size');
     line-height: map.get($H2-tablet, 'line-height');
     font-weight: map.get($H2-tablet, 'font-weight');
     letter-spacing: map.get($H2-tablet, 'letter-spacing');
   }
-  @media (min-width: 1024px) {
+  @media (min-width: 64rem) {
     font-size: map.get($H2-desktop, 'font-size');
     line-height: map.get($H2-desktop, 'line-height');
     font-weight: map.get($H2-desktop, 'font-weight');
     letter-spacing: map.get($H2-desktop, 'letter-spacing');
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 90rem) {
     font-size: map.get($H2-desktop-xl, 'font-size');
     line-height: map.get($H2-desktop-xl, 'line-height');
     font-weight: map.get($H2-desktop-xl, 'font-weight');
@@ -109,7 +109,7 @@
   }
 
   &--white {
-    color: $cardWhite;
+    color: white;
   }
 
   // TO-DO: Color degradado para el titulo
@@ -127,19 +127,19 @@
   color: $title-color;
   margin: 0.5rem 0;
 
-  @media (min-width: 768px) {
+  @media (min-width: 48rem) {
     font-size: map.get($H3-tablet, 'font-size');
     line-height: map.get($H3-tablet, 'line-height');
     font-weight: map.get($H3-tablet, 'font-weight');
     letter-spacing: map.get($H3-tablet, 'letter-spacing');
   }
-  @media (min-width: 1024px) {
+  @media (min-width: 64rem) {
     font-size: map.get($H3-desktop, 'font-size');
     line-height: map.get($H3-desktop, 'line-height');
     font-weight: map.get($H3-desktop, 'font-weight');
     letter-spacing: map.get($H3-desktop, 'letter-spacing');
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 90rem) {
     font-size: map.get($H3-desktop-xl, 'font-size');
     line-height: map.get($H3-desktop-xl, 'line-height');
     font-weight: map.get($H3-desktop-xl, 'font-weight');
@@ -156,20 +156,20 @@
   color: $text-bg-color;
   margin: 0.625rem 0;
 
-  @media (min-width: 768px) {
+  @media (min-width: 48rem) {
     font-size: map.get($Body-tablet, 'font-size');
     line-height: map.get($Body-tablet, 'line-height');
     font-weight: map.get($Body-tablet, 'font-weight');
     letter-spacing: map.get($Body-tablet, 'letter-spacing');
     margin: 1.25rem 0;
   }
-  @media (min-width: 1024px) {
+  @media (min-width: 64rem) {
     font-size: map.get($Body-desktop, 'font-size');
     line-height: map.get($Body-desktop, 'line-height');
     font-weight: map.get($Body-desktop, 'font-weight');
     letter-spacing: map.get($Body-desktop, 'letter-spacing');
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 90rem) {
     font-size: map.get($Body-desktop-xl, 'font-size');
     line-height: map.get($Body-desktop-xl, 'line-height');
     font-weight: map.get($Body-desktop-xl, 'font-weight');
@@ -178,11 +178,10 @@
 }
 
 .heroServicesTitle {
-  gap: 5px;
+  gap: 0.313rem;
 
   &__h1,
   &__tagline {
-    // display: inline;
     margin: 0;
   }
   &__h1 {
@@ -193,19 +192,18 @@
     letter-spacing: map.get($H1-mobile, 'letter-spacing');
     color: $title-color;
 
-    @media (min-width: 768px) {
+    @media (min-width: 48rem) {
       font-size: map.get($H1-tablet, 'font-size');
-      //line-height: map.get($H1-tablet, 'line-height');
       font-weight: map.get($H1-tablet, 'font-weight');
       letter-spacing: map.get($H1-tablet, 'letter-spacing');
     }
-    @media (min-width: 1024px) {
+    @media (min-width: 64rem) {
       font-size: map.get($H1-desktop, 'font-size');
       line-height: map.get($H1-desktop, 'line-height');
       font-weight: map.get($H1-desktop, 'font-weight');
       letter-spacing: map.get($H1-desktop, 'letter-spacing');
     }
-    @media (min-width: 1440px) {
+    @media (min-width: 90rem) {
       font-size: map.get($H1-desktop-xl, 'font-size');
       line-height: map.get($H1-desktop-xl, 'line-height');
       font-weight: map.get($H1-desktop-xl, 'font-weight');
@@ -222,19 +220,19 @@
     color: $blue-primary;
     color: $title-color;
 
-    @media (min-width: 768px) {
+    @media (min-width: 48rem) {
       font-size: map.get($H3-tablet, 'font-size');
       line-height: map.get($H3-tablet, 'line-height');
       font-weight: map.get($H3-tablet, 'font-weight');
       letter-spacing: map.get($H3-tablet, 'letter-spacing');
     }
-    @media (min-width: 1024px) {
+    @media (min-width: 64rem) {
       font-size: map.get($H3-desktop, 'font-size');
       line-height: map.get($H3-desktop, 'line-height');
       font-weight: map.get($H3-desktop, 'font-weight');
       letter-spacing: map.get($H3-desktop, 'letter-spacing');
     }
-    @media (min-width: 1440px) {
+    @media (min-width: 90rem) {
       font-size: map.get($H3-desktop-xl, 'font-size');
       line-height: map.get($H3-desktop-xl, 'line-height');
       font-weight: map.get($H3-desktop-xl, 'font-weight');

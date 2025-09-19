@@ -2,106 +2,104 @@
 @use './variables.scss' as *;
 
 .landing {
-  padding: 30px 20px 0 20px;
+  padding: 1.875rem 1.25rem 0 1.25rem;
 
-  @media (min-width: 768px) {
-    padding: 60px 120px 0 120px;
+  @media (min-width: 48rem) {
+    padding: 3.75rem 7.5rem 0 7.5rem;
   }
 
-  @media (min-width: 1024px) {
-    padding: 120px 0 0 0;
-    max-width: 904px;
+  @media (min-width: 64rem) {
+    padding: 7.5rem 0 0 0;
+    max-width: 56.5rem;
     margin: 0 auto;
   }
 
-  @media (min-width: 1440px) {
-    max-width: 1024px;
+  @media (min-width: 90rem) {
+    max-width: 64rem;
   }
 }
 
 .beneficios {
-  @media (min-width: 1024px) {
-    padding-top: 20px;
-    max-width: 904px;
+  @media (min-width: 64rem) {
+    padding-top: 1.25rem;
+    max-width: 56.5rem;
     margin: 0 auto;
   }
 
-  @media (min-width: 1440px) {
-    max-width: 1024px;
+  @media (min-width: 90rem) {
+    max-width: 64rem;
   }
 }
 
 .incluye {
   &__title {
-    @media (min-width: 1024px) {
+    @media (min-width: 64rem) {
       display: flex;
-      gap: 80px;
+      gap: 5rem;
     }
 
     & img {
       border-radius: 15px;
       box-shadow: $shadow;
 
-      @media (min-width: 768px) {
-        margin-top: 20px;
-        margin-bottom: 20px;
+      @media (min-width: 48rem) {
+        margin-top: 1.25rem;
+        margin-bottom: 1.25rem;
       }
 
-      @media (min-width: 1024px) {
-        max-width: 400px;
+      @media (min-width: 64rem) {
+        max-width: 25rem;
       }
     }
   }
 
   &__numbers {
-    // padding-top: 20px;
-    padding-bottom: 10px;
+    padding-bottom: 0.625rem;
     text-align: center;
 
-    @media (min-width: 1024px) {
+    @media (min-width: 64rem) {
       text-align: left;
-      // padding-top: 50px;
     }
   }
 }
 
 .cuando {
   &__title {
-    padding: 0 20px;
+    padding: 0 1.25rem;
 
-    @media (min-width: 768px) {
-      padding: 60px 120px 0 120px;
+    @media (min-width: 48rem) {
+      padding: 3.75rem 7.5rem 0 7.5rem;
     }
 
-    @media (min-width: 768px) {
-      padding: 120px 0 0 0;
-      max-width: 904px;
+    @media (min-width: 64rem) {
+      padding: 7.5rem 0 0 0;
+      max-width: 56.5rem;
       margin: 0 auto;
     }
 
-    @media (min-width: 1440px) {
-      max-width: 1024px;
+    @media (min-width: 90rem) {
+      max-width: 64rem;
     }
   }
 
   &__table {
-    padding-bottom: 60px;
+    padding-bottom: 3.75rem;
 
-    @media (min-width: 768px) {
-      margin-top: 20px;
+    @media (min-width: 48rem) {
+      margin-top: 1.25rem;
       padding-bottom: 0;
     }
   }
 }
 
 .preguntas {
-  @media (min-width: 1024px) {
+  @media (min-width: 64rem) {
     padding: 0;
-    max-width: 904px;
+    max-width: 56.5rem;
     margin: 0 auto;
   }
 
-  @media (min-width: 1440px) {
-    max-width: 1024px;
+  @media (min-width: 90rem) {
+    max-width: 64rem;
   }
 }

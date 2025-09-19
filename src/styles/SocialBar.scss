@@ -7,53 +7,51 @@
 /////<SocialBar className="social-bar--light" />
 
 .social-bar {
-    margin-top: 20px;
-    margin-bottom: 20px;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  color: white;
+
+  &__title {
+    margin-bottom: 0.313rem;
+  }
+
+  &__icons {
+    display: flex;
+    justify-content: center;
+    gap: 0.625rem;
+  }
+  &--light {
     color: white;
 
-    &__title {
-       margin-bottom: 5px;
-    }
+    img {
+      filter: brightness(0) invert(1); // iconos blancos
+      width: 1.625rem;
 
-    &__icons {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        
+      @media (min-width: 48rem) {
+        width: 1.75rem;
+      }
+      @media (min-width: 64rem) {
+        width: 1.875rem;
+      }
+      @media (min-width: 64rem) {
+        width: 2rem;
+      }
     }
-    &--light {
-        color: white;
-    
-        img {
-          filter: brightness(0) invert(1); // iconos blancos
-          width: 26px;
-          @media (min-width: 768px) {
-            width: 28px;
-          }
-          @media (min-width: 1024px) {
-            width: 30px;
-          }
-          @media (min-width: 1024px) {
-            width: 32px;
-          }
-        }
+  }
 
+  &--dark {
+    color: black;
+    img {
+      width: 2.625rem;
+      @media (min-width: 48rem) {
+        width: 3.125rem;
       }
-    
-      &--dark {
-        color: black;
-        img {
-            
-            width: 42px;
-            @media (min-width: 768px) {
-              width: 50px;
-            }
-            @media (min-width: 1024px) {
-              width: 56px;
-            }
-            @media (min-width: 1024px) {
-              width: 62px;
-            }
+      @media (min-width: 64rem) {
+        width: 3.5rem;
       }
-    
-}}
+      @media (min-width: 64rem) {
+        width: 3.875rem;
+      }
+    }
+  }
+}

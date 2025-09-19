@@ -2,59 +2,60 @@
 @use './variables.scss' as *;
 
 .servicesHome {
-  padding: 30px 20px 0 20px;
+  padding: 1.875rem 1.25rem 0 1.25rem;
   font-size: map.get($Body-mobile, 'font-size');
   line-height: map.get($Body-mobile, 'line-height');
   font-weight: map.get($Body-mobile, 'font-weight');
   letter-spacing: map.get($Body-mobile, 'letter-spacing');
   color: $text-bg-color;
   display: flex;
-  gap: 10px;
+  gap: 0.625rem;
   flex-direction: column;
 
-  @media (min-width: 768px) {
+  @media (min-width: 48rem) {
     font-size: map.get($Body-tablet, 'font-size');
     line-height: map.get($Body-tablet, 'line-height');
     font-weight: map.get($Body-tablet, 'font-weight');
     letter-spacing: map.get($Body-tablet, 'letter-spacing');
-    padding: 0 120px;
-    gap: 20px;
+    padding: 0 7.5rem;
+    gap: 1.25rem;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 64rem) {
     font-size: map.get($Body-desktop, 'font-size');
     line-height: map.get($Body-desktop, 'line-height');
     font-weight: map.get($Body-desktop, 'font-weight');
     letter-spacing: map.get($Body-desktop, 'letter-spacing');
-    max-width: 904px;
+    max-width: 56.5rem;
     margin-top: 5rem;
     padding: 0;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: 90rem) {
     font-size: map.get($Body-desktop-xl, 'font-size');
     line-height: map.get($Body-desktop-xl, 'line-height');
     font-weight: map.get($Body-desktop-xl, 'font-weight');
     letter-spacing: map.get($Body-desktop-xl, 'letter-spacing');
-    max-width: 1024px;
+    max-width: 64rem;
     padding: 0 0;
-    margin-top:7.5rem;
+    margin-top: 7.5rem;
   }
   &__intro {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 0.625rem;
     text-align: center;
-    @media (min-width: 768px) {
-      gap: 20px;
+
+    @media (min-width: 48rem) {
+      gap: 1.25rem;
     }
   }
   &__services {
-    @media (min-width: 1024px) {
+    @media (min-width: 64rem) {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr auto;
-      gap: 30px 20px;
+      gap: 1.875rem 1.25rem;
       grid-template-areas:
         'containerDesign containerFunc'
         'containerMant containerMant';
@@ -64,29 +65,28 @@
     &-containerDesign {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 0.625rem;
       grid-area: containerDesign;
-
-      @media (min-width: 1024px) {
-        //height: 100%;
-      }
 
       &-card {
         background-color: $cardWhite;
         box-shadow: $shadow;
         border-radius: 15px;
-        padding: 20px 20px;
+        padding: 1.25rem 1.25rem;
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 0.625rem;
         position: relative;
-        @media (min-width: 768px) {
-          padding: 30px 30px;
+
+        @media (min-width: 48rem) {
+          padding: 1.875rem 1.875rem;
         }
-        @media (min-width: 1024px) {
-          padding: 60px 60px;
+
+        @media (min-width: 64rem) {
+          padding: 3.75rem 3.75rem;
           height: 100%;
         }
+
         &-illustration {
           position: absolute;
           top: 20%; // centrada verticalmente
@@ -96,19 +96,15 @@
           pointer-events: none;
           z-index: 2;
 
-          @media (min-width: 768px) {
+          @media (min-width: 48rem) {
             transform: translate(-20%, -70%);
           }
-          @media (min-width: 1024px) {
+          @media (min-width: 64rem) {
             transform: translate(-20%, -70%);
           }
         }
         &-text {
-          //padding-left: 60px;
           margin-left: clamp(60px, 12vw, 110px);
-          @media (min-width: 1024px) {
-            //padding-left: 10px;
-          }
         }
         &-btn {
           width: 100%;
@@ -120,9 +116,9 @@
       &-services {
         display: flex;
         flex-direction: column;
-        padding: 0 20px;
-        @media (min-width: 768px) {
-          padding: 0 40px;
+        padding: 0 1.25rem;
+        @media (min-width: 48rem) {
+          padding: 0 2.5rem;
         }
       }
     }
@@ -130,28 +126,23 @@
     &-containerFunc {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 0.625rem;
       grid-area: containerFunc;
-
-      @media (min-width: 1024px) {
-        //height: 100%;
-        //max-height: 500px;
-      }
 
       &-card {
         background-color: $cardWhite;
         box-shadow: $shadow;
         border-radius: 15px;
-        padding: 20px 20px;
+        padding: 1.25rem 1.25rem;
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 0.625rem;
         position: relative;
-        @media (min-width: 768px) {
-          padding: 30px 30px;
+        @media (min-width: 48rem) {
+          padding: 1.875rem 1.875rem;
         }
-        @media (min-width: 1024px) {
-          padding: 60px 60px;
+        @media (min-width: 64rem) {
+          padding: 3.75rem 3.75rem;
           height: 100%; // Añadido para igualar altura
         }
 
@@ -163,28 +154,22 @@
           width: clamp(80px, 17vw, 160px); // escala fluida
           pointer-events: none;
           z-index: 2;
-          @media (min-width: 445px) {
+
+          @media (min-width: 27.813rem) {
             transform: translate(20%, -100%);
             width: clamp(80px, 17vw, 90px);
           }
-          @media (min-width: 768px) {
+          @media (min-width: 48rem) {
             transform: translate(20%, -100%);
             width: clamp(80px, 17vw, 100px);
           }
-          @media (min-width: 1024px) {
+          @media (min-width: 64rem) {
             width: clamp(80px, 17vw, 200px);
-            transform: translate(
-              15%,
-              -95%
-            );
+            transform: translate(15%, -95%);
           }
         }
         &-text {
-          //padding-right: 30px;
           margin-right: clamp(60px, 12vw, 110px);
-          @media (min-width: 1024px) {
-            //padding-left: 10px;
-          }
         }
         &-btn {
           width: 100%;
@@ -197,9 +182,9 @@
         display: flex;
         width: 100%;
         flex-direction: column;
-        padding: 0 20px;
-        @media (min-width: 768px) {
-          padding: 0 40px;
+        padding: 0 1.25rem;
+        @media (min-width: 48rem) {
+          padding: 0 2.5rem;
         }
       }
     }
@@ -207,59 +192,49 @@
     &-containerMant {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 0.625rem;
       grid-area: containerMant;
 
       &-card {
         background-color: $cardWhite;
         box-shadow: $shadow;
         border-radius: 15px;
-        padding: 20px 20px;
+        padding: 1.25rem 1.25rem;
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 0.625rem;
         position: relative;
-        @media (min-width: 768px) {
-          padding: 30px 30px;
+        @media (min-width: 48rem) {
+          padding: 1.875rem 1.875rem;
         }
-        @media (min-width: 1024px) {
-          padding: 60px 60px;
+        @media (min-width: 64rem) {
+          padding: 3.75rem 3.75rem;
         }
         &-illustration {
           position: absolute;
-          top: 20%;                         // centrada verticalmente
-          left: 0;                        // pegada al borde izquierdo
+          top: 20%; // centrada verticalmente
+          left: 0; // pegada al borde izquierdo
           transform: translate(-20%, -60%); // se sale un poco a la izquierda y queda centrada
-          width: clamp(80px, 17vw, 220px);  // escala fluida
+          width: clamp(80px, 17vw, 220px); // escala fluida
           pointer-events: none;
           z-index: 2;
-          @media (min-width: 445px) {
+          @media (min-width: 27.813rem) {
             transform: translate(-20%, -60%);
             width: clamp(80px, 17vw, 90px);
           }
-          @media (min-width: 768px) {
+          @media (min-width: 48rem) {
             transform: translate(-20%, -50%);
             width: clamp(80px, 17vw, 100px);
           }
-          @media (min-width: 1024px) {
+          @media (min-width: 64rem) {
             transform: translate(-25%, -50%);
             width: clamp(80px, 17vw, 180px);
           }
         }
-        &-text{
-          //padding-left: 60px;
+        &-text {
           margin-left: clamp(60px, 12vw, 110px);
-          @media (min-width: 1024px) {
-            //padding-left: 10px;
-          }
         }
-        &-parr {
-           //padding-left: 60px;
-           //margin-left: clamp(60px, 12vw, 110px);
-           @media (min-width: 768px) {
-           // margin-left: clamp(60px, 12vw, 110px);
-           }
-        }
+
         &-btn {
           width: 100%;
           display: flex;
@@ -271,14 +246,14 @@
         display: flex;
         width: 100%;
         flex-direction: column;
-        gap: 10px;
+        gap: 0.625rem;
 
-        @media (min-width: 768px) {
-          padding: 0 40px;
-          gap: 20px;
+        @media (min-width: 48rem) {
+          padding: 0 2.5rem;
+          gap: 1.25rem;
         }
-        @media (min-width: 1024px) {
-          gap: 20px;
+        @media (min-width: 64rem) {
+          gap: 1.25rem;
           flex-direction: row;
           align-items: flex-end;
         }
@@ -286,10 +261,9 @@
           flex: 2;
           display: flex;
           flex-direction: column;
-          gap: 10px;
-          padding: 0 20px;
-          @media (min-width: 768px) {
-            padding: 0 40px 0 0;
+          padding: 0 1.25rem;
+          @media (min-width: 48rem) {
+            padding: 0 2.5rem 0 0;
           }
         }
         &-cta {
@@ -297,10 +271,12 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          @media (min-width: 768px) {
+
+          @media (min-width: 48rem) {
             justify-content: flex-end;
           }
-          @media (min-width: 1024px) {
+
+          @media (min-width: 64rem) {
             flex: 2;
           }
         }

@@ -48,41 +48,43 @@ const benefits = [
     image={heroImgAccesible}
     alt='Representación gráfica de inclusión digital, con una persona en silla de ruedas navegando en línea, destacando la accesibilidad en entornos web.'
   />
-  <article class='accesibilidad'>
-    <TitleSecondary
-      text='¿Por qué tu negocio necesita una web accesible?'
-      description='La accesibilidad web garantiza que personas con discapacidades (visuales, auditivas, cognitivas, motoras, etc.) puedan percibir, entender, navegar e interactuar con tu sitio web. Ignorar este aspecto limita tu alcance e incluso puede afectar a la imagen de tu marca.'
-    />
-    <div class='beneficios'>
-      <BenefitsSection titulo='Beneficios clave de una web accesible y optimizada:' benefits={benefits} />
-    </div>
-  </article>
+  <div class='container_main_services'>
+    <article class='accesibilidad'>
+      <TitleSecondary
+        text='¿Por qué tu negocio necesita una web accesible?'
+        description='La accesibilidad web garantiza que personas con discapacidades (visuales, auditivas, cognitivas, motoras, etc.) puedan percibir, entender, navegar e interactuar con tu sitio web. Ignorar este aspecto limita tu alcance e incluso puede afectar a la imagen de tu marca.'
+      />
+      <div class='beneficios'>
+        <BenefitsSection titulo='Beneficios clave de una web accesible y optimizada:' benefits={benefits} />
+      </div>
+    </article>
 
-  <QueIncluye
-    title='¿Qué incluye nuestro servicio de diseño web accesible? '
-    intro='En AstracodeLAB nos aseguramos de que tu sitio cumpla con los principales principios de accesibilidad, no solo desde lo técnico, sino también desde la experiencia del usuario. Cada proyecto incluye un diseño UX y UI pensado para que cualquier persona pueda navegar de forma cómoda, independientemente de sus capacidades.<br> Implementamos el desarrollo siguiendo las pautas establecidas por las WCAG, que son los estándares internacionales en accesibilidad digital. Esto incluye: '
-    paragraphs={[
-      '<b>Optimización para navegación :</b> Garantía de que toda la web es funcional sin el uso del ratón.',
-      '<b>Textos alternativos (Alt Text) para imágenes: </b>Descripciones precisas para que lectores de pantalla interpreten el contenido visual.',
-      '<b>Contraste de colores y tipografía accesible:</b> Selección de combinaciones visuales que aseguren la legibilidad para todos.',
-      '<b>Estructura semántica y clara: </b>Uso adecuado de encabezados y listas para una mejor comprensión por parte de usuarios y herramientas.',
-      '<b>Soporte post-lanzamiento: </b>Acompañamiento y asistencia durante el primer mes tras la publicación, con opciones de mantenimiento web continuo para asegurar la accesibilidad a largo plazo.',
-    ]}
-    image= {accesibilidad.src}
-    alt='Persona usando una tablet táctil frente a una computadora portátil, representando accesibilidad digital y usabilidad tecnológica.'
-  />
-  <BannerCta
-    titulo='¿Listo para construir una web sin barreras y llegar a todos?'
-    descripcion='En AstracodeLAB desarrollamos sitios accesibles desde la base, diseñados para ser utilizados por cualquier persona. Nuestro enfoque combina diseño inclusivo con criterios técnicos sólidos para que tu web funcione bien, se vea bien y esté abierta a todos. Haz de tu presencia digital un espacio sin barreras. Tu audiencia es diversa, tu web también debería serlo.'
-    texto='¿Quieres que tu web sea 100% accesible? Agenda tu reunión gratuita y hablemos de inclusión digital.'
-    className='linkSecondaryGreen'
-  />
-  <section class='preguntas'>
-    <FaqsSection
-      titulo='Preguntas frecuentes sobre accesibilidad web'
-      description='Aquí resolvemos algunas de las dudas más comunes sobre el desarrollo de webs accesibles:'
-      faqs={faqsAccesibilidad}
+    <QueIncluye
+      title='¿Qué incluye nuestro servicio de diseño web accesible? '
+      intro='En AstracodeLAB nos aseguramos de que tu sitio cumpla con los principales principios de accesibilidad, no solo desde lo técnico, sino también desde la experiencia del usuario. Cada proyecto incluye un diseño UX y UI pensado para que cualquier persona pueda navegar de forma cómoda, independientemente de sus capacidades.<br> Implementamos el desarrollo siguiendo las pautas establecidas por las WCAG, que son los estándares internacionales en accesibilidad digital. Esto incluye: '
+      paragraphs={[
+        '<b>Optimización para navegación :</b> Garantía de que toda la web es funcional sin el uso del ratón.',
+        '<b>Textos alternativos (Alt Text) para imágenes: </b>Descripciones precisas para que lectores de pantalla interpreten el contenido visual.',
+        '<b>Contraste de colores y tipografía accesible:</b> Selección de combinaciones visuales que aseguren la legibilidad para todos.',
+        '<b>Estructura semántica y clara: </b>Uso adecuado de encabezados y listas para una mejor comprensión por parte de usuarios y herramientas.',
+        '<b>Soporte post-lanzamiento: </b>Acompañamiento y asistencia durante el primer mes tras la publicación, con opciones de mantenimiento web continuo para asegurar la accesibilidad a largo plazo.',
+      ]}
+      image={accesibilidad.src}
+      alt='Persona usando una tablet táctil frente a una computadora portátil, representando accesibilidad digital y usabilidad tecnológica.'
     />
-  </section>
-  <Contact />
+    <BannerCta
+      titulo='¿Listo para construir una web sin barreras y llegar a todos?'
+      descripcion='En AstracodeLAB desarrollamos sitios accesibles desde la base, diseñados para ser utilizados por cualquier persona. Nuestro enfoque combina diseño inclusivo con criterios técnicos sólidos para que tu web funcione bien, se vea bien y esté abierta a todos. Haz de tu presencia digital un espacio sin barreras. Tu audiencia es diversa, tu web también debería serlo.'
+      texto='¿Quieres que tu web sea 100% accesible? Agenda tu reunión gratuita y hablemos de inclusión digital.'
+      className='linkSecondaryGreen'
+    />
+    <section class='preguntas'>
+      <FaqsSection
+        titulo='Preguntas frecuentes sobre accesibilidad web'
+        description='Aquí resolvemos algunas de las dudas más comunes sobre el desarrollo de webs accesibles:'
+        faqs={faqsAccesibilidad}
+      />
+    </section>
+    <Contact />
+  </div>
 </Layout>

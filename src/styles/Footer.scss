@@ -6,29 +6,26 @@
 // ===========================
 .footer {
   background-image: url('../images/backgroundDark.png');
-  background-size: cover;      // rellena el contenedor
+  background-size: cover; // rellena el contenedor
   background-position: center 40%; // centra la parte media
   background-repeat: no-repeat;
   color: $cardWhite;
   //padding:1.25rem 1rem 0.5rem;
 
-  @media (min-width: 768px) {
+  @media (min-width: 48rem) {
     padding-top: 3.75rem;
   }
 
-  @media (min-width: 1024px) {
-
+  @media (min-width: 64rem) {
   }
 
   &__container {
-    max-width: 1200px;
+    max-width: 75rem;
     margin: 0 auto;
   }
 
   &__main-content {
-
-
-    @media (min-width: 1024px) {
+    @media (min-width: 64rem) {
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -42,10 +39,10 @@
     text-align: center;
     margin-bottom: 3rem;
 
-    @media (min-width: 1024px) {
+    @media (min-width: 64rem) {
       text-align: left;
       margin-bottom: 0;
-      width: 350px;
+      width: 21.875rem;
       flex-shrink: 0;
     }
   }
@@ -57,36 +54,33 @@
     flex-direction: row-reverse;
     gap: 0.75rem;
 
-
-    @media (min-width: 1024px) {
-
-      gap:0px;
+    @media (min-width: 64rem) {
+      gap: 0px;
     }
   }
 
   &__logo-text {
     width: 70%;
 
-
-    @media (min-width: 768px) {
-     width: 40%;
+    @media (min-width: 48rem) {
+      width: 40%;
     }
 
-    @media (min-width: 1024px) {
-     width: 70%;
+    @media (min-width: 64rem) {
+      width: 70%;
     }
   }
 
   &__logo-icon {
-    height: 28px;
+    height: 1.75rem;
     width: auto;
 
-    @media (min-width: 768px) {
-      height: 32px;
+    @media (min-width: 48rem) {
+      height: 2rem;
     }
 
-    @media (min-width: 1024px) {
-      height: 36px;
+    @media (min-width: 64rem) {
+      height: 2.25rem;
     }
   }
 
@@ -97,25 +91,24 @@
     font-weight: map.get($Body-mobile, 'font-weight');
     letter-spacing: map.get($Body-mobile, 'letter-spacing');
     color: rgba($cardWhite, 0.9);
-    max-width: 300px;
+    max-width: 18.75rem;
     margin-left: auto;
     margin-right: auto;
 
-    @media (min-width: 768px) {
+    @media (min-width: 48rem) {
       font-size: map.get($Body-tablet, 'font-size');
       line-height: map.get($Body-tablet, 'line-height');
       font-weight: map.get($Body-tablet, 'font-weight');
       letter-spacing: map.get($Body-tablet, 'letter-spacing');
-      max-width: 350px;
+      max-width: 21.875rem;
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: 64rem) {
       font-size: map.get($SmallText-desktop, 'font-size');
       line-height: map.get($SmallText-desktop, 'line-height');
       font-weight: map.get($SmallText-desktop, 'font-weight');
       letter-spacing: map.get($SmallText-desktop, 'letter-spacing');
-      padding-left: 42px;;
-
+      padding-left: 2.625rem;
     }
   }
 
@@ -123,9 +116,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    //gap: 1rem;
 
-    @media (min-width: 1024px) {
+    @media (min-width: 64rem) {
       align-items: center;
     }
   }
@@ -135,17 +127,17 @@
     font-size: map.get($Body-mobile, 'font-size');
     line-height: map.get($SmallText-mobile, 'line-height');
     font-weight: map.get($SmallText-mobile, 'font-weight');
-    letter-spacing: map.get($SmallText-mobile, 'letter-spacing');;
+    letter-spacing: map.get($SmallText-mobile, 'letter-spacing');
     color: rgba($cardWhite, 0.8);
     margin: 0;
 
-    @media (min-width: 768px) {
+    @media (min-width: 48rem) {
       font-size: map.get($SmallText-tablet, 'font-size');
       line-height: map.get($SmallText-tablet, 'line-height');
       font-weight: map.get($SmallText-tablet, 'font-weight');
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: 64rem) {
       font-size: map.get($SmallText-desktop, 'font-size');
       line-height: map.get($SmallText-desktop, 'line-height');
       font-weight: map.get($SmallText-desktop, 'font-weight');
@@ -156,11 +148,11 @@
     border-bottom: 1px solid rgba($cardWhite, 0.2);
     margin: 2rem 0;
 
-    @media (min-width: 768px) {
+    @media (min-width: 48rem) {
       margin: 2.5rem 0;
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: 64rem) {
       display: none;
     }
   }
@@ -171,14 +163,14 @@
     gap: 2.5rem;
     margin-bottom: 3rem;
 
-    @media (min-width: 768px) {
+    @media (min-width: 48rem) {
       flex-direction: row;
       justify-content: space-between;
       gap: 2rem;
       margin-bottom: 3.5rem;
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: 64rem) {
       flex-direction: row;
       gap: 3rem;
       margin-bottom: 0;
@@ -189,7 +181,7 @@
   &__column {
     flex: 1;
 
-    @media (min-width: 1024px) {
+    @media (min-width: 64rem) {
       flex: 1;
 
       &:first-child {
@@ -199,14 +191,13 @@
   }
   &__line {
     border-bottom: 1px solid rgba($cardWhite, 0.2);
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 
-    @media (min-width: 1024px) {
+    @media (min-width: 64rem) {
       display: none;
     }
   }
   &__column-title {
-
     font-family: $font-primary;
     font-size: map.get($H3-mobile, 'font-size');
     line-height: map.get($H3-mobile, 'line-height');
@@ -215,14 +206,14 @@
     color: $cardWhite;
     margin: 0 0 1.25rem 0;
 
-    @media (min-width: 768px) {
+    @media (min-width: 48rem) {
       font-size: map.get($H3-tablet, 'font-size');
       line-height: map.get($H3-tablet, 'line-height');
       font-weight: map.get($H3-tablet, 'font-weight');
       letter-spacing: map.get($H3-tablet, 'letter-spacing');
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: 64rem) {
       font-size: map.get($H3-desktop, 'font-size');
       line-height: map.get($H3-desktop, 'line-height');
       font-weight: map.get($H3-desktop, 'font-weight');
@@ -249,14 +240,14 @@
     padding: 0.4rem 0;
     transition: color 0.3s ease;
 
-    @media (min-width: 768px) {
+    @media (min-width: 48rem) {
       font-size: map.get($Body-tablet, 'font-size');
       line-height: map.get($Body-tablet, 'line-height');
       font-weight: map.get($Body-tablet, 'font-weight');
       letter-spacing: map.get($Body-tablet, 'letter-spacing');
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: 64rem) {
       font-size: map.get($SmallText-desktop, 'font-size');
       line-height: map.get($SmallText-desktop, 'line-height');
       font-weight: map.get($SmallText-desktop, 'font-weight');
@@ -274,7 +265,7 @@
     flex-direction: column;
     gap: 0.75rem;
 
-    @media (min-width: 1024px) {
+    @media (min-width: 64rem) {
       gap: 1rem;
       min-width: 122px;
     }
@@ -293,14 +284,14 @@
     text-decoration: none;
     transition: color 0.3s ease;
 
-    @media (min-width: 768px) {
+    @media (min-width: 48rem) {
       font-size: map.get($Body-tablet, 'font-size');
       line-height: map.get($Body-tablet, 'line-height');
       font-weight: map.get($Body-tablet, 'font-weight');
       letter-spacing: map.get($Body-tablet, 'letter-spacing');
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: 64rem) {
       font-size: map.get($SmallText-desktop, 'font-size');
       line-height: map.get($SmallText-desktop, 'line-height');
       font-weight: map.get($SmallText-desktop, 'font-weight');
@@ -313,8 +304,8 @@
   }
 
   &__contact-icon {
-    width: 16px;
-    height: 16px;
+    width: 1rem;
+    height: 1rem;
     color: rgba($cardWhite, 0.7);
   }
 
@@ -326,16 +317,17 @@
     padding-top: 2rem;
     border-top: 1px solid rgba($cardWhite, 0.2);
 
-    @media (min-width: 768px) {
+    @media (min-width: 48rem) {
       flex-direction: row;
       justify-content: space-between;
       padding-top: 2.5rem;
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: 64rem) {
       padding-top: 3rem;
       margin-top: auto;
-    }}
+    }
+  }
 
   &__legal {
     display: flex;
@@ -352,13 +344,13 @@
     text-decoration: none;
     transition: color 0.3s ease;
 
-    @media (min-width: 768px) {
+    @media (min-width: 48rem) {
       font-size: map.get($SmallText-tablet, 'font-size');
       line-height: map.get($SmallText-tablet, 'line-height');
       font-weight: map.get($SmallText-tablet, 'font-weight');
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: 64rem) {
       font-size: map.get($SmallText-desktop, 'font-size');
       line-height: map.get($SmallText-desktop, 'line-height');
       font-weight: map.get($SmallText-desktop, 'font-weight');
@@ -373,11 +365,11 @@
     color: rgba($cardWhite, 0.5);
     font-size: map.get($SmallText-mobile, 'font-size');
 
-    @media (min-width: 768px) {
+    @media (min-width: 48rem) {
       font-size: map.get($SmallText-tablet, 'font-size');
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: 64rem) {
       font-size: map.get($SmallText-desktop, 'font-size');
     }
   }
@@ -389,13 +381,13 @@
     font-weight: map.get($SmallText-mobile, 'font-weight');
     color: rgba($cardWhite, 0.7);
 
-    @media (min-width: 768px) {
+    @media (min-width: 48rem) {
       font-size: map.get($SmallText-tablet, 'font-size');
       line-height: map.get($SmallText-tablet, 'line-height');
       font-weight: map.get($SmallText-tablet, 'font-weight');
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: 64rem) {
       font-size: map.get($SmallText-desktop, 'font-size');
       line-height: map.get($SmallText-desktop, 'line-height');
       font-weight: map.get($SmallText-desktop, 'font-weight');
@@ -404,14 +396,13 @@
 
   // Estilos específicos para social-bar en footer
   .social-bar {
-    
     &__icons {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 1rem;
 
-      @media (min-width: 1024px) {
+      @media (min-width: 64rem) {
         justify-content: flex-start;
       }
 
@@ -422,14 +413,14 @@
         border-radius: 8px;
         transition: all 0.3s ease;
 
-        @media (min-width: 768px) {
-          width: 44px;
-          height: 44px;
+        @media (min-width: 48rem) {
+          width: 2.75rem;
+          height: 2.75rem;
         }
 
-        @media (min-width: 1024px) {
-          width: 48px;
-          height: 48px;
+        @media (min-width: 64rem) {
+          width: 3rem;
+          height: 3rem;
         }
 
         &:hover {
@@ -438,18 +429,18 @@
         }
 
         img {
-          width: 30px;
-          height: 30px;
+          width: 1.875rem;
+          height: 1.875rem;
           filter: brightness(0) invert(1);
 
-          @media (min-width: 768px) {
-          width: 40px;
-          height: 40px;
+          @media (min-width: 48rem) {
+            width: 2.5rem;
+            height: 2.5rem;
           }
 
-          @media (min-width: 1024px) {
-            width: 24px;
-            height: 24px;
+          @media (min-width: 64rem) {
+            width: 1.5rem;
+            height: 1.5rem;
           }
         }
       }
