@@ -25,76 +25,79 @@ import Chart from '../../layouts/components/icons/chart.astro';
     subtitle='Tu estrategia digital con AstracodeLAB'
     text='En la era digital actual, tener una presencia online profesional no es solo una opción; es la base para el crecimiento y la visibilidad de cualquier negocio o proyecto. Tu página web es tu embajador digital, operando 24/7 para captar la atención, generar confianza y convertir visitantes en clientes fieles. En AstracodeLAB, vamos más allá de lo estético: diseñamos y desarrollamos soluciones web a medida que no solo lucen impecables, sino que también son herramientas estratégicas, ágiles y accesibles, pensadas para impulsar tus objetivos de negocio.'
   />
+  <div class='container_main_services'>
   <PorqNecesitoWeb />
-  <AdvantagesSection
-    titulo='Qué ganas al elegir astracodelab como tu agencia web'
-    descripcion='AstracodeLAB es una agencia de diseño y desarrollo web, con equipo repartido en Barcelona, Málaga y Valencia prestando servicio a clientes en toda España. Nuestra metodología fusiona el estudio de negocio, la creatividad y un proceso de trabajo transparente para ofrecerte una página web que inspira confianza y convierte visitas en oportunidades reales.'
-    advantages={[
-      {
-        iconoComponent: Charge,
-        titulo: 'Carga rápida',
-        descripcion:
-          'El visitante no se marcha antes de ver tu mensaje. Nos aseguramos de que tu web cargue en cuestión de segundos. La optimización del rendimiento web es clave.',
-      },
-      {
-        iconoComponent: User,
-        titulo: 'Diseño centrado en el usuario',
-        descripcion:
-          'Navegación sencilla y lectura cómoda. Nuestras webs son accesibles para todos, garantizando una experiencia positiva para cada visitante.',
-      },
-      {
-        iconoComponent: Search,
-        titulo: 'Contenido listo para buscadores',
-        descripcion:
-          'Mayor visibilidad en Google sin trucos ni sobre-optimización. Estructuramos el contenido y desarrollamos tu sitio con un código optimizado.',
-      },
-      {
-        iconoComponent: Chart,
-        titulo: 'Proyectos escalables y adaptables',
-        descripcion:
-          'Tu proyecto puede crecer. Añade una tienda online, sistemas de reservas o funcionalidades multilingües cuando lo necesites, asegurando la longevidad y relevancia de tu inversión.',
-      },
-      {
-        iconoComponent: Comment,
-        titulo: 'Acompañamiento cercano y personalizado',
-        descripcion:
-          'Desde el primer contacto hasta el lanzamiento y el soporte continuo, te acompañamos en cada etapa. Respondemos a tus mensajes, llamadas o mails siempre en tu horario y con la atención que mereces.',
-      },
-    ]}
-  />
-  <NuestrosServicios />
-  <Buscas />
-  <section class='timeline-section'>
-    <div class='timeline-section-header'>
-      <TitleSecondary
-        text='¿Cuáles son las etapas que tiene un desarrollo de una página web?'
-        description='Nuestro proceso de creación de tu página web profesional es transparente, colaborativo y diseñado para garantizar tu tranquilidad en todo momento:'
-      />
-    </div>
-    <TimelineWrapper>
-      <PasoProceso
-        numero='1'
-        descripcion='Empezamos con una reunión para entender tu idea, tus objetivos y las referencias que te inspiran. Así dibujamos un alcance de proyecto realista y alineado con tus plazos.'
-      />
-      <PasoProceso
-        numero='2'
-        descripcion='Antes de hablar de colores, trazamos un mapa detallado con las secciones, flujos del usuario y la estructura de contenidos. Realizamos un análisis de tu mercado y de las palabras clave para definir una buena arquitectura web.'
-        descripcionSec='Creamos un prototipo en el que podrás ajustar colores, tipografía y jerarquía hasta que digas <strong>«ahora sí»</strong>.'
-      />
-      <PasoProceso
-        numero='3'
-        descripcion='Con la estructura firme, trabajamos en el estilo visual de tu marca: colores, tipografías y elementos gráficos. Creamos un prototipo donde podrás previsualizar y ajustar el diseño.'
-      />
-      <PasoProceso
-        numero='4'
-        descripcionSec='Nos ponemos manos a la obra con el código. Convertimos el diseño en una web funcional, accesible y adaptada a todos los dispositivos (móviles, tablets y ordenadores), asegurando un rendimiento óptimo.'
-      />
-      <PasoProceso
-        numero='5'
-        descripcionSec='Después de activar tu web, te proporcionamos un manual básico y te acompañamos durante el primer mes para cualquier ajuste o duda. Si lo deseas, puedes optar por nuestro plan de mantenimiento web mensual, si quieres olvidarte de la parte técnica.'
-      />
-    </TimelineWrapper>
-  </section>
-  <Listo />
-  <Contact />
+  
+    <AdvantagesSection
+      titulo='Qué ganas al elegir astracodelab como tu agencia web'
+      descripcion='AstracodeLAB es una agencia de diseño y desarrollo web, con equipo repartido en Barcelona, Málaga y Valencia prestando servicio a clientes en toda España. Nuestra metodología fusiona el estudio de negocio, la creatividad y un proceso de trabajo transparente para ofrecerte una página web que inspira confianza y convierte visitas en oportunidades reales.'
+      advantages={[
+        {
+          iconoComponent: Charge,
+          titulo: 'Carga rápida',
+          descripcion:
+            'El visitante no se marcha antes de ver tu mensaje. Nos aseguramos de que tu web cargue en cuestión de segundos. La optimización del rendimiento web es clave.',
+        },
+        {
+          iconoComponent: User,
+          titulo: 'Diseño centrado en el usuario',
+          descripcion:
+            'Navegación sencilla y lectura cómoda. Nuestras webs son accesibles para todos, garantizando una experiencia positiva para cada visitante.',
+        },
+        {
+          iconoComponent: Search,
+          titulo: 'Contenido listo para buscadores',
+          descripcion:
+            'Mayor visibilidad en Google sin trucos ni sobre-optimización. Estructuramos el contenido y desarrollamos tu sitio con un código optimizado.',
+        },
+        {
+          iconoComponent: Chart,
+          titulo: 'Proyectos escalables y adaptables',
+          descripcion:
+            'Tu proyecto puede crecer. Añade una tienda online, sistemas de reservas o funcionalidades multilingües cuando lo necesites, asegurando la longevidad y relevancia de tu inversión.',
+        },
+        {
+          iconoComponent: Comment,
+          titulo: 'Acompañamiento cercano y personalizado',
+          descripcion:
+            'Desde el primer contacto hasta el lanzamiento y el soporte continuo, te acompañamos en cada etapa. Respondemos a tus mensajes, llamadas o mails siempre en tu horario y con la atención que mereces.',
+        },
+      ]}
+    />
+    <NuestrosServicios />
+    <Buscas />
+    <section class='timeline-section'>
+      <div class='timeline-section-header'>
+        <TitleSecondary
+          text='¿Cuáles son las etapas que tiene un desarrollo de una página web?'
+          description='Nuestro proceso de creación de tu página web profesional es transparente, colaborativo y diseñado para garantizar tu tranquilidad en todo momento:'
+        />
+      </div>
+      <TimelineWrapper>
+        <PasoProceso
+          numero='1'
+          descripcion='Empezamos con una reunión para entender tu idea, tus objetivos y las referencias que te inspiran. Así dibujamos un alcance de proyecto realista y alineado con tus plazos.'
+        />
+        <PasoProceso
+          numero='2'
+          descripcion='Antes de hablar de colores, trazamos un mapa detallado con las secciones, flujos del usuario y la estructura de contenidos. Realizamos un análisis de tu mercado y de las palabras clave para definir una buena arquitectura web.'
+          descripcionSec='Creamos un prototipo en el que podrás ajustar colores, tipografía y jerarquía hasta que digas <strong>«ahora sí»</strong>.'
+        />
+        <PasoProceso
+          numero='3'
+          descripcion='Con la estructura firme, trabajamos en el estilo visual de tu marca: colores, tipografías y elementos gráficos. Creamos un prototipo donde podrás previsualizar y ajustar el diseño.'
+        />
+        <PasoProceso
+          numero='4'
+          descripcionSec='Nos ponemos manos a la obra con el código. Convertimos el diseño en una web funcional, accesible y adaptada a todos los dispositivos (móviles, tablets y ordenadores), asegurando un rendimiento óptimo.'
+        />
+        <PasoProceso
+          numero='5'
+          descripcionSec='Después de activar tu web, te proporcionamos un manual básico y te acompañamos durante el primer mes para cualquier ajuste o duda. Si lo deseas, puedes optar por nuestro plan de mantenimiento web mensual, si quieres olvidarte de la parte técnica.'
+        />
+      </TimelineWrapper>
+    </section>
+    <Listo />
+    <Contact />
+</div>
 </Layout>

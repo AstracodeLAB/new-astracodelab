@@ -35,16 +35,22 @@
     $gradientButton; // borde con degradado
   background-origin: padding-box, border-box;
   background-clip: padding-box, border-box;
+
+  transition: all 0.3s ease-in-out;
   &:hover {
     background: $gradientButtonFlip;
     color: $blue-secondary;
     border: 2px solid $blue-primary;
+    transform: translateY(-2px) scale(1.01); // efecto flotante sutil
+    box-shadow: 0 6px 12px rgba(0,0,0,0.12); // sombra ligera
   }
 
   &:active {
     background: $blue-dark;
     border: 2px solid $blue-dark;
     color: $blue-secondary;
+    transform: scale(0.98); // feedback de clic
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
   }
 
   @media (min-width: 48rem) {
@@ -87,7 +93,7 @@
   line-height: map.get($Button-mobile, 'line-height');
   font-weight: map.get($Button-mobile, 'font-weight');
   background: $gradientBlue;
-
+  transition: all 0.3s ease-in-out;
   &:hover {
     background: $gradientButton;
     color: $blue-secondary;
@@ -99,6 +105,9 @@
       $gradientButton; // borde con degradado
     background-origin: padding-box, border-box;
     background-clip: padding-box, border-box;
+    transform: translateY(-2px) scale(1.01); // efecto flotante sutil
+    box-shadow: 0 6px 12px rgba(0,0,0,0.12); // sombra ligera
+  
   }
 
   &:active {
@@ -148,16 +157,21 @@
   font-weight: map.get($Button-mobile, 'font-weight');
 
   background: $blue-primary;
+  transition: all 0.3s ease-in-out;
   &:hover {
     background: $blue-secondary;
     color: $blue-primary;
     border: 2px solid $blue-primary;
+    transform: translateY(-2px) scale(1.01); // efecto flotante sutil
+    box-shadow: 0 6px 12px rgba(0,0,0,0.12); // sombra ligera
   }
 
   &:active {
     background: $blue-dark;
     border: 2px solid $blue-dark;
     color: $blue-secondary;
+    transform: scale(0.98); // feedback de clic
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
   }
 
   @media (min-width: 48rem) {
@@ -199,16 +213,21 @@
   font-weight: map.get($Button-mobile, 'font-weight');
 
   background: $blue-secondary;
+  transition: all 0.3s ease-in-out;
   &:hover {
     background: $blue-dark;
     color: $blue-secondary;
     border: 2px solid $blue-dark;
+    transform: translateY(-2px) scale(1.01); // efecto flotante sutil
+    box-shadow: 0 6px 12px rgba(0,0,0,0.12); // sombra ligera
   }
 
   &:active {
     background: $blue-primary;
     border: 2px solid $blue-primary;
     color: $blue-secondary;
+    transform: scale(0.98); // feedback de clic
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
   }
 
   @media (min-width: 48rem) {
@@ -223,13 +242,14 @@
     line-height: map.get($Button-desktop, 'line-height');
     font-weight: map.get($Button-desktop, 'font-weight');
     letter-spacing: map.get($Button-desktop, 'letter-spacing');
-    padding: 0.9rem 1.5rem;
+    
   }
   @media (min-width: 90rem) {
     font-size: map.get($Button-desktop-xl, 'font-size');
     line-height: map.get($Button-desktop-xl, 'line-height');
     font-weight: map.get($Button-desktop-xl, 'font-weight');
     letter-spacing: map.get($Button-desktop-xl, 'letter-spacing');
+    padding: 0.5rem 1.125rem;
   }
 }
 
@@ -241,6 +261,16 @@
   font-size: map.get($Button-mobile, 'font-size');
   line-height: map.get($Button-mobile, 'line-height');
   font-weight: map.get($Button-mobile, 'font-weight');
+  transition: color 0.3s ease, opacity 0.3s ease;
+  &:hover {
+    color: $blue-dark;
+    opacity: 0.85; // cambio sutil en el hover
+    font-weight: 500;
+  }
+
+  &:active {
+    opacity: 0.65; // feedback de clic, sin moverse
+  }
 
   @media (min-width: 48rem) {
     font-size: map.get($Button-tablet, 'font-size');
@@ -307,6 +337,7 @@
   line-height: map.get($SmallText-mobile, 'line-height');
   font-weight: map.get($SmallText-mobile, 'font-weight');
   border-bottom: 1px solid rgba(42, 17, 96, 0.2);
+  transition: all 0.3s ease-in-out;
   &:last-child {
     border-bottom: none;
   }
@@ -346,8 +377,14 @@
   line-height: map.get($Button-mobile, 'line-height');
   font-weight: map.get($Button-mobile, 'font-weight');
   justify-content: flex-end;
+  transition: color 0.3s ease, opacity 0.3s ease;
+  
   &:hover {
     color: $cardWhite;
+    opacity: 0.85;
+  }
+  &:active {
+    opacity: 0.65;
   }
 
   @media (min-width: 48rem) {

@@ -87,6 +87,7 @@
   display: flex;
   align-items: center;
   gap: 0.25rem;
+  transition: all 0.3s ease-in-out;
   @media (min-width: 48rem) {
     font-size: map.get($Body-tablet, 'font-size');
     font-weight: map.get($Body-tablet, 'font-weight');
