@@ -1,0 +1,109 @@
+@use 'sass:map';
+@use './variables.scss' as *;
+
+.hero-illustration {
+  position: relative; // contenedor base
+  display: inline-block;
+  //max-width: 80%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  order: 1;
+  @media (min-width: 48rem) {
+    flex: 0 0 50%;
+    order: 2;
+    justify-content: center;
+    
+  }
+  @media (min-width: 64rem) {
+    flex: 0 0 40%;
+    order: 2;
+    justify-content: flex-end;
+  }
+
+  &__computer {
+    position: relative;
+    z-index: 3; // ordenador delante
+    max-width: 100%;
+    height: auto;
+    //max-width: 80%;
+
+      @media (min-width: 48rem) {
+        width: 100%;
+        height: auto;
+        
+      }
+
+      @media (min-width: 64rem) {
+        max-width: 100%;
+      }
+  }
+
+  &__rocket {
+    position: absolute;
+    top: 0%;   // ajusta según la ilustración
+    left: 73%;   // centrado relativo al ordenador
+    transform: translateX(0%); // centra horizontalmente
+    z-index: 2;  // cohete detrás
+    max-width: 25%; // ajusta al tamaño que quieras
+    height: auto;
+    @media (min-width: 64rem) {
+      max-width: 25%;
+      top: 0%;
+      left: 80%;
+      transform: translateX(-30%);
+    }
+  }
+
+  &__base {
+    position: absolute;
+    bottom: 0;   // ajusta según la ilustración
+    left: 50%;   // centrado relativo al ordenador
+    transform: translateX(-50%); // centra horizontalmente
+    z-index: 1;  // base detrás
+    max-width: 100%; // ajusta al tamaño que quieras
+    height: auto;
+  }
+}
+
+/* ========================================================== */
+/* 🚀 1. Keyframes: Solo Subida y Desaparición (NO vuelve) */
+/* ========================================================== */
+@keyframes rocketLaunchAndDisappear {
+  0% {
+    
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-400px); // Sube
+    opacity: 0; // Desaparece
+  }
+}
+
+/* ========================================================== */
+/* 🚀 2. Animación en Móvil (Activación Única y Reset) */
+/* ========================================================== */
+@media (max-width: 48rem) { // Asume 768px = 48rem
+  .hero-illustration__rocket.launch {
+    // Aplica la animación de subida/desaparición
+    animation: rocketLaunchAndDisappear 3s ease-in-out forwards; 
+    
+    // El 'forwards' mantiene el cohete invisible y arriba
+  }
+}
+
+/* ========================================================== */
+/* 🚀 3. Animación en Escritorio (Activación por Hover Repetible) */
+/* ========================================================== */
+@media (hover: hover) and (pointer: fine) {
+  // Cuando se hace hover, sube y desaparece (igual que en móvil)
+  .hero-illustration__computer:hover + .hero-illustration__rocket {
+    animation: rocketLaunchAndDisappear 2s ease-in-out forwards;
+  }
+  
+  // TRUCO: Cuando se quita el hover, debemos forzar el reset INSTANTÁNEO.
+  // La animación ya se ha completado (gracias a 'forwards'). 
+  // Al quitar el hover, el elemento vuelve a su estado base (transform: translateY(0)), pero puede que no sea instantáneo.
+  // Para garantizar un reseteo instantáneo, usaremos JS para el escritorio también. 
+  // ¡Olvídate de esta parte de CSS! El JS lo hará mejor.
+}
