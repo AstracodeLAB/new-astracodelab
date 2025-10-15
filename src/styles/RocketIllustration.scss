@@ -23,7 +23,7 @@
 
   &__computer {
     position: relative;
-    z-index: 3; // ordenador delante
+    z-index: 4; // ordenador delante
     max-width: 100%;
     height: auto;
     //max-width: 80%;
@@ -40,17 +40,34 @@
   }
 
   &__rocket {
+    z-index: 3;
     position: absolute;
     top: 0%;   // ajusta según la ilustración
     left: 73%;   // centrado relativo al ordenador
     transform: translateX(0%); // centra horizontalmente
-    z-index: 2;  // cohete detrás
+     // cohete detrás
+    max-width: 15%; // ajusta al tamaño que quieras
+    height: auto;
+    @media (min-width: 64rem) {
+      max-width: 15%;
+      top: 0%;
+      left: 80%;
+      transform: translateX(-30%);
+    }
+  }
+  &__smoke {
+    
+    position: absolute;
+    top: 37%;   // ajusta según la ilustración
+    left: 68.51%;   // centrado relativo al ordenador
+    transform: translateX(0%); // centra horizontalmente
+    z-index: 2;  // humo detrás
     max-width: 25%; // ajusta al tamaño que quieras
     height: auto;
     @media (min-width: 64rem) {
-      max-width: 25%;
-      top: 0%;
-      left: 80%;
+      max-width: 27%;
+      top: 37%;
+      left: 78%;
       transform: translateX(-30%);
     }
   }
@@ -106,4 +123,30 @@
   // Al quitar el hover, el elemento vuelve a su estado base (transform: translateY(0)), pero puede que no sea instantáneo.
   // Para garantizar un reseteo instantáneo, usaremos JS para el escritorio también. 
   // ¡Olvídate de esta parte de CSS! El JS lo hará mejor.
+}
+
+/* ========================================================== */
+/* 💨 4. Desvanecer el humo (móvil y desktop) */
+/* ========================================================== */
+
+/* 🔹 Móvil: cuando el cohete lanza (.launch), el humo se desvanece */
+@media (max-width: 48rem) {
+  .hero-illustration__smoke {
+    transition: opacity 1s ease-in-out; // transición suave
+  }
+
+  .hero-illustration__rocket.launch ~ .hero-illustration__smoke {
+    opacity: 0; // se desvanece cuando el cohete despega
+  }
+}
+
+/* 🔹 Desktop: cuando se hace hover en el ordenador, el humo también se desvanece */
+@media (hover: hover) and (pointer: fine) {
+  .hero-illustration__smoke {
+    transition: opacity 1s ease-in-out; // transición suave
+  }
+
+  .hero-illustration__computer:hover ~ .hero-illustration__smoke {
+    opacity: 0;
+  }
 }
