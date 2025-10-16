@@ -104,8 +104,6 @@
   .hero-illustration__rocket.launch {
     // Aplica la animación de subida/desaparición
     animation: rocketLaunchAndDisappear 3s ease-in-out forwards; 
-    
-    // El 'forwards' mantiene el cohete invisible y arriba
   }
 }
 
@@ -117,12 +115,6 @@
   .hero-illustration__computer:hover + .hero-illustration__rocket {
     animation: rocketLaunchAndDisappear 2s ease-in-out forwards;
   }
-  
-  // TRUCO: Cuando se quita el hover, debemos forzar el reset INSTANTÁNEO.
-  // La animación ya se ha completado (gracias a 'forwards'). 
-  // Al quitar el hover, el elemento vuelve a su estado base (transform: translateY(0)), pero puede que no sea instantáneo.
-  // Para garantizar un reseteo instantáneo, usaremos JS para el escritorio también. 
-  // ¡Olvídate de esta parte de CSS! El JS lo hará mejor.
 }
 
 /* ========================================================== */
