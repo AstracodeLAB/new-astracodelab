@@ -42,6 +42,7 @@
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
+    padding-top: 1.5rem;
 
     @media (min-width: 48rem) {
       gap: 2rem;
@@ -50,6 +51,9 @@
 
   &__profile {
     position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   &__avatar {
@@ -71,17 +75,18 @@
   }
 
   &__navigation {
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1rem;
     position: absolute;
-    top: -40px;
+    top: 0;
     left: 0;
     right: 0;
-
+    transform: translateY(200%);
     @media (min-width: 48rem) {
-      top: -40px;
+      top: -100px;
     }
   }
 
@@ -107,6 +112,10 @@
       @media (min-width: 48rem) {
         width: 1.5rem;
         height: 1.5rem;
+      }
+      @media (min-width: 64rem) {
+        width: 3rem;
+        height: 3rem;
       }
     }
   }
