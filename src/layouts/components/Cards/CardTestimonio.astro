@@ -1,6 +1,7 @@
 ---
 import TitleSecondary from '../Titles/TitleSecondary.astro';
 import Buttons from '../Buttons/Buttons.astro';
+import logoGoogle from '../../../images/logoGoogle.png';
 
 const { titulo, subtitulo, testimonials } = Astro.props;
 ---
@@ -30,12 +31,17 @@ const { titulo, subtitulo, testimonials } = Astro.props;
       <div class='card-testimonio__testimonial'>
           <p class='card-testimonio__text' data-testimonial-text>{testimonials[0].testimonial}</p>
       </div>
+      <div class="card-testimonio__google">
+        <img class="card-testimonio__google-img" src={logoGoogle.src} alt="logo de Google">
       <Buttons 
           className="linkPrimary" 
-          href="https://www.google.com/search?sca_esv=b1f7e2cc7f09216f&sxsrf=AE3TifPCSJh8Yg0FIrAp3JqoDumv6Vlyvg:1760953977404&q=astracodelab+&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-Ew6RPn9NDe5KJ9v5Ik6HKT7Ehb8zTt6-YjRdWAM8jKiGV1-ZxfBa2iWgxqhG_nUgkRj3yl3D&uds=AOm0WdEIj9g-vUBM9sRrloPAoQ3GEuLzzLnBRTKtJHtSbMWMHfXu0Xy4q6LMolHDaHxrKsvNSymm_UmJFgMlU4-Hv5bkLygVp9QGicqad_R1O_I1VyykwU&sa=X&ved=2ahUKEwj61afiwLKQAxUcnf0HHQlFGNoQ3PALegQILxAF&biw=1745&bih=870&dpr=1.1" 
+          target='_blank'
+          href="https://www.google.com/search?sca_esv=b1f7e2cc7f09216f&sxsrf=AE3TifOYptLvzzh77lMRvUPgz6ofjJpz4g:1761056026443&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-Ew6RPn9NDe5KJ9v5Ik6HKT6mXzBtUuN2CHLCXVmR4UZJ6cqUlfbegdiiLsBixZjzF7kMlafyff1FE7Z8b6bK7hUm-uoc&q=Astracodelab+Rese%C3%B1as&sa=X&ved=2ahUKEwjB14r3vLWQAxUL_7sIHWiNDckQ0bkNegQINxAD&cshid=1761056070685637&biw=1433&bih=813&dpr=1.1" 
       >
           Ver reseñas en google
       </Buttons>
+      </div>
+      
   </div>
 </article>
 

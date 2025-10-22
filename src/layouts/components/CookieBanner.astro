@@ -6,7 +6,9 @@ import Subtitle from '../components/Titles/Subtitle.astro';
   <h3 class="cookie-banner__title">Utilizamos cookies para mejorar tu experiencia en nuestro sitio web.</h3>
   <p class="cookie-banner__paragraph">Algunas cookies son esenciales para el funcionamiento de la página, mientras que otras nos ayudan a analizar el tráfico, personalizar contenidos y mostrarte publicidad relevante.
     Puedes aceptar todas las cookies para disfrutar de la mejor experiencia posible, o solo aceptar las necesarias para navegar por el sitio.
-    Para más información, consulta nuestra Política de cookies
+    Para más información, consulta nuestra 
+    <a href="/politica-de-cookies" class="cookie-banner__link">
+    política de cookies</a>
     .</p>
   <div class="cookie-buttons">
     <button id="accept-all" class="btn">Aceptar todas</button>
@@ -34,12 +36,14 @@ document.addEventListener('DOMContentLoaded', () => {
     setCookie("analytics", "true", 365);
     setCookie("ads", "true", 365);
     banner.style.display = "none";
+    location.reload();
   });
 
   document.getElementById("accept-necessary")?.addEventListener("click", () => {
     setCookie("cookiesChoice", "necessary", 365);
     setCookie("essential", "true", 365);
     banner.style.display = "none";
+    location.reload();
   });
 });
 </script>
