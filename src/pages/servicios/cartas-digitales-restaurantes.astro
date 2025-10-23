@@ -10,6 +10,7 @@ import BannerCta from '../../layouts/components/Banners/BannerCta.astro';
 import FaqsSection from '../../layouts/components/FaqsSection.astro';
 import { faqsCartasDigitales } from '../../layouts/components/accordeon/Faqs.js';
 import Contact from '../../layouts/components/Contact.astro';
+import { schemaCartasDigitales } from '../../data/schemas/cartas-digitales.js';
 
 const benefits = [
   {
@@ -38,9 +39,16 @@ const benefits = [
       'Presentarte con una carta digital moderna transmite una actitud innovadora y cercana al cliente. Una forma efectiva de diferenciarte en un sector tan competitivo.',
   },
 ];
+
+const title = 'Cartas Digitales para Restaurantes con Código QR | AstracodeLAB';
+const description =
+  'Moderniza tu restaurante con una carta digital profesional. Menú QR actualizable al instante, con fotos, alérgenos y multiidioma. Diseño personalizado para tu negocio de hostelería.';
+const permalink = Astro.url.href;
 ---
 
-<Layout title='Servicios de diseño y desarrollo web'>
+<script type='application/ld+json' set:html={JSON.stringify(schemaCartasDigitales)} />
+
+<Layout title={title} description={description} permalink={permalink}>
   <div class='container_main_services'>
     <section class='cartasDigitales'>
       <HeroSecondary

@@ -10,9 +10,16 @@ import Contact from '../../layouts/components/Contact.astro';
 import { faqsReservas } from '../../layouts/components/accordeon/Faqs.js';
 import BannerCta from '../../layouts/components/Banners/BannerCta.astro';
 import reservas from '../../images/reservas.jpg';
+import { schemaSistemasReservas } from '../../data/schemas/sistemas-reservas.js';
+
+const title = 'Sistemas de Reservas Online | Automatiza tu Gestión de Citas | AstracodeLAB';
+const description =
+  'Sistema de reservas online profesional: automatiza citas, pagos y confirmaciones. Disponibilidad 24/7, recordatorios automáticos y sincronización con calendarios. Consultoría gratuita.';
+const permalink = Astro.url.href;
 ---
 
-<Layout title='AstracodeLAB - Sistemas de Reservas Online'>
+<script type='application/ld+json' set:html={JSON.stringify(schemaSistemasReservas)} />
+<Layout title={title} description={description} permalink={permalink}>
   <div class='container_main_services'>
     <HeroSecondary
       title='Sistemas de reservas online'

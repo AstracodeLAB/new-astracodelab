@@ -15,19 +15,25 @@ import User from '../../layouts/components/icons/user.astro';
 import Search from '../../layouts/components/icons/search.astro';
 import Comment from '../../layouts/components/icons/comment.astro';
 import Chart from '../../layouts/components/icons/chart.astro';
+import { schemaDisenoWeb } from '../../data/schemas/diseno-web.js';
+
+const title = 'Agencia de Diseño Web en España | Páginas Rápidas y Accesibles';
+const description =
+  'Diseño y desarrollo web a medida en Barcelona, Málaga y Valencia. Webs rápidas, accesibles y optimizadas para SEO. Consultoria gratuita. Agencia con servicio en toda España.';
+const permalink = Astro.url.href;
 ---
 
-<Layout
-  title='Agencia de diseño web en España: páginas rápidas, accesibles y orientadas a ventas. Solicita tu consultoría gratuita.'
->
+<script type='application/ld+json' set:html={JSON.stringify(schemaDisenoWeb)} />
+
+<Layout title={title} description={description} permalink={permalink}>
   <HeroServicesA
     title='Diseño web y desarrollo a medida'
     subtitle='Tu estrategia digital con AstracodeLAB'
     text='En la era digital actual, tener una presencia online profesional no es solo una opción; es la base para el crecimiento y la visibilidad de cualquier negocio o proyecto. Tu página web es tu embajador digital, operando 24/7 para captar la atención, generar confianza y convertir visitantes en clientes fieles. En AstracodeLAB, vamos más allá de lo estético: diseñamos y desarrollamos soluciones web a medida que no solo lucen impecables, sino que también son herramientas estratégicas, ágiles y accesibles, pensadas para impulsar tus objetivos de negocio.'
   />
   <div class='container_main_services'>
-  <PorqNecesitoWeb />
-  
+    <PorqNecesitoWeb />
+
     <AdvantagesSection
       titulo='Qué ganas al elegir astracodelab como tu agencia web'
       descripcion='AstracodeLAB es una agencia de diseño y desarrollo web, con equipo repartido en Barcelona, Málaga y Valencia prestando servicio a clientes en toda España. Nuestra metodología fusiona el estudio de negocio, la creatividad y un proceso de trabajo transparente para ofrecerte una página web que inspira confianza y convierte visitas en oportunidades reales.'
@@ -99,5 +105,5 @@ import Chart from '../../layouts/components/icons/chart.astro';
     </section>
     <Listo />
     <Contact />
-</div>
+  </div>
 </Layout>

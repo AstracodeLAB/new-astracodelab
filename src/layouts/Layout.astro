@@ -9,7 +9,7 @@ export interface Props {
   permalink: string; // La URL canónica de la página
   image?: string; // Imagen social específica
 }
-const { title, description, permalink, image } = Astro.props;
+const { title, description, permalink } = Astro.props;
 ---
 
 <!doctype html>
@@ -22,7 +22,12 @@ const { title, description, permalink, image } = Astro.props;
     <link rel='icon' type='image/svg+xml' href='/favicon.ico' />
     <link rel='canonical' href={permalink} />
     <meta name='msvalidate.01' content='08A045B5065017F91DE8FBA3B76391FC' />
+    <meta name='robots' content='index, follow' />
+    <meta name='author' content='AstracodeLAB' />
+    <meta name='language' content='es' />
+    <meta property='og:locale' content='es_ES' />
     <meta property='og:title' content={title} />
+    <meta property='og:type' content='website' />
     <meta property='og:description' content={description} />
     <meta property='og:image' content='/og_astracode.png' />
     <meta property='og:url' content='https://astracodelab.com/' />

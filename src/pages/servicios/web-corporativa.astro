@@ -12,9 +12,17 @@ import Contact from '../../layouts/components/Contact.astro';
 import { faqsWebCorporate } from '../../layouts/components/accordeon/Faqs.js';
 import BannerCta from '../../layouts/components/Banners/BannerCta.astro';
 import webCorporativa from '../../images/web-corporativa3.jpg';
+import { schemaWebCorporativa } from '../../data/schemas/web-corporativa.js';
+
+const title = 'Diseño de Web Corporativa Profesional | Presencia Digital para Empresas';
+const description =
+  'Web corporativa profesional a medida: diseño exclusivo, estructura optimizada, responsive, integración de funcionalidades y soporte post-lanzamiento. Refuerza tu presencia digital.';
+const permalink = Astro.url.href;
 ---
 
-<Layout title='Servicios de diseño y desarrollo web'>
+<script type='application/ld+json' set:html={JSON.stringify(schemaWebCorporativa)} />
+
+<Layout title={title} description={description} permalink={permalink}>
   <div class='container_main_services'>
     <HeroSecondary
       title='Web corporativa profesional'

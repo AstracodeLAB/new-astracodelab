@@ -247,11 +247,11 @@ export const faqsAccesibilidad = [
     contenido:
       'Sí. Muchos principios de la accesibilidad web (como la buena estructura de encabezados, el texto alternativo para imágenes, la navegación clara, la velocidad de carga y el diseño responsive) son también factores importantes para el SEO. Una web que Google considera accesible suele ser mejor ranqueada.',
   },
-  {
-    titulo: '¿Mi web será compatible con lectores de pantalla y otras tecnologías asistivas?',
-    contenido:
-      'Sí. Nuestro objetivo es que tu web accesible funcione sin problemas con las tecnologías asistivas más comunes, como lectores de pantalla (ej., JAWS, NVDA, VoiceOver), magnificadores de pantalla y sistemas de navegación por voz o teclado.',
-  },
+  // {
+  //   titulo: '¿Mi web será compatible con lectores de pantalla y otras tecnologías asistivas?',
+  //   contenido:
+  //     'Sí. Nuestro objetivo es que tu web accesible funcione sin problemas con las tecnologías asistivas más comunes, como lectores de pantalla (ej., JAWS, NVDA, VoiceOver), magnificadores de pantalla y sistemas de navegación por voz o teclado.',
+  // },
 ];
 
 export const faqsHosting = [
@@ -310,5 +310,15 @@ export const faqsCartasDigitales = [
     titulo: '¿Puedo incluir fotos de mis platos en la carta digital?',
     contenido:
       'Por supuesto. Incluir fotos de alta calidad de tus platos aumentan el atractivo visual de tu carta digital y pueden influir positivamente en la decisión de tus clientes.',
+  },
+  {
+    titulo: '¿Los clientes necesitan descargar una app?',
+    contenido:
+      'No. Los clientes solo necesitan escanear el código QR con la cámara de su smartphone para acceder directamente al menú en su navegador web, sin descargas ni instalaciones.',
+  },
+  {
+    titulo: '¿Qué pasa si mis clientes no están familiarizados con la tecnología?',
+    contenido:
+      'Diseñamos menús digitales con interfaces intuitivas y sencillas. Escanear un código QR es cada vez más común y la mayoría de los smartphones lo hacen automáticamente con la cámara. Además, puedes mantener algunas cartas físicas como alternativa durante la transición.',
   },
 ];

@@ -12,9 +12,17 @@ import Contact from '../../layouts/components/Contact.astro';
 import { faqsMantenimiento } from '../../layouts/components/accordeon/Faqs.js';
 import BannerCta from '../../layouts/components/Banners/BannerCta.astro';
 import soporte from '../../images/soporte.jpg';
+import { schemaMantenimientoWeb } from '../../data/schemas/mantenimiento-web.js';
+
+const title = 'Mantenimiento y Soporte Web Profesional | Seguridad y Actualizaciones';
+const description =
+  'Servicio de mantenimiento web: actualizaciones de seguridad, optimización de velocidad, copias de seguridad, corrección de errores y soporte técnico prioritario. Tu web siempre protegida.';
+const permalink = Astro.url.href;
 ---
 
-<Layout title='AstracodeLAB - Mantenimiento y soporte web'>
+<script type='application/ld+json' set:html={JSON.stringify(schemaMantenimientoWeb)} />
+
+<Layout title={title} description={description} permalink={permalink}>
   <div class='container_main_services'>
     <HeroSecondary
       title='Mantenimiento y soporte web'

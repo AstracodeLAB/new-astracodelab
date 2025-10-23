@@ -8,9 +8,17 @@ import BannerCta from '../../layouts/components/Banners/BannerCta.astro';
 import FaqsSection from '../../layouts/components/FaqsSection.astro';
 import { faqsOptimizacion } from '../../layouts/components/accordeon/Faqs.js';
 import Contact from '../../layouts/components/Contact.astro';
+import { schemaFuncionalidadesOptimizacion } from '../../data/schemas/funcionalidades-optimizacion.js';
+
+const title = 'Funcionalidades y Optimización Web en España | AstracodeLAB';
+const description =
+  'Potencia tu web con funcionalidades avanzadas: sistemas de reservas, multiidioma, accesibilidad WCAG y optimización técnica. Velocidad, SEO y diseño responsive. Consultoría gratuita.';
+const permalink = Astro.url.href;
 ---
 
-<Layout title='Funcionalidades y Optimización Web | AstracodeLAB'>
+<script type='application/ld+json' set:html={JSON.stringify(schemaFuncionalidadesOptimizacion)} />
+
+<Layout title={title} description={description} permalink={permalink}>
   <HeroServicesA
     title='Funcionalidades y optimización web'
     subtitle='Potencia tu presencia digital al máximo'

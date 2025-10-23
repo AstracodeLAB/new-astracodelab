@@ -11,6 +11,7 @@ import BannerCta from '../../layouts/components/Banners/BannerCta.astro';
 import FaqsSection from '../../layouts/components/FaqsSection.astro';
 import { faqsLanding } from '../../layouts/components/accordeon/Faqs.js';
 import Contact from '../../layouts/components/Contact.astro';
+import { schemaLandingPage } from '../../data/schemas/landing-page.js';
 
 const benefits = [
   {
@@ -39,9 +40,16 @@ const benefits = [
       'Las landing pages se pueden diseñar y lanzar con mayor agilidad que una web completa, lo que te permite reaccionar rápidamente a las oportunidades del mercado o probar diferentes ofertas con mínimo esfuerzo.',
   },
 ];
+
+const title = 'Diseño de Landing Pages que Convierten | Optimizadas para Conversión';
+const description =
+  'Landing pages profesionales optimizadas para conversión. Diseño estratégico, CTAs efectivos, responsive y medición de resultados. Aumenta tus conversiones y genera más leads.';
+const permalink = Astro.url.href;
 ---
 
-<Layout title='Landing Page Profesional a Medida | AstracodeLAB'>
+<script type='application/ld+json' set:html={JSON.stringify(schemaLandingPage)} />
+
+<Layout title={title} description={description} permalink={permalink}>
   <div class='container_main_services'>
     <HeroSecondary
       title='Landing pages'

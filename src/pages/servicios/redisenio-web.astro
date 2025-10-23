@@ -10,6 +10,7 @@ import BannerCta from '../../layouts/components/Banners/BannerCta.astro';
 import FaqsSection from '../../layouts/components/FaqsSection.astro';
 import { faqsRedi } from '../../layouts/components/accordeon/Faqs.js';
 import Contact from '../../layouts/components/Contact.astro';
+import { schemaRedisenioWeb } from '../../data/schemas/redisenio-web.js';
 
 const benefits = [
   {
@@ -38,9 +39,16 @@ const benefits = [
       'Tu web no te permite integrar nuevas funcionalidades (un blog, un sistema de reservas, una tienda online) o las que tiene no funcionan correctamente.',
   },
 ];
+
+const title = 'Rediseño Web Profesional | Moderniza tu Página Obsoleta | AstracodeLAB';
+const description =
+  'Rediseño web estratégico: transforma tu web obsoleta en una herramienta moderna, rápida y optimizada. Mejora conversiones, velocidad y diseño responsive. Consultoría gratuita.';
+const permalink = Astro.url.href;
 ---
 
-<Layout title='Rediseño Web Profesional | Moderniza tu Sitio | AstracodeLAB'>
+<script type='application/ld+json' set:html={JSON.stringify(schemaRedisenioWeb)} />
+
+<Layout title={title} description={description} permalink={permalink}>
   <div class='container_main_services'>
     <HeroSecondary
       title='Rediseño Web'

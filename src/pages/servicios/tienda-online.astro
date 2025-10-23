@@ -10,6 +10,7 @@ import BannerCta from '../../layouts/components/Banners/BannerCta.astro';
 import FaqsSection from '../../layouts/components/FaqsSection.astro';
 import { faqsEcommerce } from '../../layouts/components/accordeon/Faqs.js';
 import Contact from '../../layouts/components/Contact.astro';
+import { schemaTiendaOnline } from '../../data/schemas/tienda-online.js';
 
 const benefits = [
   {
@@ -38,9 +39,16 @@ const benefits = [
       'Un e-commerce optimizado para SEO te ayuda a aparecer en los primeros resultados de Google, lo que significa más visitas y más oportunidades de venta.',
   },
 ];
+
+const title = 'Diseño de Tienda Online Profesional | E-commerce para Pymes | AstracodeLAB';
+const description =
+  'Crea tu tienda online profesional: diseño personalizado, catálogo de productos, pasarelas de pago seguras, responsive y optimizado para SEO. Vende 24/7. Consultoría gratuita.';
+const permalink = Astro.url.href;
 ---
 
-<Layout title='Servicios de diseño y desarrollo web'>
+<script type='application/ld+json' set:html={JSON.stringify(schemaTiendaOnline)} />
+
+<Layout title={title} description={description} permalink={permalink}>
   <section class='ecommerce'>
     <div class='container_main_services'>
       <HeroSecondary
