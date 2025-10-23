@@ -3,7 +3,7 @@ import Header from './partials/Header.astro';
 import '../styles/global.scss';
 import Footer from './partials/Footer.astro';
 import CookieBanner from './components/CookieBanner.astro';
-
+import { ClientRouter } from 'astro:transitions';
 ---
 
 <!doctype html>
@@ -13,7 +13,7 @@ import CookieBanner from './components/CookieBanner.astro';
     <title>Astracodelab | Diseño y desarrollo web</title>
     <meta name='description' content='AstracodeLAB | Diseño y desarrollo web' />
     <meta name='viewport' content='width=device-width' />
-    <link rel='icon' type='image/svg+xml' href='/favicon.ico' />    
+    <link rel='icon' type='image/svg+xml' href='/favicon.ico' />
     <meta name='msvalidate.01' content='08A045B5065017F91DE8FBA3B76391FC' />
     <meta property='og:title' content='Astracodelab | Diseño y desarrollo web' />
     <meta
@@ -24,6 +24,7 @@ import CookieBanner from './components/CookieBanner.astro';
     <meta property='og:url' content='https://astracodelab.com/' />
     <meta name='facebook-domain-verification' content='siis4pr1xna8mdw75uoabxrpl3t3s8' />
     <meta name='generator' content={Astro.generator} />
+    <ClientRouter />
   </head>
   <body>
     <Header />

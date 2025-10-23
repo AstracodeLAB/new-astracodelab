@@ -18,6 +18,7 @@ import Logo from '../components/Logo.astro';
         aria-expanded='false'
         aria-controls='nav-menu'
         aria-label='Abrir menú'
+        type='button'
       >
         <svg class='navigation__container-button-icon' viewBox='0 0 20 20'>
           <title>Abrir menú</title>
@@ -29,7 +30,12 @@ import Logo from '../components/Logo.astro';
       <ul id='nav-menu' class='navigation__container-menu' aria-hidden='true'>
         <!-- Botón cerrar dentro del menú móvil -->
         <li class='navigation__container-menu-item navigation__container-menu-item-close'>
-          <button class='navigation__container-button navigation__container-button--close' aria-label='Cerrar menú'>
+          <button
+            class='navigation__container-button navigation__container-button--close'
+            aria-label='Cerrar menú'
+            type='button'
+            id='close-menu'
+          >
             <svg class='navigation__container-button-icon' viewBox='0 0 20 20'>
               <title>Cerrar menú</title>
               <polygon
@@ -42,12 +48,15 @@ import Logo from '../components/Logo.astro';
         <!-- Mega menú -->
         <li class='navigation__container-menu-itemsMap'>
           <button
+            id='services-btn'
             class='navigation__container-menu-itemsMap-link'
             aria-expanded='false'
             aria-controls='submenu-services'
+            type='button'
           >
             Servicios
             <svg
+              id='services-arrow'
               class='navigation__container-menu-itemsMap-arrow'
               viewBox='0 0 20 20'
               xmlns='http://www.w3.org/2000/svg'
@@ -87,90 +96,158 @@ import Logo from '../components/Logo.astro';
           <a href='/#contact' class='navigation__container-menu-itemsMap-link'>Contacto</a>
         </li>
 
-        <!-- <li class='navigation__container-menu-itemsMap'>
-          <a href='/#about' class='navigation__container-menu-itemsMap-link'>Blog</a>
-        </li> -->
         <li class='navigation__container-menu-itemsMap cta-mobile'>
-          <Buttons href='https://wa.me/34623752940' target="_blank" 
-          rel="noopener noreferrer" className='btnPrimaryLight'>¿Hablamos?</Buttons>
+          <Buttons
+            href='https://wa.me/34623752940'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='btnPrimaryLight'>¿Hablamos?</Buttons
+          >
         </li>
       </ul>
 
       <div class='button-header'>
-        <Buttons href='https://wa.me/34623752940' target="_blank" 
-        rel="noopener noreferrer" className='btnPrimaryLight'>¿Hablamos?</Buttons>
+        <Buttons href='https://wa.me/34623752940' target='_blank' rel='noopener noreferrer' className='btnPrimaryLight'
+          >¿Hablamos?</Buttons
+        >
       </div>
     </div>
   </nav>
 </header>
 
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
+<script is:inline>
+  // Esperar a que el DOM esté listo y también a las transiciones de Astro
+  function initializeNavigation() {
+    console.log('🔄 Inicializando navegación...');
+
     const navToggle = document.getElementById('nav-toggle');
     const navMenu = document.getElementById('nav-menu');
-    const closeBtn = navMenu.querySelector('.navigation__container-button--close');
-
-    const toggleMenu = (open) => {
-      const expanded = open ? 'true' : 'false';
-      navToggle.setAttribute('aria-expanded', expanded);
-      navMenu.setAttribute('aria-hidden', open ? 'false' : 'true');
-      navMenu.style.display = open ? 'block' : 'none';
-    };
-
-    navToggle.addEventListener('click', () => {
-      const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
-      toggleMenu(!isOpen);
-    });
-
-    closeBtn.addEventListener('click', () => {
-      toggleMenu(false);
-    });
-
-    // Controlar menú móvil con teclado
-    navToggle.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        navToggle.click();
-      }
-    });
-
-    // Mega menú accesible
-    const serviceBtn = document.querySelector('[aria-controls="submenu-services"]');
+    const closeBtn = document.getElementById('close-menu');
+    const servicesBtn = document.getElementById('services-btn');
     const submenu = document.getElementById('submenu-services');
-    const arrowIcon = serviceBtn.querySelector('svg');
 
-    const toggleSubmenu = (open) => {
-      const expanded = open ? 'true' : 'false';
-      serviceBtn.setAttribute('aria-expanded', expanded);
-      submenu.setAttribute('aria-hidden', open ? 'false' : 'true');
-      submenu.style.display = open ? 'flex' : 'none';
-      arrowIcon.style.transform = open ? 'rotate(180deg)' : 'rotate(0deg)';
+    if (!navToggle || !navMenu || !servicesBtn || !submenu) {
+      console.error('❌ No se encontraron elementos del menú');
+      return;
+    }
+
+    let isMenuOpen = false;
+    let isSubmenuOpen = false;
+
+    // Función para toggle del menú móvil
+    const toggleMenu = (open) => {
+      isMenuOpen = open;
+      navToggle.setAttribute('aria-expanded', open.toString());
+      navMenu.setAttribute('aria-hidden', (!open).toString());
+      navMenu.style.display = open ? 'block' : 'none';
+
+      // Cerrar submenú cuando se cierra el menú principal
+      if (!open) {
+        toggleSubmenu(false);
+      }
+
+      console.log(`📱 Menú ${open ? 'abierto' : 'cerrado'}`);
     };
 
-    serviceBtn.addEventListener('click', () => {
-      const isOpen = serviceBtn.getAttribute('aria-expanded') === 'true';
-      toggleSubmenu(!isOpen);
-    });
+    // Función para toggle del submenú de servicios
+    const toggleSubmenu = (open) => {
+      isSubmenuOpen = open;
+      servicesBtn.setAttribute('aria-expanded', open.toString());
+      submenu.setAttribute('aria-hidden', (!open).toString());
+      submenu.style.display = open ? 'flex' : 'none';
 
-    serviceBtn.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        serviceBtn.click();
+      const arrow = document.getElementById('services-arrow');
+      if (arrow) {
+        arrow.style.transform = open ? 'rotate(180deg)' : 'rotate(0deg)';
       }
-    });
 
-    // Cierra mega menú al hacer clic fuera
+      console.log(`🎯 Submenú ${open ? 'abierto' : 'cerrado'}`);
+    };
+
+    // Event listeners con CAPTURE phase para mayor prioridad
+    navToggle.addEventListener(
+      'click',
+      (e) => {
+        console.log('🔄 Click en toggle menú');
+        e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+        toggleMenu(!isMenuOpen);
+      },
+      true
+    );
+
+    closeBtn.addEventListener(
+      'click',
+      (e) => {
+        console.log('❌ Click en cerrar menú');
+        e.preventDefault();
+        e.stopPropagation();
+        toggleMenu(false);
+      },
+      true
+    );
+
+    servicesBtn.addEventListener(
+      'click',
+      (e) => {
+        console.log('🎯 Click en servicios');
+        e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+        toggleSubmenu(!isSubmenuOpen);
+      },
+      true
+    );
+
+    // Cerrar menús al hacer clic fuera
     document.addEventListener('click', (e) => {
-      if (!serviceBtn.contains(e.target) && !submenu.contains(e.target)) {
+      if (isMenuOpen && !navMenu.contains(e.target) && !navToggle.contains(e.target)) {
+        console.log('👆 Click fuera - cerrando menú');
+        toggleMenu(false);
+      }
+
+      if (isSubmenuOpen && !servicesBtn.contains(e.target) && !submenu.contains(e.target)) {
+        console.log('👆 Click fuera - cerrando submenú');
         toggleSubmenu(false);
       }
     });
-    // Cierra el menú al hacer clic en cualquier enlace
-    const navLinks = navMenu.querySelectorAll('a, button.btnPrimaryLight');
+
+    // Cerrar menús al hacer clic en enlaces (para navegación)
+    const navLinks = navMenu.querySelectorAll('a[href^="/"]');
     navLinks.forEach((link) => {
       link.addEventListener('click', () => {
+        console.log('🔗 Click en enlace - cerrando menús');
         toggleMenu(false);
+        toggleSubmenu(false);
       });
     });
-  });
+
+    // Cerrar con tecla Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        if (isSubmenuOpen) {
+          toggleSubmenu(false);
+        } else if (isMenuOpen) {
+          toggleMenu(false);
+        }
+      }
+    });
+
+    console.log('✅ Navegación inicializada correctamente');
+  }
+
+  // Inicializar cuando el DOM esté listo
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeNavigation);
+  } else {
+    initializeNavigation();
+  }
+
+  // Re-inicializar después de las transiciones de Astro
+  document.addEventListener('astro:page-load', initializeNavigation);
+  document.addEventListener('astro:after-swap', initializeNavigation);
+
+  // También inicializar después de un timeout por si acaso
+  setTimeout(initializeNavigation, 100);
 </script>
