@@ -1,32 +1,57 @@
 @use 'sass:map';
 @use './variables.scss' as *;
 
+/* ================================== */
+/* 🍪 LEGAL NOTICE GENERAL STYLES     */
+/* ================================== */
+
 .legal-notice {
-  padding: 1.875rem 1.25rem;
   border-radius: 10px;
   color: $text-bg-white;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
 
   @media (min-width: 48rem) {
     padding: 3.75rem 7.5rem;
   }
 
   @media (min-width: 64rem) {
-    padding: 60px 0 60px 0;
-    //max-width: 904px;
+    max-width: 54rem;
+    padding: 5rem;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 90rem) {
+    max-width: 70rem;
   }
 
   &__title {
     text-transform: uppercase;
     font-size: 2rem;
+    text-align: center;
+  }
+
+  &__section,
+  &__content,
+  &__list,
+  &__section-title,
+  &__section-subtitle {
+    max-width: 100%;
+    word-break: break-word;
+    overflow-wrap: break-word;
   }
 
   &__section {
+    width: 100%;
     margin-top: 0.625rem;
     margin-bottom: 0.625rem;
+    overflow: hidden;
 
     &-title {
       font-family: $font-primary;
@@ -36,6 +61,10 @@
       letter-spacing: map.get($H2-mobile, 'letter-spacing');
       color: $title-color;
       margin: 0.5rem 0;
+      text-align: left;
+      overflow-wrap: break-word;
+      max-width: 100%;
+      word-break: break-word;
 
       @media (min-width: 48rem) {
         font-size: map.get($H2-tablet, 'font-size');
@@ -43,17 +72,13 @@
         font-weight: map.get($H2-tablet, 'font-weight');
         letter-spacing: map.get($H2-tablet, 'letter-spacing');
       }
+
       @media (min-width: 64rem) {
         font-size: map.get($H2-desktop, 'font-size');
-        line-height: map.get($H2-desktop, 'line-height');
-        font-weight: map.get($H2-desktop, 'font-weight');
-        letter-spacing: map.get($H2-desktop, 'letter-spacing');
       }
+
       @media (min-width: 90rem) {
         font-size: map.get($H2-desktop-xl, 'font-size');
-        line-height: map.get($H2-desktop-xl, 'line-height');
-        font-weight: map.get($H2-desktop-xl, 'font-weight');
-        letter-spacing: map.get($H2-desktop-xl, 'letter-spacing');
       }
     }
   }
@@ -61,25 +86,220 @@
   &__content {
     color: $text-bg-white;
     margin-bottom: 0.625rem;
+    width: 100%;
+    overflow-wrap: break-word;
 
     &-link {
       cursor: pointer;
       font-weight: 600;
+      word-break: break-word;
     }
   }
 
   &__list {
     color: $text-bg-white;
+    width: 100%;
+    word-break: break-word;
+  }
+
+  &__section-subtitle {
+    font-size: 1.25rem;
+    font-family: $font-primary;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    color: $title-color;
+    max-width: 100%;
   }
 }
 
+/* ================================== */
+/* 📦 CONTENEDOR LEGAL GENERAL        */
+/* ================================== */
 .containerLegal {
+  width: 100%;
+  max-width: 100%;
+  padding: 1rem;
+  margin: 0 auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  
   @media (min-width: 64rem) {
-    padding: 7.5rem 0;
-    max-width: 56.5rem;
+    max-width: 56rem;
+    padding: 5rem 1rem;
   }
+
   @media (min-width: 90rem) {
-    padding: 7.5rem 0;
-    max-width: 64rem;
+    max-width: 70rem;
   }
+}
+
+/* ================================== */
+/* 🍪 COOKIE PAGE SPECIFIC STYLES     */
+/* ================================== */
+
+.cookie-page {
+  max-width: 100%;
+  overflow-x: hidden;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Contenedor específico para cookies */
+.containerLegalCookie {
+  width: 100%;
+  max-width: 100%;
+  padding: 1rem;
+  margin: 0 auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  
+  @media (min-width: 48rem) {
+    padding: 2rem;
+  }
+  
+  @media (min-width: 64rem) {
+    max-width: 60rem;
+    padding: 5rem 2rem;
+  }
+
+  @media (min-width: 90rem) {
+    max-width: 75rem;
+  }
+  
+  /* Tablas específicas para cookies */
+  .table-wrapper {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.02);
+    display: block;
+    
+    /* Estilos para scrollbar */
+    &::-webkit-scrollbar {
+      height: 6px;
+    }
+    
+    &::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 3px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background: rgba($title-color, 0.3);
+      border-radius: 3px;
+    }
+  }
+
+  .cookie-table {
+    width: max-content;
+    min-width: 600px;
+    border-collapse: collapse;
+    table-layout: auto;
+
+    th, td {
+      padding: 1rem;
+      text-align: left;
+      white-space: normal;
+      word-break: break-word;
+      max-width: 250px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    th {
+      background-color: rgba($title-color, 0.15);
+      color: $title-color;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-size: 0.85rem;
+      position: sticky;
+      left: 0;
+    }
+
+    td {
+      background-color: transparent;
+      color: $text-bg-white;
+    }
+
+    tbody tr {
+      &:nth-child(even) {
+        background-color: rgba(255, 255, 255, 0.02);
+      }
+      
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.05);
+      }
+    }
+
+    code {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 0.85rem;
+      color: $title-color;
+    }
+  }
+
+  /* Ajustes móvil para cookies */
+  @media (max-width: 48rem) {
+    padding: 1rem;
+    
+    .cookie-table {
+      font-size: 0.8rem;
+      min-width: 550px;
+      
+      th, td {
+        padding: 0.75rem;
+        max-width: 200px;
+      }
+      
+      th {
+        font-size: 0.75rem;
+      }
+    }
+    
+    .table-wrapper {
+      margin: 1rem -1rem;
+      width: calc(100% + 2rem);
+      border-radius: 0;
+      border-left: none;
+      border-right: none;
+    }
+  }
+  
+  @media (max-width: 36rem) {
+    .cookie-table {
+      min-width: 500px;
+      
+      th, td {
+        padding: 0.5rem;
+        max-width: 180px;
+        font-size: 0.75rem;
+      }
+    }
+  }
+}
+
+/* ================================== */
+/* 🎯 UTILITIES - Estilos generales   */
+/* ================================== */
+
+.legal-notice * {
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+
+.legal-notice__section-title,
+.legal-notice__section-subtitle {
+  word-break: break-word;
+  overflow-wrap: break-word;
 }

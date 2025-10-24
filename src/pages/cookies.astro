@@ -1,0 +1,159 @@
+---
+import Layout from '../layouts/Layout.astro';
+import TitlesHero from '../layouts/components/Titles/TitlesHero.astro';
+---
+
+<Layout>
+  <main class='cookie-page '>
+    
+    <div class="containerLegalCookie">
+      
+      <TitlesHero title="Política de Cookies" className="heroHome" />
+
+      <section class='legal-notice__section legal-notice__section--intro'>
+        <h2 class='legal-notice__section-title'>1. Información General y Responsable del Tratamiento</h2>
+        <p class='legal-notice__content'>
+          Esta política describe el uso de cookies en el sitio web propiedad de **Aida Blaya Balaguer** (en adelante, "nosotros" o "nuestro"). Al navegar por este sitio web, usted acepta el uso de cookies de acuerdo con esta Política de Cookies.
+        </p>
+        <p class='legal-notice__content'>
+            El responsable del tratamiento de los datos recabados a través de las cookies es:
+        </p>
+        <ul class='legal-notice__list'>
+          <li>Aida Blaya Balaguer</li>
+          <li>N.I.F.: 20903627P</li>
+          <li>Email: astracodelab@gmail.com</li>
+        </ul>
+      </section>
+
+      <section class='legal-notice__section legal-notice__section--definition'>
+        <h2 class='legal-notice__section-title'>2. ¿Qué son las Cookies?</h2>
+        <p class='legal-notice__content'>
+            Una *cookie* es un pequeño archivo de texto que se descarga en su equipo al acceder a determinadas páginas web. Las cookies permiten a un sitio web, entre otras cosas, almacenar y recuperar información sobre sus hábitos de navegación o su equipo, y se utilizan para reconocer al usuario.
+        </p>
+        <p class='legal-notice__content'>
+            Las cookies son esenciales para el funcionamiento de internet, aportando ventajas en la prestación de servicios interactivos y facilitando la navegación y usabilidad de nuestra web.
+        </p>
+      </section>
+
+      <section class='legal-notice__section legal-notice__section--types'>
+        <h2 class='legal-notice__section-title'>3. Tipos de Cookies Utilizadas en esta Web</h2>
+        <p class='legal-notice__content'>
+            En cumplimiento de la legislación vigente (RGPD y LSSI), le informamos sobre los tipos de cookies que utilizamos y la finalidad de cada una.
+        </p>
+
+        <h3 class='legal-notice__section-subtitle'>A. Cookies Técnicas o Necesarias (Propias)</h3>
+        <p class='legal-notice__content'>
+            Estas cookies son esenciales para el correcto funcionamiento del sitio web, la prestación de servicios básicos y para recordar la elección de consentimiento del usuario. No requieren consentimiento, pero se informan de su uso:
+        </p>
+        
+        <div class="table-wrapper">
+            <table class="cookie-table table-responsive">
+                <thead>
+                    <tr>
+                        <th>Nombre de la Cookie</th>
+                        <th>Proveedor</th>
+                        <th>Finalidad</th>
+                        <th>Duración</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>cookiesChoice</code></td>
+                        <td>Propia (astracodelab.com)</td>
+                        <td>Almacena la preferencia de consentimiento del usuario (Necesarias o Todas).</td>
+                        <td>365 días</td>
+                    </tr>
+                    <tr>
+                        <td><code>essential</code></td>
+                        <td>Propia (astracodelab.com)</td>
+                        <td>Confirma la activación de cookies necesarias para el funcionamiento del sitio.</td>
+                        <td>365 días</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 class='legal-notice__section-subtitle'>B. Cookies de Análisis (Terceros - Google Analytics)</h3>
+        <p class='legal-notice__content'>
+            Estas cookies nos permiten medir y analizar estadísticamente la utilización que hacen los usuarios del servicio ofertado para mejorar nuestros productos. **Requieren su consentimiento expreso.**
+        </p>
+
+        <div class="table-wrapper table-responsive">
+            <table class="cookie-table">
+                <thead>
+                    <tr>
+                        <th>Nombre de la Cookie</th>
+                        <th>Proveedor</th>
+                        <th>Finalidad</th>
+                        <th>Duración</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>analytics</code></td>
+                        <td>Propia (astracodelab.com)</td>
+                        <td>Indica si el usuario ha aceptado la instalación de las cookies analíticas.</td>
+                        <td>365 días</td>
+                    </tr>
+                    <tr>
+                        <td><code>_ga</code></td>
+                        <td>Google Analytics</td>
+                        <td>Se usa para distinguir a los usuarios y recopila datos de comportamiento (tiempo en la página, páginas visitadas, etc.).</td>
+                        <td>2 años</td>
+                    </tr>
+                    <tr>
+                        <td><code>_gid</code></td>
+                        <td>Google Analytics</td>
+                        <td>Se usa para distinguir a los usuarios durante un breve periodo.</td>
+                        <td>24 horas</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+      </section>
+
+      <section class='legal-notice__section legal-notice__section--third-party'>
+        <h2 class='legal-notice__section-title'>4. Información sobre Cookies de Terceros</h2>
+        <p class='legal-notice__content'>
+            Utilizamos servicios de terceros, concretamente **Google Analytics**, para obtener información sobre el uso del sitio web. Los datos se tratan en base al **consentimiento del usuario**.
+        </p>
+        <p class='legal-notice__content'>
+            Para conocer más detalles sobre el tratamiento que realiza Google de sus datos, consulte la 
+            <a href="https://policies.google.com/privacy?hl=es" class="cookie-banner__link" target="_blank">Política de Privacidad de Google</a>.
+        </p>
+      </section>
+
+      <section class='legal-notice__section legal-notice__section--management'>
+        <h2 class='legal-notice__section-title'>5. Gestión y Revocación de su Consentimiento</h2>
+        <p class='legal-notice__content'>
+            Tiene la posibilidad de aceptar o rechazar las cookies de análisis y modificar sus preferencias en cualquier momento:
+        </p>
+        <ul class='legal-notice__list'>
+            <li><strong>Desde el Banner:</strong> El aviso de cookies que aparece al inicio le permite aceptar todas o solo las necesarias.</li>
+            <li><strong>Configuración del Navegador:</strong> Puede eliminar o bloquear las cookies a través de la configuración de su navegador. Tenga en cuenta que eliminar las cookies eliminará también su preferencia de consentimiento guardada. Le recomendamos consultar las guías de su navegador (Chrome, Firefox, Edge, Safari).</li>
+        </ul>
+        <p class='legal-notice__content'>
+            Al retirar el consentimiento a las cookies analíticas, dejaremos de utilizarlas para futuras visitas, pero las ya instaladas antes de la revocación pueden seguir activas hasta su fecha de caducidad (a menos que las elimine manualmente del navegador).
+        </p>
+      </section>
+      
+      <section class='legal-notice__section legal-notice__section--transfers'>
+        <h2 class='legal-notice__section-title'>6. Transferencias Internacionales de Datos</h2>
+        <p class='legal-notice__content'>
+            La utilización de cookies de terceros (Google Analytics) puede implicar una transferencia de datos a Estados Unidos. Estas transferencias se realizan bajo las garantías adecuadas establecidas por el RGPD (como las Cláusulas Contractuales Tipo, si aplican).
+        </p>
+      </section>
+
+      <section class='legal-notice__section legal-notice__section--data-protection'>
+        <h2 class='legal-notice__section-title'>7. Ejercicio de Derechos de Protección de Datos</h2>
+        <p class='legal-notice__content'>
+          Puede ejercer sus derechos (Acceso, Rectificación, Supresión, Limitación, Oposición y Portabilidad) dirigiendo una comunicación a la dirección de correo electrónico: <strong>astracodelab@gmail.com</strong>, incluyendo fotocopia de su D.N.I. o documento similar para confirmar su identidad, tal como se detalla en nuestro Aviso Legal.
+        </p>
+      </section>
+
+    </div>
+  </main>
+  
+</Layout>
+
+
