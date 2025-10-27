@@ -4,10 +4,8 @@ import Subtitle from '../components/Titles/Subtitle.astro';
 <div id="cookie-banner" class="cookie-banner">
   
   <h3 class="cookie-banner__title">Utilizamos cookies para mejorar tu experiencia en nuestro sitio web.</h3>
-  <p class="cookie-banner__paragraph">Algunas cookies son esenciales para el funcionamiento de la página, mientras que otras nos ayudan a analizar el tráfico, personalizar contenidos y mostrarte publicidad relevante.
-    Puedes aceptar todas las cookies para disfrutar de la mejor experiencia posible, o solo aceptar las necesarias para navegar por el sitio.
-    Para más información, consulta nuestra 
-    <a href="/politica-de-cookies" class="cookie-banner__link">
+  <p class="cookie-banner__paragraph">Algunas cookies son esenciales para el funcionamiento de la página, mientras que otras nos ayudan a analizar el tráfico y personalizar contenidos. Puedes aceptar todas las cookies para disfrutar de la mejor experiencia posible, o solo aceptar las necesarias para navegar por el sitio. Para más información, consulta nuestra
+    <a href="/privacy-cookies" class="cookie-banner__link">
     política de cookies</a>
     .</p>
   <div class="cookie-buttons">
@@ -34,7 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
     setCookie("cookiesChoice", "all", 365);
     setCookie("essential", "true", 365);
     setCookie("analytics", "true", 365);
-    setCookie("ads", "true", 365);
     banner.style.display = "none";
     location.reload();
   });
