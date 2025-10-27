@@ -7,9 +7,10 @@ export interface Props {
   title: string;
   description: string;
   permalink: string; // La URL canónica de la página
-  image?: string; // Imagen social específica
+  image?: string;
+  robots?: string;
 }
-const { title, description, permalink } = Astro.props;
+const { title, description, permalink, robots = 'index, follow' } = Astro.props;
 ---
 
 <!doctype html>
@@ -18,19 +19,20 @@ const { title, description, permalink } = Astro.props;
     <meta charset='UTF-8' />
     <title>{title}</title>
     <meta name='description' content={description} />
-    <meta name='viewport' content='width=device-width' />
+    <meta name='viewport' content='width=device-width', initial-scale='1' />
     <link rel='icon' type='image/svg+xml' href='/favicon.ico' />
     <link rel='canonical' href={permalink} />
     <meta name='msvalidate.01' content='08A045B5065017F91DE8FBA3B76391FC' />
-    <meta name='robots' content='index, follow' />
+    <meta name='robots' content={robots} />
     <meta name='author' content='AstracodeLAB' />
     <meta name='language' content='es' />
     <meta property='og:locale' content='es_ES' />
     <meta property='og:title' content={title} />
     <meta property='og:type' content='website' />
     <meta property='og:description' content={description} />
-    <meta property='og:image' content='/og_astracode.png' />
-    <meta property='og:url' content='https://astracodelab.com/' />
+    <meta property='og:image' content='https://astracodelab.com/og_astracode.png' />
+    <meta property='og:url' content={permalink} />
+    <meta property='og:site_name' content='AstracodeLAB' />
     <meta name='facebook-domain-verification' content='siis4pr1xna8mdw75uoabxrpl3t3s8' />
     <meta name='generator' content={Astro.generator} />
   </head>
