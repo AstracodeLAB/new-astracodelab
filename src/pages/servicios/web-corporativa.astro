@@ -18,11 +18,13 @@ const title = 'Diseño de Web Corporativa Profesional | Presencia Digital para E
 const description =
   'Web corporativa profesional a medida: diseño exclusivo, estructura optimizada, responsive, integración de funcionalidades y soporte post-lanzamiento. Refuerza tu presencia digital.';
 const permalink = Astro.url.href;
+const image ='https://astracodelab.com/og_web_corporativa.png';
+const robots = 'index, follow';
 ---
 
 <script type='application/ld+json' set:html={JSON.stringify(schemaWebCorporativa)} />
 
-<Layout title={title} description={description} permalink={permalink}>
+<Layout title={title} description={description} permalink={permalink} image={image} robots={robots}>
   <div class='container_main_services'>
     <HeroSecondary
       title='Web corporativa profesional'

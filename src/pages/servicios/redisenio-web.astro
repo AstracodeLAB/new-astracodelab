@@ -44,11 +44,13 @@ const title = 'Rediseño Web Profesional | Moderniza tu Página Obsoleta | Astra
 const description =
   'Rediseño web estratégico: transforma tu web obsoleta en una herramienta moderna, rápida y optimizada. Mejora conversiones, velocidad y diseño responsive. Consultoría gratuita.';
 const permalink = Astro.url.href;
+const image ='https://astracodelab.com/og_redisenio_web.png';
+const robots = 'index, follow';
 ---
 
 <script type='application/ld+json' set:html={JSON.stringify(schemaRedisenioWeb)} />
 
-<Layout title={title} description={description} permalink={permalink}>
+<Layout title={title} description={description} permalink={permalink} image={image} robots={robots}>
   <div class='container_main_services'>
     <HeroSecondary
       title='Rediseño Web'

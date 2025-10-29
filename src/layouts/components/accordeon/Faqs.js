@@ -7,7 +7,7 @@ export const faqsHome = [
   {
     titulo: '¿Ofrece AstracodeLAB soporte y mantenimiento web después de la entrega?',
     contenido:
-      "Sí. Disponemos de planes de mantenimiento web, puedes consultarlos desde nuestra sección de<a href='/servicios/mantenimiento'> Mantenimiento y Soporte.</a> ",
+      "Sí. Disponemos de planes de mantenimiento web, puedes consultarlos desde nuestra sección de<a href='/servicios/mantenimiento/'> Mantenimiento y Soporte.</a> ",
   },
   {
     titulo: '¿Mi página web se verá bien en móviles y otros dispositivos?',
@@ -46,7 +46,7 @@ export const faqsHome = [
   {
     titulo: '¿Qué tipo de webs hacemos?',
     contenido:
-      "En AstracodeLAB desarrollamos soluciones digitales adaptadas a la meta de cada negocio. Nos especializamos en: <b>webs corporativas, webs a medida, portfolios profesionales, tiendas online (e-commerce), y rediseño y renovación web</b>. Para más detalles, visita nuestra sección de <a href='/servicios/diseno-web'> Diseño y Desarrollo Web.</a>",
+      "En AstracodeLAB desarrollamos soluciones digitales adaptadas a la meta de cada negocio. Nos especializamos en: <b>webs corporativas, webs a medida, portfolios profesionales, tiendas online (e-commerce), y rediseño y renovación web</b>. Para más detalles, visita nuestra sección de <a href='/servicios/diseno-web/'> Diseño y Desarrollo Web.</a>",
   },
   {
     titulo: '¿Dónde presta sus servicios AstracodeLAB?',
@@ -63,7 +63,7 @@ export const faqsWebCorporate = [
   {
     titulo: '¿Por qué es tan importante el mantenimiento web?',
     contenido:
-      'El mantenimiento web es, a menudo, la pieza olvidada en el éxito digital de una empresa, pero es absolutamente crucial. Piensa en tu web corporativa como en tu coche: si no le haces revisiones periódicas, cambias el aceite o te aseguras de que todo funciona bien, tarde o temprano se estropeará o no rendirá como debería. Lo mismo ocurre con tu página web.<br> <br>En Astracodelab, disponemos de planes de mantenimiento web corporativo continuos para asegurar que tu sitio esté siempre seguro, actualizado y funcionando a pleno rendimiento. Puedes consultar nuestros planes de mantenimiento <a href=/servicios/mantenimiento-web>aquí</a>.',
+      'El mantenimiento web es, a menudo, la pieza olvidada en el éxito digital de una empresa, pero es absolutamente crucial. Piensa en tu web corporativa como en tu coche: si no le haces revisiones periódicas, cambias el aceite o te aseguras de que todo funciona bien, tarde o temprano se estropeará o no rendirá como debería. Lo mismo ocurre con tu página web.<br> <br>En Astracodelab, disponemos de planes de mantenimiento web corporativo continuos para asegurar que tu sitio esté siempre seguro, actualizado y funcionando a pleno rendimiento. Puedes consultar nuestros planes de mantenimiento <a href=/servicios/mantenimiento-web/>aquí</a>.',
   },
   {
     titulo: '¿El servicio de web corporativa incluye dominio y hosting?',
@@ -100,7 +100,7 @@ export const faqsEcommerce = [
   {
     titulo: '¿Ofrecéis mantenimiento continuo para la tienda online una vez esté publicada?',
     contenido:
-      'Sí. Una vez lanzada tu <b>tienda online</b>, el <b> mantenimiento web</b> es fundamental para su éxito a largo plazo. AstracodeLAB, ofrece <b>planes de mantenimiento para e-commerce</b>. Puedes consultar nuestros planes <a href=/#>aquí</a>.',
+      'Sí. Una vez lanzada tu <b>tienda online</b>, el <b> mantenimiento web</b> es fundamental para su éxito a largo plazo. AstracodeLAB, ofrece <b>planes de mantenimiento para e-commerce</b>.',
   },
 ];
 
@@ -144,7 +144,7 @@ export const faqsRedi = [
   {
     titulo: '¿Ofrecéis mantenimiento web después del rediseño?',
     contenido:
-      'Sí. Una vez finalizado el rediseño web, el mantenimiento web es crucial para asegurar que tu sitio siga seguro, actualizado y funcionando a pleno rendimiento. En AstracodeLAB, disponemos de planes de mantenimiento web continuos adaptados a tus necesidades. Puedes consultar nuestros planes <a href=/services/contacto>aquí</a>.',
+      'Sí. Una vez finalizado el rediseño web, el mantenimiento web es crucial para asegurar que tu sitio siga seguro, actualizado y funcionando a pleno rendimiento. En AstracodeLAB, disponemos de planes de mantenimiento web continuos adaptados a tus necesidades. Puedes consultar nuestros planes <a href=/services/contacto/>aquí</a>.',
   },
   {
     titulo: '¿Necesito proporcionar el contenido (textos e imágenes) para el rediseño?',

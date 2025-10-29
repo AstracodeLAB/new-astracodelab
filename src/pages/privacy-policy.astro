@@ -3,118 +3,155 @@ import Layout from '../layouts/Layout.astro';
 // import Header from '../layouts/partials/Header.astro';
 import Footer from '../layouts/partials/Footer.astro';
 import TitlesHero from '../layouts/components/Titles/TitlesHero.astro';
+
+const title ="Política de Privacidad | Astracodelab";
+const description ="Conoce cómo protegemos tu privacidad en Astracodelab.";
+const permalink = Astro.url.href;
+const robots = "index, follow"  
 ---
 
-<Layout>
+<Layout title={title} description={description} permalink={permalink} robots={robots}>
+  <main class='legal-notice'>
+    <div class='containerLegal'>
+      <TitlesHero title='Política de privacidad' className='heroHome' />
 
-	<main class='legal-notice'>
-		<div class="containerLegal">
-	
-			<TitlesHero title="Política de privacidad" className="heroHome" />
-	
-			<section class='legal-notice__section legal-notice__section--info'>
-				<p class='legal-notice__content'>
-					Este texto legal le da detalles de cómo recopilamos y procesamos sus datos personales a través del uso de nuestro sitio web 
-					<a href="https://astracodelab.com" class='legal-notice__content-link' target="_blank" rel="noopener noreferrer">https://astracodelab.com</a>, incluyendo cualquier información que pueda proporcionarnos a través del sitio cuando proporciona sus datos a través del formulario habilitado para tal fin.
-				</p>
-				<p class='legal-notice__content'>
-					Al proporcionarnos los datos, le informamos que nuestros servicios no son posibles para aquellas personas que la normativa les impide prestar consentimiento, por lo que cuando nos remite los formularios nos garantiza que tiene la capacidad suficiente para otorgar consentimiento.
-					A continuación le informamos sobre la política de protección de datos de: <span>Aida Blaya Balaguer</span>
-				</p>
-			</section>
-	
-			<section class='legal-notice__section legal-notice__section--info'>
-				<h2 class='legal-notice__section-title'>Responsable del tratamiento</h2>
-				<p class='legal-notice__content'>
-					Datos de contacto del responsable: Aida Blaya Balaguer, con CIF: 20903627P y domicilio en: P/Mallorca, 39. Castellón de la Plana, 12002 y teléfono: <a href="tel:+34695259535">695259535</a>. 
-					Email: <a href="mailto:astracodelab@gmail.com">astracodelab@gmail.com</a>. Aida Blaya Balaguer, es el responsable de sus datos. (En adelante nosotros o nuestro).
-				</p>
-			</section>
-	
-			<section class='legal-notice__section legal-notice__section--data-collection'>
-				<h2 class='legal-notice__section-title'>¿Qué datos recopilamos?</h2>
-				<p class='legal-notice__content'>
-					El Reglamento General de Protección de Datos define los datos personales como toda información sobre una persona física identificada o identificable. Esto no incluiría los datos anónimos, ni porcentuales. Los datos de carácter personal que se pudieran recabar directamente del interesado, serán tratados de forma confidencial y quedarán incorporados a las correspondientes actividades del tratamiento, titularidad de <span>Aida Blaya Balaguer.</span>
-				</p>
-				<ul class='legal-notice__list'>
-					<li>Datos de contacto: email.</li>
-				</ul>
-			</section>
-	
-			<section class='legal-notice__section legal-notice__section--collection-methods'>
-				<h2 class='legal-notice__section-title'>¿Cómo recopilamos sus datos personales?</h2>
-				<ul class='legal-notice__list'>
-					<li>
-						A través del formulario de nuestra página web, a través de nuestros emails de contacto o por teléfono, cuando:<br/>
-						• Solicita información de nuestros servicios.
-					</li>
-					<li>Solicita información de nuestros servicios</li>
-				</ul>
-				<p class='legal-notice__content'>
-					Para asegurar la calidad de nuestro portal, nos reservamos el derecho a rechazar cualquier solicitud de registro o bien de suspender o cancelar un registro previamente aceptado si entendemos que no cumple estos requisitos o cualquier otra ley o norma. Si esto ocurre, intentaremos exponer los motivos de nuestra decisión, pero no nos podemos comprometer a hacerlo en todos los casos.
-				</p>
-			</section>
-	
-			<section class='legal-notice__section legal-notice__section--purpose'>
-				<h2 class='legal-notice__section-title'>Finalidad y legitimidad para el uso de sus datos</h2>
-				<p class='legal-notice__content'>Los usos más comunes de sus datos personales son:</p>
-				<ul class='legal-notice__list'>
-					<li>Para la formalización de un contrato entre Aida Blaya Balaguer y usted.</li>
-					<li>Cuando preste su consentimiento en el tratamiento de sus datos.</li>
-					<li>Cuando los necesitemos para dar cumplimiento a una obligación legal o regulatoria.</li>
-					<li>Cuando sea necesario para nuestro interés legítimo o de un tercero.</li>
-				</ul>
-			</section>
-	
-			<section class='legal-notice__section legal-notice__section--retention'>
-				<h2 class='legal-notice__section-title'>¿Durante cuánto tiempo conservaremos sus datos?</h2>
-				<p class='legal-notice__content'>
-					Se conservarán durante el tiempo necesario para cumplir con la finalidad para la que se recabaron y para determinar las posibles responsabilidades que se pudieran derivar de dicha finalidad y del tratamiento de los datos. Datos de los suscriptores por e-mail o formulario: Desde que el usuario se suscribe hasta que se dé de baja.
-				</p>
-			</section>
-	
-			<section class='legal-notice__section legal-notice__section--minors'>
-				<h2 class='legal-notice__section-title'>Menores de edad</h2>
-				<p class='legal-notice__content'>
-					Aida Blaya Balaguer no autoriza a los/las menores de 14 años a facilitar sus datos personales a través de los medios habilitados en este sitio web. En aquellos casos en los que los servicios estén destinados a menores de 14 años, se habilitarán los medios para recabar la autorización de los padres o tutores legales del/de la menor.
-				</p>
-			</section>
-	
-			<section class='legal-notice__section legal-notice__section--data-protection'>
-				<h2 class='legal-notice__section-title'>Ejercicio de los Derechos de Protección de Datos</h2>
-				<p class='legal-notice__content'>
-					¿Cómo ejercer dichos derechos? Los usuarios podrán dirigir una comunicación al domicilio social de Aida Blaya Balaguer o a su correo electrónico 
-					<a href="mailto:astracodelab@gmail.com" class='legal-notice__content-link'>astracodelab@gmail.com</a>, incluyendo en ambos casos fotocopia de su D.N.I u otro documento de identificación similar, para solicitar el ejercicio de los derechos.
-				</p>
-				<ul class='legal-notice__list'>
-					<li>Acceso a sus datos personales.</li>
-					<li>Solicitar rectificación o derecho al olvido.</li>
-					<li>Solicitar la limitación del tratamiento.</li>
-					<li>Oponerse al tratamiento.</li>
-					<li>Portabilidad de los datos.</li>
-					<li>Reclamar ante la AEPD: <a href="https://www.aepd.es/" target="_blank" rel="noopener noreferrer">Agencia Española de Protección de Datos</a>.</li>
-				</ul>
-				<p class='legal-notice__content'>
-					Le solicitaremos información específica para ayudarnos a confirmar su identidad y garantizar su derecho a acceder a sus datos personales.
-				</p>
-			</section>
-	
-			<section class='legal-notice__section legal-notice__section--service-provision'>
-				<h2 class='legal-notice__section-title'>Comunicación de datos</h2>
-				<p class='legal-notice__content'>
-					Todos los encargados de tratamiento a quienes transferimos sus datos respetarán la seguridad de sus datos personales. Para cualquier solicitud de transparencia, puede escribir a: 
-					<a href="mailto:astracodelab@gmail.com" class='legal-notice__content-link'>astracodelab@gmail.com</a>.
-				</p>
-			</section>
-	
-			<section class='legal-notice__section legal-notice__section--data-security'>
-				<h2 class='legal-notice__section-title'>Seguridad de Datos</h2>
-				<p class='legal-notice__content'>
-					Hemos implementado medidas de seguridad adecuadas para evitar pérdida, uso no autorizado o divulgación de datos personales.
-				</p>
-			</section>
-	
-		</div>
-	</main>
-	
+      <section class='legal-notice__section legal-notice__section--info'>
+        <p class='legal-notice__content'>
+          Este texto legal le da detalles de cómo recopilamos y procesamos sus datos personales a través del uso de
+          nuestro sitio web
+          <a
+            href='https://astracodelab.com'
+            class='legal-notice__content-link'
+            target='_blank'
+            rel='noopener noreferrer'>https://astracodelab.com</a
+          >, incluyendo cualquier información que pueda proporcionarnos a través del sitio cuando proporciona sus datos
+          a través del formulario habilitado para tal fin.
+        </p>
+        <p class='legal-notice__content'>
+          Al proporcionarnos los datos, le informamos que nuestros servicios no son posibles para aquellas personas que
+          la normativa les impide prestar consentimiento, por lo que cuando nos remite los formularios nos garantiza que
+          tiene la capacidad suficiente para otorgar consentimiento. A continuación le informamos sobre la política de
+          protección de datos de: <span>Aida Blaya Balaguer</span>
+        </p>
+      </section>
+
+      <section class='legal-notice__section legal-notice__section--info'>
+        <h2 class='legal-notice__section-title'>Responsable del tratamiento</h2>
+        <p class='legal-notice__content'>
+          Datos de contacto del responsable: Aida Blaya Balaguer, con CIF: 20903627P y domicilio en: P/Mallorca, 39.
+          Castellón de la Plana, 12002 y teléfono: <a href='tel:+34695259535'>695259535</a>. Email: <a
+            href='mailto:astracodelab@gmail.com'>astracodelab@gmail.com</a
+          >. Aida Blaya Balaguer, es el responsable de sus datos. (En adelante nosotros o nuestro).
+        </p>
+      </section>
+
+      <section class='legal-notice__section legal-notice__section--data-collection'>
+        <h2 class='legal-notice__section-title'>¿Qué datos recopilamos?</h2>
+        <p class='legal-notice__content'>
+          El Reglamento General de Protección de Datos define los datos personales como toda información sobre una
+          persona física identificada o identificable. Esto no incluiría los datos anónimos, ni porcentuales. Los datos
+          de carácter personal que se pudieran recabar directamente del interesado, serán tratados de forma confidencial
+          y quedarán incorporados a las correspondientes actividades del tratamiento, titularidad de <span
+            >Aida Blaya Balaguer.</span
+          >
+        </p>
+        <ul class='legal-notice__list'>
+          <li>Datos de contacto: email.</li>
+        </ul>
+      </section>
+
+      <section class='legal-notice__section legal-notice__section--collection-methods'>
+        <h2 class='legal-notice__section-title'>¿Cómo recopilamos sus datos personales?</h2>
+        <ul class='legal-notice__list'>
+          <li>
+            A través del formulario de nuestra página web, a través de nuestros emails de contacto o por teléfono,
+            cuando:<br />
+            • Solicita información de nuestros servicios.
+          </li>
+          <li>Solicita información de nuestros servicios</li>
+        </ul>
+        <p class='legal-notice__content'>
+          Para asegurar la calidad de nuestro portal, nos reservamos el derecho a rechazar cualquier solicitud de
+          registro o bien de suspender o cancelar un registro previamente aceptado si entendemos que no cumple estos
+          requisitos o cualquier otra ley o norma. Si esto ocurre, intentaremos exponer los motivos de nuestra decisión,
+          pero no nos podemos comprometer a hacerlo en todos los casos.
+        </p>
+      </section>
+
+      <section class='legal-notice__section legal-notice__section--purpose'>
+        <h2 class='legal-notice__section-title'>Finalidad y legitimidad para el uso de sus datos</h2>
+        <p class='legal-notice__content'>Los usos más comunes de sus datos personales son:</p>
+        <ul class='legal-notice__list'>
+          <li>Para la formalización de un contrato entre Aida Blaya Balaguer y usted.</li>
+          <li>Cuando preste su consentimiento en el tratamiento de sus datos.</li>
+          <li>Cuando los necesitemos para dar cumplimiento a una obligación legal o regulatoria.</li>
+          <li>Cuando sea necesario para nuestro interés legítimo o de un tercero.</li>
+        </ul>
+      </section>
+
+      <section class='legal-notice__section legal-notice__section--retention'>
+        <h2 class='legal-notice__section-title'>¿Durante cuánto tiempo conservaremos sus datos?</h2>
+        <p class='legal-notice__content'>
+          Se conservarán durante el tiempo necesario para cumplir con la finalidad para la que se recabaron y para
+          determinar las posibles responsabilidades que se pudieran derivar de dicha finalidad y del tratamiento de los
+          datos. Datos de los suscriptores por e-mail o formulario: Desde que el usuario se suscribe hasta que se dé de
+          baja.
+        </p>
+      </section>
+
+      <section class='legal-notice__section legal-notice__section--minors'>
+        <h2 class='legal-notice__section-title'>Menores de edad</h2>
+        <p class='legal-notice__content'>
+          Aida Blaya Balaguer no autoriza a los/las menores de 14 años a facilitar sus datos personales a través de los
+          medios habilitados en este sitio web. En aquellos casos en los que los servicios estén destinados a menores de
+          14 años, se habilitarán los medios para recabar la autorización de los padres o tutores legales del/de la
+          menor.
+        </p>
+      </section>
+
+      <section class='legal-notice__section legal-notice__section--data-protection'>
+        <h2 class='legal-notice__section-title'>Ejercicio de los Derechos de Protección de Datos</h2>
+        <p class='legal-notice__content'>
+          ¿Cómo ejercer dichos derechos? Los usuarios podrán dirigir una comunicación al domicilio social de Aida Blaya
+          Balaguer o a su correo electrónico
+          <a href='mailto:astracodelab@gmail.com' class='legal-notice__content-link'>astracodelab@gmail.com</a>,
+          incluyendo en ambos casos fotocopia de su D.N.I u otro documento de identificación similar, para solicitar el
+          ejercicio de los derechos.
+        </p>
+        <ul class='legal-notice__list'>
+          <li>Acceso a sus datos personales.</li>
+          <li>Solicitar rectificación o derecho al olvido.</li>
+          <li>Solicitar la limitación del tratamiento.</li>
+          <li>Oponerse al tratamiento.</li>
+          <li>Portabilidad de los datos.</li>
+          <li>
+            Reclamar ante la AEPD: <a href='https://www.aepd.es/' target='_blank' rel='noopener noreferrer'
+              >Agencia Española de Protección de Datos</a
+            >.
+          </li>
+        </ul>
+        <p class='legal-notice__content'>
+          Le solicitaremos información específica para ayudarnos a confirmar su identidad y garantizar su derecho a
+          acceder a sus datos personales.
+        </p>
+      </section>
+
+      <section class='legal-notice__section legal-notice__section--service-provision'>
+        <h2 class='legal-notice__section-title'>Comunicación de datos</h2>
+        <p class='legal-notice__content'>
+          Todos los encargados de tratamiento a quienes transferimos sus datos respetarán la seguridad de sus datos
+          personales. Para cualquier solicitud de transparencia, puede escribir a:
+          <a href='mailto:astracodelab@gmail.com' class='legal-notice__content-link'>astracodelab@gmail.com</a>.
+        </p>
+      </section>
+
+      <section class='legal-notice__section legal-notice__section--data-security'>
+        <h2 class='legal-notice__section-title'>Seguridad de Datos</h2>
+        <p class='legal-notice__content'>
+          Hemos implementado medidas de seguridad adecuadas para evitar pérdida, uso no autorizado o divulgación de
+          datos personales.
+        </p>
+      </section>
+    </div>
+  </main>
 </Layout>

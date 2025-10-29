@@ -44,11 +44,13 @@ const title = 'Cartas Digitales para Restaurantes con Código QR | AstracodeLAB'
 const description =
   'Moderniza tu restaurante con una carta digital profesional. Menú QR actualizable al instante, con fotos, alérgenos y multiidioma. Diseño personalizado para tu negocio de hostelería.';
 const permalink = Astro.url.href;
+const image = 'https://astracodelab.com/og_cartas_digitales.png';
+const robots = 'index, follow';
 ---
 
 <script type='application/ld+json' set:html={JSON.stringify(schemaCartasDigitales)} />
 
-<Layout title={title} description={description} permalink={permalink}>
+<Layout title={title} description={description} permalink={permalink} image={image} robots={robots}>
   <div class='container_main_services'>
     <section class='cartasDigitales'>
       <HeroSecondary

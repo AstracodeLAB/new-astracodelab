@@ -4,7 +4,7 @@ import heroImg from '../../images/heroIlustration.svg';
 import Buttons from '../components/Buttons/Buttons.astro';
 ---
 
-<section class='sectionHero'>
+<div class='sectionHero'>
   <article class='sectionHero__content'>
     <div class='sectionHero__content-text'>
       <TitlesHero title='Diseño de páginas web.' subtitle='Creamos páginas web profesionales.' className='heroHome' />
@@ -14,8 +14,8 @@ import Buttons from '../components/Buttons/Buttons.astro';
         repartido en Barcelona, Málaga y Valencia para clientes en toda España.
       </p>
       <article class='sectionHero__buttons'>
-        <Buttons className='btnPrimaryLight' href='/#contact'>Ir a contacto</Buttons>
-        <Buttons className='btnPrimaryDark' href='/'>¿Hablamos?</Buttons>
+        <Buttons className='btnPrimaryLight' href='/contacto/'>Ir a contacto</Buttons>
+        <Buttons className='btnPrimaryDark' href='https://wa.me/34623752940'>¿Hablamos?</Buttons>
       </article>
     </div>
     <div class='sectionHero__image'>
@@ -27,4 +27,4 @@ import Buttons from '../components/Buttons/Buttons.astro';
       />
     </div>
   </article>
-</section>
+</div>

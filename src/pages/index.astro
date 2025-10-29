@@ -1,30 +1,34 @@
 ---
 import Layout from '../layouts/Layout.astro';
-// import Header from '../layouts/partials/Header.astro';
 import MainHome from '../layouts/partials/MainHome.astro';
-import Footer from '../layouts/partials/Footer.astro';
+
+const title = 'AstracodeLAB | Diseño Web Profesional y Desarrollo a Medida';
+const description =
+  'Creamos páginas web profesionales, ágiles y accesibles que reflejan tu marca o tu talento creativo. Ofrecemos soluciones web a medida para clientes en toda España.';
+const permalink = Astro.url.href;
+const robots = 'index, follow';
 ---
 
-<Layout title='AstracodeLAB - Diseño y desarrollo de páginas web'>
-	<!-- <Header /> -->
-	<div class='page-container'>
-		<MainHome />
-	</div>
+<Layout title={title} description={description} permalink={permalink} robots={robots}>
+  <!-- <Header /> -->
+  <div class='page-container'>
+    <MainHome />
+  </div>
 </Layout>
 
 <style>
-	.page-container {
-		opacity: 0;
-		animation: fade-in 0.8s ease-out forwards;
-	}
+  .page-container {
+    opacity: 0;
+    animation: fade-in 0.8s ease-out forwards;
+  }
 
-	/* Animación fade-in */
-	@keyframes fade-in {
-		from {
-			opacity: 0;
-		}
-		to {
-			opacity: 1;
-		}
-	}
+  /* Animación fade-in */
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 </style>

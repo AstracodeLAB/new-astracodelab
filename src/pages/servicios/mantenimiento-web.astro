@@ -18,11 +18,13 @@ const title = 'Mantenimiento y Soporte Web Profesional | Seguridad y Actualizaci
 const description =
   'Servicio de mantenimiento web: actualizaciones de seguridad, optimización de velocidad, copias de seguridad, corrección de errores y soporte técnico prioritario. Tu web siempre protegida.';
 const permalink = Astro.url.href;
+const image ='https://astracodelab.com/og_mantenimiento_web.png';
+const robots = 'index, follow';
 ---
 
 <script type='application/ld+json' set:html={JSON.stringify(schemaMantenimientoWeb)} />
 
-<Layout title={title} description={description} permalink={permalink}>
+<Layout title={title} description={description} permalink={permalink} image={image} robots={robots}>
   <div class='container_main_services'>
     <HeroSecondary
       title='Mantenimiento y soporte web'

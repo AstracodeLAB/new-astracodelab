@@ -12,9 +12,10 @@ const title = 'Sobre Nosotras | AstracodeLAB - Agencia de Diseño Web en España
 const description =
   'Equipo de desarrolladoras en Barcelona, Málaga y Valencia especializado en diseño web profesional. Soluciones digitales a medida con cercanía, rendimiento y experiencia de usuario excepcional.';
 const permalink = Astro.url.href;
+const robots="index, follow"
 ---
 
-<Layout title={title} description={description} permalink={permalink}>
+<Layout title={title} description={description} permalink={permalink} robots={robots}>
   <main class='mainSobreNosotras'>
     <article class='mainSobreNosotras__title'>
       <p class='mainSobreNosotras__title-text'>Astracodelab</p>

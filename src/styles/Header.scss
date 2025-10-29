@@ -139,6 +139,15 @@
     font-weight: map.get($H3-desktop, 'font-weight');
   }
 }
+.megamenu-column h3 a {
+  font-weight: inherit;
+  /* Hereda el 700 del h3 */
+  color: inherit;
+  /* Hereda el color del h3 */
+  text-decoration: none;
+  margin: 0;
+
+}
 
 .megamenu-column a {
   color: $text-bg-white;
@@ -238,4 +247,22 @@
   .button-header {
     display: block;
   }
+
+    .megamenu-column ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      /* Mantiene el espaciado que ya tienes en los <a> */
+    }
+  
+    .megamenu-column li {
+      margin: 0;
+      padding: 0;
+    }
+  
+
+
 }

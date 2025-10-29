@@ -45,11 +45,13 @@ const title = 'Diseño de Landing Pages que Convierten | Optimizadas para Conver
 const description =
   'Landing pages profesionales optimizadas para conversión. Diseño estratégico, CTAs efectivos, responsive y medición de resultados. Aumenta tus conversiones y genera más leads.';
 const permalink = Astro.url.href;
+const image ='https://astracodelab.com/og_landing_page.png';
+const robots = 'index, follow';
 ---
 
 <script type='application/ld+json' set:html={JSON.stringify(schemaLandingPage)} />
 
-<Layout title={title} description={description} permalink={permalink}>
+<Layout title={title} description={description} permalink={permalink} image={image} robots={robots}>
   <div class='container_main_services'>
     <HeroSecondary
       title='Landing pages'

@@ -1,0 +1,14 @@
+---
+import Contact from '../layouts/components/Contact.astro';
+import Layout from '../layouts/Layout.astro';
+
+const title = 'Contacto | AstracodeLAB - Agenda tu Consultoría Gratuita';
+const description =
+  'Contacta con AstracodeLAB para tu proyecto web. Equipo en Barcelona, Málaga y Valencia. Agenda una reunión gratuita y cuéntanos tu idea.';
+const permalink = Astro.url.href;
+const robots = 'index, follow';
+---
+
+<Layout title={title} description={description} permalink={permalink} robots={robots}>
+  <Contact titulo='Contacto' />
+</Layout>

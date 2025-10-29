@@ -17,6 +17,8 @@ const title = 'Diseño de Web Multilingüe Profesional | Expande tu Negocio Glob
 const description =
   'Web multilingüe profesional: estructura optimizada, SEO internacional, selector de idiomas intuitivo y diseño responsive. Llega a nuevos mercados sin barreras. Consultoría gratuita.';
 const permalink = Astro.url.href;
+const image ='https://astracodelab.com/og_web_multi.png';
+const robots = 'index, follow';
 
 const benefits = [
   {
@@ -54,7 +56,7 @@ const benefits = [
 
 <script type='application/ld+json' set:html={JSON.stringify(schemaWebMultilingue)} />
 
-<Layout title={title} description={description} permalink={permalink}>
+<Layout title={title} description={description} permalink={permalink} image={image} robots={robots}>
   <section class='multilingue'>
     <div class='container_main_services'>
       <div class='container_main_services'>

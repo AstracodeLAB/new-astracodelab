@@ -21,11 +21,13 @@ const title = 'Agencia de Diseño Web en España | Páginas Rápidas y Accesible
 const description =
   'Diseño y desarrollo web a medida en Barcelona, Málaga y Valencia. Webs rápidas, accesibles y optimizadas para SEO. Consultoria gratuita. Agencia con servicio en toda España.';
 const permalink = Astro.url.href;
+const image = 'https://astracodelab.com/og_desarrollo_a_medida.png';
+const robots = 'index, follow';
 ---
 
 <script type='application/ld+json' set:html={JSON.stringify(schemaDisenoWeb)} />
 
-<Layout title={title} description={description} permalink={permalink}>
+<Layout title={title} description={description} permalink={permalink} image={image} robots={robots}>
   <HeroServicesA
     title='Diseño web y desarrollo a medida'
     subtitle='Tu estrategia digital con AstracodeLAB'

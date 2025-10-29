@@ -21,13 +21,10 @@ import avatar1 from '../../images/avatar1.jpg';
 import avatar2 from '../../images/avatar2.jpg';
 import avatar3 from '../../images/avatar3.jpg';
 
-const title = 'AstracodeLAB | Diseño Web Profesional y Desarrollo a Medida';
-const description =
-  'Creamos páginas web profesionales, ágiles y accesibles que reflejan tu marca o tu talento creativo. Ofrecemos soluciones web a medida para clientes en toda España.';
-const permalink = Astro.url.href;
+
 ---
 
-<Layout title={title} description={description} permalink={permalink}>
+
   <main class='mainHome'>
     <Hero />
     <Services />
@@ -56,7 +53,7 @@ const permalink = Astro.url.href;
         <PasoProceso
           numero='4'
           titulo='Revisión, lanzamiento y soporte'
-          descripcionSec='Probamos rendimiento, seguridad y usabilidad; lanzamos tu web y te acompañamos 30 días para ajustes y dudas. Si quieres, también podemos ofrecerte <a class= "linkPrimary"href="/servicios/mantenimiento-web">planes de mantenimiento continuos.</a>'
+          descripcionSec='Probamos rendimiento, seguridad y usabilidad; lanzamos tu web y te acompañamos 30 días para ajustes y dudas. Si quieres, también podemos ofrecerte <a class= "linkPrimary"href="/servicios/mantenimiento-web/">planes de mantenimiento continuos.</a>'
         />
       </TimelineWrapper>
     </section>
@@ -143,7 +140,7 @@ const permalink = Astro.url.href;
           title='¿Tienes una idea que no encuentras en estos planes o no sabes por dónde empezar?'
           text='Cuéntanosla y te guiaremos hacia la solución perfecta para tu proyecto.'
           buttonText='¿Hablamos?'
-          buttonHref='/#contact'
+          buttonHref='/contacto/'
         />
       </div>
     </section>
@@ -151,4 +148,4 @@ const permalink = Astro.url.href;
     <FaqsSection titulo='Preguntas frecuentes' faqs={faqs} />
     <Contact titulo='Contacto' />
   </main>
-</Layout>
+

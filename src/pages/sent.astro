@@ -3,13 +3,18 @@ import Layout from '../layouts/Layout.astro';
 
 import Footer from '../layouts/partials/Footer.astro';
 import '../styles/_Error.scss';
+
+const title = '¡Mensaje enviado! | Astracodelab';
+const description = 'Gracias por contactarnos. Te responderemos pronto.';
+const permalink = Astro.url.href;
+const robots = 'noindex,nofollow';
 ---
 
-<Layout title='Formulario enviado'>
-	<main class='error'>
-		<h1 class='error_title error_title--sent'>Tu mensaje ha sido enviado correctamente.</h1>
-		<p class='error_text'>Nos pondremos en contacto contigo a la mayor brevedad posible.</p>
-		<a href='/' class='error_button'>Volver al inicio</a>
-	</main>
-	<Footer />
+<Layout title={title} description={description} permalink={permalink} robots={robots}>
+  <main class='error'>
+    <h1 class='error_title error_title--sent'>Tu mensaje ha sido enviado correctamente.</h1>
+    <p class='error_text'>Nos pondremos en contacto contigo a la mayor brevedad posible.</p>
+    <a href='/' class='error_button'>Volver al inicio</a>
+  </main>
+  <Footer />
 </Layout>

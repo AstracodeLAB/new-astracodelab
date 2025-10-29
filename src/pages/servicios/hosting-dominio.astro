@@ -15,11 +15,13 @@ const title = 'Hosting y Dominio Web Profesional | Gestión Completa | Astracode
 const description =
   'Gestión integral de hosting y dominio web: registro de dominio, hosting optimizado, certificado SSL, correos corporativos y soporte técnico continuo. Consultoría gratuita.';
 const permalink = Astro.url.href;
+const image ='https://astracodelab.com/og_hosting_dominio.png';
+const robots = 'index, follow';
 ---
 
 <script type='application/ld+json' set:html={JSON.stringify(schemaHostingDominio)} />
 
-<Layout title={title} description={description} permalink={permalink}>
+<Layout title={title} description={description} permalink={permalink} image={image} robots={robots}>
   <div class='container_main_services'>
     <HeroSecondary
       title='Hosting y dominio web'

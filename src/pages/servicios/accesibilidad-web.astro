@@ -44,11 +44,13 @@ const title = 'Accesibilidad Web Profesional | AstracodeLAB';
 const description =
   'Diseñamos y auditamos webs accesibles que cumplen WCAG, mejoran la experiencia de todos y reducen riesgos legales. Solicita consultoría gratuita.';
 const permalink = Astro.url.href;
+const image = 'https://astracodelab.com/og_accesibilidad_web.png';
+const robots = 'index, follow';
 ---
 
 <script type='application/ld+json' set:html={JSON.stringify(schemaAccesibilidadWeb)} />
 
-<Layout title={title} description={description} permalink={permalink}>
+<Layout title={title} description={description} permalink={permalink} image={image} robots={robots}>
   <HeroSecondary
     title='Accesibilidad web'
     subtitle='Tu web para todos, sin barreras digitales'
