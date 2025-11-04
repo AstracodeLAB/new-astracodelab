@@ -12,7 +12,7 @@ export const schemaMantenimientoWeb = {
         "@id": "https://astracodelab.com#AstracodeLAB",
         "name": "AstracodeLAB",
         "url": "https://astracodelab.com",
-        "logo": "https://astracodelab.com/assets/brand/logo.svg",
+        "logo": "https://astracodelab.com/logoColor.svg",
         "areaServed": "ES",
         "address": {
           "@type": "PostalAddress",

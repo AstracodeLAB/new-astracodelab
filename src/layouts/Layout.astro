@@ -3,6 +3,12 @@ import Header from './partials/Header.astro';
 import '../styles/global.scss';
 import Footer from './partials/Footer.astro';
 import CookieBanner from './components/CookieBanner.astro';
+import '@fontsource/roboto/latin-300.css'; // Light - Latin only
+import '@fontsource/roboto/latin-400.css'; // Regular - Latin only
+import '@fontsource/roboto/latin-500.css'; // Medium - Latin only
+import '@fontsource/roboto/latin-600.css'; // Semibold - Latin only
+import '@fontsource/roboto/latin-700.css'; // Bold - Latin only
+import '@fontsource/roboto/latin-ext-400.css'; // Regular Latin Extended (á, é, í, ó, ú, ñ)
 export interface Props {
   title: string;
   description: string;
@@ -27,6 +33,7 @@ const {
     <meta name='description' content={description} />
     <meta name='viewport' content='width=device-width' , initial-scale='1' />
     <link rel='icon' type='image/svg+xml' href='/favicon.ico' />
+    <!-- Font optimization: Las fuentes se cargan desde @fontsource (self-hosted) -->
     <link rel='canonical' href={permalink} />
     <meta name='msvalidate.01' content='08A045B5065017F91DE8FBA3B76391FC' />
     <meta name='robots' content={robots} />
@@ -49,6 +56,3 @@ const {
     <CookieBanner />
   </body>
 </html>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-</style>

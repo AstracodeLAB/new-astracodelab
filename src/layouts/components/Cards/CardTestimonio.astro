@@ -16,13 +16,13 @@ const { titulo, subtitulo, testimonials } = Astro.props;
     
     <div class='card-testimonio__testimonial'>
       <div class='card-testimonio__navigation'>
-        <button class='card-testimonio__nav-btn card-testimonio__nav-btn--prev' data-testimonial-prev>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <button class='card-testimonio__nav-btn card-testimonio__nav-btn--prev' data-testimonial-prev aria-label='Testimonio anterior'>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </button>
-        <button class='card-testimonio__nav-btn card-testimonio__nav-btn--next' data-testimonial-next>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <button class='card-testimonio__nav-btn card-testimonio__nav-btn--next' data-testimonial-next aria-label='Siguiente testimonio'>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </button>

@@ -12,7 +12,7 @@ export const schemaAccesibilidadWeb = {
         "@id": "https://astracodelab.com#AstracodeLAB",
         "name": "AstracodeLAB",
         "url": "https://astracodelab.com",
-        "logo": "https://astracodelab.com/assets/brand/logo.svg",
+        "logo": "https://astracodelab.com/logoColor.svg",
         "areaServed": "ES",
         "sameAs": ["https://www.linkedin.com/company/astracodelab", "https://www.instagram.com/astracodelab"]
       },

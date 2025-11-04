@@ -26,7 +26,7 @@ import Logo from '../components/Logo.astro';
       </button>
 
       <!-- Menú principal -->
-      <ul id='nav-menu' class='navigation__container-menu' aria-hidden='true'>
+      <ul id='nav-menu' class='navigation__container-menu' aria-hidden='true' hidden>
         <!-- Botón cerrar dentro del menú móvil -->
         <li class='navigation__container-menu-item navigation__container-menu-item-close'>
           <button class='navigation__container-button navigation__container-button--close' aria-label='Cerrar menú'>
@@ -56,7 +56,7 @@ import Logo from '../components/Logo.astro';
             </svg>
           </button>
 
-          <div id='submenu-services' class='navigation__container-megamenu' aria-hidden='true'>
+          <div id='submenu-services' class='navigation__container-megamenu' aria-hidden='true' hidden>
             <div class='megamenu-column'>
               <h3><a href='/servicios/diseno-web/'>Diseño y desarrollo web</a></h3>
               <ul>
@@ -118,7 +118,13 @@ import Logo from '../components/Logo.astro';
       const expanded = open ? 'true' : 'false';
       navToggle.setAttribute('aria-expanded', expanded);
       navMenu.setAttribute('aria-hidden', open ? 'false' : 'true');
-      navMenu.style.display = open ? 'block' : 'none';
+
+      // Usar atributo hidden para prevenir enfoque en elementos ocultos
+      if (open) {
+        navMenu.removeAttribute('hidden');
+      } else {
+        navMenu.setAttribute('hidden', '');
+      }
     };
 
     navToggle.addEventListener('click', () => {
@@ -147,8 +153,14 @@ import Logo from '../components/Logo.astro';
       const expanded = open ? 'true' : 'false';
       serviceBtn.setAttribute('aria-expanded', expanded);
       submenu.setAttribute('aria-hidden', open ? 'false' : 'true');
-      submenu.style.display = open ? 'flex' : 'none';
       arrowIcon.style.transform = open ? 'rotate(180deg)' : 'rotate(0deg)';
+
+      // Usar atributo hidden para prevenir enfoque en elementos ocultos
+      if (open) {
+        submenu.removeAttribute('hidden');
+      } else {
+        submenu.setAttribute('hidden', '');
+      }
     };
 
     serviceBtn.addEventListener('click', () => {
