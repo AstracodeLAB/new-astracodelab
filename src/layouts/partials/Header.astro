@@ -122,137 +122,75 @@ import Logo from '../components/Logo.astro';
 </header>
 
 <script is:inline>
-  // Esperar a que el DOM esté listo y también a las transiciones de Astro
-  function initializeNavigation() {
-    console.log('🔄 Inicializando navegación...');
+  if (!window.navigationInitialized) {
+    window.navigationInitialized = true;
 
-    const navToggle = document.getElementById('nav-toggle');
-    const navMenu = document.getElementById('nav-menu');
-    const closeBtn = document.getElementById('close-menu');
-    const servicesBtn = document.getElementById('services-btn');
-    const submenu = document.getElementById('submenu-services');
-    const arrowIcon = document.getElementById('services-arrow');
+    const initializeNavigation = () => {
+      console.log('🔄 Inicializando navegación...');
 
-    if (!navToggle || !navMenu || !servicesBtn || !submenu) {
-      console.error('❌ No se encontraron elementos del menú');
-      return;
-    }
+      const navToggle = document.getElementById('nav-toggle');
+      const navMenu = document.getElementById('nav-menu');
+      const closeBtn = document.getElementById('close-menu');
+      const servicesBtn = document.getElementById('services-btn');
+      const submenu = document.getElementById('submenu-services');
+      const arrowIcon = document.getElementById('services-arrow');
 
-    let isMenuOpen = false;
-    let isSubmenuOpen = false;
-
-    // Función para toggle del menú móvil
-    const toggleMenu = (open) => {
-      isMenuOpen = open;
-      const expanded = open ? 'true' : 'false';
-      navToggle.setAttribute('aria-expanded', expanded);
-      navMenu.setAttribute('aria-hidden', open ? 'false' : 'true');
-
-      // Usar atributo hidden para prevenir enfoque en elementos ocultos
-      if (open) {
-        navMenu.removeAttribute('hidden');
-      } else {
-        navMenu.setAttribute('hidden', '');
+      if (!navToggle || !navMenu || !servicesBtn || !submenu) {
+        console.error('❌ No se encontraron elementos del menú');
+        return;
       }
-    };
 
-    navToggle.addEventListener('click', () => {
-      const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
-      toggleMenu(!isOpen);
-    });
+      let isMenuOpen = false;
+      let isSubmenuOpen = false;
 
-    closeBtn.addEventListener('click', () => {
-      toggleMenu(false);
-    });
+      const toggleMenu = (open) => {
+        isMenuOpen = open;
+        navToggle.setAttribute('aria-expanded', open);
+        navMenu.setAttribute('aria-hidden', !open);
+        open ? navMenu.removeAttribute('hidden') : navMenu.setAttribute('hidden', '');
+      };
 
-    // Controlar menú móvil con teclado
-    navToggle.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        navToggle.click();
-      }
-    });
-
-    // Función para toggle del submenú de servicios
-    const toggleSubmenu = (open) => {
-      isSubmenuOpen = open;
-      const expanded = open ? 'true' : 'false';
-      servicesBtn.setAttribute('aria-expanded', expanded);
-      submenu.setAttribute('aria-hidden', open ? 'false' : 'true');
-      if (arrowIcon) {
+      const toggleSubmenu = (open) => {
+        isSubmenuOpen = open;
+        servicesBtn.setAttribute('aria-expanded', open);
+        submenu.setAttribute('aria-hidden', !open);
+        open ? submenu.removeAttribute('hidden') : submenu.setAttribute('hidden', '');
         arrowIcon.style.transform = open ? 'rotate(180deg)' : 'rotate(0deg)';
-      }
+      };
 
-      // Usar atributo hidden para prevenir enfoque en elementos ocultos
-      if (open) {
-        submenu.removeAttribute('hidden');
-      } else {
-        submenu.setAttribute('hidden', '');
-      }
-    };
+      navToggle.addEventListener('click', () => toggleMenu(!isMenuOpen));
+      closeBtn.addEventListener('click', () => toggleMenu(false));
+      servicesBtn.addEventListener('click', () => toggleSubmenu(!isSubmenuOpen));
 
-    servicesBtn.addEventListener('click', () => {
-      const isOpen = servicesBtn.getAttribute('aria-expanded') === 'true';
-      toggleSubmenu(!isOpen);
-    });
-
-    servicesBtn.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        e.stopPropagation();
-        e.stopImmediatePropagation();
-        toggleSubmenu(!isSubmenuOpen);
-      }
-    }, true);
-
-    // Cerrar menús al hacer clic fuera
-    document.addEventListener('click', (e) => {
-      if (isMenuOpen && !navMenu.contains(e.target) && !navToggle.contains(e.target)) {
-        console.log('👆 Click fuera - cerrando menú');
-        toggleMenu(false);
-      }
-
-      if (isSubmenuOpen && !servicesBtn.contains(e.target) && !submenu.contains(e.target)) {
-        console.log('👆 Click fuera - cerrando submenú');
-        toggleSubmenu(false);
-      }
-    });
-
-    // Cerrar menús al hacer clic en enlaces (para navegación)
-    const navLinks = navMenu.querySelectorAll('a[href^="/"]');
-    navLinks.forEach((link) => {
-      link.addEventListener('click', () => {
-        console.log('🔗 Click en enlace - cerrando menús');
-        toggleMenu(false);
-        toggleSubmenu(false);
-      });
-    });
-
-    // Cerrar con tecla Escape
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        if (isSubmenuOpen) {
+      document.addEventListener('click', (e) => {
+        if (isSubmenuOpen && !submenu.contains(e.target) && !servicesBtn.contains(e.target)) {
           toggleSubmenu(false);
-        } else if (isMenuOpen) {
+        }
+        if (isMenuOpen && !navMenu.contains(e.target) && !navToggle.contains(e.target)) {
           toggleMenu(false);
         }
-      }
-    });
+      });
 
-    console.log('✅ Navegación inicializada correctamente');
-  }
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          toggleSubmenu(false);
+          toggleMenu(false);
+        }
+      });
 
-  // Inicializar cuando el DOM esté listo
-  if (document.readyState === 'loading') {
+      const navLinks = navMenu.querySelectorAll('a[href^="/"]');
+      navLinks.forEach((link) => {
+        link.addEventListener('click', () => {
+          toggleMenu(false);
+          toggleSubmenu(false);
+        });
+      });
+
+      console.log('✅ Navegación inicializada correctamente');
+    };
+
+    document.addEventListener('astro:page-load', initializeNavigation);
+    document.addEventListener('astro:after-swap', initializeNavigation);
     document.addEventListener('DOMContentLoaded', initializeNavigation);
-  } else {
-    initializeNavigation();
   }
-
-  // Re-inicializar después de las transiciones de Astro
-  document.addEventListener('astro:page-load', initializeNavigation);
-  document.addEventListener('astro:after-swap', initializeNavigation);
-
-  // También inicializar después de un timeout por si acaso
-  setTimeout(initializeNavigation, 100);
 </script>
