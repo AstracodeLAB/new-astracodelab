@@ -71,6 +71,13 @@
       letter-spacing: map.get($Body-desktop-xl, 'letter-spacing');
     }
   }
+  &__link {
+    color: $blue-secondary;
+    text-decoration: underline;
+
+    &:hover {
+      color: $blue-primary;
+    }
 }
 .cookie-buttons {
   display: flex;
@@ -103,4 +110,4 @@
 .btn-secondary {
   background-color: #263238;
   color: $blue-secondary;
-}
+}}

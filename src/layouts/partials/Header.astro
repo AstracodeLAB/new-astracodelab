@@ -18,6 +18,7 @@ import Logo from '../components/Logo.astro';
         aria-expanded='false'
         aria-controls='nav-menu'
         aria-label='Abrir menú'
+        type='button'
       >
         <svg class='navigation__container-button-icon' viewBox='0 0 20 20'>
           <title>Abrir menú</title>
@@ -29,7 +30,12 @@ import Logo from '../components/Logo.astro';
       <ul id='nav-menu' class='navigation__container-menu' aria-hidden='true' hidden>
         <!-- Botón cerrar dentro del menú móvil -->
         <li class='navigation__container-menu-item navigation__container-menu-item-close'>
-          <button class='navigation__container-button navigation__container-button--close' aria-label='Cerrar menú'>
+          <button
+            class='navigation__container-button navigation__container-button--close'
+            aria-label='Cerrar menú'
+            type='button'
+            id='close-menu'
+          >
             <svg class='navigation__container-button-icon' viewBox='0 0 20 20'>
               <title>Cerrar menú</title>
               <polygon
@@ -42,12 +48,15 @@ import Logo from '../components/Logo.astro';
         <!-- Mega menú -->
         <li class='navigation__container-menu-itemsMap'>
           <button
+            id='services-btn'
             class='navigation__container-menu-itemsMap-link'
             aria-expanded='false'
             aria-controls='submenu-services'
+            type='button'
           >
             Servicios
             <svg
+              id='services-arrow'
               class='navigation__container-menu-itemsMap-arrow'
               viewBox='0 0 20 20'
               xmlns='http://www.w3.org/2000/svg'
@@ -93,27 +102,45 @@ import Logo from '../components/Logo.astro';
           <a href='/contacto/' class='navigation__container-menu-itemsMap-link'>Contacto</a>
         </li>
 
-        <!-- <li class='navigation__container-menu-itemsMap'>
-          <a href='/#about' class='navigation__container-menu-itemsMap-link'>Blog</a>
-        </li> -->
         <li class='navigation__container-menu-itemsMap cta-mobile'>
-          <Buttons href='https://wa.me/34623752940' className='btnPrimaryLight'>¿Hablamos?</Buttons>
+          <Buttons
+            href='https://wa.me/34623752940'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='btnPrimaryLight'>¿Hablamos?</Buttons
+          >
         </li>
       </ul>
 
       <div class='button-header'>
-        <Buttons href='https://wa.me/34623752940' className='btnPrimaryLight'>¿Hablamos?</Buttons>
+        <Buttons href='https://wa.me/34623752940' target='_blank' rel='noopener noreferrer' className='btnPrimaryLight'
+          >¿Hablamos?</Buttons
+        >
       </div>
     </div>
   </nav>
 </header>
 
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
+<script is:inline>
+  // Esperar a que el DOM esté listo y también a las transiciones de Astro
+  function initializeNavigation() {
+    console.log('🔄 Inicializando navegación...');
+
     const navToggle = document.getElementById('nav-toggle');
     const navMenu = document.getElementById('nav-menu');
-    const closeBtn = navMenu.querySelector('.navigation__container-button--close');
+    const closeBtn = document.getElementById('close-menu');
+    const servicesBtn = document.getElementById('services-btn');
+    const submenu = document.getElementById('submenu-services');
 
+    if (!navToggle || !navMenu || !servicesBtn || !submenu) {
+      console.error('❌ No se encontraron elementos del menú');
+      return;
+    }
+
+    let isMenuOpen = false;
+    let isSubmenuOpen = false;
+
+    // Función para toggle del menú móvil
     const toggleMenu = (open) => {
       const expanded = open ? 'true' : 'false';
       navToggle.setAttribute('aria-expanded', expanded);
@@ -144,11 +171,7 @@ import Logo from '../components/Logo.astro';
       }
     });
 
-    // Mega menú accesible
-    const serviceBtn = document.querySelector('[aria-controls="submenu-services"]');
-    const submenu = document.getElementById('submenu-services');
-    const arrowIcon = serviceBtn.querySelector('svg');
-
+    // Función para toggle del submenú de servicios
     const toggleSubmenu = (open) => {
       const expanded = open ? 'true' : 'false';
       serviceBtn.setAttribute('aria-expanded', expanded);
@@ -171,22 +194,61 @@ import Logo from '../components/Logo.astro';
     serviceBtn.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
-        serviceBtn.click();
-      }
-    });
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+        toggleSubmenu(!isSubmenuOpen);
+      },
+      true
+    );
 
-    // Cierra mega menú al hacer clic fuera
+    // Cerrar menús al hacer clic fuera
     document.addEventListener('click', (e) => {
-      if (!serviceBtn.contains(e.target) && !submenu.contains(e.target)) {
+      if (isMenuOpen && !navMenu.contains(e.target) && !navToggle.contains(e.target)) {
+        console.log('👆 Click fuera - cerrando menú');
+        toggleMenu(false);
+      }
+
+      if (isSubmenuOpen && !servicesBtn.contains(e.target) && !submenu.contains(e.target)) {
+        console.log('👆 Click fuera - cerrando submenú');
         toggleSubmenu(false);
       }
     });
-    // Cierra el menú al hacer clic en cualquier enlace
-    const navLinks = navMenu.querySelectorAll('a, button.btnPrimaryLight');
+
+    // Cerrar menús al hacer clic en enlaces (para navegación)
+    const navLinks = navMenu.querySelectorAll('a[href^="/"]');
     navLinks.forEach((link) => {
       link.addEventListener('click', () => {
+        console.log('🔗 Click en enlace - cerrando menús');
         toggleMenu(false);
+        toggleSubmenu(false);
       });
     });
-  });
+
+    // Cerrar con tecla Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        if (isSubmenuOpen) {
+          toggleSubmenu(false);
+        } else if (isMenuOpen) {
+          toggleMenu(false);
+        }
+      }
+    });
+
+    console.log('✅ Navegación inicializada correctamente');
+  }
+
+  // Inicializar cuando el DOM esté listo
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeNavigation);
+  } else {
+    initializeNavigation();
+  }
+
+  // Re-inicializar después de las transiciones de Astro
+  document.addEventListener('astro:page-load', initializeNavigation);
+  document.addEventListener('astro:after-swap', initializeNavigation);
+
+  // También inicializar después de un timeout por si acaso
+  setTimeout(initializeNavigation, 100);
 </script>

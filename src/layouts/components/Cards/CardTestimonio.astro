@@ -1,35 +1,47 @@
 ---
 import TitleSecondary from '../Titles/TitleSecondary.astro';
+import Buttons from '../Buttons/Buttons.astro';
+import logoGoogle from '../../../images/logoGoogle.png';
 
 const { titulo, subtitulo, testimonials } = Astro.props;
 ---
 
 <article class='card-testimonio' data-testimonial-slider>
   <div class='card-testimonio__header'>
-    <TitleSecondary text={titulo} description={subtitulo} />
+      <TitleSecondary text={titulo} description={subtitulo} />
   </div>
   
   <div class='card-testimonio__content'>
-    <div class='card-testimonio__profile'>
-      <img src={testimonials[0].imagen.src} alt={testimonials[0].alt} class='card-testimonio__avatar' data-testimonial-avatar />
-    </div>
-    
-    <div class='card-testimonio__testimonial'>
-      <div class='card-testimonio__navigation'>
-        <button class='card-testimonio__nav-btn card-testimonio__nav-btn--prev' data-testimonial-prev aria-label='Testimonio anterior'>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-        <button class='card-testimonio__nav-btn card-testimonio__nav-btn--next' data-testimonial-next aria-label='Siguiente testimonio'>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
+      <div class='card-testimonio__profile'>
+          <div class='card-testimonio__navigation'>
+              <button class='card-testimonio__nav-btn card-testimonio__nav-btn--prev' data-testimonial-prev>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+              </button>
+              <button class='card-testimonio__nav-btn card-testimonio__nav-btn--next' data-testimonial-next>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+              </button>
+          </div>
+          <img src={testimonials[0].imagen.src} alt={testimonials[0].alt} class='card-testimonio__avatar' data-testimonial-avatar />
       </div>
       
-      <p class='card-testimonio__text' data-testimonial-text>{testimonials[0].testimonial}</p>
-    </div>
+      <div class='card-testimonio__testimonial'>
+          <p class='card-testimonio__text' data-testimonial-text>{testimonials[0].testimonial}</p>
+      </div>
+      <div class="card-testimonio__google">
+        <img class="card-testimonio__google-img" src={logoGoogle.src} alt="logo de Google">
+      <Buttons 
+          className="linkPrimary" 
+          target='_blank'
+          href="https://www.google.com/search?sca_esv=b1f7e2cc7f09216f&sxsrf=AE3TifOYptLvzzh77lMRvUPgz6ofjJpz4g:1761056026443&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-Ew6RPn9NDe5KJ9v5Ik6HKT6mXzBtUuN2CHLCXVmR4UZJ6cqUlfbegdiiLsBixZjzF7kMlafyff1FE7Z8b6bK7hUm-uoc&q=Astracodelab+Rese%C3%B1as&sa=X&ved=2ahUKEwjB14r3vLWQAxUL_7sIHWiNDckQ0bkNegQINxAD&cshid=1761056070685637&biw=1433&bih=813&dpr=1.1" 
+      >
+          Ver reseñas en google
+      </Buttons>
+      </div>
+      
   </div>
 </article>
 

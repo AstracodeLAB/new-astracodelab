@@ -1,0 +1,144 @@
+@use 'sass:map';
+@use './variables.scss' as *;
+
+.hero-illustration {
+  position: relative; // contenedor base
+  display: inline-block;
+  //max-width: 80%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  order: 1;
+  @media (min-width: 48rem) {
+    flex: 0 0 50%;
+    order: 2;
+    justify-content: center;
+    
+  }
+  @media (min-width: 64rem) {
+    flex: 0 0 40%;
+    order: 2;
+    justify-content: flex-end;
+  }
+
+  &__computer {
+    position: relative;
+    z-index: 4; // ordenador delante
+    max-width: 100%;
+    height: auto;
+    //max-width: 80%;
+
+      @media (min-width: 48rem) {
+        width: 100%;
+        height: auto;
+        
+      }
+
+      @media (min-width: 64rem) {
+        max-width: 100%;
+      }
+  }
+
+  &__rocket {
+    z-index: 3;
+    position: absolute;
+    top: 0%;   // ajusta según la ilustración
+    left: 73%;   // centrado relativo al ordenador
+    transform: translateX(0%); // centra horizontalmente
+     // cohete detrás
+    max-width: 15%; // ajusta al tamaño que quieras
+    height: auto;
+    @media (min-width: 64rem) {
+      max-width: 15%;
+      top: 0%;
+      left: 80%;
+      transform: translateX(-30%);
+    }
+  }
+  &__smoke {
+    
+    position: absolute;
+    top: 37%;   // ajusta según la ilustración
+    left: 68.51%;   // centrado relativo al ordenador
+    transform: translateX(0%); // centra horizontalmente
+    z-index: 2;  // humo detrás
+    max-width: 25%; // ajusta al tamaño que quieras
+    height: auto;
+    @media (min-width: 64rem) {
+      max-width: 27%;
+      top: 37%;
+      left: 78%;
+      transform: translateX(-30%);
+    }
+  }
+
+  &__base {
+    position: absolute;
+    bottom: 0;   // ajusta según la ilustración
+    left: 50%;   // centrado relativo al ordenador
+    transform: translateX(-50%); // centra horizontalmente
+    z-index: 1;  // base detrás
+    max-width: 100%; // ajusta al tamaño que quieras
+    height: auto;
+  }
+}
+
+/* ========================================================== */
+/* 🚀 1. Keyframes: Solo Subida y Desaparición (NO vuelve) */
+/* ========================================================== */
+@keyframes rocketLaunchAndDisappear {
+  0% {
+    
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-400px); // Sube
+    opacity: 0; // Desaparece
+  }
+}
+
+/* ========================================================== */
+/* 🚀 2. Animación en Móvil (Activación Única y Reset) */
+/* ========================================================== */
+@media (max-width: 48rem) { // Asume 768px = 48rem
+  .hero-illustration__rocket.launch {
+    // Aplica la animación de subida/desaparición
+    animation: rocketLaunchAndDisappear 3s ease-in-out forwards; 
+  }
+}
+
+/* ========================================================== */
+/* 🚀 3. Animación en Escritorio (Activación por Hover Repetible) */
+/* ========================================================== */
+@media (hover: hover) and (pointer: fine) {
+  // Cuando se hace hover, sube y desaparece (igual que en móvil)
+  .hero-illustration__computer:hover + .hero-illustration__rocket {
+    animation: rocketLaunchAndDisappear 2s ease-in-out forwards;
+  }
+}
+
+/* ========================================================== */
+/* 💨 4. Desvanecer el humo (móvil y desktop) */
+/* ========================================================== */
+
+/* 🔹 Móvil: cuando el cohete lanza (.launch), el humo se desvanece */
+@media (max-width: 48rem) {
+  .hero-illustration__smoke {
+    transition: opacity 1s ease-in-out; // transición suave
+  }
+
+  .hero-illustration__rocket.launch ~ .hero-illustration__smoke {
+    opacity: 0; // se desvanece cuando el cohete despega
+  }
+}
+
+/* 🔹 Desktop: cuando se hace hover en el ordenador, el humo también se desvanece */
+@media (hover: hover) and (pointer: fine) {
+  .hero-illustration__smoke {
+    transition: opacity 1s ease-in-out; // transición suave
+  }
+
+  .hero-illustration__computer:hover ~ .hero-illustration__smoke {
+    opacity: 0;
+  }
+}

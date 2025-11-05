@@ -2,6 +2,7 @@
 import TitlesHero from '../components/Titles/TitlesHero.astro';
 import heroImg from '../../images/heroIlustration.svg';
 import Buttons from '../components/Buttons/Buttons.astro';
+import RocketIllustration from './RocketIllustration.astro';
 ---
 
 <div class='sectionHero'>
@@ -14,17 +15,18 @@ import Buttons from '../components/Buttons/Buttons.astro';
         repartido en Barcelona, Málaga y Valencia para clientes en toda España.
       </p>
       <article class='sectionHero__buttons'>
-        <Buttons className='btnPrimaryLight' href='/contacto/'>Ir a contacto</Buttons>
-        <Buttons className='btnPrimaryDark' href='https://wa.me/34623752940'>¿Hablamos?</Buttons>
+        <Buttons className='btnPrimaryLight' href='/#contact'>Ir a contacto</Buttons>
+        <Buttons className='btnPrimaryDark' href='https://calendly.com/astracodelab'>Agendar cita</Buttons>
       </article>
     </div>
     <div class='sectionHero__image'>
-      <img
+      <!-- <img
         src={heroImg.src}
         alt='Ilustración de un ordenador portátil con una ventana web abierta y un botón de Click Here, acompañado de un      cohete
         despegando.'
         class='sectionHero__image-item'
-      />
+      /> -->
+      <RocketIllustration />
     </div>
   </article>
 </div>
