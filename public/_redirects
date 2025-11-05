@@ -1,8 +1,46 @@
 # Redirecciones de URLs antiguas a nuevas rutas de servicios
-/portfolios /servicios/portfolios-web 301
-/corporativo /servicios/sitios-web-corporativos 301
-/reservas /servicios/web-reservas-de-citas-online 301
-/landing /servicios/landing-page 301
+/portfolios /servicios/portfolios-web/ 301
+/portfolios/ /servicios/portfolios-web/ 301
+/corporativo /servicios/sitios-web-corporativos/ 301
+/corporativo/ /servicios/sitios-web-corporativos/ 301
+/reservas /servicios/web-reservas-de-citas-online/ 301
+/reservas/ /servicios/web-reservas-de-citas-online/ 301
+/landing /servicios/landing-page/ 301
+/landing/ /servicios/landing-page/ 301
 
 # Redirección de página /sent eliminada (ahora usa parámetros URL)
 /sent /contacto?success=true 301
+
+# Redirecciones para corregir URLs sin prefijo /servicios/ (errores 5xx y 404)
+/sitios-web-corporativos /servicios/sitios-web-corporativos/ 301
+/sitios-web-corporativos/ /servicios/sitios-web-corporativos/ 301
+/web-reservas-de-citas-online /servicios/web-reservas-de-citas-online/ 301
+/web-reservas-de-citas-online/ /servicios/web-reservas-de-citas-online/ 301
+
+# Redirecciones para URLs antiguas de políticas
+/politica-de-cookies /privacy-cookies/ 301
+/politica-de-cookies/ /privacy-cookies/ 301
+
+# Redirecciones para garantizar trailing slashes consistentes en todas las páginas principales
+/sobre-nosotras /sobre-nosotras/ 301
+/contacto /contacto/ 301
+/legal /legal/ 301
+/privacy-policy /privacy-policy/ 301
+/privacy-cookies /privacy-cookies/ 301
+
+# Redirecciones para garantizar trailing slashes en servicios
+/servicios/landing-page /servicios/landing-page/ 301
+/servicios/web-corporativa /servicios/web-corporativa/ 301
+/servicios/redisenio-web /servicios/redisenio-web/ 301
+/servicios/web-multilingue /servicios/web-multilingue/ 301
+/servicios/funcionalidades-optimizacion-web /servicios/funcionalidades-optimizacion-web/ 301
+/servicios/mantenimiento-web /servicios/mantenimiento-web/ 301
+/servicios/hosting-dominio /servicios/hosting-dominio/ 301
+/servicios/sistemas-de-reservas /servicios/sistemas-de-reservas/ 301
+/servicios/diseno-web /servicios/diseno-web/ 301
+/servicios/tienda-online /servicios/tienda-online/ 301
+/servicios/cartas-digitales-restaurantes /servicios/cartas-digitales-restaurantes/ 301
+/servicios/accesibilidad-web /servicios/accesibilidad-web/ 301
+/servicios/portfolios-web /servicios/portfolios-web/ 301
+/servicios/sitios-web-corporativos /servicios/sitios-web-corporativos/ 301
+/servicios/web-reservas-de-citas-online /servicios/web-reservas-de-citas-online/ 301
