@@ -7,8 +7,11 @@ const description =
   'Contacta con AstracodeLAB para tu proyecto web. Equipo en Barcelona, Málaga y Valencia. Agenda una reunión gratuita y cuéntanos tu idea.';
 const permalink = Astro.url.href;
 const robots = 'index, follow';
+
+// Detectar si el formulario fue enviado exitosamente
+const success = Astro.url.searchParams.get('success') === 'true';
 ---
 
 <Layout title={title} description={description} permalink={permalink} robots={robots}>
-  <Contact titulo='Contacto' />
+  <Contact titulo='Contacto' showSuccess={success} />
 </Layout>

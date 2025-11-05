@@ -1,6 +1,9 @@
 ---
 import TitleSecondary from './Titles/TitleSecondary.astro';
 import Buttons from './Buttons/Buttons.astro';
+
+// Recibir prop para mostrar mensaje de éxito
+const { showSuccess = false } = Astro.props;
 ---
 
 <section id='contact' class='contact'>
@@ -22,50 +25,58 @@ import Buttons from './Buttons/Buttons.astro';
     </div>
 
     <div class='contact__card-bottom'>
-      <form class='contact__form' action='https://formspree.io/f/xzzaoaya' method='POST'>
-        <div class='contact__form-field'>
-          <input type='hidden' name='redirect' value='https://astracodelab.com/sent' />
-          <input
-            type='text'
-            id='name'
-            name='name'
-            placeholder='Nombre'
-            aria-label='Nombre'
-            minlength='3'
-            maxlength='50'
-            required
-          />
+      {showSuccess ? (
+        <div class='contact__success'>
+          <h2 class='contact__success-title'>¡Mensaje enviado correctamente!</h2>
+          <p class='contact__success-text'>Gracias por contactarnos. Nos pondremos en contacto contigo a la mayor brevedad posible.</p>
+          <Buttons href='/' className='btnSecondaryDark'>Volver al inicio</Buttons>
         </div>
-        <div class='contact__form-field'>
-          <input type='email' id='email' name='email' placeholder='Email' aria-label='Correo electrónico' required />
-        </div>
-        <div class='contact__form-field'>
-          <textarea
-            id='message'
-            name='message'
-            placeholder='Deja tu mensaje'
-            rows='4'
-            aria-label='Mensaje'
-            minlength='10'
-            maxlength='500'
-            required></textarea>
-        </div>
-        <div class='contact__form-field contact__form-field--checkbox'>
-          <input
-            id='privacy'
-            name='privacy'
-            type='checkbox'
-            aria-label='Acepto que se traten mis datos para gestionar la consulta'
-            required
-          />
-          <label for='privacy' class='contact__form-label'>
-            Acepto que se traten mis datos para gestionar la consulta.
-          </label>
-        </div>
-        <div class='contact__form-actions'>
-          <Buttons type='submit' className='btnSecondaryDark'>Enviar</Buttons>
-        </div>
-      </form>
+      ) : (
+        <form class='contact__form' action='https://formspree.io/f/xzzaoaya' method='POST'>
+          <div class='contact__form-field'>
+            <input type='hidden' name='redirect' value='https://astracodelab.com/contacto?success=true' />
+            <input
+              type='text'
+              id='name'
+              name='name'
+              placeholder='Nombre'
+              aria-label='Nombre'
+              minlength='3'
+              maxlength='50'
+              required
+            />
+          </div>
+          <div class='contact__form-field'>
+            <input type='email' id='email' name='email' placeholder='Email' aria-label='Correo electrónico' required />
+          </div>
+          <div class='contact__form-field'>
+            <textarea
+              id='message'
+              name='message'
+              placeholder='Deja tu mensaje'
+              rows='4'
+              aria-label='Mensaje'
+              minlength='10'
+              maxlength='500'
+              required></textarea>
+          </div>
+          <div class='contact__form-field contact__form-field--checkbox'>
+            <input
+              id='privacy'
+              name='privacy'
+              type='checkbox'
+              aria-label='Acepto que se traten mis datos para gestionar la consulta'
+              required
+            />
+            <label for='privacy' class='contact__form-label'>
+              Acepto que se traten mis datos para gestionar la consulta.
+            </label>
+          </div>
+          <div class='contact__form-actions'>
+            <Buttons type='submit' className='btnSecondaryDark'>Enviar</Buttons>
+          </div>
+        </form>
+      )}
     </div>
   </div>
 </section>

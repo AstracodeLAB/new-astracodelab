@@ -1,4 +1,8 @@
-/portfolios /portfolios-web 301
-/corporativo /sitios-web-corporativos 301
-/reservas /web-reservas-de-citas-online 301
-/landing /landing-page 301
+# Redirecciones de URLs antiguas a nuevas rutas de servicios
+/portfolios /servicios/portfolios-web 301
+/corporativo /servicios/sitios-web-corporativos 301
+/reservas /servicios/web-reservas-de-citas-online 301
+/landing /servicios/landing-page 301
+
+# Redirección de página /sent eliminada (ahora usa parámetros URL)
+/sent /contacto?success=true 301
