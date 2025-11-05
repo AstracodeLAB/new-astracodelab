@@ -16,49 +16,66 @@ const { titulo, contenido, className = "" } = Astro.props;
   </div>
 </div>
 
-<script>
-  class AccordionController {
-    constructor() {
-      this.accordions = document.querySelectorAll('[data-accordion]');
-      this.init();
-    }
-    
-    init() {
-      this.accordions.forEach(accordion => {
-        const trigger = accordion.querySelector('[data-accordion-trigger]');
-        const content = accordion.querySelector('[data-accordion-content]');
-        const icon = accordion.querySelector('.accordion__icon');
-        
-        // Set initial state
-        content.style.height = '0px';
-        content.style.overflow = 'hidden';
-        content.style.transition = 'height 0.3s ease';
-        icon.style.transition = 'transform 0.3s ease';
-        
-        trigger.addEventListener('click', () => {
-          const isOpen = accordion.classList.contains('accordion--open');
-          
-          if (isOpen) {
-            // Close
-            content.style.height = '0px';
-            accordion.classList.remove('accordion--open');
-            icon.style.transform = 'rotate(0deg)';
-          } else {
-            // Open
-            const scrollHeight = content.scrollHeight;
-            content.style.height = scrollHeight + 'px';
-            accordion.classList.add('accordion--open');
-            icon.style.transform = 'rotate(180deg)';
-          }
-        });
+<script is:inline>
+  // Función de inicialización del accordion
+  function initializeAccordions() {
+    console.log('🔄 Inicializando accordions...');
+
+    const accordions = document.querySelectorAll('[data-accordion]');
+
+    accordions.forEach(accordion => {
+      const trigger = accordion.querySelector('[data-accordion-trigger]');
+      const content = accordion.querySelector('[data-accordion-content]');
+      const icon = accordion.querySelector('.accordion__icon');
+
+      if (!trigger || !content || !icon) {
+        console.error('❌ Elementos del accordion no encontrados');
+        return;
+      }
+
+      // Limpiar event listeners previos (evitar duplicados)
+      const newTrigger = trigger.cloneNode(true);
+      trigger.parentNode.replaceChild(newTrigger, trigger);
+
+      // Set initial state
+      content.style.height = '0px';
+      content.style.overflow = 'hidden';
+      content.style.transition = 'height 0.3s ease';
+      icon.style.transition = 'transform 0.3s ease';
+
+      // Restablecer clase si estaba abierta
+      accordion.classList.remove('accordion--open');
+      icon.style.transform = 'rotate(0deg)';
+
+      newTrigger.addEventListener('click', () => {
+        const isOpen = accordion.classList.contains('accordion--open');
+
+        if (isOpen) {
+          // Close
+          content.style.height = '0px';
+          accordion.classList.remove('accordion--open');
+          icon.style.transform = 'rotate(0deg)';
+        } else {
+          // Open
+          const scrollHeight = content.scrollHeight;
+          content.style.height = scrollHeight + 'px';
+          accordion.classList.add('accordion--open');
+          icon.style.transform = 'rotate(180deg)';
+        }
       });
-    }
+    });
+
+    console.log('✅ Accordions inicializados correctamente');
   }
-  
+
   // Initialize when DOM is loaded
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => new AccordionController());
+    document.addEventListener('DOMContentLoaded', initializeAccordions);
   } else {
-    new AccordionController();
+    initializeAccordions();
   }
+
+  // Re-initialize after Astro page transitions
+  document.addEventListener('astro:page-load', initializeAccordions);
+  document.addEventListener('astro:after-swap', initializeAccordions);
 </script>

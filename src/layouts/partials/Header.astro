@@ -131,6 +131,7 @@ import Logo from '../components/Logo.astro';
     const closeBtn = document.getElementById('close-menu');
     const servicesBtn = document.getElementById('services-btn');
     const submenu = document.getElementById('submenu-services');
+    const arrowIcon = document.getElementById('services-arrow');
 
     if (!navToggle || !navMenu || !servicesBtn || !submenu) {
       console.error('❌ No se encontraron elementos del menú');
@@ -142,6 +143,7 @@ import Logo from '../components/Logo.astro';
 
     // Función para toggle del menú móvil
     const toggleMenu = (open) => {
+      isMenuOpen = open;
       const expanded = open ? 'true' : 'false';
       navToggle.setAttribute('aria-expanded', expanded);
       navMenu.setAttribute('aria-hidden', open ? 'false' : 'true');
@@ -173,10 +175,13 @@ import Logo from '../components/Logo.astro';
 
     // Función para toggle del submenú de servicios
     const toggleSubmenu = (open) => {
+      isSubmenuOpen = open;
       const expanded = open ? 'true' : 'false';
-      serviceBtn.setAttribute('aria-expanded', expanded);
+      servicesBtn.setAttribute('aria-expanded', expanded);
       submenu.setAttribute('aria-hidden', open ? 'false' : 'true');
-      arrowIcon.style.transform = open ? 'rotate(180deg)' : 'rotate(0deg)';
+      if (arrowIcon) {
+        arrowIcon.style.transform = open ? 'rotate(180deg)' : 'rotate(0deg)';
+      }
 
       // Usar atributo hidden para prevenir enfoque en elementos ocultos
       if (open) {
@@ -186,20 +191,19 @@ import Logo from '../components/Logo.astro';
       }
     };
 
-    serviceBtn.addEventListener('click', () => {
-      const isOpen = serviceBtn.getAttribute('aria-expanded') === 'true';
+    servicesBtn.addEventListener('click', () => {
+      const isOpen = servicesBtn.getAttribute('aria-expanded') === 'true';
       toggleSubmenu(!isOpen);
     });
 
-    serviceBtn.addEventListener('keydown', (e) => {
+    servicesBtn.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
         e.stopPropagation();
         e.stopImmediatePropagation();
         toggleSubmenu(!isSubmenuOpen);
-      },
-      true
-    );
+      }
+    }, true);
 
     // Cerrar menús al hacer clic fuera
     document.addEventListener('click', (e) => {
