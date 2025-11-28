@@ -50,7 +50,7 @@ export const faqsHome = [
   },
   {
     titulo: '¿Dónde presta sus servicios AstracodeLAB?',
-    contenido: 'AstracodeLAB está ubicada en Barcelona, Castellón y Málaga, pero presta servicios para toda España.',
+    contenido: 'AstracodeLAB está ubicada en Barcelona, Alicante y Málaga, pero presta servicios para toda España.',
   },
 ];
 
@@ -322,3 +322,208 @@ export const faqsCartasDigitales = [
       'Diseñamos menús digitales con interfaces intuitivas y sencillas. Escanear un código QR es cada vez más común y la mayoría de los smartphones lo hacen automáticamente con la cámara. Además, puedes mantener algunas cartas físicas como alternativa durante la transición.',
   },
 ];
+
+export const faqsSeoCastellon = [
+  {
+    titulo: "¿Ofrecéis servicios de diseño web en Castellón?",
+    contenido: "Sí, AstracodeLAB ofrece servicios de diseño y desarrollo web en Castellón. Aunque nuestras oficinas están ubicadas en Barcelona, Castellón y Málaga, trabajamos con clientes de toda la Comunidad Valenciana y España. Nos adaptamos a reuniones presenciales en Castellón o videollamadas según tu preferencia."
+  },
+
+  {
+    titulo: "¿Podemos reunirnos en persona en Castellón para hablar de mi proyecto web?",
+    contenido: "Por supuesto. Realizamos reuniones presenciales en Castellón para conocer tu proyecto en detalle. También ofrecemos videollamadas si prefieres un formato más flexible. Lo importante es entender tus necesidades y definir juntos los objetivos de tu página web."
+  },
+  {
+    titulo: "¿Trabajáis con empresas y autónomos de Castellón?",
+    contenido: "Sí, trabajamos con empresas, autónomos, startups y profesionales independientes de Castellón y toda la provincia. Tenemos experiencia en diversos sectores como  comercio local y servicios profesionales."
+  },
+  {
+    titulo: "¿Qué diferencia hay entre web corporativa y landing page?",
+    contenido: "Una web corporativa es un sitio completo para reflejar la imagen de tu marca, con secciones como Quiénes somos, Servicios o Contacto, optimizada para tener un diseño web elegante y profesional. Una landing page, en cambio, es una sola página específica enfocada en una acción concreta y un mensaje muy directo, ideal para campañas de marketing o promociones."
+  },
+  {
+    titulo: "¿Ofrece AstracodeLAB mantenimiento web en Castellón?",
+    contenido: "Sí, ofrecemos planes de mantenimiento y soporte web para empresas de Castellón. Esto incluye actualizaciones de seguridad, copias de seguridad, resolución de incidencias y modificaciones de contenido. Puedes consultar nuestros planes desde la sección de Mantenimiento y Soporte."
+  },
+  {
+    titulo: "¿Mi página web se verá bien en móviles y otros dispositivos?",
+    contenido: "Por supuesto, todas las páginas web que desarrollamos están completamente adaptadas para verse correctamente en móviles, tablets y ordenadores con diseño responsive. Esto es fundamental para el SEO y para la experiencia de tus usuarios."
+  },
+
+  {
+    titulo: "¿Incluye SEO local para aparecer en búsquedas de Castellón?",
+    contenido: "Sí, todas nuestras webs incluyen optimización SEO on-page básica. "
+  },
+
+  {
+    titulo: "¿Qué necesito para empezar mi proyecto web en Castellón?",
+    contenido: "Para empezar solo necesitas tener clara la idea de tu proyecto. En la reunión inicial definiremos juntos los objetivos, funcionalidades necesarias y el estilo visual. Si ya tienes logotipo, imágenes y textos, perfecto, pero si no los tienes podemos ayudarte a crearlos."
+  }
+]
+export const faqsSeoAlicante = [
+  {
+    titulo: "¿Ofrecéis servicios de diseño web en Alicante?",
+    contenido: "Sí, AstracodeLAB ofrece servicios de diseño y desarrollo web en Alicante. Aunque nuestras oficinas están ubicadas en Barcelona, Alicante y Málaga, trabajamos con clientes de toda la Comunidad Valenciana y España. Nos adaptamos a reuniones presenciales en Alicante o videollamadas según tu preferencia."
+  },
+  {
+    titulo: "¿Trabajáis con empresas y autónomos de Alicante?",
+    contenido: "Sí, trabajamos con empresas, autónomos, startups y profesionales independientes de Alicante y toda la provincia. Tenemos experiencia en diversos sectores como  comercio local y servicios profesionales."
+  },
+  {
+    titulo: "¿Qué diferencia hay entre web corporativa y landing page?",
+    contenido: "Una web corporativa es un sitio completo para reflejar la imagen de tu marca, con secciones como Quiénes somos, Servicios o Contacto, optimizada para tener un diseño web elegante y profesional. Una landing page, en cambio, es una sola página específica enfocada en una acción concreta y un mensaje muy directo, ideal para campañas de marketing o promociones."
+  },
+  {
+    titulo: "¿Ofrece AstracodeLAB mantenimiento web en Alicante?",
+    contenido: "Sí, ofrecemos planes de mantenimiento y soporte web para empresas de Alicante. Esto incluye actualizaciones de seguridad, copias de seguridad, resolución de incidencias y modificaciones de contenido. Puedes consultar nuestros planes desde la sección de Mantenimiento y Soporte."
+  },
+  {
+    titulo: "¿Mi página web se verá bien en móviles y otros dispositivos?",
+    contenido: "Por supuesto, todas las páginas web que desarrollamos están completamente adaptadas para verse correctamente en móviles, tablets y ordenadores con diseño responsive. Esto es fundamental para el SEO y para la experiencia de tus usuarios."
+  },
+
+  {
+    titulo: "¿Incluye SEO local para aparecer en búsquedas de Alicante?",
+    contenido: "Sí, todas nuestras webs incluyen optimización SEO on-page básica. "
+  },
+
+  {
+    titulo: "¿Qué necesito para empezar mi proyecto web en Alicante?",
+    contenido: "Para empezar solo necesitas tener clara la idea de tu proyecto. En la reunión inicial definiremos juntos los objetivos, funcionalidades necesarias y el estilo visual. Si ya tienes logotipo, imágenes y textos, perfecto, pero si no los tienes podemos ayudarte a crearlos."
+  }
+]
+export const faqsSeoValencia = [
+  {
+    titulo: "¿Ofrecéis servicios de diseño web en Valencia?",
+    contenido: "Sí, AstracodeLAB ofrece servicios de diseño y desarrollo web en Valencia. Aunque nuestras oficinas están ubicadas en Barcelona, Valencia y Málaga, trabajamos con clientes de toda la Comunidad Valenciana y España. Nos adaptamos a reuniones presenciales en Valencia o videollamadas según tu preferencia."
+  },
+  {
+    titulo: "¿Trabajáis con empresas y autónomos de Valencia?",
+    contenido: "Sí, trabajamos con empresas, autónomos, startups y profesionales independientes de Valencia y toda la provincia. Tenemos experiencia en diversos sectores como  comercio local y servicios profesionales."
+  },
+  {
+    titulo: "¿Qué diferencia hay entre web corporativa y landing page?",
+    contenido: "Una web corporativa es un sitio completo para reflejar la imagen de tu marca, con secciones como Quiénes somos, Servicios o Contacto, optimizada para tener un diseño web elegante y profesional. Una landing page, en cambio, es una sola página específica enfocada en una acción concreta y un mensaje muy directo, ideal para campañas de marketing o promociones."
+  },
+  {
+    titulo: "¿Ofrece AstracodeLAB mantenimiento web en Valencia?",
+    contenido: "Sí, ofrecemos planes de mantenimiento y soporte web para empresas de Valencia. Esto incluye actualizaciones de seguridad, copias de seguridad, resolución de incidencias y modificaciones de contenido. Puedes consultar nuestros planes desde la sección de Mantenimiento y Soporte."
+  },
+  {
+    titulo: "¿Mi página web se verá bien en móviles y otros dispositivos?",
+    contenido: "Por supuesto, todas las páginas web que desarrollamos están completamente adaptadas para verse correctamente en móviles, tablets y ordenadores con diseño responsive. Esto es fundamental para el SEO y para la experiencia de tus usuarios."
+  },
+
+  {
+    titulo: "¿Incluye SEO local para aparecer en búsquedas de Valencia?",
+    contenido: "Sí, todas nuestras webs incluyen optimización SEO on-page básica. "
+  },
+
+  {
+    titulo: "¿Qué necesito para empezar mi proyecto web en Valencia?",
+    contenido: "Para empezar solo necesitas tener clara la idea de tu proyecto. En la reunión inicial definiremos juntos los objetivos, funcionalidades necesarias y el estilo visual. Si ya tienes logotipo, imágenes y textos, perfecto, pero si no los tienes podemos ayudarte a crearlos."
+  }
+]
+export const faqsSeoMalaga = [
+  {
+    titulo: "¿Ofrecéis servicios de diseño web en Málaga?",
+    contenido: "Sí, AstracodeLAB ofrece servicios de diseño y desarrollo web en Málaga. Aunque nuestras oficinas están ubicadas en Barcelona, Valencia y Málaga, trabajamos con clientes de toda Málaga y España. Nos adaptamos a reuniones presenciales en Málaga o videollamadas según tu preferencia."
+  },
+
+  {
+    titulo: "¿Podemos reunirnos en persona en Málaga para hablar de mi proyecto web?",
+    contenido: "Por supuesto. Realizamos reuniones presenciales en Málaga para conocer tu proyecto en detalle. También ofrecemos videollamadas si prefieres un formato más flexible. Lo importante es entender tus necesidades y definir juntos los objetivos de tu página web."
+  },
+  {
+    titulo: "¿Trabajáis con empresas y autónomos de Málaga?",
+    contenido: "Sí, trabajamos con empresas, autónomos, startups y profesionales independientes de Málaga y toda la provincia. Tenemos experiencia en diversos sectores como  comercio local y servicios profesionales."
+  },
+  {
+    titulo: "¿Qué diferencia hay entre web corporativa y landing page?",
+    contenido: "Una web corporativa es un sitio completo para reflejar la imagen de tu marca, con secciones como Quiénes somos, Servicios o Contacto, optimizada para tener un diseño web elegante y profesional. Una landing page, en cambio, es una sola página específica enfocada en una acción concreta y un mensaje muy directo, ideal para campañas de marketing o promociones."
+  },
+  {
+    titulo: "¿Ofrece AstracodeLAB mantenimiento web en Málaga?",
+    contenido: "Sí, ofrecemos planes de mantenimiento y soporte web para empresas de Málaga. Esto incluye actualizaciones de seguridad, copias de seguridad, resolución de incidencias y modificaciones de contenido. Puedes consultar nuestros planes desde la sección de Mantenimiento y Soporte."
+  },
+  {
+    titulo: "¿Mi página web se verá bien en móviles y otros dispositivos?",
+    contenido: "Por supuesto, todas las páginas web que desarrollamos están completamente adaptadas para verse correctamente en móviles, tablets y ordenadores con diseño responsive. Esto es fundamental para el SEO y para la experiencia de tus usuarios."
+  },
+
+  {
+    titulo: "¿Incluye SEO local para aparecer en búsquedas de Málaga?",
+    contenido: "Sí, todas nuestras webs incluyen optimización SEO on-page básica. "
+  },
+
+  {
+    titulo: "¿Qué necesito para empezar mi proyecto web en Málaga?",
+    contenido: "Para empezar solo necesitas tener clara la idea de tu proyecto. En la reunión inicial definiremos juntos los objetivos, funcionalidades necesarias y el estilo visual. Si ya tienes logotipo, imágenes y textos, perfecto, pero si no los tienes podemos ayudarte a crearlos."
+  }
+]
+export const faqsSeoZaragoza = [
+  {
+    titulo: "¿Ofrecéis servicios de diseño web en Zaragoza?",
+    contenido: "Sí, AstracodeLAB ofrece servicios de diseño y desarrollo web en Zaragoza. Aunque nuestras oficinas están ubicadas en Barcelona,Zaragoza, Valencia y Málaga, trabajamos con clientes de toda Zaragoza y España. Nos adaptamos a reuniones presenciales en Zaragoza o videollamadas según tu preferencia."
+  },
+  {
+    titulo: "¿Trabajáis con empresas y autónomos de Zaragoza?",
+    contenido: "Sí, trabajamos con empresas, autónomos, startups y profesionales independientes de Zaragoza y toda la provincia. Tenemos experiencia en diversos sectores como  comercio local y servicios profesionales."
+  },
+  {
+    titulo: "¿Qué diferencia hay entre web corporativa y landing page?",
+    contenido: "Una web corporativa es un sitio completo para reflejar la imagen de tu marca, con secciones como Quiénes somos, Servicios o Contacto, optimizada para tener un diseño web elegante y profesional. Una landing page, en cambio, es una sola página específica enfocada en una acción concreta y un mensaje muy directo, ideal para campañas de marketing o promociones."
+  },
+  {
+    titulo: "¿Ofrece AstracodeLAB mantenimiento web en Zaragoza?",
+    contenido: "Sí, ofrecemos planes de mantenimiento y soporte web para empresas de Zaragoza. Esto incluye actualizaciones de seguridad, copias de seguridad, resolución de incidencias y modificaciones de contenido. Puedes consultar nuestros planes desde la sección de Mantenimiento y Soporte."
+  },
+  {
+    titulo: "¿Mi página web se verá bien en móviles y otros dispositivos?",
+    contenido: "Por supuesto, todas las páginas web que desarrollamos están completamente adaptadas para verse correctamente en móviles, tablets y ordenadores con diseño responsive. Esto es fundamental para el SEO y para la experiencia de tus usuarios."
+  },
+
+  {
+    titulo: "¿Incluye SEO local para aparecer en búsquedas de Zaragoza?",
+    contenido: "Sí, todas nuestras webs incluyen optimización SEO on-page básica. "
+  },
+
+  {
+    titulo: "¿Qué necesito para empezar mi proyecto web en Zaragoza?",
+    contenido: "Para empezar solo necesitas tener clara la idea de tu proyecto. En la reunión inicial definiremos juntos los objetivos, funcionalidades necesarias y el estilo visual. Si ya tienes logotipo, imágenes y textos, perfecto, pero si no los tienes podemos ayudarte a crearlos."
+  }
+]
+export const faqsSeoBarcelona = [
+  {
+    titulo: "¿Ofrecéis servicios de diseño web en Barcelona?",
+    contenido: "Sí, AstracodeLAB ofrece servicios de diseño y desarrollo web en Barcelona. Aunque nuestras oficinas están ubicadas en Barcelona,Valencia y Málaga, trabajamos con clientes de toda Barcelona y España. Nos adaptamos a reuniones presenciales en Barcelona o videollamadas según tu preferencia."
+  },
+  {
+    titulo: "¿Trabajáis con empresas y autónomos de Barcelona?",
+    contenido: "Sí, trabajamos con empresas, autónomos, startups y profesionales independientes de Barcelona y toda la provincia. Tenemos experiencia en diversos sectores como  comercio local y servicios profesionales."
+  },
+  {
+    titulo: "¿Qué diferencia hay entre web corporativa y landing page?",
+    contenido: "Una web corporativa es un sitio completo para reflejar la imagen de tu marca, con secciones como Quiénes somos, Servicios o Contacto, optimizada para tener un diseño web elegante y profesional. Una landing page, en cambio, es una sola página específica enfocada en una acción concreta y un mensaje muy directo, ideal para campañas de marketing o promociones."
+  },
+  {
+    titulo: "¿Ofrece AstracodeLAB mantenimiento web en Barcelona?",
+    contenido: "Sí, ofrecemos planes de mantenimiento y soporte web para empresas de Barcelona. Esto incluye actualizaciones de seguridad, copias de seguridad, resolución de incidencias y modificaciones de contenido. Puedes consultar nuestros planes desde la sección de Mantenimiento y Soporte."
+  },
+  {
+    titulo: "¿Mi página web se verá bien en móviles y otros dispositivos?",
+    contenido: "Por supuesto, todas las páginas web que desarrollamos están completamente adaptadas para verse correctamente en móviles, tablets y ordenadores con diseño responsive. Esto es fundamental para el SEO y para la experiencia de tus usuarios."
+  },
+
+  {
+    titulo: "¿Incluye SEO local para aparecer en búsquedas de Barcelona?",
+    contenido: "Sí, todas nuestras webs incluyen optimización SEO on-page básica. "
+  },
+
+  {
+    titulo: "¿Qué necesito para empezar mi proyecto web en Barcelona?",
+    contenido: "Para empezar solo necesitas tener clara la idea de tu proyecto. En la reunión inicial definiremos juntos los objetivos, funcionalidades necesarias y el estilo visual. Si ya tienes logotipo, imágenes y textos, perfecto, pero si no los tienes podemos ayudarte a crearlos."
+  }
+]
+
+

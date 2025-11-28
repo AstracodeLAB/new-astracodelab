@@ -1,0 +1,129 @@
+---
+import Layout from '../layouts/Layout.astro';
+import heroImgAccesible from '../images/accesibilidad.svg';
+import HeroSeo from '../layouts/components/HeroSeo.astro';
+import PorqNecesitoWebSeo from '../layouts/components/PorqNecesitoWebSeo.astro';
+import AdvantagesSection from '../layouts/components/AdvantagesSection.astro';
+import Charge from '../layouts/components/icons/Charge.astro';
+import User from '../layouts/components/icons/user.astro';
+import Search from '../layouts/components/icons/search.astro';
+import Comment from '../layouts/components/icons/comment.astro';
+import Chart from '../layouts/components/icons/chart.astro';
+import BannerCta from '../layouts/components/Banners/BannerCta.astro';
+import Services from '../layouts/components/Services.astro';
+import CardPregunta from '../layouts/components/Cards/CardPregunta.astro';
+import FaqsSection from '../layouts/components/FaqsSection.astro';
+import { faqsSeoCastellon } from '../layouts/components/accordeon/Faqs.js';
+import { schemaLocalCastellon } from '../data/faqsSeoCastellon.js';
+import avatar1 from '../images/avatar1.jpg';
+import avatar2 from '../images/avatar2.jpg';
+import avatar3 from '../images/avatar3.jpg';
+import CardTestimonio from '../layouts/components/Cards/CardTestimonio.astro';
+
+const title = 'Diseño web y desarrollo en Castellón | AstracodeLAB';
+const description =
+  'Diseño y desarrollo web en Castellón.Páginas web a medida para empresas y autónomos de Castellón. Primera consultoría gratuita.';
+const permalink = Astro.url.href;
+const image = 'https://astracodelab.com/og_diseño_web_ desarrollo_web _castellón.png';
+const robots = 'index, follow';
+---
+
+<script type='application/ld+json' set:html={JSON.stringify(schemaLocalCastellon)} />
+
+<Layout title={title} description={description} permalink={permalink} image={image} robots={robots}>
+  <main class='mainHome'>
+    <HeroSeo
+      title='Diseño y desarrollo web en Castellón'
+      subtitle='Creamos páginas web profesionales y accesibles.'
+      text='Ofrecemos soluciones web a medida ágiles y accesibles que reflejan tu marca o tu talento creativo. Con equipo en Castellón para clientes en toda España.'
+      image={heroImgAccesible}
+      alt='Ilustración de un ordenador portátil con una ventana web abierta y un botón de Click Here, acompañado de un cohete despegando.'
+    />
+    <PorqNecesitoWebSeo
+      title='¿Por qué tu negocio en Castellón necesita una página web?'
+      text='Hoy, tu cliente potencial en Castellón de la Plana decide en pocos segundos si confía en una marca o la descarta, a menudo desde la pantalla de su móvil. Este veredicto se basa, casi siempre, en la primera impresión que ofrece tu sitio web. Por eso, una página web profesional para tu negocio en Castellón ya no es un lujo.'
+    />
+    <AdvantagesSection
+      titulo='Qué ganas al elegir astracodelab como tu agencia web en Castellón'
+      descripcion='AstracodeLAB es una agencia de diseño y desarrollo web, con equipo en Castellón prestando servicio a clientes en toda España. Nuestra metodología fusiona el estudio de negocio, la creatividad y un proceso de trabajo transparente para ofrecerte una página web que inspira confianza y convierte visitas en oportunidades reales.'
+      advantages={[
+        {
+          iconoComponent: Charge,
+          titulo: 'Carga rápida',
+          descripcion:
+            'El visitante no se marcha antes de ver tu mensaje. Nos aseguramos de que tu web cargue en cuestión de segundos. La optimización del rendimiento web es clave.',
+        },
+        {
+          iconoComponent: User,
+          titulo: 'Diseño centrado en el usuario',
+          descripcion:
+            'Navegación sencilla y lectura cómoda. Nuestras webs son accesibles para todos, garantizando una experiencia positiva para cada visitante.',
+        },
+        {
+          iconoComponent: Search,
+          titulo: 'Contenido listo para buscadores',
+          descripcion:
+            'Mayor visibilidad en Google sin trucos ni sobre-optimización. Estructuramos el contenido y desarrollamos tu sitio con un código optimizado.',
+        },
+        {
+          iconoComponent: Chart,
+          titulo: 'Proyectos escalables y adaptables',
+          descripcion:
+            'Tu proyecto puede crecer. Añade una tienda online, sistemas de reservas o funcionalidades multilingües cuando lo necesites, asegurando la longevidad y relevancia de tu inversión.',
+        },
+        {
+          iconoComponent: Comment,
+          titulo: 'Acompañamiento cercano y personalizado',
+          descripcion:
+            'Desde el primer contacto hasta el lanzamiento y el soporte continuo, te acompañamos en cada etapa. Respondemos a tus mensajes, llamadas o mails siempre en tu horario y con la atención que mereces.',
+        },
+      ]}
+    />
+
+    <BannerCta
+      titulo='¿Listo para destacar?'
+      descripcion='Tanto si necesitas hacer una página web profesional en Castellón, lanzar un nuevo ecommerce para la provincia, o renovar tu web actual de negocio, astracodelab puede transformar tu idea en resultados concretos. Somos tu agencia de desarrollo web en Castellón de la Plana. Entendemos que cada proyecto es único y cada diseño que creamos tiene un propósito claro: impulsar tu crecimiento en el mercado local'
+      texto='Contacta con nosotros'
+      className='btnPrimaryLight'
+    />
+    <Services />
+    <section class='testimonial-section'>
+      <CardTestimonio
+        titulo='¿Aún tienes dudas?'
+        subtitulo='Quienes mejor hablan de nosotras son nuestros clientes'
+        testimonials={[
+          {
+            imagen: avatar1,
+            testimonial:
+              'Muy contenta con el trabajo de esta empresa. Les di el contacto para un familiar y ha quedado encantado. Estuvieron en todo momento en contacto, supieron plasmar sus ideas y, además, aportaron mucha creatividad al proyecto. También me dice que son encantadoras y que, desde el primer momento, ya sabía que estaba en buenas manos. Las volveré a recomendar sin duda.',
+            alt: 'Avatar de usuario. Ilustración 3D de un personaje con cabello morado en coletas, chaqueta amarilla y gafas de sol en la cabeza, sobre un fondo verde.',
+          },
+          {
+            imagen: avatar2,
+            testimonial:
+              'Ha sido genial trabajar con el equipo AstraCodeLab. Desde el principio han mostrado una gran profesionalidad y han cumplido con todo lo acordado y plazos propuestos.Su implicación en el proyecto ha hecho obtener un diseño de la web maravilloso. Nos encanta el resultado.Sin duda cuento con ellas para futuros trabajos.',
+            alt: 'Avatar de usuario. Ilustración 3D de un personaje con gorra celeste y camiseta azul, sobre un fondo verde.',
+          },
+          {
+            imagen: avatar3,
+            testimonial:
+              'Muy satisfecho con el resultado obtenido, la web que me han diseñado funciona estupendamente y a un precio muy competitivo. El trato recibido estupendo, no se puede ser más profesional.',
+            alt: 'Avatar de usuario. Ilustración 3D de un personaje con cabello pelirrojo y sudadera morada, sobre un fondo azul oscuro. ',
+          },
+        ]}
+      />
+    </section>
+    <div>
+      <CardPregunta
+        title='¿Tienes una idea de negocio en Castellón que no encaja en estos servicios, o no sabes por dónde empezar tu proyecto de diseño web?'
+        text='Cuéntanos tu proyecto y te guiaremos hacia la solución digital perfecta para tu marca. Como tu agencia web local de Castellón, estamos listos para ayudarte.'
+        buttonText='¿Hablamos?'
+        buttonHref='/contacto/'
+      />
+    </div>
+    <FaqsSection
+      titulo='Preguntas frecuentes sobre nuestros servicios de diseño web en Castellón'
+      faqs={faqsSeoCastellon}
+    />
+  </main>
+</Layout>
