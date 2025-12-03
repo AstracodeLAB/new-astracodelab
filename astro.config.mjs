@@ -5,7 +5,7 @@ import sitemap from '@astrojs/sitemap';
 
 
 export default defineConfig({
-  site:'https://astracodelab.com/',
+  site:'https://astracodelab.com',
   trailingSlash: 'always',
   integrations: [tailwind(), sitemap()],
 });
