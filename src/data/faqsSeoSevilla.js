@@ -40,8 +40,8 @@ export const schemaLocalSevilla = {
    
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": "40.4168",
-        "longitude": "-3.7038"
+        "latitude": "37.3886",
+        "longitude": "-5.9823"
       },
 
       "openingHoursSpecification": [

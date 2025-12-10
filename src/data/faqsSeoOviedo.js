@@ -40,8 +40,8 @@ export const schemaLocalOviedo= {
    
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": "40.4168",
-        "longitude": "-3.7038"
+        "latitude": "43.3603",
+        "longitude": "-5.8448"
       },
 
       "openingHoursSpecification": [

@@ -40,8 +40,8 @@ export const schemaLocalGranada= {
    
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": "40.4168",
-        "longitude": "-3.7038"
+        "latitude": "37.1882",
+        "longitude": "-3.6067"
       },
 
       "openingHoursSpecification": [
