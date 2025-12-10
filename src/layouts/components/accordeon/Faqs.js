@@ -464,7 +464,7 @@ export const faqsSeoMalaga = [
 export const faqsSeoZaragoza = [
   {
     titulo: "¿Ofrecéis servicios de diseño web en Zaragoza?",
-    contenido: "Sí, AstracodeLAB ofrece servicios de diseño y desarrollo web en Zaragoza. Aunque nuestras oficinas están ubicadas en Barcelona,Zaragoza, Valencia y Málaga, trabajamos con clientes de toda Zaragoza y España. Nos adaptamos a reuniones presenciales en Zaragoza o videollamadas según tu preferencia."
+    contenido: "Sí, AstracodeLAB ofrece servicios de diseño y desarrollo web en Zaragoza. Aunque nuestras oficinas están ubicadas en Barcelona,Zaragoza, Valencia y Málaga, trabajamos con clientes de toda Zaragoza y España."
   },
   {
     titulo: "¿Trabajáis con empresas y autónomos de Zaragoza?",
@@ -525,5 +525,163 @@ export const faqsSeoBarcelona = [
     contenido: "Para empezar solo necesitas tener clara la idea de tu proyecto. En la reunión inicial definiremos juntos los objetivos, funcionalidades necesarias y el estilo visual. Si ya tienes logotipo, imágenes y textos, perfecto, pero si no los tienes podemos ayudarte a crearlos."
   }
 ]
+export const faqsSeoMadrid = [
+  {
+    titulo: "¿Ofrecéis servicios de diseño web en Madrid?",
+    contenido: "Sí, AstracodeLAB ofrece servicios de diseño y desarrollo web en Madrid. Aunque nuestras oficinas están ubicadas en Barcelona,Valencia y Málaga, trabajamos con clientes de toda Madrid y España."
+  },
+  {
+    titulo: "¿Trabajáis con empresas y autónomos de Madrid?",
+    contenido: "Sí, trabajamos con empresas, autónomos, startups y profesionales independientes de Madrid y toda la provincia. Tenemos experiencia en diversos sectores como  comercio local y servicios profesionales."
+  },
+  {
+    titulo: "¿Qué diferencia hay entre web corporativa y landing page?",
+    contenido: "Una web corporativa es un sitio completo para reflejar la imagen de tu marca, con secciones como Quiénes somos, Servicios o Contacto, optimizada para tener un diseño web elegante y profesional. Una landing page, en cambio, es una sola página específica enfocada en una acción concreta y un mensaje muy directo, ideal para campañas de marketing o promociones."
+  },
+  {
+    titulo: "¿Ofrece AstracodeLAB mantenimiento web en Madrid?",
+    contenido: "Sí, ofrecemos planes de mantenimiento y soporte web para empresas de Madrid. Esto incluye actualizaciones de seguridad, copias de seguridad, resolución de incidencias y modificaciones de contenido. Puedes consultar nuestros planes desde la sección de Mantenimiento y Soporte."
+  },
+  {
+    titulo: "¿Mi página web se verá bien en móviles y otros dispositivos?",
+    contenido: "Por supuesto, todas las páginas web que desarrollamos están completamente adaptadas para verse correctamente en móviles, tablets y ordenadores con diseño responsive. Esto es fundamental para el SEO y para la experiencia de tus usuarios."
+  },
 
+  {
+    titulo: "¿Incluye SEO local para aparecer en búsquedas de Madrid?",
+    contenido: "Sí, todas nuestras webs incluyen optimización SEO on-page básica. "
+  },
 
+  {
+    titulo: "¿Qué necesito para empezar mi proyecto web en Madrid?",
+    contenido: "Para empezar solo necesitas tener clara la idea de tu proyecto. En la reunión inicial definiremos juntos los objetivos, funcionalidades necesarias y el estilo visual. Si ya tienes logotipo, imágenes y textos, perfecto, pero si no los tienes podemos ayudarte a crearlos."
+  }
+]
+export const faqsSeoSevilla = [
+  {
+    titulo: "¿Ofrecéis servicios de diseño web en Sevilla?",
+    contenido: "Sí, AstracodeLAB ofrece servicios de diseño y desarrollo web en Sevilla. Aunque nuestras oficinas están ubicadas en Barcelona,Valencia y Málaga, trabajamos con clientes de toda Sevilla y España."
+  },
+  {
+    titulo: "¿Trabajáis con empresas y autónomos de Sevilla?",
+    contenido: "Sí, trabajamos con empresas, autónomos, startups y profesionales independientes de Sevilla y toda la provincia. Tenemos experiencia en diversos sectores como  comercio local y servicios profesionales."
+  },
+  {
+    titulo: "¿Qué diferencia hay entre web corporativa y landing page?",
+    contenido: "Una web corporativa es un sitio completo para reflejar la imagen de tu marca, con secciones como Quiénes somos, Servicios o Contacto, optimizada para tener un diseño web elegante y profesional. Una landing page, en cambio, es una sola página específica enfocada en una acción concreta y un mensaje muy directo, ideal para campañas de marketing o promociones."
+  },
+  {
+    titulo: "¿Ofrece AstracodeLAB mantenimiento web en Sevilla?",
+    contenido: "Sí, ofrecemos planes de mantenimiento y soporte web para empresas de Sevilla. Esto incluye actualizaciones de seguridad, copias de seguridad, resolución de incidencias y modificaciones de contenido. Puedes consultar nuestros planes desde la sección de Mantenimiento y Soporte."
+  },
+  {
+    titulo: "¿Mi página web se verá bien en móviles y otros dispositivos?",
+    contenido: "Por supuesto, todas las páginas web que desarrollamos están completamente adaptadas para verse correctamente en móviles, tablets y ordenadores con diseño responsive. Esto es fundamental para el SEO y para la experiencia de tus usuarios."
+  },
+
+  {
+    titulo: "¿Incluye SEO local para aparecer en búsquedas de Sevilla?",
+    contenido: "Sí, todas nuestras webs incluyen optimización SEO on-page básica. "
+  },
+
+  {
+    titulo: "¿Qué necesito para empezar mi proyecto web en Sevilla?",
+    contenido: "Para empezar solo necesitas tener clara la idea de tu proyecto. En la reunión inicial definiremos juntos los objetivos, funcionalidades necesarias y el estilo visual. Si ya tienes logotipo, imágenes y textos, perfecto, pero si no los tienes podemos ayudarte a crearlos."
+  }
+]
+export const faqsSeoGranada = [
+  {
+    titulo: "¿Ofrecéis servicios de diseño web en Granada?",
+    contenido: "Sí, AstracodeLAB ofrece servicios de diseño y desarrollo web en Granada. Aunque nuestras oficinas están ubicadas en Barcelona,Valencia y Málaga, trabajamos con clientes de toda Sevilla y España."
+  },
+  {
+    titulo: "¿Trabajáis con empresas y autónomos de Granada?",
+    contenido: "Sí, trabajamos con empresas, autónomos, startups y profesionales independientes de Granada y toda la provincia. Tenemos experiencia en diversos sectores como  comercio local y servicios profesionales."
+  },
+  {
+    titulo: "¿Qué diferencia hay entre web corporativa y landing page?",
+    contenido: "Una web corporativa es un sitio completo para reflejar la imagen de tu marca, con secciones como Quiénes somos, Servicios o Contacto, optimizada para tener un diseño web elegante y profesional. Una landing page, en cambio, es una sola página específica enfocada en una acción concreta y un mensaje muy directo, ideal para campañas de marketing o promociones."
+  },
+  {
+    titulo: "¿Ofrece AstracodeLAB mantenimiento web en Granada?",
+    contenido: "Sí, ofrecemos planes de mantenimiento y soporte web para empresas de Granada. Esto incluye actualizaciones de seguridad, copias de seguridad, resolución de incidencias y modificaciones de contenido. Puedes consultar nuestros planes desde la sección de Mantenimiento y Soporte."
+  },
+  {
+    titulo: "¿Mi página web se verá bien en móviles y otros dispositivos?",
+    contenido: "Por supuesto, todas las páginas web que desarrollamos están completamente adaptadas para verse correctamente en móviles, tablets y ordenadores con diseño responsive. Esto es fundamental para el SEO y para la experiencia de tus usuarios."
+  },
+
+  {
+    titulo: "¿Incluye SEO local para aparecer en búsquedas de Granada?",
+    contenido: "Sí, todas nuestras webs incluyen optimización SEO on-page básica. "
+  },
+
+  {
+    titulo: "¿Qué necesito para empezar mi proyecto web en Granada?",
+    contenido: "Para empezar solo necesitas tener clara la idea de tu proyecto. En la reunión inicial definiremos juntos los objetivos, funcionalidades necesarias y el estilo visual. Si ya tienes logotipo, imágenes y textos, perfecto, pero si no los tienes podemos ayudarte a crearlos."
+  }
+]
+export const faqsSeoOviedo = [
+  {
+    titulo: "¿Ofrecéis servicios de diseño web en Oviedo?",
+    contenido: "Sí, AstracodeLAB ofrece servicios de diseño y desarrollo web en Oviedo. Aunque nuestras oficinas están ubicadas en Barcelona,Valencia y Málaga, trabajamos con clientes de toda Sevilla y España."
+  },
+  {
+    titulo: "¿Trabajáis con empresas y autónomos de Oviedo?",
+    contenido: "Sí, trabajamos con empresas, autónomos, startups y profesionales independientes de Oviedo y toda la provincia. Tenemos experiencia en diversos sectores como  comercio local y servicios profesionales."
+  },
+  {
+    titulo: "¿Qué diferencia hay entre web corporativa y landing page?",
+    contenido: "Una web corporativa es un sitio completo para reflejar la imagen de tu marca, con secciones como Quiénes somos, Servicios o Contacto, optimizada para tener un diseño web elegante y profesional. Una landing page, en cambio, es una sola página específica enfocada en una acción concreta y un mensaje muy directo, ideal para campañas de marketing o promociones."
+  },
+  {
+    titulo: "¿Ofrece AstracodeLAB mantenimiento web en Oviedo?",
+    contenido: "Sí, ofrecemos planes de mantenimiento y soporte web para empresas de Oviedo. Esto incluye actualizaciones de seguridad, copias de seguridad, resolución de incidencias y modificaciones de contenido. Puedes consultar nuestros planes desde la sección de Mantenimiento y Soporte."
+  },
+  {
+    titulo: "¿Mi página web se verá bien en móviles y otros dispositivos?",
+    contenido: "Por supuesto, todas las páginas web que desarrollamos están completamente adaptadas para verse correctamente en móviles, tablets y ordenadores con diseño responsive. Esto es fundamental para el SEO y para la experiencia de tus usuarios."
+  },
+
+  {
+    titulo: "¿Incluye SEO local para aparecer en búsquedas de Oviedo?",
+    contenido: "Sí, todas nuestras webs incluyen optimización SEO on-page básica. "
+  },
+
+  {
+    titulo: "¿Qué necesito para empezar mi proyecto web en Oviedo?",
+    contenido: "Para empezar solo necesitas tener clara la idea de tu proyecto. En la reunión inicial definiremos juntos los objetivos, funcionalidades necesarias y el estilo visual. Si ya tienes logotipo, imágenes y textos, perfecto, pero si no los tienes podemos ayudarte a crearlos."
+  }
+]
+export const faqsSeoOrense = [
+  {
+    titulo: "¿Ofrecéis servicios de diseño web en Orense?",
+    contenido: "Sí, AstracodeLAB ofrece servicios de diseño y desarrollo web en Orense. Aunque nuestras oficinas están ubicadas en Barcelona,Valencia y Málaga, trabajamos con clientes de toda Sevilla y España."
+  },
+  {
+    titulo: "¿Trabajáis con empresas y autónomos de Orense?",
+    contenido: "Sí, trabajamos con empresas, autónomos, startups y profesionales independientes de Orense y toda la provincia. Tenemos experiencia en diversos sectores como  comercio local y servicios profesionales."
+  },
+  {
+    titulo: "¿Qué diferencia hay entre web corporativa y landing page?",
+    contenido: "Una web corporativa es un sitio completo para reflejar la imagen de tu marca, con secciones como Quiénes somos, Servicios o Contacto, optimizada para tener un diseño web elegante y profesional. Una landing page, en cambio, es una sola página específica enfocada en una acción concreta y un mensaje muy directo, ideal para campañas de marketing o promociones."
+  },
+  {
+    titulo: "¿Ofrece AstracodeLAB mantenimiento web en Orense?",
+    contenido: "Sí, ofrecemos planes de mantenimiento y soporte web para empresas de Orense. Esto incluye actualizaciones de seguridad, copias de seguridad, resolución de incidencias y modificaciones de contenido. Puedes consultar nuestros planes desde la sección de Mantenimiento y Soporte."
+  },
+  {
+    titulo: "¿Mi página web se verá bien en móviles y otros dispositivos?",
+    contenido: "Por supuesto, todas las páginas web que desarrollamos están completamente adaptadas para verse correctamente en móviles, tablets y ordenadores con diseño responsive. Esto es fundamental para el SEO y para la experiencia de tus usuarios."
+  },
+
+  {
+    titulo: "¿Incluye SEO local para aparecer en búsquedas de Orense?",
+    contenido: "Sí, todas nuestras webs incluyen optimización SEO on-page básica. "
+  },
+
+  {
+    titulo: "¿Qué necesito para empezar mi proyecto web en Orense?",
+    contenido: "Para empezar solo necesitas tener clara la idea de tu proyecto. En la reunión inicial definiremos juntos los objetivos, funcionalidades necesarias y el estilo visual. Si ya tienes logotipo, imágenes y textos, perfecto, pero si no los tienes podemos ayudarte a crearlos."
+  }
+]
