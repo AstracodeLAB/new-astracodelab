@@ -1,0 +1,288 @@
+@use 'sass:map';
+@use './variables.scss' as *;
+
+.index-blog{
+  background-image: url('/src/images/backgroundWhiteB.jpg');
+  background-repeat: no-repeat;
+  background-size: cover; // llena todo el ancho SIEMPRE
+  background-position: center top; // centra la imagen
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $text-bg-color;
+
+  @media (max-width: 48rem) {
+    background-size: auto; // no fuerza escalado
+    background-position: center top; // muestra solo el trozo visible
+  }
+  @media (max-width: 90rem) {
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+.container-blog {
+  border-radius: 10px;
+  color: $text-bg-white;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 1.875rem 1.25rem 1.875rem 1.25rem;
+  
+  @media (min-width: 48rem) {
+    padding: 3.75rem 7.5rem;
+  }
+
+  @media (min-width: 64rem) {
+    max-width: 54rem;
+    padding: 5rem;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 90rem) {
+    max-width: 70rem;
+  }
+}
+
+.container-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin-top: 2.5rem;
+}
+
+.post-card {
+  background-color: $cardWhite;
+  box-shadow: $shadow;
+  border-radius: 15px;
+  
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  font-size: map.get($Body-mobile, 'font-size');
+  line-height: map.get($Body-mobile, 'line-height');
+  font-weight: map.get($Body-mobile, 'font-weight');
+  letter-spacing: map.get($Body-mobile, 'letter-spacing');
+
+  @media (min-width: 48rem) {
+    
+    font-size: map.get($Body-tablet, 'font-size');
+    line-height: map.get($Body-tablet, 'line-height');
+    font-weight: map.get($Body-tablet, 'font-weight');
+    letter-spacing: map.get($Body-tablet, 'letter-spacing');
+  }
+
+  @media (min-width: 64rem) {
+   
+    height: 100%;
+    font-size: map.get($Body-desktop, 'font-size');
+    line-height: map.get($Body-desktop, 'line-height');
+    font-weight: map.get($Body-desktop, 'font-weight');
+    letter-spacing: map.get($Body-desktop, 'letter-spacing');
+  }
+ 
+
+}
+
+.blog-grid {
+  @media screen and (min-width: 64rem) {
+    display: grid;
+    /* Crea columnas automáticas de mínimo 300px. Se ajusta solo al móvil */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    
+  }
+ 
+}
+.blog-card-content {
+  padding: 0.8rem 1.25rem 1.25rem 1.25rem;
+  @media (min-width: 64rem) {
+    padding: 1rem 3rem 3rem 3rem;
+    
+  }
+  
+}
+.blog-card-img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.blog-card-text {
+  margin-top: 0.625rem;
+  margin-bottom: 1.25rem;
+ 
+}
+
+.pagination-blog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 1rem;
+  
+  @media (min-width: 48rem) {
+    font-size: map.get($Button-tablet, 'font-size');
+    line-height: map.get($Button-tablet, 'line-height');
+    font-weight: map.get($Button-tablet, 'font-weight');
+    letter-spacing: map.get($Button-tablet, 'letter-spacing');
+  }
+  @media (min-width: 64rem) {
+    font-size: map.get($Button-desktop, 'font-size');
+    line-height: map.get($Button-desktop, 'line-height');
+    font-weight: map.get($Button-desktop, 'font-weight');
+    letter-spacing: map.get($Button-desktop, 'letter-spacing');
+  }
+  
+}
+
+.pag-btn {
+  color: $blue-primary;
+  cursor: pointer;
+ display: flex;
+  align-items: center;
+  transition: color 0.3s ease, opacity 0.3s ease;
+  &:hover {
+    color: $blue-dark;
+    opacity: 0.85; // cambio sutil en el hover
+    
+  }
+  &:active {
+    opacity: 0.65; // feedback de clic, sin moverse
+  }
+ 
+}
+
+.disabled {
+  color: rgba(46, 30, 82, 0.95);
+  
+ display: flex;
+  align-items: center;
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+///clases postss
+
+.post-detail {
+  background-image: url('/src/images/backgroundWhiteB.jpg');
+  background-repeat: no-repeat;
+  background-size: cover; // llena todo el ancho SIEMPRE
+  background-position: center top; // centra la imagen
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (max-width: 48rem) {
+    background-size: auto; // no fuerza escalado
+    background-position: center top; // muestra solo el trozo visible
+  }
+  @media (max-width: 90rem) {
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+.container-post-detail {
+  padding: 1.875rem 1.25rem 1.875rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: $text-bg-color;
+  font-size: map.get($Body-mobile, 'font-size');
+  line-height: map.get($Body-mobile, 'line-height');
+  font-weight: map.get($Body-mobile, 'font-weight');
+  letter-spacing: map.get($Body-mobile, 'letter-spacing');
+  @media (min-width: 48rem) {
+    padding: 3.75rem 7.5rem;
+    font-size: map.get($Body-tablet, 'font-size');
+    line-height: map.get($Body-tablet, 'line-height');
+    font-weight: map.get($Body-tablet, 'font-weight');
+    letter-spacing: map.get($Body-tablet, 'letter-spacing');
+  }
+
+  @media (min-width: 64rem) {
+    max-width: 54rem;
+    padding: 5rem;
+    margin: 0 auto;
+    font-size: map.get($Body-desktop, 'font-size');
+    line-height: map.get($Body-desktop, 'line-height');
+    font-weight: map.get($Body-desktop, 'font-weight');
+    letter-spacing: map.get($Body-desktop, 'letter-spacing');
+  }
+
+  
+  
+}
+
+.post-detail-image {
+  width: 100%;
+  border-radius: 15px;
+  margin-top: 1.25rem;
+}
+
+/////
+/// 
+.post-content {
+  color: $text-bg-color;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.post-content h2 {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.post-content h3 {
+  margin-top: 2rem;
+  font-size: 1.4rem;
+}
+
+.post-content p {
+  margin-bottom: 1.2rem;
+  color: #444;
+}
+
+.post-content ul,
+.post-content ol {
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.post-content li {
+  margin-bottom: 0.6rem;
+}
+
+.post-content strong {
+  color: $text-bg-color;
+}
+
+.post-content a {
+  color: var(--color-primary, $blue-primary);
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+.post-content a:hover {
+  color: var(--color-primary-dark, #1e40af);
+  text-decoration-color: transparent;
+}
+
+.post-content a:focus-visible {
+  outline: 2px solid var(--color-primary, #2563eb);
+  outline-offset: 2px;
+}

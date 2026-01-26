@@ -1,0 +1,66 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { posts } from '../../data/posts.js';
+import TitleSecondary from '../../layouts/components/Titles/TitleSecondary.astro';
+import Buttons from '../../layouts/components/Buttons/Buttons.astro';
+
+export async function getStaticPaths() {
+  // LOG 1: Ver si el archivo JS se está importando con datos
+  console.log("¿Hay posts en la data?:", posts ? posts.length : "No se lee el archivo");
+
+  const paths = posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+
+  // LOG 2: Ver exactamente qué URLs está intentando crear Astro
+  console.log("URLs que Astro está intentando crear:", paths.map(p => `/blog/${p.params.slug}`));
+
+  return paths;
+}
+
+// 2. Definimos el tipo para que TS no se queje (Opcional pero recomendado)
+interface Props {
+  post: {
+    id: string;
+    slug: string;
+    title: string;
+    excerpt: string;
+    content: string;
+    image: string;
+    date: string;
+  };
+}
+
+// 3. Recogemos las props DESPUÉS de definir getStaticPaths
+const { post } = Astro.props;
+console.log("Renderizando la página de:", post?.title);
+
+// 4. Ahora ya puedes usar 'post' con seguridad
+const title = `${post.title} | Astracodelab`;
+const description = post.excerpt;
+const permalink = Astro.url.href;
+const robots = 'index, follow';
+
+---
+
+<Layout title={title} description={description} permalink={permalink} robots={robots}>
+  <main class="post-detail">
+    <div class="container-post-detail">
+      <Buttons className="linkPrimary" href="/blog/1/">← Volver al listado</Buttons>
+      <section class="header-post-detail">
+        <span class="date">{post.date}</span>
+        <TitleSecondary text={post.title} />
+        <img src={post.image} alt={post.title} class="post-detail-image" />
+      </section>
+
+      <section class="content">
+        {/* Renderiza el texto que pongas en el JS */}
+        <div class="post-content" set:html={post.content} />
+      </section>
+    </div>
+
+  </main>
+</Layout>
+
+
