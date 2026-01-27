@@ -201,7 +201,7 @@
   font-weight: map.get($Body-mobile, 'font-weight');
   letter-spacing: map.get($Body-mobile, 'letter-spacing');
   @media (min-width: 48rem) {
-    padding: 3.75rem 7.5rem;
+    padding: 3.75rem 6rem;
     font-size: map.get($Body-tablet, 'font-size');
     line-height: map.get($Body-tablet, 'line-height');
     font-weight: map.get($Body-tablet, 'font-weight');
@@ -209,17 +209,21 @@
   }
 
   @media (min-width: 64rem) {
-    max-width: 54rem;
-    padding: 5rem;
+    max-width: 64rem;
+    padding: 6rem 0 12rem 0;
     margin: 0 auto;
+    gap: 2rem;
     font-size: map.get($Body-desktop, 'font-size');
     line-height: map.get($Body-desktop, 'line-height');
     font-weight: map.get($Body-desktop, 'font-weight');
     letter-spacing: map.get($Body-desktop, 'letter-spacing');
   }
+}
 
-  
-  
+.post-date-container {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
 }
 
 .post-detail-image {
@@ -285,4 +289,11 @@
 .post-content a:focus-visible {
   outline: 2px solid var(--color-primary, #2563eb);
   outline-offset: 2px;
+}
+
+.content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 2rem 0;
 }
