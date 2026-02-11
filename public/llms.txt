@@ -1,0 +1,41 @@
+# AstracodeLAB
+
+> Agencia de diseño y desarrollo web en España fundada y dirigida por mujeres desarrolladoras. Especialistas en Astro.js, React, WordPress headless y soluciones e-commerce. Oficinas en Barcelona, Castellón y Málaga con servicio remoto en toda España.
+
+AstracodeLAB ofrece servicios de desarrollo web profesional orientados a pymes y autónomos que buscan una presencia digital moderna, rápida y optimizada para SEO. Utilizamos tecnologías de última generación como Astro.js, React, WordPress, WooCommerce y Shopify para crear sitios web de alto rendimiento.
+
+## Información de la Empresa
+
+- Ubicaciones: Barcelona, Castellón, Málaga
+- Cobertura: Toda España (servicio remoto)
+- Especialización: Pymes y autónomos
+- Tecnologías principales: Astro.js, React, WordPress, WooCommerce, shopify
+
+## Páginas Principales
+
+- [Inicio](https://astracodelab.com/): Página principal de AstracodeLAB
+- [Sobre Nosotras](https://astracodelab.com/sobre-nosotras/): Quiénes somos y nuestra filosofía
+- [Contacto](https://astracodelab.com/contacto/): Formulario de contacto y solicitud de presupuesto
+
+## Servicios
+
+- [Diseño Web](https://astracodelab.com/servicios/diseno-web/): Diseño web profesional y responsive
+- [Web Corporativa](https://astracodelab.com/servicios/web-corporativa/): Páginas web para empresas y negocios
+- [Tienda Online](https://astracodelab.com/servicios/tienda-online/): E-commerce y venta online
+- [Landing Page](https://astracodelab.com/servicios/landing-page/): Páginas de aterrizaje optimizadas para conversión
+- [Rediseño Web](https://astracodelab.com/servicios/redisenio-web/): Renovación y modernización de sitios existentes
+- [Funcionalidades y Optimización Web](https://astracodelab.com/servicios/funcionalidades-optimizacion-web/): Mejoras de rendimiento y funcionalidades avanzadas
+- [Mantenimiento Web](https://astracodelab.com/servicios/mantenimiento-web/): Soporte técnico y mantenimiento continuo
+- [Hosting y Dominio](https://astracodelab.com/servicios/hosting-dominio/): Alojamiento web y gestión de dominios
+- [Web Multilingüe](https://astracodelab.com/servicios/web-multilingue/): Sitios web en varios idiomas
+- [Sistemas de Reservas](https://astracodelab.com/servicios/sistemas-de-reservas/): Integración de sistemas de reservas online
+- [Accesibilidad Web](https://astracodelab.com/servicios/accesibilidad-web/): Webs accesibles según normativa WCAG
+- [Cartas Digitales para Restaurantes](https://astracodelab.com/servicios/cartas-digitales-restaurantes/): Menús digitales para hostelería
+
+## Contacto
+
+- Web: https://astracodelab.com
+- Email: info@astracodelab.com
+- LinkedIn: https://linkedin.com/company/astracodelab
+- Instagram: https://instagram.com/astracodelab
+
