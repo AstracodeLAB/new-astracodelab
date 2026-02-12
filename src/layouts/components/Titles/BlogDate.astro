@@ -1,0 +1,6 @@
+---
+const { text, className = '', description } = Astro.props;
+---
+
+<p class={`text ${className}`}>{text}</p>
+{description && <p class={`description ${className}`}>{description}</p>}
