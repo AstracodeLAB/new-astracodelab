@@ -1,7 +1,7 @@
 ---
 title: "¿Cuánto cuesta una página web en España en 2026? Guía de precios actualizada"
 excerpt: "El precio medio de una página web profesional en España oscila entre 800€ y 15.000€. Descubre qué determina el coste y cómo evitar sorpresas."
-image: "/src/images/blog-cuanto-cuesta-una-web.png"
+image: "/src/images/blog_cuanto_cuesta_una_web.png"
 date: 2026-02-18
 ---
 

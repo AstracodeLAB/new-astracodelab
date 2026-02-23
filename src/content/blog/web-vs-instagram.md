@@ -1,12 +1,12 @@
 ---
 title: "¿Necesito una web si ya tengo Instagram?"
 excerpt: "¿Es suficiente con Instagram para tu negocio? Aunque es ideal para conectar, una web te ofrece visibilidad en Google, un canal de venta directo y la capacidad de construir un activo a largo plazo. Te contamos cuándo y por qué dar el salto."
-image: "/src/images/blog-web-vs-insta.jpg"
+image: "/src/images/blog_web_vs_insta.jpg"
 date: 2026-02-18
 ---
 
 
-<!-- no toc -->
+
 **Índice de la Guía:**
 
  [El mito de "Instagram es suficiente" para una pyme](#el-mito-de-instagram-es-suficiente-para-una-pyme)
