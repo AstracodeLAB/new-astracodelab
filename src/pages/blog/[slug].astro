@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import TitleSecondary from '../../layouts/components/Titles/TitleSecondary.astro';
 import Buttons from '../../layouts/components/Buttons/Buttons.astro';
+import { Image } from 'astro:assets';
 import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -12,9 +13,7 @@ export async function getStaticPaths() {
   }));
 }
 
-const refererUrl = Astro.request.headers.get('referer');
-const isFromBlog = refererUrl && refererUrl.includes(Astro.site.pathname + 'blog');
-const backUrl = isFromBlog ? refererUrl : '/blog/';
+const backUrl = '/blog/';
 
 const { post } = Astro.props;
 const { Content } = await render(post);
@@ -30,22 +29,22 @@ const blogSchema = {
   '@type': 'BlogPosting',
   headline: post.data.title,
   description: post.data.excerpt,
-  datePublished: post.data.date, 
-  dateModified: post.data.updatedDate || post.data.date,
+  datePublished: post.data.date.toISOString(),
+  dateModified: post.data.updatedDate?.toISOString() || post.data.date.toISOString(),
   author: {
     '@type': 'Organization',
-    name: 'AstracodeLAB',
+    name: 'Astracodelab',
     url: 'https://astracodelab.com',
   },
   publisher: {
     '@type': 'Organization',
-    name: 'AstracodeLAB',
+    name: 'Astracodelab',
     logo: {
       '@type': 'ImageObject',
       url: 'https://astracodelab.com/logo.png',
     },
   },
-  image: post.data.image || 'https://astracodelab.com/og-default.jpg',
+  image: post.data.cover.src,
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': permalink,
@@ -57,6 +56,7 @@ const blogSchema = {
   <main class='post-detail'>
     <div class='container-post-detail'>
       <Buttons className='linkPrimary' href={backUrl}>← Volver al listado</Buttons>
+
       <section class='header-post-detail'>
         <div class='post-date-container'>
           <span class='date'>
@@ -65,12 +65,17 @@ const blogSchema = {
         </div>
 
         <TitleSecondary text={post.data.title} />
-        <img src={post.data.image} alt={post.data.title} class='post-detail-image' />
+
+        <Image
+          src={post.data.cover}
+          alt={post.data.coverAlt}
+          class='post-detail-image'
+        />
       </section>
 
       <section class='content'>
         <div class='post-content'>
-          <Content />
+          <Content components={{ Image }} />
         </div>
       </section>
     </div>

@@ -1,0 +1,142 @@
+---
+title: "Qué preparar antes de encargar tu web y evitar gastos innecesarios"
+excerpt: "¿Cuántas páginas necesitas? ¿Tienes los textos? ¿Y el logo? Si no puedes responder a estas preguntas, aún no estás listo para pedir presupuesto. "
+cover: "/blog/requisitos-encargar-web/blog_checklist.jpg"
+coverAlt: "Checklist para encargar una página web"
+date: 2026-02-12
+---
+
+
+## Guía completa: Qué preparar antes de encargar tu web (y evitar gastos innecesarios)
+
+Dar el paso de digitalizar tu negocio es una de las decisiones más rentables que puedes tomar, pero también una de las que más dudas genera. A menudo, la frustración al contratar una web no viene de la programación, sino de no haber definido bien los cimientos antes de empezar.
+
+Imagina que quieres construir una casa. Antes de llamar al constructor, necesitas saber cuántas habitaciones quieres, en qué terreno vas a edificar y qué presupuesto tienes. Con una web ocurre lo mismo. Preparar estos elementos no sólo te ahorrará dinero, sino que permitirá que tu sitio sea una herramienta de venta y no un simple escaparate invisible.
+
+<!-- no toc -->
+**Índice de la Guía:**
+
+ [Define el propósito real de tu sitio web](#1-define-el-propósito-real-de-tu-sitio-web)
+
+ [El contenido: El alma de tu proyecto](#2-el-contenido-el-alma-de-tu-proyecto)
+
+ [Aspectos técnicos básicos](#3-aspectos-técnicos-básicos)
+
+ [Referencias y competencia](#4-referencias-y-competencia)
+
+ [El presupuesto y las expectativas](#5-el-presupuesto-y-las-expectativas)
+
+ [Preguntas Frecuentes (FAQ)](#preguntas-frecuentes-faq)
+
+ [El siguiente paso](#el-siguiente-paso)
+
+## 1. Define el propósito real de tu sitio web 
+
+No todas las webs sirven para lo mismo. Un error común entre pymes es querer "estar en internet" sin un objetivo claro. Para que tu inversión retorne, debes decidir cuál será la función principal de tu portal:
+
+- **Generar confianza (Web corporativa):** Es tu tarjeta de visita digital. Ideal para servicios profesionales donde el cliente busca referencias.
+- **Conseguir contactos (Captación de leads):** Diseñada para que el usuario rellene un formulario o llame por teléfono.
+- **Venta directa (E-commerce):** Una tienda online para gestionar pedidos y pagos de forma automatizada.
+
+Según un estudio de Top Design Firms, el 50% de los consumidores cree que el diseño de la web es crucial para la confianza en la marca. Tener claro tu objetivo ayuda a que ese diseño trabaje para ti desde el primer día.
+
+**Consejo de Astracodelab:** No intentes que tu web haga todo a la vez desde el principio. Es mejor empezar con una estructura sólida que resuelva tu necesidad principal y escalarla con nuevas funcionalidades a medida que tu negocio crezca. [Descubre nuestro desarrollo web a medida](/servicios/diseno-web/)
+
+
+
+## 2. El contenido: El alma de tu proyecto
+
+El mayor cuello de botella en el desarrollo de una web suele ser el contenido. Sin textos ni imágenes, el diseño es solo una carcasa vacía.
+
+### Los textos (Copywriting) 
+
+Debes preparar, al menos, la información básica de las páginas principales:
+
+- **Inicio:** ¿Qué problema resuelves y a quién ayudas?
+- **Servicios:** Detalla qué ofreces de forma clara, huyendo de tecnicismos.
+- **Sobre nosotros:** Humaniza tu marca. Quiénes sois y por qué hacéis lo que hacéis.
+
+  <div class="content-img-box">
+    <img src="/blog/requisitos-encargar-web/blog_ux_ui.jpg" alt="posicionamiento, ux-ui diseño web" class="content-img-fixed" />
+  </div>
+
+### Identidad visual 
+
+Necesitarás un logotipo en alta resolución y fotografías de calidad. Según Adobe, el 38% de las personas dejarán de interactuar con un sitio web si el contenido o el diseño no son atractivos. Si no tienes fotos profesionales, es preferible invertir en una sesión que usar imágenes de stock genéricas que restan autenticidad.
+
+Tener estos materiales listos agiliza los plazos de entrega y asegura que el resultado final sea coherente con tu marca. [Conoce nuestro servicio de rediseño web](/servicios/redisenio-web/)
+
+
+
+## 3. Aspectos técnicos básicos 
+
+Para que tu web exista, necesita "vivir" en algún sitio y tener una dirección. Aquí es donde entran el dominio y el hosting.
+
+### El Dominio 
+
+Es tu dirección en internet (ej. www.tunombre.com). Debe ser corto, fácil de recordar y, preferiblemente, sin guiones ni caracteres extraños.
+
+### El Hosting 
+
+Es el "local" donde guardas tu web. Un hosting de calidad garantiza que tu página no se caiga y que cargue rápido. La velocidad es vital: Google Search Central confirma que la experiencia de página (incluida la velocidad) es un factor determinante para el posicionamiento.
+
+| Concepto    | Analogía               | ¿Qué es en realidad?                     | ¿Cada cuánto se paga? |
+| ----------- | ---------------------- | ---------------------------------------- | --------------------- |
+| **Dominio** | El rótulo de tu tienda | El nombre único de tu web                | Anual                 |
+| **Hosting** | El local físico        | El servidor donde se alojan los archivos | Mensual / Anual       |
+
+Contar con una infraestructura técnica moderna permite que tu negocio sea escalable sin complicaciones técnicas. [Descubre nuestro servicio de hosting y mantenimiento](/servicios/mantenimiento-web/)
+
+
+
+## 4. Referencias y competencia 
+
+No se trata de copiar, sino de entender qué funciona en tu sector y qué te gusta visualmente. Preparar una lista de 3 o 4 webs que te gusten (y explicar por qué) ayuda mucho a tu equipo de desarrollo.
+
+Fíjate en:
+
+- La disposición de los menús.
+- El uso de los colores.
+- Cómo presentan sus productos o servicios.
+
+Igualmente, analiza a tu competencia directa. ¿Qué están haciendo bien? ¿En qué fallan? Identificar sus carencias es tu oportunidad para destacar.
+
+En Astracodelab analizamos tu competencia para ofrecerte soluciones técnicas que te den una ventaja competitiva real.
+
+
+## 5. El presupuesto y las expectativas
+
+Es fundamental ser realista con la inversión. Una web "barata" suele salir cara a largo plazo porque no está optimizada, no es segura o no se puede ampliar.
+
+Muchos autónomos caen en el error de usar plataformas "hazlo tú mismo" que parecen sencillas, pero que a menudo ofrecen un rendimiento pobre y limitan el crecimiento SEO. Invertir en tecnologías de alto rendimiento, como arquitecturas headless o Astro.js, asegura que tu web vuele y sea compatible con los estándares de la W3C.
+
+Recuerda que tu web no es un gasto, sino un activo que trabaja 24/7 para tu negocio. Definir un presupuesto claro permite que los profesionales te propongan la mejor solución técnica para tu rango de inversión.
+
+
+## Preguntas Frecuentes (FAQ) 
+
+### ¿Cuánto tiempo se tarda en crear una web profesional?
+
+El plazo medio para una web corporativa estándar suele oscilar entre 4 y 8 semanas. Este tiempo depende directamente de la rapidez con la que el cliente entregue los contenidos y la complejidad de las funcionalidades requeridas.
+
+### ¿Necesito saber programación para gestionar mi web una vez terminada?
+
+No, si la web está bien construida. En Astracodelab entregamos paneles de gestión intuitivos para que cualquier autónomo o pyme pueda actualizar textos, imágenes o productos sin tocar una sola línea de código. Si prefieres centrarte en tu negocio y delegar esta tarea, nosotras podemos encargarnos de mantener y actualizar todo el contenido por ti.
+
+### ¿Mi web aparecerá en Google nada más publicarse?
+
+La indexación de una web nueva puede tardar desde unos días hasta un par de semanas. Para aparecer en las primeras posiciones, es necesario trabajar una estrategia de SEO continuo y optimización técnica desde el desarrollo inicial.
+
+<div class="consejo-astracodelab">
+
+## El siguiente paso
+
+Preparar tu proyecto web con antelación es la mejor forma de garantizar que el resultado final supere tus expectativas. Tener claros tus objetivos, tus textos y tu identidad visual no solo facilita el trabajo del desarrollador, sino que te sitúa en una posición de ventaja competitiva.
+
+En Astracodelab, nos especializamos en traducir tus necesidades de negocio a soluciones técnicas de alto rendimiento que tus clientes (y Google) adorarán.
+
+**¿Tienes ya una idea para tu próxima web?** cuéntanosla  y te ayudaremos a darle forma con un enfoque cercano, profesional y orientado a resultados.
+
+[Contacta con nosotros hoy mismo](/contacto/)
+
+</div>

@@ -2,7 +2,7 @@
 @use './variables.scss' as *;
 
 .index-blog{
-  background-image: url('/src/images/backgroundWhiteB.jpg');
+  background-image: url('../images/backgroundWhiteB.jpg');
   background-repeat: no-repeat;
   background-size: cover; // llena todo el ancho SIEMPRE
   background-position: center top; // centra la imagen
@@ -187,7 +187,7 @@
 ///clases postss
 
 .post-detail {
-  background-image: url('/src/images/backgroundWhiteB.jpg');
+  background-image: url('../images/backgroundWhiteB.jpg');
   background-repeat: no-repeat;
   background-size: cover; // llena todo el ancho SIEMPRE
   background-position: center top; // centra la imagen
@@ -396,7 +396,7 @@
   overflow: hidden;
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.92) 0%, rgba(243, 241, 255, 0.88) 100%),
-    url('/src/images/backgroundWhiteC.jpg') no-repeat center center / cover;
+    url('../images/backgroundWhiteC.jpg') no-repeat center center / cover;
   box-shadow: $shadow;
   border: 1px solid rgba($blue-primary, 0.12);
 

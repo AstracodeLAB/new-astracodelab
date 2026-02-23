@@ -1,7 +1,8 @@
 ---
 title: "¿Necesito una web si ya tengo Instagram?"
 excerpt: "¿Es suficiente con Instagram para tu negocio? Aunque es ideal para conectar, una web te ofrece visibilidad en Google, un canal de venta directo y la capacidad de construir un activo a largo plazo. Te contamos cuándo y por qué dar el salto."
-image: "/src/images/blog_web_vs_insta.jpg"
+cover: "./blog_web_vs_insta.jpg"
+coverAlt: "Comparativa entre Instagram y una página web propia"
 date: 2026-02-18
 ---
 
@@ -85,7 +86,6 @@ Muchos autónomos caen en trampas invisibles que frenan su crecimiento:
 - **Falta de analítica real:** En Instagram ves "likes", pero en una web ves qué secciones interesan más, cuánto tiempo pasan leyendo y dónde abandonan el proceso de compra.
 
 - **Ignorar la accesibilidad:** Las redes sociales no siempre cumplen con los estándares de accesibilidad para personas con discapacidad visual o motriz, algo que en una web propia (bajo estándares de la [W3C](https://www.w3.org/)) puedes controlar para no perder ni un solo cliente.
-
 
 
 ## Cómo conviven Instagram y tu página web 

@@ -36,7 +36,7 @@ const robots = 'index, follow';
           postsData &&
             postsData.map((post) => (
               <article class='post-card'>
-                <img src={post.data.image} alt={post.data.title} class='blog-card-img' />
+                <img src={post.data.cover.src} alt={post.data.coverAlt} class='blog-card-img' />
                 <div class='blog-card-content'>
                   <Subtitle text={post.data.title} />
                   <p class='blog-card-text'>{post.data.excerpt}</p>
