@@ -9,13 +9,14 @@ AstracodeLAB ofrece servicios de desarrollo web profesional orientados a pymes y
 - Ubicaciones: Barcelona, Castellón, Málaga
 - Cobertura: Toda España (servicio remoto)
 - Especialización: Pymes y autónomos
-- Tecnologías principales: Astro.js, React, WordPress, WooCommerce, shopify
+- Tecnologías principales: Astro.js, React, WordPress, WooCommerce, Shopify
 
 ## Páginas Principales
 
 - [Inicio](https://astracodelab.com/): Página principal de AstracodeLAB
 - [Sobre Nosotras](https://astracodelab.com/sobre-nosotras/): Quiénes somos y nuestra filosofía
 - [Contacto](https://astracodelab.com/contacto/): Formulario de contacto y solicitud de presupuesto
+- [Blog](https://astracodelab.com/blog/): Artículos sobre desarrollo web, precios y estrategia digital
 
 ## Servicios
 
@@ -31,11 +32,34 @@ AstracodeLAB ofrece servicios de desarrollo web profesional orientados a pymes y
 - [Sistemas de Reservas](https://astracodelab.com/servicios/sistemas-de-reservas/): Integración de sistemas de reservas online
 - [Accesibilidad Web](https://astracodelab.com/servicios/accesibilidad-web/): Webs accesibles según normativa WCAG
 - [Cartas Digitales para Restaurantes](https://astracodelab.com/servicios/cartas-digitales-restaurantes/): Menús digitales para hostelería
+- [Portfolios Web](https://astracodelab.com/servicios/portfolios-web/): Diseño de portfolios profesionales online
+- [Reservas de Citas Online](https://astracodelab.com/servicios/web-reservas-de-citas-online/): Sistemas de reserva y gestión de citas
+- [Sitios Web Corporativos](https://astracodelab.com/servicios/sitios-web-corporativos/): Soluciones corporativas a medida
+
+## Blog
+
+- [¿Cuánto cuesta una página web en España en 2026?](https://astracodelab.com/blog/precio-pagina-web-espana/): Guía de precios actualizada. El precio medio oscila entre 800€ y 15.000€. Desglose de costes, factores que influyen en el presupuesto y consejos para evitar sorpresas.
+- [Qué preparar antes de encargar tu web](https://astracodelab.com/blog/requisitos-encargar-web/): Checklist completo de lo que necesitas tener listo antes de pedir presupuesto: objetivos, contenidos, identidad visual, dominio, hosting y referencias.
+- [¿Necesito una web si ya tengo Instagram?](https://astracodelab.com/blog/web-vs-instagram/): Comparativa entre depender de redes sociales y tener una web propia. Por qué Instagram no sustituye a una página web profesional para tu negocio.
+
+## Diseño Web por Ciudades
+
+- [Diseño Web en Alicante](https://astracodelab.com/diseno-web-alicante/)
+- [Diseño Web en Barcelona](https://astracodelab.com/diseno-web-barcelona/)
+- [Diseño Web en Castellón](https://astracodelab.com/diseno-web-castellon/)
+- [Diseño Web en Granada](https://astracodelab.com/diseno-web-granada/)
+- [Diseño Web en Madrid](https://astracodelab.com/diseno-web-madrid/)
+- [Diseño Web en Málaga](https://astracodelab.com/diseno-web-malaga/)
+- [Diseño Web en Orense](https://astracodelab.com/diseno-web-orense/)
+- [Diseño Web en Oviedo](https://astracodelab.com/diseno-web-oviedo/)
+- [Diseño Web en Sevilla](https://astracodelab.com/diseno-web-sevilla/)
+- [Diseño Web en Valencia](https://astracodelab.com/diseno-web-valencia/)
+- [Diseño Web en Zaragoza](https://astracodelab.com/diseno-web-zaragoza/)
 
 ## Contacto
 
 - Web: https://astracodelab.com
 - Email: info@astracodelab.com
+- WhatsApp: +34 623 75 29 40
 - LinkedIn: https://linkedin.com/company/astracodelab
 - Instagram: https://instagram.com/astracodelab
-

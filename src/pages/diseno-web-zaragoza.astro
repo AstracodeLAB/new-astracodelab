@@ -10,19 +10,13 @@ import Search from '../layouts/components/icons/search.astro';
 import Comment from '../layouts/components/icons/comment.astro';
 import Chart from '../layouts/components/icons/chart.astro';
 import BannerCta from '../layouts/components/Banners/BannerCta.astro';
-import Services from '../layouts/components/Services.astro';
 import CardPregunta from '../layouts/components/Cards/CardPregunta.astro';
 import FaqsSection from '../layouts/components/FaqsSection.astro';
 import { faqsSeoZaragoza } from '../layouts/components/accordeon/Faqs.js';
 import { schemaLocalZaragoza } from '../data/faqsSeoZaragoza.js';
-import avatar1 from '../images/avatar1.jpg';
-import avatar2 from '../images/avatar2.jpg';
-import avatar3 from '../images/avatar3.jpg';
-import CardTestimonio from '../layouts/components/Cards/CardTestimonio.astro';
 
-const title = 'Diseño web y desarrollo en Zaragoza | AstracodeLAB';
-const description =
-  'Diseño y desarrollo web en Zaragoza.Páginas web a medida para empresas y autónomos de Zaragoza. Primera consultoría gratuita.';
+const title = 'Diseño web en Zaragoza | AstracodeLAB';
+const description = 'Desarrollo de páginas web en Zaragoza. Creamos webs profesionales para empresas y autónomos aragoneses. Consulta sin compromiso.';
 const permalink = Astro.url.href;
 const image = 'https://astracodelab.com/og_diseño_web_desarrollo_web_zaragoza.png';
 const robots = 'index, follow';
@@ -33,49 +27,49 @@ const robots = 'index, follow';
 <Layout title={title} description={description} permalink={permalink} image={image} robots={robots}>
   <main class='mainHome'>
     <HeroSeo
-      title='Diseño y desarrollo web en Zaragoza'
-      subtitle='Creamos páginas web profesionales y accesibles.'
-      text='Ofrecemos soluciones web a medida ágiles y accesibles que reflejan tu marca o tu talento creativo. Con equipo en Zaragoza para clientes en toda España.'
+      title='Diseño web en Zaragoza'
+      subtitle='Diseñamos y desarrollamos páginas web a medida para empresas y autónomos de Zaragoza.'
+      text='Ofrecemos soluciones web a medida ágiles y accesibles que reflejan tu marca y conectan con tu audiencia local. Primera consultoría gratuita.'
       image={heroImgAccesible}
       alt='Ilustración de un ordenador portátil con una ventana web abierta y un botón de Click Here, acompañado de un cohete despegando.'
     />
     <PorqNecesitoWebSeo
       title='¿Por qué tu negocio en Zaragoza necesita una página web?'
-      text='Hoy, tu cliente potencial en Zaragoza decide en pocos segundos si confía en una marca o la descarta, a menudo desde la pantalla de su móvil. Este veredicto se basa, casi siempre, en la primera impresión que ofrece tu sitio web. Por eso, una página web profesional para tu negocio en Zaragoza ya no es un lujo.'
+      text='Zaragoza es un nodo logístico e industrial estratégico con un mercado empresarial sólido. El cliente aragonés valora la practicidad y la información clara. Tu web profesional diseñada para el mercado zaragozano presenta tu negocio de forma directa, funcional y orientada a resultados, eliminando barreras entre tu oferta y los clientes que buscan tus servicios en la zona.'
     />
     <AdvantagesSection
       titulo='Qué ganas al elegir astracodelab como tu agencia web en Zaragoza'
-      descripcion='AstracodeLAB es una agencia de diseño y desarrollo web, con equipo en Zaragoza prestando servicio a clientes en toda España. Nuestra metodología fusiona el estudio de negocio, la creatividad y un proceso de trabajo transparente para ofrecerte una página web que inspira confianza y convierte visitas en oportunidades reales.'
+      descripcion='Zaragoza es un polo logístico e industrial estratégico en España. Entendemos las necesidades del tejido empresarial aragonés y creamos webs funcionales y directas que transmiten la solidez y profesionalidad que el mercado zaragozano demanda.'
       advantages={[
         {
           iconoComponent: Charge,
-          titulo: 'Carga rápida',
+          titulo: 'Velocidad de carga optimizada',
           descripcion:
-            'El visitante no se marcha antes de ver tu mensaje. Nos aseguramos de que tu web cargue en cuestión de segundos. La optimización del rendimiento web es clave.',
+            'En Zaragoza, donde la industria y la logística marcan el ritmo, tu web debe funcionar con la misma eficiencia que tu negocio. Optimizamos cada detalle para tiempos de carga mínimos y rendimiento máximo.',
         },
         {
           iconoComponent: User,
-          titulo: 'Diseño centrado en el usuario',
+          titulo: 'Experiencia centrada en el usuario',
           descripcion:
-            'Navegación sencilla y lectura cómoda. Nuestras webs son accesibles para todos, garantizando una experiencia positiva para cada visitante.',
+            'Diseñamos webs con una navegación directa, sin artificios innecesarios, para que el visitante encuentre lo que busca de forma inmediata.',
         },
         {
           iconoComponent: Search,
           titulo: 'Contenido listo para buscadores',
           descripcion:
-            'Mayor visibilidad en Google sin trucos ni sobre-optimización. Estructuramos el contenido y desarrollamos tu sitio con un código optimizado.',
+            'Trabajamos estrictamente con las mejores prácticas SEO para que tu empresa en Zaragoza no solo tenga una web atractiva, sino también visible para tus clientes potenciales.',
         },
         {
           iconoComponent: Chart,
           titulo: 'Proyectos escalables y adaptables',
           descripcion:
-            'Tu proyecto puede crecer. Añade una tienda online, sistemas de reservas o funcionalidades multilingües cuando lo necesites, asegurando la longevidad y relevancia de tu inversión.',
+            'Entendemos que el mercado zaragozano es dinámico. Por eso, nuestras webs están diseñadas para crecer contigo, adaptándose a nuevas necesidades y oportunidades sin perder rendimiento.',
         },
         {
           iconoComponent: Comment,
-          titulo: 'Acompañamiento cercano y personalizado',
+          titulo: 'Apoyo continuo y comunicación directa',
           descripcion:
-            'Desde el primer contacto hasta el lanzamiento y el soporte continuo, te acompañamos en cada etapa. Respondemos a tus mensajes, llamadas o mails siempre en tu horario y con la atención que mereces.',
+            'Te ofrecemos un trato directo y profesional en cada etapa. Sin intermediarios ni demoras: comunicación clara y compromiso con los plazos acordados para tu proyecto en Zaragoza.',
         },
       ]}
     />
@@ -86,33 +80,6 @@ const robots = 'index, follow';
       texto='Contacta con nosotros'
       className='btnPrimaryLight'
     />
-    <Services />
-    <section class='testimonial-section'>
-      <CardTestimonio
-        titulo='¿Aún tienes dudas?'
-        subtitulo='Quienes mejor hablan de nosotras son nuestros clientes'
-        testimonials={[
-          {
-            imagen: avatar1,
-            testimonial:
-              'Muy contenta con el trabajo de esta empresa. Les di el contacto para un familiar y ha quedado encantado. Estuvieron en todo momento en contacto, supieron plasmar sus ideas y, además, aportaron mucha creatividad al proyecto. También me dice que son encantadoras y que, desde el primer momento, ya sabía que estaba en buenas manos. Las volveré a recomendar sin duda.',
-            alt: 'Avatar de usuario. Ilustración 3D de un personaje con cabello morado en coletas, chaqueta amarilla y gafas de sol en la cabeza, sobre un fondo verde.',
-          },
-          {
-            imagen: avatar2,
-            testimonial:
-              'Ha sido genial trabajar con el equipo AstraCodeLab. Desde el principio han mostrado una gran profesionalidad y han cumplido con todo lo acordado y plazos propuestos.Su implicación en el proyecto ha hecho obtener un diseño de la web maravilloso. Nos encanta el resultado.Sin duda cuento con ellas para futuros trabajos.',
-            alt: 'Avatar de usuario. Ilustración 3D de un personaje con gorra celeste y camiseta azul, sobre un fondo verde.',
-          },
-          {
-            imagen: avatar3,
-            testimonial:
-              'Muy satisfecho con el resultado obtenido, la web que me han diseñado funciona estupendamente y a un precio muy competitivo. El trato recibido estupendo, no se puede ser más profesional.',
-            alt: 'Avatar de usuario. Ilustración 3D de un personaje con cabello pelirrojo y sudadera morada, sobre un fondo azul oscuro. ',
-          },
-        ]}
-      />
-    </section>
     <div>
       <CardPregunta
         title='¿Tienes una idea de negocio en Zaragoza que no encaja en estos servicios, o no sabes por dónde empezar tu proyecto de diseño web?'

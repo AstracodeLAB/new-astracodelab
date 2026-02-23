@@ -10,19 +10,13 @@ import Search from '../layouts/components/icons/search.astro';
 import Comment from '../layouts/components/icons/comment.astro';
 import Chart from '../layouts/components/icons/chart.astro';
 import BannerCta from '../layouts/components/Banners/BannerCta.astro';
-import Services from '../layouts/components/Services.astro';
 import CardPregunta from '../layouts/components/Cards/CardPregunta.astro';
 import FaqsSection from '../layouts/components/FaqsSection.astro';
 import { faqsSeoAlicante } from '../layouts/components/accordeon/Faqs.js';
 import { schemaLocalAlicante } from '../data/faqsSeoAlicante.js';
-import avatar1 from '../images/avatar1.jpg';
-import avatar2 from '../images/avatar2.jpg';
-import avatar3 from '../images/avatar3.jpg';
-import CardTestimonio from '../layouts/components/Cards/CardTestimonio.astro';
 
-const title = 'Diseño web y desarrollo en Alicante | AstracodeLAB';
-const description =
-  'Diseño y desarrollo web en Alicante.Páginas web a medida para empresas y autónomos de Alicante. Primera consultoría gratuita.';
+const title = 'Diseño web en Alicante | AstracodeLAB';
+const description = 'Desarrollo de páginas web en Alicante. Creamos webs profesionales para empresas y autónomos de la Costa Blanca. Consulta sin compromiso.';
 const permalink = Astro.url.href;
 const image = 'https://astracodelab.com/og_diseño_web_desarrollo_web_alicante.png';
 const robots = 'index, follow';
@@ -34,8 +28,8 @@ const robots = 'index, follow';
   <main class='mainHome'>
     <HeroSeo
       title='Diseño y desarrollo web en Alicante'
-      subtitle='Creamos páginas web profesionales y accesibles.'
-      text='Ofrecemos soluciones web a medida ágiles y accesibles que reflejan tu marca o tu talento creativo. Con equipo en Alicante para clientes en toda España.'
+      subtitle='Diseño web para empresas y autónomos de Alicante'
+      text='Ofrecemos  webs profesionales para empresas de Alicante y toda la provincia.  Tu web, adaptada al mercado alicantino.'
       image={heroImgAccesible}
       alt='Ilustración de un ordenador portátil con una ventana web abierta y un botón de Click Here, acompañado de un cohete despegando.'
     />
@@ -45,37 +39,37 @@ const robots = 'index, follow';
     />
     <AdvantagesSection
       titulo='Qué ganas al elegir astracodelab como tu agencia web en Alicante'
-      descripcion='AstracodeLAB es una agencia de diseño y desarrollo web, con equipo en Alicante prestando servicio a clientes en toda España. Nuestra metodología fusiona el estudio de negocio, la creatividad y un proceso de trabajo transparente para ofrecerte una página web que inspira confianza y convierte visitas en oportunidades reales.'
+      descripcion='Alicante es una provincia con una actividad económica diversa: turismo costero, comercio, hostelería y servicios. Entendemos el mercado alicantino y diseñamos webs que reflejan la identidad de cada negocio, adaptadas a un público que busca y compara desde el móvil.'
       advantages={[
         {
           iconoComponent: Charge,
           titulo: 'Carga rápida',
           descripcion:
-            'El visitante no se marcha antes de ver tu mensaje. Nos aseguramos de que tu web cargue en cuestión de segundos. La optimización del rendimiento web es clave.',
+            'En la Costa Blanca, muchos clientes te buscan desde el móvil mientras están en la playa o de paseo. Tu web debe cargar al instante para captar a ese usuario que decide en segundos dónde comer, comprar o reservar.',
         },
         {
           iconoComponent: User,
           titulo: 'Diseño centrado en el usuario',
           descripcion:
-            'Navegación sencilla y lectura cómoda. Nuestras webs son accesibles para todos, garantizando una experiencia positiva para cada visitante.',
+            'Diseñamos webs pensadas para el perfil del visitante de Alicante: turistas internacionales, residentes y público local. Navegación intuitiva y diseño adaptado a pantallas de todos los tamaños.',
         },
         {
           iconoComponent: Search,
           titulo: 'Contenido listo para buscadores',
           descripcion:
-            'Mayor visibilidad en Google sin trucos ni sobre-optimización. Estructuramos el contenido y desarrollamos tu sitio con un código optimizado.',
+            'Posicionarte en Alicante y sus localidades turísticas como Benidorm, Elche o Dénia requiere un SEO local específico. Estructuramos tu web para que Google te muestre a quien busca tus servicios en la zona.',
         },
         {
           iconoComponent: Chart,
           titulo: 'Proyectos escalables y adaptables',
           descripcion:
-            'Tu proyecto puede crecer. Añade una tienda online, sistemas de reservas o funcionalidades multilingües cuando lo necesites, asegurando la longevidad y relevancia de tu inversión.',
+            'Tu negocio alicantino puede necesitar una carta en varios idiomas o una tienda online. Diseñamos tu web para que incorpore nuevas funcionalidades cuando las necesites.',
         },
         {
           iconoComponent: Comment,
           titulo: 'Acompañamiento cercano y personalizado',
           descripcion:
-            'Desde el primer contacto hasta el lanzamiento y el soporte continuo, te acompañamos en cada etapa. Respondemos a tus mensajes, llamadas o mails siempre en tu horario y con la atención que mereces.',
+            'Te ofrecemos un acompañamiento personalizado durante todo el proceso. Respondemos a tus dudas con agilidad y te mantenemos informado en cada etapa del desarrollo de tu web.',
         },
       ]}
     />
@@ -86,33 +80,6 @@ const robots = 'index, follow';
       texto='Contacta con nosotros'
       className='btnPrimaryLight'
     />
-    <Services />
-    <section class='testimonial-section'>
-      <CardTestimonio
-        titulo='¿Aún tienes dudas?'
-        subtitulo='Quienes mejor hablan de nosotras son nuestros clientes'
-        testimonials={[
-          {
-            imagen: avatar1,
-            testimonial:
-              'Muy contenta con el trabajo de esta empresa. Les di el contacto para un familiar y ha quedado encantado. Estuvieron en todo momento en contacto, supieron plasmar sus ideas y, además, aportaron mucha creatividad al proyecto. También me dice que son encantadoras y que, desde el primer momento, ya sabía que estaba en buenas manos. Las volveré a recomendar sin duda.',
-            alt: 'Avatar de usuario. Ilustración 3D de un personaje con cabello morado en coletas, chaqueta amarilla y gafas de sol en la cabeza, sobre un fondo verde.',
-          },
-          {
-            imagen: avatar2,
-            testimonial:
-              'Ha sido genial trabajar con el equipo AstraCodeLab. Desde el principio han mostrado una gran profesionalidad y han cumplido con todo lo acordado y plazos propuestos.Su implicación en el proyecto ha hecho obtener un diseño de la web maravilloso. Nos encanta el resultado.Sin duda cuento con ellas para futuros trabajos.',
-            alt: 'Avatar de usuario. Ilustración 3D de un personaje con gorra celeste y camiseta azul, sobre un fondo verde.',
-          },
-          {
-            imagen: avatar3,
-            testimonial:
-              'Muy satisfecho con el resultado obtenido, la web que me han diseñado funciona estupendamente y a un precio muy competitivo. El trato recibido estupendo, no se puede ser más profesional.',
-            alt: 'Avatar de usuario. Ilustración 3D de un personaje con cabello pelirrojo y sudadera morada, sobre un fondo azul oscuro. ',
-          },
-        ]}
-      />
-    </section>
     <div>
       <CardPregunta
         title='¿Tienes una idea de negocio en Alicante que no encaja en estos servicios, o no sabes por dónde empezar tu proyecto de diseño web?'

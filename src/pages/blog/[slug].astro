@@ -1,10 +1,8 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-// import { posts } from '../../data/posts.js';
 import TitleSecondary from '../../layouts/components/Titles/TitleSecondary.astro';
 import Buttons from '../../layouts/components/Buttons/Buttons.astro';
 import { getCollection, render } from 'astro:content';
-import BlogDate from '../../layouts/components/Titles/BlogDate.astro';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
@@ -14,20 +12,51 @@ export async function getStaticPaths() {
   }));
 }
 
+const refererUrl = Astro.request.headers.get('referer');
+const isFromBlog = refererUrl && refererUrl.includes(Astro.site.pathname + 'blog');
+const backUrl = isFromBlog ? refererUrl : '/blog/';
+
 const { post } = Astro.props;
 const { Content } = await render(post);
 
 const title = `${post.data.title} | Astracodelab`;
 const description = post.data.excerpt;
+
 const permalink = Astro.url.href;
 const robots = 'index, follow';
 
+const blogSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: post.data.title,
+  description: post.data.excerpt,
+  datePublished: post.data.date, 
+  dateModified: post.data.updatedDate || post.data.date,
+  author: {
+    '@type': 'Organization',
+    name: 'AstracodeLAB',
+    url: 'https://astracodelab.com',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'AstracodeLAB',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://astracodelab.com/logo.png',
+    },
+  },
+  image: post.data.image || 'https://astracodelab.com/og-default.jpg',
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': permalink,
+  },
+};
 ---
 
 <Layout title={title} description={description} permalink={permalink} robots={robots}>
   <main class='post-detail'>
     <div class='container-post-detail'>
-      <Buttons className='linkPrimary' href='/blog/1/'>← Volver al listado</Buttons>
+      <Buttons className='linkPrimary' href={backUrl}>← Volver al listado</Buttons>
       <section class='header-post-detail'>
         <div class='post-date-container'>
           <span class='date'>

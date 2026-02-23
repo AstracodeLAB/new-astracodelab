@@ -16,8 +16,8 @@ export const schemaLocalOrense= {
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Orense",
-        "addressRegion": "Aragón",
-        "postalCode": "50001",
+        "addressRegion": "Galicia",
+        "postalCode": "32001",
         "addressCountry": "ES"
       },
 
@@ -33,7 +33,7 @@ export const schemaLocalOrense= {
         },
         {
           "@type": "State",
-          "name": "Aragón"
+          "name": "Galicia"
         }
       ],
 
@@ -111,7 +111,7 @@ export const schemaLocalOrense= {
           "name": "¿Ofrecéis servicios de diseño web en Orense?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí, AstracodeLAB ofrece servicios de diseño y desarrollo web en Orense. Aunque nuestras oficinas están ubicadas en Barcelona, Málaga y Castellón, trabajamos con clientes de toda Aragón y España. Nos adaptamos a reuniones presenciales en Orense o videollamadas según tu preferencia."
+            "text": "Sí, AstracodeLAB ofrece servicios de diseño y desarrollo web en Orense. Aunque nuestras oficinas están ubicadas en Barcelona, Málaga y Castellón, trabajamos con clientes de toda Galicia y España. Nos adaptamos a reuniones presenciales en Orense o videollamadas según tu preferencia."
           }
         },
         {

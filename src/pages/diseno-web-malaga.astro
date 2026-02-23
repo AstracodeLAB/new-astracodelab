@@ -10,19 +10,13 @@ import Search from '../layouts/components/icons/search.astro';
 import Comment from '../layouts/components/icons/comment.astro';
 import Chart from '../layouts/components/icons/chart.astro';
 import BannerCta from '../layouts/components/Banners/BannerCta.astro';
-import Services from '../layouts/components/Services.astro';
 import CardPregunta from '../layouts/components/Cards/CardPregunta.astro';
 import FaqsSection from '../layouts/components/FaqsSection.astro';
 import { faqsSeoMalaga } from '../layouts/components/accordeon/Faqs.js';
 import { schemaLocalMalaga } from '../data/faqsSeoMalaga.js';
-import avatar1 from '../images/avatar1.jpg';
-import avatar2 from '../images/avatar2.jpg';
-import avatar3 from '../images/avatar3.jpg';
-import CardTestimonio from '../layouts/components/Cards/CardTestimonio.astro';
 
-const title = 'Diseño web y desarrollo en Málaga | AstracodeLAB';
-const description =
-  'Diseño y desarrollo web en Málaga.Páginas web a medida para empresas y autónomos de Málaga. Primera consultoría gratuita.';
+const title = 'Diseño web en Málaga | AstracodeLAB';
+const description = 'Páginas web en Málaga y Costa del Sol. Creamos webs profesionales para empresas y autónomos. Consulta sin compromiso.';
 const permalink = Astro.url.href;
 const image = 'https://astracodelab.com/og_diseño_web_desarrollo_web_malaga.png';
 const robots = 'index, follow';
@@ -33,9 +27,9 @@ const robots = 'index, follow';
 <Layout title={title} description={description} permalink={permalink} image={image} robots={robots}>
   <main class='mainHome'>
     <HeroSeo
-      title='Diseño y desarrollo web en Málaga'
-      subtitle='Creamos páginas web profesionales y accesibles.'
-      text='Ofrecemos soluciones web a medida ágiles y accesibles que reflejan tu marca o tu talento creativo. Con equipo en Málaga para clientes en toda España.'
+      title='Diseño de páginas web en Málaga'
+      subtitle='Diseño web en Málaga para negocios que quieren crecer online'
+      text='Con equipo en Málaga, creamos webs profesionales para una de las ciudades con mayor crecimiento digital de España. Trabajamos con negocios de la Costa del Sol, empresas del Parque Tecnológico de Andalucía (PTA) y comercios del centro  histórico malagueño.'
       image={heroImgAccesible}
       alt='Ilustración de un ordenador portátil con una ventana web abierta y un botón de Click Here, acompañado de un cohete despegando.'
     />
@@ -45,37 +39,37 @@ const robots = 'index, follow';
     />
     <AdvantagesSection
       titulo='Qué ganas al elegir astracodelab como tu agencia web en Málaga'
-      descripcion='AstracodeLAB es una agencia de diseño y desarrollo web, con equipo en Málaga prestando servicio a clientes en toda España. Nuestra metodología fusiona el estudio de negocio, la creatividad y un proceso de trabajo transparente para ofrecerte una página web que inspira confianza y convierte visitas en oportunidades reales.'
+      descripcion='Con equipo en Málaga y presencia en el Parque Tecnológico de Andalucía, combinamos creatividad mediterránea con rigor técnico. Diseñamos webs que conectan con el turista internacional y el cliente local por igual.'
       advantages={[
         {
           iconoComponent: Charge,
           titulo: 'Carga rápida',
           descripcion:
-            'El visitante no se marcha antes de ver tu mensaje. Nos aseguramos de que tu web cargue en cuestión de segundos. La optimización del rendimiento web es clave.',
+            'El turista que busca tu negocio en la Costa del Sol decide en milisegundos. Optimizamos la velocidad de tu web para captar a ese visitante impaciente que compara opciones desde su smartphone.',
         },
         {
           iconoComponent: User,
           titulo: 'Diseño centrado en el usuario',
           descripcion:
-            'Navegación sencilla y lectura cómoda. Nuestras webs son accesibles para todos, garantizando una experiencia positiva para cada visitante.',
+            'Málaga recibe visitantes de todo el mundo. Diseñamos interfaces multilingües e intuitivas que funcionan igual de bien para el malagueño de toda la vida que para el nómada digital recién llegado.',
         },
         {
           iconoComponent: Search,
           titulo: 'Contenido listo para buscadores',
           descripcion:
-            'Mayor visibilidad en Google sin trucos ni sobre-optimización. Estructuramos el contenido y desarrollamos tu sitio con un código optimizado.',
+            'En una ciudad con tanta oferta como Málaga, la visibilidad en Google marca la diferencia. Trabajamos el SEO local para que tu negocio aparezca cuando un potencial cliente busca tus servicios en la zona.',
         },
         {
           iconoComponent: Chart,
           titulo: 'Proyectos escalables y adaptables',
           descripcion:
-            'Tu proyecto puede crecer. Añade una tienda online, sistemas de reservas o funcionalidades multilingües cuando lo necesites, asegurando la longevidad y relevancia de tu inversión.',
+            'Desde una carta digital para tu restaurante en el centro hasta un sistema de reservas para tu hotel en la Costa, tu web se adapta a las necesidades cambiantes del mercado malagueño.',
         },
         {
           iconoComponent: Comment,
           titulo: 'Acompañamiento cercano y personalizado',
           descripcion:
-            'Desde el primer contacto hasta el lanzamiento y el soporte continuo, te acompañamos en cada etapa. Respondemos a tus mensajes, llamadas o mails siempre en tu horario y con la atención que mereces.',
+            'Nuestro equipo en Málaga está disponible para reuniones presenciales y seguimiento cercano. Te acompañamos desde la idea inicial hasta mucho después del lanzamiento de tu web.',
         },
       ]}
     />
@@ -86,33 +80,6 @@ const robots = 'index, follow';
       texto='Contacta con nosotros'
       className='btnPrimaryLight'
     />
-    <Services />
-    <section class='testimonial-section'>
-      <CardTestimonio
-        titulo='¿Aún tienes dudas?'
-        subtitulo='Quienes mejor hablan de nosotras son nuestros clientes'
-        testimonials={[
-          {
-            imagen: avatar1,
-            testimonial:
-              'Muy contenta con el trabajo de esta empresa. Les di el contacto para un familiar y ha quedado encantado. Estuvieron en todo momento en contacto, supieron plasmar sus ideas y, además, aportaron mucha creatividad al proyecto. También me dice que son encantadoras y que, desde el primer momento, ya sabía que estaba en buenas manos. Las volveré a recomendar sin duda.',
-            alt: 'Avatar de usuario. Ilustración 3D de un personaje con cabello morado en coletas, chaqueta amarilla y gafas de sol en la cabeza, sobre un fondo verde.',
-          },
-          {
-            imagen: avatar2,
-            testimonial:
-              'Ha sido genial trabajar con el equipo AstraCodeLab. Desde el principio han mostrado una gran profesionalidad y han cumplido con todo lo acordado y plazos propuestos.Su implicación en el proyecto ha hecho obtener un diseño de la web maravilloso. Nos encanta el resultado.Sin duda cuento con ellas para futuros trabajos.',
-            alt: 'Avatar de usuario. Ilustración 3D de un personaje con gorra celeste y camiseta azul, sobre un fondo verde.',
-          },
-          {
-            imagen: avatar3,
-            testimonial:
-              'Muy satisfecho con el resultado obtenido, la web que me han diseñado funciona estupendamente y a un precio muy competitivo. El trato recibido estupendo, no se puede ser más profesional.',
-            alt: 'Avatar de usuario. Ilustración 3D de un personaje con cabello pelirrojo y sudadera morada, sobre un fondo azul oscuro. ',
-          },
-        ]}
-      />
-    </section>
     <div>
       <CardPregunta
         title='¿Tienes una idea de negocio en Málaga que no encaja en estos servicios, o no sabes por dónde empezar tu proyecto de diseño web?'
@@ -121,9 +88,6 @@ const robots = 'index, follow';
         buttonHref='/contacto/'
       />
     </div>
-    <FaqsSection
-      titulo='Preguntas frecuentes sobre nuestros servicios de diseño web en Málaga'
-      faqs={faqsSeoMalaga}
-    />
+    <FaqsSection titulo='Preguntas frecuentes sobre nuestros servicios de diseño web en Málaga' faqs={faqsSeoMalaga} />
   </main>
 </Layout>

@@ -10,19 +10,13 @@ import Search from '../layouts/components/icons/search.astro';
 import Comment from '../layouts/components/icons/comment.astro';
 import Chart from '../layouts/components/icons/chart.astro';
 import BannerCta from '../layouts/components/Banners/BannerCta.astro';
-import Services from '../layouts/components/Services.astro';
 import CardPregunta from '../layouts/components/Cards/CardPregunta.astro';
 import FaqsSection from '../layouts/components/FaqsSection.astro';
 import { faqsSeoOrense } from '../layouts/components/accordeon/Faqs.js';
 import { schemaLocalOrense } from '../data/faqsSeoOrense.js';
-import avatar1 from '../images/avatar1.jpg';
-import avatar2 from '../images/avatar2.jpg';
-import avatar3 from '../images/avatar3.jpg';
-import CardTestimonio from '../layouts/components/Cards/CardTestimonio.astro';
 
-const title = 'Diseño web y desarrollo en Orense | AstracodeLAB';
-const description =
-  'Diseño y desarrollo web en Orense.Páginas web a medida para empresas y autónomos de Orense. Primera consultoría gratuita.';
+const title = 'Diseño web en Orense | AstracodeLAB';
+const description = 'Desarrollo web en Orense (Ourense). Creamos páginas web ultraligeras para empresas de la provincia. Consulta sin compromiso.';
 const permalink = Astro.url.href;
 const image = 'https://astracodelab.com/og_diseño_web_desarrollo_web_orense.png';
 const robots = 'index, follow';
@@ -33,49 +27,49 @@ const robots = 'index, follow';
 <Layout title={title} description={description} permalink={permalink} image={image} robots={robots}>
   <main class='mainHome'>
     <HeroSeo
-      title='Diseño y desarrollo web en Orense'
-      subtitle='Creamos páginas web profesionales y accesibles.'
-      text='Ofrecemos soluciones web a medida ágiles y accesibles que reflejan tu marca o tu talento creativo. Con equipo en Orense para clientes en toda España.'
+      title='Desarrollo web en Orense'
+      subtitle='Diseño web para empresas y autónomos en Ourense'
+      text='Creamos páginas web profesionales para el mercado orensano. Diseñamos webs que impulsan tu negocio en Galicia.'
       image={heroImgAccesible}
       alt='Ilustración de un ordenador portátil con una ventana web abierta y un botón de Click Here, acompañado de un cohete despegando.'
     />
     <PorqNecesitoWebSeo
       title='¿Por qué tu negocio en Orense necesita una página web?'
-      text='Hoy, tu cliente potencial en Orense decide en pocos segundos si confía en una marca o la descarta, a menudo desde la pantalla de su móvil. Este veredicto se basa, casi siempre, en la primera impresión que ofrece tu sitio web. Por eso, una página web profesional para tu negocio en Orense ya no es un lujo.'
+      text='En Orense y toda la provincia, el comercio local mantiene una fuerza especial. El cliente orensano busca confianza, cercanía y claridad cuando consulta una web. Una página web profesional que cargue rápido, funcione bien en zonas con conexión variable y presente tu información de forma directa es la herramienta que tu negocio necesita para competir online en el mercado gallego.'
     />
     <AdvantagesSection
       titulo='Qué ganas al elegir astracodelab como tu agencia web en Orense'
-      descripcion='AstracodeLAB es una agencia de diseño y desarrollo web, con equipo en Orense prestando servicio a clientes en toda España. Nuestra metodología fusiona el estudio de negocio, la creatividad y un proceso de trabajo transparente para ofrecerte una página web que inspira confianza y convierte visitas en oportunidades reales.'
+      descripcion='En Orense, donde el comercio local y los servicios son el motor económico, una web profesional marca la diferencia frente a la competencia. Conocemos el mercado gallego y diseñamos webs que generan confianza en el cliente orensano.'
       advantages={[
         {
           iconoComponent: Charge,
           titulo: 'Carga rápida',
           descripcion:
-            'El visitante no se marcha antes de ver tu mensaje. Nos aseguramos de que tu web cargue en cuestión de segundos. La optimización del rendimiento web es clave.',
+            'En la provincia de Orense, donde la conexión móvil puede ser irregular en zonas rurales, la velocidad de carga es fundamental. Creamos webs ultraligeras que funcionan perfectamente en cualquier punto de la provincia.',
         },
         {
           iconoComponent: User,
-          titulo: 'Diseño centrado en el usuario',
+          titulo: 'Experiencia de usuario adaptada',
           descripcion:
-            'Navegación sencilla y lectura cómoda. Nuestras webs son accesibles para todos, garantizando una experiencia positiva para cada visitante.',
+            'La experiencia de usuario refleja la cercanía que caracteriza al comercio local gallego. Diseñamos webs para tus usuarios, con una navegación intuitiva y una información clara.',
         },
         {
           iconoComponent: Search,
           titulo: 'Contenido listo para buscadores',
           descripcion:
-            'Mayor visibilidad en Google sin trucos ni sobre-optimización. Estructuramos el contenido y desarrollamos tu sitio con un código optimizado.',
+            'Aparecer en Google cuando alguien busca tus servicios en Orense es clave. Trabajamos el posicionamiento local con contenido optimizado y estructura técnica pensada para el mercado orensano y gallego.',
         },
         {
           iconoComponent: Chart,
-          titulo: 'Proyectos escalables y adaptables',
+          titulo: 'Diseño pensado para crecer',
           descripcion:
-            'Tu proyecto puede crecer. Añade una tienda online, sistemas de reservas o funcionalidades multilingües cuando lo necesites, asegurando la longevidad y relevancia de tu inversión.',
+            'Pensamos en el desarrollo de tu web como una inversión a largo plazo. Diseñamos con flexibilidad para que puedas evolucionar sin tener que reconstruir todo desde cero.',
         },
         {
           iconoComponent: Comment,
-          titulo: 'Acompañamiento cercano y personalizado',
+          titulo: 'Apoyo continuo y comunicación directa',
           descripcion:
-            'Desde el primer contacto hasta el lanzamiento y el soporte continuo, te acompañamos en cada etapa. Respondemos a tus mensajes, llamadas o mails siempre en tu horario y con la atención que mereces.',
+            'Te ofrecemos un acompañamiento constante y personalizado. Cada decisión de diseño se toma contigo, con la cercanía y el trato directo que esperas.',
         },
       ]}
     />
@@ -86,33 +80,6 @@ const robots = 'index, follow';
       texto='Contacta con nosotros'
       className='btnPrimaryLight'
     />
-    <Services />
-    <section class='testimonial-section'>
-      <CardTestimonio
-        titulo='¿Aún tienes dudas?'
-        subtitulo='Quienes mejor hablan de nosotras son nuestros clientes'
-        testimonials={[
-          {
-            imagen: avatar1,
-            testimonial:
-              'Muy contenta con el trabajo de esta empresa. Les di el contacto para un familiar y ha quedado encantado. Estuvieron en todo momento en contacto, supieron plasmar sus ideas y, además, aportaron mucha creatividad al proyecto. También me dice que son encantadoras y que, desde el primer momento, ya sabía que estaba en buenas manos. Las volveré a recomendar sin duda.',
-            alt: 'Avatar de usuario. Ilustración 3D de un personaje con cabello morado en coletas, chaqueta amarilla y gafas de sol en la cabeza, sobre un fondo verde.',
-          },
-          {
-            imagen: avatar2,
-            testimonial:
-              'Ha sido genial trabajar con el equipo AstraCodeLab. Desde el principio han mostrado una gran profesionalidad y han cumplido con todo lo acordado y plazos propuestos.Su implicación en el proyecto ha hecho obtener un diseño de la web maravilloso. Nos encanta el resultado.Sin duda cuento con ellas para futuros trabajos.',
-            alt: 'Avatar de usuario. Ilustración 3D de un personaje con gorra celeste y camiseta azul, sobre un fondo verde.',
-          },
-          {
-            imagen: avatar3,
-            testimonial:
-              'Muy satisfecho con el resultado obtenido, la web que me han diseñado funciona estupendamente y a un precio muy competitivo. El trato recibido estupendo, no se puede ser más profesional.',
-            alt: 'Avatar de usuario. Ilustración 3D de un personaje con cabello pelirrojo y sudadera morada, sobre un fondo azul oscuro. ',
-          },
-        ]}
-      />
-    </section>
     <div>
       <CardPregunta
         title='¿Tienes una idea de negocio en Orense que no encaja en estos servicios, o no sabes por dónde empezar tu proyecto de diseño web?'

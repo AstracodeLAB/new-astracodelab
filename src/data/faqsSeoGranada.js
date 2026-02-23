@@ -16,8 +16,8 @@ export const schemaLocalGranada= {
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Granada",
-        "addressRegion": "Aragón",
-        "postalCode": "50001",
+        "addressRegion": "Andalucía",
+        "postalCode": "18001",
         "addressCountry": "ES"
       },
 
@@ -33,7 +33,7 @@ export const schemaLocalGranada= {
         },
         {
           "@type": "State",
-          "name": "Aragón"
+          "name": "Andalucía"
         }
       ],
 
@@ -111,7 +111,7 @@ export const schemaLocalGranada= {
           "name": "¿Ofrecéis servicios de diseño web en Granada?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí, AstracodeLAB ofrece servicios de diseño y desarrollo web en Granada. Aunque nuestras oficinas están ubicadas en Barcelona, Málaga y Castellón, trabajamos con clientes de toda Aragón y España. Nos adaptamos a reuniones presenciales en Granada o videollamadas según tu preferencia."
+            "text": "Sí, AstracodeLAB ofrece servicios de diseño y desarrollo web en Granada. Aunque nuestras oficinas están ubicadas en Barcelona, Málaga y Castellón, trabajamos con clientes de toda Andalucía y España. Nos adaptamos a reuniones presenciales en Granada o videollamadas según tu preferencia."
           }
         },
         {

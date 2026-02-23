@@ -16,8 +16,8 @@ export const schemaLocalOviedo= {
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Oviedo",
-        "addressRegion": "Aragón",
-        "postalCode": "50001",
+        "addressRegion": "Asturias",
+        "postalCode": "33001",
         "addressCountry": "ES"
       },
 
@@ -29,11 +29,11 @@ export const schemaLocalOviedo= {
         },
         {
           "@type": "State",
-          "name": "Provincia de Oviedo"
+          "name": "Principado de Asturias"
         },
         {
           "@type": "State",
-          "name": "Aragón"
+          "name": "Asturias"
         }
       ],
 
@@ -111,7 +111,7 @@ export const schemaLocalOviedo= {
           "name": "¿Ofrecéis servicios de diseño web en Oviedo?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí, AstracodeLAB ofrece servicios de diseño y desarrollo web en Oviedo. Aunque nuestras oficinas están ubicadas en Barcelona, Málaga y Castellón, trabajamos con clientes de toda Aragón y España. Nos adaptamos a reuniones presenciales en Oviedo o videollamadas según tu preferencia."
+            "text": "Sí, AstracodeLAB ofrece servicios de diseño y desarrollo web en Oviedo. Aunque nuestras oficinas están ubicadas en Barcelona, Málaga y Castellón, trabajamos con clientes de toda Asturias y España. Nos adaptamos a reuniones presenciales en Oviedo o videollamadas según tu preferencia."
           }
         },
         {

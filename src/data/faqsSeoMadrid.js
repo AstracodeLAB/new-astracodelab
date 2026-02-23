@@ -16,8 +16,8 @@ export const schemaLocalMadrid = {
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Madrid",
-        "addressRegion": "Aragón",
-        "postalCode": "50001",
+        "addressRegion": "Comunidad de Madrid",
+        "postalCode": "28001",
         "addressCountry": "ES"
       },
 
@@ -33,7 +33,7 @@ export const schemaLocalMadrid = {
         },
         {
           "@type": "State",
-          "name": "Aragón"
+          "name": "Comunidad de Madrid"
         }
       ],
 
@@ -111,7 +111,7 @@ export const schemaLocalMadrid = {
           "name": "¿Ofrecéis servicios de diseño web en Madrid?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí, AstracodeLAB ofrece servicios de diseño y desarrollo web en Madrid. Aunque nuestras oficinas están ubicadas en Barcelona, Málaga y Castellón, trabajamos con clientes de toda Aragón y España. Nos adaptamos a reuniones presenciales en Madrid o videollamadas según tu preferencia."
+            "text": "Sí, AstracodeLAB ofrece servicios de diseño y desarrollo web en Madrid. Aunque nuestras oficinas están ubicadas en Barcelona, Málaga y Castellón, trabajamos con clientes de toda la Comunidad de Madrid y España. Nos adaptamos a reuniones presenciales en Madrid o videollamadas según tu preferencia."
           }
         },
         {

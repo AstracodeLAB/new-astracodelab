@@ -1,12 +1,12 @@
-export const schemaLocalSevilla = {
+export const schemaLocalSevilla= {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "ProfessionalService",
-      "@id": "https://astracodelab.com/diseno-web-sevilla#AstracodeLABSevilla ",
-      "name": "AstracodeLAB - Diseño Web en Sevilla ",
-      "alternateName": "Agencia de Diseño Web Sevilla ",
-      "description": "Agencia de diseño y desarrollo web en Sevilla . Creamos páginas web profesionales para empresas y autónomos de Sevilla  y provincia. Diseño responsive, SEO local y soporte personalizado.",
+      "@id": "https://astracodelab.com/diseno-web-sevilla#AstracodeLABSevilla",
+      "name": "AstracodeLAB - Diseño Web en Sevilla",
+      "alternateName": "Agencia de Diseño Web Sevilla",
+      "description": "Agencia de diseño y desarrollo web en Sevilla. Creamos páginas web profesionales para empresas y autónomos de Sevilla y provincia. Diseño responsive, SEO local y soporte personalizado.",
       "url": "https://astracodelab.com/diseno-web-sevilla",
       "telephone": "+34-623-752-940",
       "priceRange": "700€",
@@ -15,9 +15,9 @@ export const schemaLocalSevilla = {
       // CRÍTICO para SEO Local
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Sevilla ",
-        "addressRegion": "Aragón",
-        "postalCode": "50001",
+        "addressLocality": "Sevilla",
+        "addressRegion": "Andalucía",
+        "postalCode": "41001",
         "addressCountry": "ES"
       },
 
@@ -25,15 +25,15 @@ export const schemaLocalSevilla = {
       "areaServed": [
         {
           "@type": "City",
-          "name": "Sevilla "
+          "name": "Sevilla"
         },
         {
           "@type": "State",
-          "name": "Provincia de Sevilla "
+          "name": "Provincia de Sevilla"
         },
         {
           "@type": "State",
-          "name": "Aragón"
+          "name": "Andalucía"
         }
       ],
 
@@ -60,17 +60,17 @@ export const schemaLocalSevilla = {
 
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "Servicios de diseño web en Sevilla ",
+        "name": "Servicios de diseño web en Sevilla",
         "itemListElement": [
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Diseño web para empresas de Sevilla ",
-              "description": "Páginas web profesionales para empresas y negocios de Sevilla ",
+              "name": "Diseño web para empresas de Sevilla",
+              "description": "Páginas web profesionales para empresas y negocios de Sevilla",
               "areaServed": {
                 "@type": "City",
-                "name": "Sevilla "
+                "name": "Sevilla"
               }
             }
           },
@@ -78,11 +78,11 @@ export const schemaLocalSevilla = {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Tiendas online Sevilla ",
-              "description": "Desarrollo de ecommerce para comercios de Sevilla ",
+              "name": "Tiendas online Sevilla",
+              "description": "Desarrollo de ecommerce para comercios de Sevilla",
               "areaServed": {
                 "@type": "City",
-                "name": "Sevilla "
+                "name": "Sevilla"
               }
             }
           },
@@ -90,11 +90,11 @@ export const schemaLocalSevilla = {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "SEO local Sevilla ",
-              "description": "Posicionamiento web para negocios locales de Sevilla ",
+              "name": "SEO local Sevilla",
+              "description": "Posicionamiento web para negocios locales de Sevilla",
               "areaServed": {
                 "@type": "City",
-                "name": "Sevilla "
+                "name": "Sevilla"
               }
             }
           }
@@ -108,18 +108,18 @@ export const schemaLocalSevilla = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "¿Ofrecéis servicios de diseño web en Sevilla ?",
+          "name": "¿Ofrecéis servicios de diseño web en Sevilla?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí, AstracodeLAB ofrece servicios de diseño y desarrollo web en Sevilla . Aunque nuestras oficinas están ubicadas en Barcelona, Málaga y Castellón, trabajamos con clientes de toda Aragón y España. Nos adaptamos a reuniones presenciales en Sevilla  o videollamadas según tu preferencia."
+            "text": "Sí, AstracodeLAB ofrece servicios de diseño y desarrollo web en Sevilla. Aunque nuestras oficinas están ubicadas en Barcelona, Málaga y Castellón, trabajamos con clientes de toda Andalucía y España. Nos adaptamos a reuniones presenciales en Sevilla o videollamadas según tu preferencia."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Trabajáis con empresas y autónomos de Sevilla ?",
+          "name": "¿Trabajáis con empresas y autónomos de Sevilla?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí, trabajamos con empresas, autónomos, startups y profesionales independientes de Sevilla  y toda la provincia. Tenemos experiencia en diversos sectores como turismo, hostelería, comercio local, servicios profesionales y sector industrial característico de la zona."
+            "text": "Sí, trabajamos con empresas, autónomos, startups y profesionales independientes de Sevilla y toda la provincia. Tenemos experiencia en diversos sectores como turismo, hostelería, comercio local, servicios profesionales y sector industrial característico de la zona."
           }
         },
         {
@@ -132,10 +132,10 @@ export const schemaLocalSevilla = {
         },
         {
           "@type": "Question",
-          "name": "¿Ofrece AstracodeLAB mantenimiento web en Sevilla ?",
+          "name": "¿Ofrece AstracodeLAB mantenimiento web en Sevilla?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí, ofrecemos planes de mantenimiento y soporte web para empresas de Sevilla . Esto incluye actualizaciones de seguridad, copias de seguridad, resolución de incidencias y modificaciones de contenido. Puedes consultar nuestros planes desde la sección de Mantenimiento y Soporte."
+            "text": "Sí, ofrecemos planes de mantenimiento y soporte web para empresas de Sevilla. Esto incluye actualizaciones de seguridad, copias de seguridad, resolución de incidencias y modificaciones de contenido. Puedes consultar nuestros planes desde la sección de Mantenimiento y Soporte."
           }
         },
         {
@@ -148,7 +148,7 @@ export const schemaLocalSevilla = {
         },
         {
           "@type": "Question",
-          "name": "¿Incluye SEO local para aparecer en búsquedas de Sevilla ?",
+          "name": "¿Incluye SEO local para aparecer en búsquedas de Sevilla?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Sí, todas nuestras webs incluyen optimización SEO on-page básica."
@@ -157,7 +157,7 @@ export const schemaLocalSevilla = {
 
         {
           "@type": "Question",
-          "name": "¿Qué necesito para empezar mi proyecto web en Sevilla ?",
+          "name": "¿Qué necesito para empezar mi proyecto web en Sevilla?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Para empezar solo necesitas tener clara la idea de tu proyecto. En la reunión inicial definiremos juntos los objetivos, funcionalidades necesarias y el estilo visual. Si ya tienes logotipo, imágenes y textos, perfecto, pero si no los tienes podemos ayudarte a crearlos."
@@ -180,7 +180,7 @@ export const schemaLocalSevilla = {
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Diseño web Sevilla ",
+          "name": "Diseño web Sevilla",
           "item": "https://astracodelab.com/diseno-web-sevilla"
         }
       ]
@@ -191,8 +191,8 @@ export const schemaLocalSevilla = {
       "@type": "WebPage",
       "@id": "https://astracodelab.com/diseno-web-sevilla#WebPage",
       "url": "https://astracodelab.com/diseno-web-sevilla",
-      "name": "Diseño Web en Sevilla  | Agencia Web Local - AstracodeLAB",
-      "description": "Diseño y desarrollo web profesional en Sevilla . Páginas web a medida para empresas y autónomos de Sevilla . Presupuesto sin compromiso.",
+      "name": "Diseño Web en Sevilla | Agencia Web Local - AstracodeLAB",
+      "description": "Diseño y desarrollo web profesional en Sevilla. Páginas web a medida para empresas y autónomos de Sevilla. Presupuesto sin compromiso.",
       "inLanguage": "es-ES",
       "isPartOf": {
         "@id": "https://astracodelab.com#WebSite"
@@ -201,7 +201,7 @@ export const schemaLocalSevilla = {
         "@id": "https://astracodelab.com/diseno-web-sevilla#Breadcrumb"
       },
       "about": {
-        "@id": "https://astracodelab.com/diseno-web-sevilla#AstracodeLABSevilla "
+        "@id": "https://astracodelab.com/diseno-web-sevilla#AstracodeLABSevilla"
       }
     }
   ]

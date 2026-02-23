@@ -57,7 +57,23 @@
   gap: 2.5rem;
   margin-top: 2.5rem;
 }
+.linkPrimary {
+  color: $blue-dark;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease, opacity 0.3s ease;
+  display: inline-flex;
+  align-items: center;
 
+  &:hover {
+    color: $blue-primary;
+    opacity: 0.85; 
+  }
+
+  &:active {
+    opacity: 0.65; 
+  }
+}
 .post-card {
   background-color: $cardWhite;
   box-shadow: $shadow;
@@ -113,6 +129,7 @@
   border-top-right-radius: 15px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+  max-height: 325px;
 }
 .blog-card-text {
   margin-top: 0.625rem;
@@ -266,10 +283,16 @@
   color: $blue-dark;
 }
 
-.post-content ul,
+.post-content ul {
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+  list-style: disc;
+}
+
 .post-content ol {
   margin: 1.5rem 0;
   padding-left: 1.5rem;
+  list-style: decimal;
 }
 
 .post-content li {
@@ -299,9 +322,108 @@
   outline-offset: 2px;
 }
 
+.post-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  display: block;
+}
+
+.post-content thead {
+  background-color: $blue-dark;
+  color: #fff;
+}
+
+.post-content th,
+.post-content td {
+  padding: 0.75rem 1rem;
+  border: 1px solid #e1e3e7;
+  text-align: left;
+
+}
+
+.post-content tbody tr:nth-child(even) {
+  background-color: #ffffff;
+}
+.post-content tbody tr:nth-child(odd) {
+  background-color: #fefdff70;
+}
+
 .content img {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
   margin: 2rem 0;
+}
+
+.content-img-container {
+  display: flex;
+  flex-direction: column;
+
+
+  align-items: flex-start;
+  @media (min-width: 90rem) {
+    flex-direction: row;
+      gap: 2rem;
+      margin-bottom: 2rem;
+  }
+}
+
+.content-img-box {
+  flex-shrink: 0;
+}
+
+.content-img-fixed {
+  max-width: 500px;
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.content-text-box {
+  flex-grow: 1;
+  margin-top: 2rem;
+}
+
+/* Card reutilizable: Consejo de AstracodeLAB */
+.consejo-astracodelab {
+  position: relative;
+  margin: 2.5rem 0;
+  padding: 2rem 2rem 1.5rem;
+  border-radius: 16px;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.92) 0%, rgba(243, 241, 255, 0.88) 100%),
+    url('/src/images/backgroundWhiteC.jpg') no-repeat center center / cover;
+  box-shadow: $shadow;
+  border: 1px solid rgba($blue-primary, 0.12);
+
+  h3 {
+    color: $title-color;
+    margin-top: 0;
+  }
+
+  p {
+    color: $text-bg-color;
+  }
+
+  a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: $gradientButton;
+    color: #fff;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+
+    &:hover {
+      opacity: 0.9;
+      transform: translateY(-2px);
+      color: #fff;
+    }
+  }
 }

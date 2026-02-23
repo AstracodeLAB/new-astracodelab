@@ -592,7 +592,7 @@ export const faqsSeoSevilla = [
 export const faqsSeoGranada = [
   {
     titulo: "¿Ofrecéis servicios de diseño web en Granada?",
-    contenido: "Sí, AstracodeLAB ofrece servicios de diseño y desarrollo web en Granada. Aunque nuestras oficinas están ubicadas en Barcelona,Valencia y Málaga, trabajamos con clientes de toda Sevilla y España."
+    contenido: "Sí, AstracodeLAB ofrece servicios de diseño y desarrollo web en Granada. Aunque nuestras oficinas están ubicadas en Barcelona,Valencia y Málaga, trabajamos con clientes de toda Granada y España."
   },
   {
     titulo: "¿Trabajáis con empresas y autónomos de Granada?",
@@ -624,7 +624,7 @@ export const faqsSeoGranada = [
 export const faqsSeoOviedo = [
   {
     titulo: "¿Ofrecéis servicios de diseño web en Oviedo?",
-    contenido: "Sí, AstracodeLAB ofrece servicios de diseño y desarrollo web en Oviedo. Aunque nuestras oficinas están ubicadas en Barcelona,Valencia y Málaga, trabajamos con clientes de toda Sevilla y España."
+    contenido: "Sí, AstracodeLAB ofrece servicios de diseño y desarrollo web en Oviedo. Aunque nuestras oficinas están ubicadas en Barcelona,Valencia y Málaga, trabajamos con clientes de todo Oviedo, Asturias y España."
   },
   {
     titulo: "¿Trabajáis con empresas y autónomos de Oviedo?",
@@ -656,7 +656,7 @@ export const faqsSeoOviedo = [
 export const faqsSeoOrense = [
   {
     titulo: "¿Ofrecéis servicios de diseño web en Orense?",
-    contenido: "Sí, AstracodeLAB ofrece servicios de diseño y desarrollo web en Orense. Aunque nuestras oficinas están ubicadas en Barcelona,Valencia y Málaga, trabajamos con clientes de toda Sevilla y España."
+    contenido: "Sí, AstracodeLAB ofrece servicios de diseño y desarrollo web en Orense. Aunque nuestras oficinas están ubicadas en Barcelona,Valencia y Málaga, trabajamos con clientes de todo Orense, Galicia y España."
   },
   {
     titulo: "¿Trabajáis con empresas y autónomos de Orense?",
