@@ -1,0 +1,60 @@
+---
+import TitleSecondary from './Titles/TitleSecondary.astro';
+import Subtitle from './Titles/Subtitle.astro';
+
+interface StrategicPointItem {
+  label: string;
+  description: string;
+}
+
+interface StrategicPointSection {
+  image: string;
+  alt: string;
+  items: StrategicPointItem[];
+  reverse?: boolean;
+}
+
+interface Props {
+  title: string;
+  text: string;
+  subtitle: string;
+  sections: StrategicPointSection[];
+  className?: string;
+}
+
+const { title, text, subtitle, sections, className = '' } = Astro.props;
+---
+
+<section class={`puntos-estrategicos ${className}`.trim()}>
+  <div class='puntos-estrategicos__title'>
+    <TitleSecondary text={title} />
+  </div>
+
+  <p class='puntos-estrategicos__text'>{text}</p>
+
+  <div class='puntos-estrategicos__subtitle'>
+    <Subtitle text={subtitle} />
+  </div>
+
+  {
+    sections.map((section, index) => (
+      <div class={`puntos-estrategicos__section${section.reverse ? ' puntos-estrategicos__section--reverse' : ''}`}>
+        <img
+          class={`puntos-estrategicos__image${index === sections.length - 1 ? ' puntos-estrategicos__image--bottom' : ''}`}
+          src={section.image}
+          alt={section.alt}
+        />
+
+        <ul
+          class={`puntos-estrategicos__list${index === 0 ? ' puntos-estrategicos__list--top' : ''}${index === sections.length - 1 ? ' puntos-estrategicos__list--bottom' : ''}`}
+        >
+          {section.items.map((item) => (
+            <li class='puntos-estrategicos__list-item'>
+              <b>{item.label}</b> {item.description}
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))
+  }
+</section>

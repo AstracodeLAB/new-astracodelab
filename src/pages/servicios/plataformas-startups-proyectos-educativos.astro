@@ -1,0 +1,422 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import HeroSecondary from '../../layouts/components/HeroSecondary.astro';
+import heroImg from '../../images/startup.svg';
+import TitleSecondary from '../../layouts/components/Titles/TitleSecondary.astro';
+import BenefitsSection from '../../layouts/components/BenefitsSection.astro';
+import QueIncluye from '../../layouts/components/QueIncluye.astro';
+import BannerCta from '../../layouts/components/Banners/BannerCta.astro';
+import FaqsSection from '../../layouts/components/FaqsSection.astro';
+import Contact from '../../layouts/components/Contact.astro';
+import plataformasImg from '../../images/disenioydesarrollo.jpg';
+import '../../styles/plataformas-startups-proyectos-educativos.scss';
+import Subtitle from '../../layouts/components/Titles/Subtitle.astro';
+import SimpleNumber from '../../layouts/components/Timeline/SimpleNumber.astro';
+import PuntosEstrategicos from '../../layouts/components/PuntosEstrategicos.astro';
+
+const benefits = [
+  {
+    titulo: 'Arquitectura pensada para producto',
+    descripcion:
+      'Una plataforma no se limita a mostrar información: debe soportar flujos, roles, accesos, automatizaciones e integraciones sin romperse cuando el proyecto crece.',
+  },
+  {
+    titulo: 'Escalabilidad desde el inicio',
+    descripcion:
+      'Diseñamos soluciones que permiten lanzar una primera versión funcional sin hipotecar la evolución futura del producto ni acumular deuda técnica innecesaria.',
+  },
+  {
+    titulo: 'Enfoque funcional y estratégico',
+    descripcion:
+      'Antes de desarrollar, analizamos qué necesita hacer la plataforma, quién la usará y qué lógica de negocio debe sostener para que la tecnología responda al modelo real.',
+  },
+  {
+    titulo: 'Experiencia clara para cada perfil',
+    descripcion:
+      'Startups, alumnado, docentes, administración o equipos internos no usan la plataforma del mismo modo. Diseñamos flujos diferenciados para que cada perfil tenga una experiencia coherente.',
+  },
+  {
+    titulo: 'Implementación útil, no solo código',
+    descripcion:
+      'El objetivo final es que tengas una herramienta que puedas enseñar, validar, usar y mejorar con seguridad, no una base técnica difícil de mantener.',
+  },
+];
+
+const faqs = [
+  {
+    titulo: '¿Cuánto cuesta desarrollar una plataforma web para una startup o un proyecto educativo?',
+    contenido:
+      'El coste de una plataforma digital a medida depende del número de funcionalidades, los perfiles de usuario implicados y las integraciones necesarias. En AstracodeLAB trabajamos proyectos de plataforma desde <b>3.000€</b>, con un alcance inicial bien definido que permite escalar el producto en fases posteriores. La mejor forma de obtener una estimación ajustada es contarnos tu proyecto en una primera llamada sin compromiso.',
+  },
+  {
+    titulo: '¿Qué diferencia hay entre una web corporativa y una plataforma digital?',
+    contenido:
+      'Una web corporativa presenta tu marca, tus servicios y tu información de contacto. Una <b>plataforma digital</b> es un producto funcional: permite a los usuarios registrarse, acceder a contenido o servicios, interactuar y gestionar información. La diferencia no es solo estética, sino de arquitectura técnica, lógica de negocio y complejidad de desarrollo.',
+  },
+  {
+    titulo: '¿Qué es un MVP y tiene sentido para mi proyecto?',
+    contenido:
+      'Un <b>MVP</b> (Minimum Viable Product) es la versión mínima funcional de tu producto digital: incluye las funcionalidades esenciales para que usuarios reales puedan usarlo y darte retroalimentación antes de invertir en el desarrollo completo. Para startups en fase de validación, suele ser la decisión más inteligente. Te ayudamos a definir qué entra en el MVP y qué puede esperar.',
+  },
+  {
+    titulo: '¿Puedo lanzar primero con funcionalidades básicas y añadir más adelante?',
+    contenido:
+      'Sí. Diseñamos la arquitectura de la plataforma pensando en la escalabilidad desde el inicio, para que las funcionalidades nuevas puedan integrarse sin rehacer lo que ya está construido.',
+  },
+  {
+    titulo: '¿Trabajáis con proyectos educativos sin ánimo de lucro o con financiación pública?',
+    contenido:
+      'Sí. Tenemos experiencia trabajando con proyectos educativos de distinta naturaleza, incluyendo proyectos colaborativos entre instituciones. Si tu proyecto tiene una estructura de financiación particular o plazos condicionados por convocatorias, cuéntanoslo en la primera reunión y lo tendremos en cuenta.',
+  },
+  {
+    titulo: '¿Dónde prestáis este servicio?',
+    contenido:
+      'AstracodeLAB tiene equipo en Barcelona, Málaga y Valencia, pero trabajamos con proyectos de toda España y también con proyectos internacionales en castellano. El trabajo en remoto forma parte de cómo operamos.',
+  },
+];
+
+const title = 'Plataformas web para startups y proyectos educativos | AstracodeLAB';
+const description =
+  'Desarrollamos plataformas web y herramientas digitales a medida para startups, proyectos EdTech y academias. Soluciones escalables con enfoque estratégico.';
+const permalink = Astro.url.href;
+const image = 'https://astracodelab.com/og_diseno_web.png';
+const robots = 'index, follow';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Service',
+      name: 'Desarrollo de plataformas web y herramientas digitales para startups y proyectos educativos',
+      description,
+      provider: {
+        '@type': 'Organization',
+        name: 'AstracodeLAB',
+        url: 'https://astracodelab.com',
+      },
+      areaServed: {
+        '@type': 'Country',
+        name: 'Spain',
+      },
+      serviceType: 'Desarrollo de plataformas web a medida',
+      url: permalink,
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: faqs.map((faq) => ({
+        '@type': 'Question',
+        name: faq.titulo,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.contenido.replace(/<[^>]+>/g, ''),
+        },
+      })),
+    },
+  ],
+};
+---
+
+<script type='application/ld+json' set:html={JSON.stringify(schema)} />
+
+<Layout title={title} description={description} permalink={permalink} image={image} robots={robots}>
+  <div class='container_main_services'>
+    <HeroSecondary
+      title='Desarrollo digital'
+      subtitle='para startups y proyectos educativos'
+      text='Soluciones funcionales, escalables y pensadas para crecer. Cuando una idea va más allá de tener presencia online, necesita una plataforma. Una web corporativa comunica quién eres; una plataforma digital hace posible lo que quieres construir: un producto, un servicio, una comunidad o una experiencia educativa. En AstracodeLAB desarrollamos soluciones digitales a medida para startups en fase de validación y crecimiento, proyectos EdTech, academias y centros de formación que necesitan tecnología funcional, escalable y bien construida desde el primer día.'
+      image={heroImg}
+      alt='Ilustración de lanzamiento de producto digital para startups y proyectos educativos.'
+    />
+
+    <article class='startups'>
+      <TitleSecondary
+        text='¿Cuándo necesitas una plataforma web y no una web corporativa?'
+        description='Una web corporativa responde bien a la pregunta "¿quiénes somos?". Una plataforma web responde a la pregunta "¿cómo funciona esto?". Si tu proyecto requiere que los usuarios se registren, accedan a contenido privado, completen un proceso, interactúen entre ellos o gestionen información en tiempo real, estás hablando de una plataforma, no de una web. Esa distinción técnica tiene un impacto directo en la arquitectura, el desarrollo y el presupuesto. Y es exactamente el tipo de proyecto en el que trabajamos.'
+      />
+      <div class='beneficios'>
+        <BenefitsSection titulo='Por qué este tipo de proyecto requiere otro enfoque' benefits={benefits} />
+      </div>
+    </article>
+
+    <QueIncluye
+      title='Qué desarrollamos'
+      intro='Desarrollamos plataformas web y herramientas digitales a medida para modelos de negocio y contextos formativos que necesitan algo más que una página informativa.'
+      paragraphs={[
+        '<b>Plataformas digitales para startups:</b> Desarrollamos MVPs funcionales que permiten iterar con usuarios reales, herramientas internas para automatizar procesos operativos, plataformas SaaS con lógica de usuario, gestión de accesos y paneles de administración. El objetivo no es entregar código: es entregarte una herramienta que puedas usar, mostrar a inversores y escalar cuando llegue el momento.',
+        '<b>Plataformas educativas y herramientas para proyectos EdTech:</b> El sector educativo tiene necesidades tecnológicas muy específicas que las soluciones genéricas no resuelven bien. Una plataforma de formación online necesita gestionar alumnos, organizar contenido en itinerarios de aprendizaje, controlar el progreso, certificar completados y ofrecer una experiencia coherente en cualquier dispositivo.',
+        '<b>Soluciones EdTech a medida:</b> Desarrollamos campus virtuales y plataformas de cursos online a medida, sistemas de matriculación y gestión de alumnos, áreas privadas con acceso diferenciado por perfil o nivel, integraciones con herramientas de videoconferencia y evaluación, y plataformas para proyectos educativos colaborativos que requieren comunicación y gestión de contenido entre múltiples participantes.',
+        '<b>Herramientas digitales para academias y centros de formación:</b> Las academias y centros de formación presencial o semipresencial necesitan digitalizar procesos que hoy resuelven de forma manual o con herramientas que no encajan con su modelo. Desarrollamos soluciones que se adaptan a cómo trabaja tu centro, no al revés: sistemas de gestión de alumnos y grupos, calendarios y herramientas de reserva de clases, áreas privadas para acceso a materiales, herramientas de comunicación entre docentes y alumnado.',
+      ]}
+      image={plataformasImg.src}
+      alt='Pantallas de desarrollo web y arquitectura digital para plataformas de startups y proyectos educativos.'
+    />
+
+    <article class='startups'>
+      <TitleSecondary
+        text='Cómo trabajamos en proyectos avanzados'
+        description='Los proyectos de plataforma tienen una complejidad diferente a la de una web corporativa. Requieren más tiempo de análisis, decisiones técnicas con consecuencias a largo plazo y una comunicación estrecha a lo largo de todo el proceso.'
+      />
+      <article class='beneficios'>
+        <Subtitle text='Nuestro proceso en este tipo de proyectos se estructura en cinco fases' />
+        <SimpleNumber
+          number={1}
+          title='Discovery
+          y
+          definición
+          funcional'
+          ,
+          text='Antes
+          de
+          escribir
+          una
+          línea
+          de
+          código,
+          definimos
+          contigo
+          qué
+          debe
+          hacer
+          la
+          plataforma,
+          quién
+          la
+          va
+          a
+          usar,
+          cómo
+          se
+          van
+          a
+          relacionar
+          entre
+          sí
+          los
+          diferentes
+          perfiles
+          de
+          usuario
+          y
+          qué
+          integraciones
+          son
+          necesarias.
+          Esta
+          fase
+          nos
+          permite
+          dimensionar
+          el
+          proyecto
+          con
+          precisión
+          y
+          evitar
+          sorpresas
+          a
+          mitad
+          de
+          desarrollo.'
+          ,
+        />
+        <SimpleNumber
+          number={2}
+          title='Arquitectura
+          y
+          prototipo'
+          ,
+          text='Diseñamos
+          la
+          estructura
+          de
+          la
+          plataforma
+          y
+          creamos
+          un
+          prototipo
+          navegable
+          que
+          permite
+          validar
+          los
+          flujos
+          principales
+          antes
+          de
+          desarrollarlos.
+          Es
+          el
+          momento
+          de
+          cambiar
+          cosas
+          sin
+          coste.'
+          ,
+        />
+        <SimpleNumber
+          number={3}
+          title='Desarrollo
+          iterativo'
+          ,
+          text='Construimos
+          por
+          bloques
+          funcionales,
+          entregando
+          versiones
+          parciales
+          que
+          puedes
+          revisar
+          y
+          usar
+          mientras
+          avanzamos.
+          Esto
+          reduce
+          el
+          riesgo
+          y
+          permite
+          ajustar
+          el
+          alcance
+          si
+          cambian
+          las
+          prioridades.'
+          ,
+        />
+        <SimpleNumber
+          number={4}
+          title='Revisión,
+          pruebas
+          y
+          lanzamiento'
+          ,
+          text='Antes
+          de
+          publicar,
+          probamos
+          rendimiento,
+          seguridad,
+          compatibilidad
+          y
+          accesibilidad.
+          Lanzamos
+          cuando
+          todo
+          funciona
+          como
+          debe.'
+          ,
+        />
+        <SimpleNumber
+          number={5}
+          title='Documentación
+          y
+          soporte'
+          ,
+          text='Entregamos
+          documentación
+          técnica
+          clara
+          y
+          te
+          acompañamos
+          en
+          los
+          primeros
+          meses
+          tras
+          el
+          lanzamiento.
+          Si
+          el
+          proyecto
+          crece,
+          también
+          podemos
+          crecer
+          contigo.'
+          ,
+        />
+      </article>
+    </article>
+
+    <PuntosEstrategicos
+      title='Por qué AstracodeLAB para tu proyecto de plataforma'
+      text='Muchos proyectos con potencial real se frenan por dos motivos: presupuestos de gran agencia que no encajan en la fase en la que está el proyecto, o soluciones de bajo coste que generan problemas técnicos que después son caros de resolver. AstracodeLAB ocupa un espacio diferente: la capacidad técnica para construir bien, con la agilidad y el trato directo de un equipo pequeño y comprometido.'
+      subtitle='Cómo trabajamos ese punto intermedio'
+      sections={[
+        {
+          image: plataformasImg.src,
+          alt: 'Pantallas de desarrollo web y arquitectura digital para plataformas de startups y proyectos educativos.',
+          items: [
+            {
+              label: 'Tecnología sin plantillas:',
+              description:
+                'No trabajamos con plantillas ni soluciones estándar que forzamos a encajar en cada proyecto. Diseñamos la solución a partir del modelo real del producto.',
+            },
+            {
+              label: 'Análisis antes de proponer:',
+              description:
+                'Analizamos tu usuario, tu lógica de negocio y tus objetivos antes de proponer cualquier arquitectura o stack tecnológico.',
+            },
+            {
+              label: 'Contacto directo:',
+              description:
+                'Respondemos nosotras directamente, sin intermediarios, desde el primer contacto hasta el soporte post-lanzamiento.',
+            },
+          ],
+        },
+      ]}
+    />
+
+    <article class='startups'>
+      <TitleSecondary
+        text='Un proyecto real: Yo Soy STEAM'
+        description='Yo Soy STEAM es un proyecto educativo cuyo objetivo es generar conciencia sobre la igualdad de género en el ámbito STEAM, visibilizar talentos invisibilizados y construir una plataforma para el diálogo y la acción, desarrollado en colaboración con dos institutos. AstracodeLAB desarrolló la plataforma digital que da soporte a este proyecto: un espacio donde la misión del proyecto toma forma y llega a su comunidad.'
+      />
+      <div class='beneficios'>
+        <BenefitsSection
+          titulo='Qué aporta este caso'
+          benefits={[
+            {
+              titulo: 'Proyecto educativo con propósito',
+              descripcion:
+                'La plataforma se concibió como una herramienta para activar participación, comunicación y visibilidad alrededor de una misión educativa concreta.',
+            },
+            {
+              titulo: 'Tecnología al servicio de la comunidad',
+              descripcion:
+                'El desarrollo debía sostener contenido, interacción y claridad narrativa para que el proyecto pudiera conectar con su audiencia real.',
+            },
+            {
+              titulo: 'Base para crecimiento futuro',
+              descripcion:
+                'El enfoque de desarrollo permitió construir una base sólida sobre la que seguir ampliando funcionalidades y alcance del proyecto.',
+            },
+          ]}
+        />
+      </div>
+    </article>
+
+    <BannerCta
+      titulo='¿Tienes un proyecto de plataforma en mente?'
+      descripcion='Cuéntanoslo. Hacemos una primera llamada de discovery sin coste para entender tu idea, valorar el alcance y orientarte sobre el mejor punto de partida, sin compromisos y sin tecnicismos innecesarios.'
+      texto='Agendar llamada de discovery →'
+    />
+
+    <section class='preguntas'>
+      <FaqsSection
+        titulo='Preguntas frecuentes sobre desarrollo de plataformas digitales'
+        description='Esta sección está estructurada en formato FAQ para responder dudas habituales sobre plataformas para startups, proyectos EdTech, academias y centros de formación.'
+        faqs={faqs}
+      />
+    </section>
+    <Contact />
+  </div>
+</Layout>

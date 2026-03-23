@@ -1,55 +1,46 @@
 ---
-import TitleSecondary from './Titles/TitleSecondary.astro';
-import Subtitle from './Titles/Subtitle.astro';
+import PuntosEstrategicos from './PuntosEstrategicos.astro';
 import webcorp1 from '../../images/web-corporativa1.jpg';
 import webcorp2 from '../../images/web-corporativa2.jpg';
 ---
 
-<section class='estrategiaContainer'>
-  <div class='estrategiaContainer__title'>
-    <TitleSecondary text='Web corporativa profesional vs. Redes Sociales: una estrategia integral es la clave' />
-  </div>
-  <p class='estrategiaContainer__text'>
-    Si bien las redes sociales son herramientas esenciales para la visibilidad inmediata y la interacción, tu web
-    corporativa profesional y tus perfiles sociales cumplen roles complementarios, no sustitutos. La estrategia digital
-    más potente integra ambos canales para maximizar el alcance y la conversión.
-  </p>
-  <div class='estrategiaContainer__subtitle'>
-    <Subtitle text='Tu web corporativa profesional: El centro de operaciones digital' />
-  </div>
-  <div class='estrategiaContainer__section estrategia__section--top'>
-    <img
-      class='estrategiaContainer__image estrategiaContainer__image--top'
-      src={webcorp1.src}
-      alt='Dos personas conversando en una oficina moderna con luz natural, computadora portátil y elementos decorativos, representando colaboración y trabajo en equipo.'
-    />
-    <ul class='estrategiaContainer__list estrategiaContainer__list--top'>
-      <li class='estrategiaContainer__list-item'>
-        <b>Autonomía y Control:</b> En tu propia página web, tú decides la estructura, el estilo y la narrativa, sin depender
-        de los constantes cambios de algoritmo de terceros o las limitaciones de formato. Es tu espacio, tu reglas.
-      </li>
-      <li class='estrategiaContainer__list-item'>
-        <b>SEO :</b> Tu sitio web, es la base de tu estrategia SEO. Google valora la información estructurada, detallada
-        y de valor sobre tus servicios, casos de éxito y datos de contacto. Una web bien optimizada para SEO es crucial para
-        aparecer en las búsquedas de tus clientes potenciales.
-      </li>
-    </ul>
-  </div>
-  <div class='estrategiaContainer__section estrategiaContainer__section--bottom'>
-    <img
-      class='estrategiaContainer__image estrategiaContainer__image--bottom'
-      src={webcorp2.src}
-      alt='Dos personas trabajando con laptops en un entorno de oficina, representando concentración, análisis y desarrollo de proyectos.'
-    />
-    <ul class='estrategiaContainer__list estrategiaContainer__list--bottom'>
-      <li class='estrategiaContainer__list-item'>
-        <b>Credibilidad Inmediata:</b> Un dominio propio y un sitio web corporativo de calidad transmiten profesionalismo
-        y seriedad al instante. Los clientes perciben esto como garantía de seriedad, estabilidad y profesionalidad.
-      </li>
-      <li class='estrategiaContainer__list-item'>
-        <b>Análisis y Datos Propios:</b> Tienes acceso completo a tus propias métricas de tráfico y comportamiento de usuario,
-        lo que te permite tomar decisiones informadas y ajustar tu estrategia digital de forma precisa.
-      </li>
-    </ul>
-  </div>
-</section>
+<PuntosEstrategicos
+  title='Web corporativa profesional vs. Redes Sociales: una estrategia integral es la clave'
+  text='Si bien las redes sociales son herramientas esenciales para la visibilidad inmediata y la interacciÃ³n, tu web corporativa profesional y tus perfiles sociales cumplen roles complementarios, no sustitutos. La estrategia digital mÃ¡s potente integra ambos canales para maximizar el alcance y la conversiÃ³n.'
+  subtitle='Tu web corporativa profesional: El centro de operaciones digital'
+  sections={[
+    {
+      image: webcorp1.src,
+      alt: 'Dos personas conversando en una oficina moderna con luz natural, computadora portÃ¡til y elementos decorativos, representando colaboraciÃ³n y trabajo en equipo.',
+      items: [
+        {
+          label: 'AutonomÃ­a y Control:',
+          description:
+            'En tu propia pÃ¡gina web, tÃº decides la estructura, el estilo y la narrativa, sin depender de los constantes cambios de algoritmo de terceros o las limitaciones de formato. Es tu espacio, tu reglas.',
+        },
+        {
+          label: 'SEO :',
+          description:
+            'Tu sitio web, es la base de tu estrategia SEO. Google valora la informaciÃ³n estructurada, detallada y de valor sobre tus servicios, casos de Ã©xito y datos de contacto. Una web bien optimizada para SEO es crucial para aparecer en las bÃºsquedas de tus clientes potenciales.',
+        },
+      ],
+    },
+    {
+      image: webcorp2.src,
+      alt: 'Dos personas trabajando con laptops en un entorno de oficina, representando concentraciÃ³n, anÃ¡lisis y desarrollo de proyectos.',
+      reverse: true,
+      items: [
+        {
+          label: 'Credibilidad Inmediata:',
+          description:
+            'Un dominio propio y un sitio web corporativo de calidad transmiten profesionalismo y seriedad al instante. Los clientes perciben esto como garantÃ­a de seriedad, estabilidad y profesionalidad.',
+        },
+        {
+          label: 'AnÃ¡lisis y Datos Propios:',
+          description:
+            'Tienes acceso completo a tus propias mÃ©tricas de trÃ¡fico y comportamiento de usuario, lo que te permite tomar decisiones informadas y ajustar tu estrategia digital de forma precisa.',
+        },
+      ],
+    },
+  ]}
+/>
