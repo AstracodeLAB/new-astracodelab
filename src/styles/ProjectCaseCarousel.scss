@@ -1,0 +1,213 @@
+@use './variables.scss' as *;
+
+.project-case-carousel {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid rgba(42, 17, 96, 0.1);
+  border-radius: 1.5rem;
+  background:
+    radial-gradient(circle at top left, rgba(100, 30, 255, 0.12), transparent 34%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(248, 247, 255, 0.98) 100%);
+  box-shadow: 0 20px 60px rgba(42, 17, 96, 0.12);
+  overflow: hidden;
+
+  &:focus-visible {
+    outline: 3px solid rgba(100, 30, 255, 0.35);
+    outline-offset: 0.25rem;
+  }
+
+  @media (min-width: 64rem) {
+    padding: 1.25rem;
+    border-radius: 1.75rem;
+  }
+
+  &__viewport {
+    overflow: hidden;
+    border-radius: 1rem;
+    background: linear-gradient(180deg, rgba(30, 14, 98, 0.03), rgba(30, 14, 98, 0.08));
+  }
+
+  &__track {
+    display: flex;
+    transition: transform 320ms ease;
+    will-change: transform;
+  }
+
+  &__slide {
+    flex: 0 0 100%;
+    margin: 0;
+    display: grid;
+    min-width: 0;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: top center;
+
+    @media (min-width: 64rem) {
+      aspect-ratio: 16 / 10;
+    }
+  }
+
+  &__caption {
+    display: grid;
+    gap: 0.35rem;
+    padding: 0.9rem 0.95rem 0;
+  }
+
+  &__caption-title {
+    margin: 0;
+    color: $title-color;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.35;
+  }
+
+  &__caption-description {
+    margin: 0;
+    color: rgba(30, 14, 98, 0.8);
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+
+  &__controls {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  &__arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    border: 1px solid rgba(42, 17, 96, 0.14);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.96);
+    color: $title-color;
+    cursor: pointer;
+    transition:
+      transform 180ms ease,
+      background-color 180ms ease,
+      border-color 180ms ease;
+
+    &:hover,
+    &:focus-visible {
+      background: rgba(243, 241, 255, 1);
+      border-color: rgba(100, 30, 255, 0.28);
+      transform: translateY(-1px);
+      outline: none;
+    }
+
+    span {
+      font-size: 1.1rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+  }
+
+  &__indicators {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  &__indicator {
+    width: 0.7rem;
+    height: 0.7rem;
+    padding: 0;
+    border: 0;
+    border-radius: 999px;
+    background: rgba(42, 17, 96, 0.18);
+    cursor: pointer;
+    transition:
+      transform 180ms ease,
+      background-color 180ms ease,
+      width 180ms ease;
+
+    &[aria-pressed='true'] {
+      width: 1.8rem;
+      background: $title-color;
+    }
+
+    &:focus-visible {
+      outline: 2px solid rgba(100, 30, 255, 0.35);
+      outline-offset: 0.2rem;
+    }
+  }
+}
+
+.startups--case-study {
+  @media (min-width: 64rem) {
+    max-width: 64rem;
+  }
+
+  .startups__case-layout {
+    display: grid;
+    gap: 1.5rem;
+
+    @media (min-width: 90rem) {
+      gap: 2rem;
+    }
+  }
+
+  .startups__case-copy {
+    display: grid;
+    gap: 1.25rem;
+    min-width: 0;
+  }
+
+  .startups__case-visual {
+    min-width: 0;
+  }
+
+  .beneficios {
+    min-width: 0;
+  }
+
+  .startups__case-points {
+    display: grid;
+    gap: 0.85rem;
+    min-width: 0;
+  }
+
+  .startups__case-points-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 0.9rem;
+  }
+
+  .startups__case-points-item {
+    position: relative;
+    margin: 0;
+    padding: 0 0 0 1.4rem;
+    color: rgba(30, 14, 98, 0.88);
+    font-size: 0.98rem;
+    line-height: 1.7;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0.75rem;
+      left: 0;
+      width: 0.55rem;
+      height: 0.55rem;
+      border-radius: 999px;
+      background: linear-gradient(180deg, #641eff 0%, #2a1160 100%);
+      box-shadow: 0 0 0 0.3rem rgba(100, 30, 255, 0.08);
+    }
+
+    strong {
+      color: $title-color;
+    }
+  }
+}

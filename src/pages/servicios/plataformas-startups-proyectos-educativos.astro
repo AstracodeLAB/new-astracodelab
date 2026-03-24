@@ -9,10 +9,17 @@ import BannerCta from '../../layouts/components/Banners/BannerCta.astro';
 import FaqsSection from '../../layouts/components/FaqsSection.astro';
 import Contact from '../../layouts/components/Contact.astro';
 import plataformasImg from '../../images/disenioydesarrollo.jpg';
+import desktopImg from '../../images/desktopImg.jpg';
 import '../../styles/plataformas-startups-proyectos-educativos.scss';
 import Subtitle from '../../layouts/components/Titles/Subtitle.astro';
 import SimpleNumber from '../../layouts/components/Timeline/SimpleNumber.astro';
 import PuntosEstrategicos from '../../layouts/components/PuntosEstrategicos.astro';
+import ProjectCaseCarousel from '../../layouts/components/ProjectCaseCarousel.astro';
+import yosoysteam from '../../images/yosoysteam.jpg';
+import cap_yss7 from '../../images/ca_yss7.png';
+import cap_yss1 from '../../images/cap_yss1.png';
+import cap_yss8 from '../../images/ca_yss8.png';
+import cap_yss9 from '../../images/ca_yss9.png';
 
 const benefits = [
   {
@@ -46,7 +53,7 @@ const faqs = [
   {
     titulo: '¿Cuánto cuesta desarrollar una plataforma web para una startup o un proyecto educativo?',
     contenido:
-      'El coste de una plataforma digital a medida depende del número de funcionalidades, los perfiles de usuario implicados y las integraciones necesarias. En AstracodeLAB trabajamos proyectos de plataforma desde <b>3.000€</b>, con un alcance inicial bien definido que permite escalar el producto en fases posteriores. La mejor forma de obtener una estimación ajustada es contarnos tu proyecto en una primera llamada sin compromiso.',
+      'El coste de una plataforma digital a medida depende del número de funcionalidades, los perfiles de usuario implicados y las integraciones necesarias. La mejor forma de obtener una estimación ajustada es contarnos tu proyecto en una primera llamada sin compromiso.',
   },
   {
     titulo: '¿Qué diferencia hay entre una web corporativa y una plataforma digital?',
@@ -71,7 +78,7 @@ const faqs = [
   {
     titulo: '¿Dónde prestáis este servicio?',
     contenido:
-      'AstracodeLAB tiene equipo en Barcelona, Málaga y Valencia, pero trabajamos con proyectos de toda España y también con proyectos internacionales en castellano. El trabajo en remoto forma parte de cómo operamos.',
+      'AstracodeLAB tiene equipo en Barcelona, Málaga y Valencia, pero trabajamos con proyectos de toda España. El trabajo en remoto forma parte de cómo operamos.',
   },
 ];
 
@@ -81,6 +88,29 @@ const description =
 const permalink = Astro.url.href;
 const image = 'https://astracodelab.com/og_diseno_web.png';
 const robots = 'index, follow';
+
+const yoSoySteamImages = [
+  {
+    src: yosoysteam.src,
+    alt: 'Mockup de interfaz web usado como ejemplo visual del caso de estudio Yo Soy STEAM.',
+  },
+  {
+    src: cap_yss1.src,
+    alt: 'Pantalla de referencia visual integrada en la presentación del caso de estudio Yo Soy STEAM.',
+  },
+  {
+    src: cap_yss8.src,
+    alt: 'Pantalla de referencia visual integrada en la presentación del caso de estudio Yo Soy STEAM.',
+  },
+  {
+    src: cap_yss9.src,
+    alt: 'Pantalla de referencia visual integrada en la presentación del caso de estudio Yo Soy STEAM.',
+  },
+  {
+    src: cap_yss7.src,
+    alt: 'Vista de maqueta digital utilizada como apoyo visual para el caso de estudio Yo Soy STEAM.',
+  },
+];
 
 const schema = {
   '@context': 'https://schema.org',
@@ -134,13 +164,18 @@ const schema = {
         description='Una web corporativa responde bien a la pregunta "¿quiénes somos?". Una plataforma web responde a la pregunta "¿cómo funciona esto?". Si tu proyecto requiere que los usuarios se registren, accedan a contenido privado, completen un proceso, interactúen entre ellos o gestionen información en tiempo real, estás hablando de una plataforma, no de una web. Esa distinción técnica tiene un impacto directo en la arquitectura, el desarrollo y el presupuesto. Y es exactamente el tipo de proyecto en el que trabajamos.'
       />
       <div class='beneficios'>
-        <BenefitsSection titulo='Por qué este tipo de proyecto requiere otro enfoque' benefits={benefits} />
+        <BenefitsSection
+          titulo='Por qué AstracodeLAB aborda este tipo de proyecto de forma diferente'
+          benefits={benefits}
+        />
       </div>
     </article>
 
     <QueIncluye
       title='Qué desarrollamos'
-      intro='Desarrollamos plataformas web y herramientas digitales a medida para modelos de negocio y contextos formativos que necesitan algo más que una página informativa.'
+      intro='En AstracodeLAB desarrollamos plataformas web y herramientas digitales
+a medida para modelos de negocio y contextos formativos que necesitan algo
+más que una página informativa.'
       paragraphs={[
         '<b>Plataformas digitales para startups:</b> Desarrollamos MVPs funcionales que permiten iterar con usuarios reales, herramientas internas para automatizar procesos operativos, plataformas SaaS con lógica de usuario, gestión de accesos y paneles de administración. El objetivo no es entregar código: es entregarte una herramienta que puedas usar, mostrar a inversores y escalar cuando llegue el momento.',
         '<b>Plataformas educativas y herramientas para proyectos EdTech:</b> El sector educativo tiene necesidades tecnológicas muy específicas que las soluciones genéricas no resuelven bien. Una plataforma de formación online necesita gestionar alumnos, organizar contenido en itinerarios de aprendizaje, controlar el progreso, certificar completados y ofrecer una experiencia coherente en cualquier dispositivo.',
@@ -160,7 +195,7 @@ const schema = {
         <Subtitle text='Nuestro proceso en este tipo de proyectos se estructura en cinco fases' />
         <SimpleNumber
           number={1}
-          title='Discovery
+          title='Reunión inicial de análisis
           y
           definición
           funcional'
@@ -352,7 +387,7 @@ const schema = {
       subtitle='Cómo trabajamos ese punto intermedio'
       sections={[
         {
-          image: plataformasImg.src,
+          image: desktopImg.src,
           alt: 'Pantallas de desarrollo web y arquitectura digital para plataformas de startups y proyectos educativos.',
           items: [
             {
@@ -375,39 +410,47 @@ const schema = {
       ]}
     />
 
-    <article class='startups'>
-      <TitleSecondary
-        text='Un proyecto real: Yo Soy STEAM'
-        description='Yo Soy STEAM es un proyecto educativo cuyo objetivo es generar conciencia sobre la igualdad de género en el ámbito STEAM, visibilizar talentos invisibilizados y construir una plataforma para el diálogo y la acción, desarrollado en colaboración con dos institutos. AstracodeLAB desarrolló la plataforma digital que da soporte a este proyecto: un espacio donde la misión del proyecto toma forma y llega a su comunidad.'
-      />
-      <div class='beneficios'>
-        <BenefitsSection
-          titulo='Qué aporta este caso'
-          benefits={[
-            {
-              titulo: 'Proyecto educativo con propósito',
-              descripcion:
-                'La plataforma se concibió como una herramienta para activar participación, comunicación y visibilidad alrededor de una misión educativa concreta.',
-            },
-            {
-              titulo: 'Tecnología al servicio de la comunidad',
-              descripcion:
-                'El desarrollo debía sostener contenido, interacción y claridad narrativa para que el proyecto pudiera conectar con su audiencia real.',
-            },
-            {
-              titulo: 'Base para crecimiento futuro',
-              descripcion:
-                'El enfoque de desarrollo permitió construir una base sólida sobre la que seguir ampliando funcionalidades y alcance del proyecto.',
-            },
-          ]}
-        />
+    <article class='startups startups--case-study'>
+      <div class='startups__case-layout'>
+        <div class='startups__case-copy'>
+          <TitleSecondary
+            text='Un proyecto real: Yo Soy STEAM'
+            description='yo soy STEAM es un proyecto educativo enfocado en cerrar la brecha de género en el ámbito STEAM, desarrollado en colaboración con el IES Villaverde y el CIPFP Valle de Elda. AstracodeLAB diseñó y desarrolló la plataforma digital completa: arquitectura, front-end, back-end y panel de gestión, creando el espacio donde la misión del proyecto toma forma y conecta alumnas con empresas.'
+          />
+          <div class='startups__case-visual'>
+            <ProjectCaseCarousel images={yoSoySteamImages} regionLabel='Imágenes del caso de estudio Yo Soy STEAM' />
+          </div>
+          <div class='startups__case-points'>
+            <Subtitle text='Qué aporta este caso' />
+            <ul class='startups__case-points-list'>
+              <li class='startups__case-points-item'>
+                <strong>Proyecto educativo con propósito.</strong> Yo Soy STEAM nació para cerrar la brecha de género en el
+                ámbito STEAM: una plataforma respaldada por el IES Villaverde y el CIPFP Valle de Elda donde las alumnas de
+                FP encuentran su primera oportunidad profesional y las empresas acceden a talento emergente.
+              </li>
+              <li class='startups__case-points-item'>
+                <strong>Diseñada para quienes la usan.</strong> La plataforma permite a las compañías explorar perfiles de
+                alumnas, visualizar sus currículums y publicar ofertas de trabajo. Las alumnas, por su parte, pueden filtrar
+                y buscar las oportunidades que mejor se ajustan a su perfil e intereses.Con más del 50% del tráfico desde
+                móvil, priorizamos velocidad de carga y navegación fluida en cualquier dispositivo, combinando usabilidad
+                centrada en el usuario con un panel de gestión que permite mantener la plataforma actualizada sin fricción
+                y un diseño visual, atractivo y coherente con la identidad del proyecto.
+              </li>
+              <li class='startups__case-points-item'>
+                <strong>Base para crecimiento futuro.</strong> AstracodeLAB diseñó la arquitectura de la plataforma pensando
+                en la evolución del proyecto: nuevas empresas, nuevos centros de formación y nuevas funcionalidades pueden
+                incorporarse sin rehacer lo construido, con la misma solidez técnica desde el primer día.
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </article>
 
     <BannerCta
       titulo='¿Tienes un proyecto de plataforma en mente?'
-      descripcion='Cuéntanoslo. Hacemos una primera llamada de discovery sin coste para entender tu idea, valorar el alcance y orientarte sobre el mejor punto de partida, sin compromisos y sin tecnicismos innecesarios.'
-      texto='Agendar llamada de discovery →'
+      descripcion='Cuéntanoslo. Hacemos una primera llamada sin coste para entender tu idea, valorar el alcance y orientarte sobre el mejor punto de partida, sin compromisos y sin tecnicismos innecesarios.'
+      texto='Agendar llamada →'
     />
 
     <section class='preguntas'>

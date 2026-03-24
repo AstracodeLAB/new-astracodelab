@@ -1,0 +1,172 @@
+---
+export interface CarouselImage {
+  src: string;
+  alt: string;
+  title?: string;
+  description?: string;
+}
+
+interface Props {
+  images: CarouselImage[];
+  className?: string;
+  regionLabel?: string;
+  initialIndex?: number;
+}
+
+const {
+  images = [],
+  className = '',
+  regionLabel = 'Carrusel de imágenes del proyecto',
+  initialIndex = 0,
+} = Astro.props;
+
+const safeInitialIndex =
+  images.length === 0 ? 0 : Math.min(Math.max(initialIndex, 0), images.length - 1);
+---
+
+{
+  images.length > 0 && (
+    <project-case-carousel
+      class={`project-case-carousel ${className}`.trim()}
+      aria-label={regionLabel}
+      data-initial-index={safeInitialIndex}
+      data-total-slides={images.length}
+    >
+      <div class='project-case-carousel__viewport' data-carousel-viewport>
+        <div class='project-case-carousel__track' data-carousel-track>
+          {images.map((image, index) => (
+            <figure
+              class='project-case-carousel__slide'
+              data-carousel-slide
+              aria-hidden={index === safeInitialIndex ? 'false' : 'true'}
+            >
+              <img class='project-case-carousel__image' src={image.src} alt={image.alt} loading='lazy' />
+              {(image.title || image.description) && (
+                <figcaption class='project-case-carousel__caption'>
+                  {image.title && <p class='project-case-carousel__caption-title'>{image.title}</p>}
+                  {image.description && (
+                    <p class='project-case-carousel__caption-description'>{image.description}</p>
+                  )}
+                </figcaption>
+              )}
+            </figure>
+          ))}
+        </div>
+      </div>
+
+      {images.length > 1 && (
+        <div class='project-case-carousel__controls'>
+          <button
+            class='project-case-carousel__arrow'
+            type='button'
+            data-carousel-prev
+            aria-label='Ver imagen anterior'
+          >
+            <span aria-hidden='true'>&larr;</span>
+          </button>
+
+          <div class='project-case-carousel__indicators' aria-label='Indicadores del carrusel'>
+            {images.map((_, index) => (
+              <button
+                class='project-case-carousel__indicator'
+                type='button'
+                data-carousel-indicator
+                data-index={index}
+                aria-label={`Ir a la imagen ${index + 1}`}
+                aria-pressed={index === safeInitialIndex ? 'true' : 'false'}
+              />
+            ))}
+          </div>
+
+          <button
+            class='project-case-carousel__arrow'
+            type='button'
+            data-carousel-next
+            aria-label='Ver imagen siguiente'
+          >
+            <span aria-hidden='true'>&rarr;</span>
+          </button>
+        </div>
+      )}
+    </project-case-carousel>
+  )
+}
+
+<script>
+  class ProjectCaseCarousel extends HTMLElement {
+    connectedCallback() {
+      this.track = this.querySelector('[data-carousel-track]');
+      this.slides = Array.from(this.querySelectorAll('[data-carousel-slide]'));
+      this.indicators = Array.from(this.querySelectorAll('[data-carousel-indicator]'));
+      this.prevButton = this.querySelector('[data-carousel-prev]');
+      this.nextButton = this.querySelector('[data-carousel-next]');
+      this.totalSlides = Number(this.dataset.totalSlides || this.slides.length || 0);
+      this.currentIndex = Number(this.dataset.initialIndex || 0);
+
+      if (!this.track || this.totalSlides <= 1) {
+        return;
+      }
+
+      this.handlePrev = () => this.goToSlide(this.currentIndex - 1);
+      this.handleNext = () => this.goToSlide(this.currentIndex + 1);
+      this.handleKeydown = (event) => {
+        if (event.key === 'ArrowLeft') {
+          event.preventDefault();
+          this.handlePrev();
+        }
+
+        if (event.key === 'ArrowRight') {
+          event.preventDefault();
+          this.handleNext();
+        }
+      };
+
+      this.prevButton?.addEventListener('click', this.handlePrev);
+      this.nextButton?.addEventListener('click', this.handleNext);
+      this.addEventListener('keydown', this.handleKeydown);
+
+      this.indicatorHandlers = this.indicators.map((indicator) => {
+        const handler = () => {
+          const nextIndex = Number(indicator.dataset.index || 0);
+          this.goToSlide(nextIndex);
+        };
+
+        indicator.addEventListener('click', handler);
+        return { indicator, handler };
+      });
+      this.setAttribute('tabindex', '0');
+      this.goToSlide(this.currentIndex);
+    }
+
+    disconnectedCallback() {
+      this.prevButton?.removeEventListener('click', this.handlePrev);
+      this.nextButton?.removeEventListener('click', this.handleNext);
+      this.removeEventListener('keydown', this.handleKeydown);
+      this.indicatorHandlers?.forEach(({ indicator, handler }) => {
+        indicator.removeEventListener('click', handler);
+      });
+    }
+
+    goToSlide(index) {
+      if (!this.track || this.totalSlides === 0) {
+        return;
+      }
+
+      const normalizedIndex = (index + this.totalSlides) % this.totalSlides;
+      this.currentIndex = normalizedIndex;
+      this.track.style.transform = `translateX(-${normalizedIndex * 100}%)`;
+
+      this.slides.forEach((slide, slideIndex) => {
+        slide.setAttribute('aria-hidden', slideIndex === normalizedIndex ? 'false' : 'true');
+      });
+
+      this.indicators.forEach((indicator, indicatorIndex) => {
+        indicator.setAttribute('aria-pressed', indicatorIndex === normalizedIndex ? 'true' : 'false');
+      });
+    }
+  }
+
+  if (!customElements.get('project-case-carousel')) {
+    customElements.define('project-case-carousel', ProjectCaseCarousel);
+  }
+</script>
