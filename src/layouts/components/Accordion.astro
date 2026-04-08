@@ -19,8 +19,7 @@ const { titulo, contenido, className = "" } = Astro.props;
 <script is:inline>
   // Función de inicialización del accordion
   function initializeAccordions() {
-    console.log('🔄 Inicializando accordions...');
-
+   
     const accordions = document.querySelectorAll('[data-accordion]');
 
     accordions.forEach(accordion => {
@@ -65,7 +64,7 @@ const { titulo, contenido, className = "" } = Astro.props;
       });
     });
 
-    console.log('✅ Accordions inicializados correctamente');
+  
   }
 
   // Initialize when DOM is loaded

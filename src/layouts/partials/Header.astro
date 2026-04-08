@@ -131,7 +131,7 @@ import Logo from '../components/Logo.astro';
     window.navigationInitialized = true;
 
     const initializeNavigation = () => {
-      console.log('🔄 Inicializando navegación...');
+     
 
       const navToggle = document.getElementById('nav-toggle');
       const navMenu = document.getElementById('nav-menu');
@@ -191,7 +191,7 @@ import Logo from '../components/Logo.astro';
         });
       });
 
-      console.log('✅ Navegación inicializada correctamente');
+     
     };
 
     document.addEventListener('astro:page-load', initializeNavigation);
