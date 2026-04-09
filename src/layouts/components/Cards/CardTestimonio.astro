@@ -2,6 +2,7 @@
 import TitleSecondary from '../Titles/TitleSecondary.astro';
 import Buttons from '../Buttons/Buttons.astro';
 import logoGoogle from '../../../images/logoGoogle.png';
+import '../../../styles/CardTestimonio.scss';
 
 const { titulo, subtitulo, testimonials } = Astro.props;
 ---
@@ -14,12 +15,18 @@ const { titulo, subtitulo, testimonials } = Astro.props;
   <div class='card-testimonio__content'>
       <div class='card-testimonio__profile'>
           <div class='card-testimonio__navigation'>
-              <button class='card-testimonio__nav-btn card-testimonio__nav-btn--prev' data-testimonial-prev>
+              <button
+                  class='card-testimonio__nav-btn card-testimonio__nav-btn--prev'
+                  data-testimonial-prev
+                  aria-label='Ver testimonio anterior'>
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                       <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
               </button>
-              <button class='card-testimonio__nav-btn card-testimonio__nav-btn--next' data-testimonial-next>
+              <button
+                  class='card-testimonio__nav-btn card-testimonio__nav-btn--next'
+                  data-testimonial-next
+                  aria-label='Ver testimonio siguiente'>
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                       <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>

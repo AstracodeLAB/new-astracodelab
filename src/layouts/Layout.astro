@@ -10,13 +10,15 @@ import '@fontsource/roboto/latin-500.css'; // Medium - Latin only
 import '@fontsource/roboto/latin-600.css'; // Semibold - Latin only
 import '@fontsource/roboto/latin-700.css'; // Bold - Latin only
 import '@fontsource/roboto/latin-ext-400.css'; // Regular Latin Extended (á, é, í, ó, ú, ñ)
+
 export interface Props {
   title: string;
   description: string;
-  permalink: string; // La URL canónica de la página
+  permalink: string;
   image?: string;
   robots?: string;
 }
+
 const {
   title,
   description,
@@ -34,11 +36,7 @@ const {
     <meta name='description' content={description} />
     <meta name='viewport' content='width=device-width' , initial-scale='1' />
     <link rel='icon' type='image/svg+xml' href='/favicon.ico' />
-    <!-- Font optimization: Las fuentes se cargan desde @fontsource (self-hosted) -->
     <link rel='canonical' href={permalink} />
-    <!-- Preconnect para optimización de rendimiento -->
-    <link rel='preconnect' href='https://www.googletagmanager.com' />
-    <link rel='dns-prefetch' href='https://www.googletagmanager.com' />
     <meta name='msvalidate.01' content='08A045B5065017F91DE8FBA3B76391FC' />
     <meta name='robots' content={robots} />
     <meta name='author' content='AstracodeLAB' />
@@ -53,36 +51,70 @@ const {
     <meta name='facebook-domain-verification' content='siis4pr1xna8mdw75uoabxrpl3t3s8' />
     <meta name='generator' content={Astro.generator} />
     <ClientRouter />
-    <script async src='https://www.googletagmanager.com/gtag/js?id=G-ZXB197TZT1'></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-      gtag('config', 'G-ZXB197TZT1');
-    </script>
-
-    <script>
-      function loadScript(callback) {
-        var head = document.getElementsByTagName('head')[0];
-        var script = document.createElement('script');
-        script.type = 'text/javascript';
-        script.src = 'https://tracker.metricool.com/resources/be.js';
-
-        // Eventos para asegurar que el script cargó antes de ejecutar la función
-        script.onreadystatechange = callback;
-        script.onload = callback;
-
-        head.appendChild(script);
+      function hasAnalyticsConsent() {
+        return document.cookie.includes('analytics=true');
       }
 
-      // Ejecución de la carga
-      loadScript(function () {
-        beTracker.t({
-          hash: '8b8b405910d9edbd37455a5df4a9f3aa',
+      function loadExternalScript(src, callback, attributes = {}) {
+        if (document.querySelector(`script[src="${src}"]`)) return;
+
+        const script = document.createElement('script');
+        script.src = src;
+
+        Object.entries(attributes).forEach(([key, value]) => {
+          if (value === true) {
+            script.setAttribute(key, '');
+          } else if (value) {
+            script.setAttribute(key, value);
+          }
         });
-      });
+
+        if (callback) {
+          script.onload = callback;
+        }
+
+        document.head.appendChild(script);
+      }
+
+      function initAnalytics() {
+        if (!hasAnalyticsConsent() || window.analyticsLoaded) return;
+        window.analyticsLoaded = true;
+
+        loadExternalScript(
+          'https://www.googletagmanager.com/gtag/js?id=G-ZXB197TZT1',
+          () => {
+            window.dataLayer = window.dataLayer || [];
+            window.gtag = function () {
+              dataLayer.push(arguments);
+            };
+            window.gtag('js', new Date());
+            window.gtag('config', 'G-ZXB197TZT1');
+          },
+          { async: true }
+        );
+
+        loadExternalScript('https://tracker.metricool.com/resources/be.js', () => {
+          if (window.beTracker) {
+            window.beTracker.t({
+              hash: '8b8b405910d9edbd37455a5df4a9f3aa',
+            });
+          }
+        });
+      }
+
+      function scheduleAnalyticsLoad() {
+        if (!hasAnalyticsConsent()) return;
+
+        if ('requestIdleCallback' in window) {
+          window.requestIdleCallback(initAnalytics, { timeout: 2000 });
+        } else {
+          window.setTimeout(initAnalytics, 1500);
+        }
+      }
+
+      window.addEventListener('load', scheduleAnalyticsLoad, { once: true });
+      document.addEventListener('astro:page-load', scheduleAnalyticsLoad);
     </script>
   </head>
   <body>

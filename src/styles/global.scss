@@ -4,8 +4,6 @@
 @use './Contact.scss';
 @use './SocialBar.scss';
 @use './Footer.scss';
-@use './legal.scss';
-@use './Error.scss';
 @use './CardPrecio.scss';
 @use './variables.scss' as *;
 @use './Buttons.scss';
@@ -15,16 +13,11 @@
 @use './MainHome.scss';
 @use './Timeline.scss';
 @use './Services.scss';
-@use './BannerImg.scss';
 @use './TextContent.scss';
 @use './WhyChooseUs.scss';
-@use './BannerCta.scss';
-@use './CardTestimonio.scss';
 @use './SocialIcons.scss';
-@use './WorkSection.scss';
 @use './TestimonialSection.scss';
 @use './Accordion.scss';
-@use './FaqsSection.scss';
 @use './HeroSecondary.scss';
 @use './HeroServicesA.scss';
 @use './Incluye.scss';
@@ -35,26 +28,11 @@
 @use './Conector.scss';
 @use './Buscas.scss';
 @use './Listo.scss';
-@use './BenefitsSection.scss';
-@use './BenefitCard.scss';
-@use './ProjectCaseCarousel.scss';
 @use './AdvantagesSection.scss';
 @use './AdvantageItem.scss';
-@use './landing-pages.scss';
-@use './ecommerce.scss';
-@use './web-corporativa.scss';
-@use './redisenio-web.scss';
-@use './optimizacion-web.scss';
-@use './web-multilingue';
-@use './cartas-digitales-restaurantes.scss';
-@use './accesibilidad-web.scss';
-@use './SistemasReserva.scss';
 @use './ContainerMainServices.scss';
-@use './mantenimiento-web.scss';
-@use './SobreNosotras.scss';
 @use './CookieBanner.scss';
 @use './RocketIllustration.scss';
-@use './blog.scss';
 
 /* Estilos globales */
 :root {
