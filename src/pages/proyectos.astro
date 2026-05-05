@@ -1,0 +1,334 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/Projects.scss';
+
+import lliureeDesktop from '../images/mockups/scroll-lliuree-desktop.png';
+import lliureeTablet  from '../images/mockups/scroll-lliuree-tablet.png';
+import lliureeMobile  from '../images/mockups/scroll-lliuree-mobile.png';
+
+import steamDesktop from '../images/mockups/scroll-steam-desktop.png';
+import steamTablet  from '../images/mockups/scroll-steam-tablet.png';
+import steamMobile  from '../images/mockups/scroll-steam-mobile.png';
+
+import alexisDesktop from '../images/mockups/scroll-alexis-desktop.png';
+import alexisTablet  from '../images/mockups/scroll-alexis-tablet.png';
+import alexisMobile  from '../images/mockups/scroll-alexis-mobile.png';
+
+import qjubilosoDesktop from '../images/mockups/scroll-qjubiloso-desktop.png';
+import qjubilosoTablet  from '../images/mockups/scroll-qjubiloso-tablet.png';
+import qjubilosoMobile  from '../images/mockups/scroll-qjubiloso-mobile.png';
+ 
+ const title = 'Proyectos · AstracodeLAB';
+ const description =
+   'Webs que hemos construido para clientes reales. Cada proyecto refleja el trabajo de nuestro equipo en Barcelona, Málaga y Valencia.';
+ const permalink = Astro.url.href;
+ const robots = 'index, follow';
+  
+ const projects = [
+   {
+     id: 'lliuree',
+     name: 'Lliuree',
+     sector: 'Bienestar · Castellón',
+     year: '2024',
+     type: 'Web corporativa',
+     url: 'lliuree.com',
+     services: ['Diseño web', 'WordPress', 'Branding'],
+     desc: 'Web personalizada para estudio de yoga. Diseño que transmite calma, con horarios, precios y formulario de admisión integrado.',
+     stat: { v: '100%', l: 'diseño personalizado, sin plantilla' },
+     img: {
+      
+      desktop: lliureeDesktop.src,
+      tablet:  lliureeTablet.src,
+      mobile:  lliureeMobile.src,
+    
+     },
+   },
+   {
+     id: 'steam',
+     name: 'Yo quiero estudiar STEAM',
+     sector: 'Educación · Madrid',
+     year: '2023',
+     type: 'Plataforma web',
+     url: 'yosoysteam.es',
+     services: ['Desarrollo', 'Backoffice', 'UI/UX'],
+     desc: 'Plataforma para inspirar a mujeres en ciencia y tecnología. Perfiles de referentes, bolsa de empleo y backoffice de gestión.',
+     stat: { v: '3', l: 'módulos integrados (alumnas, referentes, empresas)' },
+     img: {
+      desktop: steamDesktop.src,
+      tablet:  steamTablet.src,
+      mobile:  steamMobile.src,
+     },
+   },
+   {
+     id: 'alexis',
+     name: 'Alexis Navas',
+     sector: 'Legal · Málaga',
+     year: '2024',
+     type: 'Web portfolio',
+     url: 'alexisnavas.com',
+     services: ['Diseño web', 'WordPress', 'SEO'],
+     desc: 'Portfolio profesional para perito judicial en tasación de obras de arte. De funcional a una web que inspira confianza.',
+     stat: { v: '+consultas', l: 'entrantes desde la web' },
+     img: {
+      desktop: alexisDesktop.src,
+      tablet:  alexisTablet.src,
+      mobile:  alexisMobile.src,
+     },
+   },
+   {
+     id: 'qjubiloso',
+     name: 'QJubiloso',
+     sector: 'Salud · Castellón',
+     year: '2025',
+     type: 'Web de servicios',
+     url: 'qjubiloso.es',
+     services: ['Diseño web', 'WordPress', 'Accesibilidad'],
+     desc: 'Web para empresa de cuidados a domicilio. Diseño cálido y accesible que transmite confianza a familias.',
+     stat: { v: '+71%', l: 'consultas recibidas' },
+     img: {
+      desktop: qjubilosoDesktop.src,
+      tablet:  qjubilosoTablet.src,
+      mobile:  qjubilosoMobile.src,
+     },
+   },
+ ];
+ ---
+  
+ <Layout title={title} description={description} permalink={permalink} robots={robots}>
+   <div class="page-container">
+  
+     <!-- Fondo decorativo -->
+     <div class="deco" aria-hidden="true">
+       <div class="blob blob-1"></div>
+       <div class="blob blob-2"></div>
+       <div class="blob blob-3"></div>
+       <div class="dots"></div>
+     </div>
+  
+     <!-- Cabecera -->
+     <header class="projects-header">
+       <span class="eyebrow">
+         <span class="eyebrow__dot"></span>
+         Proyectos
+       </span>
+       <h1 class="projects-title">
+         Webs que <span class="highlight">funcionan</span><br />de verdad
+       </h1>
+       <p class="projects-lede">
+         Cada proyecto es diferente. Aquí tienes una muestra de lo que hemos construido para clientes reales en toda España.
+       </p>
+     </header>
+  
+     <!-- Grid de proyectos -->
+     <main class="projects-grid-wrap">
+       <div class="projects-grid">
+         {projects.map((p, i) => (
+           <article
+             class="proj-card"
+             data-card
+             style={`--delay: ${i * 130}ms`}
+           >
+             <!-- Mockup carousel -->
+             <div class="mc-thumb" data-carousel>
+               <div class="mc-stage">
+  
+                 <!-- Laptop -->
+                 <div class="mc-device mc-laptop is-active" data-device="0">
+                   <div class="mc-laptop-lid">
+                     <div class="mc-laptop-bezel">
+                       <div class="mc-laptop-notch"></div>
+                       <div class="mc-chrome">
+                         <div class="mc-chrome-dots">
+                           <span></span><span></span><span></span>
+                         </div>
+                         <div class="mc-chrome-url">{p.url}</div>
+                       </div>
+                       <div class="mc-laptop-screen">
+                         <div class="ss-canvas">
+                           <img class="ss-img" src={p.img.desktop} alt={`${p.name} en escritorio`} loading="lazy" draggable="false" />
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+                   <div class="mc-laptop-base"></div>
+                 </div>
+  
+                 <!-- Tablet -->
+                 <div class="mc-device mc-tablet" data-device="1">
+                   <div class="mc-tablet-bezel">
+                     <div class="mc-tablet-camera"></div>
+                     <div class="mc-tablet-screen">
+                       <div class="ss-canvas">
+                         <img class="ss-img" src={p.img.tablet} alt={`${p.name} en tablet`} loading="lazy" draggable="false" />
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+  
+                 <!-- Móvil -->
+                 <div class="mc-device mc-phone" data-device="2">
+                   <div class="mc-phone-bezel">
+                     <div class="mc-phone-island"></div>
+                     <div class="mc-phone-screen">
+                       <div class="ss-canvas">
+                         <img class="ss-img" src={p.img.mobile} alt={`${p.name} en móvil`} loading="lazy" draggable="false" />
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+  
+                 <div class="mc-floor-shadow"></div>
+               </div>
+  
+               <!-- Selector de dispositivo -->
+               <div class="mc-dots" role="tablist" aria-label="Cambiar vista de dispositivo">
+                 <button class="mc-dot is-active" role="tab" aria-selected="true" data-pick="0" aria-label="Vista escritorio">
+                   <svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                     <rect x="2" y="3" width="12" height="8" rx="1"/><path d="M5 14h6M8 11v3"/>
+                   </svg>
+                   Desktop
+                 </button>
+                 <button class="mc-dot" role="tab" aria-selected="false" data-pick="1" aria-label="Vista tablet">
+                   <svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                     <rect x="3" y="2" width="10" height="12" rx="1.5"/><circle cx="8" cy="12" r="0.5" fill="currentColor"/>
+                   </svg>
+                   Tablet
+                 </button>
+                 <button class="mc-dot" role="tab" aria-selected="false" data-pick="2" aria-label="Vista móvil">
+                   <svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                     <rect x="5" y="2" width="6" height="12" rx="1.5"/><circle cx="8" cy="12.5" r="0.4" fill="currentColor"/>
+                   </svg>
+                   Móvil
+                 </button>
+               </div>
+  
+               <!-- Hint chip -->
+               <div class="mc-hint" aria-hidden="true">
+                 <span class="mc-hint-dot"></span>
+                 Desliza para explorar
+               </div>
+             </div>
+  
+             <!-- Cuerpo de la card -->
+             <div class="proj-card__body">
+               <div class="proj-card__meta">
+                 <span class="badge">{p.type}</span>
+                 <span class="proj-card__year">{p.year} · {p.sector}</span>
+               </div>
+               <h3 class="proj-card__title">{p.name}</h3>
+               <p class="proj-card__desc">{p.desc}</p>
+               <ul class="proj-card__tags" aria-label="Servicios">
+                 {p.services.map(s => <li class="tag">{s}</li>)}
+               </ul>
+               <div class="proj-card__stat">
+                 <span class="stat__value">{p.stat.v}</span>
+                 <span class="stat__label">{p.stat.l}</span>
+               </div>
+               <div class="proj-card__actions">
+                 <a class="btn btn--primary" href={`https://${p.url}`} target="_blank" rel="noopener noreferrer">
+                   Visitar web
+                   <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                     <path d="M6 3H3v10h10v-3"/><path d="M9 3h4v4"/><path d="M7 9l6-6"/>
+                   </svg>
+                 </a>
+                 <a class="btn btn--ghost" href={`/proyectos/${p.id}`}>
+                   Caso de estudio
+                   <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                     <path d="M3 8h10M9 4l4 4-4 4"/>
+                   </svg>
+                 </a>
+               </div>
+             </div>
+           </article>
+         ))}
+       </div>
+     </main>
+  
+     <!-- CTA final -->
+     <section class="projects-cta">
+       <div class="projects-cta__inner">
+         <p class="projects-cta__label">¿Tienes un proyecto en mente?</p>
+         <h2 class="projects-cta__title">Hablemos</h2>
+         <a class="btn btn--primary btn--lg" href="/contacto">
+           Contactar
+           <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+             <path d="M3 8h10M9 4l4 4-4 4"/>
+           </svg>
+         </a>
+       </div>
+     </section>
+  
+   </div>
+ </Layout>
+  
+ <script>
+   // ── Cards: aparecen al entrar en viewport ─────────────────────────────────
+   const cards = document.querySelectorAll<HTMLElement>('[data-card]');
+   const cardObserver = new IntersectionObserver(
+     (entries) => {
+       entries.forEach((entry) => {
+         if (entry.isIntersecting) {
+           entry.target.classList.add('is-visible');
+           cardObserver.unobserve(entry.target);
+         }
+       });
+     },
+     { threshold: 0.10 }
+   );
+   cards.forEach((card) => cardObserver.observe(card));
+  
+   // ── Mockup carousel ───────────────────────────────────────────────────────
+   document.querySelectorAll<HTMLElement>('[data-carousel]').forEach((thumb) => {
+     let currentIdx = 0;
+     let paused = false;
+     let inView = false;
+     let autoTimer: ReturnType<typeof setInterval> | null = null;
+  
+     const devices = thumb.querySelectorAll<HTMLElement>('.mc-device');
+     const dots    = thumb.querySelectorAll<HTMLElement>('.mc-dot');
+     const screens = thumb.querySelectorAll<HTMLElement>('.ss-canvas');
+  
+     function activate(idx: number) {
+       devices[currentIdx]?.classList.remove('is-active');
+       dots[currentIdx]?.classList.remove('is-active');
+       dots[currentIdx]?.setAttribute('aria-selected', 'false');
+       screens[currentIdx]?.scrollTo({ top: 0, behavior: 'smooth' });
+  
+       currentIdx = idx;
+  
+       devices[currentIdx]?.classList.add('is-active');
+       dots[currentIdx]?.classList.add('is-active');
+       dots[currentIdx]?.setAttribute('aria-selected', 'true');
+     }
+  
+     function startAuto() {
+       if (autoTimer) clearInterval(autoTimer);
+       autoTimer = setInterval(() => {
+         if (!paused && inView) activate((currentIdx + 1) % 3);
+       }, 5000);
+     }
+  
+     dots.forEach((dot, i) => {
+       dot.addEventListener('click', () => {
+         activate(i);
+         paused = true;
+         setTimeout(() => { paused = false; }, 8000);
+       });
+     });
+  
+     thumb.addEventListener('mouseenter', () => { paused = true; });
+     thumb.addEventListener('mouseleave', () => { paused = false; });
+  
+     const viewObs = new IntersectionObserver(
+       ([entry]) => {
+         inView = entry.isIntersecting;
+         if (inView) startAuto();
+         else if (autoTimer) { clearInterval(autoTimer); autoTimer = null; }
+       },
+       { threshold: 0.25 }
+     );
+     viewObs.observe(thumb);
+  
+     startAuto();
+   });
+ </script>
