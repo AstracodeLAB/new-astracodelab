@@ -2,9 +2,7 @@
 @use './variables.scss' as *;
 
 .cardPregunta {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100%;
   margin-bottom: 1.875rem;
 
   @media (min-width: 48rem) {
@@ -16,77 +14,200 @@
   @media (min-width: 90rem) {
     margin: 3.125rem 0 6.25rem 0;
   }
+
   &__content {
-    background-color: $blue-dark;
-    border-radius: 15px;
-    padding: 1.875rem 1.25rem;
-    margin-top: 1rem;
+    position: relative;
+    background: $blue-dark;
+    border-radius: 1.5rem;
+    color: #fff;
+    overflow: hidden;
+    box-shadow: 0 16px 50px rgba(30, 14, 98, 0.32);
+    padding: 2.25rem 1.75rem;
+    margin: 1rem auto 0;
+
     @media (min-width: 48rem) {
-      padding: 1.875rem 1.875rem;
       max-width: 48rem;
+      padding: 2.75rem;
+      border-radius: 1.75rem;
     }
+
     @media (min-width: 64rem) {
       max-width: 56.5rem;
+      padding: 3.5rem 4rem;
+      border-radius: 2rem;
+    }
+  }
+
+  &__halo {
+    position: absolute;
+    top: -1.875rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 3.75rem;
+    background: radial-gradient(ellipse at center, rgba(100, 30, 255, 0.18) 0%, transparent 70%);
+    filter: blur(20px);
+    pointer-events: none;
+  }
+
+  &__glyph {
+    position: absolute;
+    top: -2.5rem;
+    right: -1.25rem;
+    font-size: 13.75rem;
+    line-height: 0.85;
+    font-weight: 700;
+    color: rgba(100, 30, 255, 0.28);
+    pointer-events: none;
+    user-select: none;
+    letter-spacing: -0.05em;
+
+    @media (min-width: 48rem) {
+      top: -3.125rem;
+      font-size: 17.5rem;
     }
 
-    &-title {
-      font-family: $font-primary;
-      font-size: map.get($H2-mobile, 'font-size');
-      line-height: map.get($H2-mobile, 'line-height');
-      font-weight: map.get($H2-mobile, 'font-weight');
-      color: $blue-secondary;
-      margin-bottom: 0.625rem;
-
-      @media (min-width: 48rem) {
-        font-size: map.get($H2-tablet, 'font-size');
-        line-height: map.get($H2-tablet, 'line-height');
-        font-weight: map.get($H2-tablet, 'font-weight');
-        letter-spacing: map.get($H2-tablet, 'letter-spacing');
-      }
-      @media (min-width: 64rem) {
-        font-size: map.get($H2-desktop, 'font-size');
-        line-height: map.get($H2-desktop, 'line-height');
-        font-weight: map.get($H2-desktop, 'font-weight');
-        letter-spacing: map.get($H2-desktop, 'letter-spacing');
-      }
-      @media (min-width: 90rem) {
-        font-size: map.get($H2-desktop-xl, 'font-size');
-        line-height: map.get($H2-desktop-xl, 'line-height');
-        font-weight: map.get($H2-desktop-xl, 'font-weight');
-        letter-spacing: map.get($H2-desktop-xl, 'letter-spacing');
-      }
+    @media (min-width: 64rem) {
+      top: -3.75rem;
+      right: -1.875rem;
+      font-size: 23.75rem;
     }
-    &-text {
-      font-family: $font-primary;
-      font-size: map.get($Body-mobile, 'font-size');
-      line-height: map.get($Body-mobile, 'line-height');
-      font-weight: map.get($Body-mobile, 'font-weight');
-      color: $blue-secondary;
-      margin-bottom: 1.25rem;
+  }
 
-      @media (min-width: 48rem) {
-        font-size: map.get($Body-tablet, 'font-size');
-        line-height: map.get($Body-tablet, 'line-height');
-        font-weight: map.get($Body-tablet, 'font-weight');
-        letter-spacing: map.get($Body-tablet, 'letter-spacing');
-      }
-      @media (min-width: 64rem) {
-        font-size: map.get($Body-desktop, 'font-size');
-        line-height: map.get($Body-desktop, 'line-height');
-        font-weight: map.get($Body-desktop, 'font-weight');
-        letter-spacing: map.get($Body-desktop, 'letter-spacing');
-      }
-      @media (min-width: 90rem) {
-        font-size: map.get($Body-desktop-xl, 'font-size');
-        line-height: map.get($Body-desktop-xl, 'line-height');
-        font-weight: map.get($Body-desktop-xl, 'font-weight');
-        letter-spacing: map.get($Body-desktop-xl, 'letter-spacing');
-      }
-    }
-    &-btn {
-      display: flex;
+  &__corner-glow {
+    position: absolute;
+    bottom: -7.5rem;
+    left: -3.75rem;
+    width: 17.5rem;
+    height: 17.5rem;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(100, 30, 255, 0.3) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  &__inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.75rem;
+
+    @media (min-width: 64rem) {
       flex-direction: row;
-      justify-content: flex-end;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 3rem;
+    }
+  }
+
+  &__text {
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0 0 0.875rem;
+    color: $green;
+    font-family: $font-primary;
+    font-size: 0.72rem;
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+
+    @media (min-width: 64rem) {
+      margin-bottom: 1.25rem;
+    }
+
+    span {
+      width: 1.125rem;
+      height: 1px;
+      background: $green;
+      display: inline-block;
+    }
+  }
+
+  &__title {
+    margin: 0 0 0.875rem;
+    color: #fff;
+    font-family: $font-primary;
+    font-size: 1.5rem;
+    line-height: 1.15;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+
+    @media (min-width: 48rem) {
+      font-size: 2rem;
+    }
+
+    @media (min-width: 64rem) {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__description {
+    max-width: 35rem;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.75);
+    font-family: $font-primary;
+    font-size: 0.92rem;
+    line-height: 1.55;
+    font-weight: 400;
+
+    @media (min-width: 48rem) {
+      font-size: 0.98rem;
+    }
+
+    @media (min-width: 64rem) {
+      font-size: 1.05rem;
+    }
+  }
+
+  &__action {
+    width: 100%;
+
+    @media (min-width: 48rem) {
+      width: auto;
+      align-self: flex-end;
+    }
+  }
+
+  &__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.625rem;
+    width: 100%;
+    padding: 0.875rem 1.5rem;
+    border-radius: 999px;
+    background: $green;
+    color: $blue-dark;
+    box-shadow: 0 8px 24px rgba(187, 255, 0, 0.3);
+    text-decoration: none;
+    font-family: $font-primary;
+    font-size: 0.95rem;
+    line-height: 1.2;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+
+    @media (min-width: 48rem) {
+      width: auto;
+    }
+
+    @media (min-width: 64rem) {
+      padding: 1rem 1.75rem;
+      font-size: 1rem;
+    }
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(187, 255, 0, 0.45);
     }
   }
 }

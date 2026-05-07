@@ -1,0 +1,103 @@
+---
+import '../../styles/PricingPlans.scss';
+
+const pricingPlans = [
+  {
+    id: 'landing',
+    priceFrom: '500',
+    currency: '€',
+    title: 'Landing Page',
+    description: 'Ideal para campañas, eventos, webs promocionales.',
+    features: [
+      'Landing one-page optimizada',
+      'Adaptada para todos los dispositivos',
+      'Activación o migración de dominio',
+      'Extras y Optimización opcionales',
+    ],
+    buttonText: 'Solicitar información',
+    highlighted: false,
+    note: 'IVA no incluido*',
+  },
+  {
+    id: 'impulso',
+    priceFrom: '900',
+    currency: '€',
+    title: 'Impulso Web',
+    description: 'Ideal para webs corporativas o portfolios profesionales.',
+    features: [
+      'Hasta 6 secciones',
+      'Adaptada para todos los dispositivos',
+      'Activación o migración de dominio',
+      'Extras y Optimización opcionales',
+      'Copywriting y accesibilidad',
+    ],
+    buttonText: 'Solicitar información',
+    highlighted: true,
+    badge: 'Más vendido',
+    note: 'IVA no incluido*',
+  },
+  {
+    id: 'ecommerce',
+    priceFrom: '1400',
+    currency: '€',
+    title: 'E-commerce',
+    description: 'Tienda online ideal para pymes y emprendedores.',
+    features: [
+      'Landing one-page optimizada',
+      'Adaptada para todos los dispositivos',
+      'Activación o migración de dominio',
+      'Extras y Optimización opcionales',
+    ],
+    buttonText: 'Solicitar información',
+    highlighted: false,
+    note: 'IVA no incluido*',
+  },
+];
+---
+
+<section class='pricing-plans' aria-label='Planes y precios'>
+  <div class='pricing-plans__grid'>
+    {
+      pricingPlans.map((plan) => (
+        <article class={`pricing-plan ${plan.highlighted ? 'pricing-plan--featured' : ''}`}>
+          {plan.badge && <p class='pricing-plan__badge'>{plan.badge}</p>}
+
+          <div class='pricing-plan__intro'>
+            <h3 class='pricing-plan__title'>{plan.title}</h3>
+            <p class='pricing-plan__description'>{plan.description}</p>
+          </div>
+
+          <div class='pricing-plan__price-row'>
+            <span class='pricing-plan__from'>Desde</span>
+            <span class='pricing-plan__price'>
+              {plan.priceFrom}
+              {plan.currency}
+            </span>
+            <span class='pricing-plan__note'>{plan.note}</span>
+          </div>
+
+          <ul class='pricing-plan__features'>
+            {plan.features.map((feature) => (
+              <li>
+                <svg class='pricing-plan__check' viewBox='0 0 24 24' fill='none' aria-hidden='true'>
+                  <path
+                    d='M5 12.5l4 4L19 6.5'
+                    stroke='currentColor'
+                    stroke-width='2.4'
+                    stroke-linecap='round'
+                    stroke-linejoin='round'
+                  />
+                </svg>
+                <span>{feature}</span>
+              </li>
+            ))}
+          </ul>
+
+          <a class='pricing-plan__cta' href='/contacto/'>
+            {plan.buttonText} →
+          </a>
+        </article>
+      ))
+    }
+  </div>
+</section>
