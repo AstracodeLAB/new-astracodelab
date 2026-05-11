@@ -1,3 +1,4 @@
+@use 'sass:map';
 @use './variables' as *;
  
 // ── Mixin responsive ─────────────────────────────────────────────────────────
@@ -61,8 +62,8 @@
 .eyebrow {
   display: inline-flex; align-items: center; gap: 10px;
   font-family: $font-primary;
-  font-size: map-get($SmallText-mobile, 'font-size');
-  font-weight: map-get($SmallText-mobile, 'font-weight');
+  font-size: map.get($SmallText-mobile, 'font-size');
+  font-weight: map.get($SmallText-mobile, 'font-weight');
   letter-spacing: 0.18em; text-transform: uppercase;
   color: $blue-primary;
   padding: 8px 18px;
@@ -91,21 +92,21 @@
   max-width: 18ch;
   text-wrap: balance;
  
-  font-size: map-get($H1-mobile, 'font-size');
-  line-height: map-get($H1-mobile, 'line-height');
-  letter-spacing: map-get($H1-mobile, 'letter-spacing');
+  font-size: map.get($H1-mobile, 'font-size');
+  line-height: map.get($H1-mobile, 'line-height');
+  letter-spacing: map.get($H1-mobile, 'letter-spacing');
  
   @include respond(tablet) {
-    font-size: map-get($H1-tablet, 'font-size');
-    line-height: map-get($H1-tablet, 'line-height');
+    font-size: map.get($H1-tablet, 'font-size');
+    line-height: map.get($H1-tablet, 'line-height');
   }
   @include respond(desktop) {
-    font-size: map-get($H1-desktop, 'font-size');
-    line-height: map-get($H1-desktop, 'line-height');
+    font-size: map.get($H1-desktop, 'font-size');
+    line-height: map.get($H1-desktop, 'line-height');
   }
   @include respond(xl) {
-    font-size: map-get($H1-desktop-xl, 'font-size');
-    line-height: map-get($H1-desktop-xl, 'line-height');
+    font-size: map.get($H1-desktop-xl, 'font-size');
+    line-height: map.get($H1-desktop-xl, 'line-height');
   }
 }
  
@@ -113,13 +114,13 @@
   position: relative;
   color: $blue-primary;
   white-space: nowrap;
- 
+
   &::after {
     content: "";
     position: absolute;
-    left: -2px; right: -2px; bottom: -10px;
-    height: 14px;
-    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 14' preserveAspectRatio='none'><path d='M2 9 C 30 2, 60 12, 95 6 S 160 12, 198 5' stroke='%23bbff00' stroke-width='4' fill='none' stroke-linecap='round'/></svg>") no-repeat center / 100% 100%;
+    left: -2px; right: -2px; bottom: 1px;
+    height: 4px;
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 4' preserveAspectRatio='none'><line x1='0' y1='2' x2='200' y2='2' stroke='%23bbff00' stroke-width='4' stroke-linecap='round'/></svg>") no-repeat center / 100% 100%;
   }
 }
  
@@ -128,17 +129,17 @@
   color: $text-bg-color;
   max-width: 58ch; margin: 0 auto;
  
-  font-size: map-get($Body-mobile, 'font-size');
-  line-height: map-get($Body-mobile, 'line-height');
-  font-weight: map-get($Body-mobile, 'font-weight');
+  font-size: map.get($Body-mobile, 'font-size');
+  line-height: map.get($Body-mobile, 'line-height');
+  font-weight: map.get($Body-mobile, 'font-weight');
  
   @include respond(tablet) {
-    font-size: map-get($Body-tablet, 'font-size');
-    line-height: map-get($Body-tablet, 'line-height');
+    font-size: map.get($Body-tablet, 'font-size');
+    line-height: map.get($Body-tablet, 'line-height');
   }
   @include respond(desktop) {
-    font-size: map-get($Body-desktop, 'font-size');
-    line-height: map-get($Body-desktop, 'line-height');
+    font-size: map.get($Body-desktop, 'font-size');
+    line-height: map.get($Body-desktop, 'line-height');
   }
 }
  
@@ -189,19 +190,24 @@
  
 .proj-card__body {
   padding: 24px 24px 20px;
-  display: flex; flex-direction: column; gap: 12px;
+  display: flex; 
+  flex-direction: column; 
+  gap: 12px;
   flex: 1;
 }
  
 .proj-card__meta {
-  display: flex; align-items: center;
-  justify-content: space-between; gap: 12px;
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; 
+  gap: 12px;
 }
  
 .badge {
   font-family: $font-primary;
-  font-size: map-get($SmallText-mobile, 'font-size');
-  font-weight: map-get($SmallText-mobile, 'font-weight');
+  font-size: map.get($SmallText-mobile, 'font-size');
+  font-weight: map.get($SmallText-mobile, 'font-weight');
   letter-spacing: 0.08em; text-transform: uppercase;
   color: $blue-primary;
   background: rgba(100, 30, 255, 0.07);
@@ -211,7 +217,7 @@
  
 .proj-card__year {
   font-family: $font-primary;
-  font-size: map-get($SmallText-mobile, 'font-size');
+  font-size: map.get($SmallText-mobile, 'font-size');
   font-weight: 400;
   color: rgba(42, 17, 96, 0.50);
   letter-spacing: 0.04em;
@@ -219,27 +225,27 @@
  
 .proj-card__title {
   font-family: $font-primary;
-  font-weight: map-get($H3-mobile, 'font-weight');
+  font-weight: map.get($H3-mobile, 'font-weight');
   color: $title-color;
   margin: 0;
  
-  font-size: map-get($H3-mobile, 'font-size');
-  line-height: map-get($H3-mobile, 'line-height');
+  font-size: map.get($H3-mobile, 'font-size');
+  line-height: map.get($H3-mobile, 'line-height');
  
   @include respond(tablet)  {
-    font-size: map-get($H3-tablet, 'font-size');
-    line-height: map-get($H3-tablet, 'line-height');
+    font-size: map.get($H3-tablet, 'font-size');
+    line-height: map.get($H3-tablet, 'line-height');
   }
   @include respond(desktop) {
-    font-size: map-get($H3-desktop, 'font-size');
-    line-height: map-get($H3-desktop, 'line-height');
+    font-size: map.get($H3-desktop, 'font-size');
+    line-height: map.get($H3-desktop, 'line-height');
   }
 }
  
 .proj-card__desc {
   font-family: $font-primary; font-weight: 400;
   color: $text-bg-color; margin: 0;
-  font-size: map-get($SmallText-desktop, 'font-size');
+  font-size: map.get($SmallText-desktop, 'font-size');
   line-height: 1.6;
 }
  
@@ -250,8 +256,8 @@
  
 .tag {
   font-family: $font-primary;
-  font-size: map-get($SmallText-mobile, 'font-size');
-  font-weight: map-get($SmallText-mobile, 'font-weight');
+  font-size: map.get($SmallText-mobile, 'font-size');
+  font-weight: map.get($SmallText-mobile, 'font-weight');
   letter-spacing: 0.06em;
   color: $text-bg-color;
   padding: 4px 10px;
@@ -260,27 +266,6 @@
   border-radius: 5px;
 }
  
-.proj-card__stat {
-  display: flex; align-items: baseline; gap: 10px;
-  padding: 12px 14px;
-  background: linear-gradient(90deg, rgba(187, 255, 0, 0.18), rgba(100, 30, 255, 0.06));
-  border: 1px dashed rgba(187, 255, 0, 0.6);
-  border-radius: 10px;
-}
- 
-.stat__value {
-  font-family: $font-primary; font-weight: 700;
-  font-size: map-get($H3-mobile, 'font-size');
-  color: $blue-primary;
-  letter-spacing: -0.02em; line-height: 1; flex-shrink: 0;
- 
-  @include respond(desktop) { font-size: map-get($H3-desktop, 'font-size'); }
-}
- 
-.stat__label {
-  font-size: map-get($SmallText-desktop, 'font-size');
-  color: $text-bg-color; line-height: 1.4;
-}
  
 .proj-card__actions {
   display: flex; gap: 10px; margin-top: auto; padding-top: 4px;
@@ -291,17 +276,17 @@
   flex: 1;
   display: inline-flex; align-items: center; justify-content: center; gap: 8px;
   font-family: $font-primary;
-  font-weight: map-get($Button-mobile, 'font-weight');
-  font-size: map-get($Button-mobile, 'font-size');
-  letter-spacing: map-get($Button-mobile, 'letter-spacing');
+  font-weight: map.get($Button-mobile, 'font-weight');
+  font-size: map.get($Button-mobile, 'font-size');
+  letter-spacing: map.get($Button-mobile, 'letter-spacing');
   padding: 11px 16px; border-radius: 999px;
   text-decoration: none; border: 1px solid transparent;
   cursor: pointer; appearance: none;
   transition: transform 0.18s ease, background 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
  
   @include respond(desktop) {
-    font-size: map-get($Button-desktop, 'font-size');
-    letter-spacing: map-get($Button-desktop, 'letter-spacing');
+    font-size: map.get($Button-desktop, 'font-size');
+    letter-spacing: map.get($Button-desktop, 'letter-spacing');
   }
  
   &--primary {
@@ -329,7 +314,7 @@
   &--lg {
     flex: none;
     padding: 14px 36px;
-    font-size: map-get($Button-desktop, 'font-size');
+    font-size: map.get($Button-desktop, 'font-size');
   }
  
   &:focus-visible {
@@ -346,6 +331,7 @@
   border-bottom: 1px solid rgba(100, 30, 255, 0.12);
   overflow: hidden;
   display: flex; align-items: center; justify-content: center;
+  @include respond(mobile) { aspect-ratio: 16 / 13; }
  
   &::after {
     content: "";
@@ -410,8 +396,10 @@
 .mc-laptop { width: 78%; max-width: 520px; }
  
 .mc-laptop-lid {
-  background: #0a0a0e; border: 1px solid #050507;
-  border-radius: 10px 10px 3px 3px; padding: 9px 9px 10px;
+  background: #0a0a0e; 
+  border: 1px solid #050507;
+  border-radius: 10px 10px 3px 3px; 
+  padding: 8px 8px 9px;
   box-shadow: 0 12px 28px -10px rgba(0, 0, 0, 0.3);
 }
  
@@ -477,7 +465,9 @@
  
 .mc-tablet-bezel {
   position: relative; background: #0a0a0e; border: 1px solid #050507;
-  border-radius: 18px; padding: 10px; aspect-ratio: 4 / 5;
+  border-radius: 14px; 
+  padding: 6px; 
+  aspect-ratio: 4 / 5;
   box-shadow: 0 14px 32px -10px rgba(0, 0, 0, 0.32);
 }
  
@@ -487,7 +477,7 @@
 }
  
 .mc-tablet-screen {
-  position: absolute; inset: 10px;
+  position: absolute; inset: 6px;
   background: white; border-radius: 8px; overflow: hidden;
 }
  
@@ -496,18 +486,27 @@
  
 .mc-phone-bezel {
   position: relative; background: #0a0a0e; border: 1.5px solid #2a2a30;
-  border-radius: 26px; padding: 6px; aspect-ratio: 9 / 18;
+  border-radius: 22px; 
+  padding: 4px; 
+  aspect-ratio: 9 / 18;
   box-shadow: 0 14px 32px -10px rgba(0, 0, 0, 0.35);
 }
  
 .mc-phone-island {
-  position: absolute; top: 10px; left: 50%; transform: translateX(-50%);
-  width: 32%; height: 12px; background: #050507; border-radius: 999px; z-index: 4;
+  position: absolute; 
+  top: 7px; 
+  left: 50%; 
+  transform: translateX(-50%);
+  width: 32%; 
+  height: 10px; 
+  background: #050507; 
+  border-radius: 999px; 
+  z-index: 4;
 }
  
 .mc-phone-screen {
-  position: absolute; inset: 6px;
-  background: white; border-radius: 20px; overflow: hidden;
+  position: absolute; inset: 4px;
+  background: white; border-radius: 18px; overflow: hidden;
 }
  
 .mc-floor-shadow {
@@ -557,46 +556,101 @@
 // ── CTA final ────────────────────────────────────────────────────────────────
 .projects-cta {
   position: relative; z-index: 1;
-  padding: 0 32px 120px; text-align: center;
- 
+  padding: 0 32px 120px;
+
   @include respond(mobile) { padding: 0 20px 80px; }
 }
- 
+
 .projects-cta__inner {
-  max-width: 480px; margin: 0 auto;
-  padding: 56px 40px;
-  background: white;
-  border: 1px solid rgba(100, 30, 255, 0.12);
-  border-radius: 24px; box-shadow: $shadow;
-  display: flex; flex-direction: column; align-items: center; gap: 16px;
- 
-  @include respond(mobile) { padding: 40px 24px; }
+  max-width: 64rem; margin: 0 auto;
+  padding: 52px 48px;
+  background: $blue-primary;
+  border-radius: 24px;
+  display: flex; flex-direction: column; gap: 16px;
+  position: relative; overflow: hidden;
+
+  &::before, &::after {
+    content: ""; position: absolute; border-radius: 50%; pointer-events: none;
+  }
+  &::before { width: 320px; height: 320px; background: rgba(187,255,0,0.07); top: -80px; right: -60px; }
+  &::after  { width: 200px; height: 200px; background: rgba(255,255,255,0.04); bottom: -60px; left: 35%; }
+
+  @include respond(mobile) { padding: 36px 24px; }
+  @include respond(desktop) { flex-direction: row; align-items: center; }
 }
- 
+
+.projects-cta__content {
+  flex: 1;
+  display: flex; flex-direction: column; gap: 16px;
+}
+
+.projects-cta__action {
+  flex-shrink: 0;
+  display: flex; 
+  flex-direction: column;
+  align-items: center; 
+  gap: 10px;
+  @include respond(tablet) { align-items: end;}
+}
+
 .projects-cta__label {
-  font-family: $font-primary;
-  font-size: map-get($SmallText-mobile, 'font-size');
-  font-weight: map-get($SmallText-mobile, 'font-weight');
-  letter-spacing: 0.14em; text-transform: uppercase;
-  color: $blue-primary; margin: 0;
+  display: inline-block;
+  font-size: map.get($SmallText-mobile, 'font-size');
+  font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase;
+  color: rgba(255,255,255,0.75);
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 999px; padding: 5px 14px;
+  @include respond(desktop) {max-width: 200px;}
 }
- 
+
 .projects-cta__title {
   font-family: $font-primary; font-weight: 700;
-  color: $title-color; margin: 0;
- 
-  font-size: map-get($H2-mobile, 'font-size');
-  line-height: map-get($H2-mobile, 'line-height');
- 
-  @include respond(tablet)  {
-    font-size: map-get($H2-tablet, 'font-size');
-    line-height: map-get($H2-tablet, 'line-height');
-  }
+  color: white; margin: 0; max-width: 20ch;
+
+  font-size: map.get($H2-mobile, 'font-size');
+  line-height: map.get($H2-mobile, 'line-height');
+
+  .highlight { color: yellow; white-space: nowrap; }
+  .highlight::after { display: none; } // sin subrayado aquí
+
   @include respond(desktop) {
-    font-size: map-get($H2-desktop, 'font-size');
-    line-height: map-get($H2-desktop, 'line-height');
+    font-size: map.get($H2-desktop, 'font-size');
+    line-height: map.get($H2-desktop, 'line-height');
   }
 }
+
+.projects-cta__sub {
+  font-family: $font-primary; font-weight: 400;
+  font-size: map.get($Body-mobile, 'font-size');
+  line-height: 1.6; color: rgba(255,255,255,0.62);
+  margin: 0; max-width: 48ch;
+}
+
+.projects-cta__pill {
+  display: flex; align-items: center; gap: 0;
+  background: white; border-radius: 999px;
+  padding: 6px 6px 6px 20px;
+  margin-top: 4px;
+}
+
+.projects-cta__pill-text {
+  font-family: $font-primary; font-weight: 500;
+  font-size: map.get($Body-mobile, 'font-size');
+  color: $blue-dark; padding-right: 16px;
+}
+
+.projects-cta__pill-btn {
+  background: $blue-primary; color: white;
+  width: 40px; height: 40px; border-radius: 999px;
+  display: flex; align-items: center; justify-content: center;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.18s ease;
+
+  &:hover { background: $blue-dark; transform: scale(1.06); }
+}
+
+
  
 // ── Accesibilidad ────────────────────────────────────────────────────────────
 @media (prefers-reduced-motion: reduce) {

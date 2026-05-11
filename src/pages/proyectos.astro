@@ -2,21 +2,21 @@
 import Layout from '../layouts/Layout.astro';
 import '../styles/Projects.scss';
 
-import lliureeDesktop from '../images/mockups/scroll-lliuree-desktop.png';
-import lliureeTablet  from '../images/mockups/scroll-lliuree-tablet.png';
-import lliureeMobile  from '../images/mockups/scroll-lliuree-mobile.png';
+import lliureeDesktop from '../images/mockups/scroll-lliuree-desktop.webp';
+import lliureeTablet  from '../images/mockups/scroll-lliuree-tablet.webp';
+import lliureeMobile  from '../images/mockups/scroll-lliuree-mobile.webp';
 
-import steamDesktop from '../images/mockups/scroll-steam-desktop.png';
-import steamTablet  from '../images/mockups/scroll-steam-tablet.png';
-import steamMobile  from '../images/mockups/scroll-steam-mobile.png';
+import steamDesktop from '../images/mockups/scroll-steam-desktop.webp';
+import steamTablet  from '../images/mockups/scroll-steam-tablet.webp';
+import steamMobile  from '../images/mockups/scroll-steam-mobile.webp';
 
-import alexisDesktop from '../images/mockups/scroll-alexis-desktop.png';
-import alexisTablet  from '../images/mockups/scroll-alexis-tablet.png';
-import alexisMobile  from '../images/mockups/scroll-alexis-mobile.png';
+import alexisDesktop from '../images/mockups/scroll-alexis-desktop.webp';
+import alexisTablet  from '../images/mockups/scroll-alexis-tablet.webp';
+import alexisMobile  from '../images/mockups/scroll-alexis-mobile.webp';
 
-import qjubilosoDesktop from '../images/mockups/scroll-qjubiloso-desktop.png';
-import qjubilosoTablet  from '../images/mockups/scroll-qjubiloso-tablet.png';
-import qjubilosoMobile  from '../images/mockups/scroll-qjubiloso-mobile.png';
+import qjubilosoDesktop from '../images/mockups/scroll-qjubiloso-desktop.webp';
+import qjubilosoTablet  from '../images/mockups/scroll-qjubiloso-tablet.webp';
+import qjubilosoMobile  from '../images/mockups/scroll-qjubiloso-mobile.webp';
  
  const title = 'Proyectos · AstracodeLAB';
  const description =
@@ -34,7 +34,7 @@ import qjubilosoMobile  from '../images/mockups/scroll-qjubiloso-mobile.png';
      url: 'lliuree.com',
      services: ['Diseño web', 'WordPress', 'Branding'],
      desc: 'Web personalizada para estudio de yoga. Diseño que transmite calma, con horarios, precios y formulario de admisión integrado.',
-     stat: { v: '100%', l: 'diseño personalizado, sin plantilla' },
+    
      img: {
       
       desktop: lliureeDesktop.src,
@@ -52,7 +52,7 @@ import qjubilosoMobile  from '../images/mockups/scroll-qjubiloso-mobile.png';
      url: 'yosoysteam.es',
      services: ['Desarrollo', 'Backoffice', 'UI/UX'],
      desc: 'Plataforma para inspirar a mujeres en ciencia y tecnología. Perfiles de referentes, bolsa de empleo y backoffice de gestión.',
-     stat: { v: '3', l: 'módulos integrados (alumnas, referentes, empresas)' },
+
      img: {
       desktop: steamDesktop.src,
       tablet:  steamTablet.src,
@@ -68,7 +68,7 @@ import qjubilosoMobile  from '../images/mockups/scroll-qjubiloso-mobile.png';
      url: 'alexisnavas.com',
      services: ['Diseño web', 'WordPress', 'SEO'],
      desc: 'Portfolio profesional para perito judicial en tasación de obras de arte. De funcional a una web que inspira confianza.',
-     stat: { v: '+consultas', l: 'entrantes desde la web' },
+
      img: {
       desktop: alexisDesktop.src,
       tablet:  alexisTablet.src,
@@ -84,7 +84,7 @@ import qjubilosoMobile  from '../images/mockups/scroll-qjubiloso-mobile.png';
      url: 'qjubiloso.es',
      services: ['Diseño web', 'WordPress', 'Accesibilidad'],
      desc: 'Web para empresa de cuidados a domicilio. Diseño cálido y accesible que transmite confianza a familias.',
-     stat: { v: '+71%', l: 'consultas recibidas' },
+
      img: {
       desktop: qjubilosoDesktop.src,
       tablet:  qjubilosoTablet.src,
@@ -220,23 +220,15 @@ import qjubilosoMobile  from '../images/mockups/scroll-qjubiloso-mobile.png';
                <ul class="proj-card__tags" aria-label="Servicios">
                  {p.services.map(s => <li class="tag">{s}</li>)}
                </ul>
-               <div class="proj-card__stat">
-                 <span class="stat__value">{p.stat.v}</span>
-                 <span class="stat__label">{p.stat.l}</span>
-               </div>
+             
                <div class="proj-card__actions">
-                 <a class="btn btn--primary" href={`https://${p.url}`} target="_blank" rel="noopener noreferrer">
+                 <a class="btn btnSecondaryDark" href={`https://${p.url}`} target="_blank" rel="noopener noreferrer">
                    Visitar web
                    <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                      <path d="M6 3H3v10h10v-3"/><path d="M9 3h4v4"/><path d="M7 9l6-6"/>
                    </svg>
                  </a>
-                 <a class="btn btn--ghost" href={`/proyectos/${p.id}`}>
-                   Caso de estudio
-                   <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                     <path d="M3 8h10M9 4l4 4-4 4"/>
-                   </svg>
-                 </a>
+              
                </div>
              </div>
            </article>
@@ -246,17 +238,33 @@ import qjubilosoMobile  from '../images/mockups/scroll-qjubiloso-mobile.png';
   
      <!-- CTA final -->
      <section class="projects-cta">
-       <div class="projects-cta__inner">
-         <p class="projects-cta__label">¿Tienes un proyecto en mente?</p>
-         <h2 class="projects-cta__title">Hablemos</h2>
-         <a class="btn btn--primary btn--lg" href="/contacto">
-           Contactar
-           <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-             <path d="M3 8h10M9 4l4 4-4 4"/>
-           </svg>
-         </a>
-       </div>
-     </section>
+  <div class="projects-cta__inner">
+
+    <div class="projects-cta__content">
+      <span class="projects-cta__label">Proyecto a medida</span>
+      <h2 class="projects-cta__title">
+        ¿Tu proyecto podría ser el próximo?
+        <span class="highlight">Hablemos.</span>
+      </h2>
+      <p class="projects-cta__sub">
+        Cuéntanos en qué estás. Te respondemos en menos de 24 horas con preguntas, no con un presupuesto cerrado de plantilla.
+      </p>
+    </div>
+
+    <div class="projects-cta__action">
+      <div class="projects-cta__pill">
+        <span class="projects-cta__pill-text">¿Hablamos?</span>
+        <a class="projects-cta__pill-btn" href="/contacto" aria-label="Contactar">
+          <svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 8h10M9 4l4 4-4 4"/>
+          </svg>
+        </a>
+      </div>
+      
+    </div>
+
+  </div>
+</section>
   
    </div>
  </Layout>
@@ -280,9 +288,7 @@ import qjubilosoMobile  from '../images/mockups/scroll-qjubiloso-mobile.png';
    // ── Mockup carousel ───────────────────────────────────────────────────────
    document.querySelectorAll<HTMLElement>('[data-carousel]').forEach((thumb) => {
      let currentIdx = 0;
-     let paused = false;
-     let inView = false;
-     let autoTimer: ReturnType<typeof setInterval> | null = null;
+     
   
      const devices = thumb.querySelectorAll<HTMLElement>('.mc-device');
      const dots    = thumb.querySelectorAll<HTMLElement>('.mc-dot');
@@ -301,34 +307,18 @@ import qjubilosoMobile  from '../images/mockups/scroll-qjubiloso-mobile.png';
        dots[currentIdx]?.setAttribute('aria-selected', 'true');
      }
   
-     function startAuto() {
-       if (autoTimer) clearInterval(autoTimer);
-       autoTimer = setInterval(() => {
-         if (!paused && inView) activate((currentIdx + 1) % 3);
-       }, 5000);
-     }
   
      dots.forEach((dot, i) => {
        dot.addEventListener('click', () => {
          activate(i);
-         paused = true;
-         setTimeout(() => { paused = false; }, 8000);
+     
        });
      });
   
-     thumb.addEventListener('mouseenter', () => { paused = true; });
-     thumb.addEventListener('mouseleave', () => { paused = false; });
+
   
-     const viewObs = new IntersectionObserver(
-       ([entry]) => {
-         inView = entry.isIntersecting;
-         if (inView) startAuto();
-         else if (autoTimer) { clearInterval(autoTimer); autoTimer = null; }
-       },
-       { threshold: 0.25 }
-     );
-     viewObs.observe(thumb);
+     
   
-     startAuto();
+    
    });
  </script>
