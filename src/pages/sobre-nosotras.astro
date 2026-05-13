@@ -1,75 +1,251 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import SocialIcons from '../layouts/components/SocialIcons.astro';
 import '../styles/SobreNosotras.scss';
-import Contact from '../layouts/components/Contact.astro';
 import keyboard from '../images/keyboard.png';
-import TitleSecondary from '../layouts/components/Titles/TitleSecondary.astro';
-import Subtitle from '../layouts/components/Titles/Subtitle.astro';
 import team from '../images/team.png';
-import Buttons from '../layouts/components/Buttons/Buttons.astro';
-import WorkSection from '../layouts/components/WorkSection.astro';
 
 const title = 'Sobre Nosotras | AstracodeLAB - Agencia de Diseño Web en España';
 const description =
   'Equipo de desarrolladoras en Barcelona, Málaga y Valencia especializado en diseño web profesional. Soluciones digitales a medida con cercanía, rendimiento y experiencia de usuario excepcional.';
 const permalink = Astro.url.href;
-const robots="index, follow"
+const robots = 'index, follow';
+
+const values = [
+  {
+    icon: 'compass',
+    title: 'Estrategia primero',
+    body: 'Antes de diseñar o desarrollar, entendemos tu proyecto, tu cliente y tu objetivo real.',
+  },
+  {
+    icon: 'sparkle',
+    title: 'Diseño con intención',
+    body: 'Cada decisión visual responde a un porqué: marca, conversión, claridad y confianza.',
+  },
+  {
+    icon: 'gauge',
+    title: 'Performance real',
+    body: 'Webs rápidas, accesibles y optimizadas para SEO desde el primer commit.',
+  },
+  {
+    icon: 'heart',
+    title: 'Trato humano',
+    body: 'Sin tecnicismos innecesarios. Te explicamos, acompañamos y resolvemos con claridad.',
+  },
+];
+
+const steps = [
+  {
+    n: '01',
+    title: 'Descubrimiento',
+    body: 'Sentamos las bases: objetivos, audiencia y alcance. Salimos con un plan claro.',
+  },
+  {
+    n: '02',
+    title: 'Diseño',
+    body: 'Wireframes y propuesta visual. Validamos antes de entrar en líneas de código.',
+  },
+  {
+    n: '03',
+    title: 'Desarrollo',
+    body: 'Implementación con la tecnología más adecuada, optimización SEO, accesibilidad y revisión continua.',
+  },
+  {
+    n: '04',
+    title: 'Lanzamiento',
+    body: 'Despliegue, formación y soporte inicial para que empieces con seguridad.',
+  },
+];
 ---
 
 <Layout title={title} description={description} permalink={permalink} robots={robots}>
-  <main class='mainSobreNosotras'>
-    <article class='mainSobreNosotras__title'>
-      <p class='mainSobreNosotras__title-text'>Astracodelab</p>
-      <img class='mainSobreNosotras__title-img' src={keyboard.src} alt='' />
-    </article>
-
-    <article class='mainSobreNosotras__contain'>
-      <section class='mainSobreNosotras__contain-card'>
-        <h1 class='titleSecondary'>Nuestra filosofía</h1>
-        <Subtitle text='Diseño, rendimiento y cercanía' />
-        <p>
-          Astracodelab está formado por un equipo de desarrolladoras comprometidas con el éxito de tu proyecto. Creemos
-          que una web de calidad surge del equilibrio entre un buen diseño, funcionalidad y una cuidada experiencia de
-          usuario. Pero, sobre todo, valoramos la cercanía con nuestros clientes. Escuchamos tus ideas, comprendemos tus
-          negocio y transformamos tus objetivos en soluciones digitales.
-        </p>
-      </section>
-
-      <section class='mainSobreNosotras__about'>
-        <div class='mainSobreNosotras__about-img'>
-          <img src={team.src} alt='' class='mainSobreNosotras__about-img-item' />
+  <main class='about-page'>
+    <section class='about-hero'>
+      <div class='about-container'>
+        <div class='about-hero__media'>
+          <img src={keyboard.src} alt='Teclado de ordenador sobre una mesa de trabajo' class='about-hero__image' />
+          <div class='about-hero__overlay'></div>
+          <div class='about-hero__copy'>
+            <p class='about-eyebrow about-eyebrow--lime'>
+              <span class='about-eyebrow__line' aria-hidden='true'></span>
+              Sobre nosotras
+            </p>
+            <h1>Diseñamos webs que equilibran <span>creatividad</span> y <span>rendimiento</span></h1>
+            <p>
+              Somos un estudio de diseño y desarrollo web que acompaña a empresas, autónomos y creadores en su salto
+              digital. Cercanas, estratégicas y obsesionadas con los detalles.
+            </p>
+          </div>
         </div>
-        <div class='mainSobreNosotras__about-container'>
-          <TitleSecondary text='¿A quien nos dirigimos?' />
-          <p class='mainSobreNosotras__about-container-paragraph'>
+
+
+      </div>
+    </section>
+
+    <section class='about-philosophy'>
+      <div class='about-container about-split about-split--wide'>
+        <div>
+          <p class='about-eyebrow about-eyebrow--violet'>
+            <span class='about-eyebrow__line' aria-hidden='true'></span>
+            Nuestra filosofía
+          </p>
+          <h2>Diseño, rendimiento y cercanía.</h2>
+        </div>
+        <div>
+          <p class='about-lead'>
+            Astracodelab está formado por un equipo de desarrolladoras comprometidas con el éxito de tu proyecto.
+          </p>
+          <p class='about-text'>
+            Creemos que una web de calidad nace del equilibrio entre un buen diseño, funcionalidad y una cuidada
+            experiencia de usuario. Pero, sobre todo, valoramos la cercanía con nuestros clientes. Escuchamos tus ideas,
+            comprendemos tu negocio y transformamos tus objetivos en soluciones digitales.
+          </p>
+          <div class='about-chips' aria-label='Puntos clave'>
+            <span class='about-chip'><span aria-hidden='true'></span>Diseño a medida</span>
+            <span class='about-chip'><span aria-hidden='true'></span>Performance web</span>
+            <span class='about-chip'><span aria-hidden='true'></span>Acompañamiento real</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class='about-audience'>
+      <div class='about-container about-split'>
+        <div class='about-audience__image'>
+          <img src={team.src} alt='Equipo trabajando alrededor de una mesa con ordenadores portátiles' />
+        </div>
+        <div>
+          <p class='about-eyebrow about-eyebrow--violet'>
+            <span class='about-eyebrow__line' aria-hidden='true'></span>
+            ¿A quién nos dirigimos?
+          </p>
+          <h2>Trabajamos con quienes apuestan por hacerlo bien.</h2>
+          <p class='about-text'>
             Colaboramos con personas emprendedoras, pequeñas y medianas empresas, agencias y organizaciones que buscan
             soluciones digitales adaptadas a sus necesidades. Ya sea que estés dando tus primeros pasos o quieras
-            escalar una plataforma consolidada, nos involucramos desde el principio. Acompañamos cada proyecto con el
-            mismo compromiso, sin importar su tamaño o etapa. Porque estamos convencidos de que toda buena idea merece
-            una solución tecnológica que esté a la altura de su ambición.
+            escalar una plataforma consolidada, nos involucramos desde el principio.
           </p>
+          <div class='about-tags' aria-label='Tipos de clientes'>
+            <span>Empresas</span>
+            <span>Autónomos</span>
+            <span>Creadores</span>
+            <span>Agencias</span>
+            <span>Pymes</span>
+            <span>ONG</span>
+          </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class='mainSobreNosotras__contain-card'>
-        <TitleSecondary text='¿Nos tomamos un café digital?' />
-        <p>
-          Contáctanos y cuéntanos tu idea. Te ayudaremos a darle el impulso que necesita y a mejorar tu presencia
-          digital con soluciones a medida.
-        </p>
-        <div class='mainSobreNosotras__contain-card-button'>
-          <Buttons
-            className='btnSecondaryDark'
-            href='https://calendly.com/astracodelab'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            Contacta con nosotras
-          </Buttons>
+    <section class='about-values'>
+      <div class='about-container'>
+        <header class='about-section-header'>
+          <p>Valores</p>
+          <h2>Lo que nos guía en cada proyecto</h2>
+        </header>
+
+        <div class='about-values__grid'>
+          {
+            values.map((value) => (
+              <article class='about-value-card'>
+                <span class='about-value-card__icon' aria-hidden='true'>
+                  {value.icon === 'compass' && (
+                    <svg viewBox='0 0 24 24' width='22' height='22' fill='none' stroke='currentColor' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'>
+                      <circle cx='12' cy='12' r='10'></circle>
+                      <polygon points='16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76'></polygon>
+                    </svg>
+                  )}
+                  {value.icon === 'sparkle' && (
+                    <svg viewBox='0 0 24 24' width='22' height='22' fill='none' stroke='currentColor' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'>
+                      <path d='M12 3l2.4 6.6L21 12l-6.6 2.4L12 21l-2.4-6.6L3 12l6.6-2.4L12 3z'></path>
+                    </svg>
+                  )}
+                  {value.icon === 'gauge' && (
+                    <svg viewBox='0 0 24 24' width='22' height='22' fill='none' stroke='currentColor' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'>
+                      <path d='M12 14l4-4'></path>
+                      <path d='M3 18a9 9 0 1118 0'></path>
+                      <line x1='3' y1='18' x2='21' y2='18'></line>
+                    </svg>
+                  )}
+                  {value.icon === 'heart' && (
+                    <svg viewBox='0 0 24 24' width='22' height='22' fill='none' stroke='currentColor' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'>
+                      <path d='M12 20s-7-4.5-7-10a4 4 0 017-2.6A4 4 0 0119 10c0 5.5-7 10-7 10z'></path>
+                    </svg>
+                  )}
+                </span>
+                <h3>{value.title}</h3>
+                <p>{value.body}</p>
+              </article>
+            ))
+          }
         </div>
-      </section>
-    </article>
-    <WorkSection titulo='¿Quieres ver nuestros trabajos?' />
+      </div>
+    </section>
+
+    <section class='about-process'>
+      <div class='about-container'>
+        <header class='about-process__header'>
+          <div>
+            <p class='about-eyebrow about-eyebrow--lime'>
+              <span class='about-eyebrow__line' aria-hidden='true'></span>
+              Cómo trabajamos
+            </p>
+            <h2>Un proceso claro, sin sorpresas</h2>
+          </div>
+          <p>
+            De la primera conversación a la entrega, cada etapa está pensada para que sepas dónde estamos y a dónde
+            vamos.
+          </p>
+        </header>
+
+        <ol class='about-process__steps'>
+          {
+            steps.map((step, index) => (
+              <li class='about-step'>
+                <div class='about-step__head'>
+                  <span>{step.n}</span>
+                  {index < steps.length - 1 && (
+                    <svg width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'>
+                      <path d='M5 12h14M13 5l7 7-7 7'></path>
+                    </svg>
+                  )}
+                </div>
+                <h3>{step.title}</h3>
+                <p>{step.body}</p>
+              </li>
+            ))
+          }
+        </ol>
+      </div>
+    </section>
+
+    <section class='about-cafe'>
+      <div class='about-container'>
+        <div class='about-cafe__card'>
+          <div class='about-cafe__glyph' aria-hidden='true'></div>
+          <div>
+            <h2>¿Nos tomamos un café digital?</h2>
+            <p>
+              Contáctanos y cuéntanos tu idea. Te ayudaremos a darle el impulso que necesita y a mejorar tu presencia
+              digital con soluciones a medida.
+            </p>
+          </div>
+          <a href='https://calendly.com/astracodelab' target='_blank' rel='noopener noreferrer'>
+            Contacta con nosotras
+            <svg width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'>
+              <path d='M5 12h14M13 5l7 7-7 7'></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class='about-work'>
+      <div class='about-container about-container--narrow'>
+        <h2>¿Quieres ver nuestros trabajos?</h2>
+        <p>Síguenos en redes para ver nuestros últimos proyectos, procesos y novedades.</p>
+        <SocialIcons className='about-work__social' />
+      </div>
+    </section>
   </main>
-  <Contact />
 </Layout>
