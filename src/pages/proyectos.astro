@@ -270,55 +270,70 @@ import qjubilosoMobile  from '../images/mockups/scroll-qjubiloso-mobile.webp';
  </Layout>
   
  <script>
-   // ── Cards: aparecen al entrar en viewport ─────────────────────────────────
-   const cards = document.querySelectorAll<HTMLElement>('[data-card]');
-   const cardObserver = new IntersectionObserver(
-     (entries) => {
-       entries.forEach((entry) => {
-         if (entry.isIntersecting) {
-           entry.target.classList.add('is-visible');
-           cardObserver.unobserve(entry.target);
-         }
-       });
-     },
-     { threshold: 0.10 }
-   );
-   cards.forEach((card) => cardObserver.observe(card));
-  
-   // ── Mockup carousel ───────────────────────────────────────────────────────
-   document.querySelectorAll<HTMLElement>('[data-carousel]').forEach((thumb) => {
-     let currentIdx = 0;
-     
-  
-     const devices = thumb.querySelectorAll<HTMLElement>('.mc-device');
-     const dots    = thumb.querySelectorAll<HTMLElement>('.mc-dot');
-     const screens = thumb.querySelectorAll<HTMLElement>('.ss-canvas');
-  
-     function activate(idx: number) {
-       devices[currentIdx]?.classList.remove('is-active');
-       dots[currentIdx]?.classList.remove('is-active');
-       dots[currentIdx]?.setAttribute('aria-selected', 'false');
-       screens[currentIdx]?.scrollTo({ top: 0, behavior: 'smooth' });
-  
-       currentIdx = idx;
-  
-       devices[currentIdx]?.classList.add('is-active');
-       dots[currentIdx]?.classList.add('is-active');
-       dots[currentIdx]?.setAttribute('aria-selected', 'true');
+   function initProjectsPage() {
+     const grid = document.querySelector<HTMLElement>('.projects-grid');
+     const cards = document.querySelectorAll<HTMLElement>('[data-card]');
+
+     if (grid && cards.length) {
+       grid.classList.add('is-animated');
+
+       if (!('IntersectionObserver' in window)) {
+         cards.forEach((card) => card.classList.add('is-visible'));
+       } else {
+         const cardObserver = new IntersectionObserver(
+           (entries, observer) => {
+             entries.forEach((entry) => {
+               if (entry.isIntersecting) {
+                 entry.target.classList.add('is-visible');
+                 observer.unobserve(entry.target);
+               }
+             });
+           },
+           { rootMargin: '0px 0px -8% 0px', threshold: 0.08 }
+         );
+
+         cards.forEach((card) => {
+           if (card.classList.contains('is-visible') || card.dataset.observed === 'true') return;
+           card.dataset.observed = 'true';
+           cardObserver.observe(card);
+           window.setTimeout(() => card.classList.add('is-visible'), 900);
+         });
+       }
      }
-  
-  
-     dots.forEach((dot, i) => {
-       dot.addEventListener('click', () => {
-         activate(i);
-     
+
+     document.querySelectorAll<HTMLElement>('[data-carousel]').forEach((thumb) => {
+       if (thumb.dataset.carouselReady === 'true') return;
+       thumb.dataset.carouselReady = 'true';
+
+       let currentIdx = 0;
+       const devices = thumb.querySelectorAll<HTMLElement>('.mc-device');
+       const dots = thumb.querySelectorAll<HTMLElement>('.mc-dot');
+       const screens = thumb.querySelectorAll<HTMLElement>('.ss-canvas');
+
+       function activate(idx: number) {
+         devices[currentIdx]?.classList.remove('is-active');
+         dots[currentIdx]?.classList.remove('is-active');
+         dots[currentIdx]?.setAttribute('aria-selected', 'false');
+         screens[currentIdx]?.scrollTo({ top: 0, behavior: 'smooth' });
+
+         currentIdx = idx;
+
+         devices[currentIdx]?.classList.add('is-active');
+         dots[currentIdx]?.classList.add('is-active');
+         dots[currentIdx]?.setAttribute('aria-selected', 'true');
+       }
+
+       dots.forEach((dot, i) => {
+         dot.addEventListener('click', () => activate(i));
        });
      });
-  
+   }
 
-  
-     
-  
-    
-   });
+   document.addEventListener('astro:page-load', initProjectsPage);
+
+   if (document.readyState === 'loading') {
+     document.addEventListener('DOMContentLoaded', initProjectsPage, { once: true });
+   } else {
+     initProjectsPage();
+   }
  </script>

@@ -159,6 +159,13 @@
  
   @include respond(mobile) { grid-template-columns: 1fr; gap: 20px; }
   @include respond(tablet) { grid-template-columns: 1fr; gap: 24px; }
+
+  &.is-animated {
+    .proj-card {
+      opacity: 0;
+      transform: translateY(32px);
+    }
+  }
 }
  
 // ── Card ─────────────────────────────────────────────────────────────────────
@@ -169,8 +176,8 @@
   overflow: hidden;
   box-shadow: $shadow;
   display: flex; flex-direction: column;
-  opacity: 0;
-  transform: translateY(32px);
+  opacity: 1;
+  transform: translateY(0);
   transition: border-color 0.25s ease, box-shadow 0.35s ease;
  
   &.is-visible {
@@ -613,7 +620,7 @@
   font-size: map.get($H2-mobile, 'font-size');
   line-height: map.get($H2-mobile, 'line-height');
 
-  .highlight { color: yellow; white-space: nowrap; }
+  .highlight { color: #bbff00; white-space: nowrap; }
   .highlight::after { display: none; } // sin subrayado aquí
 
   @include respond(desktop) {

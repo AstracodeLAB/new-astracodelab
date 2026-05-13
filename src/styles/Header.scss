@@ -132,11 +132,11 @@
 
   @media (min-width: 48rem) {
     font-size: map.get($Body-tablet, 'font-size');
-    font-weight: map.get($H3-tablet, 'font-weight');
+    font-weight: 700;
   }
   @media (min-width: 64rem) {
     font-size: map.get($Body-desktop, 'font-size');
-    font-weight: map.get($H3-desktop, 'font-weight');
+    font-weight: 700;
   }
 }
 .megamenu-column h3 a {

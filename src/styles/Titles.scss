@@ -143,7 +143,7 @@
   font-family: $font-primary;
   font-size: map.get($H3-mobile, 'font-size');
   line-height: map.get($H3-mobile, 'line-height');
-  font-weight: map.get($H3-mobile, 'font-weight');
+  font-weight: 700;
   letter-spacing: map.get($H3-mobile, 'letter-spacing');
   color: $title-color;
   margin: 0.5rem 0;
@@ -151,19 +151,19 @@
   @media (min-width: 48rem) {
     font-size: map.get($H3-tablet, 'font-size');
     line-height: map.get($H3-tablet, 'line-height');
-    font-weight: map.get($H3-tablet, 'font-weight');
+    font-weight: 700;
     letter-spacing: map.get($H3-tablet, 'letter-spacing');
   }
   @media (min-width: 64rem) {
     font-size: map.get($H3-desktop, 'font-size');
     line-height: map.get($H3-desktop, 'line-height');
-    font-weight: map.get($H3-desktop, 'font-weight');
+    font-weight: 700;
     letter-spacing: map.get($H3-desktop, 'letter-spacing');
   }
   @media (min-width: 90rem) {
     font-size: map.get($H3-desktop-xl, 'font-size');
     line-height: map.get($H3-desktop-xl, 'line-height');
-    font-weight: map.get($H3-desktop-xl, 'font-weight');
+    font-weight: 700;
     letter-spacing: map.get($H3-desktop-xl, 'letter-spacing');
   }
 }
