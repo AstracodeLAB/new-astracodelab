@@ -80,6 +80,27 @@
   }
 }
 
+.heroHome--home {
+  .heroHome__h1 {
+    font-size: 2rem;
+
+    @media (min-width: 48rem) and (max-width: 63.938rem) {
+      font-size: 2.75rem;
+      line-height: 3rem;
+    }
+
+    @media (min-width: 64rem) {
+      font-size: map.get($H1-desktop, 'font-size');
+      line-height: map.get($H1-desktop, 'line-height');
+    }
+
+    @media (min-width: 90rem) {
+      font-size: map.get($H1-desktop-xl, 'font-size');
+      line-height: map.get($H1-desktop-xl, 'line-height');
+    }
+  }
+}
+
 .titleSecondary {
   font-family: $font-primary;
   font-size: map.get($H2-mobile, 'font-size');

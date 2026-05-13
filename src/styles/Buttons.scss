@@ -76,6 +76,65 @@
   }
 }
 
+//BOTON BANNER CTA
+.btnPrimaryBanner {
+  display: inline-flex;
+  width: auto;
+  padding: 0.625rem 1.25rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  color: $blue-secondary;
+  border-radius: 50px;
+  border: 2px solid $green;
+  cursor: pointer;
+  font-family: $font-primary;
+  font-size: map.get($Button-mobile, 'font-size');
+  line-height: map.get($Button-mobile, 'line-height');
+  font-weight: 700;
+  letter-spacing: map.get($Button-mobile, 'letter-spacing');
+  text-decoration: none;
+  background: $blue-dark;
+  box-shadow: 0 10px 24px rgba(30, 14, 98, 0.35);
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background: $green;
+    color: $blue-dark;
+    border-color: $green;
+    transform: translateY(-2px) scale(1.01);
+    box-shadow: 0 14px 30px rgba(187, 255, 0, 0.28);
+  }
+
+  &:active {
+    background: $blue-secondary;
+    color: $blue-dark;
+    border-color: $blue-secondary;
+    transform: scale(0.98);
+    box-shadow: 0 4px 12px rgba(30, 14, 98, 0.25);
+  }
+
+  @media (min-width: 48rem) {
+    font-size: map.get($Button-tablet, 'font-size');
+    line-height: map.get($Button-tablet, 'line-height');
+    letter-spacing: map.get($Button-tablet, 'letter-spacing');
+    padding: 0.75rem 1.5rem;
+  }
+
+  @media (min-width: 64rem) {
+    font-size: map.get($Button-desktop, 'font-size');
+    line-height: map.get($Button-desktop, 'line-height');
+    letter-spacing: map.get($Button-desktop, 'letter-spacing');
+    padding: 0.875rem 1.75rem;
+  }
+
+  @media (min-width: 90rem) {
+    font-size: map.get($Button-desktop-xl, 'font-size');
+    line-height: map.get($Button-desktop-xl, 'line-height');
+    letter-spacing: map.get($Button-desktop-xl, 'letter-spacing');
+  }
+}
+
 //BOTON FONDO OSCURO
 .btnPrimaryDark {
   display: inline-flex;

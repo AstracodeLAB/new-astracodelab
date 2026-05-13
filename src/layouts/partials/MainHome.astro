@@ -1,6 +1,6 @@
 ---
 import Layout from '../Layout.astro';
-import CardPrecio from '../components/Cards/CardPrecio.astro';
+import PricingPlans from '../components/PricingPlans.astro';
 import CardPregunta from '../components/Cards/CardPregunta.astro';
 import imgTimeLine from '../../images/backgroundImageSectionWhy.jpg';
 import Hero from '../components/Hero.astro';
@@ -11,7 +11,7 @@ import PasoProceso from '../components/Timeline/PasoProceso.astro';
 import BannerImg from '../components/Banners/BannerImg.astro';
 import TextContent from '../components/TextContent.astro';
 import BannerCta from '../components/Banners/BannerCta.astro';
-import CardTestimonio from '../components/Cards/CardTestimonio.astro';
+import TestimonialGrid from '../components/TestimonialGrid.astro';
 import WorkSection from '../components/WorkSection.astro';
 import FaqsSection from '../components/FaqsSection.astro';
 import Contact from '../components/Contact.astro';
@@ -32,28 +32,31 @@ import { schemaMainHome } from '../../data/schemas/main-home.js';
   <section class='timeline-section'>
     <div class='timeline-section-header'>
       <TitleSecondary text='¿Cómo lo hacemos?' />
+      <p class='timeline-section-header-text'>
+        Te acompañamos en cada fase, desde la primera idea hasta el lanzamiento, para que sepas qué ocurre y qué
+        necesitamos de ti en cada momento.
+      </p>
     </div>
     <TimelineWrapper>
       <PasoProceso
         numero='1'
-        titulo='Reunión inicial'
-        descripcion='Estudiamos tu proyecto. Hacemos una primera toma de contacto por la vía que prefieras, videollamada o llamada, donde nos cuentas tus necesidades y objetivos.'
+        titulo='Primera reunión'
+        descripcion='Conocemos tu proyecto, tus objetivos y el tipo de web que necesitas. Puedes contárnoslo por videollamada, llamada o el canal que prefieras.'
       />
       <PasoProceso
         numero='2'
-        titulo='Análisis y toma de requisitos'
-        descripcion='Recopilamos ejemplos, funcionalidades imprescindibles y contenido disponible. Analizamos tu mercado y las búsquedas clave para definir una arquitectura enfocada al usuario.'
-        descripcionSec='Creamos un prototipo en el que podrás ajustar colores, tipografía y jerarquía hasta que digas <strong>«ahora sí»</strong>.'
+        titulo='Definimos la estructura y el contenido'
+        descripcion='Definimos las páginas, funcionalidades y contenidos imprescindibles. También revisamos tu mercado y las búsquedas clave para plantear una web clara y orientada al usuario.'
         alt='Mesa de oficina con portátil, taza de café y cuadernos frente a una silla vacía'
       />
       <PasoProceso
         numero='3'
-        titulo='Desarrollo ágil '
-        descripcion='Convertimos el diseño en código accesible y disponible para todos los dispositivos.'
+        titulo='Diseñamos y desarrollamos tu web'
+        descripcion='Creamos un prototipo para revisar colores, tipografía y jerarquía visual. Después convertimos el diseño en una web rápida, accesible y adaptada a todos los dispositivos.'
       />
       <PasoProceso
         numero='4'
-        titulo='Revisión, lanzamiento y soporte'
+        titulo='Lanzamiento y soporte'
         descripcionSec='Probamos rendimiento, seguridad y usabilidad; lanzamos tu web y te acompañamos 30 días para ajustes y dudas. Si quieres, también podemos ofrecerte <a class= "linkPrimary"href="/servicios/mantenimiento-web/">planes de mantenimiento continuos.</a>'
       />
     </TimelineWrapper>
@@ -61,19 +64,19 @@ import { schemaMainHome } from '../../data/schemas/main-home.js';
 
   <section class='why-choose-us-section'>
     <div class='why-choose-us-header'>
-      <TitleSecondary text='¿Por qué elegirnos?' />
+      <TitleSecondary text='¿Por qué elegir AstracodeLAB?' />
     </div>
 
     <BannerImg
       imagen={imgTimeLine.src}
-      descripcion='En <strong>AstracodeLAB </strong> somos una agencia de diseño web con proyectos en toda España.  No importa si eres una empresa consolidada, un autónomo que despega o un creador (escritor, músico, ilustrador...), aquí tienes tu sitio. Desarrollamos webs corporativas, ecommerce, portfolios artísticos y landings promocionales combinando estrategia digital, creatividad y desarrollo.'
+      descripcion='En <strong>AstracodeLAB </strong>ayudamos a negocios, profesionales y proyectos creativos a convertir su presencia online en una herramienta real de confianza y captación. Reducimos la incertidumbre del proceso, te acompañamos en cada decisión y construimos una web útil, clara y preparada para generar oportunidades, no solo una página bonita.'
       alt='Imagen de diseño web'
     />
 
     <section class='why-choose-us-content'>
       <TextContent
         titulo='Webs Personalizadas y Estratégicas'
-        descripcion='No usamos plantillas genéricas. Diseñamos páginas web profesionales totalmente a medida: la web corporativa de tu empresa, tu tienda online o el portfolio que muestra tu talento. '
+        descripcion='  No partimos de plantillas genéricas, sino de tus objetivos, tu marca y la forma en la que tus clientes necesitan encontrarte, entenderte y contactar contigo.'
         descripcionSec='Optimizamos y estructuramos tu contenido para SEO y configuramos un diseño responsive para que tu web se vea perfecta en cualquier dispositivo. Además, nos ocupamos de las actualizaciones y el mantenimiento para que puedas dedicar tu tiempo a lo que más valor aporta a tu negocio o a hacer crecer tu proyecto.'
       />
 
@@ -86,7 +89,7 @@ import { schemaMainHome } from '../../data/schemas/main-home.js';
         </div>
 
         <TextContent
-          titulo='Diseño estratégico con enfoque humano'
+          titulo='Acompañamiento técnico sin lenguaje complicado'
           descripcion='En Astracodelab nos gusta conectar contigo desde el primer minuto: sin tecnicismos, con una atención personalizada y aportando valor. Desde la idea hasta la entrega, te acompañamos en todo el proceso para que tengas la web profesional que tu marca merece.'
         />
       </div>
@@ -95,59 +98,71 @@ import { schemaMainHome } from '../../data/schemas/main-home.js';
 
   <BannerCta
     titulo='¿Listo para destacar?'
-    descripcion='Tanto si quieres hacer una página web profesional, lanzar un nuevo ecommerce o renovar tu web actual, podemos transformar tu idea en resultados concretos. Cada proyecto es único y cada diseño tiene su propio propósito.'
-    texto='Contacta con nosotros'
-    className='btnPrimaryLight'
+    descripcion='Creamos una web a medida para que tu negocio se vea profesional, genere confianza y convierta visitas en oportunidades.'
+    texto='Hablemos de tu proyecto'
+    className='btnPrimaryBanner'
   />
 
-  <section class='testimonial-section'>
-    <CardTestimonio
-      titulo='¿Aún tienes dudas?'
-      subtitulo='Quienes mejor hablan de nosotras son nuestros clientes'
-      testimonials={[
-        {
-          imagen: avatar1,
-          testimonial:
-            'Muy contenta con el trabajo de esta empresa. Les di el contacto para un familiar y ha quedado encantado. Estuvieron en todo momento en contacto, supieron plasmar sus ideas y, además, aportaron mucha creatividad al proyecto. También me dice que son encantadoras y que, desde el primer momento, ya sabía que estaba en buenas manos. Las volveré a recomendar sin duda.',
-          alt: 'Avatar de usuario. Ilustración 3D de un personaje con cabello morado en coletas, chaqueta amarilla y gafas de sol en la cabeza, sobre un fondo verde.',
-        },
-        {
-          imagen: avatar2,
-          testimonial:
-            'Ha sido genial trabajar con el equipo AstraCodeLab. Desde el principio han mostrado una gran profesionalidad y han cumplido con todo lo acordado y plazos propuestos.Su implicación en el proyecto ha hecho obtener un diseño de la web maravilloso. Nos encanta el resultado.Sin duda cuento con ellas para futuros trabajos.',
-          alt: 'Avatar de usuario. Ilustración 3D de un personaje con gorra celeste y camiseta azul, sobre un fondo verde.',
-        },
-        {
-          imagen: avatar3,
-          testimonial:
-            'Muy satisfecho con el resultado obtenido, la web que me han diseñado funciona estupendamente y a un precio muy competitivo. El trato recibido estupendo, no se puede ser más profesional.',
-          alt: 'Avatar de usuario. Ilustración 3D de un personaje con cabello pelirrojo y sudadera morada, sobre un fondo azul oscuro. ',
-        },
-        {
-          imagen: avatar1,
-          testimonial:
-            'Las chicas son estupendas. Atentas y profesionales. Adaptan perfectamente tus ideas a la web. 100% recomendables!!',
-          alt: 'Avatar de usuario. Ilustración 3D de un personaje con cabello pelirrojo y sudadera morada, sobre un fondo azul oscuro. ',
-        },
-        {
-          imagen: avatar3,
-          testimonial:
-            'La experiencia con Astracodelab está siendo fantástica. Acompañan tu proyecto con una gran atención, flexibilidad, disponibilidad, haciendo propuestas interesantes y buscando responder de la mejor manera a las exigencias del proyecto. El hecho de que propongan un servicio de accesibilidad web me parece algo fundamental.',
-          alt: 'Avatar de usuario. Ilustración 3D de un personaje con cabello pelirrojo y sudadera morada, sobre un fondo azul oscuro. ',
-        },
-      ]}
-    />
-  </section>
+  <TestimonialGrid
+    titulo='Lo que dicen quienes ya han confiado en AstracodeLAB'
+    subtitulo='Reseñas reales de clientes que han trabajado con nosotras en proyectos web.'
+    testimonials={[
+      {
+        imagen: avatar1,
+        nombre: 'Roji M',
+        rating: 5,
+        fecha: 'Hace 11 meses',
+        testimonial:
+          'Muy contenta con el trabajo de esta empresa. Les di el contacto para un familiar y ha quedado encantado. Estuvieron en todo momento en contacto, supieron plasmar sus ideas y, además, aportaron mucha creatividad al proyecto. También me dice que son encantadoras y que, desde el primer momento, ya sabía que estaba en buenas manos. Las volveré a recomendar sin duda.',
+        alt: 'Avatar de usuario. Ilustración 3D de un personaje con cabello morado en coletas, chaqueta amarilla y gafas de sol en la cabeza, sobre un fondo verde.',
+      },
+      {
+        imagen: avatar2,
+        nombre: 'Helena Heras',
+        rating: 5,
+        testimonial:
+          'Ha sido genial trabajar con el equipo AstraCodeLab. Desde el principio han mostrado una gran profesionalidad y han cumplido con todo lo acordado y plazos propuestos.Su implicación en el proyecto ha hecho obtener un diseño de la web maravilloso. Nos encanta el resultado.Sin duda cuento con ellas para futuros trabajos.',
+        alt: 'Avatar de usuario. Ilustración 3D de un personaje con gorra celeste y camiseta azul, sobre un fondo verde.',
+      },
+      {
+        imagen: avatar3,
+        nombre: 'Alex N',
+        rating: 5,
+        fecha: 'Hace 11 meses',
+        testimonial:
+          'Muy satisfecho con el resultado obtenido, la web que me han diseñado funciona estupendamente y a un precio muy competitivo. El trato recibido estupendo, no se puede ser más profesional.',
+        alt: 'Avatar de usuario. Ilustración 3D de un personaje con cabello pelirrojo y sudadera morada, sobre un fondo azul oscuro. ',
+      },
+      {
+        imagen: avatar1,
+        nombre: 'Thais Hidalgo',
+        rating: 5,
+        fecha: 'Hace 4 meses',
+        testimonial:
+          'Las chicas son estupendas. Atentas y profesionales. Adaptan perfectamente tus ideas a la web. 100% recomendables!!',
+        alt: 'Avatar de usuario. Ilustración 3D de un personaje con cabello pelirrojo y sudadera morada, sobre un fondo azul oscuro. ',
+      },
+      {
+        imagen: avatar3,
+        nombre: 'Elisa Martin-Caro Zapardiel',
+        rating: 5,
+        testimonial:
+          'La experiencia con Astracodelab está siendo fantástica. Acompañan tu proyecto con una gran atención, flexibilidad, disponibilidad, haciendo propuestas interesantes y buscando responder de la mejor manera a las exigencias del proyecto. El hecho de que propongan un servicio de accesibilidad web me parece algo fundamental.',
+        alt: 'Avatar de usuario. Ilustración 3D de un personaje con cabello pelirrojo y sudadera morada, sobre un fondo azul oscuro. ',
+      },
+    ]}
+  />
 
   <WorkSection titulo='¿Quieres ver nuestros trabajos?' />
   <section class='section-prices'>
     <div class='section-prices-header'>
       <TitleSecondary
-        text='Precios claros y flexibles diseñados para todo el mundo'
-        description='Elige el plan que mejor se adapta a tu proyecto. Todos incluyen diseño responsive y soporte durante el primer mes.'
+        text='Planes claros para crear tu web profesional'
+        description='Elige el punto de partida que mejor encaja con tu proyecto. Todos los planes incluyen diseño responsive, configuración inicial y soporte durante el primer mes.
+'
       />
     </div>
-    <CardPrecio />
+    <PricingPlans />
     <div>
       <CardPregunta
         title='¿Tienes una idea que no encuentras en estos planes o no sabes por dónde empezar?'

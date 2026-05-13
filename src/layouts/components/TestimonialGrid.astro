@@ -1,0 +1,76 @@
+---
+import TitleSecondary from './Titles/TitleSecondary.astro';
+import Buttons from './Buttons/Buttons.astro';
+import logoGoogle from '../../images/logoGoogle.png';
+import '../../styles/TestimonialGrid.scss';
+
+const {
+  titulo,
+  subtitulo,
+  testimonials = [],
+  googleReviewsUrl = 'https://www.google.com/search?q=Astracodelab+Rese%C3%B1as',
+} = Astro.props;
+
+const getName = (testimonial) => testimonial.nombre || testimonial.name || testimonial.autor || testimonial.author;
+const getRating = (testimonial) => testimonial.rating || testimonial.valoracion || testimonial.stars;
+const getDate = (testimonial) => testimonial.fecha || testimonial.date;
+---
+
+<section class='testimonial-grid-section'>
+  <div class='testimonial-grid-section__header'>
+    <TitleSecondary text={titulo} description={subtitulo} className='testimonial-grid-section__title' />
+  </div>
+
+  <div class='testimonial-grid' aria-label='Reseñas de clientes'>
+    {
+      testimonials.slice(0, 5).map((testimonial, index) => {
+        const name = getName(testimonial);
+        const rating = getRating(testimonial);
+        const date = getDate(testimonial);
+        const cardClass = index === 0 ? 'testimonial-card testimonial-card--featured' : 'testimonial-card';
+
+        return (
+          <article class={cardClass}>
+            <div class='testimonial-card__quote-mark' aria-hidden='true'>
+              "
+            </div>
+
+            <div class='testimonial-card__body'>
+              {index === 0 && (
+                <p class='testimonial-card__badge'>
+                  <span aria-hidden='true'>G</span>
+                  Destacada
+                </p>
+              )}
+
+              {rating && (
+                <p class='testimonial-card__rating' aria-label={`Valoración: ${rating} de 5`}>
+                  {'★'.repeat(Number(rating))}
+                </p>
+              )}
+
+              <blockquote class='testimonial-card__quote'>
+                <p>{testimonial.testimonial}</p>
+              </blockquote>
+
+              <footer class='testimonial-card__footer'>
+                <div>
+                  {name && <p class='testimonial-card__name'>{name}</p>}
+                  {date && <p class='testimonial-card__date'>{date}</p>}
+                </div>
+                <img class='testimonial-card__google' src={logoGoogle.src} alt='' aria-hidden='true' loading='lazy' />
+              </footer>
+            </div>
+          </article>
+        );
+      })
+    }
+  </div>
+
+  <div class='testimonial-grid-section__cta'>
+    <img class='testimonial-grid-section__google-logo' src={logoGoogle.src} alt='' aria-hidden='true' loading='lazy' />
+    <Buttons className='btnPrimaryLight' href={googleReviewsUrl} target='_blank' rel='noopener noreferrer'>
+      Ver reseñas en Google
+    </Buttons>
+  </div>
+</section>
