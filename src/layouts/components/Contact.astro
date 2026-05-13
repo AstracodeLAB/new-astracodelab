@@ -1,82 +1,164 @@
 ---
-import TitleSecondary from './Titles/TitleSecondary.astro';
-import Buttons from './Buttons/Buttons.astro';
-
-// Recibir prop para mostrar mensaje de éxito
 const { showSuccess = false } = Astro.props;
+
+const perks = [
+  {
+    label: 'Respuesta en menos de 24h',
+    icon: 'clock',
+  },
+  {
+    label: 'Primera asesoría gratuita',
+    icon: 'gift',
+  },
+  {
+    label: 'Sin compromiso',
+    icon: 'shield',
+  },
+];
 ---
 
-<section id='contact' class='contact'>
+<section id='contact' class='contact' aria-labelledby='contact-title'>
+  <svg class='contact__deco contact__deco--right' aria-hidden='true' viewBox='0 0 200 200' fill='none'>
+    <path d='M20 100 Q60 30, 120 90 T200 80' stroke='currentColor' stroke-width='3' stroke-linecap='round'></path>
+    <path
+      d='M10 140 Q60 90, 130 150 T210 130'
+      stroke='currentColor'
+      stroke-width='3'
+      stroke-linecap='round'
+      opacity='0.6'></path>
+  </svg>
+
+  <svg class='contact__deco contact__deco--left' aria-hidden='true' viewBox='0 0 200 200' fill='none'>
+    <path
+      d='M10 50 Q70 130, 140 70 T220 90'
+      stroke='currentColor'
+      stroke-width='3'
+      stroke-linecap='round'
+      opacity='0.4'></path>
+  </svg>
+
   <div class='contact__card'>
-    <div class='contact__card-top'>
-      <div class='contact__card-top-title'>
-        <TitleSecondary text='Contacto' />
-      </div>
-      <p class='contact__card-top-text'>¡Transforma tu idea en una web profesional!</p>
-      <p class='contact__card-top-text'>
+    <div class='contact__intro'>
+      <p class='contact__eyebrow'>
+        <span class='contact__eyebrow-line' aria-hidden='true'></span>
+        Contacto
+      </p>
+
+      <h2 id='contact-title' class='contact__title'>Hablemos de tu proyecto</h2>
+
+      <p class='contact__lead'>¡Transforma tu idea en una web profesional!</p>
+
+      <p class='contact__text'>
         En Astracodelab, diseñamos y desarrollamos soluciones web pensadas para tu marca. Desde una página web a medida
         hasta un e-commerce potente, nuestro equipo está listo para convertir tu visión en realidad.
       </p>
-      <p class='contact__card-top-text'>¿Tienes un proyecto en mente?</p>
-      <p class='contact__card-top-text'>
+
+      <p class='contact__highlight'>¿Tienes un proyecto en mente?</p>
+
+      <p class='contact__text'>
         Completa el formulario y nos pondremos en contacto contigo para una asesoría gratuita. Es el primer paso para
         conseguir la página web que siempre soñaste.
       </p>
+
+      <ul class='contact__perks' aria-label='Ventajas del contacto'>
+        {
+          perks.map((perk) => (
+            <li class='contact__perk'>
+              <span class='contact__perk-icon' aria-hidden='true'>
+                {perk.icon === 'gift' ? (
+                  <svg viewBox='0 0 24 24' width='16' height='16' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'>
+                    <polyline points='20 12 20 22 4 22 4 12'></polyline>
+                    <rect x='2' y='7' width='20' height='5'></rect>
+                    <line x1='12' y1='22' x2='12' y2='7'></line>
+                    <path d='M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7z'></path>
+                    <path d='M12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z'></path>
+                  </svg>
+                ) : perk.icon === 'shield' ? (
+                  <svg viewBox='0 0 24 24' width='16' height='16' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'>
+                    <path d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z'></path>
+                  </svg>
+                ) : (
+                  <svg viewBox='0 0 24 24' width='16' height='16' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'>
+                    <circle cx='12' cy='12' r='10'></circle>
+                    <polyline points='12 6 12 12 16 14'></polyline>
+                  </svg>
+                )}
+              </span>
+              <span>{perk.label}</span>
+            </li>
+          ))
+        }
+      </ul>
     </div>
 
-    <div class='contact__card-bottom'>
-      {showSuccess ? (
-        <div class='contact__success'>
-          <h2 class='contact__success-title'>¡Mensaje enviado correctamente!</h2>
-          <p class='contact__success-text'>Gracias por contactarnos. Nos pondremos en contacto contigo a la mayor brevedad posible.</p>
-          <Buttons href='/' className='btnSecondaryDark'>Volver al inicio</Buttons>
-        </div>
-      ) : (
-        <form class='contact__form' action='https://formspree.io/f/xzzaoaya' method='POST'>
-          <div class='contact__form-field'>
+    <div class='contact__panel'>
+      {
+        showSuccess ? (
+          <div class='contact__success' role='status'>
+            <h3 class='contact__success-title'>¡Mensaje enviado correctamente!</h3>
+            <p class='contact__success-text'>Gracias por contactarnos. Nos pondremos en contacto contigo a la mayor brevedad posible.</p>
+            <a class='contact__success-link' href='/'>Volver al inicio</a>
+          </div>
+        ) : (
+          <form class='contact__form' action='https://formspree.io/f/xzzaoaya' method='POST'>
             <input type='hidden' name='redirect' value='https://astracodelab.com/contacto?success=true' />
-            <input
-              type='text'
-              id='name'
-              name='name'
-              placeholder='Nombre'
-              aria-label='Nombre'
-              minlength='3'
-              maxlength='50'
-              required
-            />
-          </div>
-          <div class='contact__form-field'>
-            <input type='email' id='email' name='email' placeholder='Email' aria-label='Correo electrónico' required />
-          </div>
-          <div class='contact__form-field'>
-            <textarea
-              id='message'
-              name='message'
-              placeholder='Deja tu mensaje'
-              rows='4'
-              aria-label='Mensaje'
-              minlength='10'
-              maxlength='500'
-              required></textarea>
-          </div>
-          <div class='contact__form-field contact__form-field--checkbox'>
-            <input
-              id='privacy'
-              name='privacy'
-              type='checkbox'
-              aria-label='Acepto que se traten mis datos para gestionar la consulta'
-              required
-            />
-            <label for='privacy' class='contact__form-label'>
-              Acepto que se traten mis datos para gestionar la consulta.
+
+            <div class='contact__field'>
+              <input
+                type='text'
+                id='name'
+                name='name'
+                placeholder=' '
+                minlength='3'
+                maxlength='50'
+                autocomplete='name'
+                required
+              />
+              <label for='name'>Nombre</label>
+            </div>
+
+            <div class='contact__field'>
+              <input type='email' id='email' name='email' placeholder=' ' autocomplete='email' required />
+              <label for='email'>Email</label>
+            </div>
+
+            <div class='contact__field contact__field--textarea'>
+              <textarea
+                id='message'
+                name='message'
+                rows='5'
+                placeholder=' '
+                minlength='10'
+                maxlength='500'
+                required></textarea>
+              <label for='message'>Cuéntanos tu idea</label>
+            </div>
+
+            <label class='contact__consent'>
+              <input
+                id='privacy'
+                name='privacy'
+                type='checkbox'
+                aria-label='Acepto que se traten mis datos para gestionar la consulta'
+                required
+              />
+              <span class='contact__consent-box' aria-hidden='true'>
+                <svg viewBox='0 0 24 24' width='11' height='11' fill='none' stroke='currentColor' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'>
+                  <polyline points='20 6 9 17 4 12'></polyline>
+                </svg>
+              </span>
+              <span>Acepto que se traten mis datos para gestionar la consulta.</span>
             </label>
-          </div>
-          <div class='contact__form-actions'>
-            <Buttons type='submit' className='btnSecondaryDark'>Enviar</Buttons>
-          </div>
-        </form>
-      )}
+
+            <button type='submit' class='contact__submit'>
+              Enviar mensaje
+              <svg width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'>
+                <path d='M5 12h14M13 5l7 7-7 7'></path>
+              </svg>
+            </button>
+          </form>
+        )
+      }
     </div>
   </div>
 </section>
