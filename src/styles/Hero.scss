@@ -23,6 +23,22 @@
     max-width: 64rem;
   }
 
+  &--seoLocal {
+    padding: 1.875rem 1.25rem 1.875rem 1.25rem;
+
+    @media (min-width: 48rem) {
+      padding: 2.5rem 7.5rem;
+    }
+
+    @media (min-width: 64rem) {
+      padding: 6.25rem 7.5rem 0 7.5rem;
+    }
+
+    @media (min-width: 90rem) {
+      padding: 6.25rem 0 0;
+    }
+  }
+
   &__content {
     display: flex;
     flex-direction: column;

@@ -1,0 +1,53 @@
+@use './variables.scss' as *;
+
+.mainHome:has(.sectionHero--seoLocal) {
+  .cardPregunta,
+  .faqs-section {
+    box-sizing: border-box;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    margin-top: 1.875rem;
+    margin-bottom: 1.875rem;
+
+    @media (min-width: 48rem) {
+      padding-left: 7.5rem;
+      padding-right: 7.5rem;
+      margin: 3.75rem 0;
+    }
+
+    @media (min-width: 64rem) {
+      max-width: 56.5rem;
+      padding-left: 0;
+      padding-right: 0;
+      margin: 3.75rem auto;
+    }
+
+    @media (min-width: 90rem) {
+      max-width: 64rem;
+    }
+  }
+
+  .cardPregunta {
+    margin-top: 3.75rem;
+
+    @media (min-width: 48rem) {
+      margin-top: 3.75rem;
+    }
+
+    @media (min-width: 64rem) {
+      margin-top: 7.5rem;
+    }
+  }
+
+  .faqs-section {
+    padding-top: 0;
+
+    @media (min-width: 48rem) {
+      padding-top: 0;
+    }
+
+    @media (min-width: 64rem) {
+      padding-top: 0;
+    }
+  }
+}

@@ -12,14 +12,36 @@ import Chart from '../layouts/components/icons/chart.astro';
 import BannerCta from '../layouts/components/Banners/BannerCta.astro';
 import CardPregunta from '../layouts/components/Cards/CardPregunta.astro';
 import FaqsSection from '../layouts/components/FaqsSection.astro';
+import LocalProjectsSection from '../layouts/components/LocalProjectsSection.astro';
 import { faqsSeoMalaga } from '../layouts/components/accordeon/Faqs.js';
 import { schemaLocalMalaga } from '../data/faqsSeoMalaga.js';
+import alexisDesktop from '../images/mockups/scroll-alexis-desktop.webp';
+import alexisTablet from '../images/mockups/scroll-alexis-tablet.webp';
+import alexisMobile from '../images/mockups/scroll-alexis-mobile.webp';
 
 const title = 'Diseño web en Málaga | AstracodeLAB';
 const description = 'Páginas web en Málaga y Costa del Sol. Creamos webs profesionales para empresas y autónomos. Consulta sin compromiso.';
 const permalink = Astro.url.href;
 const image = 'https://astracodelab.com/og_diseño_web_desarrollo_web_malaga.png';
 const robots = 'index, follow';
+
+const localProjects = [
+  {
+    id: 'alexis',
+    name: 'Alexis Navas',
+    sector: 'Legal · Málaga',
+    year: '2024',
+    type: 'Web portfolio',
+    url: 'alexisnavas.com',
+    services: ['Diseño web', 'Astro', 'SEO'],
+    desc: 'Portfolio profesional para perito judicial en tasación de obras de arte. De funcional a una web que inspira confianza.',
+    img: {
+      desktop: alexisDesktop.src,
+      tablet: alexisTablet.src,
+      mobile: alexisMobile.src,
+    },
+  },
+];
 ---
 
 <script type='application/ld+json' set:html={JSON.stringify(schemaLocalMalaga)} />
@@ -74,12 +96,12 @@ const robots = 'index, follow';
       ]}
     />
 
-    <BannerCta
-      titulo='¿Listo para destacar?'
-      descripcion='Tanto si necesitas hacer una página web profesional en Málaga, lanzar un nuevo ecommerce para la provincia, o renovar tu web actual de negocio, astracodelab puede transformar tu idea en resultados concretos. Somos tu agencia de desarrollo web en Málaga. Entendemos que cada proyecto es único y cada diseño que creamos tiene un propósito claro: impulsar tu crecimiento en el mercado local'
-      texto='Contacta con nosotros'
-      className='btnPrimaryLight'
+    <LocalProjectsSection
+      title='Nuestros trabajos recientes en Málaga'
+      description='Una muestra de proyectos reales que hemos desarrollado para profesionales y negocios de la zona.'
+      projects={localProjects}
     />
+
     <div>
       <CardPregunta
         title='¿Tienes una idea de negocio en Málaga que no encaja en estos servicios, o no sabes por dónde empezar tu proyecto de diseño web?'

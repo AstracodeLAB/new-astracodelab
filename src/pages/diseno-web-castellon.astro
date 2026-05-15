@@ -12,14 +12,54 @@ import Chart from '../layouts/components/icons/chart.astro';
 import BannerCta from '../layouts/components/Banners/BannerCta.astro';
 import CardPregunta from '../layouts/components/Cards/CardPregunta.astro';
 import FaqsSection from '../layouts/components/FaqsSection.astro';
+import LocalProjectsSection from '../layouts/components/LocalProjectsSection.astro';
 import { faqsSeoCastellon } from '../layouts/components/accordeon/Faqs.js';
 import { schemaLocalCastellon } from '../data/faqsSeoCastellon.js';
+import lliureeDesktop from '../images/mockups/scroll-lliuree-desktop.webp';
+import lliureeTablet from '../images/mockups/scroll-lliuree-tablet.webp';
+import lliureeMobile from '../images/mockups/scroll-lliuree-mobile.webp';
+import qjubilosoDesktop from '../images/mockups/scroll-qjubiloso-desktop.webp';
+import qjubilosoTablet from '../images/mockups/scroll-qjubiloso-tablet.webp';
+import qjubilosoMobile from '../images/mockups/scroll-qjubiloso-mobile.webp';
 
 const title = 'Diseño web en Castellón | AstracodeLAB';
 const description = 'Páginas web en Castellón. Con oficina local, desarrollamos webs a medida para empresas de la provincia. Consulta sin compromiso.';
 const permalink = Astro.url.href;
 const image = 'https://astracodelab.com/og_diseño_web_ desarrollo_web _castellón.png';
 const robots = 'index, follow';
+
+const localProjects = [
+  {
+    id: 'lliuree',
+    name: 'Lliuree',
+    sector: 'Bienestar · Castellón',
+    year: '2024',
+    type: 'Web corporativa',
+    url: 'lliuree.com',
+    services: ['Diseño web', 'Astro', 'Branding'],
+    desc: 'Web personalizada para estudio de yoga. Diseño que transmite calma, con horarios, precios y formulario de admisión integrado.',
+    img: {
+      desktop: lliureeDesktop.src,
+      tablet: lliureeTablet.src,
+      mobile: lliureeMobile.src,
+    },
+  },
+  {
+    id: 'qjubiloso',
+    name: 'QJubiloso',
+    sector: 'Salud · Castellón',
+    year: '2025',
+    type: 'Web de servicios',
+    url: 'qjubiloso.es',
+    services: ['Diseño web', 'Astro', 'Accesibilidad'],
+    desc: 'Web para empresa de cuidados a domicilio. Diseño cálido y accesible que transmite confianza a familias.',
+    img: {
+      desktop: qjubilosoDesktop.src,
+      tablet: qjubilosoTablet.src,
+      mobile: qjubilosoMobile.src,
+    },
+  },
+];
 ---
 
 <script type='application/ld+json' set:html={JSON.stringify(schemaLocalCastellon)} />
@@ -74,12 +114,13 @@ const robots = 'index, follow';
       ]}
     />
 
-    <BannerCta
-      titulo='¿Listo para destacar?'
-      descripcion='Tanto si necesitas hacer una página web profesional en Castellón, lanzar un nuevo ecommerce para la provincia, o renovar tu web actual de negocio, astracodelab puede transformar tu idea en resultados concretos. Somos tu agencia de desarrollo web en Castellón de la Plana. Entendemos que cada proyecto es único y cada diseño que creamos tiene un propósito claro: impulsar tu crecimiento en el mercado local'
-      texto='Contacta con nosotros'
-      className='btnPrimaryLight'
+
+    <LocalProjectsSection
+      title='Nuestros trabajos recientes en Castellón'
+      description='Una muestra de proyectos reales que hemos desarrollado para negocios de la provincia.'
+      projects={localProjects}
     />
+
     <div>
       <CardPregunta
         title='¿Tienes una idea de negocio en Castellón que no encaja en estos servicios, o no sabes por dónde empezar tu proyecto de diseño web?'

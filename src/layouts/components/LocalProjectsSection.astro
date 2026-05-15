@@ -1,0 +1,186 @@
+---
+import TitleSecondary from './Titles/TitleSecondary.astro';
+import '../../styles/LocalProjectsSection.scss';
+
+type LocalProject = {
+  id: string;
+  name: string;
+  sector: string;
+  year: string;
+  type: string;
+  url: string;
+  services: string[];
+  desc: string;
+  img: {
+    desktop: string;
+    tablet: string;
+    mobile: string;
+  };
+};
+
+interface Props {
+  title?: string;
+  description?: string;
+  projects: LocalProject[];
+}
+
+const {
+  title = 'Nuestros trabajos recientes',
+  description = 'Proyectos reales que hemos diseñado y desarrollado para negocios de la zona.',
+  projects,
+} = Astro.props;
+---
+
+{
+  projects?.length > 0 && (
+    <section class='local-projects-section' aria-labelledby='local-projects-title'>
+      <div class='local-projects-section__header'>
+        <TitleSecondary text={title} description={description} />
+      </div>
+
+      <div class='local-projects-section__grid'>
+        {projects.map((project) => (
+          <article class='local-project-card'>
+            <div class='local-project-card__preview' data-local-project-carousel>
+              <div class='local-project-card__stage'>
+                <div class='local-project-card__device local-project-card__device--laptop is-active' data-device='0'>
+                  <div class='local-project-card__laptop-lid'>
+                    <div class='local-project-card__laptop-bezel'>
+                      <div class='local-project-card__laptop-notch' />
+                      <div class='local-project-card__chrome'>
+                        <div class='local-project-card__chrome-dots'>
+                          <span />
+                          <span />
+                          <span />
+                        </div>
+                        <div class='local-project-card__chrome-url'>{project.url}</div>
+                      </div>
+                      <div class='local-project-card__laptop-screen'>
+                        <div class='local-project-card__screen'>
+                          <img
+                            class='local-project-card__image'
+                            src={project.img.desktop}
+                            alt={`${project.name} en escritorio`}
+                            loading='lazy'
+                            draggable='false'
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class='local-project-card__laptop-base' />
+                </div>
+
+                <div class='local-project-card__device local-project-card__device--tablet' data-device='1'>
+                  <div class='local-project-card__tablet-bezel'>
+                    <div class='local-project-card__tablet-camera' />
+                    <div class='local-project-card__tablet-screen'>
+                      <div class='local-project-card__screen'>
+                        <img
+                          class='local-project-card__image'
+                          src={project.img.tablet}
+                          alt={`${project.name} en tablet`}
+                          loading='lazy'
+                          draggable='false'
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class='local-project-card__device local-project-card__device--phone' data-device='2'>
+                  <div class='local-project-card__phone-bezel'>
+                    <div class='local-project-card__phone-island' />
+                    <div class='local-project-card__phone-screen'>
+                      <div class='local-project-card__screen'>
+                        <img
+                          class='local-project-card__image'
+                          src={project.img.mobile}
+                          alt={`${project.name} en móvil`}
+                          loading='lazy'
+                          draggable='false'
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class='local-project-card__shadow' />
+              </div>
+
+              <div class='local-project-card__device-tabs' role='tablist' aria-label='Cambiar vista de dispositivo'>
+                <button class='local-project-card__device-tab is-active' role='tab' aria-selected='true' data-pick='0'>
+                  Desktop
+                </button>
+                <button class='local-project-card__device-tab' role='tab' aria-selected='false' data-pick='1'>
+                  Tablet
+                </button>
+                <button class='local-project-card__device-tab' role='tab' aria-selected='false' data-pick='2'>
+                  Móvil
+                </button>
+              </div>
+            </div>
+
+            <div class='local-project-card__body'>
+              <div class='local-project-card__meta'>
+                <span class='local-project-card__badge'>{project.type}</span>
+                <span class='local-project-card__year'>
+                  {project.year} · {project.sector}
+                </span>
+              </div>
+              <h3 class='local-project-card__title'>{project.name}</h3>
+              <p class='local-project-card__desc'>{project.desc}</p>
+              <ul class='local-project-card__tags' aria-label='Servicios'>
+                {project.services.map((service) => (
+                  <li>{service}</li>
+                ))}
+              </ul>
+              <a class='local-project-card__link btnSecondaryDark' href={`https://${project.url}`} target='_blank' rel='noopener noreferrer'>
+                Visitar web
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  )
+}
+
+<script>
+  function initLocalProjectCarousels() {
+    document.querySelectorAll<HTMLElement>('[data-local-project-carousel]').forEach((carousel) => {
+      if (carousel.dataset.localProjectReady === 'true') return;
+      carousel.dataset.localProjectReady = 'true';
+
+      let currentIdx = 0;
+      const devices = carousel.querySelectorAll<HTMLElement>('.local-project-card__device');
+      const tabs = carousel.querySelectorAll<HTMLElement>('.local-project-card__device-tab');
+      const screens = carousel.querySelectorAll<HTMLElement>('.local-project-card__screen');
+
+      function activate(idx: number) {
+        devices[currentIdx]?.classList.remove('is-active');
+        tabs[currentIdx]?.classList.remove('is-active');
+        tabs[currentIdx]?.setAttribute('aria-selected', 'false');
+        screens[currentIdx]?.scrollTo({ top: 0, behavior: 'smooth' });
+
+        currentIdx = idx;
+
+        devices[currentIdx]?.classList.add('is-active');
+        tabs[currentIdx]?.classList.add('is-active');
+        tabs[currentIdx]?.setAttribute('aria-selected', 'true');
+      }
+
+      tabs.forEach((tab, idx) => {
+        tab.addEventListener('click', () => activate(idx));
+      });
+    });
+  }
+
+  document.addEventListener('astro:page-load', initLocalProjectCarousels);
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initLocalProjectCarousels, { once: true });
+  } else {
+    initLocalProjectCarousels();
+  }
+</script>

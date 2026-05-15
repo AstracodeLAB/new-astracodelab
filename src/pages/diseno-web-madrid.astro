@@ -12,14 +12,36 @@ import Chart from '../layouts/components/icons/chart.astro';
 import BannerCta from '../layouts/components/Banners/BannerCta.astro';
 import CardPregunta from '../layouts/components/Cards/CardPregunta.astro';
 import FaqsSection from '../layouts/components/FaqsSection.astro';
+import LocalProjectsSection from '../layouts/components/LocalProjectsSection.astro';
 import { faqsSeoMadrid } from '../layouts/components/accordeon/Faqs.js';
 import { schemaLocalMadrid } from '../data/faqsSeoMadrid.js';
+import steamDesktop from '../images/mockups/scroll-steam-desktop.webp';
+import steamTablet from '../images/mockups/scroll-steam-tablet.webp';
+import steamMobile from '../images/mockups/scroll-steam-mobile.webp';
 
 const title = 'Diseño web en Madrid | AstracodeLAB';
 const description = 'Desarrollo de páginas web en Madrid. Diseñamos webs profesionales para empresas y autónomos. Consulta sin compromiso.';
 const permalink = Astro.url.href;
 const image = 'https://astracodelab.com/og_diseño_web_desarrollo_web_madrid.png';
 const robots = 'index, follow';
+
+const localProjects = [
+  {
+    id: 'steam',
+    name: 'Yo quiero estudiar STEAM',
+    sector: 'Educación · Madrid',
+    year: '2023',
+    type: 'Plataforma web',
+    url: 'yosoysteam.es',
+    services: ['Desarrollo', 'Backoffice', 'UI/UX', 'React'],
+    desc: 'Plataforma para inspirar a mujeres en ciencia y tecnología. Perfiles de referentes, bolsa de empleo y backoffice de gestión.',
+    img: {
+      desktop: steamDesktop.src,
+      tablet: steamTablet.src,
+      mobile: steamMobile.src,
+    },
+  },
+];
 ---
 
 <script type='application/ld+json' set:html={JSON.stringify(schemaLocalMadrid)} />
@@ -74,12 +96,12 @@ const robots = 'index, follow';
       ]}
     />
 
-    <BannerCta
-      titulo='¿Listo para destacar?'
-      descripcion='Tanto si necesitas hacer una página web profesional en Madrid, lanzar un nuevo ecommerce para la provincia, o renovar tu web actual de negocio, astracodelab puede transformar tu idea en resultados concretos. Somos tu agencia de desarrollo web en Madrid. Entendemos que cada proyecto es único y cada diseño que creamos tiene un propósito claro: impulsar tu crecimiento en el mercado local'
-      texto='Contacta con nosotros'
-      className='btnPrimaryLight'
+    <LocalProjectsSection
+      title='Nuestros trabajos recientes en Madrid'
+      description='Una muestra de proyectos reales que hemos desarrollado para negocios y organizaciones de la zona.'
+      projects={localProjects}
     />
+
     <div>
       <CardPregunta
         title='¿Tienes una idea de negocio en Madrid que no encaja en estos servicios, o no sabes por dónde empezar tu proyecto de diseño web?'
