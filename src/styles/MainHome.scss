@@ -2,24 +2,34 @@
 @use './variables.scss' as *;
 
 .mainHome {
-  background-image: url('/src/images/backgroundWhiteB.jpg');
-  background-repeat: no-repeat;
-  background-size: cover; // llena todo el ancho SIEMPRE
-  background-position: center top; // centra la imagen
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background-color: $cardWhite;
   width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  @media (max-width: 48rem) {
-    background-size: auto; // no fuerza escalado
-    background-position: center top; // muestra solo el trozo visible
+  > :not(.mainHome__background) {
+    position: relative;
+    z-index: 1;
   }
-  @media (max-width: 90rem) {
-    background-size: cover;
-    background-position: center;
-  }
+}
+
+.mainHome__background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.mainHome__background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
 }
 
 .section-prices {

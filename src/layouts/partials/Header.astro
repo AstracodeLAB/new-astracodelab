@@ -4,40 +4,36 @@ import Logo from '../components/Logo.astro';
 ---
 
 <header class='header header__text'>
-  <nav class='navigation' aria-label='Menú principal'>
+  <nav class='navigation' aria-label='Men&uacute; principal'>
     <div class='navigation__container'>
-      <!-- Logo -->
       <div class='navigation__container-logo'>
         <Logo />
       </div>
 
-      <!-- Botón hamburguesa (móvil) -->
       <button
         id='nav-toggle'
         class='navigation__container-button navigation__container-button--open'
         aria-expanded='false'
         aria-controls='nav-menu'
-        aria-label='Abrir menú'
+        aria-label='Abrir men&uacute;'
         type='button'
       >
         <svg class='navigation__container-button-icon' viewBox='0 0 20 20'>
-          <title>Abrir menú</title>
+          <title>Abrir men&uacute;</title>
           <path d='M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0V0z'></path>
         </svg>
       </button>
 
-      <!-- Menú principal -->
       <ul id='nav-menu' class='navigation__container-menu' aria-hidden='true' hidden>
-        <!-- Botón cerrar dentro del menú móvil -->
         <li class='navigation__container-menu-item navigation__container-menu-item-close'>
           <button
             class='navigation__container-button navigation__container-button--close'
-            aria-label='Cerrar menú'
+            aria-label='Cerrar men&uacute;'
             type='button'
             id='close-menu'
           >
             <svg class='navigation__container-button-icon' viewBox='0 0 20 20'>
-              <title>Cerrar menú</title>
+              <title>Cerrar men&uacute;</title>
               <polygon
                 points='11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2'
                 transform='rotate(45 10 10)'></polygon>
@@ -45,7 +41,6 @@ import Logo from '../components/Logo.astro';
           </button>
         </li>
 
-        <!-- Mega menú -->
         <li class='navigation__container-menu-itemsMap'>
           <button
             id='services-btn'
@@ -70,19 +65,19 @@ import Logo from '../components/Logo.astro';
 
           <div id='submenu-services' class='navigation__container-megamenu' aria-hidden='true' hidden>
             <div class='megamenu-column'>
-              <h3><a href='/servicios/diseno-web/'>Diseño y desarrollo web</a></h3>
+              <h3><a href='/servicios/diseno-web/'>Dise&ntilde;o y desarrollo web</a></h3>
               <ul>
                 <li><a href='/servicios/web-corporativa/'>Web corporativa</a></li>
                 <li><a href='/servicios/tienda-online/'>Tienda online / e-commerce</a></li>
                 <li><a href='/servicios/landing-page/'>Landing pages</a></li>
-                <li><a href='/servicios/redisenio-web/'>Rediseño web</a></li>
+                <li><a href='/servicios/redisenio-web/'>Redise&ntilde;o web</a></li>
                 <li><a href='/servicios/plataformas-startups-proyectos-educativos/'>Plataformas para startups y proyectos educativos</a></li>
               </ul>
             </div>
             <div class='megamenu-column'>
-              <h3><a href='/servicios/funcionalidades-optimizacion-web/'>Funcionalidades y Optimización</a></h3>
+              <h3><a href='/servicios/funcionalidades-optimizacion-web/'>Funcionalidades y Optimizaci&oacute;n</a></h3>
               <ul>
-                <li><a href='/servicios/web-multilingue/'>Web multilingüe</a></li>
+                <li><a href='/servicios/web-multilingue/'>Web multiling&uuml;e</a></li>
                 <li><a href='/servicios/sistemas-de-reservas/'>Sistemas de reservas</a></li>
                 <li><a href='/servicios/accesibilidad-web/'>Accesibilidad web</a></li>
                 <li><a href='/servicios/cartas-digitales-restaurantes/'>Cartas digitales para restaurantes</a></li>
@@ -115,14 +110,14 @@ import Logo from '../components/Logo.astro';
             href='https://wa.me/34623752940'
             target='_blank'
             rel='noopener noreferrer'
-            className='btnPrimaryLight'>¿Hablamos?</Buttons
+            className='btnPrimaryLight'>&iquest;Hablamos?</Buttons
           >
         </li>
       </ul>
 
       <div class='button-header'>
         <Buttons href='https://wa.me/34623752940' target='_blank' rel='noopener noreferrer' className='btnPrimaryLight'
-          >¿Hablamos?</Buttons
+          >&iquest;Hablamos?</Buttons
         >
       </div>
     </div>
@@ -130,75 +125,66 @@ import Logo from '../components/Logo.astro';
 </header>
 
 <script is:inline>
-  if (!window.navigationInitialized) {
-    window.navigationInitialized = true;
+  (() => {
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    const closeBtn = document.getElementById('close-menu');
+    const servicesBtn = document.getElementById('services-btn');
+    const submenu = document.getElementById('submenu-services');
+    const arrowIcon = document.getElementById('services-arrow');
 
-    const initializeNavigation = () => {
-     
+    if (!navToggle || !navMenu || !closeBtn || !servicesBtn || !submenu || !arrowIcon) {
+      return;
+    }
 
-      const navToggle = document.getElementById('nav-toggle');
-      const navMenu = document.getElementById('nav-menu');
-      const closeBtn = document.getElementById('close-menu');
-      const servicesBtn = document.getElementById('services-btn');
-      const submenu = document.getElementById('submenu-services');
-      const arrowIcon = document.getElementById('services-arrow');
+    let isMenuOpen = false;
+    let isSubmenuOpen = false;
 
-      if (!navToggle || !navMenu || !servicesBtn || !submenu) {
-        console.error('❌ No se encontraron elementos del menú');
-        return;
-      }
-
-      let isMenuOpen = false;
-      let isSubmenuOpen = false;
-
-      const toggleMenu = (open) => {
-        isMenuOpen = open;
-        navToggle.setAttribute('aria-expanded', open);
-        navMenu.setAttribute('aria-hidden', !open);
-        open ? navMenu.removeAttribute('hidden') : navMenu.setAttribute('hidden', '');
-      };
-
-      const toggleSubmenu = (open) => {
-        isSubmenuOpen = open;
-        servicesBtn.setAttribute('aria-expanded', open);
-        submenu.setAttribute('aria-hidden', !open);
-        open ? submenu.removeAttribute('hidden') : submenu.setAttribute('hidden', '');
-        arrowIcon.style.transform = open ? 'rotate(180deg)' : 'rotate(0deg)';
-      };
-
-      navToggle.addEventListener('click', () => toggleMenu(!isMenuOpen));
-      closeBtn.addEventListener('click', () => toggleMenu(false));
-      servicesBtn.addEventListener('click', () => toggleSubmenu(!isSubmenuOpen));
-
-      document.addEventListener('click', (e) => {
-        if (isSubmenuOpen && !submenu.contains(e.target) && !servicesBtn.contains(e.target)) {
-          toggleSubmenu(false);
-        }
-        if (isMenuOpen && !navMenu.contains(e.target) && !navToggle.contains(e.target)) {
-          toggleMenu(false);
-        }
-      });
-
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-          toggleSubmenu(false);
-          toggleMenu(false);
-        }
-      });
-
-      const navLinks = navMenu.querySelectorAll('a[href^="/"]');
-      navLinks.forEach((link) => {
-        link.addEventListener('click', () => {
-          toggleMenu(false);
-          toggleSubmenu(false);
-        });
-      });
-
-     
+    const toggleMenu = (open) => {
+      isMenuOpen = open;
+      navToggle.setAttribute('aria-expanded', String(open));
+      navMenu.setAttribute('aria-hidden', String(!open));
+      open ? navMenu.removeAttribute('hidden') : navMenu.setAttribute('hidden', '');
     };
 
-    document.addEventListener('astro:page-load', initializeNavigation);
-    document.addEventListener('astro:after-swap', initializeNavigation);
-    document.addEventListener('DOMContentLoaded', initializeNavigation);
-  }
+    const toggleSubmenu = (open) => {
+      isSubmenuOpen = open;
+      servicesBtn.setAttribute('aria-expanded', String(open));
+      submenu.setAttribute('aria-hidden', String(!open));
+      open ? submenu.removeAttribute('hidden') : submenu.setAttribute('hidden', '');
+      arrowIcon.style.transform = open ? 'rotate(180deg)' : 'rotate(0deg)';
+    };
+
+    navToggle.addEventListener('click', () => toggleMenu(!isMenuOpen));
+    closeBtn.addEventListener('click', () => toggleMenu(false));
+    servicesBtn.addEventListener('click', () => toggleSubmenu(!isSubmenuOpen));
+
+    document.addEventListener('click', (event) => {
+      const target = event.target;
+      if (!(target instanceof Node)) return;
+
+      if (isSubmenuOpen && !submenu.contains(target) && !servicesBtn.contains(target)) {
+        toggleSubmenu(false);
+      }
+
+      if (isMenuOpen && !navMenu.contains(target) && !navToggle.contains(target)) {
+        toggleMenu(false);
+      }
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        toggleSubmenu(false);
+        toggleMenu(false);
+      }
+    });
+
+    const navLinks = navMenu.querySelectorAll('a[href^="/"]');
+    navLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        toggleMenu(false);
+        toggleSubmenu(false);
+      });
+    });
+  })();
 </script>

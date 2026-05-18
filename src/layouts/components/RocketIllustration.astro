@@ -3,94 +3,89 @@ import heroComputer from '../../images/pchero.svg';
 import heroRocket from '../../images/rockethero.svg';
 import heroBase from '../../images/basehero.svg';
 import heroSmoke from '../../images/smokehero.svg';
-
 ---
 
-<section class="hero-illustration">
+<section class='hero-illustration'>
   <img
     src={heroComputer.src}
-    alt='Ilustración de un ordenador portátil con un cohete despegando'
-    class="hero-illustration__computer"
-        
+    alt='IlustraciÃ³n de un ordenador portÃ¡til con un cohete despegando'
+    class='hero-illustration__computer'
+    width='1085'
+    height='1085'
+    loading='eager'
+    decoding='async'
   />
   <img
     src={heroRocket.src}
     alt=''
-    class="hero-illustration__rocket"
-    aria-hidden="true"
+    class='hero-illustration__rocket'
+    aria-hidden='true'
+    width='143'
+    height='166'
+    loading='eager'
+    decoding='async'
   />
   <img
     src={heroSmoke.src}
     alt=''
-    class="hero-illustration__smoke"
-    aria-hidden="true"
+    class='hero-illustration__smoke'
+    aria-hidden='true'
+    width='262'
+    height='230'
+    loading='eager'
+    decoding='async'
   />
-
   <img
     src={heroBase.src}
     alt=''
-    class="hero-illustration__base"
-    aria-hidden="true"
+    class='hero-illustration__base'
+    aria-hidden='true'
+    width='1063'
+    height='600'
+    loading='eager'
+    decoding='async'
   />
-
 </section>
 
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const rocket = document.querySelector(".hero-illustration__rocket");
-    const computer = document.querySelector(".hero-illustration__computer"); // Nuevo
-    const container = document.querySelector(".hero-illustration");
-    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const rocket = document.querySelector('.hero-illustration__rocket');
+    const computer = document.querySelector('.hero-illustration__computer');
+    const container = document.querySelector('.hero-illustration');
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
 
-    if (!rocket || !container || !computer) return; // Salir si no se encuentran elementos
+    if (!rocket || !container || !computer) return;
 
-    // Función que resetea el cohete a su posición inicial
     const resetRocket = () => {
-      // Elimina la clase 'launch' o cualquier estilo de animación
-      rocket.classList.remove("launch");
-      
-      // Opcional, forzar un reseteo de estilos inline si fuera necesario, aunque 'remove' debería bastar
-      // rocket.style.transform = '';
-      // rocket.style.opacity = ''; 
+      rocket.classList.remove('launch');
     };
 
-    /* ========================================================== */
-    /* 🚀 LÓGICA MÓVIL (Animación Única al entrar en la vista) */
-    /* ========================================================== */
     if (isMobile) {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            rocket.classList.add("launch");
-            observer.unobserve(container); // ✅ Solo una vez
-          }
-        });
-      }, { threshold: 0.3 });
-      
-      observer.observe(container);
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              rocket.classList.add('launch');
+              observer.unobserve(container);
+            }
+          });
+        },
+        { threshold: 0.3 }
+      );
 
-      // Evento para forzar el RESET después de que termina la animación de subida
-      rocket.addEventListener('animationend', resetRocket, { once: true }); 
-      // Usamos 'once: true' para que solo se ejecute la primera vez que la animación termina.
+      observer.observe(container);
+      rocket.addEventListener('animationend', resetRocket, { once: true });
     }
 
-    /* ========================================================== */
-    /* 🚀 LÓGICA ESCRITORIO (Hover repetible) */
-    /* ========================================================== */
     if (!isMobile) {
-      // 1. Hover para subir y desaparecer
       computer.addEventListener('mouseenter', () => {
-        // Añade la clase que activa la animación de subida (rocketLaunchAndDisappear)
-        rocket.classList.add("launch");
-        // Nota: El CSS es el que hace que suba con 'forwards'.
+        rocket.classList.add('launch');
       });
 
-      // 2. Mouseleave para resetear INSTANTÁNEAMENTE
       computer.addEventListener('mouseleave', () => {
-        // Retrasa un poco el reseteo para que la animación tenga tiempo de terminar
         setTimeout(() => {
-          resetRocket(); 
-        }, 10); // Un retraso muy pequeño (10ms)
+          resetRocket();
+        }, 10);
       });
     }
   });

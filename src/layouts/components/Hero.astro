@@ -1,6 +1,5 @@
 ---
 import TitlesHero from '../components/Titles/TitlesHero.astro';
-import heroImg from '../../images/heroIlustration.svg';
 import Buttons from '../components/Buttons/Buttons.astro';
 import RocketIllustration from './RocketIllustration.astro';
 ---
@@ -9,27 +8,21 @@ import RocketIllustration from './RocketIllustration.astro';
   <article class='sectionHero__content'>
     <div class='sectionHero__content-text'>
       <TitlesHero
-        title='Diseñamos webs profesionales para que tu negocio gane confianza y clientes'
+        title={'Dise\u00f1amos webs profesionales para que tu negocio gane confianza y clientes'}
         subtitle=''
         className='heroHome--home'
       />
 
       <p class='sectionHero__content-description'>
-        Creamos páginas web a medida, rápidas y accesibles para autónomos, pymes y proyectos que quieren mejorar su
-        presencia online sin complicaciones técnicas.
+        Creamos p&aacute;ginas web a medida, r&aacute;pidas y accesibles para aut&oacute;nomos, pymes y proyectos que quieren mejorar su
+        presencia online sin complicaciones t&eacute;cnicas.
       </p>
       <article class='sectionHero__buttons'>
-        <Buttons className='btnPrimaryLight' href='/#contact'>Cuéntanos tu proyecto</Buttons>
+        <Buttons className='btnPrimaryLight' href='/#contact'>Cu&eacute;ntanos tu proyecto</Buttons>
         <Buttons className='btnPrimaryDark' href='https://calendly.com/astracodelab'>Agendar cita</Buttons>
       </article>
     </div>
     <div class='sectionHero__image'>
-      <!-- <img
-        src={heroImg.src}
-        alt='Ilustración de un ordenador portátil con una ventana web abierta y un botón de Click Here, acompañado de un      cohete
-        despegando.'
-        class='sectionHero__image-item'
-      /> -->
       <RocketIllustration />
     </div>
   </article>

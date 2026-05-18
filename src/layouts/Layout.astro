@@ -3,7 +3,6 @@ import Header from './partials/Header.astro';
 import '../styles/global.scss';
 import Footer from './partials/Footer.astro';
 import CookieBanner from './components/CookieBanner.astro';
-import { ClientRouter } from 'astro:transitions';
 import roboto400 from '@fontsource/roboto/files/roboto-latin-ext-400-normal.woff2?url';
 import roboto500 from '@fontsource/roboto/files/roboto-latin-ext-500-normal.woff2?url';
 import roboto700 from '@fontsource/roboto/files/roboto-latin-ext-700-normal.woff2?url';
@@ -34,7 +33,7 @@ const {
     <meta charset='UTF-8' />
     <title>{title}</title>
     <meta name='description' content={description} />
-    <meta name='viewport' content='width=device-width' , initial-scale='1' />
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
     <link rel='icon' type='image/svg+xml' href='/favicon.ico' />
     <link rel='canonical' href={permalink} />
     <meta name='msvalidate.01' content='08A045B5065017F91DE8FBA3B76391FC' />
@@ -53,7 +52,6 @@ const {
     <link rel='preload' href={roboto400} as='font' type='font/woff2' crossorigin />
     <link rel='preload' href={roboto500} as='font' type='font/woff2' crossorigin />
     <link rel='preload' href={roboto700} as='font' type='font/woff2' crossorigin />
-    <ClientRouter />
     <script>
       function hasAnalyticsConsent() {
         return document.cookie.includes('analytics=true');
@@ -117,7 +115,6 @@ const {
       }
 
       window.addEventListener('load', scheduleAnalyticsLoad, { once: true });
-      document.addEventListener('astro:page-load', scheduleAnalyticsLoad);
     </script>
   </head>
   <body>
