@@ -17,5 +17,8 @@
     "photoswipe": "^5.4.4",
     "sass": "^1.83.4",
     "swiper": "^12.1.2"
+  },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "^4.59.0"
   }
 }
