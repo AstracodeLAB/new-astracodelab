@@ -1,27 +1,16 @@
-export const schemaLocalOrense= {
+export const schemaLocalOrense = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "ProfessionalService",
-      "@id": "https://astracodelab.com/diseno-web-orense#AstracodeLABOrense",
+      "@id": "https://astracodelab.com/diseno-web-orense/#AstracodeLABOrense",
       "name": "AstracodeLAB - Diseño Web en Orense",
       "alternateName": "Agencia de Diseño Web Orense",
       "description": "Agencia de diseño y desarrollo web en Orense. Creamos páginas web profesionales para empresas y autónomos de Orense y provincia. Diseño responsive, SEO local y soporte personalizado.",
-      "url": "https://astracodelab.com/diseno-web-orense",
+      "url": "https://astracodelab.com/diseno-web-orense/",
       "telephone": "+34-623-752-940",
       "priceRange": "700€",
-      "image": "https://astracodelab.com/orense.png",
-
-      // CRÍTICO para SEO Local
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Orense",
-        "addressRegion": "Galicia",
-        "postalCode": "32001",
-        "addressCountry": "ES"
-      },
-
-      // Área de servicio específica
+      "image": "https://astracodelab.com/og_diseño_web_ desarrollo_web_orense.png",
       "areaServed": [
         {
           "@type": "City",
@@ -36,28 +25,24 @@ export const schemaLocalOrense= {
           "name": "Galicia"
         }
       ],
-
-   
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "42.3364",
-        "longitude": "-7.8631"
-      },
-
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
           "opens": "09:30",
           "closes": "17:00"
         }
       ],
-
       "sameAs": [
         "https://www.linkedin.com/company/astracodelab",
         "https://www.instagram.com/astracodelab"
       ],
-
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Servicios de diseño web en Orense",
@@ -99,19 +84,18 @@ export const schemaLocalOrense= {
             }
           }
         ]
-      },
-
+      }
     },
     {
       "@type": "FAQPage",
-      "@id": "https://astracodelab.com/diseno-web-orense#FAQPage",
+      "@id": "https://astracodelab.com/diseno-web-orense/#FAQPage",
       "mainEntity": [
         {
           "@type": "Question",
           "name": "¿Ofrecéis servicios de diseño web en Orense?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí, AstracodeLAB ofrece servicios de diseño y desarrollo web en Orense. Aunque nuestras oficinas están ubicadas en Barcelona, Málaga y Castellón, trabajamos con clientes de toda Galicia y España. Nos adaptamos a reuniones presenciales en Orense o videollamadas según tu preferencia."
+            "text": "Sí, AstracodeLAB ofrece servicios de diseño y desarrollo web en Orense. Aunque nuestras oficinas están ubicadas en Barcelona, Málaga y Castellón, trabajamos con clientes de toda Galicia y España. Ofrecemos videollamadas para definir el proyecto según tus necesidades."
           }
         },
         {
@@ -154,7 +138,6 @@ export const schemaLocalOrense= {
             "text": "Sí, todas nuestras webs incluyen optimización SEO on-page básica."
           }
         },
-
         {
           "@type": "Question",
           "name": "¿Qué necesito para empezar mi proyecto web en Orense?",
@@ -165,11 +148,9 @@ export const schemaLocalOrense= {
         }
       ]
     },
-
-    // 3. BreadcrumbList
     {
       "@type": "BreadcrumbList",
-      "@id": "https://astracodelab.com/diseno-web-orense#Breadcrumb",
+      "@id": "https://astracodelab.com/diseno-web-orense/#Breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -181,27 +162,25 @@ export const schemaLocalOrense= {
           "@type": "ListItem",
           "position": 2,
           "name": "Diseño web Orense",
-          "item": "https://astracodelab.com/diseno-web-orense"
+          "item": "https://astracodelab.com/diseno-web-orense/"
         }
       ]
     },
-
-    // 4. WebPage
     {
       "@type": "WebPage",
-      "@id": "https://astracodelab.com/diseno-web-orense#WebPage",
-      "url": "https://astracodelab.com/diseno-web-orense",
+      "@id": "https://astracodelab.com/diseno-web-orense/#WebPage",
+      "url": "https://astracodelab.com/diseno-web-orense/",
       "name": "Diseño Web en Orense | Agencia Web Local - AstracodeLAB",
       "description": "Diseño y desarrollo web profesional en Orense. Páginas web a medida para empresas y autónomos de Orense. Presupuesto sin compromiso.",
       "inLanguage": "es-ES",
       "isPartOf": {
-        "@id": "https://astracodelab.com#WebSite"
+        "@id": "https://astracodelab.com/#WebSite"
       },
       "breadcrumb": {
-        "@id": "https://astracodelab.com/diseno-web-orense#Breadcrumb"
+        "@id": "https://astracodelab.com/diseno-web-orense/#Breadcrumb"
       },
       "about": {
-        "@id": "https://astracodelab.com/diseno-web-orense#AstracodeLABOrense"
+        "@id": "https://astracodelab.com/diseno-web-orense/#AstracodeLABOrense"
       }
     }
   ]

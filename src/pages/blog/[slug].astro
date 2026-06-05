@@ -54,6 +54,8 @@ const blogSchema = {
 ---
 
 <Layout title={title} description={description} permalink={permalink} robots={robots}>
+  <script type='application/ld+json' set:html={JSON.stringify(blogSchema)} />
+
   <main class='post-detail'>
     <div class='container-post-detail'>
       <Buttons className='linkPrimary' href={backUrl}>← Volver al listado</Buttons>

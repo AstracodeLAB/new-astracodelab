@@ -3,16 +3,14 @@ export const schemaLocalBarcelona = {
   "@graph": [
     {
       "@type": "ProfessionalService",
-      "@id": "https://astracodelab.com/diseno-web-barcelona#AstracodeLABBarcelona",
+      "@id": "https://astracodelab.com/diseno-web-barcelona/#AstracodeLABBarcelona",
       "name": "AstracodeLAB - Diseño Web en Barcelona",
       "alternateName": "Agencia de Diseño Web Barcelona",
       "description": "Agencia de diseño y desarrollo web en Barcelona. Creamos páginas web profesionales para empresas y autónomos de Barcelona y provincia. Diseño responsive, SEO local y soporte personalizado.",
-      "url": "https://astracodelab.com/diseno-web-barcelona",
+      "url": "https://astracodelab.com/diseno-web-barcelona/",
       "telephone": "+34-623-752-940",
       "priceRange": "700€",
       "image": "https://astracodelab.com/og_diseño_web_desarrollo_web_barcelona.png",
-
-      // CRÍTICO para SEO Local
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Barcelona",
@@ -20,8 +18,6 @@ export const schemaLocalBarcelona = {
         "postalCode": "08001",
         "addressCountry": "ES"
       },
-
-      // Área de servicio específica
       "areaServed": [
         {
           "@type": "City",
@@ -36,28 +32,29 @@ export const schemaLocalBarcelona = {
           "name": "Cataluña"
         }
       ],
-
-   
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": "41.3874", // Coordenadas de Barcelona
+        "latitude": "41.3874",
         "longitude": "2.1686"
       },
-
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
           "opens": "09:30",
           "closes": "17:00"
         }
       ],
-
       "sameAs": [
         "https://www.linkedin.com/company/astracodelab",
         "https://www.instagram.com/astracodelab"
       ],
-
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Servicios de diseño web en Barcelona",
@@ -99,12 +96,11 @@ export const schemaLocalBarcelona = {
             }
           }
         ]
-      },
-
+      }
     },
     {
       "@type": "FAQPage",
-      "@id": "https://astracodelab.com/diseno-web-barcelona#FAQPage",
+      "@id": "https://astracodelab.com/diseno-web-barcelona/#FAQPage",
       "mainEntity": [
         {
           "@type": "Question",
@@ -112,14 +108,6 @@ export const schemaLocalBarcelona = {
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Sí, AstracodeLAB ofrece servicios de diseño y desarrollo web en Barcelona. Aunque nuestras oficinas están ubicadas en Barcelona, Málaga y Castellón, trabajamos con clientes de toda Cataluña y España. Nos adaptamos a reuniones presenciales en Barcelona o videollamadas según tu preferencia."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Podemos reunirnos en persona en Barcelona para hablar de mi proyecto web?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Por supuesto. Realizamos reuniones presenciales en Barcelona para conocer tu proyecto en detalle. También ofrecemos videollamadas si prefieres un formato más flexible. Lo importante es entender tus necesidades y definir juntos los objetivos de tu página web."
           }
         },
         {
@@ -162,7 +150,6 @@ export const schemaLocalBarcelona = {
             "text": "Sí, todas nuestras webs incluyen optimización SEO on-page básica."
           }
         },
-
         {
           "@type": "Question",
           "name": "¿Qué necesito para empezar mi proyecto web en Barcelona?",
@@ -173,11 +160,9 @@ export const schemaLocalBarcelona = {
         }
       ]
     },
-
-    // 3. BreadcrumbList
     {
       "@type": "BreadcrumbList",
-      "@id": "https://astracodelab.com/diseno-web-barcelona#Breadcrumb",
+      "@id": "https://astracodelab.com/diseno-web-barcelona/#Breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -189,27 +174,25 @@ export const schemaLocalBarcelona = {
           "@type": "ListItem",
           "position": 2,
           "name": "Diseño web Barcelona",
-          "item": "https://astracodelab.com/diseno-web-barcelona"
+          "item": "https://astracodelab.com/diseno-web-barcelona/"
         }
       ]
     },
-
-    // 4. WebPage
     {
       "@type": "WebPage",
-      "@id": "https://astracodelab.com/diseno-web-barcelona#WebPage",
-      "url": "https://astracodelab.com/diseno-web-barcelona",
+      "@id": "https://astracodelab.com/diseno-web-barcelona/#WebPage",
+      "url": "https://astracodelab.com/diseno-web-barcelona/",
       "name": "Diseño Web en Barcelona | Agencia Web Local - AstracodeLAB",
       "description": "Diseño y desarrollo web profesional en Barcelona. Páginas web a medida para empresas y autónomos de Barcelona. Presupuesto sin compromiso.",
       "inLanguage": "es-ES",
       "isPartOf": {
-        "@id": "https://astracodelab.com#WebSite"
+        "@id": "https://astracodelab.com/#WebSite"
       },
       "breadcrumb": {
-        "@id": "https://astracodelab.com/diseno-web-barcelona#Breadcrumb"
+        "@id": "https://astracodelab.com/diseno-web-barcelona/#Breadcrumb"
       },
       "about": {
-        "@id": "https://astracodelab.com/diseno-web-barcelona#AstracodeLABBarcelona"
+        "@id": "https://astracodelab.com/diseno-web-barcelona/#AstracodeLABBarcelona"
       }
     }
   ]

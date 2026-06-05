@@ -3,25 +3,14 @@ export const schemaLocalZaragoza = {
   "@graph": [
     {
       "@type": "ProfessionalService",
-      "@id": "https://astracodelab.com/diseno-web-zaragoza#AstracodeLABZaragoza",
+      "@id": "https://astracodelab.com/diseno-web-zaragoza/#AstracodeLABZaragoza",
       "name": "AstracodeLAB - Diseño Web en Zaragoza",
       "alternateName": "Agencia de Diseño Web Zaragoza",
       "description": "Agencia de diseño y desarrollo web en Zaragoza. Creamos páginas web profesionales para empresas y autónomos de Zaragoza y provincia. Diseño responsive, SEO local y soporte personalizado.",
-      "url": "https://astracodelab.com/diseno-web-zaragoza",
+      "url": "https://astracodelab.com/diseno-web-zaragoza/",
       "telephone": "+34-623-752-940",
       "priceRange": "700€",
       "image": "https://astracodelab.com/og_diseño_web_desarrollo_web_zaragoza.png",
-
-      // CRÍTICO para SEO Local
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Zaragoza",
-        "addressRegion": "Aragón",
-        "postalCode": "50001",
-        "addressCountry": "ES"
-      },
-
-      // Área de servicio específica
       "areaServed": [
         {
           "@type": "City",
@@ -36,28 +25,24 @@ export const schemaLocalZaragoza = {
           "name": "Aragón"
         }
       ],
-
-   
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "41.6488", // Coordenadas de Zaragoza
-        "longitude": "-0.8891"
-      },
-
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
           "opens": "09:30",
           "closes": "17:00"
         }
       ],
-
       "sameAs": [
         "https://www.linkedin.com/company/astracodelab",
         "https://www.instagram.com/astracodelab"
       ],
-
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Servicios de diseño web en Zaragoza",
@@ -99,19 +84,18 @@ export const schemaLocalZaragoza = {
             }
           }
         ]
-      },
-
+      }
     },
     {
       "@type": "FAQPage",
-      "@id": "https://astracodelab.com/diseno-web-zaragoza#FAQPage",
+      "@id": "https://astracodelab.com/diseno-web-zaragoza/#FAQPage",
       "mainEntity": [
         {
           "@type": "Question",
           "name": "¿Ofrecéis servicios de diseño web en Zaragoza?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí, AstracodeLAB ofrece servicios de diseño y desarrollo web en Zaragoza. Aunque nuestras oficinas están ubicadas en Barcelona, Málaga y Castellón, trabajamos con clientes de toda Aragón y España. Nos adaptamos a reuniones presenciales en Zaragoza o videollamadas según tu preferencia."
+            "text": "Sí, AstracodeLAB ofrece servicios de diseño y desarrollo web en Zaragoza. Aunque nuestras oficinas están ubicadas en Barcelona, Málaga y Castellón, trabajamos con clientes de toda Aragón y España. Ofrecemos videollamadas para definir el proyecto según tus necesidades."
           }
         },
         {
@@ -154,7 +138,6 @@ export const schemaLocalZaragoza = {
             "text": "Sí, todas nuestras webs incluyen optimización SEO on-page básica."
           }
         },
-
         {
           "@type": "Question",
           "name": "¿Qué necesito para empezar mi proyecto web en Zaragoza?",
@@ -165,11 +148,9 @@ export const schemaLocalZaragoza = {
         }
       ]
     },
-
-    // 3. BreadcrumbList
     {
       "@type": "BreadcrumbList",
-      "@id": "https://astracodelab.com/diseno-web-zaragoza#Breadcrumb",
+      "@id": "https://astracodelab.com/diseno-web-zaragoza/#Breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -181,27 +162,25 @@ export const schemaLocalZaragoza = {
           "@type": "ListItem",
           "position": 2,
           "name": "Diseño web Zaragoza",
-          "item": "https://astracodelab.com/diseno-web-zaragoza"
+          "item": "https://astracodelab.com/diseno-web-zaragoza/"
         }
       ]
     },
-
-    // 4. WebPage
     {
       "@type": "WebPage",
-      "@id": "https://astracodelab.com/diseno-web-zaragoza#WebPage",
-      "url": "https://astracodelab.com/diseno-web-zaragoza",
+      "@id": "https://astracodelab.com/diseno-web-zaragoza/#WebPage",
+      "url": "https://astracodelab.com/diseno-web-zaragoza/",
       "name": "Diseño Web en Zaragoza | Agencia Web Local - AstracodeLAB",
       "description": "Diseño y desarrollo web profesional en Zaragoza. Páginas web a medida para empresas y autónomos de Zaragoza. Presupuesto sin compromiso.",
       "inLanguage": "es-ES",
       "isPartOf": {
-        "@id": "https://astracodelab.com#WebSite"
+        "@id": "https://astracodelab.com/#WebSite"
       },
       "breadcrumb": {
-        "@id": "https://astracodelab.com/diseno-web-zaragoza#Breadcrumb"
+        "@id": "https://astracodelab.com/diseno-web-zaragoza/#Breadcrumb"
       },
       "about": {
-        "@id": "https://astracodelab.com/diseno-web-zaragoza#AstracodeLABZaragoza"
+        "@id": "https://astracodelab.com/diseno-web-zaragoza/#AstracodeLABZaragoza"
       }
     }
   ]

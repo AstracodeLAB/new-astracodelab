@@ -16,6 +16,7 @@ export interface Props {
   permalink: string;
   image?: string;
   robots?: string;
+  canonical?: boolean;
 }
 
 const {
@@ -24,6 +25,7 @@ const {
   permalink,
   robots = 'index, follow',
   image = 'https://astracodelab.com/og_astracode.png',
+  canonical = true,
 } = Astro.props;
 ---
 
@@ -35,7 +37,7 @@ const {
     <meta name='description' content={description} />
     <meta name='viewport' content='width=device-width, initial-scale=1' />
     <link rel='icon' type='image/svg+xml' href='/favicon.ico' />
-    <link rel='canonical' href={permalink} />
+    {canonical && <link rel='canonical' href={permalink} />}
     <meta name='msvalidate.01' content='08A045B5065017F91DE8FBA3B76391FC' />
     <meta name='robots' content={robots} />
     <meta name='author' content='AstracodeLAB' />

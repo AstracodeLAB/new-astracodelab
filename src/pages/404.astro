@@ -20,7 +20,7 @@ const permalink = 'https://astracodelab.com/404/';
 const robots = 'noindex, nofollow';
 ---
 
-<Layout title={title} description={description} permalink={permalink} robots={robots}>
+<Layout title={title} description={description} permalink={permalink} robots={robots} canonical={false}>
   <main class='error'>
     <img src={randomImage.src} alt='Imagen de error' class='error__img' />
     <p class='error__text'>Lo siento, no podemos encontrar la página que estás buscando.</p>

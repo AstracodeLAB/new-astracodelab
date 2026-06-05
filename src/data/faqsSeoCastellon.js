@@ -3,25 +3,21 @@ export const schemaLocalCastellon = {
   "@graph": [
     {
       "@type": "ProfessionalService",
-      "@id": "https://astracodelab.com/diseno-web-castellon#AstracodeLABCastellon",
+      "@id": "https://astracodelab.com/diseno-web-castellon/#AstracodeLABCastellon",
       "name": "AstracodeLAB - Diseño Web en Castellón",
       "alternateName": "Agencia de Diseño Web Castellón",
       "description": "Agencia de diseño y desarrollo web en Castellón. Creamos páginas web profesionales para empresas y autónomos de Castellón y provincia. Diseño responsive, SEO local y soporte personalizado.",
-      "url": "https://astracodelab.com/diseno-web-castellon",
+      "url": "https://astracodelab.com/diseno-web-castellon/",
       "telephone": "+34-623-752-940",
       "priceRange": "700€",
       "image": "https://astracodelab.com/og_diseño_web_desarrollo_web_castellón.png",
-
-      // CRÍTICO para SEO Local
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Castellón de la Plana",
         "addressRegion": "Comunidad Valenciana",
-        "postalCode": "12001", 
+        "postalCode": "12001",
         "addressCountry": "ES"
       },
-
-      // Área de servicio específica
       "areaServed": [
         {
           "@type": "City",
@@ -36,28 +32,29 @@ export const schemaLocalCastellon = {
           "name": "Comunidad Valenciana"
         }
       ],
-
-   
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": "39.9864", // Coordenadas de Castellón
+        "latitude": "39.9864",
         "longitude": "-0.0513"
       },
-
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
           "opens": "09:30",
           "closes": "17:00"
         }
       ],
-
       "sameAs": [
         "https://www.linkedin.com/company/astracodelab",
         "https://www.instagram.com/astracodelab"
       ],
-
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Servicios de diseño web en Castellón",
@@ -99,12 +96,11 @@ export const schemaLocalCastellon = {
             }
           }
         ]
-      },
-
+      }
     },
     {
       "@type": "FAQPage",
-      "@id": "https://astracodelab.com/diseno-web-castellon#FAQPage",
+      "@id": "https://astracodelab.com/diseno-web-castellon/#FAQPage",
       "mainEntity": [
         {
           "@type": "Question",
@@ -162,7 +158,6 @@ export const schemaLocalCastellon = {
             "text": "Sí, todas nuestras webs incluyen optimización SEO on-page básica."
           }
         },
-
         {
           "@type": "Question",
           "name": "¿Qué necesito para empezar mi proyecto web en Castellón?",
@@ -173,11 +168,9 @@ export const schemaLocalCastellon = {
         }
       ]
     },
-
-    // 3. BreadcrumbList
     {
       "@type": "BreadcrumbList",
-      "@id": "https://astracodelab.com/diseno-web-castellon#Breadcrumb",
+      "@id": "https://astracodelab.com/diseno-web-castellon/#Breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -189,27 +182,25 @@ export const schemaLocalCastellon = {
           "@type": "ListItem",
           "position": 2,
           "name": "Diseño web Castellón",
-          "item": "https://astracodelab.com/diseno-web-castellon"
+          "item": "https://astracodelab.com/diseno-web-castellon/"
         }
       ]
     },
-
-    // 4. WebPage
     {
       "@type": "WebPage",
-      "@id": "https://astracodelab.com/diseno-web-castellon#WebPage",
-      "url": "https://astracodelab.com/diseno-web-castellon",
+      "@id": "https://astracodelab.com/diseno-web-castellon/#WebPage",
+      "url": "https://astracodelab.com/diseno-web-castellon/",
       "name": "Diseño Web en Castellón | Agencia Web Local - AstracodeLAB",
       "description": "Diseño y desarrollo web profesional en Castellón. Páginas web a medida para empresas y autónomos de Castellón. Presupuesto sin compromiso.",
       "inLanguage": "es-ES",
       "isPartOf": {
-        "@id": "https://astracodelab.com#WebSite"
+        "@id": "https://astracodelab.com/#WebSite"
       },
       "breadcrumb": {
-        "@id": "https://astracodelab.com/diseno-web-castellon#Breadcrumb"
+        "@id": "https://astracodelab.com/diseno-web-castellon/#Breadcrumb"
       },
       "about": {
-        "@id": "https://astracodelab.com/diseno-web-castellon#AstracodeLABCastellon"
+        "@id": "https://astracodelab.com/diseno-web-castellon/#AstracodeLABCastellon"
       }
     }
   ]

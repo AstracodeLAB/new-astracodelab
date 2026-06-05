@@ -1,27 +1,16 @@
-export const schemaLocalGranada= {
+export const schemaLocalGranada = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "ProfessionalService",
-      "@id": "https://astracodelab.com/diseno-web-granada#AstracodeLABGranada",
+      "@id": "https://astracodelab.com/diseno-web-granada/#AstracodeLABGranada",
       "name": "AstracodeLAB - Diseño Web en Granada",
       "alternateName": "Agencia de Diseño Web Granada",
       "description": "Agencia de diseño y desarrollo web en Granada. Creamos páginas web profesionales para empresas y autónomos de Granada y provincia. Diseño responsive, SEO local y soporte personalizado.",
-      "url": "https://astracodelab.com/diseno-web-granada",
+      "url": "https://astracodelab.com/diseno-web-granada/",
       "telephone": "+34-623-752-940",
       "priceRange": "700€",
-      "image": "https://astracodelab.com/granada.png",
-
-      // CRÍTICO para SEO Local
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Granada",
-        "addressRegion": "Andalucía",
-        "postalCode": "18001",
-        "addressCountry": "ES"
-      },
-
-      // Área de servicio específica
+      "image": "https://astracodelab.com/og_diseño_web_ desarrollo_web_granada.png",
       "areaServed": [
         {
           "@type": "City",
@@ -36,28 +25,24 @@ export const schemaLocalGranada= {
           "name": "Andalucía"
         }
       ],
-
-   
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "37.1882",
-        "longitude": "-3.6067"
-      },
-
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
           "opens": "09:30",
           "closes": "17:00"
         }
       ],
-
       "sameAs": [
         "https://www.linkedin.com/company/astracodelab",
         "https://www.instagram.com/astracodelab"
       ],
-
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Servicios de diseño web en Granada",
@@ -99,19 +84,18 @@ export const schemaLocalGranada= {
             }
           }
         ]
-      },
-
+      }
     },
     {
       "@type": "FAQPage",
-      "@id": "https://astracodelab.com/diseno-web-granada#FAQPage",
+      "@id": "https://astracodelab.com/diseno-web-granada/#FAQPage",
       "mainEntity": [
         {
           "@type": "Question",
           "name": "¿Ofrecéis servicios de diseño web en Granada?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí, AstracodeLAB ofrece servicios de diseño y desarrollo web en Granada. Aunque nuestras oficinas están ubicadas en Barcelona, Málaga y Castellón, trabajamos con clientes de toda Andalucía y España. Nos adaptamos a reuniones presenciales en Granada o videollamadas según tu preferencia."
+            "text": "Sí, AstracodeLAB ofrece servicios de diseño y desarrollo web en Granada. Aunque nuestras oficinas están ubicadas en Barcelona, Málaga y Castellón, trabajamos con clientes de toda Andalucía y España. Ofrecemos videollamadas para definir el proyecto según tus necesidades."
           }
         },
         {
@@ -154,7 +138,6 @@ export const schemaLocalGranada= {
             "text": "Sí, todas nuestras webs incluyen optimización SEO on-page básica."
           }
         },
-
         {
           "@type": "Question",
           "name": "¿Qué necesito para empezar mi proyecto web en Granada?",
@@ -165,11 +148,9 @@ export const schemaLocalGranada= {
         }
       ]
     },
-
-    // 3. BreadcrumbList
     {
       "@type": "BreadcrumbList",
-      "@id": "https://astracodelab.com/diseno-web-granada#Breadcrumb",
+      "@id": "https://astracodelab.com/diseno-web-granada/#Breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -181,27 +162,25 @@ export const schemaLocalGranada= {
           "@type": "ListItem",
           "position": 2,
           "name": "Diseño web Granada",
-          "item": "https://astracodelab.com/diseno-web-granada"
+          "item": "https://astracodelab.com/diseno-web-granada/"
         }
       ]
     },
-
-    // 4. WebPage
     {
       "@type": "WebPage",
-      "@id": "https://astracodelab.com/diseno-web-granada#WebPage",
-      "url": "https://astracodelab.com/diseno-web-granada",
+      "@id": "https://astracodelab.com/diseno-web-granada/#WebPage",
+      "url": "https://astracodelab.com/diseno-web-granada/",
       "name": "Diseño Web en Granada | Agencia Web Local - AstracodeLAB",
       "description": "Diseño y desarrollo web profesional en Granada. Páginas web a medida para empresas y autónomos de Granada. Presupuesto sin compromiso.",
       "inLanguage": "es-ES",
       "isPartOf": {
-        "@id": "https://astracodelab.com#WebSite"
+        "@id": "https://astracodelab.com/#WebSite"
       },
       "breadcrumb": {
-        "@id": "https://astracodelab.com/diseno-web-granada#Breadcrumb"
+        "@id": "https://astracodelab.com/diseno-web-granada/#Breadcrumb"
       },
       "about": {
-        "@id": "https://astracodelab.com/diseno-web-granada#AstracodeLABGranada"
+        "@id": "https://astracodelab.com/diseno-web-granada/#AstracodeLABGranada"
       }
     }
   ]

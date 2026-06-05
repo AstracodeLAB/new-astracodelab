@@ -3,25 +3,14 @@ export const schemaLocalMadrid = {
   "@graph": [
     {
       "@type": "ProfessionalService",
-      "@id": "https://astracodelab.com/diseno-web-madrid#AstracodeLABMadrid",
+      "@id": "https://astracodelab.com/diseno-web-madrid/#AstracodeLABMadrid",
       "name": "AstracodeLAB - Diseño Web en Madrid",
       "alternateName": "Agencia de Diseño Web Madrid",
       "description": "Agencia de diseño y desarrollo web en Madrid. Creamos páginas web profesionales para empresas y autónomos de Madrid y provincia. Diseño responsive, SEO local y soporte personalizado.",
-      "url": "https://astracodelab.com/diseno-web-madrid",
+      "url": "https://astracodelab.com/diseno-web-madrid/",
       "telephone": "+34-623-752-940",
       "priceRange": "700€",
       "image": "https://astracodelab.com/og_diseño_web_desarrollo_web_madrid.png",
-
-      // CRÍTICO para SEO Local
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Madrid",
-        "addressRegion": "Comunidad de Madrid",
-        "postalCode": "28001",
-        "addressCountry": "ES"
-      },
-
-      // Área de servicio específica
       "areaServed": [
         {
           "@type": "City",
@@ -36,28 +25,24 @@ export const schemaLocalMadrid = {
           "name": "Comunidad de Madrid"
         }
       ],
-
-   
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "40.4168",
-        "longitude": "-3.7038"
-      },
-
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
           "opens": "09:30",
           "closes": "17:00"
         }
       ],
-
       "sameAs": [
         "https://www.linkedin.com/company/astracodelab",
         "https://www.instagram.com/astracodelab"
       ],
-
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Servicios de diseño web en Madrid",
@@ -99,19 +84,18 @@ export const schemaLocalMadrid = {
             }
           }
         ]
-      },
-
+      }
     },
     {
       "@type": "FAQPage",
-      "@id": "https://astracodelab.com/diseno-web-madrid#FAQPage",
+      "@id": "https://astracodelab.com/diseno-web-madrid/#FAQPage",
       "mainEntity": [
         {
           "@type": "Question",
           "name": "¿Ofrecéis servicios de diseño web en Madrid?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí, AstracodeLAB ofrece servicios de diseño y desarrollo web en Madrid. Aunque nuestras oficinas están ubicadas en Barcelona, Málaga y Castellón, trabajamos con clientes de toda la Comunidad de Madrid y España. Nos adaptamos a reuniones presenciales en Madrid o videollamadas según tu preferencia."
+            "text": "Sí, AstracodeLAB ofrece servicios de diseño y desarrollo web en Madrid. Aunque nuestras oficinas están ubicadas en Barcelona, Málaga y Castellón, trabajamos con clientes de toda la Comunidad de Madrid y España. Ofrecemos videollamadas para definir el proyecto según tus necesidades."
           }
         },
         {
@@ -154,7 +138,6 @@ export const schemaLocalMadrid = {
             "text": "Sí, todas nuestras webs incluyen optimización SEO on-page básica."
           }
         },
-
         {
           "@type": "Question",
           "name": "¿Qué necesito para empezar mi proyecto web en Madrid?",
@@ -165,11 +148,9 @@ export const schemaLocalMadrid = {
         }
       ]
     },
-
-    // 3. BreadcrumbList
     {
       "@type": "BreadcrumbList",
-      "@id": "https://astracodelab.com/diseno-web-madrid#Breadcrumb",
+      "@id": "https://astracodelab.com/diseno-web-madrid/#Breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -181,27 +162,25 @@ export const schemaLocalMadrid = {
           "@type": "ListItem",
           "position": 2,
           "name": "Diseño web Madrid",
-          "item": "https://astracodelab.com/diseno-web-madrid"
+          "item": "https://astracodelab.com/diseno-web-madrid/"
         }
       ]
     },
-
-    // 4. WebPage
     {
       "@type": "WebPage",
-      "@id": "https://astracodelab.com/diseno-web-madrid#WebPage",
-      "url": "https://astracodelab.com/diseno-web-madrid",
+      "@id": "https://astracodelab.com/diseno-web-madrid/#WebPage",
+      "url": "https://astracodelab.com/diseno-web-madrid/",
       "name": "Diseño Web en Madrid | Agencia Web Local - AstracodeLAB",
       "description": "Diseño y desarrollo web profesional en Madrid. Páginas web a medida para empresas y autónomos de Madrid. Presupuesto sin compromiso.",
       "inLanguage": "es-ES",
       "isPartOf": {
-        "@id": "https://astracodelab.com#WebSite"
+        "@id": "https://astracodelab.com/#WebSite"
       },
       "breadcrumb": {
-        "@id": "https://astracodelab.com/diseno-web-madrid#Breadcrumb"
+        "@id": "https://astracodelab.com/diseno-web-madrid/#Breadcrumb"
       },
       "about": {
-        "@id": "https://astracodelab.com/diseno-web-madrid#AstracodeLABMadrid"
+        "@id": "https://astracodelab.com/diseno-web-madrid/#AstracodeLABMadrid"
       }
     }
   ]

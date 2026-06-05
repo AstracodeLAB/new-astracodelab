@@ -1,10 +1,10 @@
 # Redirecciones de URLs antiguas a nuevas rutas de servicios
-/portfolios /servicios/portfolios-web/ 301
-/portfolios/ /servicios/portfolios-web/ 301
-/corporativo /servicios/sitios-web-corporativos/ 301
-/corporativo/ /servicios/sitios-web-corporativos/ 301
-/reservas /servicios/web-reservas-de-citas-online/ 301
-/reservas/ /servicios/web-reservas-de-citas-online/ 301
+/portfolios /servicios/diseno-web/ 301
+/portfolios/ /servicios/diseno-web/ 301
+/corporativo /servicios/web-corporativa/ 301
+/corporativo/ /servicios/web-corporativa/ 301
+/reservas /servicios/sistemas-de-reservas/ 301
+/reservas/ /servicios/sistemas-de-reservas/ 301
 /landing /servicios/landing-page/ 301
 /landing/ /servicios/landing-page/ 301
 
@@ -12,10 +12,10 @@
 /sent /contacto?success=true 301
 
 # Redirecciones para corregir URLs sin prefijo /servicios/ (errores 5xx y 404)
-/sitios-web-corporativos /servicios/sitios-web-corporativos/ 301
-/sitios-web-corporativos/ /servicios/sitios-web-corporativos/ 301
-/web-reservas-de-citas-online /servicios/web-reservas-de-citas-online/ 301
-/web-reservas-de-citas-online/ /servicios/web-reservas-de-citas-online/ 301
+/sitios-web-corporativos /servicios/web-corporativa/ 301
+/sitios-web-corporativos/ /servicios/web-corporativa/ 301
+/web-reservas-de-citas-online /servicios/sistemas-de-reservas/ 301
+/web-reservas-de-citas-online/ /servicios/sistemas-de-reservas/ 301
 
 # Redirecciones para URLs antiguas de políticas
 /politica-de-cookies /privacy-cookies/ 301
@@ -41,6 +41,9 @@
 /servicios/tienda-online /servicios/tienda-online/ 301
 /servicios/cartas-digitales-restaurantes /servicios/cartas-digitales-restaurantes/ 301
 /servicios/accesibilidad-web /servicios/accesibilidad-web/ 301
-/servicios/portfolios-web /servicios/portfolios-web/ 301
-/servicios/sitios-web-corporativos /servicios/sitios-web-corporativos/ 301
-/servicios/web-reservas-de-citas-online /servicios/web-reservas-de-citas-online/ 301
+/servicios/portfolios-web /servicios/diseno-web/ 301!
+/servicios/portfolios-web/ /servicios/diseno-web/ 301!
+/servicios/sitios-web-corporativos /servicios/web-corporativa/ 301!
+/servicios/sitios-web-corporativos/ /servicios/web-corporativa/ 301!
+/servicios/web-reservas-de-citas-online /servicios/sistemas-de-reservas/ 301!
+/servicios/web-reservas-de-citas-online/ /servicios/sistemas-de-reservas/ 301!

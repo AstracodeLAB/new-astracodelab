@@ -3,25 +3,14 @@ export const schemaLocalAlicante = {
   "@graph": [
     {
       "@type": "ProfessionalService",
-      "@id": "https://astracodelab.com/diseno-web-alicante#AstracodeLABAlicante",
+      "@id": "https://astracodelab.com/diseno-web-alicante/#AstracodeLABAlicante",
       "name": "AstracodeLAB - Diseño Web en Alicante",
       "alternateName": "Agencia de Diseño Web Alicante",
       "description": "Agencia de diseño y desarrollo web en Alicante. Creamos páginas web profesionales para empresas y autónomos de Alicante y provincia. Diseño responsive, SEO local y soporte personalizado.",
-      "url": "https://astracodelab.com/diseno-web-alicante",
+      "url": "https://astracodelab.com/diseno-web-alicante/",
       "telephone": "+34-623-752-940",
       "priceRange": "700€",
       "image": "https://astracodelab.com/og_diseño_web_desarrollo_web_alicante.png",
-
-      // CRÍTICO para SEO Local
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Alicante",
-        "addressRegion": "Comunidad Valenciana",
-        "postalCode": "03001",
-        "addressCountry": "ES"
-      },
-
-      // Área de servicio específica
       "areaServed": [
         {
           "@type": "City",
@@ -36,28 +25,24 @@ export const schemaLocalAlicante = {
           "name": "Comunidad Valenciana"
         }
       ],
-
-   
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "38.3452", // Coordenadas de Alicante
-        "longitude": "-0.4815"
-      },
-
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
           "opens": "09:30",
           "closes": "17:00"
         }
       ],
-
       "sameAs": [
         "https://www.linkedin.com/company/astracodelab",
         "https://www.instagram.com/astracodelab"
       ],
-
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Servicios de diseño web en Alicante",
@@ -99,19 +84,18 @@ export const schemaLocalAlicante = {
             }
           }
         ]
-      },
-
+      }
     },
     {
       "@type": "FAQPage",
-      "@id": "https://astracodelab.com/diseno-web-alicante#FAQPage",
+      "@id": "https://astracodelab.com/diseno-web-alicante/#FAQPage",
       "mainEntity": [
         {
           "@type": "Question",
           "name": "¿Ofrecéis servicios de diseño web en Alicante?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí, AstracodeLAB ofrece servicios de diseño y desarrollo web en Alicante. Aunque nuestras oficinas están ubicadas en Barcelona, Málaga y Castellón, trabajamos con clientes de toda la Comunidad Valenciana y España. Nos adaptamos a reuniones presenciales en Alicante o videollamadas según tu preferencia."
+            "text": "Sí, AstracodeLAB ofrece servicios de diseño y desarrollo web en Alicante. Aunque nuestras oficinas están ubicadas en Barcelona, Málaga y Castellón, trabajamos con clientes de toda la Comunidad Valenciana y España. Ofrecemos videollamadas para definir el proyecto según tus necesidades."
           }
         },
         {
@@ -154,7 +138,6 @@ export const schemaLocalAlicante = {
             "text": "Sí, todas nuestras webs incluyen optimización SEO on-page básica."
           }
         },
-
         {
           "@type": "Question",
           "name": "¿Qué necesito para empezar mi proyecto web en Alicante?",
@@ -165,11 +148,9 @@ export const schemaLocalAlicante = {
         }
       ]
     },
-
-    // 3. BreadcrumbList
     {
       "@type": "BreadcrumbList",
-      "@id": "https://astracodelab.com/diseno-web-alicante#Breadcrumb",
+      "@id": "https://astracodelab.com/diseno-web-alicante/#Breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -181,27 +162,25 @@ export const schemaLocalAlicante = {
           "@type": "ListItem",
           "position": 2,
           "name": "Diseño web Alicante",
-          "item": "https://astracodelab.com/diseno-web-alicante"
+          "item": "https://astracodelab.com/diseno-web-alicante/"
         }
       ]
     },
-
-    // 4. WebPage
     {
       "@type": "WebPage",
-      "@id": "https://astracodelab.com/diseno-web-alicante#WebPage",
-      "url": "https://astracodelab.com/diseno-web-alicante",
+      "@id": "https://astracodelab.com/diseno-web-alicante/#WebPage",
+      "url": "https://astracodelab.com/diseno-web-alicante/",
       "name": "Diseño Web en Alicante | Agencia Web Local - AstracodeLAB",
       "description": "Diseño y desarrollo web profesional en Alicante. Páginas web a medida para empresas y autónomos de Alicante. Presupuesto sin compromiso.",
       "inLanguage": "es-ES",
       "isPartOf": {
-        "@id": "https://astracodelab.com#WebSite"
+        "@id": "https://astracodelab.com/#WebSite"
       },
       "breadcrumb": {
-        "@id": "https://astracodelab.com/diseno-web-alicante#Breadcrumb"
+        "@id": "https://astracodelab.com/diseno-web-alicante/#Breadcrumb"
       },
       "about": {
-        "@id": "https://astracodelab.com/diseno-web-alicante#AstracodeLABAlicante"
+        "@id": "https://astracodelab.com/diseno-web-alicante/#AstracodeLABAlicante"
       }
     }
   ]

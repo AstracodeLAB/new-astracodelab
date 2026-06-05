@@ -3,25 +3,14 @@ export const schemaLocalValencia = {
   "@graph": [
     {
       "@type": "ProfessionalService",
-      "@id": "https://astracodelab.com/diseno-web-valencia#AstracodeLABValencia",
+      "@id": "https://astracodelab.com/diseno-web-valencia/#AstracodeLABValencia",
       "name": "AstracodeLAB - Diseño Web en Valencia",
       "alternateName": "Agencia de Diseño Web Valencia",
       "description": "Agencia de diseño y desarrollo web en Valencia. Creamos páginas web profesionales para empresas y autónomos de Valencia y provincia. Diseño responsive, SEO local y soporte personalizado.",
-      "url": "https://astracodelab.com/diseno-web-valencia",
+      "url": "https://astracodelab.com/diseno-web-valencia/",
       "telephone": "+34-623-752-940",
       "priceRange": "700€",
       "image": "https://astracodelab.com/og_diseño_web_desarrollo_web_valencia.png",
-
-      // CRÍTICO para SEO Local
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Valencia",
-        "addressRegion": "Comunidad Valenciana",
-        "postalCode": "46001",
-        "addressCountry": "ES"
-      },
-
-      // Área de servicio específica
       "areaServed": [
         {
           "@type": "City",
@@ -36,28 +25,24 @@ export const schemaLocalValencia = {
           "name": "Comunidad Valenciana"
         }
       ],
-
-   
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "39.4699", // Coordenadas de Valencia
-        "longitude": "-0.3763"
-      },
-
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
           "opens": "09:30",
           "closes": "17:00"
         }
       ],
-
       "sameAs": [
         "https://www.linkedin.com/company/astracodelab",
         "https://www.instagram.com/astracodelab"
       ],
-
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Servicios de diseño web en Valencia",
@@ -99,19 +84,18 @@ export const schemaLocalValencia = {
             }
           }
         ]
-      },
-
+      }
     },
     {
       "@type": "FAQPage",
-      "@id": "https://astracodelab.com/diseno-web-valencia#FAQPage",
+      "@id": "https://astracodelab.com/diseno-web-valencia/#FAQPage",
       "mainEntity": [
         {
           "@type": "Question",
           "name": "¿Ofrecéis servicios de diseño web en Valencia?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí, AstracodeLAB ofrece servicios de diseño y desarrollo web en Valencia. Aunque nuestras oficinas están ubicadas en Barcelona, Málaga y Castellón, trabajamos con clientes de toda la Comunidad Valenciana y España. Nos adaptamos a reuniones presenciales en Valencia o videollamadas según tu preferencia."
+            "text": "Sí, AstracodeLAB ofrece servicios de diseño y desarrollo web en Valencia. Aunque nuestras oficinas están ubicadas en Barcelona, Málaga y Castellón, trabajamos con clientes de toda la Comunidad Valenciana y España. Ofrecemos videollamadas para definir el proyecto según tus necesidades."
           }
         },
         {
@@ -154,7 +138,6 @@ export const schemaLocalValencia = {
             "text": "Sí, todas nuestras webs incluyen optimización SEO on-page básica."
           }
         },
-
         {
           "@type": "Question",
           "name": "¿Qué necesito para empezar mi proyecto web en Valencia?",
@@ -165,11 +148,9 @@ export const schemaLocalValencia = {
         }
       ]
     },
-
-    // 3. BreadcrumbList
     {
       "@type": "BreadcrumbList",
-      "@id": "https://astracodelab.com/diseno-web-valencia#Breadcrumb",
+      "@id": "https://astracodelab.com/diseno-web-valencia/#Breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -181,27 +162,25 @@ export const schemaLocalValencia = {
           "@type": "ListItem",
           "position": 2,
           "name": "Diseño web Valencia",
-          "item": "https://astracodelab.com/diseno-web-valencia"
+          "item": "https://astracodelab.com/diseno-web-valencia/"
         }
       ]
     },
-
-    // 4. WebPage
     {
       "@type": "WebPage",
-      "@id": "https://astracodelab.com/diseno-web-valencia#WebPage",
-      "url": "https://astracodelab.com/diseno-web-valencia",
+      "@id": "https://astracodelab.com/diseno-web-valencia/#WebPage",
+      "url": "https://astracodelab.com/diseno-web-valencia/",
       "name": "Diseño Web en Valencia | Agencia Web Local - AstracodeLAB",
       "description": "Diseño y desarrollo web profesional en Valencia. Páginas web a medida para empresas y autónomos de Valencia. Presupuesto sin compromiso.",
       "inLanguage": "es-ES",
       "isPartOf": {
-        "@id": "https://astracodelab.com#WebSite"
+        "@id": "https://astracodelab.com/#WebSite"
       },
       "breadcrumb": {
-        "@id": "https://astracodelab.com/diseno-web-valencia#Breadcrumb"
+        "@id": "https://astracodelab.com/diseno-web-valencia/#Breadcrumb"
       },
       "about": {
-        "@id": "https://astracodelab.com/diseno-web-valencia#AstracodeLABValencia"
+        "@id": "https://astracodelab.com/diseno-web-valencia/#AstracodeLABValencia"
       }
     }
   ]

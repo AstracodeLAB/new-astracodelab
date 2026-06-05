@@ -1,27 +1,16 @@
-export const schemaLocalOviedo= {
+export const schemaLocalOviedo = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "ProfessionalService",
-      "@id": "https://astracodelab.com/diseno-web-oviedo#AstracodeLABOviedo",
+      "@id": "https://astracodelab.com/diseno-web-oviedo/#AstracodeLABOviedo",
       "name": "AstracodeLAB - Diseño Web en Oviedo",
       "alternateName": "Agencia de Diseño Web Oviedo",
       "description": "Agencia de diseño y desarrollo web en Oviedo. Creamos páginas web profesionales para empresas y autónomos de Oviedo y provincia. Diseño responsive, SEO local y soporte personalizado.",
-      "url": "https://astracodelab.com/diseno-web-oviedo",
+      "url": "https://astracodelab.com/diseno-web-oviedo/",
       "telephone": "+34-623-752-940",
       "priceRange": "700€",
-      "image": "https://astracodelab.com/oviedo.png",
-
-      // CRÍTICO para SEO Local
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Oviedo",
-        "addressRegion": "Asturias",
-        "postalCode": "33001",
-        "addressCountry": "ES"
-      },
-
-      // Área de servicio específica
+      "image": "https://astracodelab.com/og_diseño_web_ desarrollo_web_oviedo.png",
       "areaServed": [
         {
           "@type": "City",
@@ -36,28 +25,24 @@ export const schemaLocalOviedo= {
           "name": "Asturias"
         }
       ],
-
-   
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "43.3603",
-        "longitude": "-5.8448"
-      },
-
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
           "opens": "09:30",
           "closes": "17:00"
         }
       ],
-
       "sameAs": [
         "https://www.linkedin.com/company/astracodelab",
         "https://www.instagram.com/astracodelab"
       ],
-
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Servicios de diseño web en Oviedo",
@@ -99,19 +84,18 @@ export const schemaLocalOviedo= {
             }
           }
         ]
-      },
-
+      }
     },
     {
       "@type": "FAQPage",
-      "@id": "https://astracodelab.com/diseno-web-oviedo#FAQPage",
+      "@id": "https://astracodelab.com/diseno-web-oviedo/#FAQPage",
       "mainEntity": [
         {
           "@type": "Question",
           "name": "¿Ofrecéis servicios de diseño web en Oviedo?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí, AstracodeLAB ofrece servicios de diseño y desarrollo web en Oviedo. Aunque nuestras oficinas están ubicadas en Barcelona, Málaga y Castellón, trabajamos con clientes de toda Asturias y España. Nos adaptamos a reuniones presenciales en Oviedo o videollamadas según tu preferencia."
+            "text": "Sí, AstracodeLAB ofrece servicios de diseño y desarrollo web en Oviedo. Aunque nuestras oficinas están ubicadas en Barcelona, Málaga y Castellón, trabajamos con clientes de toda Asturias y España. Ofrecemos videollamadas para definir el proyecto según tus necesidades."
           }
         },
         {
@@ -154,7 +138,6 @@ export const schemaLocalOviedo= {
             "text": "Sí, todas nuestras webs incluyen optimización SEO on-page básica."
           }
         },
-
         {
           "@type": "Question",
           "name": "¿Qué necesito para empezar mi proyecto web en Oviedo?",
@@ -165,11 +148,9 @@ export const schemaLocalOviedo= {
         }
       ]
     },
-
-    // 3. BreadcrumbList
     {
       "@type": "BreadcrumbList",
-      "@id": "https://astracodelab.com/diseno-web-oviedo#Breadcrumb",
+      "@id": "https://astracodelab.com/diseno-web-oviedo/#Breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -181,27 +162,25 @@ export const schemaLocalOviedo= {
           "@type": "ListItem",
           "position": 2,
           "name": "Diseño web Oviedo",
-          "item": "https://astracodelab.com/diseno-web-oviedo"
+          "item": "https://astracodelab.com/diseno-web-oviedo/"
         }
       ]
     },
-
-    // 4. WebPage
     {
       "@type": "WebPage",
-      "@id": "https://astracodelab.com/diseno-web-oviedo#WebPage",
-      "url": "https://astracodelab.com/diseno-web-oviedo",
+      "@id": "https://astracodelab.com/diseno-web-oviedo/#WebPage",
+      "url": "https://astracodelab.com/diseno-web-oviedo/",
       "name": "Diseño Web en Oviedo | Agencia Web Local - AstracodeLAB",
       "description": "Diseño y desarrollo web profesional en Oviedo. Páginas web a medida para empresas y autónomos de Oviedo. Presupuesto sin compromiso.",
       "inLanguage": "es-ES",
       "isPartOf": {
-        "@id": "https://astracodelab.com#WebSite"
+        "@id": "https://astracodelab.com/#WebSite"
       },
       "breadcrumb": {
-        "@id": "https://astracodelab.com/diseno-web-oviedo#Breadcrumb"
+        "@id": "https://astracodelab.com/diseno-web-oviedo/#Breadcrumb"
       },
       "about": {
-        "@id": "https://astracodelab.com/diseno-web-oviedo#AstracodeLABOviedo"
+        "@id": "https://astracodelab.com/diseno-web-oviedo/#AstracodeLABOviedo"
       }
     }
   ]
