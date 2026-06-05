@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import '../../styles/hosting-dominio.scss';
 import HeroSecondary from '../../layouts/components/HeroSecondary.astro';
 import heroImgHosting from '../../images/hosting.svg';
 import TitleSecondary from '../../layouts/components/Titles/TitleSecondary.astro';
@@ -29,7 +30,7 @@ const robots = 'index, follow';
       image={heroImgHosting}
       alt='Ilustración de hosting y dominio web con servidor conectado a la nube y laptop mostrando una dirección web.'
     />
-    <div class='proceso'>
+    <div class='hosting-process'>
       <TitleSecondary
         text='Nuestro proceso para gestionar tu hosting y dominio web'
         description='En AstracodeLAB, te liberamos de las complejidades técnicas del hosting y dominio. Sabemos que estas cuestiones técnicas pueden quitarte tiempo o generar dudas. Por eso lo gestionamos de forma integral, para que puedas centrarte en tu negocio sin preocuparte por la parte técnica.'
@@ -60,7 +61,7 @@ const robots = 'index, follow';
           <SimpleNumber
             number={5}
             title='Soporte técnico continuo: '
-            text='stamos disponibles para resolver cualquier duda o incidencia relacionada con tu hosting y dominio, asegurando que tu web esté siempre operativa.'
+            text='Estamos disponibles para resolver cualquier duda o incidencia relacionada con tu hosting y dominio, asegurando que tu web esté siempre operativa.'
           />
         </div>
       </article>
