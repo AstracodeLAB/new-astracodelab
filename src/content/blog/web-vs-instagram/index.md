@@ -1,4 +1,4 @@
----
+﻿---
 title: "¿Necesito una web si ya tengo Instagram?"
 excerpt: "¿Es suficiente con Instagram para tu negocio? Aunque es ideal para conectar, una web te ofrece visibilidad en Google, un canal de venta directo y la capacidad de construir un activo a largo plazo. Te contamos cuándo y por qué dar el salto."
 cover: "./blog_web_vs_insta.jpg"
@@ -8,23 +8,7 @@ date: 2026-02-18
 
 
 
-**Índice de la Guía:**
 
- [El mito de "Instagram es suficiente" para una pyme](#el-mito-de-instagram-es-suficiente-para-una-pyme)
-
- [La diferencia entre ser visible y ser dueño de tu negocio](#la-diferencia-entre-ser-visible-y-ser-dueño-de-tu-negocio)
-
- [Comparativa: Instagram vs. Página Web propia](#comparativa-instagram-vs-página-web-propia)
-
- [Por qué necesitas una web aunque seas un experto en redes sociales](#por-qué-necesitas-una-web-aunque-seas-un-experto-en-redes-sociales)
-
- [Errores comunes de los negocios que solo usan redes sociales](#errores-comunes-de-los-negocios-que-solo-usan-redes-sociales)
-
- [Cómo conviven Instagram y tu página web](#cómo-conviven-instagram-y-tu-página-web)
-
- [Preguntas Frecuentes (FAQ)](#preguntas-frecuentes-faq)
-
- [El siguiente paso para tu negocio](#el-siguiente-paso-para-tu-negocio)
 
 ## El mito de "Instagram es suficiente" para una pyme
 
@@ -133,3 +117,4 @@ En Astracodelab ayudamos a pymes y autónomos a dar el salto de "tener redes" a 
 
 [Contacta con nosotros para una consultoría gratuita](/contacto/)
 </div>
+
