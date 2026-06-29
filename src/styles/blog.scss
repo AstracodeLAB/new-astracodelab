@@ -677,25 +677,31 @@
     gap: 0.625rem;
   }
 
-  a {
+  a,
+  &__copy {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     width: 2.625rem;
     height: 2.625rem;
     color: $blue-primary;
+    font: inherit;
     text-decoration: none;
     background: $blue-secondary;
+    border: 0;
+    cursor: pointer;
     border-radius: 50%;
     transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
 
-    &:hover {
+    &:hover,
+    &[data-copied='true'] {
       color: #fff;
       background: $gradientButton;
       transform: translateY(-0.125rem);
     }
   }
 }
+
 
 .content {
   max-width: 46.25rem;

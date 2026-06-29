@@ -45,12 +45,8 @@ const tocItems = [...(post.body ?? '').matchAll(/^##\s+(.+)$/gm)].map((match) =>
   };
 });
 
-const encodedPermalink = encodeURIComponent(permalink);
-const encodedTitle = encodeURIComponent(post.data.title);
 const shareLinks = {
-  x: `https://twitter.com/intent/tweet?url=${encodedPermalink}&text=${encodedTitle}`,
-  linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedPermalink}`,
-  link: permalink,
+  linkedin: 'https://www.linkedin.com/company/astracodelab/',
 };
 const blogSchema = {
   '@context': 'https://schema.org',
@@ -168,11 +164,6 @@ const blogSchema = {
           <div class='post-share'>
             <div class='post-toc__label'>Compartir</div>
             <div class='post-share__links'>
-              <a href={shareLinks.x} target='_blank' rel='noopener noreferrer' aria-label='Compartir en X'>
-                <svg viewBox='0 0 24 24' width='17' height='17' fill='currentColor' aria-hidden='true'>
-                  <path d='M18.9 2H22l-7.5 8.6L23 22h-6.8l-5.3-6.9L4.8 22H1.7l8-9.2L1 2h6.9l4.8 6.3L18.9 2zm-1.2 18h1.9L7.4 4H5.4l12.3 16z'></path>
-                </svg>
-              </a>
               <a href={shareLinks.linkedin} target='_blank' rel='noopener noreferrer' aria-label='Compartir en LinkedIn'>
                 <svg viewBox='0 0 24 24' width='17' height='17' fill='none' stroke='currentColor' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'>
                   <path d='M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z'></path>
@@ -180,17 +171,45 @@ const blogSchema = {
                   <circle cx='4' cy='4' r='2'></circle>
                 </svg>
               </a>
-              <a href={shareLinks.link} aria-label='Copiar enlace del artículo'>
+              <button type='button' class='post-share__copy' data-copy-link={permalink} aria-label='Copiar enlace del articulo'>
                 <svg viewBox='0 0 24 24' width='17' height='17' fill='none' stroke='currentColor' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'>
                   <path d='M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7'></path>
                   <path d='M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7'></path>
                 </svg>
-              </a>
+              </button>
             </div>
           </div>
         </aside>
       </div>
     </div>
   </main>
+
+  <script>
+    const copyButton = document.querySelector('[data-copy-link]');
+
+    copyButton?.addEventListener('click', async () => {
+      const link = copyButton.dataset.copyLink;
+      if (!link) return;
+
+      try {
+        await navigator.clipboard.writeText(link);
+      } catch {
+        const textarea = document.createElement('textarea');
+        textarea.value = link;
+        textarea.setAttribute('readonly', '');
+        textarea.style.position = 'fixed';
+        textarea.style.opacity = '0';
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        textarea.remove();
+      }
+
+      copyButton.dataset.copied = 'true';
+      window.setTimeout(() => {
+        delete copyButton.dataset.copied;
+      }, 1800);
+    });
+  </script>
 </Layout>
 
