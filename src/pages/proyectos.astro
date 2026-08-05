@@ -17,7 +17,15 @@ import alexisMobile  from '../images/mockups/scroll-alexis-mobile.webp';
 import qjubilosoDesktop from '../images/mockups/scroll-qjubiloso-desktop.webp';
 import qjubilosoTablet  from '../images/mockups/scroll-qjubiloso-tablet.webp';
 import qjubilosoMobile  from '../images/mockups/scroll-qjubiloso-mobile.webp';
- 
+
+import sodepazDesktop from '../images/mockups/scroll-sodepaz-desktop.png';
+import sodepazTablet from '../images/mockups/scroll-sodepaz-tablet.webp';
+import sodepazMobile from '../images/mockups/scroll-sodepaz-mobile.png';
+
+import wildcaresDesktop from '../images/mockups/scroll-wildcaressp-desktop.jpg';
+import wildcaresTablet from '../images/mockups/scroll-wildcaressp-tablet.jpg';
+import wildcaresMobile from '../images/mockups/scroll-wildcaressp-mobile.png';
+
  const title = 'Proyectos · AstracodeLAB';
  const description =
    'Webs que hemos construido para clientes reales. Cada proyecto refleja el trabajo de nuestro equipo en Barcelona, Málaga y Valencia.';
@@ -25,6 +33,36 @@ import qjubilosoMobile  from '../images/mockups/scroll-qjubiloso-mobile.webp';
  const robots = 'index, follow';
   
  const projects = [
+   {
+     id: 'sodepaz',
+     name: 'SODePAZ',
+     sector: 'ONG · Madrid',
+     type: 'Web para ONG',
+     url: 'sodepaz.org',
+     services: ['Diseño web', 'Tienda online', 'Blog de noticias', 'Donaciones'],
+     desc: 'Web para SODePAZ, ONG de cooperación internacional con los pueblos del Sur desde 1987. Blog de actualidad, tienda de comercio justo y donaciones integradas.',
+
+     img: {
+      desktop: sodepazDesktop.src,
+      tablet:  sodepazTablet.src,
+      mobile:  sodepazMobile.src,
+     },
+   },
+   {
+     id: 'wildcares',
+     name: 'WildCares SP',
+     sector: 'ONG · Málaga',
+     type: 'Web para ONG',
+     url: 'wildcaressp.org',
+     services: ['Diseño web', 'Landing page', 'Donaciones', 'Voluntariado'],
+     desc: 'Web para WildCares SP, asociación en Málaga dedicada al rescate de aves heridas y la restauración de hábitats. Guía de actuación ante un ave herida, donaciones y voluntariado.',
+
+     img: {
+      desktop: wildcaresDesktop.src,
+      tablet:  wildcaresTablet.src,
+      mobile:  wildcaresMobile.src,
+     },
+   },
    {
      id: 'lliuree',
      name: 'Lliuree',
@@ -87,6 +125,7 @@ import qjubilosoMobile  from '../images/mockups/scroll-qjubiloso-mobile.webp';
       mobile:  qjubilosoMobile.src,
      },
    },
+  
  ];
  ---
   
