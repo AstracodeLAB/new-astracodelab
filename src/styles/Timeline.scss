@@ -184,8 +184,9 @@
   &__number {
     z-index: 10;
     flex-shrink: 0;
-    background: $blue-dark;
-    color: white;
+    background: $gradientButton;
+    color: #fff;
+    box-shadow: 0 10px 26px rgba(100, 30, 255, 0.32);
     border-radius: 50%;
     width: 1.75rem;
     height: 1.75rem;

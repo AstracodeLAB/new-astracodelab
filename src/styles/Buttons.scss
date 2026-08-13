@@ -3,10 +3,11 @@
 
 //ejemplo de uso en un componente
 //<Buttons className="btnPrimaryLight" href="/" >Ir a contacto</Buttons>
-//BOTÓN FONDO CLARO className="btnPrimaryLight"
-//BOTÓN FONDO OSCURO className="btnPrimaryDark"
-//BOTÓN fondo plano oscuro className="btnSecondaryDark"
-//BOTÓN fondo plano claro className="btnSecondaryLight"
+//BOTÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã¢â‚¬Å“N FONDO CLARO className="btnPrimaryLight"
+//BOTÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã¢â‚¬Å“N FONDO OSCURO className="btnPrimaryDark"
+//BOTÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã¢â‚¬Å“N fondo plano oscuro className="btnSecondaryDark"
+//BOTÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã¢â‚¬Å“N fondo plano claro className="btnSecondaryLight"
+//BOTÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã¢â‚¬Å“N degradado con sombra (igual al CTA de PricingPlans) className="btnPricingCta"
 //LINK className="linkPrimary"
 //LINK ARROW className="linkSecondary"
 //LINK services className="linkServicesHero"
@@ -29,7 +30,7 @@
   line-height: map.get($Button-mobile, 'line-height');
   font-weight: map.get($Button-mobile, 'font-weight');
 
-  /* Gradiente en el borde y fondo sólido */
+  /* Gradiente en el borde y fondo sÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â³lido */
   background-image: linear-gradient($blue-secondary, $blue-secondary),
     // fondo interno
     $gradientButton; // borde con degradado
@@ -76,6 +77,120 @@
   }
 }
 
+//BOTON degradado con sombra, igual al CTA de PricingPlans (.pricing-plan__cta)
+.btnPricingCta {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: inline-flex;
+  width: auto;
+  margin-top: 0.5rem;
+  padding: 0.813rem 1.25rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-family: $font-primary;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background: $gradientButton;
+  box-shadow: 0 8px 24px rgba(100, 30, 255, 0.28);
+  transition:
+    color 0.25s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+    background:
+      radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0) 45%),
+      $green;
+    opacity: 0;
+    transform: scaleX(0.72);
+    transform-origin: center;
+    transition:
+      opacity 0.25s ease,
+      transform 0.25s ease;
+  }
+
+  &:hover {
+    color: $blue-dark;
+    background: $green;
+    transform: translateY(-2px) scale(1.025);
+    box-shadow: 0 14px 32px rgba($green, 0.34);
+    animation: btnPricingCtaPulse 0.55s ease;
+  }
+
+  &:hover::before {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes btnPricingCtaPulse {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+
+  45% {
+    transform: translateY(1px) scale(0.97);
+  }
+
+  100% {
+    transform: translateY(-2px) scale(1.025);
+  }
+}
+
+.btnHeroSecondary {
+  display: inline-flex;
+  width: auto;
+  min-height: 2.75rem;
+  padding: 0.625rem 1.375rem;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgba(100, 30, 255, 0.18);
+  border-radius: 999px;
+  color: $blue-primary;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 8px 22px rgba(100, 30, 255, 0.08);
+  cursor: pointer;
+  font-family: $font-primary;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-align: center;
+  text-decoration: none;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
+  &:hover {
+    color: $blue-dark;
+    border-color: rgba(100, 30, 255, 0.28);
+    background: $blue-secondary;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 26px rgba(100, 30, 255, 0.14);
+  }
+
+  &:active {
+    transform: translateY(0) scale(0.97);
+    box-shadow: 0 6px 14px rgba(100, 30, 255, 0.1);
+  }
+}
 //BOTON BANNER CTA
 .btnPrimaryBanner {
   display: inline-flex;
@@ -388,8 +503,8 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between; // 🔑 separa texto y flecha a extremos
-  width: 100%; // 🔑 hace que el link ocupe el ancho del div padre
+  justify-content: space-between; // ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â°ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¸ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚ÂÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¹Ã…â€œ separa texto y flecha a extremos
+  width: 100%; // ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â°ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¸ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚ÂÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¹Ã…â€œ hace que el link ocupe el ancho del div padre
   padding: 0.625rem 0;
   font-family: $font-primary;
   font-size: map.get($SmallText-mobile, 'font-size');

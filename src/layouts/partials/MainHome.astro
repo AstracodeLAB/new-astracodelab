@@ -2,14 +2,11 @@
 import { Image } from 'astro:assets';
 import PricingPlans from '../components/PricingPlans.astro';
 import CardPregunta from '../components/Cards/CardPregunta.astro';
-import imgTimeLine from '../../images/backgroundImageSectionWhy.jpg';
 import Hero from '../components/Hero.astro';
 import Services from '../components/Services.astro';
 import TitleSecondary from '../components/Titles/TitleSecondary.astro';
 import TimelineWrapper from '../components/Timeline/TimelineWrapper.astro';
 import PasoProceso from '../components/Timeline/PasoProceso.astro';
-import BannerImg from '../components/Banners/BannerImg.astro';
-import TextContent from '../components/TextContent.astro';
 import BannerCta from '../components/Banners/BannerCta.astro';
 import TestimonialGrid from '../components/TestimonialGrid.astro';
 import WorkSection from '../components/WorkSection.astro';
@@ -77,25 +74,19 @@ import { schemaMainHome } from '../../data/schemas/main-home.js';
   </section>
 
   <section class='why-choose-us-section'>
-    <div class='why-choose-us-header'>
-      <TitleSecondary text='¿Por qué elegir AstracodeLAB?' />
-    </div>
+    <div class='why-choose-us-glow' aria-hidden='true'></div>
+    <div class='why-choose-us-container'>
+      <header class='why-choose-us-header'>
+        <div>
+          <TitleSecondary text='¿Por qué elegir AstracodeLAB?' />
+        </div>
+        <p class='why-choose-us-lead'>
+          En <strong>AstracodeLAB</strong> ayudamos a negocios, profesionales y proyectos creativos a convertir su presencia online en una herramienta real de confianza y captación. Reducimos la incertidumbre del proceso, te acompañamos en cada decisión y construimos una web útil, clara y preparada para generar oportunidades, no solo una página bonita.
+        </p>
+      </header>
 
-    <BannerImg
-      imagen={imgTimeLine.src}
-      descripcion='En <strong>AstracodeLAB </strong>ayudamos a negocios, profesionales y proyectos creativos a convertir su presencia online en una herramienta real de confianza y captación. Reducimos la incertidumbre del proceso, te acompañamos en cada decisión y construimos una web útil, clara y preparada para generar oportunidades, no solo una página bonita.'
-      alt='Imagen de diseño web'
-    />
-
-    <section class='why-choose-us-content'>
-      <TextContent
-        titulo='Webs Personalizadas y Estratégicas'
-        descripcion='  No partimos de plantillas genéricas, sino de tus objetivos, tu marca y la forma en la que tus clientes necesitan encontrarte, entenderte y contactar contigo.'
-        descripcionSec='Optimizamos y estructuramos tu contenido para SEO y configuramos un diseño responsive para que tu web se vea perfecta en cualquier dispositivo. Además, nos ocupamos de las actualizaciones y el mantenimiento para que puedas dedicar tu tiempo a lo que más valor aporta a tu negocio o a hacer crecer tu proyecto.'
-      />
-
-      <div class='why-choose-us-right-column'>
-        <div class='why-choose-us-image'>
+      <section class='why-choose-us-content'>
+        <figure class='why-choose-us-image'>
           <Image
             src={landing}
             format='avif'
@@ -106,16 +97,33 @@ import { schemaMainHome } from '../../data/schemas/main-home.js';
             quality={70}
             alt='Personas trabajando en equipo, revisando documentos y datos en una computadora portátil, simbolizando colaboración y análisis en proyectos tecnológicos.'
           />
+          <figcaption>Estrategia, creatividad y desarrollo <span>·</span> Proyectos a medida en toda España</figcaption>
+        </figure>
+
+        <div class='why-choose-us-rows'>
+          <article class='why-choose-us-row'>
+            <div class='why-choose-us-row__head'>
+              <span class='why-choose-us-row__n'>01</span>
+              <h3>Webs Personalizadas y Estratégicas</h3>
+            </div>
+            <p class='why-choose-us-row__tagline'>No partimos de plantillas genéricas.</p>
+            <p class='why-choose-us-row__p'>No partimos de plantillas genéricas, sino de tus objetivos, tu marca y la forma en la que tus clientes necesitan encontrarte, entenderte y contactar contigo.</p>
+            <p class='why-choose-us-row__p'>Optimizamos y estructuramos tu contenido para SEO y configuramos un diseño responsive para que tu web se vea perfecta en cualquier dispositivo. Además, nos ocupamos de las actualizaciones y el mantenimiento para que puedas dedicar tu tiempo a lo que más valor aporta a tu negocio o a hacer crecer tu proyecto.</p>
+          </article>
+
+          <article class='why-choose-us-row'>
+            <div class='why-choose-us-row__head'>
+              <span class='why-choose-us-row__n'>02</span>
+              <h3>Acompañamiento técnico sin lenguaje complicado</h3>
+            </div>
+            <p class='why-choose-us-row__tagline'>Conectamos contigo desde el primer minuto.</p>
+            <p class='why-choose-us-row__p'>En Astracodelab nos gusta conectar contigo desde el primer minuto: sin tecnicismos, con una atención personalizada y aportando valor.</p>
+            <p class='why-choose-us-row__p'>Desde la idea hasta la entrega, te acompañamos en todo el proceso para que tengas la web profesional que tu marca merece.</p>
+          </article>
         </div>
-
-        <TextContent
-          titulo='Acompañamiento técnico sin lenguaje complicado'
-          descripcion='En Astracodelab nos gusta conectar contigo desde el primer minuto: sin tecnicismos, con una atención personalizada y aportando valor. Desde la idea hasta la entrega, te acompañamos en todo el proceso para que tengas la web profesional que tu marca merece.'
-        />
-      </div>
-    </section>
+      </section>
+    </div>
   </section>
-
   <BannerCta
     titulo='¿Listo para destacar?'
     descripcion='Creamos una web a medida para que tu negocio se vea profesional, genere confianza y convierta visitas en oportunidades.'
