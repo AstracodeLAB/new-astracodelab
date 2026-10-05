@@ -1,0 +1,58 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import HeroServicesA from '../../layouts/components/HeroServicesA.astro';
+import TitleSecondary from '../../layouts/components/Titles/TitleSecondary.astro';
+import Listo from '../../layouts/components/Listo.astro';
+import ContactDiagnostico from '../../layouts/components/ContactDiagnostico.astro';
+---
+
+<Layout
+  title='Diagnóstico gratuito: ¿te compensa dar el salto del no-code a una web o herramienta a medida? | AstracodeLAB'
+>
+  <HeroServicesA
+    title='Tu web o tu gestión, hecha a tu medida'
+    subtitle='Diagnóstico gratuito con AstracodeLAB'
+    text='Tanto si ya tienes algo montado que se te ha quedado pequeño, como si todavía no tienes nada y no sabes por dónde empezar, te ayudamos a tenerlo listo.'
+  />
+  <div class='container_main_services'>
+    <section class='problema-section'>
+      <TitleSecondary text='Seguro que te suena algo de esto' description='' />
+      <p>
+        Puede que ya tengas automatizaciones montadas con alguna herramienta sin código, y que empiecen a fallar en
+        cuanto el caso se sale de lo normal — o que todavía no hayas automatizado nada y sigas haciéndolo todo a mano
+        porque nunca has tenido tiempo de montarlo.
+      </p>
+      <p>
+        Puede que tengas página web y se te haya quedado pequeña, o que directamente no tengas ninguna porque nunca ha
+        sido lo urgente.
+      </p>
+      <p>
+        Sea cual sea tu caso — con web o sin ella, con automatizaciones o sin ellas — no hace falta que lo resuelvas tú
+        con parches. Para eso estamos nosotras.
+      </p>
+    </section>
+
+    <section class='que-hacemos-section'>
+      <TitleSecondary text='Cuando el no-code no llega, empezamos nosotras' description='' />
+      <p>
+        Somos tres desarrolladoras repartidas entre Málaga, Castellón y Barcelona, y nos dedicamos a construir lo que
+        las plantillas no pueden: webs a medida, herramientas internas de gestión, integraciones que sí aguantan cuando
+        el negocio crece. Nada de subcontratar fuera ni pasar por intermediarios — hablas directamente con quien va a
+        programarlo, en tu mismo horario y en español.
+      </p>
+    </section>
+
+    <section class='gancho-section'>
+      <TitleSecondary text='Una llamada de 20 minutos, sin compromiso' description='' />
+      <p>
+        Antes de proponerte nada, queremos entender qué tienes montado ahora mismo y dónde te está frenando. Así que
+        empezamos por una charla corta, gratis y sin letra pequeña, donde te decimos con honestidad si de verdad
+        compensa dar el salto — y si no compensa, también te lo decimos.
+      </p>
+    </section>
+
+    <Listo />
+
+    <ContactDiagnostico />
+  </div>
+</Layout>

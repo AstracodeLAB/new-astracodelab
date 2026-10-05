@@ -1,0 +1,80 @@
+---
+import TitleSecondary from './Titles/TitleSecondary.astro';
+import Buttons from './Buttons/Buttons.astro';
+---
+
+<section id='contact' class='contact'>
+  <div class='contact__card'>
+    <div class='contact__card-top'>
+      <div class='contact__card-top-title'>
+        <TitleSecondary text='Pide tu diagnóstico gratuito' />
+      </div>
+      <p class='contact__card-top-text'>
+        Cuéntanos qué tienes montado ahora mismo y te decimos, en una llamada corta y sin
+        compromiso, si de verdad compensa dar el salto.
+      </p>
+      <p class='contact__card-top-text'>
+        Te contestamos nosotras, no un bot ni un comercial. Y si al final no encajamos,
+        prometemos decírtelo también.
+      </p>
+    </div>
+
+    <div class='contact__card-bottom'>
+      <form class='contact__form' action='https://formspree.io/f/xzzaoaya' method='POST'>
+        <input type='hidden' name='redirect' value='https://astracodelab.com/sent' />
+        <input type='hidden' name='source' value='landing-diagnostico-no-code' />
+
+        <div class='contact__form-field'>
+          <input
+            type='text'
+            id='name'
+            name='name'
+            placeholder='Nombre'
+            aria-label='Nombre'
+            minlength='3'
+            maxlength='50'
+            required
+          />
+        </div>
+        <div class='contact__form-field'>
+          <input type='email' id='email' name='email' placeholder='Email' aria-label='Correo electrónico' required />
+        </div>
+        <div class='contact__form-field'>
+          <input
+            type='text'
+            id='current-setup'
+            name='current-setup'
+            placeholder='¿Qué tienes montado ahora mismo? (Notion, Bubble, una web antigua, nada todavía...)'
+            aria-label='Qué tienes montado ahora mismo'
+            maxlength='150'
+            required
+          />
+        </div>
+        <div class='contact__form-field'>
+          <textarea
+            id='message'
+            name='message'
+            placeholder='¿Qué te gustaría resolver? (opcional)'
+            rows='4'
+            aria-label='Qué te gustaría resolver'
+            maxlength='500'></textarea>
+        </div>
+        <div class='contact__form-field contact__form-field--checkbox'>
+          <input
+            id='privacy'
+            name='privacy'
+            type='checkbox'
+            aria-label='Acepto que se traten mis datos para gestionar la consulta'
+            required
+          />
+          <label for='privacy' class='contact__form-label'>
+            Acepto que se traten mis datos para gestionar la consulta.
+          </label>
+        </div>
+        <div class='contact__form-actions'>
+          <Buttons type='submit' className='btnSecondaryDark'>Quiero mi diagnóstico gratuito</Buttons>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
