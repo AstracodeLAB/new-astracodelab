@@ -1,88 +1,242 @@
 ---
-import TitleSecondary from './Titles/TitleSecondary.astro';
-import Buttons from './Buttons/Buttons.astro';
+// Formulario "Hablemos de tu proyecto" — landing OpenObra
+// Envío vía Formspree (mismo endpoint que el formulario de contacto general).
+// Los leads se distinguen por el asunto y el campo "origen".
+interface Props {
+  action?: string;
+  discount?: string;
+}
+const { action = 'https://formspree.io/f/xzzaoaya', discount = '10%' } = Astro.props;
+
+const needs = ['Web nueva', 'Rediseño', 'Mi web no funciona', 'Plataforma / CRM'];
+const vias = [
+  { v: 'llamada', label: 'Llamada' },
+  { v: 'videollamada', label: 'Videollamada' },
+  { v: 'email', label: 'Email' },
+];
 ---
 
-<section id='contact' class='contact'>
-  <div class='contact__card'>
-    <div class='contact__card-top'>
-      <div class='contact__card-top-title'>
-        <TitleSecondary text='Te llamamos nosotras' />
+<div class='oo-callback' id='contact'>
+  <div class='oo-callback__tag'>−{discount}</div>
+
+  <form class='oo-callback__form' action={action} method='POST' novalidate>
+    <!-- Formspree -->
+    <input type='hidden' name='_subject' value='Nuevo lead OpenObra (landing /openobra)' />
+    <!-- honeypot anti-spam de Formspree: debe quedar vacío -->
+    <input type='text' name='_gotcha' class='oo-hp' tabindex='-1' autocomplete='off' aria-hidden='true' />
+
+    <!-- datos del lead -->
+    <input type='hidden' name='origen' value='newsletter-openobra' />
+    <input type='hidden' name='necesidad' value='' />
+    <input type='hidden' name='via' value='llamada' />
+    <input type='hidden' name='franja' value='Mañana' />
+
+    <h2>Hablemos de tu proyecto</h2>
+    <p class='oo-callback__sub'>
+      Cuéntanos qué necesitas y elige cómo prefieres que contactemos contigo. Sin compromiso, con tu {discount} aplicado.
+    </p>
+
+    <div class='oo-field'>
+      <label for='ooName'>Nombre</label>
+      <input id='ooName' name='nombre' autocomplete='name' placeholder='Tu nombre' required />
+    </div>
+
+    <div class='oo-field'>
+      <span class='oo-field__lbl'>¿Cómo prefieres que hablemos?</span>
+      <div class='oo-chips oo-chips--3' data-group='via'>
+        {
+          vias.map((x, i) => (
+            <button type='button' class='oo-chip' aria-pressed={i === 0 ? 'true' : 'false'} data-v={x.v}>
+              {x.label}
+            </button>
+          ))
+        }
       </div>
-      <p class='contact__card-top-text'>
-        Déjanos tu nombre y tu teléfono. En menos de 24h te llamamos, sin compromiso,
-        para contarte si de verdad merece la pena dar el salto.
-      </p>
-      <p class='contact__card-top-text'>
-        Si prefieres que te escribamos primero, déjanos también tu email — pero lo
-        normal es que te llamemos directamente.
-      </p>
     </div>
 
-    <div class='contact__card-bottom'>
-      <form class='contact__form' action='https://formspree.io/f/xzzaoaya' method='POST'>
-        <input type='hidden' name='redirect' value='https://astracodelab.com/sent' />
-        <input type='hidden' name='source' value='landing-diagnostico-no-code' />
-
-        <div class='contact__form-field'>
-          <input
-            type='text'
-            id='name'
-            name='name'
-            placeholder='Nombre'
-            aria-label='Nombre'
-            minlength='3'
-            maxlength='50'
-            required
-          />
-        </div>
-        <div class='contact__form-field'>
-          <input
-            type='tel'
-            id='phone'
-            name='phone'
-            placeholder='Tu teléfono'
-            aria-label='Teléfono'
-            minlength='9'
-            maxlength='20'
-            required
-          />
-        </div>
-        <div class='contact__form-field'>
-          <input
-            type='email'
-            id='email'
-            name='email'
-            placeholder='Email (opcional)'
-            aria-label='Correo electrónico'
-          />
-        </div>
-        <div class='contact__form-field'>
-          <input
-            type='text'
-            id='current-setup'
-            name='current-setup'
-            placeholder='¿Qué tienes montado ahora mismo? (opcional)'
-            aria-label='Qué tienes montado ahora mismo'
-            maxlength='150'
-          />
-        </div>
-        <div class='contact__form-field contact__form-field--checkbox'>
-          <input
-            id='privacy'
-            name='privacy'
-            type='checkbox'
-            aria-label='Acepto que se traten mis datos para gestionar la consulta'
-            required
-          />
-          <label for='privacy' class='contact__form-label'>
-            Acepto que se traten mis datos para gestionar la consulta.
-          </label>
-        </div>
-        <div class='contact__form-actions'>
-          <Buttons type='submit' className='btnSecondaryDark'>Sí, llamadme</Buttons>
-        </div>
-      </form>
+    <div class='oo-field' data-field='phone'>
+      <label for='ooPhone'>Teléfono</label>
+      <input id='ooPhone' name='telefono' type='tel' autocomplete='tel' inputmode='tel' placeholder='600 000 000' />
     </div>
+
+    <div class='oo-field' data-field='email' hidden>
+      <label for='ooEmail'>Email</label>
+      <input id='ooEmail' name='email' type='email' autocomplete='email' placeholder='tu@estudio.com' />
+    </div>
+
+    <div class='oo-field'>
+      <span class='oo-field__lbl'>¿Qué necesitas?</span>
+      <div class='oo-chips' data-group='necesidad' data-multi='true'>
+        {
+          needs.map((n) => (
+            <button type='button' class='oo-chip' aria-pressed='false' data-v={n}>
+              {n}
+            </button>
+          ))
+        }
+      </div>
+    </div>
+
+    <div class='oo-field' data-field='when'>
+      <span class='oo-field__lbl'>¿Cuándo te viene mejor?</span>
+      <div class='oo-chips oo-chips--2' data-group='franja'>
+        <button type='button' class='oo-chip' aria-pressed='true' data-v='Mañana'>Mañana</button>
+        <button type='button' class='oo-chip' aria-pressed='false' data-v='Tarde'>Tarde</button>
+      </div>
+    </div>
+
+    <button type='submit' class='oo-btn oo-btn--primary oo-callback__submit'>
+      <span data-submit-label>Quiero que me llaméis</span>
+      <svg
+        width='16'
+        height='16'
+        viewBox='0 0 24 24'
+        fill='none'
+        stroke='currentColor'
+        stroke-width='2.5'
+        stroke-linecap='round'
+        stroke-linejoin='round'
+        aria-hidden='true'><path d='M5 12h14M13 5l7 7-7 7'></path></svg
+      >
+    </button>
+
+    <p class='oo-callback__error' role='alert' hidden>
+      No hemos podido enviar el formulario. Prueba de nuevo o escríbenos a
+      <a href='mailto:hola@astracodelab.com'>hola@astracodelab.com</a>.
+    </p>
+
+    <p class='oo-callback__legal'>
+      Solo usaremos tus datos para contactarte sobre tu proyecto. <a href='/politica-de-privacidad'
+        >Política de privacidad</a
+      >
+    </p>
+  </form>
+
+  <div class='oo-callback__done' role='status' aria-live='polite'>
+    <i>
+      <svg
+        width='28'
+        height='28'
+        viewBox='0 0 24 24'
+        fill='none'
+        stroke='currentColor'
+        stroke-width='3'
+        stroke-linecap='round'
+        stroke-linejoin='round'
+        aria-hidden='true'><path d='M5 12.5l4 4L19 7'></path></svg
+      >
+    </i>
+    <h3>¡Recibido, <span data-who>gracias</span>!</h3>
+    <p><span data-msg></span> Tu {discount} de lector de OpenObra ya queda anotado.</p>
   </div>
-</section>
+</div>
+
+<script>
+  const root = document.querySelector<HTMLElement>('.oo-callback');
+  if (root) {
+    const form = root.querySelector<HTMLFormElement>('form')!;
+    const submitBtn = form.querySelector<HTMLButtonElement>('button[type="submit"]')!;
+    const submitLabel = form.querySelector<HTMLElement>('[data-submit-label]')!;
+    const errorBox = form.querySelector<HTMLElement>('.oo-callback__error')!;
+    const hidden = (n: string) => form.querySelector<HTMLInputElement>(`input[type="hidden"][name="${n}"]`)!;
+    const field = (n: string) => form.querySelector<HTMLElement>(`[data-field="${n}"]`)!;
+    const labels: Record<string, string> = {
+      llamada: 'Quiero que me llaméis',
+      videollamada: 'Quiero una videollamada',
+      email: 'Quiero que me escribáis',
+    };
+
+    const sync = () => {
+      form.querySelectorAll<HTMLElement>('.oo-chips').forEach((g) => {
+        const vals = [...g.querySelectorAll<HTMLElement>('[aria-pressed="true"]')].map((c) => c.dataset.v);
+        hidden(g.dataset.group!).value = vals.join(', ');
+      });
+      const via = hidden('via').value;
+      field('phone').hidden = via !== 'llamada';
+      field('email').hidden = via === 'llamada';
+      field('when').hidden = via === 'email';
+      submitLabel.textContent = labels[via];
+    };
+
+    form.querySelectorAll<HTMLElement>('.oo-chips').forEach((g) => {
+      const multi = g.dataset.multi === 'true';
+      g.addEventListener('click', (e) => {
+        const chip = (e.target as HTMLElement).closest<HTMLElement>('.oo-chip');
+        if (!chip) return;
+        if (multi) chip.setAttribute('aria-pressed', chip.getAttribute('aria-pressed') === 'true' ? 'false' : 'true');
+        else
+          g.querySelectorAll('.oo-chip').forEach((c) => c.setAttribute('aria-pressed', c === chip ? 'true' : 'false'));
+        sync();
+      });
+    });
+
+    const setLoading = (on: boolean) => {
+      submitBtn.disabled = on;
+      submitBtn.setAttribute('aria-busy', String(on));
+      if (on) submitLabel.textContent = 'Enviando…';
+      else sync();
+    };
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (submitBtn.disabled) return;
+      sync();
+      errorBox.hidden = true;
+
+      const via = hidden('via').value;
+      const name = form.querySelector<HTMLInputElement>('#ooName')!;
+      const phone = form.querySelector<HTMLInputElement>('#ooPhone')!;
+      const email = form.querySelector<HTMLInputElement>('#ooEmail')!;
+      const okName = name.value.trim().length > 1;
+      const okContact =
+        via === 'llamada'
+          ? phone.value.replace(/\D/g, '').length >= 9
+          : /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim());
+      name.classList.toggle('is-error', !okName);
+      phone.classList.toggle('is-error', via === 'llamada' && !okContact);
+      email.classList.toggle('is-error', via !== 'llamada' && !okContact);
+      if (!okName || !okContact) {
+        (!okName ? name : via === 'llamada' ? phone : email).focus();
+        return;
+      }
+
+      // Solo enviamos el dato de contacto que corresponde a la vía elegida
+      const data = new FormData(form);
+      if (via === 'llamada') data.delete('email');
+      else data.delete('telefono');
+      if (via === 'email') data.delete('franja');
+      // Formspree usa el campo "email" como Reply-To automáticamente
+
+      setLoading(true);
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          headers: { Accept: 'application/json' },
+          body: data,
+        });
+        if (!res.ok) {
+          const json = await res.json().catch(() => ({}));
+          throw new Error(json.errors?.map((x: { message: string }) => x.message).join(', ') || `HTTP ${res.status}`);
+        }
+      } catch (err) {
+        console.error('[OpenObra form]', err);
+        errorBox.hidden = false;
+        setLoading(false);
+        return;
+      }
+
+      const franja = hidden('franja').value.toLowerCase();
+      const msgs: Record<string, string> = {
+        llamada: `Te llamamos por la ${franja}.`,
+        videollamada: `Te enviamos por email un enlace para la videollamada por la ${franja}.`,
+        email: 'Te escribimos muy pronto a tu email.',
+      };
+      root.querySelector('[data-who]')!.textContent = name.value.trim().split(' ')[0];
+      root.querySelector('[data-msg]')!.textContent = msgs[via];
+      root.classList.add('is-done');
+      root.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+
+    sync();
+  }
+</script>

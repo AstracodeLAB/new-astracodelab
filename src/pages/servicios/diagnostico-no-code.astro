@@ -1,70 +1,338 @@
 ---
+// URL: /openobra  (renombra la carpeta si quieres otra ruta)
 import Layout from '../../layouts/Layout.astro';
-import HeroServicesA from '../../layouts/components/HeroServicesA.astro';
-import TitleSecondary from '../../layouts/components/Titles/TitleSecondary.astro';
-import Listo from '../../layouts/components/Listo.astro';
-import ContactDiagnostico from '../../layouts/components/ContactDiagnostico.astro';
-import Buttons from '../../layouts/components/Buttons/Buttons.astro';
-import '../../styles/DiagnosticoNoCode.scss';
+import ContactOpenObra from '../../layouts/components/ContactDiagnostico.astro';
+import '../../styles/Diagnosticonocode.scss';
+
+const pains = [
+  {
+    title: 'Tus proyectos son mejores que tu web',
+    text: 'Fotos sueltas, textos de hace años y nada que transmita cómo trabajas.',
+    tag: 'Web nueva o rediseño.',
+  },
+  {
+    title: 'La montaste tú y ahora no funciona',
+    text: 'Una plantilla, un plugin que se actualizó y de repente la web no carga, se ve rota o el formulario no llega.',
+    tag: 'Rescate web.',
+  },
+  {
+    title: 'Nadie te pide presupuesto desde la web',
+    text: 'Está ahí, pero no explica qué haces ni facilita el contacto. Una web clara convierte visitas en llamadas.',
+    tag: 'Rediseño.',
+  },
+  {
+    title: 'Clientes, presupuestos y obras repartidos entre Excel y WhatsApp',
+    text: 'Una herramienta hecha a tu medida para tenerlo todo en un sitio.',
+    tag: 'Plataforma SaaS / CRM.',
+  },
+];
+
+const services = [
+  {
+    title: 'Web nueva',
+    text: 'Diseño y desarrollo desde cero, pensada para enseñar tus obras y que te contacten.',
+    items: [
+      'Portfolio de proyectos con fotos y fichas',
+      'Adaptada a móvil, tablet y ordenador',
+      'Textos claros y accesibilidad incluidos',
+    ],
+    icon: '<rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/>',
+  },
+  {
+    title: 'Rediseño',
+    text: 'Renovamos tu web actual: imagen actual, estructura más clara y mejor rendimiento.',
+    items: [
+      'Revisión de lo que funciona y lo que no',
+      'Migración de contenidos y dominio',
+      'Sin perder lo que ya tienes',
+    ],
+    icon: '<path d="M21 12a9 9 0 11-3-6.7L21 8"/><path d="M21 3v5h-5"/>',
+  },
+  {
+    title: 'Rescate web',
+    flag: 'URGENTE',
+    text: '¿La montaste tú, o te la hicieron y nadie la mantiene? La diagnosticamos y la ponemos a funcionar.',
+    items: [
+      'Errores, caídas, plugins y formularios rotos',
+      'WordPress, Wix y otras plataformas',
+      'Te explicamos qué pasó y cómo evitarlo',
+    ],
+    icon: '<path d="M14.7 6.3a4 4 0 00-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 005.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/>',
+  },
+  {
+    title: 'Plataformas SaaS y CRM',
+    text: 'Software a medida para tu día a día: clientes, presupuestos, seguimiento de obras.',
+    items: [
+      'Diseñado alrededor de cómo trabajas',
+      'Acceso desde el móvil, también en obra',
+      'Crece contigo a medida que lo necesitas',
+    ],
+    icon: '<rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><path d="M14 17.5h7M17.5 14v7"/>',
+  },
+];
+
+const steps = [
+  {
+    title: 'Nos dejas tu contacto',
+    text: 'Nombre, qué necesitas y si prefieres llamada, videollamada o email. Menos de un minuto.',
+  },
+  { title: 'Hablamos', text: 'Escuchamos tu caso, resolvemos dudas y te orientamos, sin compromiso.' },
+  {
+    title: 'Propuesta clara',
+    text: 'Alcance, plazos y precio por escrito, con tu 10% de lector de OpenObra aplicado.',
+  },
+];
+
+const reviews = [
+  {
+    name: 'Helena Heras',
+    initials: 'HH',
+    bg: '#B8F2D8',
+    color: '#06866A',
+    text: 'Ha sido genial trabajar con el equipo de AstracodeLAB. Han cumplido con todo lo acordado y los plazos propuestos. Nos encanta el resultado.',
+  },
+  {
+    name: 'Alex N',
+    initials: 'AN',
+    bg: '#FFC9D7',
+    color: '#B3264B',
+    text: 'Muy satisfecho con el resultado: la web funciona estupendamente y a un precio muy competitivo. No se puede ser más profesional.',
+  },
+  {
+    name: 'Elisa Martín-Caro',
+    initials: 'EM',
+    bg: '#E0C3F7',
+    color: '#7A2DB8',
+    text: 'Acompañan tu proyecto con gran atención, flexibilidad y disponibilidad, haciendo propuestas interesantes para responder a lo que necesitas.',
+  },
+];
+
+const faqs = [
+  {
+    q: '¿A qué se aplica el 10% de descuento?',
+    a: 'A cualquier servicio: web nueva, rediseño, rescate web o plataforma a medida. Se aplica sobre el presupuesto final que te enviemos.',
+  },
+  {
+    q: 'Hice mi web yo mismo y ya no funciona. ¿Podéis arreglarla?',
+    a: 'Sí. Revisamos qué ha fallado (plugins, hosting, plantilla, formularios…), la reparamos y te explicamos cómo evitar que vuelva a pasar. Si no compensa repararla, te lo decimos.',
+  },
+  {
+    q: '¿Qué es una plataforma SaaS o CRM a medida?',
+    a: 'Una herramienta web hecha para tu forma de trabajar: gestionar clientes, presupuestos, documentación o el seguimiento de obras, accesible desde el ordenador o el móvil.',
+  },
+  {
+    q: '¿Trabajáis con estudios fuera de vuestra ciudad?',
+    a: 'Sí, trabajamos con clientes de toda España. Todo el proceso se puede hacer por teléfono, videollamada o email.',
+  },
+];
+
+const arrow =
+  '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>';
 ---
 
-<Layout title='Te llamamos: diagnóstico gratuito si el no-code se te ha quedado corto | AstracodeLAB'>
-  <HeroServicesA
-    title='Te llamamos nosotras. Tú solo dejas tu teléfono.'
-    subtitle='Diagnóstico gratuito con AstracodeLAB'
-    text='Cuéntanos qué tienes (o no tienes) montado y en menos de 24h te llamamos, sin compromiso, para decirte si de verdad compensa dar el paso.'
-  />
+<Layout title='Tecnología a medida para arquitectura y reformas · 10% lectores OpenObra | AstracodeLAB'>
+  <!-- <div class='oo'>
+    <div class='oo-strip'>
+      <span class='oo-strip__pill'>LECTORES OPENOBRA</span>
+      <span>Vienes de la newsletter de OpenObra: tienes un <b>10% de descuento</b> en cualquier proyecto.</span>
+    </div> -->
 
-  <div class='container_main_services'>
-    <section class='problema-section'>
-      <TitleSecondary text='Seguro que te suena algo de esto' description='' />
-      <p>
-        Puede que ya tengas automatizaciones montadas con alguna herramienta sin código que empiezan a fallar en cuanto
-        el caso se sale de lo normal. O que todavía no hayas automatizado nada y sigas haciéndolo todo a mano.
-      </p>
-      <p>
-        Puede que tengas página web y se te haya quedado pequeña, o que directamente no tengas ninguna porque nunca ha
-        sido lo urgente.
-      </p>
-      <p class='problema-cta-line'>
-        Si te ha sonado aunque sea una de las dos, ya sabes lo que toca:
-        <a href='#contact'>cuéntanoslo y te llamamos</a>.
-      </p>
-    </section>
-
-    <section class='que-hacemos-section'>
-      <TitleSecondary text='Cuando el no-code no llega, empezamos nosotras' description='' />
-      <p>
-        Has montado tu forma de trabajar con herramientas sin código: automatizas gestión documental, pruebas algún
-        agente, conectas lo que puedes conectar. Funciona hasta que el volumen, un caso raro o una integración que el
-        no-code no permite te frena. Ahí es donde entramos: construimos lo que ya no cabe en una plantilla —
-        automatizaciones a medida, herramientas de gestión propias, o la web que te falta para sostener todo esto. Nada
-        de subcontratar fuera ni pasar por intermediarios: hablas directamente con quien va a programarlo, en tu mismo
-        horario y en español.
-      </p>
-    </section>
-
-    <div class='cta-banner-wrap'>
-      <section class='cta-banner'>
-        <TitleSecondary text='¿Hablamos 20 minutos, sin compromiso?' />
-        <p>
-          Antes de proponerte nada, queremos entender qué tienes montado ahora mismo y dónde te está frenando. Por eso
-          empezamos siempre por una llamada corta y gratuita — y si al final vemos que no compensa dar el salto, también
-          te lo decimos.
-        </p>
-        <ul class='trust-list'>
-          <li>Equipo en España: Málaga, Castellón y Barcelona</li>
-          <li>Hablas directamente con quien va a programarlo, nunca con un comercial</li>
-          <li>Si no compensa dar el salto, te lo decimos igual</li>
-        </ul>
-        <div class='cta-banner__button'>
-          <Buttons className='btnSecondaryDark' href='#contact'> Quiero que me llaméis </Buttons>
+    <!-- HERO -->
+    <section class='oo-hero'>
+      <div class='oo-wrap oo-hero__grid'>
+        <div>
+          <span class='oo-eyebrow'>Tecnología a medida para arquitectura y reformas</span>
+          <h1>Lo digital, <em>resuelto</em>. Tú céntrate en la obra.</h1>
+          <p class='oo-lead'>
+            Diseñamos webs nuevas, renovamos las que se han quedado antiguas y rescatamos las que dejaron de funcionar.
+            También desarrollamos plataformas a medida para gestionar clientes, presupuestos y proyectos.
+          </p>
+          <div class='oo-hero__for'>
+            <span>Estudios de arquitectura</span>
+            <span>Arquitectos técnicos</span>
+            <span>Empresas de reformas</span>
+          </div>
+          <div class='oo-hero__dim'>LLAMADA · VIDEOLLAMADA · EMAIL · SIN COMPROMISO</div>
         </div>
-      </section>
-    </div>
 
-    <Listo />
+        <ContactOpenObra />
+      </div>
+    </section>
 
-    <ContactDiagnostico />
+    <!-- PROBLEMAS -->
+    <section class='oo-section'>
+      <div class='oo-wrap'>
+        <header class='oo-head'>
+          <span class='oo-eyebrow'>¿Te suena?</span>
+          <h2 class='oo-h2'>Podemos ayudarte</h2>
+        </header>
+        <div class='oo-pains'>
+          {
+            pains.map((p) => (
+              <article class='oo-pain'>
+                <div class='oo-pain__q'>?</div>
+                <div>
+                  <h3>{p.title}</h3>
+                  <p>
+                    {p.text} <b>{p.tag}</b>
+                  </p>
+                </div>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section class='oo-section oo-section--tint'>
+      <div class='oo-wrap'>
+        <header class='oo-head'>
+          <span class='oo-eyebrow'>Qué hacemos</span>
+          <h2 class='oo-h2'>Cuatro formas de ayudarte, un mismo equipo</h2>
+          <p class='oo-lead'>Diseño, desarrollo y soporte bajo el mismo techo: no tendrás que coordinar a nadie más.</p>
+        </header>
+        <div class='oo-services'>
+          {
+            services.map((s) => (
+              <article class='oo-svc'>
+                {s.flag && <span class='oo-svc__flag'>{s.flag}</span>}
+                <div class='oo-svc__ico'>
+                  <svg
+                    width='22'
+                    height='22'
+                    viewBox='0 0 24 24'
+                    fill='none'
+                    stroke='currentColor'
+                    stroke-width='2'
+                    stroke-linecap='round'
+                    stroke-linejoin='round'
+                    aria-hidden='true'
+                    set:html={s.icon}
+                  />
+                </div>
+                <h3>{s.title}</h3>
+                <p>{s.text}</p>
+                <ul>
+                  {s.items.map((i) => (
+                    <li>{i}</li>
+                  ))}
+                </ul>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESO -->
+    <section class='oo-section'>
+      <div class='oo-wrap'>
+        <header class='oo-head'>
+          <span class='oo-eyebrow'>Cómo funciona</span>
+          <h2 class='oo-h2'>Sin formularios eternos. Hablamos como prefieras.</h2>
+        </header>
+        <ol class='oo-steps'>
+          {
+            steps.map((s, i) => (
+              <li class='oo-step'>
+                <span class='oo-step__n'>0{i + 1}</span>
+                <h3>{s.title}</h3>
+                <p>{s.text}</p>
+              </li>
+            ))
+          }
+        </ol>
+      </div>
+    </section>
+
+    <!-- OFERTA -->
+    <section class='oo-section oo-section--flush'>
+      <div class='oo-wrap'>
+        <div class='oo-offer'>
+          <div class='oo-offer__big'>10%<small>LECTORES OPENOBRA</small></div>
+          <div>
+            <h2>Un descuento exclusivo por venir de la newsletter</h2>
+            <p>
+              Se aplica a cualquier servicio: web nueva, rediseño, rescate o plataforma a medida. Solo tienes que
+              dejarnos tu contacto desde esta página.
+            </p>
+          </div>
+          <a class='oo-btn oo-btn--lime' href='#contact'>Quiero mi 10%</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEÑAS -->
+    <section class='oo-section oo-section--tint'>
+      <div class='oo-wrap'>
+        <header class='oo-head oo-head--center'>
+          <span class='oo-eyebrow'>Opiniones en Google</span>
+          <h2 class='oo-h2'>Lo que dicen quienes ya trabajan con nosotras</h2>
+        </header>
+        <div class='oo-reviews'>
+          {
+            reviews.map((r) => (
+              <article class='oo-rev'>
+                <div class='oo-stars' aria-label='5 de 5 estrellas'>
+                  ★★★★★
+                </div>
+                <p>{r.text}</p>
+                <div class='oo-rev__who'>
+                  <span class='oo-rev__av' style={`background:${r.bg};color:${r.color}`}>
+                    {r.initials}
+                  </span>
+                  <div>
+                    <>
+                      <b>{r.name}</b>
+                      <span>Reseña de Google</span>
+                    </>
+                  </div>
+                </div>
+              </article>
+            ))
+          }
+        </div>
+        <div class='oo-gnote'><span><b>5.0</b><span class='oo-stars'>★★★★★</span>en Google</span></div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class='oo-section'>
+      <div class='oo-wrap oo-faq-grid'>
+        <header class='oo-head oo-head--flush'>
+          <span class='oo-eyebrow'>Dudas</span>
+          <h2 class='oo-h2'>Preguntas frecuentes</h2>
+          <p class='oo-lead'>¿Tienes otra? Déjanos tu contacto y lo hablamos.</p>
+        </header>
+        <div class='oo-faq'>
+          {
+            faqs.map((f, i) => (
+              <details open={i === 0}>
+                <summary>
+                  {f.q}
+                  <i aria-hidden='true'>+</i>
+                </summary>
+                <p>{f.a}</p>
+              </details>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class='oo-final'>
+      <div class='oo-wrap'>
+        <div class='oo-final__box'>
+          <span class='oo-eyebrow'>Sin compromiso</span>
+          <h2 class='oo-h2'>¿Hablamos de tu proyecto?</h2>
+          <p class='oo-lead'>Por teléfono, videollamada o email: tú eliges cómo.</p>
+          <a class='oo-btn oo-btn--primary' href='#contact'
+            >Quiero que contactéis conmigo <Fragment set:html={arrow} /></a
+          >
+        </div>
+      </div>
+    </section>
   </div>
 </Layout>
