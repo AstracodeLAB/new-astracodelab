@@ -8,47 +8,23 @@ import Buttons from '../../layouts/components/Buttons/Buttons.astro';
 import '../../styles/DiagnosticoNoCode.scss';
 ---
 
-<Layout
-  title='Te llamamos: diagnóstico gratuito si el no-code se te ha quedado corto | AstracodeLAB'
->
+<Layout title='Te llamamos: diagnóstico gratuito si el no-code se te ha quedado corto | AstracodeLAB'>
   <HeroServicesA
     title='Te llamamos nosotras. Tú solo dejas tu teléfono.'
     subtitle='Diagnóstico gratuito con AstracodeLAB'
     text='Cuéntanos qué tienes (o no tienes) montado y en menos de 24h te llamamos, sin compromiso, para decirte si de verdad compensa dar el paso.'
   />
 
-
-
   <div class='container_main_services'>
-
-  <div class='cta-banner-wrap'>
-    <section class='cta-banner'>
-      <TitleSecondary text='¿Hablamos 20 minutos, sin compromiso?' />
-      <p>
-        Cuéntanos qué tienes (o no tienes) montado y te llamamos nosotras. Gratis,
-        sin compromiso.
-      </p>
-      <div class='cta-banner__button'>
-        <Buttons className='btnSecondaryDark' href='#contact'>
-          Quiero que me llaméis
-        </Buttons>
-      </div>
-    </section>
-  </div>
-
     <section class='problema-section'>
-      <TitleSecondary
-        text='Seguro que te suena algo de esto'
-        description=''
-      />
+      <TitleSecondary text='Seguro que te suena algo de esto' description='' />
       <p>
-        Puede que ya tengas automatizaciones montadas con alguna herramienta sin código
-        que empiezan a fallar en cuanto el caso se sale de lo normal. O que todavía no
-        hayas automatizado nada y sigas haciéndolo todo a mano.
+        Puede que ya tengas automatizaciones montadas con alguna herramienta sin código que empiezan a fallar en cuanto
+        el caso se sale de lo normal. O que todavía no hayas automatizado nada y sigas haciéndolo todo a mano.
       </p>
       <p>
-        Puede que tengas página web y se te haya quedado pequeña, o que directamente no
-        tengas ninguna porque nunca ha sido lo urgente.
+        Puede que tengas página web y se te haya quedado pequeña, o que directamente no tengas ninguna porque nunca ha
+        sido lo urgente.
       </p>
       <p class='problema-cta-line'>
         Si te ha sonado aunque sea una de las dos, ya sabes lo que toca:
@@ -57,43 +33,38 @@ import '../../styles/DiagnosticoNoCode.scss';
     </section>
 
     <section class='que-hacemos-section'>
-      <TitleSecondary
-        text='Cuando el no-code no llega, empezamos nosotras'
-        description=''
-      />
+      <TitleSecondary text='Cuando el no-code no llega, empezamos nosotras' description='' />
       <p>
-        Has montado tu forma de trabajar con herramientas sin código: automatizas
-        gestión documental, pruebas algún agente, conectas lo que puedes conectar.
-        Funciona hasta que el volumen, un caso raro o una integración que el no-code
-        no permite te frena. Ahí es donde entramos: construimos lo que ya no cabe en
-        una plantilla — automatizaciones a medida, herramientas de gestión propias, o
-        la web que te falta para sostener todo esto. Nada de subcontratar fuera ni
-        pasar por intermediarios: hablas directamente con quien va a programarlo, en
-        tu mismo horario y en español.
+        Has montado tu forma de trabajar con herramientas sin código: automatizas gestión documental, pruebas algún
+        agente, conectas lo que puedes conectar. Funciona hasta que el volumen, un caso raro o una integración que el
+        no-code no permite te frena. Ahí es donde entramos: construimos lo que ya no cabe en una plantilla —
+        automatizaciones a medida, herramientas de gestión propias, o la web que te falta para sostener todo esto. Nada
+        de subcontratar fuera ni pasar por intermediarios: hablas directamente con quien va a programarlo, en tu mismo
+        horario y en español.
       </p>
     </section>
 
-    <section class='gancho-section'>
-      <TitleSecondary
-        text='Una llamada de 20 minutos, sin compromiso'
-        description=''
-      />
-      <p>
-        Antes de proponerte nada, queremos entender qué tienes montado ahora mismo y
-        dónde te está frenando. Por eso empezamos siempre por una llamada corta y
-        gratuita — y si al final vemos que no compensa dar el salto, también te lo
-        decimos.
-      </p>
-      <ul class='trust-list'>
-        <li>Equipo en España: Málaga, Castellón y Barcelona</li>
-        <li>Hablas directamente con quien va a programarlo, nunca con un comercial</li>
-        <li>Si no compensa dar el salto, te lo decimos igual</li>
-      </ul>
-    </section>
+    <div class='cta-banner-wrap'>
+      <section class='cta-banner'>
+        <TitleSecondary text='¿Hablamos 20 minutos, sin compromiso?' />
+        <p>
+          Antes de proponerte nada, queremos entender qué tienes montado ahora mismo y dónde te está frenando. Por eso
+          empezamos siempre por una llamada corta y gratuita — y si al final vemos que no compensa dar el salto, también
+          te lo decimos.
+        </p>
+        <ul class='trust-list'>
+          <li>Equipo en España: Málaga, Castellón y Barcelona</li>
+          <li>Hablas directamente con quien va a programarlo, nunca con un comercial</li>
+          <li>Si no compensa dar el salto, te lo decimos igual</li>
+        </ul>
+        <div class='cta-banner__button'>
+          <Buttons className='btnSecondaryDark' href='#contact'> Quiero que me llaméis </Buttons>
+        </div>
+      </section>
+    </div>
 
     <Listo />
 
     <ContactDiagnostico />
-
   </div>
 </Layout>
