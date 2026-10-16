@@ -21,9 +21,9 @@ const pains = [
     tag: 'Rediseño.',
   },
   {
-    title: 'Clientes, presupuestos y obras repartidos entre Excel y WhatsApp',
-    text: 'Una herramienta hecha a tu medida para tenerlo todo en un sitio.',
-    tag: 'Plataforma SaaS / CRM.',
+    title: 'Tu sistema no-code se ha quedado corto',
+    text: 'Funciona, pero hay cosas que ninguna herramienta te resuelve sin programar: conectar apps que no se hablan o automatizar lo que se escapa.',
+    tag: 'Desarrollo a medida.',
   },
 ];
 
@@ -60,14 +60,14 @@ const services = [
     icon: '<path d="M14.7 6.3a4 4 0 00-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 005.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/>',
   },
   {
-    title: 'Plataformas SaaS y CRM',
-    text: 'Software a medida para tu día a día: clientes, presupuestos, seguimiento de obras.',
+    title: 'Cuando hace falta programar',
+    text: 'Si tus herramientas no-code ya hacen el trabajo, entramos donde se quedan cortas.',
     items: [
-      'Diseñado alrededor de cómo trabajas',
-      'Acceso desde el móvil, también en obra',
-      'Crece contigo a medida que lo necesitas',
+      'Integraciones entre herramientas y APIs',
+      'Automatizaciones que no salen sin código',
+      'Funcionalidades que tu herramienta no permite',
     ],
-    icon: '<rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><path d="M14 17.5h7M17.5 14v7"/>',
+    icon: '<path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/>',
   },
 ];
 
@@ -117,8 +117,8 @@ const faqs = [
     a: 'Sí. Revisamos qué ha fallado (plugins, hosting, plantilla, formularios…), la reparamos y te explicamos cómo evitar que vuelva a pasar. Si no compensa repararla, te lo decimos.',
   },
   {
-    q: '¿Qué es una plataforma SaaS o CRM a medida?',
-    a: 'Una herramienta web hecha para tu forma de trabajar: gestionar clientes, presupuestos, documentación o el seguimiento de obras, accesible desde el ordenador o el móvil.',
+    q: 'Ya me organizo con herramientas no-code. ¿Para qué os necesito?',
+    a: 'Si te funciona, sigue con ello. Te ayudamos cuando algo necesita programación: conectar herramientas que no se integran entre sí, automatizaciones que no salen sin código o funciones que la herramienta no ofrece.',
   },
   {
     q: '¿Trabajáis con estudios fuera de vuestra ciudad?',
@@ -130,209 +130,201 @@ const arrow =
   '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>';
 ---
 
-<Layout title='Tecnología a medida para arquitectura y reformas · 10% lectores OpenObra | AstracodeLAB'>
-  <!-- <div class='oo'>
-    <div class='oo-strip'>
-      <span class='oo-strip__pill'>LECTORES OPENOBRA</span>
-      <span>Vienes de la newsletter de OpenObra: tienes un <b>10% de descuento</b> en cualquier proyecto.</span>
-    </div> -->
+<Layout title='Webs y desarrollo para arquitectura y reformas · 10% lectores OpenObra | AstracodeLAB'>
+  <!-- HERO -->
+  <section class='oo-hero'>
+    <div class='oo-wrap oo-hero__grid'>
+      <div>
+        <span class='oo-eyebrow'>Webs y desarrollo para arquitectura y reformas</span>
+        <h1>Lo digital, <em>resuelto</em>. Tú céntrate en la obra.</h1>
+        <p class='oo-lead'>
+          Diseñamos webs nuevas, renovamos las que se han quedado antiguas y rescatamos las que dejaron de funcionar. Y
+          cuando tus herramientas no-code se quedan cortas, programamos lo que haga falta.
+        </p>
+        <div class='oo-hero__for'>
+          <span>Estudios de arquitectura</span>
+          <span>Arquitectos técnicos</span>
+          <span>Empresas de reformas</span>
+        </div>
+        <div class='oo-hero__dim'>LLAMADA · VIDEOLLAMADA · EMAIL · SIN COMPROMISO</div>
+      </div>
 
-    <!-- HERO -->
-    <section class='oo-hero'>
-      <div class='oo-wrap oo-hero__grid'>
+      <ContactOpenObra />
+    </div>
+  </section>
+
+  <!-- PROBLEMAS -->
+  <section class='oo-section'>
+    <div class='oo-wrap'>
+      <header class='oo-head'>
+        <span class='oo-eyebrow'>¿Te suena?</span>
+        <h2 class='oo-h2'>Podemos ayudarte</h2>
+      </header>
+      <div class='oo-pains'>
+        {
+          pains.map((p) => (
+            <article class='oo-pain'>
+              <div class='oo-pain__q'>?</div>
+              <div>
+                <h3>{p.title}</h3>
+                <p>
+                  {p.text} <b>{p.tag}</b>
+                </p>
+              </div>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section class='oo-section oo-section--tint'>
+    <div class='oo-wrap'>
+      <header class='oo-head'>
+        <span class='oo-eyebrow'>Qué hacemos</span>
+        <h2 class='oo-h2'>Cuatro formas de ayudarte, un mismo equipo</h2>
+        <p class='oo-lead'>Diseño, desarrollo y soporte bajo el mismo techo: no tendrás que coordinar a nadie más.</p>
+      </header>
+      <div class='oo-services'>
+        {
+          services.map((s) => (
+            <article class='oo-svc'>
+              {s.flag && <span class='oo-svc__flag'>{s.flag}</span>}
+              <div class='oo-svc__ico'>
+                <svg
+                  width='22'
+                  height='22'
+                  viewBox='0 0 24 24'
+                  fill='none'
+                  stroke='currentColor'
+                  stroke-width='2'
+                  stroke-linecap='round'
+                  stroke-linejoin='round'
+                  aria-hidden='true'
+                  set:html={s.icon}
+                />
+              </div>
+              <h3>{s.title}</h3>
+              <p>{s.text}</p>
+              <ul>
+                {s.items.map((i) => (
+                  <li>{i}</li>
+                ))}
+              </ul>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESO -->
+  <section class='oo-section'>
+    <div class='oo-wrap'>
+      <header class='oo-head'>
+        <span class='oo-eyebrow'>Cómo funciona</span>
+        <h2 class='oo-h2'>Sin formularios eternos. Hablamos como prefieras.</h2>
+      </header>
+      <ol class='oo-steps'>
+        {
+          steps.map((s, i) => (
+            <li class='oo-step'>
+              <span class='oo-step__n'>0{i + 1}</span>
+              <h3>{s.title}</h3>
+              <p>{s.text}</p>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </section>
+
+  <!-- OFERTA -->
+  <section class='oo-section oo-section--flush'>
+    <div class='oo-wrap'>
+      <div class='oo-offer'>
+        <div class='oo-offer__big'>10%<small>LECTORES OPENOBRA</small></div>
         <div>
-          <span class='oo-eyebrow'>Tecnología a medida para arquitectura y reformas</span>
-          <h1>Lo digital, <em>resuelto</em>. Tú céntrate en la obra.</h1>
-          <p class='oo-lead'>
-            Diseñamos webs nuevas, renovamos las que se han quedado antiguas y rescatamos las que dejaron de funcionar.
-            También desarrollamos plataformas a medida para gestionar clientes, presupuestos y proyectos.
+          <h2>Un descuento exclusivo por venir de la newsletter</h2>
+          <p>
+            Se aplica a cualquier servicio: web nueva, rediseño, rescate o desarrollo a medida. Solo tienes que dejarnos
+            tu contacto desde esta página.
           </p>
-          <div class='oo-hero__for'>
-            <span>Estudios de arquitectura</span>
-            <span>Arquitectos técnicos</span>
-            <span>Empresas de reformas</span>
-          </div>
-          <div class='oo-hero__dim'>LLAMADA · VIDEOLLAMADA · EMAIL · SIN COMPROMISO</div>
         </div>
-
-        <ContactOpenObra />
+        <a class='oo-btn oo-btn--lime' href='#contact'>Quiero mi 10%</a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- PROBLEMAS -->
-    <section class='oo-section'>
-      <div class='oo-wrap'>
-        <header class='oo-head'>
-          <span class='oo-eyebrow'>¿Te suena?</span>
-          <h2 class='oo-h2'>Podemos ayudarte</h2>
-        </header>
-        <div class='oo-pains'>
-          {
-            pains.map((p) => (
-              <article class='oo-pain'>
-                <div class='oo-pain__q'>?</div>
+  <!-- RESEÑAS -->
+  <section class='oo-section oo-section--tint'>
+    <div class='oo-wrap'>
+      <header class='oo-head oo-head--center'>
+        <span class='oo-eyebrow'>Opiniones en Google</span>
+        <h2 class='oo-h2'>Lo que dicen quienes ya trabajan con nosotras</h2>
+      </header>
+      <div class='oo-reviews'>
+        {
+          reviews.map((r) => (
+            <article class='oo-rev'>
+              <div class='oo-stars' aria-label='5 de 5 estrellas'>
+                ★★★★★
+              </div>
+              <p>{r.text}</p>
+              <div class='oo-rev__who'>
+                <span class='oo-rev__av' style={`background:${r.bg};color:${r.color}`}>
+                  {r.initials}
+                </span>
                 <div>
-                  <h3>{p.title}</h3>
-                  <p>
-                    {p.text} <b>{p.tag}</b>
-                  </p>
+                  <>
+                    <b>{r.name}</b>
+                    <span>Reseña de Google</span>
+                  </>
                 </div>
-              </article>
-            ))
-          }
-        </div>
+              </div>
+            </article>
+          ))
+        }
       </div>
-    </section>
+      <div class='oo-gnote'><span><b>5.0</b><span class='oo-stars'>★★★★★</span>en Google</span></div>
+    </div>
+  </section>
 
-    <!-- SERVICIOS -->
-    <section class='oo-section oo-section--tint'>
-      <div class='oo-wrap'>
-        <header class='oo-head'>
-          <span class='oo-eyebrow'>Qué hacemos</span>
-          <h2 class='oo-h2'>Cuatro formas de ayudarte, un mismo equipo</h2>
-          <p class='oo-lead'>Diseño, desarrollo y soporte bajo el mismo techo: no tendrás que coordinar a nadie más.</p>
-        </header>
-        <div class='oo-services'>
-          {
-            services.map((s) => (
-              <article class='oo-svc'>
-                {s.flag && <span class='oo-svc__flag'>{s.flag}</span>}
-                <div class='oo-svc__ico'>
-                  <svg
-                    width='22'
-                    height='22'
-                    viewBox='0 0 24 24'
-                    fill='none'
-                    stroke='currentColor'
-                    stroke-width='2'
-                    stroke-linecap='round'
-                    stroke-linejoin='round'
-                    aria-hidden='true'
-                    set:html={s.icon}
-                  />
-                </div>
-                <h3>{s.title}</h3>
-                <p>{s.text}</p>
-                <ul>
-                  {s.items.map((i) => (
-                    <li>{i}</li>
-                  ))}
-                </ul>
-              </article>
-            ))
-          }
-        </div>
+  <!-- FAQ -->
+  <section class='oo-section'>
+    <div class='oo-wrap oo-faq-grid'>
+      <header class='oo-head oo-head--flush'>
+        <span class='oo-eyebrow'>Dudas</span>
+        <h2 class='oo-h2'>Preguntas frecuentes</h2>
+        <p class='oo-lead'>¿Tienes otra? Déjanos tu contacto y lo hablamos.</p>
+      </header>
+      <div class='oo-faq'>
+        {
+          faqs.map((f, i) => (
+            <details open={i === 0}>
+              <summary>
+                {f.q}
+                <i aria-hidden='true'>+</i>
+              </summary>
+              <p>{f.a}</p>
+            </details>
+          ))
+        }
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- PROCESO -->
-    <section class='oo-section'>
-      <div class='oo-wrap'>
-        <header class='oo-head'>
-          <span class='oo-eyebrow'>Cómo funciona</span>
-          <h2 class='oo-h2'>Sin formularios eternos. Hablamos como prefieras.</h2>
-        </header>
-        <ol class='oo-steps'>
-          {
-            steps.map((s, i) => (
-              <li class='oo-step'>
-                <span class='oo-step__n'>0{i + 1}</span>
-                <h3>{s.title}</h3>
-                <p>{s.text}</p>
-              </li>
-            ))
-          }
-        </ol>
+  <!-- CTA FINAL -->
+  <section class='oo-final'>
+    <div class='oo-wrap'>
+      <div class='oo-final__box'>
+        <span class='oo-eyebrow'>Sin compromiso</span>
+        <h2 class='oo-h2'>¿Hablamos de tu proyecto?</h2>
+        <p class='oo-lead'>Por teléfono, videollamada o email: tú eliges cómo.</p>
+        <a class='oo-btn oo-btn--primary' href='#contact'>Quiero que contactéis conmigo <Fragment set:html={arrow} /></a
+        >
       </div>
-    </section>
-
-    <!-- OFERTA -->
-    <section class='oo-section oo-section--flush'>
-      <div class='oo-wrap'>
-        <div class='oo-offer'>
-          <div class='oo-offer__big'>10%<small>LECTORES OPENOBRA</small></div>
-          <div>
-            <h2>Un descuento exclusivo por venir de la newsletter</h2>
-            <p>
-              Se aplica a cualquier servicio: web nueva, rediseño, rescate o plataforma a medida. Solo tienes que
-              dejarnos tu contacto desde esta página.
-            </p>
-          </div>
-          <a class='oo-btn oo-btn--lime' href='#contact'>Quiero mi 10%</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- RESEÑAS -->
-    <section class='oo-section oo-section--tint'>
-      <div class='oo-wrap'>
-        <header class='oo-head oo-head--center'>
-          <span class='oo-eyebrow'>Opiniones en Google</span>
-          <h2 class='oo-h2'>Lo que dicen quienes ya trabajan con nosotras</h2>
-        </header>
-        <div class='oo-reviews'>
-          {
-            reviews.map((r) => (
-              <article class='oo-rev'>
-                <div class='oo-stars' aria-label='5 de 5 estrellas'>
-                  ★★★★★
-                </div>
-                <p>{r.text}</p>
-                <div class='oo-rev__who'>
-                  <span class='oo-rev__av' style={`background:${r.bg};color:${r.color}`}>
-                    {r.initials}
-                  </span>
-                  <div>
-                    <>
-                      <b>{r.name}</b>
-                      <span>Reseña de Google</span>
-                    </>
-                  </div>
-                </div>
-              </article>
-            ))
-          }
-        </div>
-        <div class='oo-gnote'><span><b>5.0</b><span class='oo-stars'>★★★★★</span>en Google</span></div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class='oo-section'>
-      <div class='oo-wrap oo-faq-grid'>
-        <header class='oo-head oo-head--flush'>
-          <span class='oo-eyebrow'>Dudas</span>
-          <h2 class='oo-h2'>Preguntas frecuentes</h2>
-          <p class='oo-lead'>¿Tienes otra? Déjanos tu contacto y lo hablamos.</p>
-        </header>
-        <div class='oo-faq'>
-          {
-            faqs.map((f, i) => (
-              <details open={i === 0}>
-                <summary>
-                  {f.q}
-                  <i aria-hidden='true'>+</i>
-                </summary>
-                <p>{f.a}</p>
-              </details>
-            ))
-          }
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA FINAL -->
-    <section class='oo-final'>
-      <div class='oo-wrap'>
-        <div class='oo-final__box'>
-          <span class='oo-eyebrow'>Sin compromiso</span>
-          <h2 class='oo-h2'>¿Hablamos de tu proyecto?</h2>
-          <p class='oo-lead'>Por teléfono, videollamada o email: tú eliges cómo.</p>
-          <a class='oo-btn oo-btn--primary' href='#contact'
-            >Quiero que contactéis conmigo <Fragment set:html={arrow} /></a
-          >
-        </div>
-      </div>
-    </section>
-  </div>
+    </div>
+  </section>
 </Layout>
