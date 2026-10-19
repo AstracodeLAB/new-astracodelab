@@ -32,6 +32,7 @@
 @use './ContainerMainServices.scss';
 @use './CookieBanner.scss';
 @use './RocketIllustration.scss';
+@use './Diagnosticonocode.scss';
 
 /* Estilos globales */
 :root {
@@ -45,7 +46,6 @@ html {
 body {
   font-family: $font-primary;
   padding-top: 5rem;
-  
 
   header {
     padding: 1.25rem;
