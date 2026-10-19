@@ -102,141 +102,153 @@ const vias = [
 
     <p class='oo-callback__error' role='alert' hidden>
       No hemos podido enviar el formulario. Prueba de nuevo o escríbenos a
-      <a href='mailto:hola@astracodelab.com'>hola@astracodelab.com</a>.
+      <a href='mailto:hola@astracodelab.com'>info@astracodelab.com</a>.
     </p>
 
     <p class='oo-callback__legal'>
-      Solo usaremos tus datos para contactarte sobre tu proyecto. <a href='/politica-de-privacidad'
+      Solo usaremos tus datos para contactarte sobre tu proyecto. <a
+        href='/privacy-policy/
         >Política de privacidad</a
       >
     </p>
   </form>
 
-  <div class='oo-callback__done' role='status' aria-live='polite'>
-    <i>
-      <svg
-        width='28'
-        height='28'
-        viewBox='0 0 24 24'
-        fill='none'
-        stroke='currentColor'
-        stroke-width='3'
-        stroke-linecap='round'
-        stroke-linejoin='round'
-        aria-hidden='true'><path d='M5 12.5l4 4L19 7'></path></svg
+  <div class='
+        oo-callback__done'
+        role='status'
+        aria-live='polite'
       >
-    </i>
-    <h3>¡Recibido, <span data-who>gracias</span>!</h3>
-    <p><span data-msg></span> Tu {discount} de lector de OpenObra ya queda anotado.</p>
-  </div>
-</div>
+        <i>
+          <svg
+            width='28'
+            height='28'
+            viewBox='0 0 24 24'
+            fill='none'
+            stroke='currentColor'
+            stroke-width='3'
+            stroke-linecap='round'
+            stroke-linejoin='round'
+            aria-hidden='true'><path d='M5 12.5l4 4L19 7'></path></svg
+          >
+        </i>
+        <h3>¡Recibido, <span data-who>gracias</span>!</h3>
+        <p><span data-msg></span> Tu {discount} de lector de OpenObra ya queda anotado.</p>
+      </a>
+    </p>
 
-<script>
-  const root = document.querySelector<HTMLElement>('.oo-callback');
-  if (root) {
-    const form = root.querySelector<HTMLFormElement>('form')!;
-    const submitBtn = form.querySelector<HTMLButtonElement>('button[type="submit"]')!;
-    const submitLabel = form.querySelector<HTMLElement>('[data-submit-label]')!;
-    const errorBox = form.querySelector<HTMLElement>('.oo-callback__error')!;
-    const hidden = (n: string) => form.querySelector<HTMLInputElement>(`input[type="hidden"][name="${n}"]`)!;
-    const field = (n: string) => form.querySelector<HTMLElement>(`[data-field="${n}"]`)!;
-    const labels: Record<string, string> = {
-      llamada: 'Quiero que me llaméis',
-      videollamada: 'Quiero una videollamada',
-      email: 'Quiero que me escribáis',
-    };
+    <script>
+      const root = document.querySelector<HTMLElement>('.oo-callback');
+      if (root) {
+        const form = root.querySelector<HTMLFormElement>('form')!;
+        const submitBtn = form.querySelector<HTMLButtonElement>('button[type="submit"]')!;
+        const submitLabel = form.querySelector<HTMLElement>('[data-submit-label]')!;
+        const errorBox = form.querySelector<HTMLElement>('.oo-callback__error')!;
+        const hidden = (n: string) => form.querySelector<HTMLInputElement>(`input[type="hidden"][name="${n}"]`)!;
+        const field = (n: string) => form.querySelector<HTMLElement>(`[data-field="${n}"]`)!;
+        const labels: Record<string, string> = {
+          llamada: 'Quiero que me llaméis',
+          videollamada: 'Quiero una videollamada',
+          email: 'Quiero que me escribáis',
+        };
 
-    const sync = () => {
-      form.querySelectorAll<HTMLElement>('.oo-chips').forEach((g) => {
-        const vals = [...g.querySelectorAll<HTMLElement>('[aria-pressed="true"]')].map((c) => c.dataset.v);
-        hidden(g.dataset.group!).value = vals.join(', ');
-      });
-      const via = hidden('via').value;
-      field('phone').hidden = via !== 'llamada';
-      field('email').hidden = via === 'llamada';
-      field('when').hidden = via === 'email';
-      submitLabel.textContent = labels[via];
-    };
+        const sync = () => {
+          form.querySelectorAll<HTMLElement>('.oo-chips').forEach((g) => {
+            const vals = [...g.querySelectorAll<HTMLElement>('[aria-pressed="true"]')].map((c) => c.dataset.v);
+            hidden(g.dataset.group!).value = vals.join(', ');
+          });
+          const via = hidden('via').value;
+          field('phone').hidden = via !== 'llamada';
+          field('email').hidden = via === 'llamada';
+          field('when').hidden = via === 'email';
+          submitLabel.textContent = labels[via];
+        };
 
-    form.querySelectorAll<HTMLElement>('.oo-chips').forEach((g) => {
-      const multi = g.dataset.multi === 'true';
-      g.addEventListener('click', (e) => {
-        const chip = (e.target as HTMLElement).closest<HTMLElement>('.oo-chip');
-        if (!chip) return;
-        if (multi) chip.setAttribute('aria-pressed', chip.getAttribute('aria-pressed') === 'true' ? 'false' : 'true');
-        else
-          g.querySelectorAll('.oo-chip').forEach((c) => c.setAttribute('aria-pressed', c === chip ? 'true' : 'false'));
-        sync();
-      });
-    });
-
-    const setLoading = (on: boolean) => {
-      submitBtn.disabled = on;
-      submitBtn.setAttribute('aria-busy', String(on));
-      if (on) submitLabel.textContent = 'Enviando…';
-      else sync();
-    };
-
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      if (submitBtn.disabled) return;
-      sync();
-      errorBox.hidden = true;
-
-      const via = hidden('via').value;
-      const name = form.querySelector<HTMLInputElement>('#ooName')!;
-      const phone = form.querySelector<HTMLInputElement>('#ooPhone')!;
-      const email = form.querySelector<HTMLInputElement>('#ooEmail')!;
-      const okName = name.value.trim().length > 1;
-      const okContact =
-        via === 'llamada'
-          ? phone.value.replace(/\D/g, '').length >= 9
-          : /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim());
-      name.classList.toggle('is-error', !okName);
-      phone.classList.toggle('is-error', via === 'llamada' && !okContact);
-      email.classList.toggle('is-error', via !== 'llamada' && !okContact);
-      if (!okName || !okContact) {
-        (!okName ? name : via === 'llamada' ? phone : email).focus();
-        return;
-      }
-
-      // Solo enviamos el dato de contacto que corresponde a la vía elegida
-      const data = new FormData(form);
-      if (via === 'llamada') data.delete('email');
-      else data.delete('telefono');
-      if (via === 'email') data.delete('franja');
-      // Formspree usa el campo "email" como Reply-To automáticamente
-
-      setLoading(true);
-      try {
-        const res = await fetch(form.action, {
-          method: 'POST',
-          headers: { Accept: 'application/json' },
-          body: data,
+        form.querySelectorAll<HTMLElement>('.oo-chips').forEach((g) => {
+          const multi = g.dataset.multi === 'true';
+          g.addEventListener('click', (e) => {
+            const chip = (e.target as HTMLElement).closest<HTMLElement>('.oo-chip');
+            if (!chip) return;
+            if (multi)
+              chip.setAttribute('aria-pressed', chip.getAttribute('aria-pressed') === 'true' ? 'false' : 'true');
+            else
+              g.querySelectorAll('.oo-chip').forEach((c) =>
+                c.setAttribute('aria-pressed', c === chip ? 'true' : 'false'),
+              );
+            sync();
+          });
         });
-        if (!res.ok) {
-          const json = await res.json().catch(() => ({}));
-          throw new Error(json.errors?.map((x: { message: string }) => x.message).join(', ') || `HTTP ${res.status}`);
-        }
-      } catch (err) {
-        console.error('[OpenObra form]', err);
-        errorBox.hidden = false;
-        setLoading(false);
-        return;
+
+        const setLoading = (on: boolean) => {
+          submitBtn.disabled = on;
+          submitBtn.setAttribute('aria-busy', String(on));
+          if (on) submitLabel.textContent = 'Enviando…';
+          else sync();
+        };
+
+        form.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          if (submitBtn.disabled) return;
+          sync();
+          errorBox.hidden = true;
+
+          const via = hidden('via').value;
+          const name = form.querySelector<HTMLInputElement>('#ooName')!;
+          const phone = form.querySelector<HTMLInputElement>('#ooPhone')!;
+          const email = form.querySelector<HTMLInputElement>('#ooEmail')!;
+          const okName = name.value.trim().length > 1;
+          const okContact =
+            via === 'llamada'
+              ? phone.value.replace(/\D/g, '').length >= 9
+              : /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim());
+          name.classList.toggle('is-error', !okName);
+          phone.classList.toggle('is-error', via === 'llamada' && !okContact);
+          email.classList.toggle('is-error', via !== 'llamada' && !okContact);
+          if (!okName || !okContact) {
+            (!okName ? name : via === 'llamada' ? phone : email).focus();
+            return;
+          }
+
+          // Solo enviamos el dato de contacto que corresponde a la vía elegida
+          const data = new FormData(form);
+          if (via === 'llamada') data.delete('email');
+          else data.delete('telefono');
+          if (via === 'email') data.delete('franja');
+          // Formspree usa el campo "email" como Reply-To automáticamente
+
+          setLoading(true);
+          try {
+            const res = await fetch(form.action, {
+              method: 'POST',
+              headers: { Accept: 'application/json' },
+              body: data,
+            });
+            if (!res.ok) {
+              const json = await res.json().catch(() => ({}));
+              throw new Error(
+                json.errors?.map((x: { message: string }) => x.message).join(', ') || `HTTP ${res.status}`,
+              );
+            }
+          } catch (err) {
+            console.error('[OpenObra form]', err);
+            errorBox.hidden = false;
+            setLoading(false);
+            return;
+          }
+
+          const franja = hidden('franja').value.toLowerCase();
+          const msgs: Record<string, string> = {
+            llamada: `Te llamamos por la ${franja}.`,
+            videollamada: `Te enviamos por email un enlace para la videollamada por la ${franja}.`,
+            email: 'Te escribimos muy pronto a tu email.',
+          };
+          root.querySelector('[data-who]')!.textContent = name.value.trim().split(' ')[0];
+          root.querySelector('[data-msg]')!.textContent = msgs[via];
+          root.classList.add('is-done');
+          root.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+
+        sync();
       }
-
-      const franja = hidden('franja').value.toLowerCase();
-      const msgs: Record<string, string> = {
-        llamada: `Te llamamos por la ${franja}.`,
-        videollamada: `Te enviamos por email un enlace para la videollamada por la ${franja}.`,
-        email: 'Te escribimos muy pronto a tu email.',
-      };
-      root.querySelector('[data-who]')!.textContent = name.value.trim().split(' ')[0];
-      root.querySelector('[data-msg]')!.textContent = msgs[via];
-      root.classList.add('is-done');
-      root.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    });
-
-    sync();
-  }
-</script>
+    </script>
+  </form>
+</div>
